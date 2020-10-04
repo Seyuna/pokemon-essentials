@@ -386,9 +386,14 @@ def pbChangeLevel(pkmn,newlevel,scene)
     # Learn new moves upon level up
     movelist = pkmn.getMoveList
     for i in movelist
-      next if i[0]!=pkmn.level
-      pbLearnMove(pkmn,i[1],true) { scene.pbUpdate }
+      if i[0]>=oldlevel && i[0]<=pkmn.level  # Learned a new move THUNDAGA
+        pbLearnMove(pkmn,i[1],true)
+      end
     end
+    #thundaga excluding some pokes from rare candy evo
+    return if (isConst?(pokemon.species,PBSpecies,:FARFETCHD) && pokemon.form==1) ||
+              (isConst?(pokemon.species,PBSpecies,:YAMASK) && pokemon.form==1) ||
+               isConst?(pokemon.species,PBSpecies,:MILCERY)
     # Check for evolution
     newspecies = pbCheckEvolution(pkmn)
     if newspecies>0

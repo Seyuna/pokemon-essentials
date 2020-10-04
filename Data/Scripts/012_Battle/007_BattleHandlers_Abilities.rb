@@ -982,6 +982,12 @@ BattleHandlers::DamageCalcUserAbility.add(:IRONFIST,
   }
 )
 
+BattleHandlers::DamageCalcUserAbility.add(:PUNKROCK,
+  proc { |ability,user,target,move,mults,baseDmg,type|
+    mults[BASE_DMG_MULT] = (mults[BASE_DMG_MULT]*1.3).round if move.soundMove?
+  }
+)
+
 BattleHandlers::DamageCalcUserAbility.add(:MEGALAUNCHER,
   proc { |ability,user,target,move,mults,baseDmg,type|
     mults[BASE_DMG_MULT] *= 1.5 if move.pulseMove?
@@ -1498,6 +1504,17 @@ BattleHandlers::TargetAbilityOnHit.add(:GOOEY,
 )
 
 BattleHandlers::TargetAbilityOnHit.copy(:GOOEY,:TANGLINGHAIR)
+
+#thundaga cotton down
+BattleHandlers::TargetAbilityOnHit.add(:COTTONDOWN,
+  proc { |ability,user,target,move,battle|
+    next if !move.pbContactMove?(user)
+    battle.eachBattler do |b|
+      next if b.index==target.index
+      b.pbLowerStatStageByAbility(PBStats::SPEED,1,target,true,true)
+    end
+  }
+)
 
 BattleHandlers::TargetAbilityOnHit.add(:ILLUSION,
   proc { |ability,user,target,move,battle|

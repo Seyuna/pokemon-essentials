@@ -18,6 +18,7 @@ module PBTerrain
   SootGrass       = 14
   Bridge          = 15
   Puddle          = 16
+  Bog             = 17
 
   def self.isSurfable?(tag)
     return PBTerrain.isWater?(tag)
@@ -71,6 +72,10 @@ module PBTerrain
 
   def self.isIce?(tag)
     return tag==PBTerrain::Ice
+  end
+
+  def self.isBog?(tag)
+    return tag==PBTerrain::PoisonBog
   end
 
   def self.isBridge?(tag)
