@@ -537,6 +537,12 @@ BattleHandlers::PriorityChangeAbility.add(:TRIAGE,
   }
 )
 
+BattleHandlers::PriorityChangeAbility.add(:FLASHFIST,
+  proc { |ability,battler,move,pri|
+    next pri+1 if move.punchingMove?
+  }
+)
+
 #===============================================================================
 # PriorityBracketChangeAbility handlers
 #===============================================================================
@@ -547,11 +553,21 @@ BattleHandlers::PriorityBracketChangeAbility.add(:STALL,
   }
 )
 
+BattleHandlers::PriorityBracketChangeAbility.add(:QUICKDRAW,
+  proc { |ability,battler,subPri,battle|
+    next 1 if subPri<1 && battle.pbRandom(10)<3
+  }
+)
+
 #===============================================================================
 # PriorityBracketUseAbility handlers
 #===============================================================================
 
-# There aren't any!
+BattleHandlers::PriorityBracketUseAbility.add(:QUICKDRAW,
+  proc { |ability,battler,battle|
+    battle.pbDisplay(_INTL("{1}'s {2} let it move first!",battler.pbThis,battler.abilityName))
+  }
+)
 
 #===============================================================================
 # AbilityOnFlinch handlers
@@ -758,6 +774,14 @@ BattleHandlers::MoveBaseTypeModifierAbility.add(:REFRIGERATE,
     next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:ICE)
     move.powerBoost = true
     next getConst(PBTypes,:ICE)
+  }
+)
+
+BattleHandlers::MoveBaseTypeModifierAbility.add(:SUBMERGED,
+  proc { |ability,user,move,type|
+    next if !isConst?(type,PBTypes,:NORMAL) || !hasConst?(PBTypes,:WATER)
+    move.powerBoost = true
+    next getConst(PBTypes,:WATER)
   }
 )
 
@@ -1060,6 +1084,12 @@ BattleHandlers::DamageCalcUserAbility.add(:STAKEOUT,
 BattleHandlers::DamageCalcUserAbility.add(:STEELWORKER,
   proc { |ability,user,target,move,mults,baseDmg,type|
     mults[ATK_MULT] *= 1.5 if isConst?(type,PBTypes,:STEEL)
+  }
+)
+
+BattleHandlers::DamageCalcUserAbility.add(:STEAMPUNK,
+  proc { |ability,user,target,move,mults,baseDmg,type|
+    mults[ATK_MULT] = (mults[ATK_MULT]*1.5).round if isConst?(type,PBTypes,:WATER)
   }
 )
 
@@ -2299,6 +2329,22 @@ BattleHandlers::AbilityOnSwitchIn.add(:INTIMIDATE,
       b.pbItemOnIntimidatedCheck
     end
     battle.pbHideAbilitySplash(battler)
+  }
+)
+
+BattleHandlers::AbilityOnSwitchIn.add(:CURIOUSMEDICINE,
+  proc { |ability,battler,battle|
+    done= false
+    battler.eachAlly do |b|
+      next if !b.hasAlteredStatStages?
+      b.pbResetStatStages
+      done = true
+    end
+    if done
+      battle.pbShowAbilitySplash(battler)
+      battle.pbDisplay(_INTL("All allies' stat changes were eliminated!"))
+      battle.pbHideAbilitySplash(battler)
+    end
   }
 )
 

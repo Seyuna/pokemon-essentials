@@ -169,6 +169,8 @@ def pbIsUnlosableItem?(item,species,ability)
                   !isConst?(ability,PBAbilities,:MULTITYPE)
   return false if isConst?(species,PBSpecies,:SILVALLY) &&
                   !isConst?(ability,PBAbilities,:RKSSYSTEM)
+  return false if isConst?(species,PBSpecies,:ARENAY) || isConst?(species,PBSpecies,:DRAGAIA) || isConst?(species,PBSpecies,:PRISMATRIX) &&
+                  !isConst?(ability,PBAbilities,:SPLICE)
   combos = {
      :ARCEUS   => [:FISTPLATE,:FIGHTINIUMZ,
                    :SKYPLATE,:FLYINIUMZ,

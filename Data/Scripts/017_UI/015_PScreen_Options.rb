@@ -103,7 +103,7 @@ $TextFrames = [
 $VersionStyles = [
   [MessageConfig::FontName],   # Default font style - Power Green/"Pokemon Emerald"
   ["Power Red and Blue"],
-  ["Power Red and Green"],
+  ["Power Green"],
   ["Power Clear"]
 ]
 
@@ -496,7 +496,7 @@ class PokemonOption_Scene
            MessageConfig.pbSetSystemFrame($TextFrames[value])
          }
        ),
-       EnumOption.new(_INTL("Font Style"),[_INTL("Em"),_INTL("R/S"),_INTL("FRLG"),_INTL("DP")],
+       EnumOption.new(_INTL("Font Style"),[_INTL("FRLG"),_INTL("R/S"),_INTL("Em"),_INTL("DP")],
          proc { $PokemonSystem.font },
          proc { |value|
            $PokemonSystem.font = value

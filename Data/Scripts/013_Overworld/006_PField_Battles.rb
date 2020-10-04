@@ -34,8 +34,8 @@ class PokemonTemp
     when "canrun";                 rules["canRun"]         = true
     when "cannotrun";              rules["canRun"]         = false
     when "roamerflees";            rules["roamerFlees"]    = true
-    when "noexp";                  rules["expGain"]        = false
-    when "nomoney";                rules["moneyGain"]      = false
+    when "noExp";                  rules["expGain"]        = false
+    when "noMoney";                rules["moneyGain"]      = false
     when "switchstyle";            rules["switchStyle"]    = true
     when "setstyle";               rules["switchStyle"]    = false
     when "anims";                  rules["battleAnims"]    = true
@@ -45,7 +45,7 @@ class PokemonTemp
     when "environment", "environ"; rules["environment"]    = getID(PBEnvironment,var)
     when "backdrop", "battleback"; rules["backdrop"]       = var
     when "base";                   rules["base"]           = var
-    when "outcome", "outcomevar";  rules["outcomeVar"]     = var
+    when "outcomevar", "outcome";  rules["outcomeVar"]     = var
     when "nopartner";              rules["noPartner"]      = true
     else
       raise _INTL("Battle rule \"{1}\" does not exist.",rule)
@@ -64,7 +64,7 @@ def setBattleRule(*args)
     else
       case arg.downcase
       when "terrain", "weather", "environment", "environ", "backdrop",
-           "battleback", "base", "outcome", "outcomevar"
+           "battleback", "base", "outcomevar", "outcome"
         r = arg
         next
       end
@@ -122,34 +122,45 @@ def pbPrepareBattle(battle)
   else
     battle.environment = battleRules["environment"]
   end
-  # Backdrop graphic filename
+   # Backdrop graphic filename
   if !battleRules["backdrop"].nil?
     backdrop = battleRules["backdrop"]
   elsif $PokemonGlobal.nextBattleBack
     backdrop = $PokemonGlobal.nextBattleBack
   elsif $PokemonGlobal.surfing
-    backdrop = "water"   # This applies wherever you are, including in caves
+    backdrop = "FRLGWater"   # This applies wherever you are, including in caves
   else
     back = pbGetMetadata($game_map.map_id,MetadataBattleBack)
     backdrop = back if back && back!=""
   end
-  backdrop = "indoor1" if !backdrop
+
+  if !pbGetMetadata($game_map.map_id,MetadataOutdoor) && !backdrop
+    backdrop = "FRLGLab"
+  end
+
+  backdrop = "FRLGGrass" if !backdrop
   battle.backdrop = backdrop
+
   # Choose a name for bases depending on environment
   if battleRules["base"].nil?
     case battle.environment
     when PBEnvironment::Grass, PBEnvironment::TallGrass,
-         PBEnvironment::ForestGrass;                            base = "grass"
-#    when PBEnvironment::Rock;                                   base = "rock"
-    when PBEnvironment::Sand;                                   base = "sand"
-    when PBEnvironment::MovingWater, PBEnvironment::StillWater; base = "water"
-    when PBEnvironment::Puddle;                                 base = "puddle"
-    when PBEnvironment::Ice;                                    base = "ice"
+         PBEnvironment::ForestGrass;                             base = "FRLGGrass"
+#   when PBEnvironment::Rock;                                    base = "rock"
+    when PBEnvironment::Sand;                                    base = "FRLGSand"
+    when PBEnvironment::MovingWater, PBEnvironment::StillWater;  base = "FRLGWater"
+#   when PBEnvironment::Puddle;                                  base = "puddle"
+    when PBEnvironment::Ice;                                     base = "FRLGIceCave"
     end
   else
     base = battleRules["base"]
   end
-  battle.backdropBase = base if base
+
+  if backdrop != "FRLGBog"
+    battle.backdropBase = base if base
+  end
+
+  #battle.backdropBase = base if base
   # Time of day
   if pbGetMetadata($game_map.map_id,MetadataEnvironment)==PBEnvironment::Cave
     battle.time = 2   # This makes Dusk Balls work properly in caves
@@ -189,7 +200,7 @@ def pbGetEnvironment
   return ret
 end
 
-Events.onStartBattle += proc { |_sender|
+Events.onStartBattle += proc { |sender|
   # Record current levels of Pokémon in party, to see if they gain a level
   # during battle and may need to evolve afterwards
   $PokemonTemp.evolutionLevels = []
@@ -555,7 +566,7 @@ def pbAfterBattle(decision,canLose)
   Events.onEndBattle.trigger(nil,decision,canLose)
 end
 
-Events.onEndBattle += proc { |_sender,e|
+Events.onEndBattle += proc { |sender,e|
   decision = e[0]
   canLose  = e[1]
   if NEWEST_BATTLE_MECHANICS || (decision!=2 && decision!=5)   # not a loss or a draw
