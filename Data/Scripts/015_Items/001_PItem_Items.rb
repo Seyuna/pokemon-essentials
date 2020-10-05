@@ -364,6 +364,7 @@ def pbChangeLevel(pkmn,newlevel,scene)
     spatkdiff   = pkmn.spatk
     spdefdiff   = pkmn.spdef
     totalhpdiff = pkmn.totalhp
+    oldlevel = pkmn.level
     pkmn.level = newlevel
     pkmn.changeHappiness("vitamin")
     pkmn.calcStats
@@ -391,9 +392,9 @@ def pbChangeLevel(pkmn,newlevel,scene)
       end
     end
     #thundaga excluding some pokes from rare candy evo
-    return if (isConst?(pokemon.species,PBSpecies,:FARFETCHD) && pokemon.form==1) ||
-              (isConst?(pokemon.species,PBSpecies,:YAMASK) && pokemon.form==1) ||
-               isConst?(pokemon.species,PBSpecies,:MILCERY)
+    return if (isConst?(pkmn.species,PBSpecies,:FARFETCHD) && pkmn.form==1) ||
+              (isConst?(pkmn.species,PBSpecies,:YAMASK) && pkmn.form==1) ||
+               isConst?(pkmn.species,PBSpecies,:MILCERY)
     # Check for evolution
     newspecies = pbCheckEvolution(pkmn)
     if newspecies>0
