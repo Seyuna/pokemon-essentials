@@ -407,7 +407,9 @@ class FightMenuDisplay < BattleMenuBase
     end
     @visibility["typeIcon"] = true
     # Type icon
-    #thundaga move type
+    #thundaga move type, improved by GolisopodUser
+    @typeIcon.src_rect.y = move.pbCalcType(@battler)*TYPE_ICON_HEIGHT
+=begin
     if isConst?(move.type,PBTypes,:QMARKS)
       @typeIcon.src_rect.y = @battler.type1*TYPE_ICON_HEIGHT
     elsif isConst?(move.id,PBMoves,:AURAWHEEL) && @battler.form==1
@@ -415,6 +417,7 @@ class FightMenuDisplay < BattleMenuBase
     else
       @typeIcon.src_rect.y = move.type*TYPE_ICON_HEIGHT
     end
+=end
     # PP text
     if move.totalpp>0
       ppFraction = [(4.0*move.pp/move.totalpp).ceil,3].min

@@ -87,8 +87,8 @@ NO_SIGNPOSTS = []
 # * The maximum length, in characters, that the player's name can be.
 #===============================================================================
 INITIAL_MONEY        = 3000
-MAX_MONEY            = 999999
-MAX_COINS            = 99999
+MAX_MONEY            = 999_999
+MAX_COINS            = 99_999
 MAX_PLAYER_NAME_SIZE = 10
 
 #===============================================================================
