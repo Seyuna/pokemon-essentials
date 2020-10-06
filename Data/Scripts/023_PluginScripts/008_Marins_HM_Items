@@ -109,16 +109,10 @@ if USING_SURF_ITEM
   HiddenMoveHandlers::CanUseMove.delete(:SURF)
   HiddenMoveHandlers::UseMove.delete(:SURF)
 
-  def Kernel.pbSurf
+  def pbSurf
+    return false if $game_player.pbFacingEvent
     return false if $game_player.pbHasDependentEvents?
-    move = getID(PBMoves,:SURF)
     if !$PokemonBag.pbHasItem?(:SURFITEM) && !$DEBUG
-      return false
-    end
-    if $PokemonGlobal.surfing || pbGetMetadata($game_map.map_id,MetadataBicycleAlways) ||
-                    !PBTerrain.isSurfable?(Kernel.pbFacingTerrainTag) ||
-                    !$game_map.passable?($game_player.x,$game_player.y,$game_player.direction,$game_player)
-      Kernel.pbMessage(_INTL("The surfboard cannot be used here!"))
       return false
     end
     if Kernel.pbConfirmMessage(_INTL("The water is a deep blue...\nWould you like to surf on it?"))
@@ -134,7 +128,7 @@ if USING_SURF_ITEM
 
   ItemHandlers::UseInField.add(SURF_ITEM, proc do |item|
     $game_temp.in_menu = false
-    Kernel.pbSurf
+    pbSurf
     return true
   end)
 
@@ -237,7 +231,7 @@ if USING_ROCK_SMASH_ITEM
     end
   end)
 
-  def Kernel.pbRockSmash
+  def pbRockSmash
     if !$PokemonBag.pbHasItem?(:ROCKSMASHITEM)
       Kernel.pbMessage(_INTL("It's a rugged rock, but an item may be able to smash it."))
       return false
@@ -260,7 +254,7 @@ if USING_STRENGTH_ITEM
   HiddenMoveHandlers::CanUseMove.delete(:STRENGTH)
   HiddenMoveHandlers::UseMove.delete(:STRENGTH)
 
-  def Kernel.pbStrength
+  def pbStrength
     if $PokemonMap.strengthUsed
       Kernel.pbMessage(_INTL("The Strength Gloves made it possible to move boulders around."))
       return false
@@ -292,7 +286,7 @@ if USING_STRENGTH_ITEM
     return false
   end)
 
-  ItemHandlers::UseInField.add(STRENGTH_ITEM, proc { Kernel.pbStrength })
+  ItemHandlers::UseInField.add(STRENGTH_ITEM, proc { pbStrength })
 end
 
 
@@ -304,7 +298,7 @@ if USING_CUT_ITEM
   HiddenMoveHandlers::CanUseMove.delete(:CUT)
   HiddenMoveHandlers::UseMove.delete(:CUT)
 
-  def Kernel.pbCut
+  def pbCut
     if !$PokemonBag.pbHasItem?(:CUTITEM) && !$DEBUG
       Kernel.pbMessage(_INTL("This tree looks like it can be cut down."))
       return false
@@ -343,7 +337,7 @@ if USING_FLASH_ITEM
   HiddenMoveHandlers::CanUseMove.delete(:FLASH)
   HiddenMoveHandlers::UseMove.delete(:FLASH)
 
-  def Kernel.pbFlash
+  def pbFlash
     darkness = $PokemonTemp.darknessSprite
     if !darkness || darkness.disposed?
       Kernel.pbMessage(_INTL("The flashlight cannot be used here!"))
@@ -376,7 +370,7 @@ if USING_FLASH_ITEM
     end
   end)
 
-  ItemHandlers::UseInField.add(FLASH_ITEM, proc { Kernel.pbFlash })
+  ItemHandlers::UseInField.add(FLASH_ITEM, proc { pbFlash })
 end
 
 #=================================================================

@@ -1661,11 +1661,11 @@ Kind = Mole
 Pokedex = Diglett are raised in most farms. The reason is simple--wherever they burrow, the soil is left perfectly tilled for growing delicious crops.
 WildItemUncommon = SOFTSAND
 BattlerPlayerX = 0
-BattlerPlayerY = 0
+BattlerPlayerY = -4
 BattlerEnemyX = 1
-BattlerEnemyY = 29
+BattlerEnemyY = 32
 BattlerShadowX = 0
-BattlerShadowSize = 2
+BattlerShadowSize = 1
 Evolutions = DUGTRIO,Level,26
 #-------------------------------
 [51]
@@ -9644,7 +9644,7 @@ BattlerEnemyX = -1
 BattlerEnemyY = 29
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = NINJASK,Ninjask,20,SHEDINJA,Shedinja,20
+Evolutions = NINJASK,Ninjask,20,SHEDINJA,Shedinja,
 #-------------------------------
 [291]
 Name = Ninjask

@@ -1352,6 +1352,7 @@ EggMoves = FEINTATTACK,METALSOUND,ANCIENTPOWER,PURSUIT,BEATUP,THRASH,REVERSAL,HE
 Weight = 1.0
 BattlerPlayerY = 33
 BattlerEnemyY = 37
+BattlerShadowSize = 2
 #-------------------------------
 [DUGTRIO,1]
 FormName = Alola Form

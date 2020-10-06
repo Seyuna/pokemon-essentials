@@ -1087,6 +1087,26 @@ def pbPoisonBog(event=nil)
   end
 end
 
+#thundaga
+def poisonAllPokemon(event=nil)
+    for pkmn in $Trainer.ablePokemonParty
+       next if pkmn.hasType?(:POISON)  || pkmn.hasType?(:STEEL) ||
+          pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
+          pkmn.status!=0
+       pkmn.status = 2
+     end
+end
+
+#thundaga
+def paralyzeAllPokemon(event=nil)
+    for pkmn in $Trainer.ablePokemonParty
+       next if pkmn.hasType?(:ELECTRIC) ||
+          pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
+          pkmn.status!=0
+       pkmn.status = 4
+     end
+end
+
 def pbTurnTowardEvent(event,otherEvent)
   sx = 0; sy = 0
   if $MapFactory
