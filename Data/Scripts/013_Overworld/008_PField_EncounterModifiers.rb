@@ -31,7 +31,7 @@ Events.onWildPokemonCreate+=proc {|sender,e|
    #20-30 = costa path and lush road
    sector5=[77,84,110,93,96,123]
    #25-40 = dim cave and dev room
-   sector6=[100,106]
+   sector6=[100,106,90]
    #30-40 = maple trail and yama pass
    sector7=[105,86,101]
    #20-50
@@ -125,7 +125,7 @@ Events.onTrainerPartyLoad+=proc {|sender,e|
      #25-35 = Driftwood and lab
      sectorLAB=[127,113]
      #25-40 = dim cave and dev room
-     sector6=[100,106]
+     sector6=[100,106,90]
      #30-45 = maple trail and yama pass and secret labs
      sector7=[105,86,101,143,112,145]
      #20-50 = blighted bog
