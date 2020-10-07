@@ -124,7 +124,7 @@ Zack
 GIBLE,5
 EEVEE,5
 #-------------------------------
-SPLICERIVAL
+SPLICERIVAL1
 Zack,1
 5,SUPERPOTION,HYPERPOTION
 BLITZLE,35,,,,,,,,1,,,,,,,25
@@ -133,7 +133,7 @@ GABITE,35
 ABSOL,35,,,,,,,,1,,,,,,,25
 CHROMEON,36
 #-------------------------------
-SPLICERIVAL
+SPLICERIVAL2
 Zack,2
 5,SUPERPOTION,HYPERPOTION
 LUDICOLO,35,,,,,,,,1,,,,,,,24
