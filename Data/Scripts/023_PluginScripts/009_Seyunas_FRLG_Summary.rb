@@ -1026,20 +1026,37 @@ class PokemonSummary_Scene
   end
 
   def drawStats(overlay)
+    statshadows = []
+    statbase = []
+    base   = @basecolor
+    shadow = @shadowcolor
+    PBStats.eachStat { |s| statshadows[s] = shadow; statbase[s] = base }
+    if !@pokemon.shadowPokemon? || @pokemon.heartStage>3
+      natup = PBNatures.getStatRaised(@pokemon.calcNature)
+      natdn = PBNatures.getStatLowered(@pokemon.calcNature)
+      statbase[natup] = Color.new(232,32,16) if natup!=natdn
+      statbase[natdn] = Color.new(0,112,248) if natup!=natdn
+      statshadows[natup] = Color.new(248,168,184) if natup!=natdn
+      statshadows[natdn] = Color.new(120,184,232) if natup!=natdn
+    end
     endexp = PBExperience.pbGetStartExperience(@pokemon.level + 1, @pokemon.growthrate)
     textpos = [
-        [sprintf("%d/%d",@pokemon.hp,@pokemon.totalhp),505,40,1,@basecolor,@shadowcolor],
-        [sprintf("%d",@pokemon.attack),505,76,1,@basecolor,@shadowcolor],
-        [sprintf("%d",@pokemon.defense),505,102,1,@basecolor,@shadowcolor],
-        [sprintf("%d",@pokemon.spatk),505,128,1,@basecolor,@shadowcolor],
-        [sprintf("%d",@pokemon.spdef),505,154,1,@basecolor,@shadowcolor],
-        [sprintf("%d",@pokemon.speed),505,180,1,@basecolor,@shadowcolor],
-        [sprintf("%s",PBAbilities.getName(@pokemon.ability)),144,326,0,@basecolor,@shadowcolor],
+        [sprintf("%d/%d",@pokemon.hp,@pokemon.totalhp),505,40,1,statbase[PBStats::HP],statshadows[PBStats::HP]],
+        [sprintf("%d",@pokemon.attack),505,76,1,statbase[PBStats::ATTACK],statshadows[PBStats::ATTACK]],
+        [sprintf("%d",@pokemon.defense),505,102,1,statbase[PBStats::DEFENSE],statshadows[PBStats::DEFENSE]],
+        [sprintf("%d",@pokemon.spatk),505,128,1,statbase[PBStats::SPATK],statshadows[PBStats::SPATK]],
+        [sprintf("%d",@pokemon.spdef),505,154,1,statbase[PBStats::SPDEF],statshadows[PBStats::SPDEF]],
+        [sprintf("%d",@pokemon.speed),505,180,1,statbase[PBStats::SPEED],statshadows[PBStats::SPEED]],
         [sprintf(_INTL('EXP.POINTS')),144,276,0,@basecolor,@shadowcolor],
         [sprintf("%s",@pokemon.exp.to_s_formatted),502,276,1,@basecolor,@shadowcolor],
         [sprintf(_INTL('NEXT LV.')),144,300,0,@basecolor,@shadowcolor],
         [sprintf("%s",(endexp-@pokemon.exp).to_s_formatted),502,300,1,@basecolor,@shadowcolor],
     ]
+    if @pokemon.abilityIndex<2
+      textpos.push([sprintf("%s",PBAbilities.getName(@pokemon.ability)),144,326,0,@basecolor,@shadowcolor])
+    else
+      textpos.push([sprintf("%s",PBAbilities.getName(@pokemon.ability)),144,326,0,Color.new(144,64,232),Color.new(184,168,224)])
+    end
     # Write all text
     pbDrawTextPositions(overlay,textpos)
   end
