@@ -367,7 +367,7 @@ class LocationWindow
 
     @sprites["overlay"]=Sprite.new
     @sprites["overlay"].bitmap=Bitmap.new(Graphics.width*4,Graphics.height*4)
-    @sprites["overlay"].z=9999999
+    @sprites["overlay"].z=99999
     pbSetSystemFont(@sprites["overlay"].bitmap)
     @overlay = @sprites["overlay"].bitmap
     @overlay.clear
@@ -431,12 +431,12 @@ class LocationWindow
     end
     @sprites["Image"].x = 8
     @sprites["Image"].y = 0 - @sprites["Image"].bitmap.height
-    @sprites["Image"].z = 99999
+    @sprites["Image"].z = 99998
 
     @window=Window_AdvancedTextPokemon.new(name)
     @window.x=0
     @window.y=-@window.height
-    @window.z=99999
+    @window.z=99998
     @currentmap=$game_map.map_id
     @frames=0
   end
