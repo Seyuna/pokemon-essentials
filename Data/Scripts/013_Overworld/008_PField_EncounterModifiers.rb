@@ -18,6 +18,20 @@ Events.onWildPokemonCreate+=proc {|sender,e|
 # This is a simple method, and can/should be modified to account for evolutions
 # and other such details.  Of course, you don't HAVE to use this code.
 
+# Ability Charm Code
+Events.onWildPokemonCreate+=proc {|sender,e|
+   pokemon=e[0]
+   value = $PokemonBag.pbHasItem?(:ABILITYCHARM) ? 50 : 100
+   if rand(value)<1
+     abils=pokemon.getAbilityList
+     abilIndex=[]
+     for i in abils
+       abilIndex.push(i[1]) if i[0]>0 && i[1]>1
+     end
+     pokemon.setAbility(abilIndex[rand(abilIndex.length)])
+   end
+}
+
 Events.onWildPokemonCreate+=proc {|sender,e|
    pokemon=e[0]
    #3-15 = pollen path and iron pass

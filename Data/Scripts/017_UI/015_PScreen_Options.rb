@@ -26,7 +26,7 @@ class PokemonSystem
     @runstyle    = 0     # Run key functionality (0=hold to run, 1=toggle auto-run)
     @bgmvolume   = 100   # Volume of background music and ME
     @sevolume    = 100   # Volume of sound effects
-    @textinput   = 0     # Text input mode (0=cursor, 1=keyboard)
+    @textinput   = 1     # Text input mode (0=cursor, 1=keyboard)
   end
 
   def textskin;  return @textskin || 0;    end
@@ -35,7 +35,7 @@ class PokemonSystem
   def runstyle;  return @runstyle || 0;    end
   def bgmvolume; return @bgmvolume || 100; end
   def sevolume;  return @sevolume || 100;  end
-  def textinput; return @textinput || 0;   end
+  def textinput; return @textinput || 1;   end
   def tilemap;   return MAP_VIEW_MODE;     end
 end
 

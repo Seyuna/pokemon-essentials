@@ -8,8 +8,8 @@ module MessageConfig
                           # show multiple characters in a single frame
   LIGHTTEXTBASE   = Color.new(248,248,248)
   LIGHTTEXTSHADOW = Color.new(72,80,88)
-  DARKTEXTBASE    = Color.new(80,80,88)
-  DARKTEXTSHADOW  = Color.new(160,160,168)
+  DARKTEXTBASE    = Color.new(96,96,96)
+  DARKTEXTSHADOW  = Color.new(208,208,200)
   # 0 = Pause cursor is displayed at end of text
   # 1 = Pause cursor is displayed at bottom right
   # 2 = Pause cursor is displayed at lower middle side
