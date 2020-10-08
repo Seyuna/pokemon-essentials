@@ -94,3 +94,5 @@
 91,BLACKBELT_SPD,EV Trainer,100,SwSh-MustardBattle.ogg,,,Male,,
 92,BLACKBELT_SATK,EV Trainer,100,SwSh-MustardBattle.ogg,,,Male,,
 93,BLACKBELT_SDEF,EV Trainer,100,SwSh-MustardBattle.ogg,,,Male,,
+94,SPLICERIVAL1,Quantech Researcher,100,B2W2-RivalTheme,,,Male,,
+95,SPLICERIVAL2,Biogress Researcher,100,B2W2-RivalTheme,,,Male,,
