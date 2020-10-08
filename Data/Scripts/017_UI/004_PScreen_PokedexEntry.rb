@@ -221,8 +221,8 @@ class PokemonPokedexInfo_Scene
   def drawPageInfo
     @sprites["background"].setBitmap(_INTL("Graphics/Pictures/Pokedex/bg_info"))
     overlay = @sprites["overlay"].bitmap
-    base   = Color.new(88,88,80)
-    shadow = Color.new(168,184,184)
+    base   = Color.new(96,96,96)
+    shadow = Color.new(208,208,208)
     imagepos = []
     if @brief
       imagepos.push([_INTL("Graphics/Pictures/Pokedex/overlay_info"),0,0])
@@ -300,8 +300,8 @@ class PokemonPokedexInfo_Scene
   def drawPageArea
     @sprites["background"].setBitmap(_INTL("Graphics/Pictures/Pokedex/bg_area"))
     overlay = @sprites["overlay"].bitmap
-    base   = Color.new(88,88,80)
-    shadow = Color.new(168,184,184)
+    base   = Color.new(96,96,96)
+    shadow = Color.new(208,208,208)
     @sprites["areahighlight"].bitmap.clear
     # Fill the array "points" with all squares of the region map in which the
     # species can be found
@@ -380,8 +380,8 @@ class PokemonPokedexInfo_Scene
   def drawPageForms
     @sprites["background"].setBitmap(_INTL("Graphics/Pictures/Pokedex/bg_forms"))
     overlay = @sprites["overlay"].bitmap
-    base   = Color.new(88,88,80)
-    shadow = Color.new(168,184,184)
+    base   = Color.new(96,96,96)
+    shadow = Color.new(208,208,208)
     # Write species and form name
     formname = ""
     for i in @available

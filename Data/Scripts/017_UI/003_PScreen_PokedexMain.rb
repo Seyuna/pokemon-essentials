@@ -5,8 +5,8 @@ class Window_Pokedex < Window_DrawableCommand
     @selarrow     = AnimatedBitmap.new("Graphics/Pictures/Pokedex/cursor_list")
     @pokeballOwn  = AnimatedBitmap.new("Graphics/Pictures/Pokedex/icon_own")
     @pokeballSeen = AnimatedBitmap.new("Graphics/Pictures/Pokedex/icon_seen")
-    self.baseColor   = Color.new(88,88,80)
-    self.shadowColor = Color.new(168,184,184)
+    self.baseColor   = Color.new(96,96,96)
+    self.shadowColor = Color.new(208,208,208)
     self.windowskin  = nil
   end
 
@@ -382,8 +382,8 @@ class PokemonPokedex_Scene
   def pbRefresh
     overlay = @sprites["overlay"].bitmap
     overlay.clear
-    base   = Color.new(88,88,80)
-    shadow = Color.new(168,184,184)
+    base   = Color.new(96,96,96)
+    shadow = Color.new(208,208,208)
     iconspecies = @sprites["pokedex"].species
     iconspecies = 0 if !$Trainer.seen[iconspecies]
     # Write various bits of text
