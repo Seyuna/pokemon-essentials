@@ -1,7 +1,7 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 002 # Lappet Town
-25,10,10
+20,8,8
 Water
     TENTACOOL,14,19
     MANTYKE,15,16
@@ -23,7 +23,7 @@ SuperRod
     STARYU,15,17
 #-------------------------------
 005 # Route 1
-25,10,10
+20,8,8
 Land
     RATTATA,11,14
     PIDGEY,11,14
@@ -52,7 +52,7 @@ LandNight
     HOOTHOOT,14
 #-------------------------------
 021 # Route 2
-25,10,10
+20,8,8
 Land
     RATTATA,12,15
     RATTATA,12,15
@@ -105,7 +105,7 @@ HeadbuttHigh
     SPINARAK,9,12
 #-------------------------------
 028 # Natural Park
-25,10,10
+20,8,8
 Land
     CATERPIE,10
     WEEDLE,10
@@ -160,7 +160,7 @@ BugContest
     PINSIR,13,14
 #-------------------------------
 031 # Route 3
-25,10,10
+20,8,8
 Land
     NIDORANfE,12,15
     NIDORANmA,12,15
@@ -219,7 +219,7 @@ HeadbuttHigh
     BURMY,12,15
 #-------------------------------
 034 # Ice Cave
-25,10,10
+20,8,8
 Cave
     SWINUB,16,18
     SWINUB,16,18
@@ -235,7 +235,7 @@ Cave
     SMOOCHUM,11,14
 #-------------------------------
 039 # Route 4
-25,10,10
+20,8,8
 Land
     SHELLOS,12,15
     SHELLOS,12,15
@@ -251,7 +251,7 @@ Land
     MURKROW,12,14
 #-------------------------------
 041 # Route 5
-25,10,10
+20,8,8
 Land
     GRIMER,13,15
     GRIMER,13,15
@@ -267,7 +267,7 @@ Land
     SLUGMA,13,14
 #-------------------------------
 043 # Moncto Town
-25,10,10
+20,8,8
 Water
     MAGIKARP,5,20
     MAGIKARP,5,20
@@ -289,7 +289,7 @@ SuperRod
     WIMPOD,5,30
 #-------------------------------
 044 # Route 6
-25,10,10
+20,8,8
 Land
     SHELLOS,12,15
     SHELLOS,12,15
@@ -305,7 +305,7 @@ Land
     MURKROW,12,14
 #-------------------------------
 047 # Route 7
-25,10,10
+20,8,8
 Land
     SHELLOS,12,15
     SHELLOS,12,15
@@ -327,7 +327,7 @@ RockSmash
     GEODUDE,12,15
 #-------------------------------
 049 # Rock Cave
-25,10,10
+20,8,8
 Cave
     NOSEPASS,14,15
     NOSEPASS,13,14
@@ -343,7 +343,7 @@ Cave
     MAWILE,14,16
 #-------------------------------
 050 # Rock Cave
-25,10,10
+20,8,8
 Cave
     NOSEPASS,14,15
     NOSEPASS,13,14
@@ -359,7 +359,7 @@ Cave
     BURMY,14,16
 #-------------------------------
 051 # Dungeon
-25,10,10
+20,8,8
 Cave
     PICHU,1
     CLEFFA,1
@@ -375,7 +375,7 @@ Cave
     TYROGUE,1
 #-------------------------------
 066 # Safari Zone
-25,10,10
+20,8,8
 Land
     NIDORANfE,15,16
     NIDORANmA,15,16
@@ -391,7 +391,7 @@ Land
     HOPPIP,13,17
 #-------------------------------
 068 # Safari Zone
-25,10,10
+20,8,8
 Land
     RHYHORN,16,18
     EXEGGCUTE,15,18
@@ -426,7 +426,7 @@ SuperRod
     DRATINI,17
 #-------------------------------
 069 # Route 8
-25,10,10
+20,8,8
 Land
     ODDISH,15,17
     MAREEP,16,18
@@ -461,7 +461,7 @@ SuperRod
     STARYU,15,17
 #-------------------------------
 070 # Underwater
-25,10,10
+20,8,8
 Land
     CLAMPERL,18,20
     SHELLDER,18,20
@@ -477,7 +477,7 @@ Land
     RELICANTH,16,19
 #-------------------------------
 075 # Tiall Region
-25,10,10
+20,8,8
 Land
     RATTATA,11,14
     RATTATA,11,14
@@ -493,7 +493,7 @@ Land
     RATTATA,11,14
 #-------------------------------
 077 # Costa Path
-25,10,10
+20,8,8
 Land
     LOTAD,5
     WINGULL,5
@@ -528,7 +528,7 @@ SuperRod
     MAGIKARP,5,25
 #-------------------------------
 078 # Pollen Path
-25,10,10
+20,8,8
 Land
     ADORABULL,2,4
     BABEE,2,4
@@ -544,7 +544,7 @@ Land
     SPINDA,5,6
 #-------------------------------
 079 # Fleural Town
-25,10,10
+20,8,8
 Water
     MAGIKARP,5,15
     FEEBAS,5,15
@@ -566,7 +566,7 @@ SuperRod
     FEEBAS,5,25
 #-------------------------------
 080 # Iron Pass
-25,10,10
+20,8,8
 Land
     WINGOT,2,4
     KLINK,2,4
@@ -601,7 +601,7 @@ SuperRod
     FEEBAS,5,25
 #-------------------------------
 084 # Costa Path
-25,10,10
+20,8,8
 Land
     LOTAD,5
     KRABBY,5
@@ -636,7 +636,7 @@ SuperRod
     MAGIKARP,5,25
 #-------------------------------
 086 # Maple Trail
-25,10,10
+20,8,8
 Land
     BIDOOF,5
     BLITZLE,5
@@ -671,7 +671,7 @@ SuperRod
     FINNEON,5
 #-------------------------------
 089 # Magnet Cave
-25,11,10
+20,8,8
 Cave
     NOSEPASS,6,8
     MAGNEMITE,5,7
@@ -687,7 +687,7 @@ Cave
     RHYHORN,5,8
 #-------------------------------
 090 # Magnet Cave
-25,13,10
+20,8,8
 Cave
     NOSEPASS,20,28
     MAGNEMITE,20,28
@@ -703,7 +703,7 @@ Cave
     RHYHORN,20,28
 #-------------------------------
 091 # Lumigen Power Plant B1
-25,15,10
+20,8,8
 Cave
     MARBOLT,5
     MAGNEMITE,5
@@ -719,7 +719,7 @@ Cave
     MARBOLT,5
 #-------------------------------
 092 # Verdant Valley
-25,10,10
+20,8,8
 Land
     ADORABULL,5
     ODDISH,5
@@ -735,7 +735,7 @@ Land
     SOLOSIS,5
 #-------------------------------
 093 # Lush Road
-25,10,10
+20,8,8
 Land
     FOONGUS,5
     BABEE,5
@@ -770,7 +770,7 @@ SuperRod
     FEEBAS,5,25
 #-------------------------------
 096 # Lush Road
-25,10,10
+20,8,8
 Land
     SNUBBULL,5
     STANTLER,5
@@ -786,7 +786,7 @@ Land
     TROPPY,5
 #-------------------------------
 098 # Plunge Pass
-25,10,10
+20,8,8
 Land
     ADORABULL,5
     BABEE,5
@@ -802,7 +802,7 @@ Land
     EEVEE,5
 #-------------------------------
 099 # Lappy Lake
-25,10,10
+20,8,8
 Land
     DUCKLETT,10,15
     PSYDUCK,10,15
@@ -837,7 +837,7 @@ SuperRod
     LAPRAS,30,40
 #-------------------------------
 100 # Dim Cave
-25,10,10
+20,8,8
 Cave
     SABLING,5
     DUNSPARCE,5
@@ -853,7 +853,7 @@ Cave
     RIOLU,5
 #-------------------------------
 101 # Maple Trail
-25,10,10
+20,8,8
 Land
     BIDOOF,5
     BLITZLE,5
@@ -869,7 +869,7 @@ Land
     DARUMAKA,5
 #-------------------------------
 103 # Verdant Valley
-25,10,10
+20,8,8
 Land
     ADORABULL,5
     ODDISH,5
@@ -904,7 +904,7 @@ SuperRod
     FEEBAS,5
 #-------------------------------
 105 # Yama Pass
-25,10,10
+20,8,8
 Land
     TEDDIURSA,5
     STANTLER,5
@@ -920,7 +920,7 @@ Land
     GIGANTLER,5
 #-------------------------------
 107 # Stacona Woods
-25,10,10
+20,8,8
 Land
     PINCUSH,5
     SICKLER,5
@@ -936,7 +936,7 @@ Land
     SHUCKLE,5
 #-------------------------------
 108 # Lumigen Hills
-25,10,10
+20,8,8
 Land
     ARON,5
     WINGOT,5
@@ -971,7 +971,7 @@ SuperRod
     LAPRAS,5
 #-------------------------------
 110 # Frostbite Cavern
-25,10,10
+20,8,8
 Cave
     MAREEP,5
     SNORUNT,5
@@ -987,7 +987,7 @@ Cave
     CRYOGONAL,5
 #-------------------------------
 111 # Ferrous Cave
-25,10,10
+20,8,8
 Cave
     DIGLETT,5
     GEODUDE,5
@@ -1003,7 +1003,7 @@ Cave
     ALUMIDON,5
 #-------------------------------
 113 # Driftwood City
-25,10,10
+20,8,8
 Water
     SANDILE,5
     KRABBY,5
@@ -1025,7 +1025,7 @@ SuperRod
     MAGIKARP,5,25
 #-------------------------------
 121 # Ferrous Cave
-25,10,10
+20,8,8
 Cave
     ZUBAT,5
     GEODUDE,5
@@ -1060,7 +1060,7 @@ SuperRod
     POLIWAG,5
 #-------------------------------
 123 # Lush Cave
-25,10,10
+20,8,8
 Cave
     SCRAFTY,5
     GEODUDE,5
@@ -1076,7 +1076,7 @@ Cave
     SABLEYE,5
 #-------------------------------
 133 # Dragon's Den
-25,10,10
+20,8,8
 Cave
     DRATINI,5
     AXEW,5
@@ -1092,7 +1092,7 @@ Cave
     DEINO,5
 #-------------------------------
 147 # Blighted Bog
-25,10,10
+20,8,8
 Land
     TRAPINCH_1,5
     FOONGUS,5
@@ -1108,7 +1108,7 @@ Land
     TRUBBISH,5
 #-------------------------------
 150 # Folian Grove
-25,10,10
+20,8,8
 Land
     SKWOVET,5
     APPLIN,5
