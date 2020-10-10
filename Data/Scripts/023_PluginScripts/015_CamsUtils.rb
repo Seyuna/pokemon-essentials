@@ -60,7 +60,7 @@ def pbSelectOutfit
     end
     choices.push("Cancel")
     outfitVal=pbMessage(_INTL("Select an Outfit:<ar>(Outfits Unlocked: {1})</ar>",choices.length-1),choices)
-    if outfitVal = choices.length-1
+    if outfitVal == choices.length-1
       return
     end
     if $Trainer.outfit != ids[outfitVal]
@@ -83,7 +83,8 @@ def pbSelectOutfit
       screen.dispose
       viewport.dispose
       drawPlayerPicture(255)
-      pbMessage(_INTL("\\pgLooking good!"))
+      messages=["Looking good!","Fits like a glove!","Very stylish!","What a stunner!","How fabulous!","Beautiful!"]
+      pbMessage(_INTL("\\se[OutfitChange]\\pg{1}",messages[rand(messages.length)]))
       $game_screen.pictures[1].erase
     else
       pbMessage(_INTL("Already wearing this outfit!"))
