@@ -58,7 +58,11 @@ def pbSelectOutfit
         ids.push(outfits[i][0])
       end
     end
-    outfitVal=pbMessage("Select an Outfit:",choices)
+    choices.push("Cancel")
+    outfitVal=pbMessage(_INTL("Select an Outfit:<ar>(Outfits Unlocked: {1})</ar>",choices.length-1),choices)
+    if outfitVal == choices.length-1
+      return
+    end
     if $Trainer.outfit != ids[outfitVal]
       viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
       viewport.z = 99999
@@ -79,7 +83,8 @@ def pbSelectOutfit
       screen.dispose
       viewport.dispose
       drawPlayerPicture(255)
-      pbMessage(_INTL("\\pgLooking good!"))
+      messages=["Looking good!","Fits like a glove!","Very stylish!","What a stunner!","How fabulous!","Beautiful!"]
+      pbMessage(_INTL("\\se[OutfitChange]\\pg{1}",messages[rand(messages.length)]))
       $game_screen.pictures[1].erase
     else
       pbMessage(_INTL("Already wearing this outfit!"))
@@ -108,45 +113,20 @@ def pbFade(reverse=false)
   return bmp
 end
 
+ItemHandlers::UseText.add(:OUTFITCASE,proc { |item|
+  next _INTL("Change Outfit")
+})
 
-def outfitChoices
-  # Initialize the player's outfits
-  if $game_variables[55]==0
-    $game_variables[55]=1
-  end
-  # Unlock the Quantech outfit if its not already unlocked
-  #Quantech = $game_switches[105]
-  #Quantech Joined = $game_switches[62]
-  if !$game_switches[105] && $game_switches[62]
-    $game_switches[105]=true
-    $game_variables[55]=($game_variables[55]+1)
-  end
-  # Unlock the Biogress outfit if its not already unlocked
-  #Biogress = $game_switches[106]
-  #Biogress Joined = $game_switches[61]
-  if !$game_switches[106] && $game_switches[61]
-    $game_switches[106]=true
-    $game_variables[55]=($game_variables[55]+1)
-  end
-  # Show outfit choices and apply them to the player
-  if $game_switches[105] && $game_switches[106] # Both Quantech and Biogress outfits unlocked
-    pbMessage(_INTL("Change outfits?\nOutfits unlocked: {1}\\ch[1,-1,Standard,Quantech,Biogress]",$game_variables[55]))
-    $Trainer.outfit=$game_variables[1]
-  elsif $game_switches[105] # Quantech outfit unlocked
-    pbMessage(_INTL("Change outfits?\nOutfits unlocked: {1}\\ch[1,-1,Standard,Quantech]",$game_variables[55]))
-    $Trainer.outfit=$game_variables[1]
-  elsif $game_switches[106] # Biogess outfit unlocked
-    pbMessage(_INTL("Change outfits?\nOutfits unlocked: {1}\\ch[1,-1,Standard,Biogress]",$game_variables[55]))
-    if $game_variables[1]==1 #Increment by 1 for the Biogress outfit
-      $game_variables[1]=2
-    end
-      $Trainer.outfit=$game_variables[1]
-  else # Only the Standard outfit is unlocked
-    pbMessage(_INTL("Change outfits?\nOutfits unlocked: {1}\\ch[1,-1,Standard]",$game_variables[55]))
-    $Trainer.outfit=$game_variables[1]
-  end
-  # Have player show outfit and say "looking good!"
-  drawPlayerPicture(255)
-  pbMessage(_INTL("\\pgLooking good!"))
-  $game_screen.pictures[1].erase
-end
+ItemHandlers::UseFromBag.add(:OUTFITCASE,proc { |item|
+#  if !pbGetMetadata($game_map.map_id,MetadataOutdoor)
+    next 2
+#  end
+#  pbMessage(_INTL("Can't use that here."))
+#  next 0
+})
+
+ItemHandlers::UseInField.add(:OUTFITCASE,proc { |item|
+  pbMessage(_INTL("You opened the outfit case."))
+  pbSelectOutfit
+  next 1
+})
