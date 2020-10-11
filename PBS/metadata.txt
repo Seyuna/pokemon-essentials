@@ -806,3 +806,8 @@ ShowArea = true
 MapPosition = 2,13,8
 Outdoor = true
 ShowArea = true
+#-------------------------------
+[151]
+# Haunted Hollow
+Outdoor = true
+ShowArea = true

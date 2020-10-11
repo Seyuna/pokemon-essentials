@@ -778,6 +778,11 @@ Weight = 33.5
 Color = Black
 Shape = 8
 Pokedex = This is Zygarde when about 10% of its pieces have been assembled. It leaps at its opponent's chest and sinks its sharp fangs into them.
+BattlerPlayerX = 2
+BattlerPlayerY = 18
+BattlerEnemyX = -2
+BattlerEnemyY = 20
+BattlerShadowSize = 3
 #-------------------------------
 [ZYGARDE,2]
 FormName = Complete Forme
@@ -788,6 +793,8 @@ Weight = 610.0
 Color = Black
 Shape = 6
 Pokedex = This is Zygarde's perfected form. From the orifice on its chest, it radiates high-powered energy that eliminates everything.
+BattlerEnemyX = 7
+BattlerShadowSize = 3
 #-------------------------------
 [ZYGARDE,3]
 PokedexForm = 2
@@ -2480,3 +2487,36 @@ BattlerPlayerY = -6
 BattlerEnemyX = -2
 BattlerEnemyY = 0
 BattlerAltitude = 1
+#-------------------------------
+[HOPPIP,1]
+FormName = Stacona Form
+Type1 = GHOST
+Type2 = GRASS
+Abilities = CURSEDBODY,PICKUP
+HiddenAbility = HARVEST
+Moves = 1,SPLASH,1,ASTONISH,4,SYNTHESIS,5,CONFUSERAY,7,TAILWHIP,9,LICK,12,POISONPOWDER,14,STUNSPORE,16,SLEEPPOWDER,18,HEX,20,LEECHSEED,22,SPITE,25,MEGADRAIN,28,SHADOWSNEAK,31,CURSE,34,COTTONSPORE,37,OMINOUSWIND,40,WORRYSEED,43,GIGADRAIN,46,SHADOWBALL,49,MEMENTO
+BattlerPlayerX = 7
+BattlerEnemyX = 0
+BattlerEnemyY = 8
+#-------------------------------
+[SKIPLOOM,1]
+FormName = Stacona Form
+Type1 = GHOST
+Type2 = GRASS
+Abilities = CURSEDBODY,PICKUP
+HiddenAbility = HARVEST
+Moves = 1,SPLASH,1,ASTONISH,4,SYNTHESIS,5,CONFUSERAY,7,TAILWHIP,9,LICK,12,POISONPOWDER,14,STUNSPORE,16,SLEEPPOWDER,18,HEX,20,LEECHSEED,22,SPITE,25,MEGADRAIN,28,SHADOWSNEAK,31,CURSE,34,COTTONSPORE,37,OMINOUSWIND,40,WORRYSEED,43,GIGADRAIN,46,SHADOWBALL,49,MEMENTO
+BattlerPlayerX = 1
+BattlerPlayerY = -6
+BattlerEnemyX = -1
+BattlerEnemyY = 8
+#-------------------------------
+[JUMPLUFF,1]
+FormName = Stacona Form
+Type1 = GHOST
+Type2 = GRASS
+Abilities = CURSEDBODY,PICKUP
+HiddenAbility = HARVEST
+Moves = 1,SPLASH,1,ASTONISH,4,SYNTHESIS,5,CONFUSERAY,7,TAILWHIP,9,LICK,12,POISONPOWDER,14,STUNSPORE,16,SLEEPPOWDER,18,HEX,20,LEECHSEED,22,SPITE,25,MEGADRAIN,28,SHADOWSNEAK,31,CURSE,34,COTTONSPORE,37,OMINOUSWIND,40,WORRYSEED,43,GIGADRAIN,46,SHADOWBALL,49,MEMENTO
+BattlerPlayerX = 0
+BattlerEnemyY = -2

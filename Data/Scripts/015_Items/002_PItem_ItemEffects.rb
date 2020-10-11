@@ -338,6 +338,12 @@ ItemHandlers::UseInField.add(:EXPALLOFF,proc { |item|
   next 1
 })
 
+ItemHandlers::UseInField.add(:OUTFITCASE,proc { |item|
+  pbMessage(_INTL("You opened the outfit case."))
+  pbSelectOutfit
+  next 1
+})
+
 #===============================================================================
 # UseOnPokemon handlers
 #===============================================================================

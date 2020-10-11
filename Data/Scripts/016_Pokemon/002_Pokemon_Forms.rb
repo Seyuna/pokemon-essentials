@@ -1359,3 +1359,17 @@ MultipleForms.register(:SLOWPOKE,{
 
 MultipleForms.copy(:SLOWPOKE,:SLOWBRO)
 MultipleForms.copy(:SLOWPOKE,:SLOWKING)
+
+MultipleForms.register(:HOPPIP,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+
+MultipleForms.copy(:HOPPIP,:SKIPLOOM)
+MultipleForms.copy(:HOPPIP,:JUMPLUFF)
