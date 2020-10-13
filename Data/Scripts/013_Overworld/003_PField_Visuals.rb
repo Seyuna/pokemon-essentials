@@ -378,8 +378,10 @@ class LocationWindow
     @sprites["Image"] = Sprite.new
     if $game_map.name.include?("Route")
       @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Route_1")
-    elsif $game_map.name.include?("Haunted")
+    elsif $game_map.name.include?("Hollow")
         @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Haunted")
+    elsif $game_map.name.include?("Cavern")
+        @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Cave_1")
     elsif $game_map.name.include?("Lab")
       @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/HGSS_7")
     elsif $game_map.name.include?("Dojo")
