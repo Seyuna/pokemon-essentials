@@ -1122,3 +1122,19 @@ Land
     ROWLET,5
     GROOKEY,5
     GROOKEY,5
+#-------------------------------
+151 # Haunted Hollow
+25,10,10
+Land
+    HOPPIP,5
+	DRIFLOON,5
+    PHANTUMP,5
+    PUMPKABOO,5
+    MISDREAVUS,5
+    HOPPIP,5
+    PHANTUMP,5
+    PUMPKABOO,5
+    DUSKULL,5
+    SHUPPET,5
+    GASTLY,5
+    GASTLY,5

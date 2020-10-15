@@ -809,6 +809,7 @@ ShowArea = true
 #-------------------------------
 [151]
 # Haunted Hollow
+BattleBack = FRLGHaunted
 MapPosition = 2,10,12
 Outdoor = true
 ShowArea = true
