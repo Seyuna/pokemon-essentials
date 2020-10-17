@@ -819,3 +819,9 @@ ShowArea = true
 MapPosition = 2,10,12
 Outdoor = false
 ShowArea = true
+#-------------------------------
+[153]
+# Haunted Gate
+MapPosition = 2,10,12
+Outdoor = false
+ShowArea = false
