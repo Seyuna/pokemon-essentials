@@ -86,8 +86,6 @@
 109,East,0,92,West,35
 # Maple Town (102) - Yama Pass (105)
 102,West,0,105,East,5
-# Haunted Hollow (151) - Maple Trail (101)
-151,North,7,101,South,0
 # Maple Town (102) - Maple Trail (101)
 102,East,0,101,West,17
 # Maple Trail (86) - Maple Trail (101)

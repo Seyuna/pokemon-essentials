@@ -700,3 +700,4 @@
 684,GALARICACUFF,Galarica Cuff,Galarica Cuff,1,2000,"A cuff made from woven-together Galarica Twigs. Giving it to Galarian Slowpoke makes the Pokémon very happy.",1,0,7,
 685,ABILITYCHARM,Dream Charm,Dream Charms,8,0,"A charm said to increase the chance of finding a Pokémon with a Dream World Ability.",0,0,6,
 686,OUTFITCASE,Outfit Case,Outfit Cases,8,0,"A case that holds all currently unlocked outfits.",2,0,6,
+687,BLORDVOUCHER,Berry Voucher,Berry Vouchers,8,0,"A special voucher, to be redeemed at the Berry Lord.",2,0,6,
