@@ -98,7 +98,7 @@ Events.onWildPokemonCreate+=proc {|sender,e|
        newlevel=newlevel+5-rand(2)
        MAXLEVEL=40
      else
-       newlevel=newlevel-8+rand(6)
+       newlevel=newlevel-8+rand(5)
      end
      newlevel=MINLEVEL if newlevel<=MINLEVEL
      newlevel=MAXLEVEL if newlevel>=MAXLEVEL
@@ -199,7 +199,7 @@ Events.onTrainerPartyLoad+=proc {|sender,e|
          elsif $game_switches[98]
            randlevel=randlevel+6-rand(4)
          else
-           randlevel=randlevel-5+rand(5)
+           randlevel=randlevel-5+rand(3)
          end
          randlevel=MINLEVEL if randlevel<=MINLEVEL
          randlevel=MAXLEVEL if randlevel>=MAXLEVEL
