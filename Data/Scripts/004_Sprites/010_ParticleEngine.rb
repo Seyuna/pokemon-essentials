@@ -382,17 +382,6 @@ class Particle_Engine::Smoke < ParticleEffect_Event
   end
 end
 
-=begin
-def setParameters(params)
-  @randomhue,@leftright,@fade,
-  @maxparticless,@hue,@slowdown,
-  @ytop,@ybottom,@xleft,@xright,
-  @xgravity,@ygravity,@xoffset,@yoffset,
-  @opacityvar,@originalopacity = params
-end
-=end
-
-
 
 class Particle_Engine::Teleport < ParticleEffect_Event
   def initialize(event,viewport)

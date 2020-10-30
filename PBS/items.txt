@@ -208,7 +208,7 @@
 206,PROTECTOR,Protector,Protectors,1,2100,"A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pokémon.",0,0,0,
 207,ELECTIRIZER,Electirizer,Electirizers,1,2100,"A box packed with a tremendous amount of electric energy. It is loved by a certain Pokémon.",0,0,0,
 208,MAGMARIZER,Magmarizer,Magmarizers,1,2100,"A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon.",0,0,0,
-209,REAPERCLOTH,Reaper Cloth,Reaper Cloths,1,2100,"A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon.",0,0,0,
+209,REAPERCLOTH,Reaper Cloth,Reaper Cloths,1,2100,"A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon.",1,0,7,
 210,PRISMSCALE,Prism Scale,Prism Scales,1,500,"A mysterious scale that evolves certain Pokémon. It shines in rainbow colors.",0,0,0,
 211,OVALSTONE,Oval Stone,Oval Stones,1,2100,"A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg.",0,0,0,
 212,REDSCARF,Red Scarf,Red Scarves,1,100,"An item to be held by a Pokémon. It boosts the Cool aspect of the holder in a Contest.",0,0,0,
@@ -582,7 +582,7 @@
 572,FAIRYCELL,Fairy Cellulose,Fairy Cellulose,1,0,"A collection of matter to be held by a Pokémon. It boosts the power of Fairy-type moves.",0,0,0,
 573,SOULSTONE,Soul Stone,Soul Stones,1,4100,"A peculiar stone that evolves certain species of Pokémon that require trading to evolve.",1,0,7,
 574,CHAMPTOKEN,Champion's Token,Champion's Token,8,0,"A special token awarded to champions. This may come in handy sometime!",0,0,6,
-575,ABILITYCAPSULE,Ability Capsule,Ability Capsules,2,10000,"A special capsule that unlocks the Hidden Abilities of Pokémon.",1,0,0,
+575,ABILITYCAPSULE,Ability Capsule,Ability Capsules,2,8000,"A special capsule that unlocks the Abilities of Pokémon.",1,0,0,
 576,TM102,TM102,TM102s,4,3000,"The target is bitten with viciously sharp fangs. It may make the target flinch.",3,0,0,BITE
 577,EVRESET,EV Resetter,EV Resetters,2,8000,"A special capsule that resets all of a Pokémon's Effort Values.",1,0,0,
 #-------------------------------
@@ -701,3 +701,5 @@
 685,ABILITYCHARM,Dream Charm,Dream Charms,8,0,"A charm said to increase the chance of finding a Pokémon with a Dream World Ability.",0,0,6,
 686,OUTFITCASE,Outfit Case,Outfit Cases,8,0,"A case that holds all currently unlocked outfits.",2,0,6,
 687,BLORDVOUCHER,Berry Voucher,Berry Vouchers,8,0,"A special voucher, to be redeemed at the Berry Lord.",2,0,6,
+688,ABILITYPATCH,Ability Patch,Ability Patches,2,10000,"A special patch that unlocks the Hidden Abilities of Pokémon.",1,0,0,
+689,DEPUTYBADGE,Deputy Badge,Deputy Badges,8,0,"A deputy badge, for those who have proven to be courageous.",2,0,6,

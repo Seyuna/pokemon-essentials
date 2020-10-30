@@ -825,3 +825,8 @@ ShowArea = true
 MapPosition = 2,10,12
 Outdoor = false
 ShowArea = false
+#-------------------------------
+[154]
+# Gravekeeper's House
+MapPosition = 2,10,12
+Outdoor = false

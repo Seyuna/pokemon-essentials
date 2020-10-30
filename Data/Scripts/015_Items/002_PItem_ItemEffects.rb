@@ -1143,6 +1143,7 @@ ItemHandlers::UseOnPokemon.add(:ABILITYCAPSULE,proc { |item,pkmn,scene|
   next false
 })
 
+=begin
 ItemHandlers::UseOnPokemon.add(:ABILITYCAPSULE,proc{|item,pokemon,scene|
   abils=pokemon.getAbilityList
   abil1=0; abil2=0; abil3=0
@@ -1187,6 +1188,28 @@ ItemHandlers::UseOnPokemon.add(:ABILITYCAPSULE,proc{|item,pokemon,scene|
       next true
     end
   end
+})
+=end
+
+ItemHandlers::UseOnPokemon.add(:ABILITYPATCH,proc { |item,pkmn,scene|
+  abils = pkmn.getAbilityList
+  hiddenArr =[]
+  for i in abils
+    hiddenArr.push([i[1],i[0]]) if i[0]>0 && i[1]>1 && pkmn.abilityIndex != i[1]
+  end
+  if hiddenArr.length==0 || (pkmn.hasHiddenAbility? && hiddenArr.length==1) || pkmn.isSpecies?(:ZYGARDE)
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  newabil = hiddenArr[rand(hiddenArr.length)]
+  newabilname = PBAbilities.getName(newabil[1])
+  if scene.pbConfirm(_INTL("Would you like to change {1}'s Ability to {2}?",pkmn.name,newabilname))
+    pkmn.setAbility(newabil[0])
+    scene.pbRefresh
+    scene.pbDisplay(_INTL("{1}'s Ability changed to {2}!",pkmn.name,newabilname))
+    next true
+  end
+  next false
 })
 
 # Voltseon
