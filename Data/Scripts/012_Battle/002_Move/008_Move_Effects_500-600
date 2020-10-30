@@ -449,3 +449,58 @@ class PokeBattle_Move_519 < PokeBattle_Move
     user.pbConsumeItem(true,true,false) if user.item>0
   end
 end
+
+#===============================================================================
+# Forces all active Pokémon to consume their held berries. This move bypasses
+# Substitutes. (Tea Time)
+#===============================================================================
+class PokeBattle_Move_520 < PokeBattle_Move
+  def pbMoveFailed?(user,targets)
+    @validTargets = []
+    @battle.eachBattler do |b|
+      next if !b.item == 0 || !pbIsBerry?(b.item)
+      @validTargets.push(b.index)
+    end
+    if @validTargets.length==0
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    @battle.pbDisplay(_INTL("It's tea time! Everyone dug in to their Berries!"))
+    return false
+  end
+
+  def pbFailsAgainstTarget?(user,target)
+    return false if @validTargets.include?(target.index)
+    return true if target.semiInvulnerable?
+  end
+
+  def pbEffectAgainstTarget(user,target)
+    target.pbHeldItemTriggerCheck(user.item,false)
+    target.pbConsumeItem(true,true,false) if user.pokemon.hasItem?
+  end
+end
+
+#===============================================================================
+# User loses 1/4 of max HP, Poison's itself and curses the target.
+# Cursed Pokémon lose 1/4 of their max HP at the end of each round.
+# (Pestilence)
+#===============================================================================
+class PokeBattle_Move_521 < PokeBattle_Move
+  def ignoresSubstitute?(user); return true; end
+
+  def pbFailsAgainstTarget?(user,target)
+    if target.effects[PBEffects::Curse]
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectAgainstTarget(user,target)
+    @battle.pbDisplay(_INTL("{1} poisoned and hurt itself to lay a curse on {2}!",user.pbThis,target.pbThis(true)))
+    target.effects[PBEffects::Curse] = true
+    user.pbReduceHP(user.totalhp/4,false)
+    user.pbPoison(user)
+    user.pbItemHPHealCheck
+  end
+end

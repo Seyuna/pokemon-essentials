@@ -1359,3 +1359,73 @@ MultipleForms.register(:SLOWPOKE,{
 
 MultipleForms.copy(:SLOWPOKE,:SLOWBRO)
 MultipleForms.copy(:SLOWPOKE,:SLOWKING)
+
+MultipleForms.register(:HOPPIP,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+
+MultipleForms.copy(:HOPPIP,:SKIPLOOM)
+MultipleForms.copy(:HOPPIP,:JUMPLUFF)
+
+MultipleForms.register(:CUBONE,{
+  "getForm" => proc { |pkmn|
+    maps=[151,152,153,154]   # Map IDs for alola form
+    if PBDayNight.isNight? || $game_map && maps.include?($game_map.map_id) # if night or in haunted map, evolve cubone to alola form
+      next 1
+    else
+      next 0
+    end
+  }
+})
+
+MultipleForms.register(:MAROWAK,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[151,152,153,154]   # Map IDs for alola form to appear
+   if $game_map && maps.include?($game_map.map_id)
+     next 1
+   else
+     next 0
+   end
+}
+})
+
+MultipleForms.register(:SINISTEA,{
+"getFormOnCreation"=>proc{|pokemon|
+   if rand(99) == 1 # 1/100 odds for authenticity
+     next 1
+   else
+     next 0
+   end
+}
+})
+
+MultipleForms.register(:SUNKERN,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:SUNKERN,:SUNFLORA)
+
+MultipleForms.register(:SPINARAK,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:SPINARAK,:ARIADOS)

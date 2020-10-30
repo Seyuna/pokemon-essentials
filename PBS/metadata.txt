@@ -806,3 +806,27 @@ ShowArea = true
 MapPosition = 2,13,8
 Outdoor = true
 ShowArea = true
+#-------------------------------
+[151]
+# Haunted Hollow
+BattleBack = FRLGHaunted
+MapPosition = 2,10,12
+Outdoor = true
+ShowArea = true
+#-------------------------------
+[152]
+# Haunted Cavern
+MapPosition = 2,10,12
+Outdoor = false
+ShowArea = true
+#-------------------------------
+[153]
+# Haunted Gate
+MapPosition = 2,10,12
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[154]
+# Gravekeeper's House
+MapPosition = 2,10,12
+Outdoor = false

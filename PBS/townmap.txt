@@ -1,3 +1,5 @@
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
 [0]
 Name=
 Filename=mapRegion0.png
@@ -27,10 +29,12 @@ Point=12,12,Safari Zone,,,,,
 Point=13,13,Route 8,Diving area,,,,
 Point=18,17,Berth Island,,,,,51
 Point=22,16,Faraday Island,,,,,52
+#-------------------------------
 [1]
 Name=
 Filename=mapRegion1.png
 Point=13,16,Here,,,,,
+#-------------------------------
 [2]
 Name=
 Filename=mapRegion2.png
@@ -90,3 +94,4 @@ Point=26,10,Island Forest,Lv. 45-55,,,,
 Point=16,11,Lappy Lake,Lv. 2-30,99,30,31,
 Point=14,3,Blighted Bog,Lv. 20-50,,,,
 Point=13,8,Folian Grove,Lv. 2-30,,,,
+Point=10,12,Haunted Hollow,Lv. 30-45,,,,

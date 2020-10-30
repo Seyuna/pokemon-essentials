@@ -96,3 +96,6 @@
 93,BLACKBELT_SDEF,EV Trainer,100,SwSh-MustardBattle.ogg,,,Male,,
 94,SPLICERIVAL1,Quantech Researcher,100,B2W2-RivalTheme,,,Male,,
 95,SPLICERIVAL2,Biogress Researcher,100,B2W2-RivalTheme,,,Male,,
+96,OFFICER,Officer,100,,,,Male,,
+97,WITCH,Witch,100,,,,Female,,
+98,GRAVEDIGGER,Grave Digger,64,,,HGSSEncounter-SuspiciousPerson,Male,,

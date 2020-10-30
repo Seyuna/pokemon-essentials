@@ -160,7 +160,7 @@ def pbPrepareBattle(battle)
     base = battleRules["base"]
   end
 
-  if backdrop != "FRLGBog"
+  if backdrop != "FRLGBog" && backdrop != "FRLGHaunted"
     battle.backdropBase = base if base
   end
 

@@ -39,15 +39,15 @@ Events.onWildPokemonCreate+=proc {|sender,e|
    #10-25 = verdant valley and lumigen hills and folian grove
    sector2=[108,92,103]
    #3-30 = plunge pass, lappy lake, and magnet cave 1, and moncto town
-   sector3=[98,99,89,91,43,150]
+   sector3=[98,99,89,91,43,150,81,79]
    #15-25 = ferrous cave and stacona woods
    sector4=[107,111,121]
    #20-30 = costa path and lush road
    sector5=[77,84,110,93,96,123]
    #25-40 = dim cave and dev room
    sector6=[100,106,90]
-   #30-40 = maple trail and yama pass
-   sector7=[105,86,101]
+   #30-40 = maple trail and yama pass and haunted hollow
+   sector7=[105,86,101,151,152]
    #20-50
    sector8=[147]
    #1-1 EV training room
@@ -98,7 +98,7 @@ Events.onWildPokemonCreate+=proc {|sender,e|
        newlevel=newlevel+5-rand(2)
        MAXLEVEL=40
      else
-       newlevel=newlevel-8+rand(6)
+       newlevel=newlevel-8+rand(5)
      end
      newlevel=MINLEVEL if newlevel<=MINLEVEL
      newlevel=MAXLEVEL if newlevel>=MAXLEVEL
@@ -130,8 +130,8 @@ Events.onTrainerPartyLoad+=proc {|sender,e|
      sector1=[78,80]
      #10-25 = verdant valley and lumigen hills and folian grove
      sector2=[108,92,103]
-     #3-30 = plunge pass, lappy lake, and magnet cave 1, and moncto town
-     sector3=[98,99,89,91,43,150]
+     #3-30 = plunge pass, lappy lake, and magnet cave 1, and moncto town and Lumigen/Fleural
+     sector3=[98,99,89,91,43,150,81,79]
      #15-25 = ferrous cave and stacona woods
      sector4=[107,111,121]
      #20-30 = costa path and lush road
@@ -140,8 +140,8 @@ Events.onTrainerPartyLoad+=proc {|sender,e|
      sectorLAB=[127,113]
      #25-40 = dim cave and dev room
      sector6=[100,106,90]
-     #30-45 = maple trail and yama pass and secret labs
-     sector7=[105,86,101,143,112,145]
+     #30-45 = maple trail and yama pass and secret labs and haunted hollow
+     sector7=[105,86,101,143,112,145,151,152]
      #20-50 = blighted bog
      sector8=[147]
      #1-1 EV training room
@@ -199,7 +199,7 @@ Events.onTrainerPartyLoad+=proc {|sender,e|
          elsif $game_switches[98]
            randlevel=randlevel+6-rand(4)
          else
-           randlevel=randlevel-5+rand(5)
+           randlevel=randlevel-5+rand(3)
          end
          randlevel=MINLEVEL if randlevel<=MINLEVEL
          randlevel=MAXLEVEL if randlevel>=MAXLEVEL

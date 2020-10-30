@@ -1122,3 +1122,35 @@ Land
     ROWLET,5
     GROOKEY,5
     GROOKEY,5
+#-------------------------------
+151 # Haunted Hollow
+25,10,10
+Land
+    SUNKERN,5
+    HOPPIP,5
+    SPINARAK,5
+    SUNKERN,5
+    HOPPIP,5
+    MISDREAVUS,5
+    PUMPKABOO,5
+    IMPIDIMP,5
+    SPINARAK,5
+    GASTLY,5
+    SINISTEA,5
+    SINISTEA,5
+#-------------------------------
+152 # Haunted Cavern
+25,5,10
+Cave
+    GASTLY,5
+    IMPIDIMP,5
+    SABLEYE,5
+    DUSKULL,5
+    SHUPPET,5
+    SABLEYE,5
+    IMPIDIMP,5
+    YAMASK,5
+    DUSKULL,5
+    SHUPPET,5
+    SINISTEA,5
+    SINISTEA,5

@@ -10,7 +10,6 @@ def poisonAllPokemon(event=nil)
      end
 end
 
-#thundaga
 def paralyzeAllPokemon(event=nil)
     for pkmn in $Trainer.ablePokemonParty
        next if pkmn.hasType?(:ELECTRIC) ||
