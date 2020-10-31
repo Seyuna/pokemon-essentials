@@ -452,7 +452,7 @@ end
 
 #===============================================================================
 # Forces all active Pokémon to consume their held berries. This move bypasses
-# Substitutes. (Tea Time)
+# Substitutes. (Tea Time) Teatime
 #===============================================================================
 class PokeBattle_Move_520 < PokeBattle_Move
   def pbMoveFailed?(user,targets)
@@ -462,7 +462,7 @@ class PokeBattle_Move_520 < PokeBattle_Move
       @validTargets.push(b.index)
     end
     if @validTargets.length==0
-      @battle.pbDisplay(_INTL("But it failed!"))
+      @battle.pbDisplay(_INTL("But nothing happened!"))
       return true
     end
     @battle.pbDisplay(_INTL("It's tea time! Everyone dug in to their Berries!"))
@@ -475,8 +475,8 @@ class PokeBattle_Move_520 < PokeBattle_Move
   end
 
   def pbEffectAgainstTarget(user,target)
-    target.pbHeldItemTriggerCheck(user.item,false)
-    target.pbConsumeItem(true,true,false) if user.pokemon.hasItem?
+    target.pbHeldItemTriggerCheck(target.item,false)
+    target.pbConsumeItem(true,true,false) if target.pokemon.hasItem?
   end
 end
 
