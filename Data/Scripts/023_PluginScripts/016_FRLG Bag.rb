@@ -12,6 +12,7 @@ class Window_PokemonBag < Window_DrawableCommand
     @selarrow  = AnimatedBitmap.new("Graphics/Pictures/Bag/cursor")
     @swaparrow = AnimatedBitmap.new("Graphics/Pictures/Bag/cursor_swap")
     self.windowskin = nil
+    self.rowHeight = 36
   end
 
   def dispose
@@ -193,7 +194,7 @@ class PokemonBag_Scene
     @sprites["rightarrow"].y       = 126
     @sprites["rightarrow"].visible = (!@choosing || numfilledpockets>1)
     @sprites["rightarrow"].play
-    @sprites["itemlist"] = Window_PokemonBag.new(@bag,@filterlist,lastpocket,190,8,327,40+32+ITEMSVISIBLE*32)
+    @sprites["itemlist"] = Window_PokemonBag.new(@bag,@filterlist,lastpocket,190,19,327,44+32+ITEMSVISIBLE*32)
     @sprites["itemlist"].viewport    = @viewport
     @sprites["itemlist"].pocket      = lastpocket
     @sprites["itemlist"].index       = @bag.getChoice(lastpocket)
@@ -269,14 +270,14 @@ class PokemonBag_Scene
     end
     # Draw the pocket icons
     @sprites["pocketicon"].bitmap.clear
-    if @choosing && @filterlist
-      for i in 1...@bag.pockets.length
-        if @filterlist[i].length==0
-          @sprites["pocketicon"].bitmap.blt(6+(i-1)*22,6,
-             @pocketbitmap.bitmap,Rect.new((i-1)*20,28,20,20))
-        end
-      end
-    end
+    #if @choosing && @filterlist
+    #  for i in 1...@bag.pockets.length
+    #    if @filterlist[i].length==0
+  #        @sprites["pocketicon"].bitmap.blt(6+(i-1)*22,6,
+  #           @pocketbitmap.bitmap,Rect.new((i-1)*20,28,20,20))
+  #      end
+  #    end
+  #  end
     @sprites["pocketicon"].bitmap.blt(2+(@sprites["itemlist"].pocket-1)*22,2,
        @pocketbitmap.bitmap,Rect.new((@sprites["itemlist"].pocket-1)*24,0,24,26))
     # Refresh the item window
