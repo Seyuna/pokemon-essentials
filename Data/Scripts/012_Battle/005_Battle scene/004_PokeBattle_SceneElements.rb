@@ -343,7 +343,7 @@ class PokemonDataBox < SpriteWrapper
       if @expFlash==0
         pbSEStop
         @expFlash = Graphics.frame_rate/5
-        pbSEPlay("Exp full")
+        pbSEPlay("Pkmn exp full")
         self.flash(Color.new(64,200,248,192),@expFlash)
         for i in @sprites
           i[1].flash(Color.new(64,200,248,192),@expFlash) if !i[1].disposed?
@@ -394,8 +394,8 @@ end
 class AbilitySplashBar < SpriteWrapper
   attr_reader :battler
 
-  TEXT_BASE_COLOR   = Color.new(0,0,0)
-  TEXT_SHADOW_COLOR = Color.new(248,248,248)
+  TEXT_BASE_COLOR   = Color.new(64,64,64)
+  TEXT_SHADOW_COLOR = Color.new(216,208,176)
 
   def initialize(side,viewport=nil)
     super(viewport)
@@ -410,7 +410,7 @@ class AbilitySplashBar < SpriteWrapper
     # Create bitmap that displays the text
     @contents = BitmapWrapper.new(@bgBitmap.width,@bgBitmap.height/2)
     self.bitmap = @contents
-    pbSetSystemFont(self.bitmap)
+    pbSetSmallFont(self.bitmap)
     # Position the bar
     self.x       = (side==0) ? -Graphics.width/2 : Graphics.width
     self.y       = (side==0) ? 180 : 80 #abilityheight thundaga
@@ -464,13 +464,13 @@ class AbilitySplashBar < SpriteWrapper
     self.bitmap.clear
     return if !@battler
     textPos = []
-    textX = (@side==0) ? 10 : self.bitmap.width-8
+    textX = (@side==0) ? 15 : self.bitmap.width-12
     # Draw Pokémon's name
-    textPos.push([_INTL("{1}'s",@battler.name),textX,2,@side==1,
-       TEXT_BASE_COLOR,TEXT_SHADOW_COLOR,true])
+    textPos.push([_INTL("{1}'s",@battler.name),textX,3,@side==1,
+       Color.new(248,248,248),Color.new(132,132,132)])
     # Draw Pokémon's ability
-    textPos.push([@battler.abilityName,textX,32,@side==1,
-       TEXT_BASE_COLOR,TEXT_SHADOW_COLOR,true])
+    textPos.push([@battler.abilityName,textX,31,@side==1,
+       TEXT_BASE_COLOR,TEXT_SHADOW_COLOR])
     pbDrawTextPositions(self.bitmap,textPos)
   end
 

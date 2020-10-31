@@ -218,7 +218,7 @@ class FightMenuDisplay < BattleMenuBase
      Color.new(248,72,72),Color.new(136,48,48),    # Red, zero PP
      Color.new(248,136,32),Color.new(144,72,24),   # Orange, 1/4 of total PP or less
      Color.new(248,192,0),Color.new(144,104,0),    # Yellow, 1/2 of total PP or less
-     Color.new(64,64,64),Color.new(150,150,150)
+     Color.new(72,72,72),Color.new(208,208,208)
      #TEXT_BASE_COLOR,TEXT_SHADOW_COLOR             # Black, more than 1/2 of total PP
   ]
   MAX_MOVES = 4   # Number of moves to display at once
@@ -283,11 +283,11 @@ class FightMenuDisplay < BattleMenuBase
       @megaButton.src_rect.height = @megaEvoBitmap.height/2
       addSprite("megaButton",@megaButton)
       # Create Shift button
-      @shiftButton = SpriteWrapper.new(viewport)
-      @shiftButton.bitmap = @shiftBitmap.bitmap
-      @shiftButton.x      = self.x+4
-      @shiftButton.y      = self.y-@shiftBitmap.height
-      addSprite("shiftButton",@shiftButton)
+      #@shiftButton = SpriteWrapper.new(viewport)
+      #@shiftButton.bitmap = @shiftBitmap.bitmap
+      #@shiftButton.x      = self.x+4
+      #@shiftButton.y      = self.y-@shiftBitmap.height
+      #addSprite("shiftButton",@shiftButton)
     else
       # Create message box (shows type and PP of selected move)
       @msgBox = Window_AdvancedTextPokemon.newWithSize("",
@@ -355,7 +355,7 @@ class FightMenuDisplay < BattleMenuBase
       next if !@visibility["button_#{i}"]
       x = button.x-self.x+button.src_rect.width/2
       y = button.y-self.y+8
-      moveNameBase = Color.new(64,64,64)
+      moveNameBase = Color.new(72,72,72)
       #if m.type>=0
         # NOTE: This takes a colour from a particular pixel in the button
         #       graphic and makes the move name's base colour that same colour.
@@ -364,7 +364,7 @@ class FightMenuDisplay < BattleMenuBase
         #       of code to ensure the font is an appropriate colour.
       #  moveNameBase = button.bitmap.get_pixel(10,button.src_rect.y+34)
       #end
-      textPos.push([m.name,x-68,y,0,moveNameBase,Color.new(150,150,150)])
+      textPos.push([m.name,x-68,y,0,moveNameBase,Color.new(208,208,208)])
       #thundaga left align text for moves
     end
     pbDrawTextPositions(@overlay.bitmap,textPos)
@@ -437,8 +437,8 @@ class FightMenuDisplay < BattleMenuBase
 
   def refreshShiftButton
     return if !USE_GRAPHICS
-    @shiftButton.src_rect.y = (@shiftMode-1)*@shiftBitmap.height
-    @shiftButton.z          = self.z - 1
+    #@shiftButton.src_rect.y = (@shiftMode-1)*@shiftBitmap.height
+    #@shiftButton.z          = self.z - 1
   end
 
   def refresh
@@ -468,8 +468,8 @@ class TargetMenuDisplay < BattleMenuBase
      [0,8,1,3]    # 4 = Bug Catching Contest
   ]
   CMD_BUTTON_WIDTH_SMALL = 170
-  TEXT_BASE_COLOR   = Color.new(240,248,224)
-  TEXT_SHADOW_COLOR = Color.new(64,64,64)
+  TEXT_BASE_COLOR   = Color.new(0,112,248)
+  TEXT_SHADOW_COLOR = Color.new(120,184,232)
 
   def initialize(viewport,z,sideSizes)
     super(viewport)
@@ -483,6 +483,10 @@ class TargetMenuDisplay < BattleMenuBase
     #       0=select 1 button (@index), 1=select all buttons with text
     # Create bitmaps
     @buttonBitmap = AnimatedBitmap.new(_INTL("Graphics/Pictures/Battle/cursor_target"))
+    # Create background graphic
+    background = IconSprite.new(0,Graphics.height-96,viewport)
+    background.setBitmap("Graphics/Pictures/Battle/overlay_target")
+    addSprite("background",background)
     # Create target buttons
     @buttons = Array.new(maxIndex+1) do |i|
       numButtons = @sideSizes[i%2]
@@ -501,8 +505,8 @@ class TargetMenuDisplay < BattleMenuBase
         button.x    = self.x+138-[0,116][numButtons-1]
       end
       button.x      += (button.src_rect.width-4)*inc
-      button.y      = self.y+6
-      button.y      += (BUTTON_HEIGHT-4)*((i+1)%2)
+      button.y      = self.y+7
+      button.y      += (BUTTON_HEIGHT-8)*((i+1)%2)
       addSprite("button_#{i}",button)
       next button
     end
@@ -510,7 +514,7 @@ class TargetMenuDisplay < BattleMenuBase
     @overlay = BitmapSprite.new(Graphics.width,Graphics.height-self.y,viewport)
     @overlay.x = self.x
     @overlay.y = self.y
-    pbSetNarrowFont(@overlay.bitmap)
+    pbSetSystemFont(@overlay.bitmap)
     addSprite("overlay",@overlay)
     self.z = z
     refresh
@@ -555,7 +559,7 @@ class TargetMenuDisplay < BattleMenuBase
       next if !button || @texts[i].nil? || @texts[i]==""
       x = button.x-self.x+button.src_rect.width/2
       y = button.y-self.y+8
-      textpos.push([@texts[i],x,y,2,TEXT_BASE_COLOR,TEXT_SHADOW_COLOR])
+      textpos.push([@texts[i].upcase,x-((@sideSizes.max>2)? 50 : 80),y,0,((i%2==0)? TEXT_BASE_COLOR : Color.new(232,32,16)),((i%2==0)? TEXT_SHADOW_COLOR : Color.new(248,168,184))])
     end
     pbDrawTextPositions(@overlay.bitmap,textpos)
   end

@@ -11,6 +11,7 @@ end
 
 
 class PokemonTemp
+  attr_accessor :encounterTriggered
   attr_accessor :encounterType
   attr_accessor :evolutionLevels
 
@@ -266,7 +267,12 @@ def pbWildBattleCore(*args)
   playerTrainers    = [$Trainer]
   playerParty       = $Trainer.party
   playerPartyStarts = [0]
-  if $PokemonGlobal.partner && !$PokemonTemp.battleRules["noPartner"] && foeParty.length>1
+  room_for_partner = (foeParty.length > 1)
+  if !room_for_partner && $PokemonTemp.battleRules["size"] &&
+     !["single", "1v1", "1v2", "1v3"].include?($PokemonTemp.battleRules["size"])
+    room_for_partner = true
+  end
+  if $PokemonGlobal.partner && !$PokemonTemp.battleRules["noPartner"] && room_for_partner
     ally = PokeBattle_Trainer.new($PokemonGlobal.partner[1],$PokemonGlobal.partner[0])
     ally.id    = $PokemonGlobal.partner[2]
     ally.party = $PokemonGlobal.partner[3]
@@ -406,7 +412,12 @@ def pbTrainerBattleCore(*args)
   playerTrainers    = [$Trainer]
   playerParty       = $Trainer.party
   playerPartyStarts = [0]
-  if $PokemonGlobal.partner && !$PokemonTemp.battleRules["noPartner"] && foeParty.length>1
+  room_for_partner = (foeParty.length > 1)
+  if !room_for_partner && $PokemonTemp.battleRules["size"] &&
+     !["single", "1v1", "1v2", "1v3"].include?($PokemonTemp.battleRules["size"])
+    room_for_partner = true
+  end
+  if $PokemonGlobal.partner && !$PokemonTemp.battleRules["noPartner"] && room_for_partner
     ally = PokeBattle_Trainer.new($PokemonGlobal.partner[1],$PokemonGlobal.partner[0])
     ally.id    = $PokemonGlobal.partner[2]
     ally.party = $PokemonGlobal.partner[3]
@@ -568,6 +579,7 @@ def pbAfterBattle(decision,canLose)
     end
   end
   Events.onEndBattle.trigger(nil,decision,canLose)
+  $game_player.straighten
 end
 
 Events.onEndBattle += proc { |sender,e|
