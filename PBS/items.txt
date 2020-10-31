@@ -701,5 +701,5 @@
 685,ABILITYCHARM,Dream Charm,Dream Charms,8,0,"A charm said to increase the chance of finding a Pokémon with a Dream World Ability.",0,0,6,
 686,OUTFITCASE,Outfit Case,Outfit Cases,8,0,"A case that holds all currently unlocked outfits.",2,0,6,
 687,BLORDVOUCHER,Berry Voucher,Berry Vouchers,8,0,"A special voucher, to be redeemed at the Berry Lord.",2,0,6,
-688,ABILITYPATCH,Ability Patch,Ability Patches,2,10000,"A special patch that unlocks the Hidden Abilities of Pokémon.",1,0,0,
-689,DEPUTYBADGE,Deputy Badge,Deputy Badges,8,0,"A deputy badge, for those who have proven to be courageous.",2,0,6,
+688,ABILITYPATCH,Ability Patch,Ability Patches,2,12000,"A special patch that unlocks the Hidden Abilities of Pokémon.",1,0,0,
+689,DEPUTYBADGE,Deputy Badge,Deputy Badges,8,0,"A deputy badge, for those who have proven themselves to be courageous.",2,0,6,

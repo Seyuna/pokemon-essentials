@@ -761,3 +761,4 @@
 740,EERIESPELL,Eerie Spell,517,80,PSYCHIC,Special,100,10,0,NearOther,0,bef,"The user casts a horrible spell on the opponent. This removes 3 PP from their last used move."
 741,SHELLSIDEARM,Shell Side Arm,518,90,POISON,Special,100,10,100,NearOther,0,bef,"This move inflicts physical or special damage, whichever will be more effective. This may also poison the target."
 742,PESTILENCE,Pestilence,521,0,POISON,Status,0,10,0,NearOther,0,,"A move that damages and poisons the user to curse the enemy."
+743,BOULDERCRUSH,Boulder Crush,509,90,ROCK,Physical,90,10,0,NearOther,0,abef,"Crushes the target with boulder-like weight. The user's Defense increases the damage of this attack."
