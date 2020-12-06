@@ -137,7 +137,7 @@ class PokemonPartyBlankPanel < SpriteWrapper
   def initialize(_pokemon,index,viewport=nil)
     super(viewport)
     self.x = [0, Graphics.width/2][index%2]
-    self.y = [4,20,104,120,204,221][index]
+    self.y = [10,20,110,120,210,220][index]
     @panelbgsprite = AnimatedBitmap.new("Graphics/Pictures/Party/panel_blank")
     self.bitmap = @panelbgsprite.bitmap
     @text = nil
@@ -389,7 +389,7 @@ class PokemonPartyPanel < SpriteWrapper
         # Draw shiny icon
         if @pokemon.shiny?
           pbDrawImagePositions(@overlaysprite.bitmap,[[
-             "Graphics/Pictures/shiny",80,48,0,0,16,16]])
+             "Graphics/Pictures/shiny",80,48,0,0,18,18]])
         end
       end
       pbDrawTextPositions(@overlaysprite.bitmap,textpos)

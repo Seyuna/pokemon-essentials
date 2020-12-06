@@ -549,16 +549,31 @@ class PokemonPokedexInfo_Scene
   def pbSceneBrief
     pbSEPlay("Pkmn exp gain")
     v = -255
-    for i in 0...120
+    for i in 0...127
       @sprites["infosprite"].tone = Tone.new(v,v,v)
       @sprites["formicon"].tone = Tone.new(v,v,v)
       v+=(2)
       Graphics.update
     end
-    pbSEPlay("Pkmn exp full")
     @sprites["infosprite"].tone = Tone.new(0,0,0)
     @sprites["formicon"].tone = Tone.new(0,0,0)
-    pbWait(5)
+    pbSEPlay("Pkmn exp full")
+    for i in 0...5
+      @sprites["infosprite"].tone = Tone.new(46*i,40*i,6*i)
+      @sprites["infosprite"].zoom_x += (0.05)*i
+      @sprites["infosprite"].zoom_y += (0.05)*i
+      Graphics.update
+    end
+    v=255
+    for i in 0...5
+      @sprites["infosprite"].tone = Tone.new(230-(46*i),200-(40*i),30-(6*i))
+      @sprites["infosprite"].zoom_x -= (0.05)*i
+      @sprites["infosprite"].zoom_y -= (0.05)*i
+      Graphics.update
+    end
+    @sprites["infosprite"].tone = Tone.new(0,0,0)
+    @sprites["formicon"].tone = Tone.new(0,0,0)
+    pbWait(8)
     pbPlayCrySpecies(@species,@form)
     loop do
       Graphics.update

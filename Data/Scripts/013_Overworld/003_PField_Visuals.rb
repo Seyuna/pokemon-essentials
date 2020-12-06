@@ -364,13 +364,6 @@ end
 class LocationWindow
   def initialize(name)
     @sprites = {}
-
-    @sprites["overlay"]=Sprite.new
-    @sprites["overlay"].bitmap=Bitmap.new(Graphics.width*4,Graphics.height*4)
-    @sprites["overlay"].z=99999
-    pbSetSystemFont(@sprites["overlay"].bitmap)
-    @overlay = @sprites["overlay"].bitmap
-    @overlay.clear
     @baseColor=Color.new(255,255,255)
     @shadowColor=Color.new(148,148,165)
     #Thundaga signposts
@@ -400,59 +393,39 @@ class LocationWindow
       @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/HGSS_8")
     end
     @sprites["Image"].x = 8
-    @sprites["Image"].y = 0 - @sprites["Image"].bitmap.height
-    @sprites["Image"].z = 99998
-
-    @window=Window_AdvancedTextPokemon.new(name)
-    @window.x=0
-    @window.y=-@window.height
-    @window.z=99998
-    @currentmap=$game_map.map_id
-    @frames=0
-  end
-
-  def disposed?
-    @window.disposed?
+    @sprites["Image"].y = - @sprites["Image"].bitmap.height
+    @sprites["Image"].z = 99999
+    @sprites["Image"].opacity = 255
+    @height = @sprites["Image"].bitmap.height
+    pbSetSystemFont(@sprites["Image"].bitmap)
+    pbDrawTextPositions(@sprites["Image"].bitmap,[[name,22,@sprites["Image"].bitmap.height-44,0,@baseColor,@shadowColor]])
+    @currentmap = $game_map.map_id
+    @frames = 0
   end
 
   def dispose
-    @window.dispose
     @sprites["Image"].dispose
-    @overlay.dispose
+  end
+
+  def disposed?
+    return @sprites["Image"].disposed?
   end
 
   def update
-    return if @window.disposed?
-    @window.update
-    @sprites["overlay"].update
-    if $game_temp.message_window_showing ||
-       @currentmap!=$game_map.map_id
-      @window.dispose
+    return if @sprites["Image"].disposed?
+    if $game_temp.message_window_showing || @currentmap != $game_map.map_id
       @sprites["Image"].dispose
-      @overlay.dispose
       return
-    end
-    if @frames>120
-      @sprites["Image"].y-= ((@sprites["Image"].bitmap.height)/10)
-      @overlay.clear if @frames == 121
-      @overlay.dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
-      @window.dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
-      @sprites["Image"].dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
+    elsif @frames > 180
+      @sprites["Image"].y-= ((@sprites["Image"].bitmap.height)/20)
+      @sprites["Image"].dispose if @sprites["Image"].y + @height < 0
     elsif $game_temp.in_menu==true
-      @sprites["Image"].y-= ((@sprites["Image"].bitmap.height)/8)
-      @overlay.clear
-      @overlay.dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
-      @window.dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
-      @sprites["Image"].dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
+      @sprites["Image"].y-= ((@sprites["Image"].bitmap.height)/10)
+      @sprites["Image"].dispose if @sprites["Image"].y + @height < 5
     else
-      @sprites["Image"].y+= ((@sprites["Image"].bitmap.height)/10) if @sprites["Image"].y<0
-      if @frames == 14
-        textpos=[]
-        textpos.push([$game_map.name,22,((@sprites["Image"].y+4) + (@sprites["Image"].bitmap.height))-47,0,@baseColor,@shadowColor])
-        pbDrawTextPositions(@overlay,textpos)
-      end
-      @frames+=1
+      @sprites["Image"].y+= ((@sprites["Image"].bitmap.height)/20) if @sprites["Image"].y < 5
     end
+    @frames += 1
   end
 end
 
