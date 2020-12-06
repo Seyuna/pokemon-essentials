@@ -2615,3 +2615,79 @@ HiddenAbility = INTIMIDATE
 Moves = 1,POISONPOWDER,1,STRINGSHOT,5,MEANLOOK,8,WRAP,12,LEECHLIFE,15,ASTONISH,19,PURSUIT,22,FURYSWIPES,26,SUCKERPUNCH,29,SPIDERWEB,33,HONECLAWS,36,PINMISSILE,40,ASSURANCE,43,TOXIC,47,CROSSPOISON
 BattlerEnemyX = 0
 BattlerEnemyY = 20
+#-------------------------------
+[NATU,1]
+FormName = Stacona Form
+Type1 = PSYCHIC
+Type2 = ICE
+BaseStats = 20,45,25,95,110,25
+Abilities = WONDERGUARD
+Moves = 1,PECK,1,LEER,6,POWDERSNOW,9,TELEPORT,12,PSYCHUP,17,MIRACLEEYE,20,FAKETEARS,23,CONFUSERAY,28,HAIL,33,PSYCHOSHIFT,36,FUTURESIGHT,39,STOREDPOWER,44,AURORABEAM,47,TOPSYTURVY,50,PSYCHIC,56,ICEBEAM,64,BLIZZARD
+Height = 0.3
+Weight = 4.2
+Color = Black
+Pokedex = Natu its eyes have adjusted to work during all times of day, one has adjusted to the bright snow at daylight, while the other has night vision.
+#-------------------------------
+[XATU,1]
+FormName = Stacona Form
+Type1 = PSYCHIC
+Type2 = ICE
+BaseStats = 35,95,30,125,155,30
+Abilities = WONDERGUARD
+Moves = 0,FREEZINGGLARE,1,PECK,1,LEER,6,POWDERSNOW,9,TELEPORT,12,PSYCHUP,17,MIRACLEEYE,20,FAKETEARS,23,CONFUSERAY,27,AMNESIA,30,HAIL,37,PSYCHOSHIFT,42,FUTURESIGHT,47,STOREDPOWER,54,AURORABEAM,54,POWERSWAP,59,GUARDSWAP,59,TOPSYTURVY,66,PSYCHIC,71,ICEBEAM,76,BLIZZARD
+Height = 1.4
+Weight = 17.3
+Color = White
+Pokedex = Xatu are often seen standing completely still. They are said to be looking for perfect balance between space and time, being too preoccupied to move.
+#-------------------------------
+[TYROGUE,1]
+FormName = Stacona Form
+Type1 = FIGHTING
+Type2 = GRASS
+BaseStats = 30,55,55,10,30,30
+Abilities = KEENEYE,ROUGHSKIN
+HiddenAbility = STORMDRAIN
+Moves = 1,POUND,1,LEECHSEED,1,INGRAIN,1,BRICKBREAK
+Color = Green
+Pokedex = Upon birth Staconan Tyrogue create pots to live in out of earth. They learn to hunt from other Pokémon.
+BattlerEnemyX = 0
+BattlerEnemyY = 20
+#-------------------------------
+[HITMONLEE,1]
+FormName = Stacona Form
+Type1 = FIGHTING
+Type2 = GRASS
+BaseStats = 60,130,60,70,50,85
+Abilities = MOXIE,ROUGHSKIN
+HiddenAbility = STORMDRAIN
+Moves = 0,NEEDLEARM,1,REVENGE,1,DOUBLEKICK,5,MEDITATE,9,ROLLINGKICK,13,JUMPKICK,17,BRICKBREAK,21,FOCUSENERGY,25,PINMISSILE,29,HIGHJUMPKICK,33,MINDREADER,37,GIGADRAIN,41,WIDEGUARD,45,TROPKICK,49,ENDURE,53,MEGAKICK,57,CLOSECOMBAT,61,REVERSAL
+Color = Green
+Pokedex = Staconan Hitmonlee are very terretorial and are highly agressive to those who go near it. It is dangerous to the touch with its super sharp needles.
+BattlerEnemyX = 0
+BattlerEnemyY = 20
+#-------------------------------
+[HITMONCHAN,1]
+FormName = Stacona Form
+Type1 = FIGHTING
+Type2 = GRASS
+BaseStats = 60,70,130,60,50,85
+Abilities = MOXIE,ROUGHSKIN
+HiddenAbility = STORMDRAIN
+Moves = 0,NEEDLEARM,1,REVENGE,1,COMETPUNCH,6,AGILITY,11,PURSUIT,16,MACHPUNCH,16,BULLETPUNCH,21,PINMISSILE,26,VACUUMWAVE,31,QUICKGUARD,36,GIGADRAIN,41,SKYUPPERCUT,46,MEGAPUNCH,51,DETECT,56,FOCUSPUNCH,61,COUNTER,66,CLOSECOMBAT
+Color = Green
+Pokedex = Staconan Hitmonchan are deemed the most passive Pokémon you can find in the desert, but they can be very dangerous when provoked.
+BattlerEnemyX = 0
+BattlerEnemyY = 20
+#-------------------------------
+[HITMONTOP,1]
+FormName = Stacona Form
+Type1 = FIGHTING
+Type2 = GRASS
+BaseStats = 60,90,90,80,50,85
+Abilities = TECHNICIAN,STEADFAST
+HiddenAbility = STORMDRAIN
+Moves = 0,NEEDLEARM,1,REVENGE,1,ROLLINGKICK,6,FOCUSENERGY,10,PURSUIT,15,QUICKATTACK,19,TRIPLEKICK,24,RAPIDSPIN,28,COUNTER,33,PINMISSILE,37,AGILITY,42,GIGADRAIN,46,WIDEGUARD,46,QUICKGUARD,51,DETECT,55,CLOSECOMBAT,60,ENDEAVOR
+Color = Green
+Pokedex = Staconan Hitmontop are very rarely seen, this is mostly because they train hidden underground or in caves. The hard floor makes it easier for them to spin on.
+BattlerEnemyX = 0
+BattlerEnemyY = 20
