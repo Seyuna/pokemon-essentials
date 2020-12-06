@@ -14,7 +14,7 @@ class PokemonParty_Scene
       frames = (tempSpr.width)/tempSpr.height
       size = tempSpr.height
       @sprites["formeanim"]=AnimatedSprite.new("Graphics/Pictures/Party/animform#{pkmn.species}_#{frm}",frames,size,size,0,@viewport)
-      pbSEPlay("animform#{pkmn.species}_#{frm}")
+      pbSEPlay("animform")
     elsif pbResolveBitmap("Graphics/Pictures/Party/animform#{pkmn.species}")
       tempSpr = Bitmap.new("Graphics/Pictures/Party/animform#{pkmn.species}")
       frames = (tempSpr.width)/tempSpr.height
