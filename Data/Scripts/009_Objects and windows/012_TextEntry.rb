@@ -1463,9 +1463,9 @@ class PokemonEntryScene2
             @sprites["cursor"].setCursorPos(@cursorpos)
           end
           pbUpdateOverlay
-        #  if @mode==0 && @helper.cursor==1
-        #    pbChangeTab(1)
-        #  end
+          if @mode==0 && @helper.cursor==1
+            pbChangeTab(1)
+          end
         end
       end
     end
