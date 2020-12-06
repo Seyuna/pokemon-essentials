@@ -38,12 +38,16 @@
 47,East,8,52,West,0
 # Route 2 (21) - Route 7 (47)
 21,East,77,47,West,0
-# Plunge Pass (98) - Lappy Lake (99)
-98,South,8,99,North,0
-# Plunge Pass (98) - Driftwood City (113)
-98,East,0,113,West,0
 # Stacona Connector 2 (146) - Stacona Woods (107)
 146,South,0,107,North,0
+# Maple Town (102) - Yama Pass (105)
+102,West,0,105,East,5
+# Maple Town (102) - Maple Trail (101)
+102,East,0,101,West,17
+# Maple Trail (86) - Maple Trail (101)
+86,West,2,101,East,0
+# Plunge Pass (98) - Lappy Lake (99)
+98,South,8,99,North,0
 # Pollen Path (78) - Lush Road (93)
 78,East,0,93,West,40
 # Folian Grove (150) - Lush Road (93)
@@ -52,10 +56,6 @@
 79,East,0,93,West,0
 # Lush Road (96) - Lush Road (93)
 96,North,0,93,South,4
-# Verdant Valley (92) - Lush Road (93)
-92,South,40,93,North,0
-# Stacona Woods Connector (109) - Lush Road (93)
-109,South,100,93,North,0
 # Costa Path (84) - Costa Path (77)
 84,West,31,77,East,0
 # Lumigen City (81) - Costa Path (77)
@@ -66,27 +66,11 @@
 79,South,17,78,North,0
 # Moncto Town (43) - Pollen Path (78)
 43,North,17,78,South,0
-# Verdant Valley (92) - Fleural Town (79)
-92,South,0,79,North,16
-# Stacona Woods Connector (109) - Fleural Town (79)
-109,South,44,79,North,0
 # Lumigen City (81) - Iron Pass (80)
 81,North,4,80,South,0
 # Moncto Town (43) - Iron Pass (80)
 43,South,0,80,North,6
 # Lumigen City (81) - Lumigen Hills (108)
 81,West,0,108,East,15
-# Verdant Valley (103) - Blighted Bog (147)
-103,West,0,147,East,68
-# Verdant Valley (92) - Blighted Bog (147)
-92,North,6,147,South,0
 # Verdant Valley (92) - Verdant Valley (103)
 92,East,8,103,West,0
-# Stacona Woods Connector (109) - Verdant Valley (92)
-109,East,0,92,West,35
-# Maple Town (102) - Yama Pass (105)
-102,West,0,105,East,5
-# Maple Town (102) - Maple Trail (101)
-102,East,0,101,West,17
-# Maple Trail (86) - Maple Trail (101)
-86,West,2,101,East,0
