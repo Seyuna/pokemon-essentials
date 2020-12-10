@@ -104,6 +104,20 @@ BallHandlers::ModifyCatchRate.add(:SAFARIBALL,proc { |ball,catchRate,battle,batt
   next catchRate*1.5
 })
 
+BallHandlers::ModifyCatchRate.add(:BIOBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  multiplier = (NEWEST_BATTLE_MECHANICS) ? 3.5 : 3
+  catchRate *= multiplier if battler.pbHasType?(:BUG) || battler.pbHasType?(:WATER) || battler.pbHasType?(:FLYING) ||
+                             battler.pbHasType?(:GRASS) || battler.pbHasType?(:PSYCHIC)
+  next catchRate
+})
+
+BallHandlers::ModifyCatchRate.add(:MECHBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
+  multiplier = (NEWEST_BATTLE_MECHANICS) ? 3.5 : 3
+  catchRate *= multiplier if battler.pbHasType?(:STEEL) || battler.pbHasType?(:ELECTRIC) || battler.pbHasType?(:ROCK) ||
+                             battler.pbHasType?(:FIRE) || battler.pbHasType?(:GROUND)
+  next catchRate
+})
+
 BallHandlers::ModifyCatchRate.add(:NETBALL,proc { |ball,catchRate,battle,battler,ultraBeast|
   multiplier = (NEWEST_BATTLE_MECHANICS) ? 3.5 : 3
   catchRate *= multiplier if battler.pbHasType?(:BUG) || battler.pbHasType?(:WATER)

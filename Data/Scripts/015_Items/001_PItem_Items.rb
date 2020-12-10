@@ -169,6 +169,8 @@ def pbIsUnlosableItem?(item,species,ability)
                   !isConst?(ability,PBAbilities,:MULTITYPE)
   return false if isConst?(species,PBSpecies,:SILVALLY) &&
                   !isConst?(ability,PBAbilities,:RKSSYSTEM)
+  return false if isConst?(species,PBSpecies,:ARENAY) || isConst?(species,PBSpecies,:DRAGAIA) || isConst?(species,PBSpecies,:PRISMATRIX) &&
+                  !isConst?(ability,PBAbilities,:SPLICE)
   combos = {
      :ARCEUS   => [:FISTPLATE,:FIGHTINIUMZ,
                    :SKYPLATE,:FLYINIUMZ,
@@ -362,6 +364,7 @@ def pbChangeLevel(pkmn,newlevel,scene)
     spatkdiff   = pkmn.spatk
     spdefdiff   = pkmn.spdef
     totalhpdiff = pkmn.totalhp
+    oldlevel = pkmn.level
     pkmn.level = newlevel
     pkmn.changeHappiness("vitamin")
     pkmn.calcStats
@@ -384,9 +387,14 @@ def pbChangeLevel(pkmn,newlevel,scene)
     # Learn new moves upon level up
     movelist = pkmn.getMoveList
     for i in movelist
-      next if i[0]!=pkmn.level
-      pbLearnMove(pkmn,i[1],true) { scene.pbUpdate }
+      if i[0]>=oldlevel && i[0]<=pkmn.level  # Learned a new move THUNDAGA
+        pbLearnMove(pkmn,i[1],true)
+      end
     end
+    #thundaga excluding some pokes from rare candy evo
+    return if (isConst?(pkmn.species,PBSpecies,:FARFETCHD) && pkmn.form==1) ||
+              (isConst?(pkmn.species,PBSpecies,:YAMASK) && pkmn.form==1) ||
+               isConst?(pkmn.species,PBSpecies,:MILCERY)
     # Check for evolution
     newspecies = pbCheckEvolution(pkmn)
     if newspecies>0

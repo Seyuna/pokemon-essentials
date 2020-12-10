@@ -54,7 +54,7 @@ end
 
 
 class PokeBattle_RealBattlePeer
-  def pbOnEnteringBattle(_battle,pkmn,wild=false)
+  def pbOnEnteringBattle(battle,pkmn,wild=false)
     f = MultipleForms.call("getFormOnEnteringBattle",pkmn,wild)
     pkmn.form = f if f
   end
@@ -240,6 +240,7 @@ MultipleForms.register(:BURMY,{
   },
   "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
     next if !endBattle || !usedInBattle
+    env = battle.environment
     case battle.environment
     when PBEnvironment::Rock, PBEnvironment::Sand, PBEnvironment::Cave
       next 1   # Sandy Cloak
@@ -265,6 +266,12 @@ MultipleForms.register(:WORMADAM,{
 })
 
 MultipleForms.register(:CHERRIM,{
+  "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
+    next 0
+  }
+})
+
+MultipleForms.register(:MORPEKO,{
   "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
     next 0
   }
@@ -321,7 +328,8 @@ MultipleForms.register(:ROTOM,{
 MultipleForms.register(:GIRATINA,{
   "getForm" => proc { |pkmn|
     maps = [49,50,51,72,73]   # Map IDs for Origin Forme
-    if pkmn.hasItem?(:GRISEOUSORB) || maps.include?($game_map.map_id)
+    if isConst?(pkmn.item,PBItems,:GRISEOUSORB) ||
+       maps.include?($game_map.map_id)
       next 1
     end
     next 0
@@ -359,8 +367,8 @@ MultipleForms.register(:ARCEUS,{
     }
     ret = 0
     typeArray.each do |f, items|
-      for item in items
-        next if !pkmn.hasItem?(item)
+      for i in items
+        next if !isConst?(pkmn.item,PBItems,i)
         ret = f
         break
       end
@@ -369,6 +377,32 @@ MultipleForms.register(:ARCEUS,{
     next ret
   }
 })
+
+#THUNDAGA ARENAYFORMS
+MultipleForms.register(:ARENAY,{
+"getForm"=>proc{|pokemon|
+   next 1  if isConst?(pokemon.item,PBItems,:FIRECELL)
+   next 2  if isConst?(pokemon.item,PBItems,:WATERCELL)
+   next 3  if isConst?(pokemon.item,PBItems,:GRASSCELL)
+   next 4  if isConst?(pokemon.item,PBItems,:FLYCELL)
+   next 5  if isConst?(pokemon.item,PBItems,:STEELCELL)
+   next 6  if isConst?(pokemon.item,PBItems,:ELECCELL)
+   next 7  if isConst?(pokemon.item,PBItems,:ICECELL)
+   next 8  if isConst?(pokemon.item,PBItems,:PSYCELL)
+   next 9  if isConst?(pokemon.item,PBItems,:BUGCELL)
+   next 10 if isConst?(pokemon.item,PBItems,:GROUNDCELL)
+   next 11 if isConst?(pokemon.item,PBItems,:POISONCELL)
+   next 12 if isConst?(pokemon.item,PBItems,:DRAGONCELL)
+   next 13 if isConst?(pokemon.item,PBItems,:FIGHTCELL)
+   next 14 if isConst?(pokemon.item,PBItems,:ROCKCELL)
+   next 15 if isConst?(pokemon.item,PBItems,:GHOSTCELL)
+   next 16 if isConst?(pokemon.item,PBItems,:DARKCELL)
+   next 17 if isConst?(pokemon.item,PBItems,:FAIRYCELL)
+   next 0
+}
+})
+
+MultipleForms.copy(:ARENAY,:DRAGAIA,:PRISMATRIX)
 
 MultipleForms.register(:BASCULIN,{
   "getFormOnCreation" => proc { |pkmn|
@@ -450,17 +484,17 @@ MultipleForms.register(:MELOETTA,{
 
 MultipleForms.register(:GENESECT,{
   "getForm" => proc { |pkmn|
-    next 1 if pkmn.hasItem?(:SHOCKDRIVE)
-    next 2 if pkmn.hasItem?(:BURNDRIVE)
-    next 3 if pkmn.hasItem?(:CHILLDRIVE)
-    next 4 if pkmn.hasItem?(:DOUSEDRIVE)
+    next 1 if isConst?(pkmn.item,PBItems,:SHOCKDRIVE)
+    next 2 if isConst?(pkmn.item,PBItems,:BURNDRIVE)
+    next 3 if isConst?(pkmn.item,PBItems,:CHILLDRIVE)
+    next 4 if isConst?(pkmn.item,PBItems,:DOUSEDRIVE)
     next 0
   }
 })
 
 MultipleForms.register(:GRENINJA,{
   "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
-    next 1 if pkmn.form == 2 && (pkmn.fainted? || endBattle)
+    next 0 if pkmn.fainted? || endBattle
   }
 })
 
@@ -596,8 +630,8 @@ MultipleForms.register(:SILVALLY,{
     }
     ret = 0
     typeArray.each do |f, items|
-      for item in items
-        next if !pkmn.hasItem?(item)
+      for i in items
+        next if !isConst?(pkmn.item,PBItems,i)
         ret = f
         break
       end
@@ -678,3 +712,642 @@ MultipleForms.register(:PIKACHU,{
 })
 
 MultipleForms.copy(:PIKACHU,:EXEGGCUTE,:CUBONE)
+
+#----------------------
+# Stacona Forms
+#----------------------
+MultipleForms.register(:KLINK,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :SUNNYDAY,:HYPERBEAM,:RAINDANCE,
+                     :THUNDERBOLT,:THUNDER,:FLAMETHROWER,
+                     :FIREBLAST,:FLAMECHARGE,:OVERHEAT,
+                     :SCALD,:CHARGEBEAM,:INCINERATE,
+                     :WILLOWISP,:EXPLOSION,:GIGAIMPACT,
+                     :VOLTSWITCH,:THUNDERWAVE,:GYROBALL,
+                     :FLASHCANNON,:WILDCHARGE,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:KLINK,:KLANG)
+
+MultipleForms.copy(:KLINK,:KLINKLANG)
+
+MultipleForms.register(:SOLOSIS,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :SUNNYDAY,:HYPERBEAM,:RAINDANCE,
+                     :THUNDERBOLT,:THUNDER,
+                     :CHARGEBEAM,:THUNDERWAVE,:GYROBALL,
+                     :FLASHCANNON,:PSYSHOCK,:CALMMIND,
+                     :TELEKINESIS,:SOLARBEAM,:PSYCHIC,
+                     :SHADOWBALL,:FOCUSBLAST,:ENERGYBALL,
+                     :FLASH,:PSYCHUP,:DREAMEATER,:GRASSKNOT,
+                     :TRICKROOM,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:SOLOSIS,:DUOSION)
+MultipleForms.copy(:SOLOSIS,:REUNICLUS)
+
+MultipleForms.register(:LOTAD,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :SUNNYDAY,:RAINDANCE,
+                     :GIGAIMPACT,:SOLARBEAM,:ENERGYBALL,
+                     :FLASH,:GRASSKNOT,:BULKUP,
+                     :BRICKBREAK,:ATTRACT,:ECHOEDVOICE,
+                     :FOCUSBLAST,:FALSESWIPE,:SCALD,
+                     :QUASH,:SHADOWCLAW,:PAYBACK,
+                     :RETALIATE,:SWORDSDANCE,:WORKUP,:SWAGGER,
+                     :UTURN,:POISONJAB,:TRICKROOM,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:ICEPUNCH,:THUNDERPUNCH,
+                     :FIREPUNCH,:MEGAPUNCH,:MEGAKICK,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:LOTAD,:LOMBRE)
+MultipleForms.copy(:LOTAD,:LUDICOLO)
+
+MultipleForms.register(:FOONGUS,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :SUNNYDAY,:SOLARBEAM,:ENERGYBALL,
+                     :FLASH,:GRASSKNOT,:ATTRACT,:ECHOEDVOICE,
+                     :QUASH,:PAYBACK,:PSYCHIC,:SHADOWBALL,:SNARL,
+                     :RETALIATE,:SWAGGER,:PSYSHOCK,:VENOSHOCK,
+                     :UTURN,:TRICKROOM,
+                     :TELEKINESIS,:SLUDGEWAVE,:SLUDGEBOMB,
+                     :ALLYSWITCH,:EMBARGO,:RETALIATE,:THUNDERWAVE,:PSYCHUP,
+                     :POISONJAB,:DREAMEATER,:SNARL,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:FOONGUS,:AMOONGUSS)
+
+MultipleForms.register(:NOSEPASS,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :SANDSTORM,:CALMMIND,:SMACKDOWN,
+                     :THUNDERBOLT,:THUNDER,:EARTHQUAKE,
+                     :DIG,:PSYCHIC,:ROCKTOMB,:FOCUSBLAST,
+                     :CHARGEBEAM,:EMBARGO,:EXPLOSION,:GIGAIMPACT,
+                     :ROCKPOLISH,:FLASH,:STONEEDGE,:VOLTSWITCH,
+                     :THUNDERWAVE,:GYROBALL,:ROCKSLIDE,:FLASHCANNON,
+                     :WILDCHARGE,:TRICKROOM,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:NOSEPASS,:PROBOPASS)
+
+MultipleForms.register(:DUNSPARCE,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :DRAGONCLAW,:ROAR,:BULKUP,:DIG,:FLAMETHROWER,
+                     :FIREBLAST,:FLAMECHARGE,:FALSESWIPE,:EMBARGO,
+                     :SHADOWCLAW,:PAYBACK,:GIGAIMPACT,
+                     :SWORDSDANCE,:BULLDOZE,:DRAGONTAIL,:SNARL,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.register(:MAREEP,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs
+                     :TOXIC,:HIDDENPOWER,:HYPERBEAM,:THUNDERWAVE,
+                     :PROTECT,:RAINDANCE,:SAFEGUARD,:FRUSTRATION,
+                     :RETURN,:DOUBLETEAM,:ICEBEAM,:BLIZZARD,
+                     :FACADE,:REST,:ATTRACT,:THUNDER,:THUNDERBOLT,
+                     :THIEF,:ROUND,:GIGAIMPACT,:FLASH,:FROSTBREATH,
+                     :PSYCHUP,:SWAGGER,:SUBSTITUTE,:DAZZLINGGLEAM,
+                     :DRAININGKISS,:CALMMIND,:ROAR,:DRAGONCLAW,:HAIL,
+                     :PROTECT,:LIGHTSCREEN,:PSYCHIC,:SHADOWBALL,
+                     :AERIALACE,:TORMENT,:FALSESWIPE,:CHARGEBEAM,:SHADOWCLAW,
+                     :PAYBACK,:FLASH,:VOLTSWITCH,:WILDCHARGE,:PLAYROUGH,
+                     :MOONBLAST,:SHOCKWAVE,
+                     # Move Tutors
+                     :ENDEAVOR,:MUDSLAP,:SIGNALBEAM,:SKILLSWAP,
+                     :SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:ICEPUNCH,:THUNDERPUNCH,
+                     :MEGAPUNCH,:MEGAKICK,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:MAREEP,:FLAAFFY)
+MultipleForms.copy(:MAREEP,:AMPHAROS)
+
+MultipleForms.register(:MAGIKARP,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :THUNDERBOLT,:THUNDERWAVE,:THUNDER,:WILDCHARGE,
+                     :SURF,:WATERFALL,:SCALD,:GIGAIMPACT,:ROAR,
+                     :SWORDSDANCE,:DRAGONTAIL,:VOLTSWITCH,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:MAGIKARP,:GYARADOS)
+
+MultipleForms.register(:SANDILE,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :SCALD,:WATERFALL,:SURF,:GIGAIMPACT,
+                     :SWORDSDANCE,:SNARL,:SHADOWCLAW,:DRAGONCLAW,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:ICEPUNCH,:THUNDERPUNCH,:FIREPUNCH,
+                     :BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:SANDILE,:KROKOROK)
+MultipleForms.copy(:SANDILE,:KROOKODILE)
+
+MultipleForms.register(:KRABBY,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :SCALD,:SURF,:WATERFALL,:GIGAIMPACT,:FLASHCANNON,
+                     :GYROBALL,:SHADOWCLAW,:DRAGONCLAW,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:ICEPUNCH,:THUNDERPUNCH,
+                     :MEGAPUNCH,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:KRABBY,:KINGLER)
+
+MultipleForms.register(:SWABLU,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :ROAR,:RAINDANCE,:FLY,:AERIALACE,
+                     :ATTRACT,:ECHOEDVOICE,:FALSESWIPE,
+                     :SKYDROP,:ACROBATICS,:PAYBACK,:FLASH,
+                     :PLUCK,:WILDCHARGE,:DRAININGKISS,:PLAYROUGH,
+                     :MOONBLAST,:FAIRYWIND,:DAZZLINGGLEAM,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:SWABLU,:ALTARIA)
+
+MultipleForms.register(:ABSOL,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :FLASHCANNON,:GYROBALL,:GIGAIMPACT,
+                     :SHADOWCLAW,:DRAGONCLAW,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:BITE,:MEGAKICK]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.register(:BLITZLE,{
+  "getFormOnCreation" => proc { |pkmn|
+    maps = [1]   # Map IDs for Origin Forme
+    if maps.include?($game_map.map_id)
+      next 0
+    end
+    next 1
+  },
+  "getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :SUNNYDAY,:HYPERBEAM,:ROAR,
+                     :THUNDERBOLT,:THUNDER,:FLAMETHROWER,
+                     :FIREBLAST,:FLAMECHARGE,:OVERHEAT,
+                     :CHARGEBEAM,:INCINERATE,
+                     :WILLOWISP,:GIGAIMPACT,
+                     :VOLTSWITCH,:THUNDERWAVE,
+                     :WILDCHARGE,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:MEGAKICK,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:BLITZLE,:ZEBSTRIKA)
+
+MultipleForms.register(:PICHU,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[91]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 1
+   else
+     next 0
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :GYROBALL,:ROAR,:THUNDERBOLT,:THUNDER,
+                     :CHARGEBEAM,:GIGAIMPACT,
+                     :VOLTSWITCH,:THUNDERWAVE,
+                     :WILDCHARGE,:FLASHCANNON,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:THUNDERPUNCH,:FIREPUNCH,
+                     :MEGAPUNCH,:MEGAKICK,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:PICHU,:PIKACHU)
+MultipleForms.copy(:PICHU,:RAICHU)
+
+MultipleForms.register(:ELEKID,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[0]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs generic
+                     :TOXIC,:HIDDENPOWER,:TAUNT,
+                     :HYPERBEAM,:LIGHTSCREEN,:PROTECT,
+                     :SAFEGUARD,:FRUSTRATION,:RETURN,
+                     :DOUBLETEAM,:REFLECT,:TORMENT,:FACADE,
+                     :REST,:THIEF,:ROUND,:FLING,:SUBSTITUTE,
+                     # TMs specific
+                     :BRICKBREAK,:ROAR,:THUNDERBOLT,:THUNDER,
+                     :CHARGEBEAM,:GIGAIMPACT,
+                     :VOLTSWITCH,:THUNDERWAVE,
+                     :WILDCHARGE,:ROCKSMASH,:POISONJAB,
+                     # Move Tutors
+                     :ENDEAVOR,:SKILLSWAP,:SLEEPTALK,:SNORE,
+                     :SUCKERPUNCH,:UPROAR,:THUNDERPUNCH,:FIREPUNCH,:ICEPUNCH,
+                     :MEGAPUNCH,:MEGAKICK,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:ELEKID,:ELECTABUZZ)
+MultipleForms.copy(:ELEKID,:ELECTIVIRE)
+
+MultipleForms.register(:TRAPINCH,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+},
+"getMoveCompatibility"=>proc{|pokemon|
+   next if pokemon.form==0
+   movelist=[]
+   case pokemon.form
+   when 1; movelist=[# TMs
+                     :TOXIC,:HIDDENPOWER,:HYPERBEAM,
+                     :PROTECT,:SAFEGUARD,:FRUSTRATION,
+                     :RETURN,:DOUBLETEAM,:DRAGONCLAW,:ROAR,:BULKUP,
+                     :VENOSHOCK,:TAUNT,:HYPERBEAM,:PROTECT,:EARTHQUAKE,
+                     :DIG,:BRICKBREAK,:REFLECT,:SLUDGEWAVE,:FLAMETHROWER,
+                     :SLUDGEBOMB,:SANDSTORM,:FIREBLAST,:ROCKTOMB,:AERIALACE,
+                     :TORMENT,:FACADE,:FLAMECHARGE,:REST,:ATTRACT,:THIEF,
+                     :ROUND,:ECHOEDVOICE,:OVERHEAT,:FALSESWIPE,:FLING,
+                     :QUASH,:EMBARGO,:SHADOWCLAW,:PAYBACK,:RETALIATE,
+                     :GIGAIMPACT,:STONEEDGE,:SWORDSDANCE,:BULLDOZE,:XSCISSOR,
+                     :DRAGONTAIL,:WORKUP,:POISONJAB,:SWAGGER,:UTURN,
+                     :SUBSTITUTE,:WILDCHARGE,:SNARL,:CUT,:STRENGTH,
+                     # Move Tutors
+                     :ENDEAVOR,:MUDSLAP,:SKILLSWAP,
+                     :SLEEPTALK,:SNORE,:SUCKERPUNCH,:UPROAR,
+                     :MEGAKICK,:BITE]
+   end
+   for i in 0...movelist.length
+     movelist[i]=getConst(PBMoves,movelist[i])
+   end
+   next movelist
+}
+})
+
+MultipleForms.copy(:TRAPINCH,:VIBRAVA)
+MultipleForms.copy(:TRAPINCH,:FLYGON)
+
+MultipleForms.register(:SLOWPOKE,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]   # Map IDs for second form
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+
+MultipleForms.copy(:SLOWPOKE,:SLOWBRO)
+MultipleForms.copy(:SLOWPOKE,:SLOWKING)

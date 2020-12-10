@@ -359,8 +359,9 @@ class PokeBattle_Battler
         end
       end
     end
-    # Protean
-    if user.hasActiveAbility?(:PROTEAN) && !move.callsAnotherMove? && !move.snatched
+    # Protean and Libero
+    if user.hasActiveAbility?(:PROTEAN) || user.hasActiveAbility?(:LIBERO) &&
+       !move.callsAnotherMove? && !move.snatched
       if user.pbHasOtherType?(move.calcType) && !PBTypes.isPseudoType?(move.calcType)
         @battle.pbShowAbilitySplash(user)
         user.pbChangeTypes(move.calcType)

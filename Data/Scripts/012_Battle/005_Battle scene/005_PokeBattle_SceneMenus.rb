@@ -130,14 +130,15 @@ class CommandMenuDisplay < BattleMenuBase
       addSprite("background",background)
       # Create bitmaps
       @buttonBitmap = AnimatedBitmap.new(_INTL("Graphics/Pictures/Battle/cursor_command"))
+      #thundaga action buttons
       # Create action buttons
       @buttons = Array.new(4) do |i|   # 4 command options, therefore 4 buttons
         button = SpriteWrapper.new(viewport)
         button.bitmap = @buttonBitmap.bitmap
-        button.x      = self.x+Graphics.width-260
+        button.x      = self.x+Graphics.width-226
         button.x      += (((i%2)==0) ? 0 : @buttonBitmap.width/2-4)
         button.y      = self.y+6
-        button.y      += (((i/2)==0) ? 0 : BUTTON_HEIGHT-4)
+        button.y      += (((i/2)==0) ? 6 : BUTTON_HEIGHT-8)
         button.src_rect.width  = @buttonBitmap.width/2
         button.src_rect.height = BUTTON_HEIGHT
         addSprite("button_#{i}",button)
@@ -212,11 +213,13 @@ class FightMenuDisplay < BattleMenuBase
   USE_GRAPHICS     = true
   TYPE_ICON_HEIGHT = 28
   # Text colours of PP of selected move
+  #thundaga pp color lmao
   PP_COLORS = [
      Color.new(248,72,72),Color.new(136,48,48),    # Red, zero PP
      Color.new(248,136,32),Color.new(144,72,24),   # Orange, 1/4 of total PP or less
      Color.new(248,192,0),Color.new(144,104,0),    # Yellow, 1/2 of total PP or less
-     TEXT_BASE_COLOR,TEXT_SHADOW_COLOR             # Black, more than 1/2 of total PP
+     Color.new(64,64,64),Color.new(150,150,150)
+     #TEXT_BASE_COLOR,TEXT_SHADOW_COLOR             # Black, more than 1/2 of total PP
   ]
   MAX_MOVES = 4   # Number of moves to display at once
 
@@ -239,13 +242,14 @@ class FightMenuDisplay < BattleMenuBase
       background.setBitmap("Graphics/Pictures/Battle/overlay_fight")
       addSprite("background",background)
       # Create move buttons
+      #thundaga move buttons
       @buttons = Array.new(MAX_MOVES) do |i|
         button = SpriteWrapper.new(viewport)
         button.bitmap = @buttonBitmap.bitmap
         button.x      = self.x+4
-        button.x      += (((i%2)==0) ? 0 : @buttonBitmap.width/2-4)
+        button.x      += (((i%2)==0) ? 0 : @buttonBitmap.width/2-34)
         button.y      = self.y+6
-        button.y      += (((i/2)==0) ? 0 : BUTTON_HEIGHT-4)
+        button.y      += (((i/2)==0) ? 2 : BUTTON_HEIGHT-10)
         button.src_rect.width  = @buttonBitmap.width/2
         button.src_rect.height = BUTTON_HEIGHT
         addSprite("button_#{i}",button)
@@ -267,7 +271,8 @@ class FightMenuDisplay < BattleMenuBase
       @typeIcon = SpriteWrapper.new(viewport)
       @typeIcon.bitmap = @typeBitmap.bitmap
       @typeIcon.x      = self.x+416
-      @typeIcon.y      = self.y+20
+      #thundaga type icon height
+      @typeIcon.y      = self.y+52
       @typeIcon.src_rect.height = TYPE_ICON_HEIGHT
       addSprite("typeIcon",@typeIcon)
       # Create Mega Evolution button
@@ -342,6 +347,7 @@ class FightMenuDisplay < BattleMenuBase
       return
     end
     # Draw move names onto overlay
+    #thundaga move names
     @overlay.bitmap.clear
     textPos = []
     moves.each_with_index do |m,i|
@@ -349,16 +355,17 @@ class FightMenuDisplay < BattleMenuBase
       next if !@visibility["button_#{i}"]
       x = button.x-self.x+button.src_rect.width/2
       y = button.y-self.y+8
-      moveNameBase = TEXT_BASE_COLOR
-      if m.type>=0
+      moveNameBase = Color.new(64,64,64)
+      #if m.type>=0
         # NOTE: This takes a colour from a particular pixel in the button
         #       graphic and makes the move name's base colour that same colour.
         #       The pixel is at coordinates 10,34 in the button box. If you
         #       change the graphic, you may want to change/remove the below line
         #       of code to ensure the font is an appropriate colour.
-        moveNameBase = button.bitmap.get_pixel(10,button.src_rect.y+34)
-      end
-      textPos.push([m.name,x,y,2,moveNameBase,TEXT_SHADOW_COLOR])
+      #  moveNameBase = button.bitmap.get_pixel(10,button.src_rect.y+34)
+      #end
+      textPos.push([m.name,x-68,y,0,moveNameBase,Color.new(150,150,150)])
+      #thundaga left align text for moves
     end
     pbDrawTextPositions(@overlay.bitmap,textPos)
   end
@@ -400,29 +407,38 @@ class FightMenuDisplay < BattleMenuBase
     end
     @visibility["typeIcon"] = true
     # Type icon
-    @typeIcon.src_rect.y = move.type*TYPE_ICON_HEIGHT
+    #thundaga move type, improved by GolisopodUser
+    @typeIcon.src_rect.y = move.pbCalcType(@battler)*TYPE_ICON_HEIGHT
+=begin
+    if isConst?(move.type,PBTypes,:QMARKS)
+      @typeIcon.src_rect.y = @battler.type1*TYPE_ICON_HEIGHT
+    elsif isConst?(move.id,PBMoves,:AURAWHEEL) && @battler.form==1
+      @typeIcon.src_rect.y = @battler.type2*TYPE_ICON_HEIGHT
+    else
+      @typeIcon.src_rect.y = move.type*TYPE_ICON_HEIGHT
+    end
+=end
     # PP text
     if move.totalpp>0
       ppFraction = [(4.0*move.pp/move.totalpp).ceil,3].min
       textPos = []
-      textPos.push([_INTL("PP: {1}/{2}",move.pp,move.totalpp),
-         448,50,2,PP_COLORS[ppFraction*2],PP_COLORS[ppFraction*2+1]])
+      #thundaga
+      textPos.push([_INTL("{1}/{2}",move.pp,move.totalpp),
+         448,20,2,PP_COLORS[ppFraction*2],PP_COLORS[ppFraction*2+1]])
       pbDrawTextPositions(@infoOverlay.bitmap,textPos)
     end
   end
 
   def refreshMegaEvolutionButton
     return if !USE_GRAPHICS
-    @megaButton.src_rect.y    = (@mode - 1) * @megaEvoBitmap.height / 2
-    @megaButton.z             = self.z - 1
-    @visibility["megaButton"] = (@mode > 0)
+    @megaButton.src_rect.y = (@mode-1)*@megaEvoBitmap.height/2
+    @megaButton.z          = self.z - 1
   end
 
   def refreshShiftButton
     return if !USE_GRAPHICS
-    @shiftButton.src_rect.y    = (@shiftMode - 1) * @shiftBitmap.height
-    @shiftButton.z             = self.z - 1
-    @visibility["shiftButton"] = (@shiftMode > 0)
+    @shiftButton.src_rect.y = (@shiftMode-1)*@shiftBitmap.height
+    @shiftButton.z          = self.z - 1
   end
 
   def refresh

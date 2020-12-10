@@ -316,7 +316,7 @@ def pbBattleAnimationOverride(viewport,battletype=0,foe=nil)
 end
 
 
-
+=begin
 #===============================================================================
 # Location signpost
 #===============================================================================
@@ -353,6 +353,135 @@ class LocationWindow
     else
       @window.y += 4 if @window.y<0
       @frames += 1
+    end
+  end
+end
+=end
+
+################################################################################
+# Location signpost - Updated by LostSoulsDev / carmaniac & PurpleZaffre
+################################################################################
+class LocationWindow
+  def initialize(name)
+    @sprites = {}
+
+    @sprites["overlay"]=Sprite.new
+    @sprites["overlay"].bitmap=Bitmap.new(Graphics.width*4,Graphics.height*4)
+    @sprites["overlay"].z=9999999
+    pbSetSystemFont(@sprites["overlay"].bitmap)
+    @overlay = @sprites["overlay"].bitmap
+    @overlay.clear
+    @baseColor=Color.new(255,255,255)
+    @shadowColor=Color.new(148,148,165)
+
+    #Thundaga signposts
+    @sprites["Image"] = Sprite.new
+    if $game_map.name.include?("Route")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Route_1")
+    elsif $game_map.name.include?("Lab")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/HGSS_7")
+    elsif $game_map.name.include?("Dojo")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/HGSS_4")
+    elsif $game_map.name.include?("Blighted")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Forest_3")
+    elsif $game_map.name.include?("Grove")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Forest_1")
+    elsif $game_map.name.include?("Den")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Cave_1")
+    elsif $game_map.name.include?("Mt.")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Cave_1")
+    elsif $game_map.name.include?("Town")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Town_1")
+    elsif $game_map.name.include?("Woods")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Forest_1")
+    elsif $game_map.name.include?("Hills")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Route_1")
+    elsif $game_map.name.include?("Verdant")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/HGSS_1")
+    elsif $game_map.name.include?("Biogress")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/HGSS_3")
+    elsif $game_map.name.include?("Cypress")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/HGSS_3")
+    elsif $game_map.name.include?("Quantech")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/HGSS_7")
+    elsif $game_map.name.include?("Power")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/HGSS_7")
+    elsif $game_map.name.include?("Costa")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Route_3")
+    elsif $game_map.name.include?("Plunge")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Route_1")
+    elsif $game_map.name.include?("Maple")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Forest_2")
+    elsif $game_map.name.include?("Yama")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Forest_2")
+    elsif $game_map.name.include?("Lake")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Lake_1")
+    elsif $game_map.name.include?("Cave")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Cave_1")
+    elsif $game_map.name.include?("City")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/City_1")
+    elsif $game_map.name.include?("Lush")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Route_2")
+    elsif $game_map.name.include?("Pollen")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Route_2")
+    elsif $game_map.name.include?("Iron Pass")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Route_1")
+    else
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/HGSS_8")
+    end
+    @sprites["Image"].x = 8
+    @sprites["Image"].y = 0 - @sprites["Image"].bitmap.height
+    @sprites["Image"].z = 99999
+
+    @window=Window_AdvancedTextPokemon.new(name)
+    @window.x=0
+    @window.y=-@window.height
+    @window.z=99999
+    @currentmap=$game_map.map_id
+    @frames=0
+  end
+
+  def disposed?
+    @window.disposed?
+  end
+
+  def dispose
+    @window.dispose
+    @sprites["Image"].dispose
+    @overlay.dispose
+  end
+
+  def update
+    return if @window.disposed?
+    @window.update
+    @sprites["overlay"].update
+    if $game_temp.message_window_showing ||
+       @currentmap!=$game_map.map_id
+      @window.dispose
+      @sprites["Image"].dispose
+      @overlay.dispose
+      return
+    end
+    if @frames>120
+      @sprites["Image"].y-= ((@sprites["Image"].bitmap.height)/10)
+      @overlay.clear if @frames == 121
+      @overlay.dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
+      @window.dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
+      @sprites["Image"].dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
+    elsif $game_temp.in_menu==true
+      @sprites["Image"].y-= ((@sprites["Image"].bitmap.height)/8)
+      @overlay.clear
+      @overlay.dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
+      @window.dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
+      @sprites["Image"].dispose if @sprites["Image"].y+@sprites["Image"].bitmap.height<0
+    else
+      @sprites["Image"].y+= ((@sprites["Image"].bitmap.height)/10) if @sprites["Image"].y<0
+      if @frames == 14
+        textpos=[]
+        textpos.push([$game_map.name,22,((@sprites["Image"].y+4) + (@sprites["Image"].bitmap.height))-47,0,@baseColor,@shadowColor])
+        pbDrawTextPositions(@overlay,textpos)
+      end
+      @frames+=1
     end
   end
 end

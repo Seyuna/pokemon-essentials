@@ -656,6 +656,25 @@ ItemHandlers::UseOnPokemon.add(:PPMAX,proc { |item,pkmn,scene|
   next false
 })
 
+ItemHandlers::UseOnPokemon.add(:EVRESET,proc{|item,pkmn,scene|
+   if pkmn.ev[0]==0 && pkmn.ev[1]==0 && pkmn.ev[2]==0 &&
+      pkmn.ev[3]==0 && pkmn.ev[4]==0 && pkmn.ev[5]==0
+     scene.pbDisplay(_INTL("It won't have any effect."))
+     next false
+   else
+     pkmn.ev[0]=0
+     pkmn.ev[1]=0
+     pkmn.ev[2]=0
+     pkmn.ev[3]=0
+     pkmn.ev[4]=0
+     pkmn.ev[5]=0
+     scene.pbRefresh
+     scene.pbDisplay(_INTL("\\me[HGSSGetItem]{1}'s EVs were reset.",pkmn.name))
+     pkmn.changeHappiness("vitamin")
+     next true
+   end
+})
+
 ItemHandlers::UseOnPokemon.add(:HPUP,proc { |item,pkmn,scene|
   if pbRaiseEffortValues(pkmn,PBStats::HP)==0
     scene.pbDisplay(_INTL("It won't have any effect."))
@@ -784,6 +803,16 @@ ItemHandlers::UseOnPokemon.add(:RARECANDY,proc { |item,pkmn,scene|
     next false
   end
   pbChangeLevel(pkmn,pkmn.level+1,scene)
+  scene.pbHardRefresh
+  next true
+})
+
+ItemHandlers::UseOnPokemon.add(:SUPERRARECANDY,proc { |item,pkmn,scene|
+  if pkmn.level>=PBExperience.maxLevel || pkmn.shadowPokemon?
+    scene.pbDisplay(_INTL("It won't have any effect."))
+    next false
+  end
+  pbChangeLevel(pkmn,pkmn.level+5,scene)
   scene.pbHardRefresh
   next true
 })
@@ -1121,4 +1150,114 @@ ItemHandlers::UseOnPokemon.add(:ABILITYCAPSULE,proc { |item,pkmn,scene|
     next true
   end
   next false
+})
+
+ItemHandlers::UseOnPokemon.add(:ABILITYCAPSULE,proc{|item,pokemon,scene|
+  abils=pokemon.getAbilityList
+  abil1=0; abil2=0; abil3=0
+  for i in abils
+    abil1=i[0] if i[1]==0
+    abil2=i[0] if i[1]==1
+    abil3=i[0] if i[1]==2
+  end
+  choices = []
+  choices.push("Change Ability")
+  choices.push("Change to Hidden Ability")
+  choices.push("Cancel")
+  cmd = Kernel.pbMessage(_INTL("What would you like to do?"), choices, choices.length - 1)
+  if choices[cmd]=="Change Ability"
+    if abil1<=0 || abil2<=0
+       scene.pbDisplay(_INTL("It won't have any effect."))
+       next false
+     end
+     newabil=(pokemon.abilityIndex+1)%2
+     newabilname=PBAbilities.getName((newabil==0) ? abil1 : abil2)
+     if scene.pbConfirm(_INTL("Would you like to change {1}'s Ability to {2}?",
+        pokemon.name,newabilname))
+       pokemon.setAbility(newabil)
+       scene.pbRefresh
+       scene.pbDisplay(_INTL("{1}'s Ability changed to {2}!",pokemon.name,
+          PBAbilities.getName(pokemon.ability)))
+       next true
+     end
+  elsif choices[cmd]=="Change to Hidden Ability"
+    if abil3<=0
+      scene.pbDisplay(_INTL("It won't have any effect."))
+      next false
+    end
+    newabil= pokemon.setAbility(2)#(pokemon.abilityIndex+1)%2
+    newabilname=PBAbilities.getName((newabil==0) ? abil1 : abil3)
+    if scene.pbConfirm(_INTL("Would you like to change {1}'s Ability to {2}?",
+      pokemon.name,newabilname))
+      pokemon.setAbility(newabil)
+      scene.pbRefresh
+      scene.pbDisplay(_INTL("{1}'s Ability changed to {2}!",pokemon.name,
+          PBAbilities.getName(pokemon.ability)))
+      next true
+    end
+  end
+})
+
+# Voltseon
+# Vial item
+# At pokecenter put: $game_variables[50] = 3
+# At pokecenter put: $PokemonBag.pbChangeItem(:EMPTYVIAL,:VIAL)
+ItemHandlers::UseInField.add(:VIAL,proc{|item|
+   case $game_variables[50]
+   when 0
+     Kernel.pbMessage(_INTL("You do not have any charges left..."))
+     $PokemonBag.pbChangeItem(:VIAL,:EMPTYVIAL) #this should never happen btw
+   when 1
+     Kernel.pbMessage("You have 1 charge left.")
+     if Kernel.pbConfirmMessage("Would you like to heal your Pokémon?")
+       $game_variables[50] -= 1
+       for i in $Trainer.party
+        i.heal
+       end
+       Kernel.pbMessage(_INTL("\\me[HGSSGetItem]Your Pokémon were fully healed!"))
+       Kernel.pbMessage(_INTL("You have no more charges left."))
+       $PokemonBag.pbChangeItem(:VIAL,:EMPTYVIAL)
+      end
+   else
+     Kernel.pbMessage(_INTL("You have {1} charge(s) left.",$game_variables[50]))
+     if Kernel.pbConfirmMessage("Would you like to heal your Pokémon?")
+       $game_variables[50] -= 1
+       for i in $Trainer.party
+        i.heal
+       end
+       Kernel.pbMessage(_INTL("\\me[HGSSGetItem]Your Pokémon were fully healed!"))
+       Kernel.pbMessage(_INTL("{1} charge(s) remain.",$game_variables[50]))
+      end
+    end
+   next 1
+})
+
+ItemHandlers::UseFromBag.add(:VIAL,proc{|item|
+   case $game_variables[50]
+   when 0
+     Kernel.pbMessage(_INTL("You do not have any charges left..."))
+     $PokemonBag.pbChangeItem(:VIAL,:EMPTYVIAL) #this should never happen btw
+   when 1
+     Kernel.pbMessage("You have 1 charge left.")
+     if Kernel.pbConfirmMessage("Would you like to heal your Pokémon?")
+       $game_variables[50] -= 1
+       for i in $Trainer.party
+        i.heal
+       end
+       Kernel.pbMessage(_INTL("\\me[HGSSGetItem]Your Pokémon were fully healed!"))
+       Kernel.pbMessage(_INTL("You have no more charges left."))
+       $PokemonBag.pbChangeItem(:VIAL,:EMPTYVIAL)
+      end
+   else
+     Kernel.pbMessage(_INTL("You have {1} charge(s) left.",$game_variables[50]))
+     if Kernel.pbConfirmMessage("Would you like to heal your Pokémon?")
+       $game_variables[50] -= 1
+       for i in $Trainer.party
+        i.heal
+       end
+       Kernel.pbMessage(_INTL("\\me[HGSSGetItem]Your Pokémon were fully healed!"))
+       Kernel.pbMessage(_INTL("{1} charge(s) remain.",$game_variables[50]))
+      end
+    end
+   next 1
 })

@@ -336,18 +336,27 @@ Events.onStepTakenFieldMovement += proc { |_sender,e|
 }
 
 # Show grass rustle animation, and auto-move the player over waterfalls and ice
-Events.onStepTakenFieldMovement += proc { |_sender,e|
+Events.onStepTakenFieldMovement += proc { |sender,e|
   event = e[0] # Get the event affected by field movement
   if $scene.is_a?(Scene_Map)
     currentTag = pbGetTerrainTag(event)
     if PBTerrain.isJustGrass?(pbGetTerrainTag(event,true))  # Won't show if under bridge
       $scene.spriteset.addUserAnimation(GRASS_ANIMATION_ID,event.x,event.y,true,1)
+      if event==$game_player
+        $game_variables[54]=0
+      end
     elsif event==$game_player
       if currentTag==PBTerrain::WaterfallCrest
         # Descend waterfall, but only if this event is the player
         pbDescendWaterfall(event)
+        $game_variables[54]=0
       elsif PBTerrain.isIce?(currentTag) && !$PokemonGlobal.sliding
         pbSlideOnIce(event)
+        $game_variables[54]=0
+      elsif PBTerrain.isBog?(currentTag) #Thundaga bog
+        pbPoisonBog(event)
+      else
+        $game_variables[54]=0
       end
     end
   end
@@ -1057,6 +1066,47 @@ def pbSlideOnIce(event=nil)
   event.straighten
   event.walk_anime = oldwalkanime
   $PokemonGlobal.sliding = false
+end
+
+#thundaga
+def pbPoisonBog(event=nil)
+  $game_variables[54] +=1
+  poisoned=false
+  if $game_variables[54] >= 10
+     # Poison every pokemon in the party
+     for pkmn in $Trainer.ablePokemonParty
+       next if pkmn.hasType?(:POISON)  || pkmn.hasType?(:STEEL) ||
+          pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
+          pkmn.status!=0
+       pkmn.status = 2
+       poisoned=true
+       #pkmn.statusCount = 1 # Remove this if you don't want toxic poison
+     end
+     if poisoned
+       $scene.spriteset.addUserAnimation(14,event.x,event.y-1,true,1)
+       pbMessage(_INTL("All of your Pokémon became poisoned!"))
+     end
+  end
+end
+
+#thundaga
+def poisonAllPokemon(event=nil)
+    for pkmn in $Trainer.ablePokemonParty
+       next if pkmn.hasType?(:POISON)  || pkmn.hasType?(:STEEL) ||
+          pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
+          pkmn.status!=0
+       pkmn.status = 2
+     end
+end
+
+#thundaga
+def paralyzeAllPokemon(event=nil)
+    for pkmn in $Trainer.ablePokemonParty
+       next if pkmn.hasType?(:ELECTRIC) ||
+          pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
+          pkmn.status!=0
+       pkmn.status = 4
+     end
 end
 
 def pbTurnTowardEvent(event,otherEvent)

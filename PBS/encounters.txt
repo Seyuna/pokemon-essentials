@@ -14,7 +14,7 @@ OldRod
 GoodRod
     BARBOACH,17,18
     SHELLDER,16,19
-    KRABBY,15,16
+    SHELLDER,15,16
 SuperRod
     CHINCHOU,17,19
     QWILFISH,16,19
@@ -237,9 +237,9 @@ Cave
 039 # Route 4
 25,10,10
 Land
-    SHELLOS_1,12,15
-    SHELLOS_1,12,15
-    SHELLOS_1,12,15
+    SHELLOS,12,15
+    SHELLOS,12,15
+    SHELLOS,12,15
     GRIMER,13,15
     GRIMER,13,15
     GRIMER,13,15
@@ -266,12 +266,34 @@ Land
     SLUGMA,13,14
     SLUGMA,13,14
 #-------------------------------
+043 # Moncto Town
+25,10,10
+Water
+    MAGIKARP,5,20
+    MAGIKARP,5,20
+    MAGIKARP,5,20
+    WIMPOD,5,20
+    WIMPOD,5,20
+OldRod
+    MAGIKARP,5,10
+    WIMPOD,5,10
+GoodRod
+    MAGIKARP,5,20
+    WIMPOD,5,20
+    WIMPOD,5,20
+SuperRod
+    MAGIKARP,5,30
+    WIMPOD,5,30
+    WIMPOD,5,30
+    WIMPOD,5,30
+    WIMPOD,5,30
+#-------------------------------
 044 # Route 6
 25,10,10
 Land
-    SHELLOS_1,12,15
-    SHELLOS_1,12,15
-    SHELLOS_1,12,15
+    SHELLOS,12,15
+    SHELLOS,12,15
+    SHELLOS,12,15
     GRIMER,13,15
     GRIMER,13,15
     GRIMER,13,15
@@ -457,15 +479,646 @@ Land
 075 # Tiall Region
 25,10,10
 Land
-    RATTATA_1,11,14
-    GEODUDE_1,11,14
-    SANDSHREW_1,11,14
-    VULPIX_1,11,14
-    DIGLETT_1,11,14
-    MEOWTH_1,11,14
-    PIKACHU,11,14
-    PIKACHU,11,14
-    CUBONE,11,14
-    CUBONE,11,14
-    CUBONE,11,14
-    CUBONE,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+    RATTATA,11,14
+#-------------------------------
+077 # Costa Path
+25,10,10
+Land
+    LOTAD,5
+    WINGULL,5
+    SANDILE,5
+    KRABBY,5
+    MARILL,5
+    POOCHYENA,5
+    DEWPIDER,5
+    DEWPIDER,5
+    KANGA,5
+    MAGNEMITE,5
+    KLINK,5
+    KROKOROK,5
+Water
+    SANDILE,5
+    KRABBY,5
+    WAILMER,5
+    CARVANHA,5
+    MAGIKARP,5
+OldRod
+    MAGIKARP,5
+    SANDILE,5
+GoodRod
+    MAGIKARP,5
+    WAILMER,5
+    CARVANHA,5
+SuperRod
+    MAGIKARP,5,25
+    WAILMER,5,25
+    CARVANHA,5,25
+    SANDILE,5,25
+    MAGIKARP,5,25
+#-------------------------------
+078 # Pollen Path
+25,10,10
+Land
+    ADORABULL,2,4
+    BABEE,2,4
+    BUDEW,2,4
+    KANGA,2,4
+    WOOLOO,2,4
+    SIZZLIPEDE,2,4
+    YANMA,2,4
+    VULLABY,2,4
+    RUFFLET,2,4
+    LEDYBA,5,6
+    MUNCHLAX,5,6
+    SPINDA,5,6
+#-------------------------------
+079 # Fleural Town
+25,10,10
+Water
+    MAGIKARP,5,15
+    FEEBAS,5,15
+    FINNEON,5,15
+    GOLDEEN,5,15
+    POLIWAG,5,15
+OldRod
+    MAGIKARP,5,15
+    FINNEON,5,15
+GoodRod
+    MAGIKARP,5,15
+    GOLDEEN,5,15
+    FINNEON,5,15
+SuperRod
+    MAGIKARP,5,25
+    FINNEON,5,25
+    POLIWAG,5,25
+    GOLDEEN,5,25
+    FEEBAS,5,25
+#-------------------------------
+080 # Iron Pass
+25,10,10
+Land
+    WINGOT,2,4
+    KLINK,2,4
+    SHINX,2,4
+    GRUBBIN,2,4
+    YAMPER,2,4
+    BLITZLE,2,4
+    YAMPER,2,4
+    MAGNEMITE,2,4
+    DRIFLOON,2,4
+    GRUBBIN,2,4
+    DRIFLOON,2,4
+    BRONZOR,2,4
+Water
+    MAGIKARP,5,15
+    FEEBAS,5,15
+    FINNEON,5,15
+    GOLDEEN,5,15
+    POLIWAG,5,15
+OldRod
+    MAGIKARP,5,15
+    FINNEON,5,15
+GoodRod
+    MAGIKARP,5,15
+    GOLDEEN,5,15
+    FINNEON,5,15
+SuperRod
+    MAGIKARP,5,25
+    FINNEON,5,25
+    POLIWAG,5,25
+    GOLDEEN,5,25
+    FEEBAS,5,25
+#-------------------------------
+084 # Costa Path
+25,10,10
+Land
+    LOTAD,5
+    KRABBY,5
+    SANDILE,5
+    WINGULL,5
+    STUNFISK,5
+    DEWPIDER,5
+    KRABBY,5
+    KANGA,5
+    KANGA,5
+    DRIFLOON,5
+    BUIZEL,5
+    KROKOROK,5
+Water
+    SANDILE,5
+    KRABBY,5
+    WAILMER,5
+    CARVANHA,5
+    MAGIKARP,5
+OldRod
+    MAGIKARP,5
+    SANDILE,5
+GoodRod
+    MAGIKARP,5
+    WAILMER,5
+    CARVANHA,5
+SuperRod
+    MAGIKARP,5,25
+    WAILMER,5,25
+    CARVANHA,5,25
+    SANDILE,5,25
+    MAGIKARP,5,25
+#-------------------------------
+086 # Maple Trail
+25,10,10
+Land
+    BIDOOF,5
+    BLITZLE,5
+    HEATMOR,5
+    DURANT,5
+    JIGGLYPUFF,5
+    WHISMUR,5
+    HOUNDOUR,5
+    RALTS,5
+    VENIPEDE,5
+    SEWADDLE,5
+    DARUMAKA,5
+    LARVESTA,5
+Water
+    POLIWAG,5
+    MAGIKARP,5
+    FINNEON,5
+    FINNEON,5
+    FINNEON,5
+OldRod
+    FINNEON,5
+    FINNEON,5
+GoodRod
+    FINNEON,5
+    FINNEON,5
+    FINNEON,5
+SuperRod
+    FINNEON,5
+    FINNEON,5
+    FINNEON,5
+    FINNEON,5
+    FINNEON,5
+#-------------------------------
+089 # Magnet Cave
+25,11,10
+Cave
+    NOSEPASS,6,8
+    MAGNEMITE,5,7
+    ZUBAT,4,8
+    ARON,5,7
+    GEODUDE,5,6
+    DIGLETT,5,6
+    ROGGENROLA,5,7
+    DWEBBLE,5,7
+    DRILBUR,5,8
+    NOSEPASS,5,9
+    MAGNEMITE,5,9
+    RHYHORN,5,8
+#-------------------------------
+090 # Magnet Cave
+25,13,10
+Cave
+    NOSEPASS,20,28
+    MAGNEMITE,20,28
+    ZUBAT,20,28
+    ARON,20,28
+    GEODUDE,20,28
+    DIGLETT,20,28
+    ROGGENROLA,20,28
+    DWEBBLE,20,28
+    DRILBUR,20,28
+    NOSEPASS,20,28
+    MAGNEMITE,20,28
+    RHYHORN,20,28
+#-------------------------------
+091 # Lumigen Power Plant B1
+25,15,10
+Cave
+    MARBOLT,5
+    MAGNEMITE,5
+    ELEKID,5
+    PICHU,5
+    ELECTRIKE,5
+    ELEKID,5
+    MAGNEMITE,5
+    MARBOLT,5
+    MAGNEMITE,5
+    MARBOLT,5
+    PIKACHU,5
+    MARBOLT,5
+#-------------------------------
+092 # Verdant Valley
+25,10,10
+Land
+    ADORABULL,5
+    ODDISH,5
+    TROPPY,5
+    WHISMUR,5
+    CHERUBI,5
+    MAKUHITA,5
+    LEDYBA,5
+    SPINARAK,5
+    SOLOSIS,5
+    MURKROW,5
+    SOLOSIS,5
+    SOLOSIS,5
+#-------------------------------
+093 # Lush Road
+25,10,10
+Land
+    FOONGUS,5
+    BABEE,5
+    SHINX,5
+    ADORABULL,5
+    TROPPY,5
+    PETILIL,5
+    WEEDLE,5
+    CATERPIE,5
+    SENTRET,5
+    TANGELA,5
+    SHUCKLE,5
+    SNUBBULL,5
+Water
+    MAGIKARP,5,15
+    FEEBAS,5,15
+    FINNEON,5,15
+    GOLDEEN,5,15
+    POLIWAG,5,15
+OldRod
+    MAGIKARP,5,15
+    FINNEON,5,15
+GoodRod
+    MAGIKARP,5,15
+    GOLDEEN,5,15
+    FINNEON,5,15
+SuperRod
+    MAGIKARP,5,25
+    FINNEON,5,25
+    POLIWAG,5,25
+    GOLDEEN,5,25
+    FEEBAS,5,25
+#-------------------------------
+096 # Lush Road
+25,10,10
+Land
+    SNUBBULL,5
+    STANTLER,5
+    PANCHAM,5
+    TAILLOW,5
+    SPINDA,5
+    DITTO,5
+    DITTO,5
+    HAPPINY,5
+    RALTS,5
+    ELECTRIKE,5
+    ELECTRIKE,5
+    TROPPY,5
+#-------------------------------
+098 # Plunge Pass
+25,10,10
+Land
+    ADORABULL,5
+    BABEE,5
+    SWABLU,5
+    BLITZLE,5
+    ROOKIDEE,5
+    WOOLOO,5
+    SWABLU,5
+    ROOKIDEE,5
+    BLITZLE,5
+    WOOLOO,5
+    ZANGOOSE,5
+    EEVEE,5
+#-------------------------------
+099 # Lappy Lake
+25,10,10
+Land
+    DUCKLETT,10,15
+    PSYDUCK,10,15
+    SLOWPOKE,5
+    POLIWAG,5
+    MARILL,5
+    STANTLER,5
+    SCRAGGY,5
+    STANTLER,5
+    TEDDIURSA,5
+    SCRAGGY,5
+    BUIZEL,5
+    RALTS,5
+Water
+    LAPPY,14,18
+    MAGIKARP,15,22
+    LAPPY,16,26
+    LAPRAS,22,30
+    LAPRAS,22,40
+OldRod
+    MAGIKARP,5,15
+    LAPPY,5,20
+GoodRod
+    MAGIKARP,10,15
+    LAPPY,10,25
+    LAPRAS,20,30
+SuperRod
+    MAGIKARP,20,30
+    LAPPY,20,30
+    MAGIKARP,20,25
+    LAPPY,20,35
+    LAPRAS,30,40
+#-------------------------------
+100 # Dim Cave
+25,10,10
+Cave
+    SABLING,5
+    DUNSPARCE,5
+    DRILBUR,5
+    ROGGENROLA,5
+    DUNSPARCE,5
+    ALUMIDON,5
+    DUNSPARCE,5
+    SABLING,5
+    DUNSPARCE,5
+    ONIX,5
+    RIOLU,5
+    RIOLU,5
+#-------------------------------
+101 # Maple Trail
+25,10,10
+Land
+    BIDOOF,5
+    BLITZLE,5
+    HEATMOR,5
+    DURANT,5
+    JIGGLYPUFF,5
+    WHISMUR,5
+    HOUNDOUR,5
+    RALTS,5
+    VENIPEDE,5
+    SEWADDLE,5
+    DARUMAKA,5
+    DARUMAKA,5
+#-------------------------------
+103 # Verdant Valley
+25,10,10
+Land
+    ADORABULL,5
+    ODDISH,5
+    BELLSPROUT,5
+    PARAS,5
+    CHERUBI,5
+    MAKUHITA,5
+    SOLOSIS,5
+    SOLOSIS,5
+    SHROOMISH,5
+    MURKROW,5
+    HERACUTE,5
+    SICKLER,5
+Water
+    MAGIKARP,5
+    MAGIKARP,5
+    FINNEON,5
+    FEEBAS,5
+    FEEBAS,5
+OldRod
+    MAGIKARP,5
+    FINNEON,5
+GoodRod
+    FINNEON,5
+    FINNEON,5
+    FEEBAS,5
+SuperRod
+    MAGIKARP,5
+    FINNEON,5
+    FINNEON,5
+    FEEBAS,5
+    FEEBAS,5
+#-------------------------------
+105 # Yama Pass
+25,10,10
+Land
+    TEDDIURSA,5
+    STANTLER,5
+    DRIFLOON,5
+    MAGBY,5
+    HOUNDOUR,5
+    NUMEL,5
+    DRIFLOON,5
+    SPINDA,5
+    MURKROW,5
+    PONYTA,5
+    GIGANTLER,5
+    GIGANTLER,5
+#-------------------------------
+107 # Stacona Woods
+25,10,10
+Land
+    PINCUSH,5
+    SICKLER,5
+    HERACUTE,5
+    FOONGUS,5
+    SHROOMISH,5
+    PARAS,5
+    SEWADDLE,5
+    VENIPEDE,5
+    DWEBBLE,5
+    SPINARAK,5
+    JOLTIK,5
+    SHUCKLE,5
+#-------------------------------
+108 # Lumigen Hills
+25,10,10
+Land
+    ARON,5
+    WINGOT,5
+    TRUBBISH,5
+    KLINK,5
+    GRUBBIN,5
+    PACHIRISU,5
+    DURANT,5
+    BELDUM,5
+    ARON,5
+    ABSOL,5
+    BELDUM,5
+    ABSOL,5
+Water
+    MARILL,5
+    WINGULL,5
+    MAGIKARP,5
+    FEEBAS,5
+    BASCULIN,5
+OldRod
+    MARILL,5
+    MAGIKARP,5
+GoodRod
+    BASCULIN,5
+    MAGIKARP,5
+    FEEBAS,5
+SuperRod
+    BASCULIN,5
+    MAGIKARP,5
+    FEEBAS,5
+    FINNEON,5
+    LAPRAS,5
+#-------------------------------
+110 # Frostbite Cavern
+25,10,10
+Cave
+    MAREEP,5
+    SNORUNT,5
+    SWINUB,5
+    CUBCHOO,5
+    VANILLITE,5
+    MAREEP,5
+    MAREEP,5
+    SNOVER,5
+    SMOOCHUM,5
+    SNEASEL,5
+    VANILLISH,5
+    CRYOGONAL,5
+#-------------------------------
+111 # Ferrous Cave
+25,10,10
+Cave
+    DIGLETT,5
+    GEODUDE,5
+    ROGGENROLA,5
+    ONIX,5
+    SCRAFTY,5
+    DRILBUR,5
+    GEODUDE,5
+    ROGGENROLA,5
+    RHYHORN,5
+    RHYHORN,5
+    ALUMIDON,5
+    ALUMIDON,5
+#-------------------------------
+113 # Driftwood City
+25,10,10
+Water
+    SANDILE,5
+    KRABBY,5
+    WAILMER,5
+    CARVANHA,5
+    MAGIKARP,5
+OldRod
+    MAGIKARP,5
+    SANDILE,5
+GoodRod
+    MAGIKARP,5
+    WAILMER,5
+    CARVANHA,5
+SuperRod
+    MAGIKARP,5,25
+    WAILMER,5,25
+    CARVANHA,5,25
+    SANDILE,5,25
+    MAGIKARP,5,25
+#-------------------------------
+121 # Ferrous Cave
+25,10,10
+Cave
+    ZUBAT,5
+    GEODUDE,5
+    DIGLETT,5
+    ONIX,5
+    SCRAFTY,5
+    DRILBUR,5
+    GEODUDE,5
+    ROGGENROLA,5
+    RHYHORN,5
+    ALUMIDON,5
+    ALUMIDON,5
+    ALUMIDON,5
+Water
+    POLIWAG,5
+    FINNEON,5
+    MAGIKARP,5
+    MAGIKARP,5
+    MAGIKARP,5
+OldRod
+    POLIWAG,5
+    POLIWAG,5
+GoodRod
+    POLIWAG,5
+    POLIWAG,5
+    POLIWAG,5
+SuperRod
+    POLIWAG,5
+    POLIWAG,5
+    POLIWAG,5
+    POLIWAG,5
+    POLIWAG,5
+#-------------------------------
+123 # Lush Cave
+25,10,10
+Cave
+    SCRAFTY,5
+    GEODUDE,5
+    GOLETT,5
+    SABLING,5
+    ELGYEM,5
+    GASTLY,5
+    MISDREAVUS,5
+    ZORUA,5
+    YAMASK,5
+    UNOWN,5
+    GIBLE,5
+    SABLEYE,5
+#-------------------------------
+133 # Dragon's Den
+25,10,10
+Cave
+    DRATINI,5
+    AXEW,5
+    GIBLE,5
+    DEINO,5
+    DRATINI,5
+    AXEW,5
+    GIBLE,5
+    DURALUDON,5
+    GIBLE,5
+    AXEW,5
+    DEINO,5
+    DEINO,5
+#-------------------------------
+147 # Blighted Bog
+25,10,10
+Land
+    TRAPINCH_1,5
+    FOONGUS,5
+    EKANS,5
+    TOXEL,5
+    VENIPEDE,5
+    GULPIN,5
+    GRIMER,5
+    TRAPINCH,5
+    STUNKY,5
+    CROAGUNK,5
+    SEVIPER,5
+    TRUBBISH,5
+#-------------------------------
+150 # Folian Grove
+25,10,10
+Land
+    SKWOVET,5
+    APPLIN,5
+    SLOWPOKE,5
+    BOUNSWEET,5
+    GOSSIFLEUR,5
+    SKIDDO,5
+    APPLIN,5
+    SLOWPOKE,5
+    SKIDDO,5
+    ROWLET,5
+    GROOKEY,5
+    GROOKEY,5

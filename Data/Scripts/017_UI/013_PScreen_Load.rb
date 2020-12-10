@@ -1,7 +1,7 @@
 class PokemonLoadPanel < SpriteWrapper
   attr_reader :selected
 
-  TEXTCOLOR             = Color.new(232,232,232)
+  TEXTCOLOR             = Color.new(80,80,80)
   TEXTSHADOWCOLOR       = Color.new(136,136,136)
   MALETEXTCOLOR         = Color.new(56,160,248)
   MALETEXTSHADOWCOLOR   = Color.new(56,104,168)
@@ -60,7 +60,7 @@ class PokemonLoadPanel < SpriteWrapper
       textpos = []
       if @isContinue
         textpos.push([@title,16*2,5*2,0,TEXTCOLOR,TEXTSHADOWCOLOR])
-        textpos.push([_INTL("Badges:"),16*2,56*2,0,TEXTCOLOR,TEXTSHADOWCOLOR])
+        textpos.push([_INTL("Chapter:"),16*2,56*2,0,TEXTCOLOR,TEXTSHADOWCOLOR])
         textpos.push([@trainer.numbadges.to_s,103*2,56*2,1,TEXTCOLOR,TEXTSHADOWCOLOR])
         textpos.push([_INTL("Pokédex:"),16*2,72*2,0,TEXTCOLOR,TEXTSHADOWCOLOR])
         textpos.push([@trainer.pokedexSeen.to_s,103*2,72*2,1,TEXTCOLOR,TEXTSHADOWCOLOR])

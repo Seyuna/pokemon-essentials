@@ -1,8 +1,8 @@
 # Backgrounds to show in credits. Found in Graphics/Titles/ folder
-CreditsBackgroundList = ["credits1","credits2","credits3","credits4","credits5"]
+CreditsBackgroundList = ["credits12","credits6","credits9","credits8","credits14","credits13","credits7","credits15","credits17","credits18","credits16","credits19","credits10","credits11"]
 CreditsMusic          = "Credits"
 CreditsScrollSpeed    = 2
-CreditsFrequency      = 9   # Number of seconds per credits slide
+CreditsFrequency      = 6   # Number of seconds per credits slide
 CREDITS_OUTLINE       = Color.new(0,0,128, 255)
 CREDITS_SHADOW        = Color.new(0,0,0, 100)
 CREDITS_FILL          = Color.new(255,255,255, 255)
@@ -48,16 +48,76 @@ class Scene_Credits
 # This next piece of code is the credits.
 #Start Editing
 CREDIT=<<_END_
+A game by Thundaga
 
-Your credits go here.
+Art by
+Voltseon
+Tristantine The Great
+Kristiano100
 
-Your credits go here.
+Programming
+Voltseon
+GolisopodUser
 
-Your credits go here.
+Shoutouts to the Thundaga Twitch Chat
+Aka the Thundagang
+Aka the Camfam
+Aka the Bolt Cult
 
-Your credits go here.
 
-Your credits go here.
+A HUGE thank you to the resource creators
+of the Pokemon fangame community
+<3
+
+Location Signpost Backgrounds
+carmaniac & PurpleZaffre
+Updated by LostSoulsDev
+
+Set Controls Screen
+FL
+
+Essentials Text Skip
+Amethyst
+Kurotsune
+
+Item Find Text
+Boonzeet
+
+Add Caught Poke to Party
+Jonas930
+derfischae
+
+Ability Capsule
+WolfPP
+EminanE
+
+Gen 8 Scripts
+WolfPP
+
+Gen 8 PBS
+Zerokid
+
+Additional Gen8 PBS Info
+TheToxic
+
+Duraludon Sprites
+LeParagon
+And the rest of the Smogon
+Gen 8 Sprite Project
+
+Support the Gen 6/7/8
+Smogon Sprite Projects
+
+
+Credits Fanart:
+HauntedArtStudio
+KingdomKey
+Tristantine The Great
+ShadowPhil
+Design3D
+
+HM Items
+Marin
 
 {INSERTS_PLUGIN_CREDITS_DO_NOT_REMOVE}
 "Pokémon Essentials" was created by:
