@@ -830,3 +830,21 @@ ShowArea = false
 # Gravekeeper's House
 MapPosition = 2,10,12
 Outdoor = false
+#-------------------------------
+[156]
+# Blighted Bog Gate
+MapPosition = 2,14,3
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[157]
+# Verdant Gate
+MapPosition = 2,14,6
+Outdoor = false
+ShowArea = false
+#-------------------------------
+[158]
+# Lumigen Gate
+MapPosition = 2,14,14
+Outdoor = false
+ShowArea = false
