@@ -505,7 +505,7 @@ Land
     DEWPIDER,5
     KANGA,5
     MAGNEMITE,5
-    KLINK,5
+    KANGA,5
     KROKOROK,5
 Water
     SANDILE,5
@@ -569,14 +569,14 @@ SuperRod
 20,8,8
 Land
     WINGOT,2,4
-    KLINK,2,4
-    SHINX,2,4
     GRUBBIN,2,4
-    YAMPER,2,4
+    SHINX,2,4
     BLITZLE,2,4
     YAMPER,2,4
+    GRUBBIN,2,4
+    YAMPER,2,4
     MAGNEMITE,2,4
-    DRIFLOON,2,4
+    KLINK,2,4
     GRUBBIN,2,4
     DRIFLOON,2,4
     BRONZOR,2,4
@@ -722,16 +722,16 @@ Cave
 20,8,8
 Land
     ADORABULL,5
-    ODDISH,5
+    KANGA,5
     TROPPY,5
-    WHISMUR,5
+    ODDISH,5
     CHERUBI,5
     MAKUHITA,5
     LEDYBA,5
     SPINARAK,5
     SOLOSIS,5
     MURKROW,5
-    SOLOSIS,5
+    WHISMUR,5
     SOLOSIS,5
 #-------------------------------
 093 # Lush Road
