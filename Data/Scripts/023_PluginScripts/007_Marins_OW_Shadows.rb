@@ -57,7 +57,8 @@ No_Shadow_If_Event_Name_Has = [
     "Lapras",
     "BerryPlant",
     "Bookshelf",
-    "Tree"
+    "Tree",
+    "Gate"
 ]
 
 # Events that have this in their event name will always receive a shadow.

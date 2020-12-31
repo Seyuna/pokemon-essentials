@@ -38,8 +38,6 @@
 47,East,8,52,West,0
 # Route 2 (21) - Route 7 (47)
 21,East,77,47,West,0
-# Stacona Connector 2 (146) - Stacona Woods (107)
-146,South,0,107,North,0
 # Maple Town (102) - Yama Pass (105)
 102,West,0,105,East,5
 # Maple Town (102) - Maple Trail (101)
@@ -50,21 +48,13 @@
 98,South,8,99,North,0
 # Verdant Valley (92) - Verdant Valley (103)
 92,East,8,103,West,0
-# Pollen Path (78) - Lush Road (93)
-78,East,0,93,West,40
-# Folian Grove (150) - Lush Road (93)
-150,North,99,93,South,0
-# Fleural Town (79) - Lush Road (93)
-79,East,6,93,West,0
-# Lush Road (96) - Lush Road (93)
-96,North,0,93,South,4
-# Folian Grove (150) - Pollen Path (78)
-150,East,0,78,West,10
-# Fleural Town (79) - Pollen Path (78)
-79,South,17,78,North,0
-# Lush Road (93) - Moncto Town (43)
-93,14,121,43,0,0
 # Lumigen City (81) - Iron Pass (80)
 81,North,14,80,South,0
 # Costa Path (84) - Costa Path (77)
 84,West,31,77,East,0
+# Lush Road (96) - Lush Road (93)
+96,North,0,93,South,14
+# Folian Grove (150) - Pollen Path (78)
+150,East,0,78,West,10
+# Fleural Town (79) - Pollen Path (78)
+79,South,17,78,North,0

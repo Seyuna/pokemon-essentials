@@ -355,6 +355,14 @@ Events.onStepTakenFieldMovement += proc { |sender,e|
         $game_variables[54]=0
       elsif PBTerrain.isBog?(currentTag) #Thundaga bog
         pbPoisonBog(event)
+      elsif PBTerrain.isUpArrow?(currentTag) #Thundaga arrows
+        pbMoveArrow(event, 1)
+      elsif PBTerrain.isDownArrow?(currentTag) #Thundaga arrows
+        pbMoveArrow(event, 2)
+      elsif PBTerrain.isLeftArrow?(currentTag) #Thundaga arrows
+        pbMoveArrow(event, 3)
+      elsif PBTerrain.isRightArrow?(currentTag) #Thundaga arrows
+        pbMoveArrow(event, 4)
       else
         $game_variables[54]=0
       end
@@ -1087,6 +1095,23 @@ def pbPoisonBog(event=nil)
        pbMessage(_INTL("All of your Pokémon became poisoned!"))
      end
   end
+end
+
+#thundaga
+def pbMoveArrow(event=nil, int=1)
+  pbMoveRoute($game_player, [PBMoveRoute::ChangeSpeed, 4, PBMoveRoute::DirectionFixOn, PBMoveRoute::WalkAnimeOff])
+  case int
+  when 2
+    pbMoveRoute($game_player, [PBMoveRoute::Down])
+  when 3
+    pbMoveRoute($game_player, [PBMoveRoute::Left])
+  when 4
+    pbMoveRoute($game_player, [PBMoveRoute::Right])
+  else
+    pbMoveRoute($game_player, [PBMoveRoute::Up])
+  end
+  pbMoveRoute($game_player, [PBMoveRoute::WalkAnimeOn, PBMoveRoute::DirectionFixOff, PBMoveRoute::ChangeSpeed, 3])
+  pbSEPlay("GUI naming tab swap start")
 end
 
 #thundaga

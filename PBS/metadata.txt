@@ -838,7 +838,7 @@ Outdoor = false
 ShowArea = false
 #-------------------------------
 [157]
-# Verdant Gate
+# Fleural Gate
 MapPosition = 2,14,6
 Outdoor = false
 ShowArea = false
