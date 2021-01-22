@@ -21,9 +21,17 @@ end
 
 def drawPlayerPicture(opacity=255)
   if $Trainer.gender==0 # Male
-      $game_screen.pictures[1].show("Character1-"+$Trainer.outfit.to_s,0,0,0,100,100,opacity,0)
+      $game_screen.pictures[1].show("Character0-"+$Trainer.outfit.to_s,0,0,0,100,100,opacity,0)
   else #Female
-      $game_screen.pictures[1].show("Character1_1-"+$Trainer.outfit.to_s,0,0,0,100,100,opacity,0)
+      $game_screen.pictures[1].show("Character1-"+$Trainer.outfit.to_s,0,0,0,100,100,opacity,0)
+  end
+end
+
+def drawPlayerPictureFlipped(opacity=255)
+  if $Trainer.gender==0 # Male
+      $game_screen.pictures[1].show("Character0-"+$Trainer.outfit.to_s+"-flipped",0,0,0,100,100,opacity,0)
+  else #Female
+      $game_screen.pictures[1].show("Character1-"+$Trainer.outfit.to_s+"-flipped",0,0,0,100,100,opacity,0)
   end
 end
 

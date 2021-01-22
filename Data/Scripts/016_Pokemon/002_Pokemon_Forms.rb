@@ -534,14 +534,6 @@ MultipleForms.register(:FURFROU,{
   }
 })
 
-MultipleForms.register(:ESPURR,{
-  "getForm" => proc { |pkmn|
-    next pkmn.gender
-  }
-})
-
-MultipleForms.copy(:ESPURR,:MEOWSTIC)
-
 MultipleForms.register(:AEGISLASH,{
   "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
     next 0
@@ -1454,3 +1446,27 @@ MultipleForms.register(:TYROGUE,{
 }
 })
 MultipleForms.copy(:TYROGUE,:HITMONCHAN,:HITMONLEE,:HITMONTOP)
+
+MultipleForms.register(:NUMEL,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:NUMEL,:CAMERUPT)
+
+MultipleForms.register(:ESPURR,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:ESPURR,:MEOWSTIC)

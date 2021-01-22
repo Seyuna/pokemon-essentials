@@ -1269,3 +1269,15 @@ Pokemon = DUSKULL,30
 Pokemon = ARIADOS,30
     Form = 1
 Pokemon = SABSIDIAN,30
+#-------------------------------
+[BIOGRUNT_F,Natasha]
+Pokemon = TROPIUS,35
+    Ball = 24
+Pokemon = FOONGUS,35
+    Form = 1
+    Ball = 24
+Pokemon = HERAPLEX,35
+    Form = 1
+    Ball = 24
+Pokemon = PINTERRA,35
+    Ball = 24
