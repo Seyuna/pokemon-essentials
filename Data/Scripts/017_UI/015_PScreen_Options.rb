@@ -498,7 +498,7 @@ class PokemonOption_Scene
          proc { $PokemonSystem.frame },
          proc { |value|
            $PokemonSystem.frame = value
-           MessageConfig.pbSetSystemFrame("Graphics/Windowskins/" + $TextFrames[value])
+           MessageConfig.pbSetSystemFrame($TextFrames[value])
          }
        ),
        EnumOption.new(_INTL("Font Style"),[_INTL("FRLG"),_INTL("R/S"),_INTL("Em"),_INTL("DP")],
