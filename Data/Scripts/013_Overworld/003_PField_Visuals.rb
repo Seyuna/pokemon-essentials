@@ -419,7 +419,7 @@ class LocationWindow
     elsif @frames > 180
       @sprites["Image"].y-= ((@sprites["Image"].bitmap.height)/20)
       @sprites["Image"].dispose if @sprites["Image"].y + @height < 0
-    elsif $game_temp.in_menu==true
+    elsif $game_temp.in_menu == true
       @sprites["Image"].y-= ((@sprites["Image"].bitmap.height)/10)
       @sprites["Image"].dispose if @sprites["Image"].y + @height < 5
     else
@@ -697,11 +697,7 @@ end
 # Blacking out animation
 #===============================================================================
 def pbRxdataExists?(file)
-  if $RPGVX
-    return pbRgssExists?(file+".rvdata")
-  else
-    return pbRgssExists?(file+".rxdata")
-  end
+  return pbRgssExists?(file+".rxdata")
 end
 
 def pbStartOver(gameover=false)

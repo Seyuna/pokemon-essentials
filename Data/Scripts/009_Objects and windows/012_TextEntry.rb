@@ -49,16 +49,16 @@ class Window_CharacterEntry < Window_DrawableCommand
   def drawItem(index,_count,rect)
     rect=drawCursor(index,rect)
     if index==@charset.length # -1
-      pbDrawShadowText(self.contents,rect.x,rect.y,rect.width,rect.height,"[ ]",
+      pbDrawShadowText(self.contents,rect.x,rect.y + (mkxp? ? 6 : 0),rect.width,rect.height,"[ ]",
          self.baseColor,self.shadowColor)
     elsif index==@charset.length+1 # -2
-      pbDrawShadowText(self.contents,rect.x,rect.y,rect.width,rect.height,@othercharset,
+      pbDrawShadowText(self.contents,rect.x,rect.y + (mkxp? ? 6 : 0),rect.width,rect.height,@othercharset,
          self.baseColor,self.shadowColor)
     elsif index==@charset.length+2 # -3
-      pbDrawShadowText(self.contents,rect.x,rect.y,rect.width,rect.height,_INTL("OK"),
+      pbDrawShadowText(self.contents,rect.x,rect.y + (mkxp? ? 6 : 0),rect.width,rect.height,_INTL("OK"),
          self.baseColor,self.shadowColor)
     else
-      pbDrawShadowText(self.contents,rect.x,rect.y,rect.width,rect.height,@charset[index],
+      pbDrawShadowText(self.contents,rect.x,rect.y + (mkxp? ? 6 : 0),rect.width,rect.height,@charset[index],
          self.baseColor,self.shadowColor)
     end
   end
@@ -826,6 +826,7 @@ class PokemonEntryScene
   USEKEYBOARD=true
 
   def pbStartScene(helptext,minlength,maxlength,initialText,subject=0,pokemon=nil)
+    Input.text_input = true if !System.platform[/Windows/]
     @sprites={}
     @viewport=Viewport.new(0,0,Graphics.width,Graphics.height)
     @viewport.z=99999
@@ -997,6 +998,7 @@ class PokemonEntryScene
   end
 
   def pbEndScene
+    Input.text_input = false if !System.platform[/Windows/]
     $fullInputUpdate = false
     pbFadeOutAndHide(@sprites)
     pbDisposeSpriteHash(@sprites)
@@ -1524,29 +1526,6 @@ class Interpreter
     return true
   end
 end
-
-
-
-class Game_Interpreter
-  def command_303
-    if $Trainer
-       $Trainer.name=pbEnterPlayerName(_INTL("Your name?"),1,@params[1],$Trainer.name)
-      return true
-    end
-    if $game_actors && $data_actors && $data_actors[@params[0]] != nil
-      # Set battle abort flag
-      pbFadeOutIn {
-         sscene=PokemonEntryScene.new
-         sscreen=PokemonEntry.new(sscene)
-         $game_actors[@params[0]].name=sscreen.pbStartScreen(
-            _INTL("Enter {1}'s name.",$game_actors[@params[0]].name),
-            1,@params[1],$game_actors[@params[0]].name)
-      }
-    end
-    return true
-  end
-end
-
 
 
 #===============================================================================

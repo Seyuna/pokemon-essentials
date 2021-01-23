@@ -1,3 +1,4 @@
+if System.platform[/Windows/]
 module Win32
   def copymem(len)
     buf = "\0" * len
@@ -693,4 +694,5 @@ def pbPostToFile(url, postdata, file)
     pbPostData(url, postdata,file)
   rescue
   end
+end
 end

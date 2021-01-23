@@ -57,7 +57,7 @@ Kristiano100
 
 Programming
 Voltseon
-GolisopodUser
+Golisopod User
 
 Shoutouts to the Thundaga Twitch Chat
 Aka the Thundagang
@@ -68,56 +68,6 @@ Aka the Bolt Cult
 A HUGE thank you to the resource creators
 of the Pokemon fangame community
 <3
-
-Location Signpost Backgrounds
-carmaniac & PurpleZaffre
-Updated by LostSoulsDev
-
-Set Controls Screen
-FL
-
-Essentials Text Skip
-Amethyst
-Kurotsune
-
-Item Find Text
-Boonzeet
-
-Add Caught Poke to Party
-Jonas930
-derfischae
-
-Ability Capsule
-WolfPP
-EminanE
-
-Gen 8 Scripts
-WolfPP
-
-Gen 8 PBS
-Zerokid
-
-Additional Gen8 PBS Info
-TheToxic
-
-Duraludon Sprites
-LeParagon
-And the rest of the Smogon
-Gen 8 Sprite Project
-
-Support the Gen 6/7/8
-Smogon Sprite Projects
-
-
-Credits Fanart:
-HauntedArtStudio
-KingdomKey
-Tristantine The Great
-ShadowPhil
-Design3D
-
-HM Items
-Marin
 
 {INSERTS_PLUGIN_CREDITS_DO_NOT_REMOVE}
 "Pokémon Essentials" was created by:
@@ -139,7 +89,9 @@ Lisa Anthony<s>Wachunga
 Luka S.J.<s>
 and everyone else who helped out
 
-
+"mkxp-z" by:
+Roza
+Based on MKXP by Ancurio et al.
 
 "RPG Maker XP" by:
 Enterbrain
