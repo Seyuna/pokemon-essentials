@@ -1271,13 +1271,51 @@ Pokemon = ARIADOS,30
 Pokemon = SABSIDIAN,30
 #-------------------------------
 [BIOGRUNT_F,Natasha]
-Pokemon = TROPIUS,35
-    Ball = 24
-Pokemon = FOONGUS,35
-    Form = 1
-    Ball = 24
-Pokemon = HERAPLEX,35
+Pokemon = SOLOSIS,35
     Form = 1
     Ball = 24
 Pokemon = PINTERRA,35
     Ball = 24
+Pokemon = IVYSAUR,35
+    Ball = 24
+#-------------------------------
+[MECHGRUNT_F,Natasha]
+Pokemon = KLINK,25
+    Form = 1
+    Ball = 25
+Pokemon = BISHARP,25
+    Ball = 25
+Pokemon = CHARMELEON,25
+    Ball = 25
+#-------------------------------
+[BIOGRUNT_M,Arnold]
+Pokemon = SCIZOR,35
+    Ball = 24
+Pokemon = DUOSION,35
+    Form = 1
+    Ball = 24
+#-------------------------------
+[MECHGRUNT_M,Arnold]
+Pokemon = AMPHAROS,35
+    Form = 1
+    Ball = 25
+Pokemon = KLANG,35
+    Form = 1
+    Ball = 25
+#-------------------------------
+[BIOGRUNT_M,Julian]
+Pokemon = TROPIUS,35
+    Ball = 24
+Pokemon = TOXTRICITY,35
+    Ball = 24
+Pokemon = SCEPTILE,35
+    Ball = 24
+#-------------------------------
+[MECHGRUNT_M,Julian]
+Pokemon = PROBOPASS,35
+	Form = 1
+    Ball = 25
+Pokemon = SKARMORY,35
+    Ball = 25
+Pokemon = BLAZIKEN,35
+    Ball = 25

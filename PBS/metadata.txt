@@ -597,6 +597,12 @@ MapPosition = 2,12,14
 Outdoor = true
 ShowArea = true
 #-------------------------------
+[109]
+# Driftwood Lab
+MapPosition = 2,18,10
+Outdoor = false
+ShowArea = false
+#-------------------------------
 [110]
 # Frostbite Cavern
 BattleBack = FRLGIceCave
@@ -785,6 +791,13 @@ ShowArea = false
 # Delta Lab
 MapPosition = 2,18,12
 Outdoor = false
+ShowArea = true
+#-------------------------------
+[146]
+# Cascade Creek
+Weather = Rain,100
+MapPosition = 2,16,12
+Outdoor = true
 ShowArea = true
 #-------------------------------
 [147]
