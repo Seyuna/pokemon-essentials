@@ -76,6 +76,11 @@ if !mkxp?
 end
 
 PluginManager.register({
+  :name => "Tileset Credits",
+  :credits => ["Zeo","Magiscarf"]
+})
+
+PluginManager.register({
   :name => "Fanart Credits",
   :credits => ["HauntedArtStudio","KingdomKey","Tristantine The Great","ShadowPhil","Design3D"]
 })
