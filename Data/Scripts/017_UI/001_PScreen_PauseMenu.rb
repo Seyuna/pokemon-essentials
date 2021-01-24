@@ -205,12 +205,6 @@ class PokemonPauseMenu
           screen.pbStartScreen
           @scene.pbRefresh
         }
-      elsif cmdControls>=0 && command==cmdControls
-          scene=PokemonControlsScene.new
-          screen=PokemonControls.new(scene)
-          pbFadeOutIn(99999) {
-          screen.pbStartScreen
-        }
       elsif cmdTrainer>=0 && command==cmdTrainer
         pbFadeOutIn {
           scene = PokemonTrainerCard_Scene.new

@@ -270,14 +270,14 @@ class PokemonBag_Scene
     end
     # Draw the pocket icons
     @sprites["pocketicon"].bitmap.clear
-    #if @choosing && @filterlist
-    #  for i in 1...@bag.pockets.length
-    #    if @filterlist[i].length==0
-  #        @sprites["pocketicon"].bitmap.blt(6+(i-1)*22,6,
-  #           @pocketbitmap.bitmap,Rect.new((i-1)*20,28,20,20))
-  #      end
-  #    end
-  #  end
+    if @choosing && @filterlist
+      for i in 1...@bag.pockets.length
+        if @filterlist[i].length==0
+          @sprites["pocketicon"].bitmap.blt(2+(i-1)*22,2,
+             @pocketbitmap.bitmap,Rect.new((i-1)*24,26,24,26))
+        end
+      end
+    end
     @sprites["pocketicon"].bitmap.blt(2+(@sprites["itemlist"].pocket-1)*22,2,
        @pocketbitmap.bitmap,Rect.new((@sprites["itemlist"].pocket-1)*24,0,24,26))
     # Refresh the item window

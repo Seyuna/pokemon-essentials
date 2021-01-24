@@ -258,10 +258,9 @@ class PokemonLoadScreen
     $game_system   = Game_System.new
     $PokemonSystem = PokemonSystem.new if !$PokemonSystem
     savefile = RTP.getSaveFileName("Game.rxdata")
-    FontInstaller.install
+    FontInstaller.install if !mkxp?
     data_system = pbLoadRxData("Data/System")
-    mapfile = ($RPGVX) ? sprintf("Data/Map%03d.rvdata",data_system.start_map_id) :
-                         sprintf("Data/Map%03d.rxdata",data_system.start_map_id)
+    mapfile = sprintf("Data/Map%03d.rxdata",data_system.start_map_id)
     if data_system.start_map_id==0 || !pbRgssExists?(mapfile)
       pbMessage(_INTL("No starting position was set in the map editor.\1"))
       pbMessage(_INTL("The game cannot continue."))
@@ -358,7 +357,7 @@ class PokemonLoadScreen
           $PokemonBag          = Marshal.load(f)
           $PokemonStorage      = Marshal.load(f)
           $SaveVersion         = Marshal.load(f) unless f.eof?
-          pbRefreshResizeFactor   # To fix Game_Screen pictures
+          pbRefreshResizeFactor if !mkxp?  # To fix Game_Screen pictures
           magicNumberMatches = false
           if $data_system.respond_to?("magic_number")
             magicNumberMatches = ($game_system.magic_number==$data_system.magic_number)
@@ -435,7 +434,7 @@ class PokemonLoadScreen
         $PokemonStorage      = PokemonStorage.new
         $PokemonEncounters   = PokemonEncounters.new
         $PokemonTemp.begunNewGame = true
-        pbRefreshResizeFactor   # To fix Game_Screen pictures
+        pbRefreshResizeFactor if !mkxp?  # To fix Game_Screen pictures
         $data_system         = pbLoadRxData("Data/System")
         $MapFactory          = PokemonMapFactory.new($data_system.start_map_id)   # calls setMapChanged
         $game_player.moveto($data_system.start_x, $data_system.start_y)
@@ -493,6 +492,7 @@ end
 ################################################################################
 # Font installer
 ################################################################################
+if !mkxp?
 module FontInstaller
   # filenames of fonts to be installed
   Filenames = [
@@ -629,4 +629,5 @@ module FontInstaller
       pbMessage(_INTL("To install the necessary fonts, copy the files in this game's Fonts folder to the Fonts folder in Control Panel."))
     end
   end
+end
 end

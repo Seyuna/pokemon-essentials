@@ -97,7 +97,7 @@ def pbSelectOutfit
       pbMessage(_INTL("Already wearing this outfit!"))
     end
   else
-    Kernel.pbMessage("No new Outfits Unlocked.")
+    Kernel.pbMessage("No Outfits unlocked....")
   end
 end
 
