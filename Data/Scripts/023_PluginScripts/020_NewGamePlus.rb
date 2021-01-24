@@ -552,7 +552,7 @@ class PokeBattle_Battle
       end
       tMoney *= 2 if @field.effects[PBEffects::AmuletCoin]
       tMoney *= 2 if @field.effects[PBEffects::HappyHour]
-      tMoney = (tMoney * NewGamePlusData.moneyGain)
+      tMoney = (tMoney * NewGamePlusData.moneyGain).floor.to_i
       oldMoney = pbPlayer.money
       pbPlayer.money += tMoney
       moneyGained = pbPlayer.money-oldMoney
@@ -580,7 +580,7 @@ class PokeBattle_Battle
     multiplier = [8,16,24,36,48,64,80,100,120]
     idxMultiplier = [pbPlayer.numbadges,multiplier.length-1].min
     tMoney = maxLevel*multiplier[idxMultiplier]
-    tMoney = (tMoney * NewGamePlusData.moneyGain)
+    tMoney = (tMoney * NewGamePlusData.moneyGain).floor.to_i
     tMoney = pbPlayer.money if tMoney>pbPlayer.money
     oldMoney = pbPlayer.money
     pbPlayer.money -= tMoney
