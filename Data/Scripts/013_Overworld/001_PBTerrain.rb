@@ -23,6 +23,7 @@ module PBTerrain
   DownArrow       = 19
   LeftArrow       = 20
   RightArrow      = 21
+  FallHole        = 22
 
   def self.isSurfable?(tag)
     return PBTerrain.isWater?(tag)
@@ -96,6 +97,10 @@ module PBTerrain
 
   def self.isRightArrow?(tag)
     return tag==PBTerrain::RightArrow
+  end
+
+  def self.isFallHole?(tag)
+    return tag==PBTerrain::FallHole
   end
 
   def self.isBridge?(tag)

@@ -385,6 +385,8 @@ class LocationWindow
       @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Town_1")
     elsif $game_map.name.include?("Lake")
       @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Lake_1")
+    elsif $game_map.name.include?("Cascade")
+      @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Lake_1")
     elsif $game_map.name.include?("Cave")
       @sprites["Image"].bitmap = BitmapCache.load_bitmap("Graphics/Maps/Cave_1")
     elsif $game_map.name.include?("City")

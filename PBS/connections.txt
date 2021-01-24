@@ -44,17 +44,21 @@
 102,East,0,101,West,17
 # Maple Trail (86) - Maple Trail (101)
 86,West,2,101,East,0
-# Plunge Pass (98) - Lappy Lake (99)
-98,South,8,99,North,0
 # Verdant Valley (92) - Verdant Valley (103)
 92,East,8,103,West,0
-# Lumigen City (81) - Iron Pass (80)
-81,North,14,80,South,0
-# Costa Path (84) - Costa Path (77)
-84,West,31,77,East,0
 # Lush Road (96) - Lush Road (93)
 96,North,0,93,South,14
 # Folian Grove (150) - Pollen Path (78)
 150,East,0,78,West,10
 # Fleural Town (79) - Pollen Path (78)
 79,South,17,78,North,0
+# Cascade Creek (146) - Lappy Lake (99)
+146,North,11,99,South,0
+# Plunge Pass (98) - Lappy Lake (99)
+98,South,8,99,North,0
+# Costa Path (84) - Costa Path (77)
+84,West,35,77,East,0
+# Cascade Creek (146) - Costa Path (84)
+146,East,28,84,West,0
+# Cascade Creek (146) - Iron Pass (80)
+146,West,16,80,East,0
