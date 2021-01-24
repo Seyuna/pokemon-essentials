@@ -478,7 +478,6 @@ class PokemonParty_Scene
     @sprites["messagebox"].text    = text
     @sprites["messagebox"].visible = true
     @sprites["helpwindow"].visible = false
-    pbPlayDecisionSE
     loop do
       Graphics.update
       Input.update

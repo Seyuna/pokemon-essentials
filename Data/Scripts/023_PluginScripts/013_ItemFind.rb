@@ -185,15 +185,15 @@ def pbReceiveItem(item, quantity = 1)
     scene = false
   end
   if isConst?(item, PBItems, :LEFTOVERS)
-    pbMessage(_INTL("\\me[{1}]You obtained some "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname))
+    pbMessage(_INTL("\\me[{1}]You obtained some "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[45]" : "\\wtnp[30]"), meName, itemname))
   elsif pbIsMachine?(item) # TM or HM
-    pbMessage(_INTL("\\me[{1}]You obtained "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2} {3}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname,  PBMoves.getName(pbGetMachine(item))))
+    pbMessage(_INTL("\\me[{1}]You obtained "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2} {3}!"+((scene && scene.smallShow)? "\\wtnp[45]" : "\\wtnp[30]"), meName, itemname,  PBMoves.getName(pbGetMachine(item))))
   elsif quantity > 1
-    pbMessage(_INTL("\\me[{1}]You obtained {2} "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{3}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, quantity ,itemname))
+    pbMessage(_INTL("\\me[{1}]You obtained {2} "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{3}!"+((scene && scene.smallShow)? "\\wtnp[45]" : "\\wtnp[30]"), meName, quantity ,itemname))
   elsif ["a", "e", "i", "o", "u"].include?(itemname[0, 1].downcase)
-    pbMessage(_INTL("\\me[{1}]You obtained an "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname))
+    pbMessage(_INTL("\\me[{1}]You obtained an "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[45]" : "\\wtnp[30]"), meName, itemname))
   else
-    pbMessage(_INTL("\\me[{1}]You obtained a "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname))
+    pbMessage(_INTL("\\me[{1}]You obtained a "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[45]" : "\\wtnp[30]"), meName, itemname))
   end
   if $PokemonBag.pbStoreItem(item, quantity) # If item can be picked up
     pbMessage(_INTL("You put the {1} away in \\nthe <icon=bagPocket{2}>\\c[1]{3} Pocket.",

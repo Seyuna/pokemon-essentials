@@ -33,9 +33,11 @@ class CapturePokemonUI
       $Trainer.owned[@pokemon.species] = true
       pbSeenForm(@pokemon)
       pbMessage(_INTL("{1}'s data was added to the Pokédex.",@pokemon.name))
-      dexscene = PokemonPokedexInfo_Scene.new
-      dexscreen = PokemonPokedexInfoScreen.new(dexscene)
-      dexscreen.pbDexEntry(@pokemon.species)
+      pbFadeOutIn(99999) {
+        dexscene = PokemonPokedexInfo_Scene.new
+        dexscreen = PokemonPokedexInfoScreen.new(dexscene)
+        dexscreen.pbDexEntry(@pokemon.species)
+      }
     end
     if pbBoxesFull? && $Trainer.party.length == 6
       pbMessage(_INTL("There's no more room for Pokémon!\1"))
@@ -213,9 +215,11 @@ class PokemonEggHatch_Scene
       $Trainer.owned[@pokemon.species] = true
       pbSeenForm(@pokemon)
       pbMessage(_INTL("{1}'s data was added to the Pokédex.",@pokemon.name))
-      dexscene = PokemonPokedexInfo_Scene.new
-      dexscreen = PokemonPokedexInfoScreen.new(dexscene)
-      dexscreen.pbDexEntry(@pokemon.species)
+      pbFadeOutIn(99999) {
+        dexscene = PokemonPokedexInfo_Scene.new
+        dexscreen = PokemonPokedexInfoScreen.new(dexscene)
+        dexscreen.pbDexEntry(@pokemon.species)
+      }
     end
     if pbConfirmMessage(
         _INTL("Would you like to nickname the newly hatched {1}?",@pokemon.name)) { update }
@@ -247,9 +251,11 @@ def pbHatch(pokemon)
       $Trainer.owned[pokemon.species] = true
       pbSeenForm(pokemon)
       pbMessage(_INTL("{1}'s data was added to the Pokédex.",pokemon.name))
-      dexscene = PokemonPokedexInfo_Scene.new
-      dexscreen = PokemonPokedexInfoScreen.new(dexscene)
-      dexscreen.pbDexEntry(pokemon.species)
+      pbFadeOutIn(99999) {
+        dexscene = PokemonPokedexInfo_Scene.new
+        dexscreen = PokemonPokedexInfoScreen.new(dexscene)
+        dexscreen.pbDexEntry(@pokemon.species)
+      }
     end
     if pbConfirmMessage(_INTL("Would you like to nickname the newly hatched {1}?",speciesname))
       nickname = pbEnterPokemonName(_INTL("{1}'s nickname?",speciesname),
@@ -290,9 +296,11 @@ class PokemonEvolutionScene
       $Trainer.owned[@pokemon.species] = true
       pbSeenForm(@pokemon)
       pbMessage(_INTL("{1}'s data was added to the Pokédex.",@pokemon.name))
-      dexscene = PokemonPokedexInfo_Scene.new
-      dexscreen = PokemonPokedexInfoScreen.new(dexscene)
-      dexscreen.pbDexEntry(@pokemon.species)
+      pbFadeOutIn(99999) {
+        dexscene = PokemonPokedexInfo_Scene.new
+        dexscreen = PokemonPokedexInfoScreen.new(dexscene)
+        dexscreen.pbDexEntry(@pokemon.species)
+      }
     end
     # Learn moves upon evolution for evolved species
     movelist = @pokemon.getMoveList
@@ -330,9 +338,11 @@ class PokemonTrade_Scene
       $Trainer.owned[@pokemon2.species] = true
       pbSeenForm(@pokemon2)
       pbMessage(_INTL("{1}'s data was added to the Pokédex.",@pokemon2.name))
-      dexscene = PokemonPokedexInfo_Scene.new
-      dexscreen = PokemonPokedexInfoScreen.new(dexscene)
-      dexscreen.pbDexEntry(@pokemon2.species)
+      pbFadeOutIn(99999) {
+        dexscene = PokemonPokedexInfo_Scene.new
+        dexscreen = PokemonPokedexInfoScreen.new(dexscene)
+        dexscreen.pbDexEntry(@pokemon.species)
+      }
     end
   end
 end
