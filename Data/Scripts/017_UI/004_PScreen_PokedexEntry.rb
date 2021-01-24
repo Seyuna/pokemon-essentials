@@ -117,7 +117,7 @@ class PokemonPokedexInfo_Scene
     pbSetSystemFont(@sprites["overlay"].bitmap)
     pbUpdateDummyPokemon
     drawPage(@page)
-    pbFadeInAndShow(@sprites) { pbUpdate }
+    pbFadeInAndShow(@sprites) { for key in @sprites.keys; next if key == "formicon"; @sprites[key].update; end }
   end
 
   def pbEndScene
