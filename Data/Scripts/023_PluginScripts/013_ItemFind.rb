@@ -1,87 +1,100 @@
-# ========================================================================
+#-------------------------------------------------------------------------------
 # Item Find
-# v1.0
+# v1.2
 # By Boonzeet
-# ========================================================================
+#-------------------------------------------------------------------------------
 # A script to show a helpful message with item name, icon and description
 # when an item is found for the first time.
-# ========================================================================
+#-------------------------------------------------------------------------------
+
+PluginManager.register({
+  :name => "Item Find",
+  :version => "1.2",
+  :credits => ["Boonzeet","Golispod User"],
+  :link => "https://reliccastle.com/resources/371/"
+})
+
+#-------------------------------------------------------------------------------
+# Config
+#-------------------------------------------------------------------------------
 
 WINDOWSKIN_NAME = "" # set for custom windowskin
 
+#-------------------------------------------------------------------------------
 # Base Class
+#-------------------------------------------------------------------------------
 
 class PokemonItemFind_Scene
-  def pbStartScene
+
+  attr_reader :smallShow
+
+  def initialize
     @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
-    @viewport.z = 99999
+    @viewport.z = 100000
     @sprites = {}
 
-    @sprites["background"] = Window_UnformattedTextPokemon.newWithSize("", 0, 0, Graphics.width, 0, @viewport)
-    @sprites["background"].z = @viewport.z - 1
-    @sprites["background"].visible = false
-    if WINDOWSKIN_NAME != ""
-      @sprites["background"].setSkin("Graphics/Windowskins/" + WINDOWSKIN_NAME)
-    end
+    skin = WINDOWSKIN_NAME == "" ? MessageConfig.pbGetSystemFrame : "Graphics/Windowskins/" + WINDOWSKIN_NAME
+
+     @sprites["background"] = Window_UnformattedTextPokemon.newWithSize("", 0, 0, Graphics.width, 0, @viewport)
+     @sprites["background"].z = @viewport.z - 1
+     @sprites["background"].visible = false
+     @sprites["background"].setSkin(skin)
+     pbSetSmallFont(@sprites["background"].contents)
+
+    colors = getDefaultTextColors(@sprites["background"].windowskin)
 
     @sprites["itemicon"] = ItemIconSprite.new(42, Graphics.height - 48, -1, @viewport)
     @sprites["itemicon"].visible = false
-    @sprites["itemicon"].z = @viewport.z + 2
+    @sprites["itemicon"].z = @viewport.z + 10
 
-    @sprites["descwindow"] = Window_UnformattedTextPokemon.newWithSize("", 64, 0, Graphics.width - 64, 64, @viewport)
+    @sprites["descwindow"] = Window_AdvancedTextPokemon.newWithSize("", 64, 0, Graphics.width - 64, 64, @viewport)
     @sprites["descwindow"].windowskin = nil
     @sprites["descwindow"].z = @viewport.z
     @sprites["descwindow"].visible = false
+    @sprites["descwindow"].baseColor = colors[0]
+    @sprites["descwindow"].shadowColor = colors[1]
 
-    @sprites["titlewindow"] = Window_UnformattedTextPokemon.newWithSize("", 0, 0, 128, 16, @viewport)
-    @sprites["titlewindow"].visible = false
-    @sprites["titlewindow"].z = @viewport.z + 1
-    if WINDOWSKIN_NAME != ""
-      @sprites["titlewindow"].setSkin("Graphics/Windowskins/" + WINDOWSKIN_NAME)
-    end
+    pbSetSmallFont(@sprites["descwindow"].contents)
+    @sprites["descwindow"].lineHeight(30)
+    @smallShow = false
   end
 
   def pbShow(item)
-    name = PBItems.getName(item)
+    @smallShow = false
     description = pbGetMessage(MessageTypes::ItemDescriptions, item)
 
     descwindow = @sprites["descwindow"]
-    # descwindow.baseColor = Color.new(255, 255, 255) # set if dark windowskin
     descwindow.resizeToFit(description, Graphics.width - 64)
     descwindow.text = description
-    descwindow.y = Graphics.height - descwindow.height
+    descwindow.y = 0
     descwindow.visible = true
 
-    titlewindow = @sprites["titlewindow"]
-    # titlewindow.baseColor = Color.new(255, 255, 255) # set if dark windowskin
-    titlewindow.resizeToFit(name, Graphics.height)
-    titlewindow.text = name
-    titlewindow.y = Graphics.height - descwindow.height - 46#32
-    titlewindow.visible = true
-
     background = @sprites["background"]
-    background.height = descwindow.height# + 32
-    background.y = Graphics.height - background.height
+    background.height = descwindow.height
+    background.y = 0
     background.visible = true
 
     itemicon = @sprites["itemicon"]
     itemicon.item = item
-    itemicon.y = Graphics.height - (descwindow.height / 2).floor
+    itemicon.y = (descwindow.height / 2).floor
     itemicon.visible = true
+  end
 
-    loop do
-      background.update
-      itemicon.update
-      descwindow.update
-      titlewindow.update
-      Graphics.update
-      Input.update
-      pbUpdateSceneMap
-      if Input.trigger?(Input::B) || Input.trigger?(Input::C)
-        pbEndScene
-        break
-      end
-    end
+  def pbShowSmall(item)
+    @smallShow = true
+    descwindow = @sprites["descwindow"]
+    descwindow.visible = false
+    background = @sprites["background"]
+    background.visible = false
+    itemicon = @sprites["itemicon"]
+    itemicon.item = item
+    itemicon.y = Graphics.height - 48
+    itemicon.x = Graphics.width - 48 - 10
+    itemicon.visible = true
+  end
+
+  def update
+    pbUpdateSpriteHash(@sprites)
   end
 
   def pbEndScene
@@ -90,9 +103,11 @@ class PokemonItemFind_Scene
   end
 end
 
+#-------------------------------------------------------------------------------
 # Game Player changes
-# ---
+#-------------------------------------------------------------------------------
 # Adds a list of found items to the Game Player which is maintained over saves
+#-------------------------------------------------------------------------------
 
 class Game_Player
   alias initialize_itemfind initialize
@@ -105,75 +120,88 @@ class Game_Player
     if !defined?(@found_items)
       @found_items = []
     end
+    scene = PokemonItemFind_Scene.new
     if !@found_items.include?(item)
       @found_items.push(item)
-      scene = PokemonItemFind_Scene.new
-      scene.pbStartScene
       scene.pbShow(item)
+    else
+      scene.pbShowSmall(item)
     end
+    return scene
   end
 end
 
+#-------------------------------------------------------------------------------
 # Overrides of pbItemBall and pbReceiveItem
-
-#===============================================================================
+#-------------------------------------------------------------------------------
 # Picking up an item found on the ground
-#===============================================================================
-def Kernel.pbItemBall(item, quantity = 1)
-  if item.is_a?(String) || item.is_a?(Symbol)
-    item = getID(PBItems, item)
-  end
-  return false if !item || item <= 0 || quantity < 1
-  itemname = (quantity > 1) ? PBItems.getNamePlural(item) : PBItems.getName(item)
+#-------------------------------------------------------------------------------
+
+def pbItemBall(item, quantity = 1)
+  item = getID(PBItems,item)
+  return false if !item || item<=0 || quantity<1
+  itemname = (quantity>1) ? PBItems.getNamePlural(item) : PBItems.getName(item)
   pocket = pbGetPocket(item)
-  if isConst?(item, PBItems, :LEFTOVERS)
-    Kernel.pbMessage(_INTL("\\me[Item get]You found some \\c[1]{1}\\c[0]!\\wtnp[30]", itemname))
-  elsif pbIsMachine?(item) # TM or HM
-    Kernel.pbMessage(_INTL("\\me[Item get]You found \\c[1]{1} {2}\\c[0]!\\wtnp[30]", itemname, PBMoves.getName(pbGetMachine(item))))
-  elsif quantity > 1
-    Kernel.pbMessage(_INTL("\\me[Item get]You found {1} \\c[1]{2}\\c[0]!\\wtnp[30]", quantity, itemname))
-  elsif ["a", "e", "i", "o", "u"].include?(itemname[0, 1].downcase)
-    Kernel.pbMessage(_INTL("\\me[Item get]You found an \\c[1]{1}\\c[0]!\\wtnp[30]", itemname))
+  meName = $PokemonBag.pbCanStore?(item,quantity) ? ((pbIsKeyItem?(item)) ? "" : "Item get") : ""
+  if $PokemonBag.pbCanStore?(item,quantity)
+    scene = $game_player.addFoundItem(item)
   else
-    Kernel.pbMessage(_INTL("\\me[Item get]You found a \\c[1]{1}\\c[0]!\\wtnp[30]", itemname))
+    scene = false
+  end
+  if isConst?(item, PBItems, :LEFTOVERS)
+    pbMessage(_INTL("\\me[{1}]You found some "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname))
+  elsif pbIsMachine?(item) # TM or HM
+    pbMessage(_INTL("\\me[{1}]You found "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2} {3}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname,  PBMoves.getName(pbGetMachine(item))))
+  elsif quantity > 1
+    pbMessage(_INTL("\\me[{1}]You found {2} "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{3}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, quantity ,itemname))
+  elsif ["a", "e", "i", "o", "u"].include?(itemname[0, 1].downcase)
+    pbMessage(_INTL("\\me[{1}]You found an "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname))
+  else
+    pbMessage(_INTL("\\me[{1}]You found a "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname))
   end
   if $PokemonBag.pbStoreItem(item, quantity) # If item can be picked up
-    Kernel.pbMessage(_INTL("You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",
+    pbMessage(_INTL("You put the {1} away in \\nthe <icon=bagPocket{2}>\\c[1]{3} Pocket.",
                            itemname, pocket, PokemonBag.pocketNames()[pocket]))
-    $game_player.addFoundItem(item)
+    scene.pbEndScene
     return true
   else
-    Kernel.pbMessage(_INTL("But your Bag is full..."))
+    pbMessage(_INTL("But your Bag is full..."))
     return false
   end
 end
 
-#===============================================================================
+#-------------------------------------------------------------------------------
 # Being given an item
-#===============================================================================
-def Kernel.pbReceiveItem(item, quantity = 1)
-  if item.is_a?(String) || item.is_a?(Symbol)
-    item = getID(PBItems, item)
-  end
-  return false if !item || item <= 0 || quantity < 1
-  itemname = (quantity > 1) ? PBItems.getNamePlural(item) : PBItems.getName(item)
+#-------------------------------------------------------------------------------
+def pbReceiveItem(item, quantity = 1)
+  item = getID(PBItems,item)
+  return false if !item || item<=0 || quantity<1
+  itemname = (quantity>1) ? PBItems.getNamePlural(item) : PBItems.getName(item)
   pocket = pbGetPocket(item)
-  if isConst?(item, PBItems, :LEFTOVERS)
-    Kernel.pbMessage(_INTL("\\me[Item get]You obtained some \\c[1]{1}\\c[0]!\\wtnp[30]", itemname))
-  elsif pbIsMachine?(item) # TM or HM
-    Kernel.pbMessage(_INTL("\\me[Item get]You obtained \\c[1]{1} {2}\\c[0]!\\wtnp[30]", itemname, PBMoves.getName(pbGetMachine(item))))
-  elsif quantity > 1
-    Kernel.pbMessage(_INTL("\\me[Item get]You obtained {1} \\c[1]{2}\\c[0]!\\wtnp[30]", quantity, itemname))
-  elsif ["a", "e", "i", "o", "u"].include?(itemname[0, 1].downcase)
-    Kernel.pbMessage(_INTL("\\me[Item get]You obtained an \\c[1]{1}\\c[0]!\\wtnp[30]", itemname))
+  meName = $PokemonBag.pbCanStore?(item,quantity) ? ((pbIsKeyItem?(item)) ? "Key item get" : "Item get") : ""
+  if $PokemonBag.pbCanStore?(item,quantity)
+    scene = $game_player.addFoundItem(item)
   else
-    Kernel.pbMessage(_INTL("\\me[Item get]You obtained a \\c[1]{1}\\c[0]!\\wtnp[30]", itemname))
+    scene = false
   end
-  if $PokemonBag.pbStoreItem(item, quantity) # If item can be added
-    Kernel.pbMessage(_INTL("You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",
+  if isConst?(item, PBItems, :LEFTOVERS)
+    pbMessage(_INTL("\\me[{1}]You obtained some "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname))
+  elsif pbIsMachine?(item) # TM or HM
+    pbMessage(_INTL("\\me[{1}]You obtained "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2} {3}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname,  PBMoves.getName(pbGetMachine(item))))
+  elsif quantity > 1
+    pbMessage(_INTL("\\me[{1}]You obtained {2} "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{3}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, quantity ,itemname))
+  elsif ["a", "e", "i", "o", "u"].include?(itemname[0, 1].downcase)
+    pbMessage(_INTL("\\me[{1}]You obtained an "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname))
+  else
+    pbMessage(_INTL("\\me[{1}]You obtained a "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!"+((scene && scene.smallShow)? "\\wtnp[60]" : "\\wtnp[30]"), meName, itemname))
+  end
+  if $PokemonBag.pbStoreItem(item, quantity) # If item can be picked up
+    pbMessage(_INTL("You put the {1} away in \\nthe <icon=bagPocket{2}>\\c[1]{3} Pocket.",
                            itemname, pocket, PokemonBag.pocketNames()[pocket]))
-    $game_player.addFoundItem(item)
+    scene.pbEndScene
     return true
+  else
+    pbMessage(_INTL("But your Bag is full..."))
+    return false
   end
-  return false   # Can't add the item
 end

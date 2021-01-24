@@ -21,7 +21,8 @@ Events.onWildPokemonCreate+=proc {|sender,e|
 # Ability Charm Code
 Events.onWildPokemonCreate+=proc {|sender,e|
    pokemon=e[0]
-   value = $PokemonBag.pbHasItem?(:ABILITYCHARM) ? 50 : 100
+   value = $PokemonBag.pbHasItem?(:ABILITYCHARM) ? 80 : 120
+   value = (value * (1 - NewGamePlusData.hiddenAbilChance)).floor
    if rand(value)<1
      abils=pokemon.getAbilityList
      abilIndex=[]
@@ -102,9 +103,9 @@ Events.onWildPokemonCreate+=proc {|sender,e|
      end
      newlevel=MINLEVEL if newlevel<=MINLEVEL
      newlevel=MAXLEVEL if newlevel>=MAXLEVEL
-     newlevel=100 if newlevel>100
+     newlevel += NewGamePlusData.wildLevels
      newlevel=newlevel-rand(2)+1 if newlevel<=6
-     newlevel=1 if newlevel<1
+     newlevel = newlevel.clamp(1,PBExperience.maxLevel)
      pokemon.level=newlevel
      #pokemon.level=newlevel
      pokemon.calcStats
@@ -204,7 +205,8 @@ Events.onTrainerPartyLoad+=proc {|sender,e|
          randlevel=MINLEVEL if randlevel<=MINLEVEL
          randlevel=MAXLEVEL if randlevel>=MAXLEVEL
          randlevel=randlevel-rand(2) if randlevel<=5
-         randlevel=1 if randlevel<1
+         randlevel += NewGamePlusData.trainerLevels
+         randlevel = randlevel.clamp(1,PBExperience.maxLevel)
          party[i].level=randlevel
          party[i].calcStats
          party[i].resetMoves

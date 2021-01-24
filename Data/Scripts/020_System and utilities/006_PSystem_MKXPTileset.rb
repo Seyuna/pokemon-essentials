@@ -1,3 +1,4 @@
+if mkxp?
 module VWrap
 
   MAX_TEX_SIZE         = Bitmap.max_size
@@ -58,7 +59,6 @@ module VWrap
 end
 
 # -------------------------
-if mkxp?
   class CustomTilemap
     def tileset=(value)
       if value.mega?
