@@ -35,6 +35,7 @@ class PokemonLoadScreen
     cmdOption      = -1
     cmdLanguage    = -1
     cmdMysteryGift = -1
+    cmdNGPlus      = -1
     cmdDebug       = -1
     cmdQuit        = -1
     if safeExists?(savefile)
@@ -77,7 +78,7 @@ class PokemonLoadScreen
       end
       commands[cmdContinue = commands.length]    = _INTL("Continue") if showContinue
       commands[cmdNewGame = commands.length]     = _INTL("New Game")
-      commands[cmdNGPlus = commands.length]      = _INTL("New Game +") if (trainer.newGamePlus rescue false) && ((trainer.newGamePlusCount rescue 1) < 5)
+      commands[cmdNGPlus = commands.length]      = _INTL("New Game +") if (trainer.newGamePlus) && (trainer.newGamePlusCount < 5)
       commands[cmdMysteryGift = commands.length] = _INTL("Mystery Gift") if (trainer.mysterygiftaccess rescue false)
     else
       commands[cmdNewGame = commands.length]     = _INTL("New Game")
@@ -239,9 +240,9 @@ class PokemonLoadScreen
         end
         $PokemonTemp.oldParty = trainer.party
         $PokemonTemp.oldParty.each_with_index do |pkmn,i|
-          if pkmn.isSpecies?(:ARENAY)
+          if pkmn && pkmn.isSpecies?(:ARENAY)
             $PokemonTemp.oldParty[i] = nil
-          else
+          elsif pkmn
             revertToBaby(pkmn)
           end
         end
@@ -249,9 +250,9 @@ class PokemonLoadScreen
         for i in 0...$PokemonStorage.maxBoxes
           for j in 0...$PokemonStorage.maxPokemon(i)
             pkmn = $PokemonStorage[i,j]
-            if pkmn.isSpecies?(:ARENAY)
+            if pkmn && pkmn.isSpecies?(:ARENAY)
               $PokemonStorage[i,j] = nil
-            else
+            elsif pkmn
               revertToBaby(pkmn)
             end
           end
@@ -385,7 +386,8 @@ module NewGamePlusData
   def self.shinyChance
     return SHINY_POKEMON_CHANCE if !$Trainer
     ret = SHINY_POKEMON_CHANCE
-    ret *= (1 - (0.05 * $Trainer.newGamePlusCount)).floor
+    ret *= (1 - (0.05 * $Trainer.newGamePlusCount))
+    ret = ret.floor.to_i
     return ret
   end
 
@@ -393,6 +395,7 @@ module NewGamePlusData
     return 0 if !$Trainer
     ret = 0
     ret += (0.1 * $Trainer.newGamePlusCount)
+    ret = ret.floor.to_i
     return ret
   end
 
@@ -400,7 +403,7 @@ module NewGamePlusData
     return 0 if !$Trainer
     ret = 200
     ret *= (1 - (0.2 * $Trainer.newGamePlusCount))
-    ret = ret.floor
+    ret = ret.floor.to_i
     return ret
   end
 
