@@ -89,7 +89,6 @@ class PokemonSummary_Scene
     @sprites["pokeicon"].visible = false
     @sprites["overlay"] = BitmapSprite.new(Graphics.width,Graphics.height,@viewport)
     pbSetSmallFont(@sprites["overlay"].bitmap)
-#    @sprites["overlay"].bitmap.font.size-=5
     @sprites["movepresel"] = MoveSelectionSprite.new(@viewport)
     @sprites["movepresel"].visible     = false
     @sprites["movepresel"].preselected = true
@@ -141,8 +140,7 @@ class PokemonSummary_Scene
     @sprites = {}
     @sprites["background"] = IconSprite.new(0,0,@viewport)
     @sprites["overlay"] = BitmapSprite.new(Graphics.width,Graphics.height,@viewport)
-    pbSetSystemFont(@sprites["overlay"].bitmap)
-    @sprites["overlay"].bitmap.font.size-=5
+    pbSetSmallFont(@sprites["overlay"].bitmap)
     @sprites["pokeicon"] = PokemonIconSprite.new(@pokemon,@viewport)
     @sprites["pokeicon"].setOffset(PictureOrigin::Center)
     @sprites["pokeicon"].x       = 42
@@ -469,7 +467,7 @@ class PokemonSummary_Scene
     movePos = getMoveTextPositions(moveToLearn)
 
     textPos = [
-        [sprintf("%s", @pokemon.name), 89,39,0,@basecolor,@shadowcolor],
+        [sprintf("%s", @pokemon.name), 89,39,0,Color.new(248,248,248), Color.new(104,104,104)],
         ["KNOWN MOVES", 10, 3, 0, Color.new(248,248,248), Color.new(104,104,104)],
     ];
 
@@ -751,6 +749,7 @@ class PokemonSummary_Scene
         end
         @sprites["movesel"].index = selmove
         newmove = (selmove==4) ? moveToLearn : @pokemon.moves[selmove].id
+        pbPlayCursorSE
         drawSelectedMove(moveToLearn,newmove)
       elsif Input.trigger?(Input::DOWN)
         selmove += 1
@@ -760,6 +759,7 @@ class PokemonSummary_Scene
         end
         @sprites["movesel"].index = selmove
         newmove = (selmove==4) ? moveToLearn : @pokemon.moves[selmove].id
+        pbPlayCursorSE
         drawSelectedMove(moveToLearn,newmove)
       end
     end
@@ -1092,7 +1092,8 @@ class PokemonSummary_Scene
       for moveIndex in 0...@pokemon.moves.length
         move = @pokemon.moves[moveIndex]
         if move.id > 0
-          imagepos.push(["Graphics/Pictures/types",246,ypos,0,move.type*28,64,28])
+          mType = (pbGetMoveData(move.id,MOVE_FLAGS).include?("z"))? @pokemon.type1 : move.type
+          imagepos.push(["Graphics/Pictures/types",246,ypos,0,mType*28,64,28])
           textpos.push([sprintf("%s", PBMoves.getName(move.id)),317,ypos + 6, 0, @basecolor,@shadowcolor])
           textpos.push([sprintf("PP: %d/%d", move.pp, move.totalpp),415,ypos+28,0,@basecolor,@shadowcolor])
         end
@@ -1106,7 +1107,8 @@ class PokemonSummary_Scene
           ypos += 20
         end
         if move.id > 0
-          imagepos.push(["Graphics/Pictures/types",246,ypos,0,move.type*28,64,28])
+          mType = (pbGetMoveData(move.id,MOVE_FLAGS).include?("z"))? @pokemon.type1 : move.type
+          imagepos.push(["Graphics/Pictures/types",246,ypos,0,mType*28,64,28])
           textpos.push([sprintf("%s", PBMoves.getName(move.id)),317,ypos + 6, 0, @basecolor,@shadowcolor])
           textpos.push([sprintf("PP: %d/%d", move.pp, move.totalpp),415,ypos+28,0,@basecolor,@shadowcolor])
         end
@@ -1133,38 +1135,6 @@ class PokemonSummary_Scene
     ]
 
     pbDrawTextPositions(overlay, textpos)
-  end
-
-  def getMoveTextPositions(moveToLearn)
-    imagepos = []
-    textpos = []
-    ypos = 40
-    if moveToLearn == 0
-      for moveIndex in 0...@pokemon.moves.length
-        move = @pokemon.moves[moveIndex]
-        if move.id > 0
-          imagepos.push(["Graphics/Pictures/types",246,ypos,0,move.type*28,64,28])
-          textpos.push([sprintf("%s", PBMoves.getName(move.id)),317,ypos + 6, 0, @basecolor,@shadowcolor])
-          textpos.push([sprintf("PP %d/%d", move.pp, move.totalpp),415,ypos+28,0,@basecolor,@shadowcolor])
-        end
-        ypos += 60
-      end
-    else
-      for moveIndex in 0...5
-        move = @pokemon.moves[moveIndex]
-        if moveIndex == 4
-          move = PBMove.new(moveToLearn)
-          ypos += 20
-        end
-        if move.id > 0
-          imagepos.push(["Graphics/Pictures/types",246,ypos,0,move.type*28,64,28])
-          textpos.push([sprintf("%s", PBMoves.getName(move.id)),317,ypos + 6, 0, @basecolor,@shadowcolor])
-          textpos.push([sprintf("PP: %d/%d", move.pp, move.totalpp),415,ypos+28,0,@basecolor,@shadowcolor])
-        end
-        ypos += 60
-      end
-    end
-    [imagepos, textpos]
   end
 
   def getMoveSelectionGraphic(newMove)

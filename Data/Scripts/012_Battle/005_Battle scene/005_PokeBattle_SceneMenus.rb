@@ -276,12 +276,12 @@ class FightMenuDisplay < BattleMenuBase
       @typeIcon.src_rect.height = TYPE_ICON_HEIGHT
       addSprite("typeIcon",@typeIcon)
       # Create Mega Evolution button
-      @megaButton = SpriteWrapper.new(viewport)
-      @megaButton.bitmap = @megaEvoBitmap.bitmap
-      @megaButton.x      = self.x+146
-      @megaButton.y      = self.y-@megaEvoBitmap.height/2
-      @megaButton.src_rect.height = @megaEvoBitmap.height/2
-      addSprite("megaButton",@megaButton)
+      #@megaButton = SpriteWrapper.new(viewport)
+      #@megaButton.bitmap = @megaEvoBitmap.bitmap
+      #@megaButton.x      = self.x+146
+      #@megaButton.y      = self.y-@megaEvoBitmap.height/2
+      #@megaButton.src_rect.height = @megaEvoBitmap.height/2
+      #addSprite("megaButton",@megaButton)
       # Create Shift button
       #@shiftButton = SpriteWrapper.new(viewport)
       #@shiftButton.bitmap = @shiftBitmap.bitmap
@@ -431,8 +431,8 @@ class FightMenuDisplay < BattleMenuBase
 
   def refreshMegaEvolutionButton
     return if !USE_GRAPHICS
-    @megaButton.src_rect.y = (@mode-1)*@megaEvoBitmap.height/2
-    @megaButton.z          = self.z - 1
+    #@megaButton.src_rect.y = (@mode-1)*@megaEvoBitmap.height/2
+    #@megaButton.z          = self.z - 1
   end
 
   def refreshShiftButton
