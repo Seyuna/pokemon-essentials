@@ -1,0 +1,24 @@
+#-------------------------------
+[ZANGOOSE,1]
+FormName = Stacona Form
+Type1 = NORMAL
+Type2 = FAIRY
+BaseStats = 93,115,50,80,50,70
+Abilities = PIXILATE
+HiddenAbility = KLUTZ
+Moves = 1,SCRATCH,1,CHARM,5,QUICKATTACK,8,FURYCUTTER,12,REVENGE,15,SLASH,19,EMBARGO,22,CRUSHCLAW,26,ENCHANTEDSLASH,29,FALSESWIPE,33,MOONLIGHT,36,PLAYROUGH,40,TAUNT,43,SWORDSDANCE,47,CLOSECOMBAT,55,PIXIEPUMMEL
+Pokedex = Staconan Zangoose tend to stay around Staconan Seviper because of their essence, it makes them feel relaxed and numbs their bodies.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[SEVIPER,1]
+FormName = Stacona Form
+Type1 = POISON
+Type2 = ROCK
+BaseStats = 73,110,60,90,65,60
+Abilities = STENCH
+HiddenAbility = STURDY
+Moves = 1,WRAP,1,LICK,5,BITE,9,ROCKPOLISH,12,POISONTAIL,16,SCREECH,20,POWERGEM,23,GLARE,27,POISONFANG,31,ROCKSLIDE,34,GASTROACID,38,STEALTHROCK,42,POISONJAB,45,CRUNCH,49,COIL,53,ACCELEROCK,55,ASBESTOSLAM
+Pokedex = Using their essence they hunt on small prey that pass out from it. They try to avoid Staconan Zangoose.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
