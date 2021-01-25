@@ -415,7 +415,6 @@ def pbTopRightWindow(text, scene = nil)
   window.x     = Graphics.width-window.width
   window.y     = 0
   window.z     = 99999
-  pbPlayDecisionSE
   loop do
     Graphics.update
     Input.update

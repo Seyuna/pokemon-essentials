@@ -296,13 +296,11 @@ class Window_PokemonControls < Window_DrawableCommand
     optionwidth=(rect.width*9/20)
     pbDrawShadowText(self.contents,rect.x,rect.y,optionwidth,rect.height,
       optionname,@nameBaseColor,@nameShadowColor)
-    self.contents.draw_text(rect.x,rect.y,optionwidth,rect.height,optionname)
     return if index>=@controls.length
     value=@controls[index].keyName
     xpos=optionwidth+rect.x
     pbDrawShadowText(self.contents,xpos,rect.y,optionwidth,rect.height,value,
       @selBaseColor,@selShadowColor)
-    self.contents.draw_text(xpos,rect.y,optionwidth,rect.height,value)
   end
 
   def update

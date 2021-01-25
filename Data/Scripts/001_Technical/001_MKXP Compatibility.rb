@@ -28,7 +28,6 @@ if !mkxp?
   end
 end
 
-=begin
 if mkxp?
   alias old_load_data load_data
   def load_data(filename)
@@ -36,4 +35,3 @@ if mkxp?
     File.open(filename, 'rb'){|f| return Marshal.load(f.read)}
   end
 end
-=end
