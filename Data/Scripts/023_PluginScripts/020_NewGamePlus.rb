@@ -28,13 +28,15 @@ module NewGamePlusData
   end
 
   def self.trainerLevels
+    return 0
     return 0 if !$Trainer
     ret = 0
-    ret += (3 * $Trainer.newGamePlusCount)
+    ret += (1 * $Trainer.newGamePlusCount)
     return ret
   end
 
   def self.wildLevels
+    return 0
     return 0 if !$Trainer
     ret = 0
     ret += (2 * $Trainer.newGamePlusCount)
