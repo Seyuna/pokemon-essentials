@@ -1470,3 +1470,61 @@ MultipleForms.register(:ESPURR,{
 }
 })
 MultipleForms.copy(:ESPURR,:MEOWSTIC)
+
+MultipleForms.register(:BUDEW,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:BUDEW,:ROSELIA,:ROSERADE)
+
+MultipleForms.register(:RALTS,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:RALTS,:KIRLIA,:GARDEVOIR,:GALLADE)
+
+MultipleForms.register(:PARAS,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:PARAS,:PARASECT)
+
+MultipleForms.register(:ZANGOOSE,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+
+MultipleForms.register(:SEVIPER,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
