@@ -1180,10 +1180,22 @@ Pokemon = KANGA,1
 [BLACKBELT_ATK,Arnie]
 Pokemon = KRABBY,1
     Form = 1
+Pokemon = HERACROSS,1
+Pokemon = FLAREON,1
+#-------------------------------
+[BLACKBELT_ATK,Arnie,1]
+Pokemon = ELECTABUZZ,1
+    Form = 1
 Pokemon = HERACUTE,1
 Pokemon = FLAREON,1
 #-------------------------------
 [BLACKBELT_DEF,Daryl]
+Pokemon = KLINK,1
+    Form = 1
+Pokemon = MILTANK,1
+Pokemon = ARON,1
+#-------------------------------
+[BLACKBELT_DEF,Daryl,1]
 Pokemon = KLINK,1
     Form = 1
 Pokemon = MILTANK,1
@@ -1195,13 +1207,31 @@ Pokemon = BUIZEL,1
 Pokemon = PIKACHU,1
     Form = 1
 #-------------------------------
+[BLACKBELT_SPD,Sean,1]
+Pokemon = DIGLETT,1
+Pokemon = BUIZEL,1
+Pokemon = PIKACHU,1
+    Form = 1
+#-------------------------------
 [BLACKBELT_SATK,Michael]
 Pokemon = ODDISH,1
 Pokemon = MAREEP,1
     Form = 1
 Pokemon = PORYGON2,1
 #-------------------------------
+[BLACKBELT_SATK,Michael,1]
+Pokemon = ODDISH,1
+Pokemon = MAREEP,1
+    Form = 1
+Pokemon = PORYGON2,1
+#-------------------------------
 [BLACKBELT_SDEF,Robert]
+Pokemon = SWABLU,1
+    Form = 1
+Pokemon = TOGEPI,1
+Pokemon = DUSTOX,1
+#-------------------------------
+[BLACKBELT_SDEF,Robert,1]
 Pokemon = SWABLU,1
     Form = 1
 Pokemon = TOGEPI,1

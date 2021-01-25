@@ -677,7 +677,7 @@ Cave
     MAGNEMITE,5,7
     ZUBAT,4,8
     ARON,5,7
-    GEODUDE,5,6
+    NOSEPASS,5,6
     DIGLETT,5,6
     ROGGENROLA,5,7
     DWEBBLE,5,7
@@ -693,7 +693,7 @@ Cave
     MAGNEMITE,20,28
     ZUBAT,20,28
     ARON,20,28
-    GEODUDE,20,28
+    NOSEPASS,20,28
     DIGLETT,20,28
     ROGGENROLA,20,28
     DWEBBLE,20,28
@@ -989,13 +989,13 @@ Cave
 111 # Ferrous Cave
 20,8,8
 Cave
-    DIGLETT,5
-    GEODUDE,5
+    ZUBAT,5
+    NOSEPASS,5
     ROGGENROLA,5
     ONIX,5
     SCRAFTY,5
     DRILBUR,5
-    GEODUDE,5
+    NOSEPASS,5
     ROGGENROLA,5
     RHYHORN,5
     RHYHORN,5
@@ -1028,12 +1028,12 @@ SuperRod
 20,8,8
 Cave
     ZUBAT,5
-    GEODUDE,5
+    NOSEPASS,5
     DIGLETT,5
     ONIX,5
     SCRAFTY,5
     DRILBUR,5
-    GEODUDE,5
+    NOSEPASS,5
     ROGGENROLA,5
     RHYHORN,5
     ALUMIDON,5
@@ -1063,7 +1063,7 @@ SuperRod
 20,8,8
 Cave
     SCRAFTY,5
-    GEODUDE,5
+    NOSEPASS,5
     GOLETT,5
     SABLING,5
     ELGYEM,5
@@ -1090,6 +1090,41 @@ Cave
     AXEW,5
     DEINO,5
     DEINO,5
+#-------------------------------
+146 # Cascade Creek
+25,10,10
+Land
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+Water
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+OldRod
+    BULBASAUR,5
+    BULBASAUR,5
+GoodRod
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+SuperRod
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
+    BULBASAUR,5
 #-------------------------------
 147 # Blighted Bog
 20,8,8
