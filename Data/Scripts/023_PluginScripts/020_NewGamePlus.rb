@@ -12,6 +12,79 @@ Wild Pokemon IVs +4
 Max IV Wild Pokemon Chance +20%
 =end
 
+module NewGamePlusData
+  def self.expGain
+    return 1 if !$Trainer
+    ret = 1
+    ret += (0.25 * $Trainer.newGamePlusCount)
+    return ret
+  end
+
+  def self.moneyGain
+    return 1 if !$Trainer
+    ret = 1
+    ret += (0.5 * $Trainer.newGamePlusCount)
+    return ret
+  end
+
+  def self.trainerLevels
+    return 0
+    return 0 if !$Trainer
+    ret = 0
+    ret += (1 * $Trainer.newGamePlusCount)
+    return ret
+  end
+
+  def self.wildLevels
+    return 0
+    return 0 if !$Trainer
+    ret = 0
+    ret += (2 * $Trainer.newGamePlusCount)
+    return ret
+  end
+
+  def self.shinyChance
+    return SHINY_POKEMON_CHANCE if !$Trainer
+    ret = SHINY_POKEMON_CHANCE
+    ret *= (1 - (0.05 * $Trainer.newGamePlusCount))
+    ret = ret.floor.to_i
+    return ret
+  end
+
+  def self.hiddenAbilChance
+    return 0 if !$Trainer
+    ret = 0
+    ret += (0.1 * $Trainer.newGamePlusCount)
+    ret = ret.floor.to_i
+    return ret
+  end
+
+  def self.maxIVChance
+    return 0 if !$Trainer
+    ret = 200
+    ret *= (1 - (0.2 * $Trainer.newGamePlusCount))
+    ret = ret.floor.to_i
+    return ret
+  end
+
+  def self.pkmnIVOffset
+    return 0 if !$Trainer
+    ret = 0
+    ret += (5 * $Trainer.newGamePlusCount)
+    return ret
+  end
+end
+
+# Method to return Trainer's Old Pokemon and Storage, and also give the Player a free Big Nugget
+# MAKE SURE TO DO THIS BEFORE GETTING ARENAY ELSE IT WILL BE WIPED FROM THE PARTY
+def pbNewGamePlusGoodies
+  return if !$PokemonTemp.begunNewGamePlus
+  $Trainer.party = $PokemonTemp.oldParty
+  $PokemonStorage = $PokemonTemp.oldStorage
+  $PokemonBag.pbStoreItem(:BIGNUGGET,1)
+end
+
+#Editing the Load Screen to show the New Game Plus option
 class PokemonLoadScreen
   def pbStartLoadScreen
     $PokemonTemp   = PokemonTemp.new
@@ -35,6 +108,7 @@ class PokemonLoadScreen
     cmdOption      = -1
     cmdLanguage    = -1
     cmdMysteryGift = -1
+    cmdNGPlus      = -1
     cmdDebug       = -1
     cmdQuit        = -1
     if safeExists?(savefile)
@@ -77,7 +151,7 @@ class PokemonLoadScreen
       end
       commands[cmdContinue = commands.length]    = _INTL("Continue") if showContinue
       commands[cmdNewGame = commands.length]     = _INTL("New Game")
-      commands[cmdNGPlus = commands.length]      = _INTL("New Game +") if (trainer.newGamePlus rescue false) && ((trainer.newGamePlusCount rescue 1) < 5)
+      commands[cmdNGPlus = commands.length]      = _INTL("New Game +") if (trainer.newGamePlus) && (trainer.newGamePlusCount <= 5)
       commands[cmdMysteryGift = commands.length] = _INTL("Mystery Gift") if (trainer.mysterygiftaccess rescue false)
     else
       commands[cmdNewGame = commands.length]     = _INTL("New Game")
@@ -230,7 +304,6 @@ class PokemonLoadScreen
           $PokemonStorage      = Marshal.load(f)
           Marshal.load(f)
         }
-        pbPlayDecisionSE
         @scene.pbEndScene
         if $game_map && $game_map.events
           for event in $game_map.events.values
@@ -238,20 +311,22 @@ class PokemonLoadScreen
           end
         end
         $PokemonTemp.oldParty = trainer.party
+        $PokemonTemp.oldStorage = $PokemonStorage
+        $PokemonTemp.oldNewGamePlusCount = trainer.newGamePlusCount
         $PokemonTemp.oldParty.each_with_index do |pkmn,i|
-          if pkmn.isSpecies?(:ARENAY)
+          if pkmn && pkmn.isSpecies?(:ARENAY)
             $PokemonTemp.oldParty[i] = nil
-          else
+          elsif pkmn
             revertToBaby(pkmn)
           end
         end
         $PokemonTemp.oldParty.compact!
-        for i in 0...$PokemonStorage.maxBoxes
-          for j in 0...$PokemonStorage.maxPokemon(i)
-            pkmn = $PokemonStorage[i,j]
-            if pkmn.isSpecies?(:ARENAY)
-              $PokemonStorage[i,j] = nil
-            else
+        for i in 0...$PokemonTemp.oldStorage.maxBoxes
+          for j in 0...$PokemonTemp.oldStorage.maxPokemon(i)
+            pkmn = $PokemonTemp.oldStorage[i,j]
+            if pkmn && pkmn.isSpecies?(:ARENAY)
+              $PokemonTemp.oldStorage[i,j] = nil
+            elsif pkmn
               revertToBaby(pkmn)
             end
           end
@@ -268,6 +343,7 @@ class PokemonLoadScreen
         $PokemonMap          = PokemonMapMetadata.new
         $PokemonGlobal       = PokemonGlobalMetadata.new
         $PokemonEncounters   = PokemonEncounters.new
+        $PokemonStorage      = PokemonStorage.new
         $PokemonTemp.begunNewGame = true
         $PokemonTemp.begunNewGamePlus = true
         pbRefreshResizeFactor if !mkxp?  # To fix Game_Screen pictures
@@ -323,13 +399,26 @@ class PokemonLoadScreen
   end
 end
 
+# Adding a few temporary variables to store New Game Plus Data
 class PokemonTemp
   attr_accessor :oldParty
+  attr_accessor :oldStorage
   attr_accessor :begunNewGamePlus
+  attr_accessor :oldNewGamePlusCount
 
   def oldParty
     @oldParty = [] if !@oldParty
     return @oldParty
+  end
+
+  def oldStorage
+    @oldStorage = PokemonStorage.new if !@oldStorage
+    return @oldStorage
+  end
+
+  def oldNewGamePlusCount
+    @oldNewGamePlusCount = 1 if !@oldNewGamePlusCount
+    return @oldNewGamePlusCount
   end
 
   def begunNewGamePlus
@@ -338,6 +427,7 @@ class PokemonTemp
   end
 end
 
+# Adding a few temporary variables to store Trainer's New Game Plus Progress
 class PokeBattle_Trainer
   attr_accessor :newGamePlusCount
   attr_accessor :newGamePlus
@@ -348,72 +438,14 @@ class PokeBattle_Trainer
   end
 
   def newGamePlusCount
-    @newGamePlusCount = 1 if !@newGamePlusCount
+    @newGamePlusCount = 0 if !@newGamePlusCount
     return @newGamePlusCount
   end
 end
 
-module NewGamePlusData
-  def self.expGain
-    return 1 if !$Trainer
-    ret = 1
-    ret += (0.25 * $Trainer.newGamePlusCount)
-    return ret
-  end
-
-  def self.moneyGain
-    return 0 if !$Trainer
-    ret = 1
-    ret += (0.5 * $Trainer.newGamePlusCount)
-    return ret
-  end
-
-  def self.trainerLevels
-    return 0 if !$Trainer
-    ret = -3
-    ret += (3 * $Trainer.newGamePlusCount)
-    return ret
-  end
-
-  def self.wildLevels
-    return 0 if !$Trainer
-    ret = -2
-    ret += (2 * $Trainer.newGamePlusCount)
-    return ret
-  end
-
-  def self.shinyChance
-    return SHINY_POKEMON_CHANCE if !$Trainer
-    ret = SHINY_POKEMON_CHANCE
-    ret *= (1 - (0.05 * $Trainer.newGamePlusCount)).floor
-    return ret
-  end
-
-  def self.hiddenAbilChance
-    return 0 if !$Trainer
-    ret = 0
-    ret += (0.1 * $Trainer.newGamePlusCount)
-    return ret
-  end
-
-  def self.maxIVChance
-    return 0 if !$Trainer
-    ret = 200
-    ret *= (1 - (0.2 * $Trainer.newGamePlusCount))
-    ret = ret.floor
-    return ret
-  end
-
-  def self.pkmnIVOffset
-    return 0 if !$Trainer
-    ret = -5
-    ret += (5 * $Trainer.newGamePlusCount)
-    return ret
-  end
-end
+class PokeBattle_Battle
 
 # Added Multiplied EXP
-class PokeBattle_Battle
   def pbGainExpOne(idxParty,defeatedBattler,numPartic,expShare,expAll,showMessages=true)
     pkmn = pbParty(0)[idxParty]   # The Pokémon gaining EVs from defeatedBattler
     growthRate = pkmn.growthrate
@@ -542,6 +574,7 @@ class PokeBattle_Battle
     end
   end
 
+# Added Multiplied Money Gain
   def pbGainMoney
     return if !@internalBattle || !@moneyGain
     # Money rewarded from opposing trainers
@@ -573,6 +606,7 @@ class PokeBattle_Battle
     end
   end
 
+# Added Multiplied Money Lost
   def pbLoseMoney
     return if !@internalBattle || !@moneyGain
     return if $game_switches[NO_MONEY_LOSS]
@@ -595,13 +629,23 @@ class PokeBattle_Battle
   end
 end
 
+# Added Increase of New Game Plus level in Save Screen
 class PokemonSaveScreen
   def pbSaveScreen
     ret=false
     @scene.pbStartScreen
     if pbConfirmMessage(_INTL("Would you like to save the game?"))
       if safeExists?(RTP.getSaveFileName("Game.rxdata"))
-        if $PokemonTemp.begunNewGame
+        if $PokemonTemp.begunNewGamePlus
+          pbMessage(_INTL("You are now about to start a New Game Plus..."))
+          pbMessage(_INTL("If you save now, the older file's adventure, including items and Pokémon, will be entirely lost."))
+          if !pbConfirmMessage(
+             _INTL("Would you like to save the game and start this New Game Plus?"))
+            pbSEPlay("GUI save choice")
+            @scene.pbEndScreen
+            return false
+          end
+        elsif $PokemonTemp.begunNewGame
           pbMessage(_INTL("WARNING!"))
           pbMessage(_INTL("There is a different game file that is already saved."))
           pbMessage(_INTL("If you save now, the other file's adventure, including items and Pokémon, will be entirely lost."))
@@ -614,7 +658,11 @@ class PokemonSaveScreen
         end
       end
       $PokemonTemp.begunNewGame=false
-      $Trainer.newGamePlusCount += 1 if $PokemonTemp.begunNewGamePlus
+      if $PokemonTemp.begunNewGamePlus
+        $Trainer.newGamePlusCount = ($PokemonTemp.oldNewGamePlusCount + 1)
+        $PokemonTemp.begunNewGamePlus = false
+        $PokemonTemp.oldNewGamePlusCount = 0
+      end
       pbSEPlay("GUI save choice")
       if pbSave
         pbMessage(_INTL("\\se[]{1} saved the game.\\me[GUI save game]\\wtnp[30]",$Trainer.name))
@@ -632,59 +680,67 @@ class PokemonSaveScreen
 end
 
 class PokeBattle_Pokemon
-  # Returns whether this Pokémon is shiny (differently colored).
+  # Added Shiny Chance to New Game Plus
   def shiny?
     return @shinyflag if @shinyflag!=nil
     a = @personalID^@trainerID
     b = a&0xFFFF
     c = (a>>16)&0xFFFF
     d = b^c
-    return d<NewGamePlusData.shinyChance
+    return d < NewGamePlusData.shinyChance
   end
 end
 
-# Code to Maximize IVs for Wild Pokemon
+# Code to Increase Levels and IVs for Wild Pokemon
 Events.onWildPokemonCreate+=proc {|sender,e|
   pokemon=e[0]
   if rand(NewGamePlusData.maxIVChance) < 1
-    for i in 0...6
+    for j in 0...6
       pokemon.iv[i] = 31
     end
   else
     value = NewGamePlusData.pkmnIVOffset
     index = 0
-    for i in 0...value
+    value.times do
       pokemon.iv[index] += 1
       pokemon.iv[index] = 31 if pokemon.iv[index] > 31
       index += 1
       index = 0 if index==6
     end
   end
+  newlevel = pokemon.level
+  newlevel += NewGamePlusData.wildLevels
+  newlevel = newlevel.clamp(1,PBExperience.maxLevel)
+  pokemon.level = newlevel
   pokemon.calcStats
 }
 
-# Code to Maximize IVs for trainers
+# Code to Increase Levels and Maximize IVs for trainer Pokemon
 Events.onTrainerPartyLoad+=proc {|sender,e|
   if e[0]
     trainer=e[0][0]
-    items=e[0][1]
-    party=e[0][2]
+    items = e[0][1]
+    party = e[0][2]
     for i in 0...party.length
       pokemon = party[i]
       if rand(NewGamePlusData.maxIVChance) < 1
-        for i in 0...6
+        for j in 0...6
           pokemon.iv[i] = 31
         end
       else
         value = NewGamePlusData.pkmnIVOffset
         index = 0
-        for i in 0...value
+        value.times do
           pokemon.iv[index] += 1
           pokemon.iv[index] = 31 if pokemon.iv[index] > 31
           index += 1
           index = 0 if index==6
         end
       end
+      randlevel = pokemon.level
+      randlevel += NewGamePlusData.trainerLevels
+      randlevel = randlevel.clamp(1,PBExperience.maxLevel)
+      pokemon.level = randlevel
       pokemon.calcStats
     end
   end

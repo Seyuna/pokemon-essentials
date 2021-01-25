@@ -36,12 +36,3 @@ Events.onChangeDirection += proc{|sender,e|
 Events.onStepTaken+=proc {|sender,e|
   checkExitArrows
 }
-
-alias ngp_trainerName pbTrainerName
-def pbTrainerName(name=nil,outfit=0)
-  ngp_trainerName(name,outfit)
-  if $PokemonTemp.begunNewGamePlus
-    $Trainer.party = $PokemonTemp.oldParty
-    $PokemonBag.pbStoreItem(:BIGNUGGET,1)
-  end
-end

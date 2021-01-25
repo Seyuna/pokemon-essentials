@@ -561,16 +561,20 @@ def pbPickBerry(berry,qty=1)
     if !$PokemonBag.pbCanStore?(berry,qty)
       pbMessage(_INTL("Too bad...\nThe Bag is full..."))
       return
+    else
+      scene = $game_player.addFoundItem(berry)
     end
     $PokemonBag.pbStoreItem(berry,qty)
     if qty>1
-      pbMessage(_INTL("\\me[HGSSGetBerry]You picked the {1} \\c[1]{2}\\c[0].\\wtnp[30]",qty,itemname))
+      pbMessage(_INTL("\\me[HGSSGetBerry]You picked the " + ((scene.smallShow)? "\\n" : "") + "{1} \\c[1]{2}\\c[0].\\wtnp[30]",qty,itemname))
     else
-      pbMessage(_INTL("\\me[HGSSGetBerry]You picked the \\c[1]{1}\\c[0].\\wtnp[30]",itemname))
+      pbMessage(_INTL("\\me[HGSSGetBerry]You picked the" + ((scene.smallShow)? "\\n" : "") + "\\c[1]{1}\\c[0].\\wtnp[30]",itemname))
     end
     pocket = pbGetPocket(berry)
-    pbMessage(_INTL("{1} put the \\c[1]{2}\\c[0] in the <icon=bagPocket{3}>\\c[1]{4}\\c[0] Pocket.\1",
+    pbMessage(_INTL("{1} put the \\c[1]{2}\\c[0] in \\nthe <icon=bagPocket{3}>\\c[1]{4}\\c[0] Pocket.\1",
        $Trainer.name,itemname,pocket,PokemonBag.pocketNames()[pocket]))
+    scene.pbEndScene
+  ####
     if NEW_BERRY_PLANTS
       pbMessage(_INTL("The soil returned to its soft and earthy state."))
       berryData=[0,0,0,0,0,0,0,0]

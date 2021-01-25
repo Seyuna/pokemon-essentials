@@ -103,7 +103,6 @@ Events.onWildPokemonCreate+=proc {|sender,e|
      end
      newlevel=MINLEVEL if newlevel<=MINLEVEL
      newlevel=MAXLEVEL if newlevel>=MAXLEVEL
-     newlevel += NewGamePlusData.wildLevels
      newlevel=newlevel-rand(2)+1 if newlevel<=6
      newlevel = newlevel.clamp(1,PBExperience.maxLevel)
      pokemon.level=newlevel
@@ -205,7 +204,6 @@ Events.onTrainerPartyLoad+=proc {|sender,e|
          randlevel=MINLEVEL if randlevel<=MINLEVEL
          randlevel=MAXLEVEL if randlevel>=MAXLEVEL
          randlevel=randlevel-rand(2) if randlevel<=5
-         randlevel += NewGamePlusData.trainerLevels
          randlevel = randlevel.clamp(1,PBExperience.maxLevel)
          party[i].level=randlevel
          party[i].calcStats
