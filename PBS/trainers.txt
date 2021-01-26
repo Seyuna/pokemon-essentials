@@ -1319,33 +1319,39 @@ Pokemon = CHARMELEON,25
     Ball = 25
 #-------------------------------
 [BIOGRUNT_M,Arnold]
-Pokemon = SCIZOR,35
+Pokemon = SCIZOR,25
     Ball = 24
-Pokemon = DUOSION,35
+Pokemon = DUOSION,25
     Form = 1
     Ball = 24
 #-------------------------------
 [MECHGRUNT_M,Arnold]
-Pokemon = AMPHAROS,35
+Pokemon = AMPHAROS,25
     Form = 1
     Ball = 25
-Pokemon = KLANG,35
+Pokemon = KLANG,25
     Form = 1
     Ball = 25
 #-------------------------------
 [BIOGRUNT_M,Julian]
-Pokemon = TROPIUS,35
+Pokemon = TROPIUS,25
     Ball = 24
-Pokemon = TOXTRICITY,35
+Pokemon = TOXTRICITY,25
     Ball = 24
-Pokemon = SCEPTILE,35
+Pokemon = SCEPTILE,25
     Ball = 24
 #-------------------------------
 [MECHGRUNT_M,Julian]
-Pokemon = PROBOPASS,35
+Pokemon = PROBOPASS,25
 	Form = 1
     Ball = 25
-Pokemon = SKARMORY,35
+Pokemon = SKARMORY,25
     Ball = 25
-Pokemon = BLAZIKEN,35
+Pokemon = BLAZIKEN,25
     Ball = 25
+#-------------------------------
+[CAMPER,Grayson]
+Pokemon = ZANGOOSE,5
+	Form = 1
+Pokemon = SANDILE,5
+	Form = 1
