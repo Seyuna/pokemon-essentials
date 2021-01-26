@@ -77,7 +77,7 @@ def pbTalkToFollower
   pbPlayCry(firstPkmn)
   event = pbGetDependency("FollowerPkmn")
   randomVal = rand(6)
-  Events.OnTalkToFollower.trigger(firstPkmn,event.x,event.y-2,randomVal)
+  Events.OnTalkToFollower.trigger(firstPkmn,event.x,event.y-1,randomVal)
   pbTurnTowardEvent(event,$game_player)
 end
 

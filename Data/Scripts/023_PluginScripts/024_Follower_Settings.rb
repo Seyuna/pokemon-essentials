@@ -152,7 +152,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
       end
       if ret
         if pbGetPocket(pkmn.item) == 6 || (pbGetPocket(oldItem) == 6 && pbGetPocket(pkmn.item) != 6)
-          $scene.spriteset.addUserAnimation(DUST_ANIMATION_ID,x,y,true,1)
+          $scene.spriteset.addUserAnimation(DUST_ANIMATION_ID,x,y+1,true,1)
           pbSEPlay("animform")
         end
         $PokemonTemp.dependentEvents.change_sprite([pkmn.species, pkmn.female?,
@@ -195,7 +195,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
     end
     if ret
       if pbGetPocket(oldItem) == 6
-        $scene.spriteset.addUserAnimation(DUST_ANIMATION_ID,x,y,true,1)
+        $scene.spriteset.addUserAnimation(DUST_ANIMATION_ID,x,y+1,true,1)
         pbSEPlay("animform")
         $PokemonTemp.dependentEvents.change_sprite([pkmn.species, pkmn.female?,
           pkmn.shiny?, pkmn.form,
