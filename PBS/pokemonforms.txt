@@ -1168,14 +1168,10 @@ BattlerEnemyY = 10
 #-------------------------------
 [SINISTEA,1]
 FormName = Antique Form
-Abilities = WEAKARMOR
-HiddenAbility = CURSEDBODY
 Evolutions = POLTEAGEIST,Item,CHIPPEDPOT
 #-------------------------------
 [POLTEAGEIST,1]
 FormName = Antique Form
-Abilities = WEAKARMOR
-HiddenAbility = CURSEDBODY
 #-------------------------------
 [EISCUE,1]
 FormName = Noice Face
@@ -1921,8 +1917,6 @@ FormName = Stacona Form
 Type1 = POISON
 Type2 = PSYCHIC
 BaseStats = 69,45,45,15,65,55
-Abilities = EFFECTSPORE
-HiddenAbility = REGENERATOR
 Moves = 1,ABSORB,1,CONFUSION,6,POISONPOWDER,8,ASTONISH,12,ACID,14,MEGADRAIN,16,VENOSHOCK,18,INGRAIN,20,PSYBEAM,24,MAGICCOAT,28,GIGADRAIN,32,TOXIC,34,SYNTHESIS,37,SLUDGEBOMB,39,PSYCHEDELICBURST,43,PSYCHIC,45,RAGEPOWDER,50,SPORE
 BattlerPlayerX = -3
 BattlerPlayerY = -6
@@ -1933,8 +1927,6 @@ FormName = Stacona Form
 Type1 = POISON
 Type2 = PSYCHIC
 BaseStats = 115,65,70,30,115,80
-Abilities = EFFECTSPORE
-HiddenAbility = REGENERATOR
 Moves = 0,PSYCHEDELICBURST,1,ABSORB,1,CONFUSION,6,POISONPOWDER,8,ASTONISH,12,ACID,14,MEGADRAIN,16,VENOSHOCK,18,INGRAIN,20,PSYBEAM,24,MAGICCOAT,28,GIGADRAIN,32,TOXIC,34,SYNTHESIS,37,SLUDGEBOMB,39,PSYCHEDELICBURST,43,PSYCHIC,45,RAGEPOWDER,50,SPORE
 BattlerPlayerX = -1
 BattlerPlayerY = -6
@@ -1944,7 +1936,6 @@ BattlerEnemyY = 26
 FormName = Camera Rotom
 Type1 = ELECTRIC
 Type2 = STEEL
-Abilities = LEVITATE
 BattlerPlayerX = 0
 BattlerPlayerY = -6
 BattlerEnemyX = -1
@@ -1961,9 +1952,9 @@ Abilities = STATIC
 HiddenAbility = VOLTABSORB
 Moves = 1,TACKLE,4,HARDEN,5,THUNDERSHOCK,8,BLOCK,11,ROCKTHROW,15,THUNDERWAVE,18,ROCKBLAST,22,REST,25,SPARK,29,ROCKSLIDE,32,POWERGEM,36,SANDSTORM,39,DISCHARGE,43,EARTHPOWER,46,STONEEDGE,50,LOCKON,50,ZAPCANNON
 BattlerPlayerX = 1
-BattlerPlayerY = -6
-BattlerEnemyX = 1
-BattlerEnemyY = 11
+BattlerPlayerY = -5
+BattlerEnemyX = 2
+BattlerEnemyY = 12
 BattlerAltitude = 1
 Evolutions = PROBOPASS,Location,90
 #-------------------------------
@@ -2390,7 +2381,6 @@ BattlerEnemyY = 16
 FormName = Stacona Form
 Type1 = WATER
 Type2 = STEEL
-Abilities = HYPERCUTTER,SHELLARMOR
 HiddenAbility = STEELWORKER
 Moves = 1,MUDSPORT,1,BUBBLE,5,VICEGRIP,9,LEER,11,IRONDEFENSE,15,BUBBLEBEAM,19,MUDSHOT,21,METALCLAW,25,STOMP,29,PROTECT,31,GUILLOTINE,35,IRONHEAD,39,BRINE,41,CRABHAMMER,45,FLAIL,50,FLASHCANNON
 BattlerPlayerY = -6
@@ -2400,7 +2390,6 @@ BattlerEnemyY = 20
 FormName = Stacona Form
 Type1 = WATER
 Type2 = STEEL
-Abilities = HYPERCUTTER,SHELLARMOR
 HiddenAbility = STEELWORKER
 Moves = 0,KINGSCLAW,1,MUDSPORT,1,BUBBLE,5,VICEGRIP,9,LEER,11,IRONDEFENSE,15,BUBBLEBEAM,19,MUDSHOT,21,METALCLAW,25,STOMP,29,PROTECT,31,GUILLOTINE,35,IRONHEAD,39,BRINE,41,CRABHAMMER,45,FLAIL,48,KINGSCLAW,50,FLASHCANNON
 BattlerPlayerY = -6
@@ -2437,7 +2426,6 @@ Type1 = DARK
 Type2 = STEEL
 BaseStats = 65,130,100,75,45,50
 Abilities = CLEARBODY,MOLDBREAKER
-HiddenAbility = JUSTIFIED
 Moves = 0,METALCLAW,1,SCRATCH,1,FEINT,4,LEER,9,QUICKATTACK,12,PURSUIT,15,METALCLAW,17,TAUNT,20,BITE,23,IRONDEFENSE,25,DOUBLETEAM,28,SLASH,33,SWORDSDANCE,36,FUTURESIGHT,38,IRONHEAD,41,NIGHTSLASH,44,DETECT,47,IRONTAIL,49,PSYCHOCUT,52,SUCKERPUNCH,57,RAZORWIND,60,FLASHCANNON,65,PERISHSONG
 BattlerPlayerY = -6
 BattlerEnemyX = 5
@@ -2621,6 +2609,8 @@ Height = 0.3
 Weight = 4.2
 Color = Black
 Pokedex = Natu its eyes have adjusted to work during all times of day, one has adjusted to the bright snow at daylight, while the other has night vision.
+BattlerEnemyX = 2
+BattlerEnemyY = 24
 #-------------------------------
 [XATU,1]
 FormName = Stacona Form
@@ -2633,6 +2623,8 @@ Height = 1.4
 Weight = 17.3
 Color = White
 Pokedex = Xatu are often seen standing completely still. They are said to be looking for perfect balance between space and time, being too preoccupied to move.
+BattlerPlayerY = -4
+BattlerEnemyX = -2
 #-------------------------------
 [TYROGUE,1]
 FormName = Stacona Form
@@ -2695,7 +2687,8 @@ HiddenAbility = THICKFAT
 Moves = 1,HAIL,1,SANDSTORM,1,GROWL,1,TACKLE,5,ICYWIND,8,MAGNITUDE,12,FOCUSENERGY,15,AVALANCHE,19,AMNESIA,22,GLACIATE,26,EARTHPOWER,29,CURSE,31,TAKEDOWN,36,YAWN,40,EARTHQUAKE,43,ICEBEAM,47,DOUBLEEDGE,51,BLIZZARD,60,SHEERCOLD
 Color = Brown
 Pokedex = Staconan Numel pokedex entrance goes here
-BattlerEnemyX = 0
+BattlerPlayerX = 1
+BattlerPlayerY = -4
 BattlerEnemyY = 20
 #-------------------------------
 [CAMERUPT,1]
@@ -2707,33 +2700,25 @@ HiddenAbility = THICKFAT
 Moves = 1,HAIL,1,SANDSTORM,1,GROWL,1,TACKLE,1,ICYWIND,1,MAGNITUDE,5,ICYWIND,8,MAGNITUDE,12,FOCUSENERGY,15,AVALANCHE,19,AMNESIA,22,GLACIATE,26,EARTHPOWER,29,CURSE,31,TAKEDOWN,33,ICICLECRASH,39,YAWN,46,EARTHQUAKE,52,ICEBEAM,59,FISSURE,63,BLIZZARD,70,SHEERCOLD
 Color = Brown
 Pokedex = Staconan Camerupt pokedex entrance goes here
-BattlerEnemyX = 0
-BattlerEnemyY = 20
+BattlerPlayerY = -5
 #-------------------------------
 [ESPURR,1]
 FormName = Stacona Form
 Type1 = DARK
 Type2 = PSYCHIC
-Abilities = KEENEYE,INFILTRATOR
-HiddenAbility = OWNTEMPO
 Moves = 1,SCRATCH,1,LEER,3,FAKEOUT,6,DISARMINGVOICE,9,CONFUSION,13,SNARL,18,COVET,21,PSYBEAM,24,EMBARGO,30,LIGHTSCREEN,30,REFLECT,33,PSYSHOCK,44,EERIESPELL
-EggMoves = TRICK,YAWN,ASSIST,BARRIER,TICKLE
 Color = Blue
 Pokedex = Staconan Espurr pokedex entrance goes here
-BattlerEnemyX = 0
 BattlerEnemyY = 20
 #-------------------------------
 [MEOWSTIC,1]
 FormName = Stacona Form
 Type1 = DARK
 Type2 = PSYCHIC
-Abilities = KEENEYE,INFILTRATOR
 HiddenAbility = COMPETITIVE
 Moves = 0,DARKPULSE,1,STOREDPOWER,1,MEFIRST,1,MAGICALLEAF,1,SCRATCH,1,LEER,1,COVET,1,CONFUSION,5,COVET,9,CONFUSION,13,LIGHTSCREEN,17,PSYBEAM,19,FAKEOUT,22,DISARMINGVOICE,25,PSYSHOCK,28,CHARGEBEAM,31,SHADOWBALL,35,EXTRASENSORY,40,PSYCHIC,43,EERIESPELL,45,SIGNALBEAM,48,SUCKERPUNCH,50,NIGHTDAZE,53,STOREDPOWER
 EggMoves = TRICK,YAWN,ASSIST,BARRIER,TICKLE
-Color = Blue
 Pokedex = Staconan Meowstic pokedex entrance goes here
-BattlerEnemyX = 0
 BattlerEnemyY = 20
 #-------------------------------
 [RALTS,1]
@@ -2746,7 +2731,9 @@ HiddenAbility = NOGUARD
 Moves = 1,LEER,6,CONFUSION,10,SANDATTACK,12,TELEPORT,17,LUCKYCHANT,21,SANDTOMB,23,MUDSPORT,28,CALMMIND,32,PSYCHIC,34,MAGNITUDE,39,FUTURESIGHT,43,SCREECH,45,HYPNOSIS,50,DREAMEATER,54,STOREDPOWER
 Pokedex = It controls the emotions of the Pokémon around it with its horn. It tends to make the lonely Pokémon in caves feel less lonely.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerPlayerY = -5
+BattlerEnemyX = 1
+BattlerEnemyY = 19
 #-------------------------------
 [KIRLIA,1]
 FormName = Stacona Form
@@ -2757,8 +2744,11 @@ Abilities = CURSEDBODY,SYNCHRONIZE
 HiddenAbility = NOGUARD
 Moves = 1,LEER,1,CONFUSION,1,SANDATTACK,1,TELEPORT,6,CONFUSION,10,SANDATTACK,12,TELEPORT,17,LUCKYCHANT,22,SANDTOMB,25,MUDSPORT,31,CALMMIND,36,PSYCHIC,39,MAGNITUDE,45,FUTURESIGHT,50,SCREECH,53,HYPNOSIS,59,DREAMEATER,64,STOREDPOWER
 Pokedex = Using its crecent shaped horn it helps Pokémon around it feel comfort in caves. It helps sleepless Pokémon get their rest.
-BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerPlayerX = -2
+BattlerPlayerY = -3
+BattlerEnemyX = 1
+BattlerEnemyY = 12
+BattlerShadowSize = 2
 #-------------------------------
 [GARDEVOIR,1]
 FormName = Stacona Form
@@ -2770,69 +2760,56 @@ HiddenAbility = MAGICBOUNCE
 Moves = 0,EARTHPOWER,1,STOREDPOWER,1,HEALINGWISH,1,LEER,1,CONFUSION,1,SANDATTACK,1,TELEPORT,6,CONFUSION,10,SANDATTACK,12,TELEPORT,17,WISH,22,SANDTOMB,25,MUDSPORT,33,CALMMIND,40,PSYCHIC,45,MAGNITUDE,53,FUTURESIGHT,60,SHADOWSNEAK,65,HYPNOSIS,73,DREAMEATER,80,STOREDPOWER,85,HYPERVOICE
 Pokedex = Using its lower body and psychic powers, it can control the layout of their habitat. It can create complex mazes in mere minutes.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerPlayerY = -4
+BattlerEnemyX = -3
+BattlerEnemyY = -1
 #-------------------------------
 [GALLADE,1]
 FormName = Stacona Form
 Type1 = FIGHTING
 Type2 = GROUND
 BaseStats = 68,135,80,65,55,115
-Abilities = INTIMIDATE, INNERFOCUS
-HiddenAbility = JUSTIFIED
+Abilities = INTIMIDATE,INNERFOCUS
 Moves = 0,SACREDSWORD,1,BLAZEKICK,1,NIGHTSLASH,1,LEER,1,CONFUSION,1,SANDATTACK,1,TELEPORT,6,CONFUSION,10,SANDATTACK,12,TELEPORT,17,DRILLRUN,22,SLASH,25,MAGNITUDE,31,SWORDSDANCE,36,DRAINPUNCH,39,SHELLSMASH,45,FEINT,50,FALSESWIPE,53,PROTECT,59,CLOSECOMBAT,64,OUTRAGE
 Pokedex = It can sense the emotions of their opponent and uses it against them in order to beat them.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerPlayerY = -5
 #-------------------------------
 [BUDEW,1]
 FormName = Stacona Form
 Type1 = GRASS
 Type2 = FIRE
 BaseStats = 40,30,35,55,70,70
-GenderRate = Female50Percent
-GrowthRate = Parabolic
 BaseEXP = 60
-EffortPoints = 0,0,0,0,1,0
 Abilities = FLAMEBODY,CHLOROPHYLL
 HiddenAbility = FLASHFIRE
 Moves = 1,ABSORB,4,GROWTH,7,EMBER,10,STUNSPORE,13,MEGADRAIN,16,WORRYSEED,20,MAGICALLEAF,22,SUNNYDAY,26,INCINERATE
 WildItemUncommon = CHARCOAL
-BattlerPlayerX = -1
-BattlerPlayerY = 0
-BattlerEnemyX = 1
-BattlerEnemyY = 18
-BattlerShadowX = 0
-BattlerShadowSize = 1
+BattlerPlayerX = -15
+BattlerPlayerY = -3
+BattlerEnemyX = 3
+BattlerEnemyY = 19
 Evolutions = ROSELIA,Level,16
-Incense = ROSEINCENSE
 #-------------------------------
 [ROSELIA,1]
 FormName = Stacona Form
 Type1 = GRASS
 Type2 = FIRE
 BaseStats = 50,60,45,65,100,100
-GenderRate = Female50Percent
-GrowthRate = Parabolic
 BaseEXP = 150
-EffortPoints = 0,0,0,0,2,0
 Rareness = 140
 Abilities = FLAMEBODY,CHLOROPHYLL
 HiddenAbility = FLASHFIRE
 Moves = 1,ABSORB,4,GROWTH,6,EMBER,8,POISONSTING,10,STUNSPORE,13,MEGADRAIN,16,LEECHSEED,18,MAGICALLEAF,20,SUNNYDAY,20,INCINERATE,22,GRASSWHISTLE,25,GIGADRAIN,28,TOXICSPIKES,30,SWEETSCENT,32,FLAMEBURST,34,INGRAIN,37,ENERGYBALL,40,TOXIC,43,SOLARBEAM,46,FIREBLAST
-EggMoves = COTTONSPORE,GIGADRAIN,GRASSWHISTLE,LEAFSTORM,MINDREADER,NATURALGIFT,PINMISSILE,RAZORLEAF,SEEDBOMB,SLEEPPOWDER,SPIKES,SYNTHESIS
 WildItemUncommon = CHARCOAL
 WildItemRare = ABSORBBULB
-Evolutions = ROSERADE,Item,SHINYSTONE
 #-------------------------------
 [ROSERADE,1]
 FormName = Stacona Form
 Type1 = GRASS
 Type2 = FIRE
 BaseStats = 70,70,55,90,135,125
-GenderRate = Female50Percent
-GrowthRate = Parabolic
 BaseEXP = 235
-EffortPoints = 0,0,0,0,3,0
 Abilities = FLAMEBODY,CHLOROPHYLL
 HiddenAbility = FLASHFIRE
 Moves = 1,WEATHERBALL,1,POISONSTING,1,MEGADRAIN,1,MAGICALLEAF,1,SWEETSCENT,1,SUNNYDAY,1,FLAMETHROWER,1,FIREBLAST,1,SOLARBEAM,1,GIGADRAIN,1,ENERGYBALL
@@ -2844,27 +2821,45 @@ Type1 = BUG
 Type2 = FAIRY
 BaseStats = 35,70,55,25,55,55
 BaseEXP = 60
-EffortPoints = 0,1,0,0,0,0
-Abilities = EFFECTSPORE,DRYSKIN
-HiddenAbility = DAMP
 Moves = 1,SCRATCH,1,FAIRYWIND,6,STUNSPORE,6,POISONPOWDER,11,LEECHLIFE,17,FURYCUTTER,22,SPORE,27,DRAININGKISS,33,GROWTH,38,GIGADRAIN,43,AROMATHERAPY,49,DAZZLINGGLEAM,54,XSCISSOR
-Pokedex = A Paras has parasitic tochukaso mushrooms growing on its back. They grow by drawing nutrients from the host. They are valued as a medicine for long life.
-WildItemCommon = TINYMUSHROOM
-WildItemUncommon = BIGMUSHROOM
-WildItemRare = BALMMUSHROOM
+BattlerPlayerX = 1
+BattlerPlayerY = -3
 #-------------------------------
 [PARASECT,1]
 FormName = Stacona Form
 Type1 = BUG
 Type2 = FAIRY
 BaseStats = 70,95,90,40,90,80
-GenderRate = Female50Percent
 BaseEXP = 150
-EffortPoints = 0,2,1,0,0,0
-Abilities = EFFECTSPORE,DRYSKIN
-HiddenAbility = DAMP
 Moves = 1,SCRATCH,1,FAIRYWIND,6,STUNSPORE,6,POISONPOWDER,11,LEECHLIFE,17,FURYCUTTER,22,SPORE,27,DRAININGKISS,33,GROWTH,38,GIGADRAIN,43,AROMATHERAPY,49,DAZZLINGGLEAM,54,XSCISSOR
 Pokedex = A Paras has parasitic tochukaso mushrooms growing on its back. They grow by drawing nutrients from the host. They are valued as a medicine for long life.
-WildItemCommon = TINYMUSHROOM
-WildItemUncommon = BIGMUSHROOM
-WildItemRare = BALMMUSHROOM
+BattlerPlayerX = 2
+BattlerPlayerY = -5
+BattlerEnemyX = -1
+BattlerEnemyY = 19
+#-------------------------------
+[ZANGOOSE,1]
+FormName = Stacona Form
+Type1 = NORMAL
+Type2 = FAIRY
+BaseStats = 93,115,50,80,50,70
+Abilities = PIXILATE
+HiddenAbility = KLUTZ
+Moves = 1,SCRATCH,1,CHARM,5,QUICKATTACK,8,FURYCUTTER,12,REVENGE,15,SLASH,19,EMBARGO,22,CRUSHCLAW,26,ENCHANTEDSLASH,29,FALSESWIPE,33,MOONLIGHT,36,PLAYROUGH,40,TAUNT,43,SWORDSDANCE,47,CLOSECOMBAT,55,PIXIEPUMMEL
+Pokedex = Staconan Zangoose tend to stay around Staconan Seviper because of their essence, it makes them feel relaxed and numbs their bodies.
+BattlerPlayerX = 0
+BattlerPlayerY = -6
+BattlerEnemyX = 3
+BattlerEnemyY = 20
+#-------------------------------
+[SEVIPER,1]
+FormName = Stacona Form
+Type1 = POISON
+Type2 = ROCK
+BaseStats = 73,110,60,90,65,60
+Abilities = STENCH
+HiddenAbility = STURDY
+Moves = 1,WRAP,1,LICK,5,BITE,9,ROCKPOLISH,12,POISONTAIL,16,SCREECH,20,ROCKTAIL,23,GLARE,25,POWERGEM,27,POISONFANG,31,ROCKSLIDE,34,GASTROACID,38,STEALTHROCK,42,POISONJAB,45,CRUNCH,49,COIL,53,ACCELEROCK,55,ASBESTOSLAM
+Pokedex = Using their essence they hunt on small prey that pass out from it. They try to avoid Staconan Zangoose.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
