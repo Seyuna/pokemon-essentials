@@ -445,7 +445,7 @@ end
 # Bag mechanics
 #===============================================================================
 class PokemonBagScreen
-  def initialize(scene,bag)
+  def initialize(scene,bag,lastpocket=-1)
     @bag   = bag
     @scene = scene
   end
@@ -580,6 +580,22 @@ class PokemonBagScreen
     oldlastpocket = @bag.lastpocket
     oldchoices = @bag.getAllChoices
     @scene.pbStartScene(@bag,true,proc)
+    item = @scene.pbChooseItem
+    @scene.pbEndScene
+    @bag.lastpocket = oldlastpocket
+    @bag.setAllChoices(oldchoices)
+    return item
+  end
+
+  # UI logic for the item screen for choosing a Cellulose.
+  def pbChooseItemCelluloseScreen(proc=nil,tutorial=false)
+    oldlastpocket = @bag.lastpocket
+    oldchoices = @bag.getAllChoices
+    @bag.lastpocket = 6
+    @scene.pbStartScene(@bag,true,Proc.new { |item| [1,2,5,6].include?(pbGetPocket(item)) },false)
+    if tutorial
+      pbMessage("\\rCypress: Great, now just select the Cellulose you want Arenay to hold! ")
+    end
     item = @scene.pbChooseItem
     @scene.pbEndScene
     @bag.lastpocket = oldlastpocket

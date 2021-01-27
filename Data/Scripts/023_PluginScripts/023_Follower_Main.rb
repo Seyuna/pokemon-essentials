@@ -15,9 +15,9 @@
 #     ])
 # The Pokemon turns Right, waits 4 frames, and then jumps
 #-------------------------------------------------------------------------------
-def followingMoveRoute(commands,waitComplete=false)
+def followingMoveRoute(commands,waitComplete=true)
   return if !$Trainer.hasArenay? || !$PokemonGlobal.followerToggled
-  $PokemonTemp.dependentEvents.setMoveRoute(commands,waitComplete)
+  $PokemonTemp.dependentEvents.setMoveRoute(commands,true)
 end
 
 #-------------------------------------------------------------------------------
@@ -70,13 +70,10 @@ def pbArenayFollow(x)
   $PokemonTemp.dependentEvents.removeEventByName("FollowerPkmn") if pbGetDependency("FollowerPkmn")
   pbAddDependency2(x,"FollowerPkmn",Follower_Common_Event)
   $PokemonGlobal.followerToggled = true
-  event = pbGetDependency("FollowerPkmn")
-#  firstPkmn = $Trainer.arenayIndex(true)
-#  return if !firstPkmn
-#  ret = $PokemonTemp.dependentEvents.refresh_sprite(false)
-#  $PokemonTemp.dependentEvents.change_sprite([firstPkmn.species, firstPkmn.female?,
-#        firstPkmn.shiny?, firstPkmn.form,
-#        firstPkmn.shadowPokemon?]) if ret
+  firstPkmn = $Trainer.arenayIndex(true)
+  $PokemonTemp.dependentEvents.change_sprite([firstPkmn.species, firstPkmn.female?,
+        firstPkmn.shiny?, firstPkmn.form,
+        firstPkmn.shadowPokemon?])
   if ALWAYS_ANIMATE
     $PokemonTemp.dependentEvents.update_stepping
   elsif $PokemonTemp.dependentEvents.refresh_sprite(false) == -1
@@ -335,7 +332,7 @@ class DependentEvents
     events=$PokemonGlobal.dependentEvents
     for i in 0...events.length
       if events[i] && events[i][8]== "FollowerPkmn"
-        pbMoveRoute(@realEvents[i],commands,waitComplete)
+        pbMoveRoute(@realEvents[i],commands,true)
       end
     end
   end
@@ -1266,7 +1263,7 @@ class PokeBattle_Trainer
     end
     if pkmn
       return @party[ret] if ret >= 0
-      return false
+      return nil
     end
     return ret
   end
