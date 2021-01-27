@@ -236,6 +236,20 @@ MultipleForms.register(:CASTFORM,{
   }
 })
 
+MultipleForms.register(:TOGEKISS,{
+  "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
+    next 1
+  },
+  "getFormOnCreation"=>proc{|pokemon|
+     maps=[1]
+     if $game_map && maps.include?($game_map.map_id)
+       next 0
+     else
+       next 1
+     end
+  }
+})
+
 MultipleForms.register(:BURMY,{
   "getFormOnCreation" => proc { |pkmn|
     case pbGetEnvironment
@@ -1528,3 +1542,27 @@ MultipleForms.register(:SEVIPER,{
    end
 }
 })
+
+MultipleForms.register(:TOGEPI,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:TOGEPI,:TOGETIC)
+
+MultipleForms.register(:SENTRET,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:SENTRET,:FURRET)
