@@ -63,6 +63,30 @@ def pbPokemonFollow(x)
 end
 
 #-------------------------------------------------------------------------------
+# Script Command to start Arenay Following. x is the Event ID that will be the follower
+#-------------------------------------------------------------------------------
+def pbArenayFollow(x)
+  return false if !$Trainer.hasArenay?
+  $PokemonTemp.dependentEvents.removeEventByName("FollowerPkmn") if pbGetDependency("FollowerPkmn")
+  pbAddDependency2(x,"FollowerPkmn",Follower_Common_Event)
+  $PokemonGlobal.followerToggled = true
+  event = pbGetDependency("FollowerPkmn")
+#  firstPkmn = $Trainer.arenayIndex(true)
+#  return if !firstPkmn
+#  ret = $PokemonTemp.dependentEvents.refresh_sprite(false)
+#  $PokemonTemp.dependentEvents.change_sprite([firstPkmn.species, firstPkmn.female?,
+#        firstPkmn.shiny?, firstPkmn.form,
+#        firstPkmn.shadowPokemon?]) if ret
+  if ALWAYS_ANIMATE
+    $PokemonTemp.dependentEvents.update_stepping
+  elsif $PokemonTemp.dependentEvents.refresh_sprite(false) == -1
+    $PokemonTemp.dependentEvents.stop_stepping
+  elsif !$PokemonTemp.dependentEvents.refresh_sprite(false)
+    $PokemonTemp.dependentEvents.stop_stepping
+  end
+end
+
+#-------------------------------------------------------------------------------
 # Script Command for Talking to Following Pokemon
 #-------------------------------------------------------------------------------
 def pbTalkToFollower
