@@ -137,3 +137,15 @@ ItemHandlers::UseInField.add(:OUTFITCASE,proc { |item|
   pbSelectOutfit
   next 1
 })
+
+def pbSetArenayCharacterName(event,form=nil,shiny=false)
+  return false if !event
+  return false if !$game_map.events[event]
+  s = ""
+  s = "s" if shiny
+  f = "_" + form.to_s
+  f = "" if !form.is_a?(Numeric) || form <= 0
+  if pbResolveBitmap("Graphics/Characters/907#{s}#{f}")
+    pbMoveRoute($game_map.events[event],[PBMoveRoute::Graphic,"907#{s}#{f}",0,2,0])
+  end
+end
