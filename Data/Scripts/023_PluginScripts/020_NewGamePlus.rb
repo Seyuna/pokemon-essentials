@@ -28,7 +28,7 @@ module NewGamePlusData
   end
 
   def self.trainerLevels
-    return 0
+#    return 0
     return 0 if !$Trainer
     ret = 0
     ret += (1 * $Trainer.newGamePlusCount)
@@ -36,7 +36,7 @@ module NewGamePlusData
   end
 
   def self.wildLevels
-    return 0
+#    return 0
     return 0 if !$Trainer
     ret = 0
     ret += (2 * $Trainer.newGamePlusCount)
@@ -76,12 +76,12 @@ module NewGamePlusData
 end
 
 # Method to return Trainer's Old Pokemon and Storage, and also give the Player a free Big Nugget
-# MAKE SURE TO DO THIS BEFORE GETTING ARENAY ELSE IT WILL BE WIPED FROM THE PARTY
 def pbNewGamePlusGoodies
-  return if !$PokemonTemp.begunNewGamePlus
-  $Trainer.party = $PokemonTemp.oldParty
+  return if [0,2].include?($PokemonTemp.newGameGoodies)
+  $PokemonTemp.oldParty.each {|pkmn| pbAddPokemonSilent(pkmn)}
   $PokemonStorage = $PokemonTemp.oldStorage
   $PokemonBag.pbStoreItem(:BIGNUGGET,1)
+  $PokemonTemp.newGameGoodies = 2
 end
 
 #Editing the Load Screen to show the New Game Plus option
@@ -331,6 +331,7 @@ class PokemonLoadScreen
             end
           end
         end
+        $PokemonTemp.newGameGoodies = 1
         $game_temp.common_event_id = 0 if $game_temp
         $scene               = Scene_Map.new
         Graphics.frame_count = 0
@@ -405,6 +406,7 @@ class PokemonTemp
   attr_accessor :oldStorage
   attr_accessor :begunNewGamePlus
   attr_accessor :oldNewGamePlusCount
+  attr_accessor :newGameGoodies
 
   def oldParty
     @oldParty = [] if !@oldParty
@@ -424,6 +426,11 @@ class PokemonTemp
   def begunNewGamePlus
     @begunNewGamePlus = false if !@begunNewGamePlus
     return @begunNewGamePlus
+  end
+
+  def newGameGoodies
+    @newGameGoodies = 0 if !@newGameGoodies
+    return @newGameGoodies
   end
 end
 
