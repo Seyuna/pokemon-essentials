@@ -1,7 +1,22 @@
+#==============================================================================
+# A New Game Plus can be started from the Load Screen, but not normally
+# To accesss a New Game Plus, rin this script command
+# $Trainer.newGamePlus = true
+#
+# To return the Player's party from old save to new save, and give a free Big Nugget use the Command
+# pbNewGamePlusGoodies
+#===============================================================================
+
+
+
+
 NEW_GAME_PLUS_SWITCH = 400
 
 # What New Game Plus does
 =begin
+Take Party and PC from Old Save, but reset all moves to base moves, all levels to 5 and set's the species to baby form
+Removes Arenay from Party and PC entirely
+Gices the Player a free Nig Nugget
 Exp Gain +25%
 Money Gain +50%
 Wild Levels +2
@@ -16,6 +31,7 @@ module NewGamePlusData
   def self.expGain
     return 1 if !$Trainer
     ret = 1
+    # Edit the 0.25 to change multiplier
     ret += (0.25 * $Trainer.newGamePlusCount)
     return ret
   end
@@ -23,6 +39,7 @@ module NewGamePlusData
   def self.moneyGain
     return 1 if !$Trainer
     ret = 1
+    # Edit the 0.5 to change multiplier
     ret += (0.5 * $Trainer.newGamePlusCount)
     return ret
   end
@@ -31,6 +48,7 @@ module NewGamePlusData
 #    return 0
     return 0 if !$Trainer
     ret = 0
+    # Edit the 1 to change levels
     ret += (1 * $Trainer.newGamePlusCount)
     return ret
   end
@@ -39,6 +57,7 @@ module NewGamePlusData
 #    return 0
     return 0 if !$Trainer
     ret = 0
+    # Edit the 2 to change levels
     ret += (2 * $Trainer.newGamePlusCount)
     return ret
   end
@@ -46,6 +65,7 @@ module NewGamePlusData
   def self.shinyChance
     return SHINY_POKEMON_CHANCE if !$Trainer
     ret = SHINY_POKEMON_CHANCE
+    # Edit the 0.05 to change multiplier
     ret *= (1 - (0.05 * $Trainer.newGamePlusCount))
     ret = ret.floor.to_i
     return ret
@@ -54,6 +74,7 @@ module NewGamePlusData
   def self.hiddenAbilChance
     return 0 if !$Trainer
     ret = 0
+    # Edit the 0.1 to change multiplier
     ret += (0.1 * $Trainer.newGamePlusCount)
     ret = ret.floor.to_i
     return ret
@@ -62,6 +83,7 @@ module NewGamePlusData
   def self.maxIVChance
     return 0 if !$Trainer
     ret = 200
+    # Edit the 0.2 to change multiplier
     ret *= (1 - (0.2 * $Trainer.newGamePlusCount))
     ret = ret.floor.to_i
     return ret
@@ -70,6 +92,7 @@ module NewGamePlusData
   def self.pkmnIVOffset
     return 0 if !$Trainer
     ret = 0
+    # Edit the 5 to change multiplier
     ret += (5 * $Trainer.newGamePlusCount)
     return ret
   end
@@ -493,6 +516,7 @@ class PokeBattle_Battle
       levelAdjust = levelAdjust**5
       levelAdjust = Math.sqrt(levelAdjust)
       exp *= levelAdjust
+      exp /= $Trainer.newGamePlusCount if $Trainer.newGamePlusCount > 0
       exp = exp.floor
       exp += 1 if isPartic || hasExpShare
     else

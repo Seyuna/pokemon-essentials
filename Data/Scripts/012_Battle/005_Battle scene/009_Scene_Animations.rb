@@ -104,9 +104,15 @@ class PokeBattle_Scene
            @battle.pbGetOwnerIndexFromBattlerIndex(b[0])+1,
            @battle.battlers[b[0]],startBattle,i)
       else
-        sendOutAnim = PokeballPlayerSendOutAnimation.new(@sprites,@viewport,
-           @battle.pbGetOwnerIndexFromBattlerIndex(b[0])+1,
-           @battle.battlers[b[0]],startBattle,i)
+        if @battle.battlers[b[0]].index == 0 && @battle.battlers[b[0]].isSpecies?(:ARENAY)
+          sendOutAnim = FollowerPlayerSendOutAnimation.new(@sprites,@viewport,
+            @battle.pbGetOwnerIndexFromBattlerIndex(b[0])+1,
+            @battle.battlers[b[0]],startBattle,i)
+        else
+          sendOutAnim = PokeballPlayerSendOutAnimation.new(@sprites,@viewport,
+            @battle.pbGetOwnerIndexFromBattlerIndex(b[0])+1,
+            @battle.battlers[b[0]],startBattle,i)
+        end
       end
       dataBoxAnim = DataBoxAppearAnimation.new(@sprites,@viewport,b[0])
       sendOutAnims.push([sendOutAnim,dataBoxAnim,false])
@@ -140,7 +146,11 @@ class PokeBattle_Scene
   def pbRecall(idxBattler)
     @briefMessage = false
     # Recall animation
-    recallAnim = BattlerRecallAnimation.new(@sprites,@viewport,idxBattler)
+    if @battle.battlers[idxBattler].isSpecies?(:ARENAY)
+      recallAnim = FollowerRecallAnimation.new(@sprites,@viewport,idxBattler)
+    else
+      recallAnim = BattlerRecallAnimation.new(@sprites,@viewport,idxBattler)
+    end
     loop do
       recallAnim.update if recallAnim
       pbUpdate
