@@ -504,3 +504,30 @@ class PokeBattle_Move_521 < PokeBattle_Move
     user.pbItemHPHealCheck
   end
 end
+
+#===============================================================================
+# Decreases Accuracy of Every Pokemon on the Field that isn't fairy
+#===============================================================================
+class PokeBattle_Move_522 < PokeBattle_Move
+  def ignoresSubstitute?(user); return true; end
+
+  def pbEffectGeneral(user)
+    @battle.eachBattler do |b|
+      next if b.pbHasType?(:FAIRY)
+      next if user == b
+      b.pbLowerStatStage(PBStats::ACCURACY,1,user)
+    end
+  end
+end
+
+#===============================================================================
+# Randomizies the weather
+#===============================================================================
+class PokeBattle_Move_523 < PokeBattle_Move
+
+  def pbEffectGeneral(user)
+    w = rand(8)
+    @battle.pbDisplay(_INTL("{1} spun the roulette!",user.pbThis))
+    @battle.pbStartWeather(user,w)
+  end
+end
