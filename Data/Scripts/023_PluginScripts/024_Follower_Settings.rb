@@ -407,7 +407,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
       messages = [
         "{1} seems very upset the weather.",
         "{1} is shivering...",
-        "{1} doesn’t seem to like being all wet...",
+        "{1} doesn't seem to like being all wet...",
         "{1} keeps trying to shake itself dry...",
         "{1} moved closer to {2} for comfort.",
         "{1} is looking up at the sky and scowling.",
@@ -419,7 +419,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
       messages = [
         "{1} seems to be enjoying the weather.",
         "{1} seems to be happy about the rain!",
-        "{1} seems to be very surprised that it's raining!",
+        "{1} seems to be very surprised that it is raining!",
         "{1} beamed happily at {2}!",
         "{1} is gazing up at the rainclouds.",
         "Raindrops keep falling on {1}.",
@@ -494,7 +494,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
         "{1} is nipping at the falling snowflakes.",
         "{1} wants to catch a snowflake in its' mouth.",
         "{1} is fascinated by the snow.",
-        "{1}’s teeth are chattering!",
+        "{1}'s teeth are chattering!",
         "{1} made its body slightly smaller because of the cold..."
       ]
     end

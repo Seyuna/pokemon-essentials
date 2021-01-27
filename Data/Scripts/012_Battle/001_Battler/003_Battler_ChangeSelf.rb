@@ -183,6 +183,25 @@ class PokeBattle_Battler
         pbChangeForm(0,_INTL("{1} transformed!",pbThis))
       end
     end
+    #Togekiss
+    if isSpecies?(:TOGEKISS)
+      if hasActiveAbility?(:FORECAST)
+        newForm = 1
+        case @battle.pbWeather
+        when PBWeather::Rain, PBWeather::HeavyRain; newForm = 2
+        when PBWeather::Sun, PBWeather::HarshSun;   newForm = 3
+        when PBWeather::Hail;                       newForm = 4
+        when PBWeather::Sandstorm;                  newForm = 5
+        end
+        if @form!=newForm
+          @battle.pbShowAbilitySplash(self,true)
+          @battle.pbHideAbilitySplash(self)
+          pbChangeForm(newForm,_INTL("{1} transformed!",pbThis))
+        end
+      else
+        pbChangeForm(0,_INTL("{1} transformed!",pbThis))
+      end
+    end
     # Cherrim - Flower Gift
     if isSpecies?(:CHERRIM)
       if hasActiveAbility?(:FLOWERGIFT)

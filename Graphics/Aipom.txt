@@ -1,0 +1,24 @@
+#-------------------------------
+[AIPOM,1]
+FormName = Stacona Form
+Type1 = POISON
+Type2 = FAIRY
+BaseStats = 55,60,65,55,70,65
+Abilities = HEALER,POISONTOUCH
+HiddenAbility = TOXICHEAL
+Moves = 1,POISONSTING,1,TAILWHIP,4,CHARM,8,ASTONISH,11,BATONPASS,15,TOXIC,18,ENCHANTEDSLASH,22,SWIFT,25,BELCH,29,AGILITY,32,DOUBLEHIT,36,FLING,39,COIL,43,GUNKSHOT,48,VENOSHOCK,53,MOONBLAST
+Pokedex = Its tail is connected to its ears, transmitting soundwaves to its ears with great sensitivity. It uses this to listen to sick Pokémon their heartbeat.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[AMBIPOM,1]
+FormName = Stacona Form
+Type1 = POISON
+Type2 = FAIRY
+BaseStats = 110,75,71,60,105,71
+Abilities = HEALER,POISONTOUCH
+HiddenAbility = TOXICHEAL
+Moves = 1,POISONSTING,1,TAILWHIP,1,CHARM,4,CHARM,8,ASTONISH,11,BATONPASS,15,TOXIC,18,ENCHANTEDSLASH,22,SWIFT,25,BELCH,29,AGILITY,32,DOUBLEHIT,36,FLING,39,COIL,43,GUNKSHOT,48,VENOSHOCK,53,MOONBLAST
+Pokedex = It uses one of its tails to listen to sick Pokémon, the other contains a fluid that is also used in the Vial formula for trainers and Pokécenters.
+BattlerPlayerX = 0
+BattlerEnemyY = -2

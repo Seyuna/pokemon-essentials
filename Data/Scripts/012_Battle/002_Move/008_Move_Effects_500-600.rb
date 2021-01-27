@@ -506,9 +506,70 @@ class PokeBattle_Move_521 < PokeBattle_Move
 end
 
 #===============================================================================
+# Clears weather. (Clear Sky)
+#===============================================================================
+class PokeBattle_Move_522 < PokeBattle_WeatherMove
+  def initialize(battle,move)
+    super
+    @weatherType = PBWeather::None
+  end
+end
+
+#===============================================================================
+# Type changes depending on the weather. (Weather Blast)
+#===============================================================================
+class PokeBattle_Move_523 < PokeBattle_Move
+  def pbBaseType(user)
+    ret = getID(PBTypes,:FLYING)
+    case @battle.pbWeather
+    when PBWeather::Sun, PBWeather::HarshSun
+      ret = getConst(PBTypes,:FIRE) || ret
+    when PBWeather::Rain, PBWeather::HeavyRain
+      ret = getConst(PBTypes,:WATER) || ret
+    when PBWeather::Sandstorm
+      ret = getConst(PBTypes,:ROCK) || ret
+    when PBWeather::Hail
+      ret = getConst(PBTypes,:ICE) || ret
+    end
+    return ret
+  end
+
+  def pbShowAnimation(id,user,targets,hitNum=0,showAnimation=true)
+    t = pbBaseType(user)
+    hitNum = 1 if isConst?(t,PBTypes,:FIRE)   # Type-specific anims
+    hitNum = 2 if isConst?(t,PBTypes,:WATER)
+    hitNum = 3 if isConst?(t,PBTypes,:ROCK)
+    hitNum = 4 if isConst?(t,PBTypes,:ICE)
+    super
+  end
+end
+
+#===============================================================================
+# Power is doubled when there is no weather. (Clear Shot)
+#===============================================================================
+class PokeBattle_Move_524 < PokeBattle_Move
+  def pbBaseDamage(baseDmg,user,target)
+    baseDmg *= 2 if @battle.pbWeather==PBWeather::None
+    return baseDmg
+  end
+end
+
+#===============================================================================
+# Randomizies the weather
+#===============================================================================
+class PokeBattle_Move_525 < PokeBattle_Move
+
+  def pbEffectGeneral(user)
+    w = rand(5)
+    @battle.pbDisplay(_INTL("{1} spun the roulette!",user.pbThis))
+    @battle.pbStartWeather(user,w)
+  end
+end
+
+#===============================================================================
 # Decreases Accuracy of Every Pokemon on the Field that isn't fairy
 #===============================================================================
-class PokeBattle_Move_522 < PokeBattle_Move
+class PokeBattle_Move_526 < PokeBattle_Move
   def ignoresSubstitute?(user); return true; end
 
   def pbEffectGeneral(user)
@@ -517,17 +578,5 @@ class PokeBattle_Move_522 < PokeBattle_Move
       next if user == b
       b.pbLowerStatStage(PBStats::ACCURACY,1,user)
     end
-  end
-end
-
-#===============================================================================
-# Randomizies the weather
-#===============================================================================
-class PokeBattle_Move_523 < PokeBattle_Move
-
-  def pbEffectGeneral(user)
-    w = rand(8)
-    @battle.pbDisplay(_INTL("{1} spun the roulette!",user.pbThis))
-    @battle.pbStartWeather(user,w)
   end
 end

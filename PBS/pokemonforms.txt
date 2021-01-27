@@ -1487,7 +1487,7 @@ BattlerPlayerX = 5
 BattlerPlayerY = 34
 BattlerEnemyX = 4
 BattlerEnemyY = 39
-Evolutions = SLOWKING,Item,SOULSTONE,SLOWKING,Item,SOULSTONE
+Evolutions = SLOWBRO,Item,GALARICACUFF,SLOWKING,Item,SOULSTONE
 #-------------------------------
 [SLOWBRO,1]
 FormName = Galar Form
@@ -2861,5 +2861,127 @@ Abilities = STENCH
 HiddenAbility = STURDY
 Moves = 1,WRAP,1,LICK,5,BITE,9,ROCKPOLISH,12,POISONTAIL,16,SCREECH,20,ROCKTAIL,23,GLARE,25,POWERGEM,27,POISONFANG,31,ROCKSLIDE,34,GASTROACID,38,STEALTHROCK,42,POISONJAB,45,CRUNCH,49,COIL,53,ACCELEROCK,55,ASBESTOSLAM
 Pokedex = Using their essence they hunt on small prey that pass out from it. They try to avoid Staconan Zangoose.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[TOGEPI,1]
+FormName = Stacona Form
+Type1 = FLYING
+BaseStats = 20,20,65,40,35,65
+Abilities = CLOUDNINE,TRACE
+Moves = 1,CLEARSHOT,1,DEFOG,5,METRONOME,9,GUST,13,YAWN,17,CLEARSKY,21,AIRSLASH,25,BESTOW,29,WISH,33,ANCIENTPOWER,37,SAFEGUARD,41,BATONPASS,45,CLEARSHOT,49,LASTRESORT,53,ROOST,65,THUNDER
+Pokedex = Its cloudlike body changes color based on its emotions. It is usually seen with a rainbow, as it gets overly exited about everything.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[TOGETIC,1]
+FormName = Stacona Form
+Type1 = FLYING
+BaseStats = 40,85,40,80,105,55
+Abilities = CLOUDNINE,TRACE
+Moves = 0,WEATHERBALL,1,CLEARSHOT,1,DEFOG,5,METRONOME,9,GUST,13,YAWN,17,CLEARSKY,21,AIRSLASH,25,BESTOW,27,ROOST,29,WISH,33,ANCIENTPOWER,35,SANDSTORM,35,HAIL,35,SUNNYDAY,35,RAINDANCE,37,SAFEGUARD,41,BATONPASS,45,CLEARSHOT,49,LASTRESORT,53,ROOST,60,ICEBEAM,60,FLAMETHROWER,60,WATERPULSE,60,POWERGEM,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
+Pokedex = By manipulating light and moisture in the air it creates rainbows. It has been said that when you spot a Staconan Togetic's rainbow it's a sign of good luck!
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[TOGEKISS,1]
+FormName = Stacona Form
+Type1 = FLYING
+BaseStats = 90,60,90,95,110,100
+Abilities = FORECAST
+Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
+Pokedex = It is very adaptive and changes its form to match the weather. It likes to hide in clouds, as it camouflages really well inside.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[TOGEKISS,2]
+FormName = Rainy
+Type1 = FLYING
+Type2 = WATER
+BaseStats = 90,60,90,95,110,100
+Abilities = FORECAST
+Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
+Pokedex = It is very adaptive and changes its form to match the weather. The rain it produces is said to have magical effects if you drink it.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[TOGEKISS,3]
+FormName = Sunny
+Type1 = FLYING
+Type2 = FIRE
+BaseStats = 90,60,90,95,110,100
+Abilities = FORECAST
+Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
+Pokedex = It is very adaptive and changes its form to match the weather. The light behind it seems to be an illusion, as it will always show behind it.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[TOGEKISS,4]
+FormName = Hailing
+Type1 = FLYING
+Type2 = ICE
+BaseStats = 90,60,90,95,110,100
+Abilities = FORECAST
+Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
+Pokedex = It is very adaptive and changes its form to match the weather. The ice it creates will always melt before reaching the ground for some reason.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[TOGEKISS,5]
+FormName = Sandy
+Type1 = FLYING
+Type2 = ROCK
+BaseStats = 90,60,90,95,110,100
+Abilities = FORECAST
+Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
+Pokedex = It is very adaptive and changes its form to match the weather. It can freely manipulate the sand around it in order to fit through small gaps in caves.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[SENTRET,1]
+FormName = Stacona Form
+Type1 = NORMAL
+Type2 = FAIRY
+BaseStats = 34,35,20,35,46,45
+Abilities = CUTECHARM,FRISK
+HiddenAbility = MAGICGUARD
+Moves = 1,SCRATCH,1,CHARM,4,BABYDOLLEYES,7,QUICKATTACK,13,SWEETKISS,16,ATTRACT,19,DECORATE,25,UPROAR,28,REST,31,TAILSLAP,36,AMNESIA,39,PLAYROUGH,42,MOONLIGHT,47,HYPERVOICE,55,MOONBLAST
+Pokedex = Using its fluffy tail it can catch and trap small prey, it keeps them trapped for later to snack on.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[FURRET,1]
+FormName = Stacona Form
+Type1 = NORMAL
+Type2 = FAIRY
+BaseStats = 74,45,45,90,96,75
+Abilities = CUTECHARM,FRISK
+HiddenAbility = MAGICGUARD
+Moves =0,HEARTSTAMP,1,SCRATCH,1,CHARM,1,BABYDOLLEYES,1,QUICKATTACK,4,BABYDOLLEYES,7,QUICKATTACK,13,SWEETKISS,17,ATTRACT,21,DECORATE,28,UPROAR,32,REST,36,TAILSLAP,42,AMNESIA,46,PLAYROUGH,50,MOONLIGHT,56,HYPERVOICE,61,MOONBLAST
+Pokedex = It slaps its tail on the ground to mimic the sound of the rain so that small underground prey come out of the ground.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[AIPOM,1]
+FormName = Stacona Form
+Type1 = POISON
+Type2 = FAIRY
+BaseStats = 55,60,65,55,70,65
+Abilities = HEALER,POISONTOUCH
+HiddenAbility = REGENERATOR
+Moves = 1,POISONSTING,1,TAILWHIP,4,CHARM,8,ASTONISH,11,BATONPASS,15,TOXIC,18,ENCHANTEDSLASH,22,SWIFT,25,BELCH,29,AGILITY,32,DOUBLEHIT,36,FLING,39,COIL,43,GUNKSHOT,48,VENOSHOCK,53,MOONBLAST
+Pokedex = Its tail is connected to its ears, transmitting soundwaves to its ears with great sensitivity. It uses this to listen to the heartbeat of sick Pokémon.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[AMBIPOM,1]
+FormName = Stacona Form
+Type1 = POISON
+Type2 = FAIRY
+BaseStats = 110,75,71,60,105,71
+Abilities = HEALER,POISONTOUCH
+HiddenAbility = REGENERATOR
+Moves = 1,POISONSTING,1,TAILWHIP,1,CHARM,4,CHARM,8,ASTONISH,11,BATONPASS,15,TOXIC,18,ENCHANTEDSLASH,22,SWIFT,25,BELCH,29,AGILITY,32,DOUBLEHIT,36,FLING,39,COIL,43,GUNKSHOT,48,VENOSHOCK,53,MOONBLAST
+Pokedex = It uses one of its tails to listen to sick Pokémon, the other contains a fluid that is also used in the Vial formula for trainers and Pokécenters.
 BattlerPlayerX = 0
 BattlerEnemyY = -2
