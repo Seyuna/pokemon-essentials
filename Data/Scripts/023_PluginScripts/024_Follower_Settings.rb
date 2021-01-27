@@ -419,7 +419,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
       messages = [
         "{1} seems to be enjoying the weather.",
         "{1} seems to be happy about the rain!",
-        "{1} seems to be very surprised that it’s raining!",
+        "{1} seems to be very surprised that it's raining!",
         "{1} beamed happily at {2}!",
         "{1} is gazing up at the rainclouds.",
         "Raindrops keep falling on {1}.",

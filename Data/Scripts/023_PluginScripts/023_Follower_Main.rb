@@ -539,7 +539,7 @@ class PokeballPlayerSendOutAnimation < PokeBattle_Animation
     @idxOrder       = idxOrder
     @trainer        = @battler.battle.pbGetOwnerFromBattlerIndex(@battler.index)
     @followAnim     = false
-    @followAnim     = true if $PokemonTemp.dependentEvents.refresh_sprite(false,true) && battler.index == 0 && startBattle
+    @followAnim     = true if $PokemonTemp.dependentEvents.refresh_sprite(false,true) && $Trainer.party[0].isSpecies?(:ARENAY) && startBattle
     sprites["pokemon_#{battler.index}"].visible = false
     @shadowVisible = sprites["shadow_#{battler.index}"].visible
     sprites["shadow_#{battler.index}"].visible = false
@@ -997,7 +997,7 @@ end
 
 # Update the Passage method for bridge and ice sliding
 def pbTestPass(follower,x,y,direction=nil)
-  ret = $MapFactory.isPassable?(follower.map.map_id,x,y,follower)
+  ret = $MapFactory.isPassableStrict?(follower.map.map_id,x,y,follower)
   if defined?(PBTerrain::StairLeft) && ($MapFactory.getTerrainTag(follower.map.map_id,x,y)==PBTerrain::StairLeft ||$MapFactory.getTerrainTag(follower.map.map_id,x,y)==PBTerrain::StairRight)
     return true
   end
@@ -1033,8 +1033,8 @@ class DependentEvents
       end
     end
     facings=[facingDirection] # Get facing from behind
-    #facings.push([0,0,4,0,8,0,2,0,6][d]) # Get right facing
-    #facings.push([0,0,6,0,2,0,8,0,4][d]) # Get left facing
+    facings.push([0,0,4,0,8,0,2,0,6][d]) # Get right facing
+    facings.push([0,0,6,0,2,0,8,0,4][d]) # Get left facing
     if !leaderIsTrueLeader
       facings.push(d) # Get forward facing
     end
@@ -1069,7 +1069,7 @@ class DependentEvents
           # If the tile isn't passable and the tile is a ledge,
           # get tile from further behind
           tile=$MapFactory.getFacingTileFromPos(tile[0],tile[1],tile[2],facing)
-          passable= tile && $MapFactory.isPassableStrict?(tile[0],tile[1],tile[2],follower)
+          passable= tile && $MapFactory.isPassable?(tile[0],tile[1],tile[2],follower)
           if passable && !$PokemonGlobal.surfing
             passable=!PBTerrain.isWater?($MapFactory.getTerrainTag(tile[0],tile[1],tile[2]))
           end
@@ -1155,6 +1155,7 @@ class DependentEvents
     end
   end
 
+
   #Fix follower not being in the same spot upon save
   def pbMapChangeMoveDependentEvents
     return
@@ -1195,11 +1196,10 @@ class Scene_Map
     follow_transfer(cancelVehicles)
     events=$PokemonGlobal.dependentEvents
     $PokemonTemp.dependentEvents.updateDependentEvents
-    leader=$game_player
     for i in 0...events.length
-      event=$PokemonTemp.dependentEvents.realEvents[i]
+      event = $PokemonTemp.dependentEvents.realEvents[i]
       $PokemonTemp.dependentEvents.come_back(false)
-      $PokemonTemp.dependentEvents.pbFollowEventAcrossMaps(leader,event,false,i==0)
+      $PokemonTemp.dependentEvents.pbFollowEventAcrossMaps($game_player,event,false,i==0)
     end
   end
 end
