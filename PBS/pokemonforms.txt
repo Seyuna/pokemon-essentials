@@ -2895,17 +2895,6 @@ BattlerPlayerX = 0
 BattlerEnemyY = -2
 #-------------------------------
 [TOGEKISS,2]
-FormName = Rainy
-Type1 = FLYING
-Type2 = WATER
-BaseStats = 90,60,90,95,110,100
-Abilities = FORECAST
-Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
-Pokedex = It is very adaptive and changes its form to match the weather. The rain it produces is said to have magical effects if you drink it.
-BattlerPlayerX = 0
-BattlerEnemyY = -2
-#-------------------------------
-[TOGEKISS,3]
 FormName = Sunny
 Type1 = FLYING
 Type2 = FIRE
@@ -2913,6 +2902,17 @@ BaseStats = 90,60,90,95,110,100
 Abilities = FORECAST
 Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
 Pokedex = It is very adaptive and changes its form to match the weather. The light behind it seems to be an illusion, as it will always show behind it.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[TOGEKISS,3]
+FormName = Rainy
+Type1 = FLYING
+Type2 = WATER
+BaseStats = 90,60,90,95,110,100
+Abilities = FORECAST
+Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
+Pokedex = It is very adaptive and changes its form to match the weather. The rain it produces is said to have magical effects if you drink it.
 BattlerPlayerX = 0
 BattlerEnemyY = -2
 #-------------------------------
