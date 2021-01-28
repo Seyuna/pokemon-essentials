@@ -81,6 +81,398 @@ FormName = ?????
 [UNOWN,27]
 FormName = !!!!!
 #-------------------------------
+[UNOWN,28]
+FormName = Staconan AAA
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,29]
+FormName = Staconan BBB
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,30]
+FormName = Staconan CCC
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,31]
+FormName = Staconan DDD
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,32]
+FormName = Staconan EEE
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,33]
+FormName = Staconan FFF
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,34]
+FormName = Staconan GGG
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,35]
+FormName = Staconan HHH
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,36]
+FormName = Staconan III
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,37]
+FormName = Staconan JJJ
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,38]
+FormName = Staconan KKK
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,39]
+FormName = Staconan LLL
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,40]
+FormName = Staconan MMM
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,41]
+FormName = Staconan NNN
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,42]
+FormName = Staconan OOO
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,43]
+FormName = Staconan PPP
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,44]
+FormName = Staconan QQQ
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,45]
+FormName = Staconan RRR
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,46]
+FormName = Staconan SSS
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,47]
+FormName = Staconan TTT
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,48]
+FormName = Staconan UUU
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,49]
+FormName = Staconan VVV
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,50]
+FormName = Staconan WWW
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,51]
+FormName = Staconan XXX
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,52]
+FormName = Staconan YYY
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,53]
+FormName = Staconan ZZZ
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,54]
+FormName = Staconan ???
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
+[UNOWN,55]
+FormName = Staconan !!!
+Type1 = PSYCHIC
+Type2 = ROCK
+BaseStats = 75,75,75,75,75,75
+Abilities = LEVITATE
+Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
+Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
+BattlerPlayerX = -4
+BattlerPlayerY = -4
+BattlerEnemyX = -2
+BattlerEnemyY = 2
+BattlerShadowX = 0
+#-------------------------------
 [CASTFORM,1]
 FormName = Sunny Form
 Type1 = FIRE
@@ -99,6 +491,14 @@ BattlerShadowSize = 2
 FormName = Snowy Form
 Type1 = ICE
 Color = White
+BattlerPlayerX = -1
+BattlerEnemyX = 0
+BattlerShadowSize = 2
+#-------------------------------
+[CASTFORM,4]
+FormName = Sandstorm Form
+Type1 = ROCK
+Color = Brown
 BattlerPlayerX = -1
 BattlerEnemyX = 0
 BattlerShadowSize = 2
@@ -2175,6 +2575,7 @@ BattlerPlayerX = 1
 BattlerPlayerY = -6
 BattlerEnemyX = 0
 BattlerEnemyY = 20
+Evolutions = DUNDRAKE,Level,36
 #-------------------------------
 [MAREEP,1]
 FormName = Stacona Form
@@ -2985,5 +3386,45 @@ Abilities = HEALER,POISONTOUCH
 HiddenAbility = REGENERATOR
 Moves = 1,POISONSTING,1,TAILWHIP,1,CHARM,4,CHARM,8,ASTONISH,11,BATONPASS,15,TOXIC,18,ENCHANTEDSLASH,22,SWIFT,25,BELCH,29,AGILITY,32,DOUBLEHIT,36,FLING,39,COIL,43,GUNKSHOT,48,VENOSHOCK,53,MOONBLAST
 Pokedex = It uses one of its tails to listen to sick Pokémon, the other contains a fluid that is also used in the Vial formula for trainers and Pokécenters.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[AZURILL,1]
+FormName = Stacona Form
+Type1 = FIGHTING
+BaseStats = 20,50,50,5,20,45
+Abilities = VITALSPIRIT,STURDY
+HiddenAbility = KEENEYE
+Moves = 1,ENDURE,1,ROCKSMASH,2,FOCUSENERGY,5,BULKUP,7,TRIPLEKICK,10,MATBLOCK,13,STORMTHROW,16,DETECT,20,COUNTER,23,BOUNCE
+Weight = 18.2
+Color = Red
+Pokedex = From birth these Pokémon try to balance on their tail. When they fall their parents have to help them as their center of mass is in their tail and they cant get up on themselves.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[MARILL,1]
+FormName = Stacona Form
+Type1 = FIGHTING
+BaseStats = 55,70,60,5,20,40
+Abilities = VITALSPIRIT,STURDY
+HiddenAbility = ANGERPOINT
+Moves = 0,QUICKPARRY,1,ENDURE,1,POUND,1,ROCKSMASH,2,FOCUSENERGY,5,BULKUP,7,TRIPLEKICK,10,MATBLOCK,10,SMACKDOWN,13,STORMTHROW,16,DETECT,20,COUNTER,23,HEAVYSLAM,28,STEALTHROCK,31,POWERUPPUNCH,37,SUPERPOWER,40,BODYPRESS,45,SHATTER
+Weight = 25.4
+Color = Red
+Pokedex = By balancing on its tail it withstands huge windpressures. Many fighting type Pokémon use Staconan Marill as a punching bag, as it will almost never fall over.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[AZUMARILL,1]
+FormName = Stacona Form
+Type1 = FIGHTING
+Type2 = ROCK
+BaseStats = 90,110,95,5,50,60
+Abilities = SOLIDROCK,STURDY
+HiddenAbility = ANGERPOINT
+Moves = 0,STONEEDGE,1,QUICKPARRY,1,ENDURE,1,POUND,1,ROCKSMASH,2,FOCUSENERGY,5,BULKUP,7,TRIPLEKICK,10,MATBLOCK,10,SMACKDOWN,13,STORMTHROW,16,DETECT,21,COUNTER,25,HEAVYSLAM,31,STEALTHROCK,35,POWERUPPUNCH,42,SUPERPOWER,46,BODYPRESS,50,SHATTER
+Weight = 431.2
+Color = Red
+Pokedex = It has mastered the ability to balance on its tail, as a result its tail has become almost rock-like. Gyms like to have Azumarill around to train with, altough moving it is a hassle sometimes.
 BattlerPlayerX = 0
 BattlerEnemyY = -2

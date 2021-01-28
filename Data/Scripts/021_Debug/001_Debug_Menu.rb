@@ -119,6 +119,8 @@ def pbDebugMenuCommands(showall=true)
        _INTL("Choose an item and a quantity of it to add to the Bag."))
     commands.add("itemsmenu","fillbag",_INTL("Fill Bag"),
        _INTL("Add a certain number of every item to the Bag."))
+    commands.add("itemsmenu","addAllCellulose",_INTL("Add All Cellulose"),
+          _INTL("Adds 1 of each cellulose to the Bag."))
     commands.add("itemsmenu","emptybag",_INTL("Empty Bag"),
        _INTL("Remove all items from the Bag."))
 
@@ -505,6 +507,13 @@ def pbDebugMenuActions(cmd="",sprites=nil,viewport=nil)
         end
       end
     }
+  when "addAllCellulose"
+    cellArray = [:FIRECELL,:WATERCELL,:GRASSCELL,:ELECCELL,:FLYCELL,:DARKCELL,:PSYCELL,:FAIRYCELL,
+                  :DRAGONCELL,:ROCKCELL,:GROUNDCELL,:STEELCELL,:ICECELL,:GHOSTCELL,:FIGHTCELL,:BUGCELL,:POISONCELL]
+    for i in cellArray
+      $PokemonBag.pbStoreItem(i,1)
+    end
+    pbMessage(_INTL("The Bag was filled with 1 of each cellulose."))
   when "fillbag"
     params = ChooseNumberParams.new
     params.setRange(1,BAG_MAX_PER_SLOT)
