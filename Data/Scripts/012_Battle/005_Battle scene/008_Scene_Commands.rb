@@ -125,12 +125,12 @@ class PokeBattle_Scene
           break if yield -2
           needRefresh = true
         end
-#      elsif Input.trigger?(Input::F5)   # Shift
-#        if cw.shiftMode>0
-#          pbPlayDecisionSE
-#          break if yield -3
-#          needRefresh = true
-#        end
+      elsif Input.trigger?(Input::F5)   # Shift
+        if cw.shiftMode>0
+          pbPlayDecisionSE
+          break if yield -3
+          needRefresh = true
+        end
       end
     end
     @lastMove[idxBattler] = cw.index

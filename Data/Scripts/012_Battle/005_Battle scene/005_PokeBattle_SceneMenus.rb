@@ -276,18 +276,18 @@ class FightMenuDisplay < BattleMenuBase
       @typeIcon.src_rect.height = TYPE_ICON_HEIGHT
       addSprite("typeIcon",@typeIcon)
       # Create Mega Evolution button
-      #@megaButton = SpriteWrapper.new(viewport)
-      #@megaButton.bitmap = @megaEvoBitmap.bitmap
-      #@megaButton.x      = self.x+146
-      #@megaButton.y      = self.y-@megaEvoBitmap.height/2
-      #@megaButton.src_rect.height = @megaEvoBitmap.height/2
-      #addSprite("megaButton",@megaButton)
+      @megaButton = SpriteWrapper.new(viewport)
+      @megaButton.bitmap = @megaEvoBitmap.bitmap
+      @megaButton.x      = self.x+146
+      @megaButton.y      = self.y-@megaEvoBitmap.height/2
+      @megaButton.src_rect.height = @megaEvoBitmap.height/2
+      addSprite("megaButton",@megaButton)
       # Create Shift button
-      #@shiftButton = SpriteWrapper.new(viewport)
-      #@shiftButton.bitmap = @shiftBitmap.bitmap
-      #@shiftButton.x      = self.x+4
-      #@shiftButton.y      = self.y-@shiftBitmap.height
-      #addSprite("shiftButton",@shiftButton)
+      @shiftButton = SpriteWrapper.new(viewport)
+      @shiftButton.bitmap = @shiftBitmap.bitmap
+      @shiftButton.x      = self.x+4
+      @shiftButton.y      = self.y-@shiftBitmap.height
+      addSprite("shiftButton",@shiftButton)
     else
       # Create message box (shows type and PP of selected move)
       @msgBox = Window_AdvancedTextPokemon.newWithSize("",
@@ -409,15 +409,6 @@ class FightMenuDisplay < BattleMenuBase
     # Type icon
     #thundaga move type, improved by GolisopodUser
     @typeIcon.src_rect.y = move.pbCalcType(@battler)*TYPE_ICON_HEIGHT
-=begin
-    if isConst?(move.type,PBTypes,:QMARKS)
-      @typeIcon.src_rect.y = @battler.type1*TYPE_ICON_HEIGHT
-    elsif isConst?(move.id,PBMoves,:AURAWHEEL) && @battler.form==1
-      @typeIcon.src_rect.y = @battler.type2*TYPE_ICON_HEIGHT
-    else
-      @typeIcon.src_rect.y = move.type*TYPE_ICON_HEIGHT
-    end
-=end
     # PP text
     if move.totalpp>0
       ppFraction = [(4.0*move.pp/move.totalpp).ceil,3].min
@@ -431,14 +422,24 @@ class FightMenuDisplay < BattleMenuBase
 
   def refreshMegaEvolutionButton
     return if !USE_GRAPHICS
-    #@megaButton.src_rect.y = (@mode-1)*@megaEvoBitmap.height/2
-    #@megaButton.z          = self.z - 1
+    if @mode == 0
+      @megaButton.src_rect.height = 0
+    else
+      @megaButton.src_rect.height = (@shiftBitmap.height)/2
+    end
+    @megaButton.src_rect.y = (@mode-1)*@megaEvoBitmap.height/2
+    @megaButton.z          = self.z - 1
   end
 
   def refreshShiftButton
     return if !USE_GRAPHICS
-    #@shiftButton.src_rect.y = (@shiftMode-1)*@shiftBitmap.height
-    #@shiftButton.z          = self.z - 1
+    if @shiftMode == 0
+      @shiftButton.src_rect.height = 0
+    else
+      @shiftButton.src_rect.height = (@shiftBitmap.height)
+    end
+    @shiftButton.src_rect.y = (@shiftMode-1)*@shiftBitmap.height
+    @shiftButton.z          = self.z - 1
   end
 
   def refresh
