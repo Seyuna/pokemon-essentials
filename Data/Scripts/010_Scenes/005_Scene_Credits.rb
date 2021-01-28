@@ -126,7 +126,7 @@ _END_
     plugin_credits = ""
     PluginManager.plugins.each do |plugin|
       pcred = PluginManager.credits(plugin)
-      plugin_credits << "\"#{plugin}\" version #{PluginManager.version(plugin)}\n"
+      plugin_credits << "\"#{plugin}\"\n"
       if pcred.size >= 5
         plugin_credits << pcred[0] + "\n"
         i = 1
