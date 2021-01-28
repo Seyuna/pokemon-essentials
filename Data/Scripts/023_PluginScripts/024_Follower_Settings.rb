@@ -180,16 +180,16 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
         end
       elsif pbConfirmMessage(_INTL("If the mail is removed, its message will be lost. OK?"))
         $PokemonBag.pbStoreItem(pkmn.item)
-        itemname = PBItems.getName(pkmn.item)
+        itemname = PBItems.getName(oldItem)
         pbMessage(_INTL("Received the {1} from {2}.",itemname,pkmn.name))
         pkmn.setItem(0)
         ret = true
         pkmn.mail = nil
       end
     else
+      itemname = PBItems.getName(oldItem)
       pbMessage(_INTL("Received the {1} from {2}.",itemname,pkmn.name))
       $PokemonBag.pbStoreItem(pkmn.item)
-      itemname = PBItems.getName(pkmn.item)
       pkmn.setItem(0)
       ret = true
     end
