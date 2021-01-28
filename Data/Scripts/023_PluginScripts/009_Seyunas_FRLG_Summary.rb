@@ -453,7 +453,7 @@ class PokemonSummary_Scene
     ]
     pbDrawTextPositions(overlay,textPos)
     pbDrawImagePositions(overlay,imgPos)
-    drawTextEx(overlay,12,195,212,5,pbGetMessage(MessageTypes::MoveDescriptions,moveid),@basecolor,@shadowcolor)
+    drawFormattedTextEx(overlay,12,195,218,pbGetMessage(MessageTypes::MoveDescriptions,moveid),@basecolor,@shadowcolor,26)
   end
 
   def drawMoveSelection(moveToLearn)
