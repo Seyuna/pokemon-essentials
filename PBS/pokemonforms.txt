@@ -86,392 +86,336 @@ FormName = Staconan AAA
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,29]
 FormName = Staconan BBB
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,30]
 FormName = Staconan CCC
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,31]
 FormName = Staconan DDD
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,32]
 FormName = Staconan EEE
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,33]
 FormName = Staconan FFF
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,34]
 FormName = Staconan GGG
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,35]
 FormName = Staconan HHH
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,36]
 FormName = Staconan III
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,37]
 FormName = Staconan JJJ
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,38]
 FormName = Staconan KKK
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,39]
 FormName = Staconan LLL
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,40]
 FormName = Staconan MMM
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,41]
 FormName = Staconan NNN
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,42]
 FormName = Staconan OOO
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,43]
 FormName = Staconan PPP
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,44]
 FormName = Staconan QQQ
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,45]
 FormName = Staconan RRR
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,46]
 FormName = Staconan SSS
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,47]
 FormName = Staconan TTT
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,48]
 FormName = Staconan UUU
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,49]
 FormName = Staconan VVV
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,50]
 FormName = Staconan WWW
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,51]
 FormName = Staconan XXX
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,52]
 FormName = Staconan YYY
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,53]
 FormName = Staconan ZZZ
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,54]
 FormName = Staconan ???
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [UNOWN,55]
 FormName = Staconan !!!
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
-Abilities = LEVITATE
 Moves = 1,ANCIENTPOWER,1,STOREDPOWER,1,HIDDENPOWER,1,SACREDPOWER
 Pokedex = According to archeologists if all of the Staconan Unown were to connect in a specific order, it would read Arceus' manuscript in runic.
 BattlerPlayerX = -4
 BattlerPlayerY = -4
 BattlerEnemyX = -2
 BattlerEnemyY = 2
-BattlerShadowX = 0
 #-------------------------------
 [CASTFORM,1]
 FormName = Sunny Form
@@ -2416,153 +2360,86 @@ BattlerEnemyY = 12
 FormName = Fire Cell Form
 Type1 = FIRE
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,2]
 FormName = Water Cell Form
 Type1 = WATER
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,3]
 FormName = Grass Cell Form
 Type1 = GRASS
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,4]
 FormName = Flying Cell Form
 Type1 = FLYING
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,5]
 FormName = Steel Cell Form
 Type1 = STEEL
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,6]
 FormName = Electric Cell Form
 Type1 = ELECTRIC
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,7]
 FormName = Ice Cell Form
 Type1 = ICE
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,8]
 FormName = Psychic Cell Form
 Type1 = PSYCHIC
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,9]
 FormName = Bug Cell Form
 Type1 = BUG
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,10]
 FormName = Ground Cell Form
 Type1 = GROUND
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,11]
 FormName = Poison Cell Form
 Type1 = POISON
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,12]
 FormName = Pure Dragon Form
 Type1 = DRAGON
 BaseStats = 103,125,80,125,105,90
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,13]
 FormName = Fighting Cell Form
 Type1 = FIGHTING
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,14]
 FormName = Rock Cell Form
 Type1 = ROCK
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,15]
 FormName = Ghost Cell Form
 Type1 = GHOST
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,16]
 FormName = Dark Cell Form
 Type1 = DARK
 Type2 = DRAGON
-BattlerPlayerY = 0
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DRAGAIA,17]
 FormName = Fairy Cell Form
 Type1 = FAIRY
 Type2 = DRAGON
-BattlerEnemyX = 0
-BattlerEnemyY = 4
-BattlerShadowSize = 2
 #-------------------------------
 [DUNSPARCE,1]
 FormName = Stacona Form
@@ -2634,49 +2511,35 @@ BattlerEnemyY = 12
 FormName = Fire Cell Form
 Type1 = FIRE
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,2]
 FormName = Water Cell Form
 Type1 = WATER
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,3]
 FormName = Grass Cell Form
 Type1 = GRASS
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,4]
 FormName = Flying Cell Form
 Type1 = FLYING
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,5]
 FormName = Pure Steel Form
 Type1 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,6]
 FormName = Electric Cell Form
 Type1 = ELECTRIC
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,7]
 FormName = Ice Cell Form
 Type1 = ICE
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,8]
 FormName = Psychic Cell Form
@@ -2689,63 +2552,46 @@ BattlerEnemyY = 20
 FormName = Bug Cell Form
 Type1 = BUG
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,10]
 FormName = Ground Cell Form
 Type1 = GROUND
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,11]
 FormName = Poison Cell Form
 Type1 = POISON
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,12]
 FormName = Dragon Cell Form
 Type1 = DRAGON
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,13]
 FormName = Fighting Cell Form
 Type1 = FIGHTING
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,14]
 FormName = Rock Cell Form
 Type1 = ROCK
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,15]
 FormName = Ghost Cell Form
 Type1 = GHOST
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,16]
 FormName = Dark Cell Form
 Type1 = DARK
 Type2 = STEEL
-BattlerPlayerY = 0
-BattlerEnemyY = 20
 #-------------------------------
 [PRISMATRIX,17]
 FormName = Fairy Cell Form
 Type1 = FAIRY
 Type2 = STEEL
-BattlerEnemyY = 20
 #-------------------------------
 [SANDILE,1]
 FormName = Stacona Form
@@ -2784,8 +2630,9 @@ Type1 = WATER
 Type2 = STEEL
 HiddenAbility = STEELWORKER
 Moves = 1,MUDSPORT,1,BUBBLE,5,VICEGRIP,9,LEER,11,IRONDEFENSE,15,BUBBLEBEAM,19,MUDSHOT,21,METALCLAW,25,STOMP,29,PROTECT,31,GUILLOTINE,35,IRONHEAD,39,BRINE,41,CRABHAMMER,45,FLAIL,50,FLASHCANNON
-BattlerPlayerY = -6
+BattlerEnemyX = 4
 BattlerEnemyY = 20
+BattlerShadowSize = 3
 #-------------------------------
 [KINGLER,1]
 FormName = Stacona Form
@@ -2793,7 +2640,7 @@ Type1 = WATER
 Type2 = STEEL
 HiddenAbility = STEELWORKER
 Moves = 0,KINGSCLAW,1,MUDSPORT,1,BUBBLE,5,VICEGRIP,9,LEER,11,IRONDEFENSE,15,BUBBLEBEAM,19,MUDSHOT,21,METALCLAW,25,STOMP,29,PROTECT,31,GUILLOTINE,35,IRONHEAD,39,BRINE,41,CRABHAMMER,45,FLAIL,48,KINGSCLAW,50,FLASHCANNON
-BattlerPlayerY = -6
+BattlerPlayerY = -7
 BattlerEnemyX = 2
 BattlerEnemyY = 15
 #-------------------------------
@@ -2827,7 +2674,6 @@ Type1 = DARK
 Type2 = STEEL
 BaseStats = 65,130,100,75,45,50
 Abilities = CLEARBODY,MOLDBREAKER
-HiddenAbility = JUSTIFIED
 Moves = 0,METALCLAW,1,SCRATCH,1,FEINT,4,LEER,9,QUICKATTACK,12,PURSUIT,15,METALCLAW,17,TAUNT,20,BITE,23,IRONDEFENSE,25,DOUBLETEAM,28,SLASH,33,SWORDSDANCE,36,FUTURESIGHT,38,IRONHEAD,41,NIGHTSLASH,44,DETECT,47,IRONTAIL,49,PSYCHOCUT,52,SUCKERPUNCH,57,RAZORWIND,60,FLASHCANNON,65,PERISHSONG
 BattlerPlayerY = -6
 BattlerEnemyX = 5
@@ -3038,8 +2884,8 @@ HiddenAbility = STORMDRAIN
 Moves = 1,POUND,1,LEECHSEED,1,INGRAIN,1,BRICKBREAK
 Color = Green
 Pokedex = Upon birth Staconan Tyrogue create pots to live in out of earth. They learn to hunt from other Pokémon.
-BattlerEnemyX = 0
-BattlerEnemyY = 20
+BattlerEnemyX = -2
+BattlerEnemyY = 17
 #-------------------------------
 [HITMONLEE,1]
 FormName = Stacona Form
@@ -3051,8 +2897,10 @@ HiddenAbility = STORMDRAIN
 Moves = 0,NEEDLEARM,1,REVENGE,1,DOUBLEKICK,5,MEDITATE,9,ROLLINGKICK,13,JUMPKICK,17,BRICKBREAK,21,FOCUSENERGY,25,PINMISSILE,29,HIGHJUMPKICK,33,MINDREADER,37,GIGADRAIN,41,WIDEGUARD,45,TROPKICK,49,ENDURE,53,MEGAKICK,57,CLOSECOMBAT,61,REVERSAL
 Color = Green
 Pokedex = Staconan Hitmonlee are very terretorial and are highly agressive to those who go near it. It is dangerous to the touch with its super sharp needles.
-BattlerEnemyX = 0
-BattlerEnemyY = 20
+BattlerEnemyX = -3
+BattlerEnemyY = 10
+BattlerShadowX = -6
+BattlerShadowSize = 3
 #-------------------------------
 [HITMONCHAN,1]
 FormName = Stacona Form
@@ -3064,8 +2912,8 @@ HiddenAbility = STORMDRAIN
 Moves = 0,NEEDLEARM,1,REVENGE,1,COMETPUNCH,6,AGILITY,11,PURSUIT,16,MACHPUNCH,16,BULLETPUNCH,21,PINMISSILE,26,VACUUMWAVE,31,QUICKGUARD,36,GIGADRAIN,41,SKYUPPERCUT,46,MEGAPUNCH,51,DETECT,56,FOCUSPUNCH,61,COUNTER,66,CLOSECOMBAT
 Color = Green
 Pokedex = Staconan Hitmonchan are deemed the most passive Pokémon you can find in the desert, but they can be very dangerous when provoked.
-BattlerEnemyX = 0
-BattlerEnemyY = 20
+BattlerEnemyY = 12
+BattlerShadowSize = 3
 #-------------------------------
 [HITMONTOP,1]
 FormName = Stacona Form
@@ -3078,7 +2926,8 @@ Moves = 0,NEEDLEARM,1,REVENGE,1,ROLLINGKICK,6,FOCUSENERGY,10,PURSUIT,15,QUICKATT
 Color = Green
 Pokedex = Staconan Hitmontop are very rarely seen, this is mostly because they train hidden underground or in caves. The hard floor makes it easier for them to spin on.
 BattlerEnemyX = 0
-BattlerEnemyY = 20
+BattlerEnemyY = 17
+BattlerShadowSize = 3
 #-------------------------------
 [NUMEL,1]
 FormName = Stacona Form
@@ -3090,8 +2939,7 @@ Moves = 1,HAIL,1,SANDSTORM,1,GROWL,1,TACKLE,5,ICYWIND,8,MAGNITUDE,12,FOCUSENERGY
 Color = Brown
 Pokedex = Staconan Numel pokedex entrance goes here
 BattlerPlayerX = 1
-BattlerPlayerY = -4
-BattlerEnemyY = 20
+BattlerEnemyY = 21
 #-------------------------------
 [CAMERUPT,1]
 FormName = Stacona Form
@@ -3102,7 +2950,8 @@ HiddenAbility = THICKFAT
 Moves = 1,HAIL,1,SANDSTORM,1,GROWL,1,TACKLE,1,ICYWIND,1,MAGNITUDE,5,ICYWIND,8,MAGNITUDE,12,FOCUSENERGY,15,AVALANCHE,19,AMNESIA,22,GLACIATE,26,EARTHPOWER,29,CURSE,31,TAKEDOWN,33,ICICLECRASH,39,YAWN,46,EARTHQUAKE,52,ICEBEAM,59,FISSURE,63,BLIZZARD,70,SHEERCOLD
 Color = Brown
 Pokedex = Staconan Camerupt pokedex entrance goes here
-BattlerPlayerY = -5
+BattlerEnemyY = 16
+BattlerShadowX = 2
 #-------------------------------
 [ESPURR,1]
 FormName = Stacona Form
@@ -3111,7 +2960,8 @@ Type2 = PSYCHIC
 Moves = 1,SCRATCH,1,LEER,3,FAKEOUT,6,DISARMINGVOICE,9,CONFUSION,13,SNARL,18,COVET,21,PSYBEAM,24,EMBARGO,30,LIGHTSCREEN,30,REFLECT,33,PSYSHOCK,44,EERIESPELL
 Color = Blue
 Pokedex = Staconan Espurr pokedex entrance goes here
-BattlerEnemyY = 20
+BattlerPlayerY = 0
+BattlerEnemyY = 28
 #-------------------------------
 [MEOWSTIC,1]
 FormName = Stacona Form
@@ -3121,7 +2971,7 @@ HiddenAbility = COMPETITIVE
 Moves = 0,DARKPULSE,1,STOREDPOWER,1,MEFIRST,1,MAGICALLEAF,1,SCRATCH,1,LEER,1,COVET,1,CONFUSION,5,COVET,9,CONFUSION,13,LIGHTSCREEN,17,PSYBEAM,19,FAKEOUT,22,DISARMINGVOICE,25,PSYSHOCK,28,CHARGEBEAM,31,SHADOWBALL,35,EXTRASENSORY,40,PSYCHIC,43,EERIESPELL,45,SIGNALBEAM,48,SUCKERPUNCH,50,NIGHTDAZE,53,STOREDPOWER
 EggMoves = TRICK,YAWN,ASSIST,BARRIER,TICKLE
 Pokedex = Staconan Meowstic pokedex entrance goes here
-BattlerEnemyY = 20
+BattlerEnemyY = 22
 #-------------------------------
 [RALTS,1]
 FormName = Stacona Form
@@ -3133,7 +2983,6 @@ HiddenAbility = NOGUARD
 Moves = 1,LEER,6,CONFUSION,10,SANDATTACK,12,TELEPORT,17,LUCKYCHANT,21,SANDTOMB,23,MUDSPORT,28,CALMMIND,32,PSYCHIC,34,MAGNITUDE,39,FUTURESIGHT,43,SCREECH,45,HYPNOSIS,50,DREAMEATER,54,STOREDPOWER
 Pokedex = It controls the emotions of the Pokémon around it with its horn. It tends to make the lonely Pokémon in caves feel less lonely.
 BattlerPlayerX = 0
-BattlerPlayerY = -5
 BattlerEnemyX = 1
 BattlerEnemyY = 19
 #-------------------------------
@@ -3147,9 +2996,8 @@ HiddenAbility = NOGUARD
 Moves = 1,LEER,1,CONFUSION,1,SANDATTACK,1,TELEPORT,6,CONFUSION,10,SANDATTACK,12,TELEPORT,17,LUCKYCHANT,22,SANDTOMB,25,MUDSPORT,31,CALMMIND,36,PSYCHIC,39,MAGNITUDE,45,FUTURESIGHT,50,SCREECH,53,HYPNOSIS,59,DREAMEATER,64,STOREDPOWER
 Pokedex = Using its crecent shaped horn it helps Pokémon around it feel comfort in caves. It helps sleepless Pokémon get their rest.
 BattlerPlayerX = -2
-BattlerPlayerY = -3
 BattlerEnemyX = 1
-BattlerEnemyY = 12
+BattlerEnemyY = 16
 BattlerShadowSize = 2
 #-------------------------------
 [GARDEVOIR,1]
@@ -3162,9 +3010,8 @@ HiddenAbility = MAGICBOUNCE
 Moves = 0,EARTHPOWER,1,STOREDPOWER,1,HEALINGWISH,1,LEER,1,CONFUSION,1,SANDATTACK,1,TELEPORT,6,CONFUSION,10,SANDATTACK,12,TELEPORT,17,WISH,22,SANDTOMB,25,MUDSPORT,33,CALMMIND,40,PSYCHIC,45,MAGNITUDE,53,FUTURESIGHT,60,SHADOWSNEAK,65,HYPNOSIS,73,DREAMEATER,80,STOREDPOWER,85,HYPERVOICE
 Pokedex = Using its lower body and psychic powers, it can control the layout of their habitat. It can create complex mazes in mere minutes.
 BattlerPlayerX = 0
-BattlerPlayerY = -4
 BattlerEnemyX = -3
-BattlerEnemyY = -1
+BattlerEnemyY = 0
 #-------------------------------
 [GALLADE,1]
 FormName = Stacona Form
@@ -3176,7 +3023,7 @@ HiddenAbility = NOGUARD
 Moves = 0,SACREDSWORD,1,BLAZEKICK,1,NIGHTSLASH,1,LEER,1,CONFUSION,1,SANDATTACK,1,TELEPORT,6,CONFUSION,10,SANDATTACK,12,TELEPORT,17,DRILLRUN,22,SLASH,25,MAGNITUDE,31,SWORDSDANCE,36,DRAINPUNCH,39,SHELLSMASH,45,FEINT,50,FALSESWIPE,53,PROTECT,59,CLOSECOMBAT,64,OUTRAGE
 Pokedex = It can sense the emotions of their opponent and uses it against them in order to beat them.
 BattlerPlayerX = 0
-BattlerPlayerY = -5
+BattlerEnemyY = 7
 #-------------------------------
 [BUDEW,1]
 FormName = Stacona Form
@@ -3189,7 +3036,6 @@ HiddenAbility = FLASHFIRE
 Moves = 1,ABSORB,4,GROWTH,7,EMBER,10,STUNSPORE,13,MEGADRAIN,16,WORRYSEED,20,MAGICALLEAF,22,SUNNYDAY,26,INCINERATE
 WildItemUncommon = CHARCOAL
 BattlerPlayerX = -15
-BattlerPlayerY = -3
 BattlerEnemyX = 3
 BattlerEnemyY = 19
 Evolutions = ROSELIA,Level,16
@@ -3226,7 +3072,8 @@ BaseStats = 35,70,55,25,55,55
 BaseEXP = 60
 Moves = 1,SCRATCH,1,FAIRYWIND,6,STUNSPORE,6,POISONPOWDER,11,LEECHLIFE,17,FURYCUTTER,22,SPORE,27,DRAININGKISS,33,GROWTH,38,GIGADRAIN,43,AROMATHERAPY,49,DAZZLINGGLEAM,54,XSCISSOR
 BattlerPlayerX = 1
-BattlerPlayerY = -3
+BattlerEnemyX = 0
+BattlerShadowSize = 3
 #-------------------------------
 [PARASECT,1]
 FormName = Stacona Form
@@ -3237,9 +3084,8 @@ BaseEXP = 150
 Moves = 1,SCRATCH,1,FAIRYWIND,6,STUNSPORE,6,POISONPOWDER,11,LEECHLIFE,17,FURYCUTTER,22,SPORE,27,DRAININGKISS,33,GROWTH,38,GIGADRAIN,43,AROMATHERAPY,49,DAZZLINGGLEAM,54,XSCISSOR
 Pokedex = A Paras has parasitic tochukaso mushrooms growing on its back. They grow by drawing nutrients from the host. They are valued as a medicine for long life.
 BattlerPlayerX = 2
-BattlerPlayerY = -5
 BattlerEnemyX = -1
-BattlerEnemyY = 19
+BattlerEnemyY = 18
 #-------------------------------
 [ZANGOOSE,1]
 FormName = Stacona Form
@@ -3251,9 +3097,8 @@ HiddenAbility = KLUTZ
 Moves = 1,SCRATCH,1,CHARM,5,QUICKATTACK,8,FURYCUTTER,12,REVENGE,15,SLASH,19,EMBARGO,22,CRUSHCLAW,26,ENCHANTEDSLASH,29,FALSESWIPE,33,MOONLIGHT,36,PLAYROUGH,40,TAUNT,43,SWORDSDANCE,47,CLOSECOMBAT,55,PIXIEPUMMEL
 Pokedex = Staconan Zangoose tend to stay around Staconan Seviper because of their essence, it makes them feel relaxed and numbs their bodies.
 BattlerPlayerX = 0
-BattlerPlayerY = -6
 BattlerEnemyX = 3
-BattlerEnemyY = 20
+BattlerEnemyY = 19
 #-------------------------------
 [SEVIPER,1]
 FormName = Stacona Form
@@ -3265,7 +3110,7 @@ HiddenAbility = STURDY
 Moves = 1,WRAP,1,LICK,5,BITE,9,ROCKPOLISH,12,POISONTAIL,16,SCREECH,20,ROCKTAIL,23,GLARE,25,POWERGEM,27,POISONFANG,31,ROCKSLIDE,34,GASTROACID,38,STEALTHROCK,42,POISONJAB,45,CRUNCH,49,COIL,53,ACCELEROCK,55,ASBESTOSLAM
 Pokedex = Using their essence they hunt on small prey that pass out from it. They try to avoid Staconan Zangoose.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyY = 16
 #-------------------------------
 [TOGEPI,1]
 FormName = Stacona Form
@@ -3275,7 +3120,7 @@ Abilities = CLOUDNINE,TRACE
 Moves = 1,CLEARSHOT,1,DEFOG,5,METRONOME,9,GUST,13,YAWN,17,CLEARSKY,21,AIRSLASH,25,BESTOW,29,WISH,33,ANCIENTPOWER,37,SAFEGUARD,41,BATONPASS,45,CLEARSHOT,49,LASTRESORT,53,ROOST,65,THUNDER
 Pokedex = Its cloudlike body changes color based on its emotions. It is usually seen with a rainbow, as it gets overly exited about everything.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyY = 18
 #-------------------------------
 [TOGETIC,1]
 FormName = Stacona Form
@@ -3285,7 +3130,8 @@ Abilities = CLOUDNINE,TRACE
 Moves = 0,WEATHERBALL,1,CLEARSHOT,1,DEFOG,5,METRONOME,9,GUST,13,YAWN,17,CLEARSKY,21,AIRSLASH,25,BESTOW,27,ROOST,29,WISH,33,ANCIENTPOWER,35,SANDSTORM,35,HAIL,35,SUNNYDAY,35,RAINDANCE,37,SAFEGUARD,41,BATONPASS,45,CLEARSHOT,49,LASTRESORT,53,ROOST,60,ICEBEAM,60,FLAMETHROWER,60,WATERPULSE,60,POWERGEM,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
 Pokedex = By manipulating light and moisture in the air it creates rainbows. It has been said that when you spot a Staconan Togetic's rainbow it's a sign of good luck!
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyY = -3
+BattlerShadowSize = 2
 #-------------------------------
 [TOGEKISS,1]
 FormName = Stacona Form
@@ -3295,7 +3141,8 @@ Abilities = FORECAST
 Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
 Pokedex = It is very adaptive and changes its form to match the weather. It likes to hide in clouds, as it camouflages really well inside.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyY = -5
+BattlerShadowSize = 3
 #-------------------------------
 [TOGEKISS,2]
 FormName = Sunny
@@ -3306,7 +3153,9 @@ Abilities = FORECAST
 Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
 Pokedex = It is very adaptive and changes its form to match the weather. The light behind it seems to be an illusion, as it will always show behind it.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyY = -5
+BattlerShadowX = 3
+BattlerShadowSize = 3
 #-------------------------------
 [TOGEKISS,3]
 FormName = Rainy
@@ -3317,7 +3166,9 @@ Abilities = FORECAST
 Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
 Pokedex = It is very adaptive and changes its form to match the weather. The rain it produces is said to have magical effects if you drink it.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyY = -5
+BattlerShadowX = 5
+BattlerShadowSize = 3
 #-------------------------------
 [TOGEKISS,4]
 FormName = Hailing
@@ -3328,7 +3179,9 @@ Abilities = FORECAST
 Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATTACK,1,ANCIENTPOWER,1,EXTREMESPEED,1,AURASPHERE,1,AIRSLASH,1,SANDSTORM,1,HAIL,1,SUNNYDAY,1,RAINDANCE,75,HYDROPUMP,75,BLIZZARD,75,EARTHPOWER,75,FIREBLAST,80,HURRICANE,80,THUNDER
 Pokedex = It is very adaptive and changes its form to match the weather. The ice it creates will always melt before reaching the ground for some reason.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyY = -5
+BattlerShadowX = 3
+BattlerShadowSize = 3
 #-------------------------------
 [TOGEKISS,5]
 FormName = Sandy
@@ -3340,6 +3193,8 @@ Moves = 0,WEATHERBLAST,0,WEATHERROULETTE,1,CLEARSHOT,1,DEFOG,1,CLEARSKY,1,SKYATT
 Pokedex = It is very adaptive and changes its form to match the weather. It can freely manipulate the sand around it in order to fit through small gaps in caves.
 BattlerPlayerX = 0
 BattlerEnemyY = -2
+BattlerShadowX = 6
+BattlerShadowSize = 3
 #-------------------------------
 [SENTRET,1]
 FormName = Stacona Form
@@ -3351,7 +3206,9 @@ HiddenAbility = MAGICGUARD
 Moves = 1,SCRATCH,1,CHARM,4,BABYDOLLEYES,7,QUICKATTACK,13,SWEETKISS,16,ATTRACT,19,DECORATE,25,UPROAR,28,REST,31,TAILSLAP,36,AMNESIA,39,PLAYROUGH,42,MOONLIGHT,47,HYPERVOICE,55,MOONBLAST
 Pokedex = Using its fluffy tail it can catch and trap small prey, it keeps them trapped for later to snack on.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyX = 4
+BattlerEnemyY = 10
+BattlerShadowSize = 2
 #-------------------------------
 [FURRET,1]
 FormName = Stacona Form
@@ -3360,10 +3217,12 @@ Type2 = FAIRY
 BaseStats = 74,45,45,90,96,75
 Abilities = CUTECHARM,FRISK
 HiddenAbility = MAGICGUARD
-Moves =0,HEARTSTAMP,1,SCRATCH,1,CHARM,1,BABYDOLLEYES,1,QUICKATTACK,4,BABYDOLLEYES,7,QUICKATTACK,13,SWEETKISS,17,ATTRACT,21,DECORATE,28,UPROAR,32,REST,36,TAILSLAP,42,AMNESIA,46,PLAYROUGH,50,MOONLIGHT,56,HYPERVOICE,61,MOONBLAST
+Moves = 0,HEARTSTAMP,1,SCRATCH,1,CHARM,1,BABYDOLLEYES,1,QUICKATTACK,4,BABYDOLLEYES,7,QUICKATTACK,13,SWEETKISS,17,ATTRACT,21,DECORATE,28,UPROAR,32,REST,36,TAILSLAP,42,AMNESIA,46,PLAYROUGH,50,MOONLIGHT,56,HYPERVOICE,61,MOONBLAST
 Pokedex = It slaps its tail on the ground to mimic the sound of the rain so that small underground prey come out of the ground.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyX = 0
+BattlerEnemyY = 12
+BattlerShadowSize = 3
 #-------------------------------
 [AIPOM,1]
 FormName = Stacona Form
@@ -3375,7 +3234,7 @@ HiddenAbility = REGENERATOR
 Moves = 1,POISONSTING,1,TAILWHIP,4,CHARM,8,ASTONISH,11,BATONPASS,15,TOXIC,18,ENCHANTEDSLASH,22,SWIFT,25,BELCH,29,AGILITY,32,DOUBLEHIT,36,FLING,39,COIL,43,GUNKSHOT,48,VENOSHOCK,53,MOONBLAST
 Pokedex = Its tail is connected to its ears, transmitting soundwaves to its ears with great sensitivity. It uses this to listen to the heartbeat of sick Pokémon.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyY = 16
 #-------------------------------
 [AMBIPOM,1]
 FormName = Stacona Form
@@ -3387,7 +3246,9 @@ HiddenAbility = REGENERATOR
 Moves = 1,POISONSTING,1,TAILWHIP,1,CHARM,4,CHARM,8,ASTONISH,11,BATONPASS,15,TOXIC,18,ENCHANTEDSLASH,22,SWIFT,25,BELCH,29,AGILITY,32,DOUBLEHIT,36,FLING,39,COIL,43,GUNKSHOT,48,VENOSHOCK,53,MOONBLAST
 Pokedex = It uses one of its tails to listen to sick Pokémon, the other contains a fluid that is also used in the Vial formula for trainers and Pokécenters.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyX = -3
+BattlerEnemyY = 2
+BattlerShadowSize = 2
 #-------------------------------
 [AZURILL,1]
 FormName = Stacona Form
@@ -3400,7 +3261,9 @@ Weight = 18.2
 Color = Red
 Pokedex = From birth these Pokémon try to balance on their tail. When they fall their parents have to help them as their center of mass is in their tail and they cant get up on themselves.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyX = -2
+BattlerEnemyY = 13
+BattlerShadowSize = 2
 #-------------------------------
 [MARILL,1]
 FormName = Stacona Form
@@ -3413,7 +3276,9 @@ Weight = 25.4
 Color = Red
 Pokedex = By balancing on its tail it withstands huge windpressures. Many fighting type Pokémon use Staconan Marill as a punching bag, as it will almost never fall over.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyX = 1
+BattlerEnemyY = 13
+BattlerShadowSize = 3
 #-------------------------------
 [AZUMARILL,1]
 FormName = Stacona Form
@@ -3427,4 +3292,6 @@ Weight = 431.2
 Color = Red
 Pokedex = It has mastered the ability to balance on its tail, as a result its tail has become almost rock-like. Gyms like to have Azumarill around to train with, altough moving it is a hassle sometimes.
 BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerEnemyX = 2
+BattlerEnemyY = 12
+BattlerShadowSize = 3
