@@ -647,6 +647,7 @@ class PokeBattle_Battle
       b.effects[PBEffects::Roost]            = false
       b.effects[PBEffects::Snatch]           = 0
       b.effects[PBEffects::SpikyShield]      = false
+      b.effects[PBEffects::QuickParry]       = false
       b.effects[PBEffects::Spotlight]        = 0
       b.effects[PBEffects::ThroatChop]       -= 1 if b.effects[PBEffects::ThroatChop]>0
       b.lastHPLost                           = 0

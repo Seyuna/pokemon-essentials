@@ -387,6 +387,11 @@ class PokeBattle_Battler
         @battle.successStates[user.index].protected = true
         return false
       end
+      # Quick Parry
+      if target.effects[PBEffects::QuickParry] && move.pbContactMove?(target) && !unseenfist
+        target.damageState.quickParry = (move.pbCalcDamage(user,target) * 2)
+        @battle.successStates[user.index].protected = true
+      end
     end
     # Magic Coat/Magic Bounce
     if move.canMagicCoat? && !target.semiInvulnerable? && target.opposes?(user)
