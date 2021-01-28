@@ -15,9 +15,9 @@
 #     ])
 # The Pokemon turns Right, waits 4 frames, and then jumps
 #-------------------------------------------------------------------------------
-def followingMoveRoute(commands,waitComplete=false)
+def followingMoveRoute(commands,waitComplete=true)
   return if !$Trainer.hasArenay? || !$PokemonGlobal.followerToggled
-  $PokemonTemp.dependentEvents.setMoveRoute(commands,waitComplete)
+  $PokemonTemp.dependentEvents.setMoveRoute(commands,true)
 end
 
 #-------------------------------------------------------------------------------
@@ -70,13 +70,10 @@ def pbArenayFollow(x)
   $PokemonTemp.dependentEvents.removeEventByName("FollowerPkmn") if pbGetDependency("FollowerPkmn")
   pbAddDependency2(x,"FollowerPkmn",Follower_Common_Event)
   $PokemonGlobal.followerToggled = true
-  event = pbGetDependency("FollowerPkmn")
-#  firstPkmn = $Trainer.arenayIndex(true)
-#  return if !firstPkmn
-#  ret = $PokemonTemp.dependentEvents.refresh_sprite(false)
-#  $PokemonTemp.dependentEvents.change_sprite([firstPkmn.species, firstPkmn.female?,
-#        firstPkmn.shiny?, firstPkmn.form,
-#        firstPkmn.shadowPokemon?]) if ret
+  firstPkmn = $Trainer.arenayIndex(true)
+  $PokemonTemp.dependentEvents.change_sprite([firstPkmn.species, firstPkmn.female?,
+        firstPkmn.shiny?, firstPkmn.form,
+        firstPkmn.shadowPokemon?])
   if ALWAYS_ANIMATE
     $PokemonTemp.dependentEvents.update_stepping
   elsif $PokemonTemp.dependentEvents.refresh_sprite(false) == -1
@@ -335,7 +332,7 @@ class DependentEvents
     events=$PokemonGlobal.dependentEvents
     for i in 0...events.length
       if events[i] && events[i][8]== "FollowerPkmn"
-        pbMoveRoute(@realEvents[i],commands,waitComplete)
+        pbMoveRoute(@realEvents[i],commands,true)
       end
     end
   end
@@ -526,11 +523,10 @@ class Game_Map
   end
 end
 
-#-------------------------------------------------------------------------------
-# New sendout animation for Followers to slide in when sent out for the 1st time in battle
-#-------------------------------------------------------------------------------
-class PokeballPlayerSendOutAnimation < PokeBattle_Animation
-  include PokeBattle_BallAnimationMixin
+#===============================================================================
+# Shows Arenay being sent out on the player's side (including by a partner).
+#===============================================================================
+class FollowerPlayerSendOutAnimation < PokeBattle_Animation
 
   def initialize(sprites,viewport,idxTrainer,battler,startBattle,idxOrder=0)
     @idxTrainer     = idxTrainer
@@ -538,82 +534,63 @@ class PokeballPlayerSendOutAnimation < PokeBattle_Animation
     @showingTrainer = startBattle
     @idxOrder       = idxOrder
     @trainer        = @battler.battle.pbGetOwnerFromBattlerIndex(@battler.index)
-    @followAnim     = false
-    @followAnim     = true if $PokemonTemp.dependentEvents.refresh_sprite(false,true) && $Trainer.party[0].isSpecies?(:ARENAY) && startBattle
-    sprites["pokemon_#{battler.index}"].visible = false
     @shadowVisible = sprites["shadow_#{battler.index}"].visible
-    sprites["shadow_#{battler.index}"].visible = false
     super(sprites,viewport)
   end
 
   def createProcesses
+    delay = 0
+    delay = 5 if @showingTrainer
     batSprite = @sprites["pokemon_#{@battler.index}"]
     shaSprite = @sprites["shadow_#{@battler.index}"]
     traSprite = @sprites["player_#{@idxTrainer}"]
     # Calculate the Poké Ball graphic to use
-    ballType = 0
-    if !batSprite.pkmn.nil?
-      ballType = batSprite.pkmn.ballused || 0
-    end
-    # Calculate the color to turn the battler sprite
-    col = getBattlerColorFromBallType(ballType)
-    col.alpha = 255
-    # Calculate start and end coordinates for battler sprite movement
-    ballPos = PokeBattle_SceneConstants.pbBattlerPosition(@battler.index,batSprite.sideSize)
-    battlerStartX = ballPos[0]   # Is also where the Ball needs to end
-    battlerStartY = ballPos[1]   # Is also where the Ball needs to end + 18
+    battlerStartX = (batSprite.x/8)*-3
     battlerEndX = batSprite.x
-    battlerEndY = batSprite.y
-    # Calculate start and end coordinates for Poké Ball sprite movement
-    ballStartX = -6
-    ballStartY = 202
-    ballMidX = 0   # Unused in trajectory calculation
-    ballMidY = battlerStartY-144
-    # Set up Poké Ball sprite
-    ball = addBallSprite(ballStartX,ballStartY,ballType)
-    ball.setZ(0,25)
-    ball.setVisible(0,false)
-    # Poké Ball tracking the player's hand animation (if trainer is visible)
-    if @showingTrainer && !@followAnim && traSprite && traSprite.x>0
-      ball.setZ(0,traSprite.z-1)
-      ballStartX, ballStartY = ballTracksHand(ball,traSprite)
-    end
-    delay = ball.totalDuration   # 0 or 7
-    # Poké Ball trajectory animation
-    createBallTrajectory(ball,delay,12,
-       ballStartX,ballStartY,ballMidX,ballMidY,battlerStartX,battlerStartY-18) if !@followAnim
-    ball.setZ(9,batSprite.z-1)
-    delay = ball.totalDuration+4
-    delay += 10*@idxOrder   # Stagger appearances if multiple Pokémon are sent out at once
-    if !@followAnim
-      ballOpenUp(ball,delay-2,ballType)
-      ballBurst(delay,battlerStartX,battlerStartY-18,ballType)
-      ball.moveOpacity(delay+2,2,0)
-    end
-    # Set up battler sprite
+    battlerY = batSprite.y
     battler = addSprite(batSprite,PictureOrigin::Bottom)
-    if !@followAnim
-      battler.setXY(0,battlerStartX,battlerStartY)
-      battler.setZoom(0,0)
-      battler.setColor(0,col)
-      # Battler animation
-      battlerAppear(battler,delay,battlerEndX,battlerEndY,batSprite,col)
-    else
-      battler.setVisible(delay-ball.totalDuration,true)
-      battler.setOpacity(delay-ball.totalDuration,255)
-      battler.setXY(0,-192,battlerEndY)
-      battler.moveXY(delay-ball.totalDuration+1,16,battlerStartX,battlerEndY)
-      battler.setSE(delay-ball.totalDuration+18,"GUI naming tab swap start",100)
-      battler.setCallback(delay-ball.totalDuration+18,[batSprite,:pbPlayIntroAnimation])
-    end
+    battler.setVisible(delay,true)
+    battler.setZoomXY(delay,100,100)
+    battler.setColor(delay,Color.new(0,0,0,0))
+    battler.setXY(delay,battlerStartX,battlerY)
+    battler.moveXY(delay,10,battlerEndX,battlerY)
+    battler.setCallback(delay+10,[batSprite,:pbPlayIntroAnimation])
     if @shadowVisible
       # Set up shadow sprite
+      shadowStartX=(shaSprite.x/8)*-2
+      shadowEndX=shaSprite.x
+      shadowY=shaSprite.y
       shadow = addSprite(shaSprite,PictureOrigin::Center)
-      shadow.setOpacity(0,0)
       # Shadow animation
       shadow.setVisible(delay,@shadowVisible)
-      shadow.moveOpacity(delay+5,10,255)
+      shadow.setXY(delay,shadowStartX,shadowY)
+      shadow.moveXY(delay,10,shadowEndX,shadowY)
     end
+  end
+end
+
+#===============================================================================
+# Shows Arenay being recalled on the player's side (including by a partner).
+#===============================================================================
+class FollowerRecallAnimation < PokeBattle_Animation
+
+  def initialize(sprites,viewport,idxBattler)
+    @idxBattler     = idxBattler
+    super(sprites,viewport)
+  end
+
+  def createProcesses
+    batSprite = @sprites["pokemon_#{@idxBattler}"]
+    shaSprite = @sprites["shadow_#{@idxBattler}"]
+    # Calculate the Poké Ball graphic to use
+    battlerStartX = batSprite.x
+    battlerEndX = (batSprite.x/8)*-3
+    battlerY = batSprite.y
+    battler = addSprite(batSprite,PictureOrigin::Bottom)
+    battler.setXY(0,battlerStartX,battlerY)
+    battler.moveXY(0,10,battlerEndX,battlerY)
+    battler.setCallback(10,[batSprite,:pbPlayIntroAnimation])
+    battler.setVisible(10,false)
   end
 end
 
@@ -1262,11 +1239,14 @@ class PokeBattle_Trainer
   def arenayIndex(pkmn=false)
     ret = -1
     @party.each_with_index do |p,i|
-      ret = i if p && !p.egg? && !p.fainted? && p.isSpecies?(:ARENAY)
+      ret = i if p && p.isSpecies?(:ARENAY) #&& p.able?
+      if !$game_switches[400]
+        ret = -1 if ret >= 0 && !p.able?
+      end
     end
     if pkmn
       return @party[ret] if ret >= 0
-      return false
+      return nil
     end
     return ret
   end

@@ -107,7 +107,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
     pbFadeOutIn {
       scene = PokemonBag_Scene.new
       screen = PokemonBagScreen.new(scene,$PokemonBag)
-      item = screen.pbChooseItemScreen
+      item = screen.pbChooseItemCelluloseScreen
     }
     if item>0
       ret = false
