@@ -461,7 +461,7 @@
 454,FLAMEMAIL,Flame Mail,Flame Mail,0,50,"Stationery featuring a print of flames in blazing red. Let a Pokémon hold it for delivery.",0,0,2,
 455,BUBBLEMAIL,Bubble Mail,Bubble Mail,0,50,"Stationery featuring a print of a blue world underwater. Let a Pokémon hold it for delivery.",0,0,2,
 456,BLOOMMAIL,Bloom Mail,Bloom Mail,0,50,"Stationery featuring a print of pretty floral patterns. Let a Pokémon hold it for delivery.",0,0,2,
-457,TUNNELMAIL,Tunnel Mail,Tunnel Mail,'0,50,"Stationery featuring a print of a dimly lit coal mine. Let a Pokémon hold it for delivery.",0,0,2,
+457,TUNNELMAIL,Tunnel Mail,Tunnel Mail,0,50,"Stationery featuring a print of a dimly lit coal mine. Let a Pokémon hold it for delivery.",0,0,2,
 458,STEELMAIL,Steel Mail,Steel Mail,0,50,"Stationery featuring a print of cool mechanical designs. Let a Pokémon hold it for delivery.",0,0,2,
 459,HEARTMAIL,Heart Mail,Heart Mail,0,50,"Stationery featuring a print of giant heart patterns. Let a Pokémon hold it for delivery.",0,0,2,
 460,SNOWMAIL,Snow Mail,Snow Mail,0,50,"Stationery featuring a print of a chilly, snow-covered world. Let a Pokémon hold it for delivery.",0,0,2,

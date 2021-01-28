@@ -1,0 +1,59 @@
+Movelist:
+
+Ability: Galvanize
+
+STACONAN ZUBAT:
+-  Supersonic
+-  Nuzzle
+5  Lick
+10 Mean Look
+15 Poison Fang
+20 Bite
+25 Wing Attack
+28 Flatter
+30 Zing Zap
+35 Haze
+40 Jaw Lock
+45 Confuse Ray
+50 Air Slash
+55 Night Slash
+
+
+STACONAN GOLBAT:
+-  Supersonic
+-  Screech 
+-  Mean Look
+-  Lick
+-  Nuzzle
+15 Poison Fang
+20 Bite
+27 Wing Attack
+30 Flatter
+34 Zing Zap
+41 Haze
+48 Jaw Lock
+55 Confuse Ray
+62 Air Slash
+69 Night Slash
+
+
+STACONAN CROBAT:
+-  Thunder Fang
+-  Supersonic
+-  Toxic
+-  Screech 
+-  Mean Look
+-  Lick
+-  Ominous Wind
+-  Nuzzle
+15 Poison Fang
+20 Bite
+27 Wing Attack
+30 Flatter
+34 Zing Zap
+41 Haze
+48 Jaw Lock
+55 Confuse Ray
+62 Air Slash
+69 Night Slash
+72 Discharge

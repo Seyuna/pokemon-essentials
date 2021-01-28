@@ -567,7 +567,7 @@ class PokeBattle_Move_525 < PokeBattle_Move
 end
 
 #===============================================================================
-# Decreases Accuracy of Every Pokemon on the Field that isn't fairy
+# Decreases Accuracy of Every Pokemon on the Field that isn't fairy (Glitter Bomb)
 #===============================================================================
 class PokeBattle_Move_526 < PokeBattle_Move
   def ignoresSubstitute?(user); return true; end

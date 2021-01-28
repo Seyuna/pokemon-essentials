@@ -848,7 +848,7 @@ Cave
     DUNSPARCE,5
     SABLING,5
     DUNSPARCE,5
-    ONIX,5
+    AZURILL,5
     RIOLU,5
     RIOLU,5
 #-------------------------------
@@ -993,9 +993,9 @@ Cave
     PARAS,5
     RALTS,5
     NOSEPASS,5
-    ONIX,5
+    AZURILL,5
     DRILBUR,5
-    ONIX,5
+    AZURILL,5
     RALTS,5
     RHYHORN,5
     RHYHORN,5
@@ -1029,8 +1029,8 @@ SuperRod
 Cave
     ZUBAT,5
     RALTS,5
+    AZURILL,5
     NOSEPASS,5
-    ONIX,5
     SCRAFTY,5
     PARAS,5
     NOSEPASS,5

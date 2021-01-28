@@ -220,7 +220,7 @@ end
 
 MultipleForms.register(:UNOWN,{
   "getFormOnCreation" => proc { |pkmn|
-    next rand(28)
+    next rand(28)+28
   }
 })
 
@@ -1566,3 +1566,15 @@ MultipleForms.register(:SENTRET,{
 }
 })
 MultipleForms.copy(:SENTRET,:FURRET)
+
+MultipleForms.register(:AZURILL,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:AZURILL,:MARILL,:AZUMARILL)
