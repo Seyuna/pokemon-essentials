@@ -117,6 +117,8 @@ def pbDebugMenuCommands(showall=true)
        _INTL("Give and take items."))
     commands.add("itemsmenu","additem",_INTL("Add Item"),
        _INTL("Choose an item and a quantity of it to add to the Bag."))
+    commands.add("itemsmenu", "additembyid", _INTL("Add Item by ID"),
+       _INTL("Choose an item by id and a quantity of it to add to the bag"))
     commands.add("itemsmenu","fillbag",_INTL("Fill Bag"),
        _INTL("Add a certain number of every item to the Bag."))
     commands.add("itemsmenu","addAllCellulose",_INTL("Add All Cellulose"),
@@ -507,6 +509,23 @@ def pbDebugMenuActions(cmd="",sprites=nil,viewport=nil)
         end
       end
     }
+  when "additembyid"
+    params = ChooseNumberParams.new
+    params.setRange(1, PBItems.maxValue)
+    params.setInitialValue(1)
+    params.setCancelValue(0)
+    item = pbMessageChooseNumber(_INTL("Choose the number of items."),params)
+    if item>0
+      qtyparams = ChooseNumberParams.new
+      qtyparams.setRange(1,255)
+      qtyparams.setInitialValue(1)
+      qtyparams.setCancelValue(0)
+      qty = pbMessageChooseNumber(_INTL("Choose the number of items."),qtyparams)
+      if qty>0
+        $PokemonBag.pbStoreItemById(item, qty)
+        pbMessage(_INTL("Gave {1}x {2}.", qty, PBItems.getName(item)))
+      end
+    end
   when "addAllCellulose"
     cellArray = [:FIRECELL,:WATERCELL,:GRASSCELL,:ELECCELL,:FLYCELL,:DARKCELL,:PSYCELL,:FAIRYCELL,
                   :DRAGONCELL,:ROCKCELL,:GROUNDCELL,:STEELCELL,:ICECELL,:GHOSTCELL,:FIGHTCELL,:BUGCELL,:POISONCELL]
