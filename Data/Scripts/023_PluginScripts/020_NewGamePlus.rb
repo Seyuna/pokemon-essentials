@@ -468,6 +468,7 @@ class PokemonTemp
   attr_accessor :begunNewGamePlus
   attr_accessor :oldNewGamePlusCount
   attr_accessor :oldGameData
+  attr_accessor :tempLoad
 
   def oldGameData
     @oldGameData = {:party => [], :storage => PokemonStorage.new,:goodies => 0} if !@oldGameData
@@ -483,12 +484,16 @@ class PokemonTemp
     @begunNewGamePlus = false if !@begunNewGamePlus
     return @begunNewGamePlus
   end
+
+  def tempLoad
+    @tempLoad = false if !@tempLoad
+    return @tempLoad
+  end
 end
 
 # Adding a few temporary variables to store Trainer's New Game Plus Progress
 class PokeBattle_Trainer
   attr_accessor :newGamePlusCount
-  attr_accessor :newGamePlus
   attr_accessor :oldGameData
 
   def oldGameData
@@ -502,41 +507,22 @@ class PokeBattle_Trainer
   end
 
   def newGamePlus=(value)
-    @newGamePlus = value
-    if value == true
-      pbSave
-      ret = false
-      viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
-      viewport.z = 99999
-      bmp = pbFade
-      screen = Sprite.new(viewport)
-      screen.bitmap = bmp
-      10.times do
-        Graphics.update
-        pbWait(1)
-      end
-      pbMessage("\\wm\\w[""]<ac>You have now unlocked the ability to play the New Game + mode.</ac>")
-      pbMessage("\\wm\\w[""]<ac>To accesss the new mode, select the \"New Game +\" option on the Load Screen.</ac>")
-      if $Trainer.newGamePlusCount == 0 || pbConfirmMessage("\\wm\\w[""]<ac>Would you like to know what a New Game + is?</ac>")
-        pbMessage("\\wm\\w[""]<ac>New Game + allows you to replay Pokémon Splice, but in a brand new way.</ac>")
-        pbMessage("\\wm\\w[""]<ac>Everything such as items, money, etc. will be cleared, just as if you were starting a New Game.</ac>")
-        pbMessage("\\wm\\w[""]<ac>But...</ac>")
-        pbMessage("\\wm\\w[""]<ac>You will get to carry over the Pokémon from your party and PC Storage of your current save.</ac>")
-        pbMessage("\\wm\\w[""]<ac>Those Pokémon, however, will be reset to their baby forms and will return to Level 5.</ac>")
-        pbMessage("\\wm\\w[""]<ac>But that's not all...</ac>")
-        pbMessage("\\wm\\w[""]<ac>In the new playthrough, you will have several gameplay differences.</ac>")
-        pbMessage("\\wm\\w[""]<ac>These include, but are not limited to, an increased shiny rate, higher EXP and money from each battle and more difficult Trainer and Wild Battles.</ac>")
-      end
-      ret = true if pbConfirmMessage("\\wm\\w[""]<ac>Would you like to return to Title Screen and try out this mode?</ac>")
-      10.times do
-        Graphics.update
-        pbWait(1)
-      end
-      screen.visible = false
-      pbFade(true)
-      screen.dispose
-      viewport.dispose
-      $scene = pbCallTitle if ret
+    return allowNewGamePlus
+  end
+
+  def allowNewGamePlus
+    @newGamePlus = true
+    pbMessage("\\wm\\w[""]<ac>You have now unlocked the ability to play the New Game + mode.</ac>")
+    pbMessage("\\wm\\w[""]<ac>To accesss the new mode, select the \"New Game +\" option on the Load Screen.</ac>")
+    if $Trainer.newGamePlusCount == 0 || pbConfirmMessage("\\wm\\w[""]<ac>Would you like to know what a New Game + is?</ac>")
+      pbMessage("\\wm\\w[""]<ac>New Game + allows you to replay Pokémon Splice, but in a brand new way.</ac>")
+      pbMessage("\\wm\\w[""]<ac>Everything such as items, money, etc. will be cleared, just as if you were starting a New Game.</ac>")
+      pbMessage("\\wm\\w[""]<ac>But...</ac>")
+      pbMessage("\\wm\\w[""]<ac>You will get to carry over the Pokémon from your party and PC Storage of your current save.</ac>")
+      pbMessage("\\wm\\w[""]<ac>Those Pokémon, however, will be reset to their baby forms and will return to Level 5.</ac>")
+      pbMessage("\\wm\\w[""]<ac>But that's not all...</ac>")
+      pbMessage("\\wm\\w[""]<ac>In the new playthrough, you will have several gameplay differences.</ac>")
+      pbMessage("\\wm\\w[""]<ac>These include, but are not limited to, an increased shiny rate, higher EXP and money from each battle and more difficult Trainer and Wild Battles.</ac>")
     end
   end
 

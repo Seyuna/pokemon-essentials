@@ -194,23 +194,32 @@ _END_
     pbBGMFade(2.0)
     pbBGMPlay(CreditsMusic)
     Graphics.transition(20)
+  #  @sprite.opacity = 0
+  #  @credit_sprite.opacity = 0
     loop do
       Graphics.update
       Input.update
-      update
-      break if $scene != self
+      break if update
+    #  break if $scene != self
     end
-    Graphics.freeze
+#    Graphics.freeze
+    (Graphics.frame_rate/2).times do
+      @sprite.opacity -= 255/(Graphics.frame_rate/2)
+      @credit_sprite.opacity -= 255/(Graphics.frame_rate/2)
+      Graphics.update
+    end
     @sprite.dispose
     @credit_sprite.dispose
     $PokemonGlobal.creditsPlayed = true
-    pbBGMPlay(previousBGM)
+    $Trainer.allowNewGamePlus
+  #  pbBGMPlay(previousBGM)
+    return
   end
 
   # Check if the credits should be cancelled
   def cancel?
-    if Input.trigger?(Input::C) && $PokemonGlobal.creditsPlayed
-      $scene = Scene_Map.new
+    if Input.trigger?(Input::C) && ($PokemonGlobal.creditsPlayed || $DEBUG)
+    #  $scene = Scene_Map.new
       pbBGMFade(1.0)
       return true
     end
@@ -220,7 +229,7 @@ _END_
   # Checks if credits bitmap has reached its ending point
   def last?
     if @realOY > @credit_sprite.bitmap.height + @trim
-      $scene = ($game_map) ? Scene_Map.new : nil
+    #  $scene = ($game_map) ? Scene_Map.new : nil
       pbBGMFade(2.0)
       return true
     end
@@ -236,9 +245,10 @@ _END_
       @bg_index = 0 if @bg_index >= @backgroundList.length
       @sprite.setBitmap("Graphics/Titles/"+@backgroundList[@bg_index])
     end
-    return if cancel?
-    return if last?
+    return true if cancel?
+    return true if last?
     @realOY += @oyChangePerFrame
     @credit_sprite.oy = @realOY
+    return false
   end
 end
