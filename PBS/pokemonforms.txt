@@ -2176,7 +2176,7 @@ BattlerEnemyY = 2
 [ARENAY,1]
 FormName = Fire Cell Form
 Type1 = FIRE
-BaseStats = 90,100,60,90,90,60
+BaseStats = 90,110,70,70,70,70
 BattlerPlayerX = -2
 BattlerEnemyX = 3
 BattlerEnemyY = 25
@@ -2184,7 +2184,7 @@ BattlerEnemyY = 25
 [ARENAY,2]
 FormName = Water Cell Form
 Type1 = WATER
-BaseStats = 90,60,70,60,90,90
+BaseStats = 90,70,70,70,70,110
 BattlerPlayerX = -1
 BattlerEnemyX = -1
 BattlerEnemyY = 36
@@ -2192,7 +2192,7 @@ BattlerEnemyY = 36
 [ARENAY,3]
 FormName = Grass Cell Form
 Type1 = GRASS
-BaseStats = 90,90,60,70,100,60
+BaseStats = 90,70,70,110,70,70
 BattlerPlayerX = -2
 BattlerEnemyX = 0
 BattlerEnemyY = 28
@@ -2200,7 +2200,7 @@ BattlerEnemyY = 28
 [ARENAY,4]
 FormName = Flying Cell Form
 Type1 = FLYING
-BaseStats = 90,90,60,100,90,60
+BaseStats = 90,110,70,70,70,70
 BattlerPlayerX = -2
 BattlerEnemyX = 2
 BattlerEnemyY = 24
@@ -2209,7 +2209,7 @@ BattlerAltitude = 1
 [ARENAY,5]
 FormName = Alloy Cell Form
 Type1 = STEEL
-BaseStats = 90,90,100,70,60,60
+BaseStats = 90,70,110,70,70,70
 BattlerPlayerX = -2
 BattlerEnemyX = 0
 BattlerEnemyY = 32
@@ -2217,7 +2217,7 @@ BattlerEnemyY = 32
 [ARENAY,6]
 FormName = Electric Cell Form
 Type1 = ELECTRIC
-BaseStats = 90,90,60,90,100,70
+BaseStats = 90,70,70,70,70,70
 BattlerPlayerX = -2
 BattlerEnemyX = 0
 BattlerEnemyY = 26
@@ -2225,7 +2225,7 @@ BattlerEnemyY = 26
 [ARENAY,7]
 FormName = Ice Cell Form
 Type1 = ICE
-BaseStats = 90,90,70,100,90,60
+BaseStats = 90,70,70,70,110,70
 BattlerPlayerX = -1
 BattlerEnemyX = 0
 BattlerEnemyY = 26
@@ -2233,7 +2233,7 @@ BattlerEnemyY = 26
 [ARENAY,8]
 FormName = Psychic Cell Form
 Type1 = PSYCHIC
-BaseStats = 90,70,50,90,110,90
+BaseStats = 90,70,70,70,110,70
 BattlerPlayerX = -1
 BattlerPlayerY = -2
 BattlerEnemyX = 0
@@ -2242,7 +2242,7 @@ BattlerEnemyY = 27
 [ARENAY,9]
 FormName = Bug Cell Form
 Type1 = BUG
-BaseStats = 90,90,60,90,70,60
+BaseStats = 90,70,110,70,70,70
 BattlerPlayerX = -1
 BattlerEnemyX = -1
 BattlerEnemyY = 27
@@ -2251,7 +2251,7 @@ BattlerShadowSize = 3
 [ARENAY,10]
 FormName = Ground Cell Form
 Type1 = GROUND
-BaseStats = 90,100,90,90,60,70
+BaseStats = 90,70,70,110,70,70
 BattlerPlayerX = -2
 BattlerEnemyX = 1
 BattlerEnemyY = 33
@@ -2260,7 +2260,7 @@ BattlerShadowSize = 1
 [ARENAY,11]
 FormName = Poison Cell Form
 Type1 = POISON
-BaseStats = 90,100,60,90,100,60
+BaseStats = 90,70,70,70,70,110
 BattlerPlayerX = -3
 BattlerEnemyX = 0
 BattlerEnemyY = 27
@@ -2268,14 +2268,14 @@ BattlerEnemyY = 27
 [ARENAY,12]
 FormName = Dragon Cell Form
 Type1 = DRAGON
-BaseStats = 90,90,50,90,110,90
+BaseStats = 90,70,70,70,110,70
 BattlerPlayerX = -1
 BattlerEnemyX = -1
 #-------------------------------
 [ARENAY,13]
 FormName = Fighting Cell Form
 Type1 = FIGHTING
-BaseStats = 90,120,50,90,50,90
+BaseStats = 90,110,70,70,70,70
 BattlerPlayerX = -4
 BattlerEnemyX = 3
 BattlerEnemyY = 12
@@ -2284,7 +2284,7 @@ BattlerShadowSize = 3
 [ARENAY,14]
 FormName = Rock Cell Form
 Type1 = ROCK
-BaseStats = 90,90,120,50,50,80
+BaseStats = 90,70,110,70,70,70
 BattlerPlayerX = -3
 BattlerEnemyX = 0
 BattlerEnemyY = 18
@@ -2293,7 +2293,7 @@ BattlerShadowSize = 3
 [ARENAY,15]
 FormName = Ghost Cell Form
 Type1 = GHOST
-BaseStats = 90,80,60,90,110,70
+BaseStats = 90,70,70,110,70,70
 BattlerEnemyX = 0
 BattlerEnemyY = 0
 BattlerAltitude = 1
@@ -2301,14 +2301,14 @@ BattlerAltitude = 1
 [ARENAY,16]
 FormName = Dark Cell Form
 Type1 = DARK
-BaseStats = 90,100,60,70,100,70
+BaseStats = 90,70,70,110,70,70
 BattlerEnemyX = 0
 BattlerEnemyY = 12
 #-------------------------------
 [ARENAY,17]
 FormName = Fairy Cell Form
 Type1 = FAIRY
-BaseStats = 90,70,50,60,100,120
+BaseStats = 90,70,70,70,70,110
 BattlerEnemyX = 0
 BattlerEnemyY = 11
 #-------------------------------
@@ -3426,5 +3426,30 @@ Moves = 0,STONEEDGE,1,QUICKPARRY,1,ENDURE,1,POUND,1,ROCKSMASH,2,FOCUSENERGY,5,BU
 Weight = 431.2
 Color = Red
 Pokedex = It has mastered the ability to balance on its tail, as a result its tail has become almost rock-like. Gyms like to have Azumarill around to train with, altough moving it is a hassle sometimes.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+#-------------------------------
+[YANMA,1]
+FormName = Stacona Form
+Type1 = BUG
+Type2 = DRAGON
+BaseStats = 65,80,55,65,80,45
+Abilities = MULTISCALE,MOLDBREAKER
+HiddenAbility = ADAPTABILITY
+Moves = 0,DRAGONDANCE,1,LEECHLIFE,1,TACKLE,1,FORESIGHT,1,TWINEEDLE,6,TWISTER,11,DRAGONDANCE,14,DUALCHOP,17,DETECT,22,FELLSTINGER,27,SILVERWIND,30,DRAGONTAIL,33,WINGATTACK,38,HYPNOSIS,43,ANCIENTPOWER,46,NASTYPLOT,49,DRAGONHAMMER,54,DRAGONPULSE,57,BUGBUZZ
+Pokedex = By showing off all of its colors it attracts other Staconan Yanma. The more colors it has the more likely it is to get a mate.
+BattlerPlayerX = 0
+BattlerEnemyY = -2
+Evolutions = YANMEGA,HasMove,ANCIENTPOWER
+#-------------------------------
+[YANMEGA,1]
+FormName = Stacona Form
+Type1 = BUG
+Type2 = DRAGON
+BaseStats = 96,116,76,75,116,76
+Abilities = MULTISCALE,MOLDBREAKER
+HiddenAbility = ADAPTABILITY
+Moves = 0,OUTRAGE,1,LEECHLIFE,1,NIGHTSLASH,1,BUGBITE,1,TACKLE,1,FORESIGHT,1,TWISTER,1,DRAGONDANCE,1,TWINEEDLE,6,TWISTER,11,DRAGONDANCE,14,DUALCHOP,17,DETECT,22,FELLSTINGER,27,SILVERWIND,30,DRAGONTAIL,35,ANCIENTPOWER,41,HYPNOSIS,46,WINGATTACK,50,NASTYPLOT,54,DRAGONHAMMER,58,DRAGONPULSE,61,BUGBUZZ
+Pokedex = It has been said that Staconan Yanma and Yanmega came to be when a Staconan Togetic blessed a Johtonian Yanma with its rainbows.
 BattlerPlayerX = 0
 BattlerEnemyY = -2

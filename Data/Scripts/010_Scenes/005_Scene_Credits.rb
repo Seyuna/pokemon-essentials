@@ -1,5 +1,5 @@
 # Backgrounds to show in credits. Found in Graphics/Titles/ folder
-CreditsBackgroundList = ["credits12","credits6","credits9","credits8","credits14",
+CreditsBackgroundList = ["credits12","credits6","credits9","credits8","credits14","credits23",
   "credits20","credits13","credits7","credits15","credits17","credits18","credits16",
   "credits19","credits10","credits21","credits11","credits22"]
 CreditsMusic          = "Credits"

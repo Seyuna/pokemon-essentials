@@ -1567,6 +1567,18 @@ MultipleForms.register(:SENTRET,{
 })
 MultipleForms.copy(:SENTRET,:FURRET)
 
+MultipleForms.register(:AIPOM,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:AIPOM,:AMBIPOM)
+
 MultipleForms.register(:AZURILL,{
 "getFormOnCreation"=>proc{|pokemon|
    maps=[1]
@@ -1578,3 +1590,15 @@ MultipleForms.register(:AZURILL,{
 }
 })
 MultipleForms.copy(:AZURILL,:MARILL,:AZUMARILL)
+
+MultipleForms.register(:YANMA,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:YANMA,:YANMEGA,:YANMITE)
