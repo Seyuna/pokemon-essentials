@@ -1831,7 +1831,7 @@ BattlerPlayerX = 5
 BattlerPlayerY = 34
 BattlerEnemyX = 4
 BattlerEnemyY = 39
-Evolutions = SLOWBRO,Item,GALARICACUFF,SLOWKING,Item,SOULSTONE
+Evolutions = SLOWKING,Item,GALARICAWREATH,SLOWKING,Item,GALARICAWREATH
 #-------------------------------
 [SLOWBRO,1]
 FormName = Galar Form
@@ -2161,7 +2161,6 @@ BattlerEnemyY = 32
 [ARENAY,6]
 FormName = Electric Cell Form
 Type1 = ELECTRIC
-BaseStats = 90,70,70,70,70,70
 BattlerPlayerX = -2
 BattlerEnemyX = 0
 BattlerEnemyY = 26
@@ -3247,7 +3246,7 @@ Moves = 1,POISONSTING,1,TAILWHIP,1,CHARM,4,CHARM,8,ASTONISH,11,BATONPASS,15,TOXI
 Pokedex = It uses one of its tails to listen to sick Pokémon, the other contains a fluid that is also used in the Vial formula for trainers and Pokécenters.
 BattlerPlayerX = 0
 BattlerEnemyX = -3
-BattlerEnemyY = 2
+BattlerEnemyY = 4
 BattlerShadowSize = 2
 #-------------------------------
 [AZURILL,1]
@@ -3296,44 +3295,6 @@ BattlerEnemyX = 2
 BattlerEnemyY = 12
 BattlerShadowSize = 3
 #-------------------------------
-[ZUBAT,1]
-FormName = Stacona Form
-Type1 = DARK
-Type2 = FLYING
-BaseStats = 40,45,30,60,30,40
-Happiness = 0
-Abilities = INTIMIDATE
-HiddenAbility = INFILTRATOR
-Moves = 1,ABSORB,1,NUZZLE,5,LICK,10,MEANLOOK,15,POISONFANG,20,BITE,25,WINGATTACK,28,FLATTER,30,ZINGZAP,35,HAZE,40,JAWLOCK,45,CONFUSERAY,50,AIRSLASH,55,NIGHTSLASH,60,LEECHLIFE
-Color = Black
-Pokedex = Preferring total darkness, Staconan Zubat communicate through controlled discharges of static built up in their fur. Scientists say that their language is far more complicated than our own.
-Evolutions = GOLBAT,Level,24
-#-------------------------------
-[GOLBAT,1]
-FormName = Stacona Form
-Type1 = DARK
-Type2 = FLYING
-BaseStats = 75,90,70,100,65,55
-Happiness = 0
-Abilities = INTIMIDATE
-HiddenAbility = INFILTRATOR
-Moves = 1,SUPERSONIC,1,SCREECH,1,ABSORB,1,NUZZLE,1,LICK,1,MEANLOOK,15,POISONFANG,20,BITE,27,WINGATTACK,30,FLATTER,34,ZINGZAP,41,HAZE,48,JAWLOCK,55,CONFUSERAY,62,AIRSLASH,69,NIGHTSLASH,69,LEECHLIFE
-Color = Black
-Pokedex = Staconan Golbat are far more mischievious than their Kantonian counterparts, often playing pranks and scaring spelunkers for sport. Despite this, they're fairly friendly and just want to have fun.
-Evolutions = CROBAT,Location,151
-#-------------------------------
-FormName = Stacona Form
-Type1 = DARK
-Type2 = FLYING
-BaseStats = 95,100,70,140,70,50
-Happiness = 0
-Abilities = INTIMIDATE
-HiddenAbility = INFILTRATOR
-Moves = 0,MANICLUNGE,1,THUNDERFANG,1,TOXIC,1,SUPERSONIC,1,SCREECH,1,OMINOUSWIND,1,NUZZLE,1,LICK,1,MEANLOOK,15,POISONFANG,20,BITE,27,WINGATTACK,30,FLATTER,34,ZINGZAP,41,HAZE,48,JAWLOCK,55,CONFUSERAY,62,AIRSLASH,69,NIGHTSLASH,72,LEECHLIFE,80,DISCHARGE
-Color = Black
-Pokedex = If you stare up at the night sky and see a flash of lightning followed by maniacal laughing, it's most likely a Staconan Crobat courting a mate. Just make sure not to interfere.
-Evolutions =
-#-------------------------------
 [YANMA,1]
 FormName = Stacona Form
 Type1 = BUG
@@ -3345,7 +3306,6 @@ Moves = 0,DRAGONDANCE,1,LEECHLIFE,1,TACKLE,1,FORESIGHT,1,TWINEEDLE,6,TWISTER,11,
 Pokedex = By showing off all of its colors it attracts other Staconan Yanma. The more colors it has the more likely it is to get a mate.
 BattlerPlayerX = 0
 BattlerEnemyY = -2
-Evolutions = YANMEGA,HasMove,ANCIENTPOWER
 #-------------------------------
 [YANMEGA,1]
 FormName = Stacona Form
@@ -3358,7 +3318,45 @@ Moves = 0,OUTRAGE,1,LEECHLIFE,1,NIGHTSLASH,1,BUGBITE,1,TACKLE,1,FORESIGHT,1,TWIS
 Pokedex = It has been said that Staconan Yanma and Yanmega came to be when a Staconan Togetic blessed a Johtonian Yanma with its rainbows.
 BattlerPlayerX = 0
 BattlerEnemyY = -2
-#----------------- PLACEHOLDER
+#-------------------------------
+[ZUBAT,1]
+FormName = Stacona Form
+Type1 = DARK
+Type2 = FLYING
+BaseStats = 40,45,30,60,30,40
+Happiness = 0
+Abilities = INTIMIDATE
+Moves = 1,ABSORB,1,NUZZLE,5,LICK,10,MEANLOOK,15,POISONFANG,20,BITE,25,WINGATTACK,28,FLATTER,30,ZINGZAP,35,HAZE,40,JAWLOCK,45,CONFUSERAY,50,AIRSLASH,55,NIGHTSLASH,60,LEECHLIFE
+Color = Black
+Pokedex = Preferring total darkness, Staconan Zubat communicate through controlled discharges of static built up in their fur. Scientists say that their language is far more complicated than our own.
+BattlerEnemyY = 4
+BattlerShadowSize = 3
+Evolutions = GOLBAT,Level,24
+#-------------------------------
+[GOLBAT,1]
+FormName = Stacona Form
+Type1 = DARK
+Type2 = FLYING
+BaseStats = 75,90,70,100,65,55
+Happiness = 0
+Abilities = INTIMIDATE
+Moves = 1,SUPERSONIC,1,SCREECH,1,ABSORB,1,NUZZLE,1,LICK,1,MEANLOOK,15,POISONFANG,20,BITE,27,WINGATTACK,30,FLATTER,34,ZINGZAP,41,HAZE,48,JAWLOCK,55,CONFUSERAY,62,AIRSLASH,69,NIGHTSLASH,69,LEECHLIFE
+Color = Black
+Pokedex = Staconan Golbat are far more mischievious than their Kantonian counterparts, often playing pranks and scaring spelunkers for sport. Despite this, they're fairly friendly and just want to have fun.
+BattlerShadowSize = 3
+Evolutions = CROBAT,Location,151
+#-------------------------------
+[CROBAT,1]
+FormName = Stacona Form
+Type1 = DARK
+Type2 = FLYING
+BaseStats = 95,100,70,140,70,50
+Happiness = 0
+Abilities = INTIMIDATE
+Moves = 0,MANICLUNGE,1,THUNDERFANG,1,TOXIC,1,SUPERSONIC,1,SCREECH,1,OMINOUSWIND,1,NUZZLE,1,LICK,1,MEANLOOK,15,POISONFANG,20,BITE,27,WINGATTACK,30,FLATTER,34,ZINGZAP,41,HAZE,48,JAWLOCK,55,CONFUSERAY,62,AIRSLASH,69,NIGHTSLASH,72,LEECHLIFE,80,DISCHARGE
+Color = Black
+Pokedex = If you stare up at the night sky and see a flash of lightning followed by maniacal laughing, it's most likely a Staconan Crobat courting a mate. Just make sure not to interfere.
+#-------------------------------
 [TOTODILE,1]
 FormName = Stacona Form
 Type1 = ROCK
@@ -3368,8 +3366,10 @@ Abilities = BLAZE,WHITESMOKE
 HiddenAbility = SHEERFORCE,ROCKHEAD
 Moves = 1,SCRATCH,1,LEER,5,EMBER,10,BITE,15,SMOKESCREEN,20,FIREFANG,25,ROCKTOMB,30,CRUNCH,35,ROCKPOLISH,40,ROCKTOMB,45,ROAR,50,ROCKSLIDE,55,FIRELASH,60,SUPERPOWER
 Compatibility = Monster
-Pokedex = The sulfur emmissions from the Lumigen Power Plant caused the Totodile found on Costa Path to mutate into a new form. They seem to be more ferocious than their Johto counterparts. 
-#----------------- PLACEHOLDER
+Pokedex = The sulfur emmissions from the Lumigen Power Plant caused the Totodile found on Costa Path to mutate into a new form. They seem to be more ferocious than their Johto counterparts.
+BattlerEnemyX = 4
+BattlerEnemyY = 19
+#-------------------------------
 [CROCONAW,1]
 FormName = Stacona Form
 Type1 = ROCK
@@ -3379,8 +3379,8 @@ Abilities = BLAZE,WHITESMOKE
 HiddenAbility = SHEERFORCE,ROCKHEAD
 Moves = 1,SCRATCH,1,LEER,1,EMBER,1,BITE,1,SMOKESCREEN,20,FIREFANG,26,ROCKTOMB,32,CRUNCH,38,ROCKPOLISH,44,ROCKTOMB,50,ROAR,56,ROCKSLIDE,62,FIRELASH,68,SUPERPOWER
 Compatibility = Monster
-Pokedex = Staconan Croconaw use foul-smelling sulfur compounds to mark their territory. They greet any unwanted visitors with a vicious bite, that can even break the toughest steel bars manufactured in the region. 
-#----------------- PLACEHOLDER
+Pokedex = Staconan Croconaw use foul-smelling sulfur compounds to mark their territory. They greet any unwanted visitors with a vicious bite, that can even break the toughest steel bars manufactured in the region.
+#-------------------------------
 [FERALIGATR,1]
 FormName = Stacona Form
 Type1 = ROCK
