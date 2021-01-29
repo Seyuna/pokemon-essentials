@@ -3392,3 +3392,26 @@ HiddenAbility = SHEERFORCE,ROCKHEAD
 Moves = 1,SCRATCH,1,LEER,1,EMBER,1,BITE,1,SMOKESCREEN,20,FIREFANG,26,ROCKTOMB,32,CRUNCH,40,ROCKPOLISH,47,ROCKTOMB,54,ROAR,61,ROCKSLIDE,68,FIRELASH,75,SUPERPOWER
 Compatibility = Monster
 Pokedex = They can lay dormant for years, absorbing geothermal energy and sulfur-dioxide from the atmosphere for sustenance. The waste heat from Lumigen's thermo-nuclear plants has made them much stronger Johtonian Feraligatrs.
+#-------------------------------
+[ONIX,1]
+FormName = Teldona Form
+Type1 = ICE
+Pokedex = An icy form of Onix that hails from the Crysteel Mountains of the nearby Teldona Region. When injured, they dip their cold bodies in underground lakewater to create a new frozen shell.
+#-------------------------------
+[STEELIX,1]
+FormName = Teldona Form
+Type1 = ICE
+Type2 = GROUND
+Pokedex = Once a Teldonan Onix matures, it developes a metallic crystalline coating. After toughening this new armor by testing itself against the hardest of crystals, it evolves into this behemoth.
+#-------------------------------
+[SHUPPET,1]
+FormName = Stacona Form
+Type1 = GHOST
+Type2 = FAIRY
+Pokedex = It follows its trainer wherever they go, singing and humming happily. Wild Staconan Shuppet will find people to sing to, ringing their bells to impress them. When alone, they cry loudly.
+#-------------------------------
+[BANETTE,1]
+FormName = Stacona Form
+Type1 = GHOST
+Type2 = FAIRY
+Pokedex = Staconan Banette are some of the most happy and loving Pokémon, and you'll often see them playing with their trainers. They're happy to share the love with others as well, but if it senses hostility against its trainer, it will attack with deadly force. If they are separated from the person they care about, their cries can be heard for miles.
