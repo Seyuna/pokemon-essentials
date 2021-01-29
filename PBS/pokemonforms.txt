@@ -3366,10 +3366,9 @@ Type2 = FIRE
 BaseStats = 55,65,60,45,40,55
 Abilities = BLAZE,WHITESMOKE
 HiddenAbility = SHEERFORCE,ROCKHEAD
-Moves = 1,SCRATCH,1,LEER,5,EMBER,10,BITE,25,SMOKESCREEN,20,FIREFANG,25,ROCKTOMB,30,CRUNCH,35,ROCKPOLISH,40,ROCKTOMB,45,ROAR,50,ROCKSLIDE,55,FIRELASH,60,SUPERPOWER
+Moves = 1,SCRATCH,1,LEER,5,EMBER,10,BITE,15,SMOKESCREEN,20,FIREFANG,25,ROCKTOMB,30,CRUNCH,35,ROCKPOLISH,40,ROCKTOMB,45,ROAR,50,ROCKSLIDE,55,FIRELASH,60,SUPERPOWER
 Compatibility = Monster
-Pokedex = It has been said that Staconan Yanma and Yanmega came to be when a Staconan Togetic blessed a Johtonian Yanma with its rainbows.
-
+Pokedex = The sulfur emmissions from the Lumigen Power Plant caused the Totodile found on Costa Path to mutate into a new form. They seem to be more ferocious than their Johto counterparts. 
 #----------------- PLACEHOLDER
 [CROCONAW,1]
 FormName = Stacona Form
@@ -3378,10 +3377,9 @@ Type2 = FIRE
 BaseStats = 65,85,80,65,50,65
 Abilities = BLAZE,WHITESMOKE
 HiddenAbility = SHEERFORCE,ROCKHEAD
-Moves = 1,SCRATCH,1,LEER,5,EMBER,10,BITE,25,SMOKESCREEN,20,FIREFANG,25,ROCKTOMB,30,CRUNCH,35,ROCKPOLISH,40,ROCKTOMB,45,ROAR,50,ROCKSLIDE,55,FIRELASH,60,SUPERPOWER
+Moves = 1,SCRATCH,1,LEER,1,EMBER,1,BITE,1,SMOKESCREEN,20,FIREFANG,26,ROCKTOMB,32,CRUNCH,38,ROCKPOLISH,44,ROCKTOMB,50,ROAR,56,ROCKSLIDE,62,FIRELASH,68,SUPERPOWER
 Compatibility = Monster
-Pokedex = It has been said that Staconan Yanma and Yanmega came to be when a Staconan Togetic blessed a Johtonian Yanma with its rainbows.
-
+Pokedex = Staconan Croconaw use foul-smelling sulfur compounds to mark their territory. They greet any unwanted visitors with a vicious bite, that can even break the toughest steel bars manufactured in the region. 
 #----------------- PLACEHOLDER
 [FERALIGATR,1]
 FormName = Stacona Form
@@ -3390,6 +3388,6 @@ Type2 = FIRE
 BaseStats = 85,105,100,85,70,85
 Abilities = BLAZE,WHITESMOKE
 HiddenAbility = SHEERFORCE,ROCKHEAD
-Moves = 1,SCRATCH,1,LEER,5,EMBER,10,BITE,25,SMOKESCREEN,20,FIREFANG,25,ROCKTOMB,30,CRUNCH,35,ROCKPOLISH,40,ROCKTOMB,45,ROAR,50,ROCKSLIDE,55,FIRELASH,60,SUPERPOWER
+Moves = 1,SCRATCH,1,LEER,1,EMBER,1,BITE,1,SMOKESCREEN,20,FIREFANG,26,ROCKTOMB,32,CRUNCH,40,ROCKPOLISH,47,ROCKTOMB,54,ROAR,61,ROCKSLIDE,68,FIRELASH,75,SUPERPOWER
 Compatibility = Monster
-Pokedex = It has been said that Staconan Yanma and Yanmega came to be when a Staconan Togetic blessed a Johtonian Yanma with its rainbows.
+Pokedex = They can lay dormant for years, absorbing geothermal energy and sulfur-dioxide from the atmosphere for sustenance. The waste heat from Lumigen's thermo-nuclear plants has made them much stronger Johtonian Feraligatrs.
