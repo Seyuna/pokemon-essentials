@@ -82,7 +82,7 @@ FormName = ?????
 FormName = !!!!!
 #-------------------------------
 [UNOWN,28]
-FormName = Staconan AAA
+FormName = Staconan A Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -94,7 +94,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,29]
-FormName = Staconan BBB
+FormName = Staconan B Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -106,7 +106,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,30]
-FormName = Staconan CCC
+FormName = Staconan C Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -118,7 +118,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,31]
-FormName = Staconan DDD
+FormName = Staconan D Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -130,7 +130,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,32]
-FormName = Staconan EEE
+FormName = Staconan E Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -142,7 +142,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,33]
-FormName = Staconan FFF
+FormName = Staconan F Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -154,7 +154,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,34]
-FormName = Staconan GGG
+FormName = Staconan G Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -166,7 +166,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,35]
-FormName = Staconan HHH
+FormName = Staconan H Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -178,7 +178,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,36]
-FormName = Staconan III
+FormName = Staconan I Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -190,7 +190,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,37]
-FormName = Staconan JJJ
+FormName = Staconan J Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -202,7 +202,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,38]
-FormName = Staconan KKK
+FormName = Staconan K Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -214,7 +214,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,39]
-FormName = Staconan LLL
+FormName = Staconan L Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -226,7 +226,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,40]
-FormName = Staconan MMM
+FormName = Staconan M Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -238,7 +238,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,41]
-FormName = Staconan NNN
+FormName = Staconan N Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -250,7 +250,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,42]
-FormName = Staconan OOO
+FormName = Staconan O Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -262,7 +262,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,43]
-FormName = Staconan PPP
+FormName = Staconan P Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -274,7 +274,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,44]
-FormName = Staconan QQQ
+FormName = Staconan Q Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -286,7 +286,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,45]
-FormName = Staconan RRR
+FormName = Staconan R Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -298,7 +298,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,46]
-FormName = Staconan SSS
+FormName = Staconan S Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -310,7 +310,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,47]
-FormName = Staconan TTT
+FormName = Staconan T Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -322,7 +322,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,48]
-FormName = Staconan UUU
+FormName = Staconan U Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -334,7 +334,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,49]
-FormName = Staconan VVV
+FormName = Staconan V Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -346,7 +346,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,50]
-FormName = Staconan WWW
+FormName = Staconan W Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -358,7 +358,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,51]
-FormName = Staconan XXX
+FormName = Staconan X Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -370,7 +370,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,52]
-FormName = Staconan YYY
+FormName = Staconan Y Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -382,7 +382,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,53]
-FormName = Staconan ZZZ
+FormName = Staconan Z Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -394,7 +394,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,54]
-FormName = Staconan ???
+FormName = Staconan ? Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -406,7 +406,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 2
 #-------------------------------
 [UNOWN,55]
-FormName = Staconan !!!
+FormName = Staconan ! Rune
 Type1 = PSYCHIC
 Type2 = ROCK
 BaseStats = 75,75,75,75,75,75
@@ -649,7 +649,7 @@ FormName = Dark Type
 Type1 = DARK
 #-------------------------------
 [ARCEUS,18]
-FormName = Dark Type
+FormName = Fairy Type
 Type1 = FAIRY
 #-------------------------------
 [BASCULIN,1]
@@ -2120,7 +2120,7 @@ BattlerEnemyY = 2
 [ARENAY,1]
 FormName = Fire Cell Form
 Type1 = FIRE
-BaseStats = 90,100,60,90,90,60
+BaseStats = 90,80,80,80,110,80
 BattlerPlayerX = -2
 BattlerEnemyX = 3
 BattlerEnemyY = 25
@@ -2128,7 +2128,7 @@ BattlerEnemyY = 25
 [ARENAY,2]
 FormName = Water Cell Form
 Type1 = WATER
-BaseStats = 90,60,70,60,90,90
+BaseStats = 90,80,110,80,80,80
 BattlerPlayerX = -1
 BattlerEnemyX = -1
 BattlerEnemyY = 36
@@ -2136,7 +2136,7 @@ BattlerEnemyY = 36
 [ARENAY,3]
 FormName = Grass Cell Form
 Type1 = GRASS
-BaseStats = 90,90,60,70,100,60
+BaseStats = 90,80,80,110,80,80
 BattlerPlayerX = -2
 BattlerEnemyX = 0
 BattlerEnemyY = 28
@@ -2144,7 +2144,7 @@ BattlerEnemyY = 28
 [ARENAY,4]
 FormName = Flying Cell Form
 Type1 = FLYING
-BaseStats = 90,90,60,100,90,60
+BaseStats = 90,110,80,80,80,80
 BattlerPlayerX = -2
 BattlerEnemyX = 2
 BattlerEnemyY = 24
@@ -2153,7 +2153,7 @@ BattlerAltitude = 1
 [ARENAY,5]
 FormName = Alloy Cell Form
 Type1 = STEEL
-BaseStats = 90,90,100,70,60,60
+BaseStats = 90,80,110,80,80,80
 BattlerPlayerX = -2
 BattlerEnemyX = 0
 BattlerEnemyY = 32
@@ -2161,7 +2161,7 @@ BattlerEnemyY = 32
 [ARENAY,6]
 FormName = Electric Cell Form
 Type1 = ELECTRIC
-BaseStats = 90,90,60,90,100,70
+BaseStats = 90,80,80,80,110,80
 BattlerPlayerX = -2
 BattlerEnemyX = 0
 BattlerEnemyY = 26
@@ -2169,7 +2169,7 @@ BattlerEnemyY = 26
 [ARENAY,7]
 FormName = Ice Cell Form
 Type1 = ICE
-BaseStats = 90,90,70,100,90,60
+BaseStats = 90,80,80,80,110,80
 BattlerPlayerX = -1
 BattlerEnemyX = 0
 BattlerEnemyY = 26
@@ -2937,7 +2937,6 @@ Abilities = SNOWWARNING,SANDSTREAM
 HiddenAbility = THICKFAT
 Moves = 1,HAIL,1,SANDSTORM,1,GROWL,1,TACKLE,5,ICYWIND,8,MAGNITUDE,12,FOCUSENERGY,15,AVALANCHE,19,AMNESIA,22,GLACIATE,26,EARTHPOWER,29,CURSE,31,TAKEDOWN,36,YAWN,40,EARTHQUAKE,43,ICEBEAM,47,DOUBLEEDGE,51,BLIZZARD,60,SHEERCOLD
 Color = Brown
-Pokedex = Staconan Numel pokedex entrance goes here
 BattlerPlayerX = 1
 BattlerEnemyY = 21
 #-------------------------------
@@ -2949,7 +2948,6 @@ Abilities = SNOWWARNING,SANDSTREAM
 HiddenAbility = THICKFAT
 Moves = 1,HAIL,1,SANDSTORM,1,GROWL,1,TACKLE,1,ICYWIND,1,MAGNITUDE,5,ICYWIND,8,MAGNITUDE,12,FOCUSENERGY,15,AVALANCHE,19,AMNESIA,22,GLACIATE,26,EARTHPOWER,29,CURSE,31,TAKEDOWN,33,ICICLECRASH,39,YAWN,46,EARTHQUAKE,52,ICEBEAM,59,FISSURE,63,BLIZZARD,70,SHEERCOLD
 Color = Brown
-Pokedex = Staconan Camerupt pokedex entrance goes here
 BattlerEnemyY = 16
 BattlerShadowX = 2
 #-------------------------------
@@ -2959,7 +2957,6 @@ Type1 = DARK
 Type2 = PSYCHIC
 Moves = 1,SCRATCH,1,LEER,3,FAKEOUT,6,DISARMINGVOICE,9,CONFUSION,13,SNARL,18,COVET,21,PSYBEAM,24,EMBARGO,30,LIGHTSCREEN,30,REFLECT,33,PSYSHOCK,44,EERIESPELL
 Color = Blue
-Pokedex = Staconan Espurr pokedex entrance goes here
 BattlerPlayerY = 0
 BattlerEnemyY = 28
 #-------------------------------
@@ -2970,7 +2967,6 @@ Type2 = PSYCHIC
 HiddenAbility = COMPETITIVE
 Moves = 0,DARKPULSE,1,STOREDPOWER,1,MEFIRST,1,MAGICALLEAF,1,SCRATCH,1,LEER,1,COVET,1,CONFUSION,5,COVET,9,CONFUSION,13,LIGHTSCREEN,17,PSYBEAM,19,FAKEOUT,22,DISARMINGVOICE,25,PSYSHOCK,28,CHARGEBEAM,31,SHADOWBALL,35,EXTRASENSORY,40,PSYCHIC,43,EERIESPELL,45,SIGNALBEAM,48,SUCKERPUNCH,50,NIGHTDAZE,53,STOREDPOWER
 EggMoves = TRICK,YAWN,ASSIST,BARRIER,TICKLE
-Pokedex = Staconan Meowstic pokedex entrance goes here
 BattlerEnemyY = 22
 #-------------------------------
 [RALTS,1]

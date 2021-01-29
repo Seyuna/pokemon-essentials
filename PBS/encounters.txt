@@ -1103,7 +1103,7 @@ Land
     SANDILE,5
     BABEE,5
     SICKLER,5
-    DUCKLETT,5
+    SANDILE,5
     DEWPIDER,5
     SANDILE,5
 Water

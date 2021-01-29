@@ -118,7 +118,7 @@ Pokemon = BLASTOISE,63
     Item = SITRUSBERRY
 #-------------------------------
 [SPLICERIVAL,Zack]
-Pokemon = GIBLE,5
+Pokemon = YANMITE,5
 Pokemon = EEVEE,5
 #-------------------------------
 [SPLICERIVAL1,Zack,1]
@@ -129,7 +129,8 @@ Pokemon = BLITZLE,35
 Pokemon = MAREEP,35
     Form = 1
     Ball = 25
-Pokemon = GABITE,35
+Pokemon = YANMA,35
+    Form = 1
 Pokemon = ABSOL,35
     Form = 1
     Ball = 25
@@ -143,7 +144,8 @@ Pokemon = LUDICOLO,35
 Pokemon = FOONGUS,35
     Form = 1
     Ball = 24
-Pokemon = GABITE,35
+Pokemon = YANMA,35
+    Form = 1
 Pokemon = ABSOL,35
     Form = 1
     Ball = 24
