@@ -765,7 +765,7 @@
 743,BOULDERCRUSH,Boulder Crush,509,90,ROCK,Physical,90,10,0,NearOther,0,abef,"Crushes the target with boulder-like weight. The user's Defense increases the damage of this attack."
 744,FREEZINGGLARE,Freezing Glare,00C,90,PSYCHIC,Special,100,10,10,NearOther,0,bef,"The user shoots its psychic power from its eyes to attack. This may also leave the target frozen."
 745,ENCHANTEDSLASH,Enchanted Slash,013,60,FAIRY,Physical,100,20,30,NearOther,0,abefh,"The target is struck with a mystical slash that has a chance to confuse them."
-746,PIXIEPUMMEL,Pixie Pummel,0C0,20,FAIRY,Physical,100,20,0,NearOther,0,befn,"The user repeatedly pummels the target with fairy energy. Two to five hits occur in rapid succession."
+746,PIXIEPUMMEL,Pixie Pummel,0C0,20,FAIRY,Physical,100,20,0,NearOther,0,abef,"The user repeatedly pummels the target with fairy energy. Two to five hits occur in rapid succession."
 747,ASBESTOSLAM,Asbestoslam,005,85,ROCK,Physical,100,15,30,NearOther,0,bef,"The user slams the target with a toxic rock. This may also poison the target."
 748,ROCKTAIL,Rock Tail,044,65,ROCK,Physical,100,20,100,NearOther,0,abef,"The user sweeps at the target's legs swiftly, reducing the target's Speed stat."
 749,WEATHERBLAST,Weather Blast,523,120,FLYING,Special,90,5,0,NearOther,0,befn,"A powerful blast that varies in type depending on the weather."

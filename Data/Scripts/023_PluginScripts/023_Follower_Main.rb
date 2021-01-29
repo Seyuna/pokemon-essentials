@@ -510,18 +510,19 @@ def pbGetTerrainTag(event=nil,countBridge=false)
   return ret
 end
 
+
 # Add a check for dependent events in the passablity method
-class Game_Map
-  alias follow_passable? passable?
-  def passable?(x, y, d, self_event=nil)
-    ret = follow_passable?(x,y,d,self_event)
-    if !$game_temp.player_transferring && pbGetDependency("FollowerPkmn") && self_event != $game_player
-      dependent=pbGetDependency("FollowerPkmn")
-      return false if self_event != dependent && dependent.x==x && dependent.y==y
-    end
-    return ret
-  end
-end
+#class Game_Map
+#  alias follow_passable? passable?
+#  def passable?(x, y, d, self_event=nil)
+#    ret = follow_passable?(x,y,d,self_event)
+#    if !$game_temp.player_transferring && pbGetDependency("FollowerPkmn") && self_event != $game_player
+#      dependent=pbGetDependency("FollowerPkmn")
+#      return false if self_event != dependent && dependent.x==x && dependent.y==y
+#    end
+#    return ret
+#  end
+#end
 
 #===============================================================================
 # Shows Arenay being sent out on the player's side (including by a partner).

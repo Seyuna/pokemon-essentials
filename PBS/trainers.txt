@@ -1357,3 +1357,22 @@ Pokemon = ZANGOOSE,5
 	Form = 1
 Pokemon = SANDILE,5
 	Form = 1
+#-------------------------------
+[BEAUTY,Vivian]
+Pokemon = AIPOM,25
+    Form = 1
+Pokemon = AZURILL,25
+    Form = 1
+Pokemon = SEVIPER,25
+    Form = 1
+#-------------------------------
+[BIRDKEEPER,Kenneth]
+Pokemon = SWABLU,25
+    Form = 1
+Pokemon = ZUBAT,25
+    Form = 1
+#-------------------------------
+[BUGCATCHER,Rick]
+Pokemon = COMBEE,25
+Pokemon = YANMITE,25
+Pokemon = PINCUSH,25
