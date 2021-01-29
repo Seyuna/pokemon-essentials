@@ -279,16 +279,14 @@ end
 # Prevents both the user and the target from escaping. (Jaw Lock)
 ################################################################################
 class PokeBattle_Move_513 < PokeBattle_Move
-  def pbAdditionalEffect(user,target)
+  def pbEffectAfterAllHits(user,target)
     if (target.effects[PBEffects::JawLockUser]<0 && !target.effects[PBEffects::JawLock] &&
         user.effects[PBEffects::JawLockUser]<0 && !user.effects[PBEffects::JawLock])
       target.effects[PBEffects::JawLockUser]=user.index
       user.effects[PBEffects::JawLockUser]=user.index
       target.effects[PBEffects::JawLock]=true
       user.effects[PBEffects::JawLock]=true
-      @battle.pbDisplay(_INTL("Neither Pokémon can run away!"))
-    else
-      @battle.pbDisplay(_INTL("Jaw Lock failed!"))
+      @battle.pbDisplay(_INTL("{1} locked {1} in it's jaws! Neither Pokémon can run away.",user.pbThis,target.pbThis(true)))
     end
   end
 end

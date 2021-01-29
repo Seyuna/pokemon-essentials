@@ -73,6 +73,15 @@ class PokeBattle_Battle
       partyScene.pbDisplay(_INTL("{1} can't be switched out!",battler.pbThis)) if partyScene
       return false
     end
+    # Jaw Lock Effect
+    if battler.effects[PBEffects::JawLock]
+      eachBattler.each do |b|
+        if b.pokemonIndex==battlers.effects[PBEffects::JawLockUser] && !b.fainted?
+          partyScene.pbDisplay(_INTL("{1} can't be switched out!",battler.pbThis)) if partyScene
+          return false
+        end
+      end
+    end
     # Trapping abilities/items
     eachOtherSideBattler(idxBattler) do |b|
       next if !b.abilityActive?

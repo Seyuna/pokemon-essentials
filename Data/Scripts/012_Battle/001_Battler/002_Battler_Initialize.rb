@@ -138,6 +138,8 @@ class PokeBattle_Battler
       @effects[PBEffects::PowerTrick]        = false
       @effects[PBEffects::Substitute]        = 0
       @effects[PBEffects::Telekinesis]       = 0
+      @effects[PBEffects::JawLock]           = false
+      @effects[PBEffects::JawLockUser]       = -1
     end
     @fainted               = (@hp==0)
     @initialHP             = 0
@@ -278,6 +280,7 @@ class PokeBattle_Battler
     @effects[PBEffects::WeightChange]        = 0
     @effects[PBEffects::Yawn]                = 0
     @effects[PBEffects::QuickParry]          = false
+
   end
 
   #=============================================================================
