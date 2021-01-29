@@ -1094,11 +1094,11 @@ Cave
 146 # Cascade Creek
 25,10,10
 Land
-    DUCKLETT,5
+    YANMITE,5
     LOTAD,5
     BABEE,5
     SICKLER,5
-    DUCKLETT,5
+    YANMITE,5
     DEWPIDER,5
     SANDILE,5
     BABEE,5

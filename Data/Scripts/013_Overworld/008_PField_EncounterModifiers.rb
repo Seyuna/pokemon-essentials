@@ -17,6 +17,7 @@ Events.onWildPokemonCreate+=proc {|sender,e|
 # map depend on the levels of Pokémon in the player's party.
 # This is a simple method, and can/should be modified to account for evolutions
 # and other such details.  Of course, you don't HAVE to use this code.
+# Thundaga scaling level scaling
 
 # Ability Charm Code
 Events.onWildPokemonCreate+=proc {|sender,e|
@@ -137,7 +138,7 @@ Events.onTrainerPartyLoad+=proc {|sender,e|
      #20-30 = costa path and lush road
      sector5=[77,84,110,93,96,123]
      #25-35 = Driftwood and lab
-     sectorLAB=[127,113]
+     sectorLAB=[127,113,109]
      #25-40 = dim cave and dev room
      sector6=[100,106,90]
      #30-45 = maple trail and yama pass and secret labs and haunted hollow
