@@ -149,3 +149,23 @@ def pbSetArenayCharacterName(event,form=nil,shiny=false)
     pbMoveRoute($game_map.events[event],[PBMoveRoute::Graphic,"907#{s}#{f}",0,2,0])
   end
 end
+
+def pbSaveArenayToVariable(var)
+  return if !var
+  $Trainer.party.each_with_index do |pkmn,i|
+    if pkmn && pkmn.isSpecies?(:ARENAY)
+      $game_variables[var] = $Trainer.party[i]
+      $Trainer.party[i] = nil
+    end
+  end
+  $Trainer.party.compact!
+  for i in 0...$PokemonStorage.maxBoxes
+    for j in 0...$PokemonStorage.maxPokemon(i)
+      pkmn = $PokemonStorage[i,j]
+      if pkmn && pkmn.isSpecies?(:ARENAY)
+        $game_variables[var] = $PokemonStorage[i,j]
+        $PokemonStorage[i,j] = nil
+      end
+    end
+  end
+end

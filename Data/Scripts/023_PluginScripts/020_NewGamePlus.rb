@@ -8,10 +8,6 @@
 #===============================================================================
 
 
-
-
-NEW_GAME_PLUS_SWITCH = 400
-
 # What New Game Plus does
 =begin
 Take Party and PC from Old Save, but reset all moves to base moves, all levels to 5 and set's the species to baby form
@@ -100,11 +96,55 @@ end
 
 # Method to return Trainer's Old Pokemon and Storage, and also give the Player a free Big Nugget
 def pbNewGamePlusGoodies
-  return if [0,2].include?($PokemonTemp.newGameGoodies)
-  $PokemonTemp.oldParty.each {|pkmn| pbAddPokemonSilent(pkmn)}
-  $PokemonStorage = $PokemonTemp.oldStorage
+  return if [0,2].include?($Trainer.oldGameData[:goodies])
+  sentArenay = false
+  sentName = ""
+  if $Trainer.oldGameData[:oldParty].length < 6
+    $Trainer.oldGameData[:oldParty].each {|pkmn| pbAddPokemonSilent(pkmn)}
+    $PokemonStorage = $Trainer.oldGameData[:oldStorage]
+  else
+    $PokemonStorage = $Trainer.oldGameData[:oldStorage]
+    for i in 0...5
+      pbAddPokemonSilent($Trainer.oldGameData[:oldParty][i])
+    end
+    $PokemonStorage.pbStoreCaught($Trainer.oldGameData[:oldParty][5])
+    sentArenay = true
+    sentName = $Trainer.oldGameData[:oldParty][5].name
+  end
   $PokemonBag.pbStoreItem(:BIGNUGGET,1)
-  $PokemonTemp.newGameGoodies = 2
+  pbBGMFade(1.0)
+  viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
+  viewport.z = 99999
+  bmp = pbFade
+  screen = Sprite.new(viewport)
+  screen.bitmap = bmp
+  10.times do
+    Graphics.update
+    pbWait(1)
+  end
+  pbMessage("\\wm\\w[""]\\me[Egg get]<ac>You have now been returned your old Party and PC Storage from your last save</ac>")
+  pbMessage("\\wm\\w[""]<ac>However, your #{sentName} has been sent to the Storage, to accomodate for story events.</ac>") if sentArenay
+  pbMessage("\\wm\\w[""]<ac>You have also recieved a special item for starting a New Game +.</ac>")
+  pbMessage("\\wm\\w[""]<ac>The Star Icon on your Trainer Card will indicate the number of New Game + playthroughs you've started.</ac>")
+  pbMessage("\\wm\\w[""]<ac>You will be able to see a summary of the New Game + boosts on the back of the Trainer Card.</ac>")
+  pbMessage("\\wm\\w[""]<ac>Enjoy!</ac>")
+  pbMessage("\\wm\\w[""]<ar>~Team Splice</ar>")
+  10.times do
+    Graphics.update
+    pbWait(1)
+  end
+  screen.visible = false
+  pbFade(true)
+  screen.dispose
+  viewport.dispose
+  $Trainer.oldGameData = {:party => [], :storage => PokemonStorage.new,:goodies => 2}
+  $game_map.autoplay
+end
+
+alias ngl_trainerName pbTrainerName
+def pbTrainerName(name=nil,outfit=0)
+  ngl_trainerName(name,outfit)
+  $Trainer.oldGameData = $PokemonTemp.oldGameData if $PokemonTemp.begunNewGamePlus
 end
 
 #Editing the Load Screen to show the New Game Plus option
@@ -333,28 +373,28 @@ class PokemonLoadScreen
             event.clear_starting
           end
         end
-        $PokemonTemp.oldParty = trainer.party
-        $PokemonTemp.oldStorage = $PokemonStorage
+        $PokemonTemp.oldGameData[:oldParty] = trainer.party
+        $PokemonTemp.oldGameData[:oldStorage] = $PokemonStorage
         $PokemonTemp.oldNewGamePlusCount = trainer.newGamePlusCount
-        $PokemonTemp.oldParty.each_with_index do |pkmn,i|
+        $PokemonTemp.oldGameData[:oldParty].each_with_index do |pkmn,i|
           if pkmn && pkmn.isSpecies?(:ARENAY)
-            $PokemonTemp.oldParty[i] = nil
+            $PokemonTemp.oldGameData[:oldParty][i] = nil
           elsif pkmn
             revertToBaby(pkmn)
           end
         end
-        $PokemonTemp.oldParty.compact!
-        for i in 0...$PokemonTemp.oldStorage.maxBoxes
-          for j in 0...$PokemonTemp.oldStorage.maxPokemon(i)
-            pkmn = $PokemonTemp.oldStorage[i,j]
+        $PokemonTemp.oldGameData[:oldParty].compact!
+        for i in 0...$PokemonTemp.oldGameData[:oldStorage].maxBoxes
+          for j in 0...$PokemonTemp.oldGameData[:oldStorage].maxPokemon(i)
+            pkmn = $PokemonTemp.oldGameData[:oldStorage][i,j]
             if pkmn && pkmn.isSpecies?(:ARENAY)
-              $PokemonTemp.oldStorage[i,j] = nil
+              $PokemonTemp.oldGameData[:oldStorage][i,j] = nil
             elsif pkmn
               revertToBaby(pkmn)
             end
           end
         end
-        $PokemonTemp.newGameGoodies = 1
+        $PokemonTemp.oldGameData[:goodies] = 1
         $game_temp.common_event_id = 0 if $game_temp
         $scene               = Scene_Map.new
         Graphics.frame_count = 0
@@ -425,20 +465,13 @@ end
 
 # Adding a few temporary variables to store New Game Plus Data
 class PokemonTemp
-  attr_accessor :oldParty
-  attr_accessor :oldStorage
   attr_accessor :begunNewGamePlus
   attr_accessor :oldNewGamePlusCount
-  attr_accessor :newGameGoodies
+  attr_accessor :oldGameData
 
-  def oldParty
-    @oldParty = [] if !@oldParty
-    return @oldParty
-  end
-
-  def oldStorage
-    @oldStorage = PokemonStorage.new if !@oldStorage
-    return @oldStorage
+  def oldGameData
+    @oldGameData = {:party => [], :storage => PokemonStorage.new,:goodies => 0} if !@oldGameData
+    return @oldGameData
   end
 
   def oldNewGamePlusCount
@@ -450,21 +483,61 @@ class PokemonTemp
     @begunNewGamePlus = false if !@begunNewGamePlus
     return @begunNewGamePlus
   end
-
-  def newGameGoodies
-    @newGameGoodies = 0 if !@newGameGoodies
-    return @newGameGoodies
-  end
 end
 
 # Adding a few temporary variables to store Trainer's New Game Plus Progress
 class PokeBattle_Trainer
   attr_accessor :newGamePlusCount
   attr_accessor :newGamePlus
+  attr_accessor :oldGameData
+
+  def oldGameData
+    @oldGameData = {:party => [], :storage => PokemonStorage.new,:goodies => 0} if !@oldGameData
+    return @oldGameData
+  end
 
   def newGamePlus
     @newGamePlus = false if !@newGamePlus
     return @newGamePlus
+  end
+
+  def newGamePlus=(value)
+    @newGamePlus = value
+    if value == true
+      pbSave
+      ret = false
+      viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
+      viewport.z = 99999
+      bmp = pbFade
+      screen = Sprite.new(viewport)
+      screen.bitmap = bmp
+      10.times do
+        Graphics.update
+        pbWait(1)
+      end
+      pbMessage("\\wm\\w[""]<ac>You have now unlocked the ability to play the New Game + mode.</ac>")
+      pbMessage("\\wm\\w[""]<ac>To accesss the new mode, select the \"New Game +\" option on the Load Screen.</ac>")
+      if $Trainer.newGamePlusCount == 0 || pbConfirmMessage("\\wm\\w[""]<ac>Would you like to know what a New Game + is?</ac>")
+        pbMessage("\\wm\\w[""]<ac>New Game + allows you to replay Pokémon Splice, but in a brand new way.</ac>")
+        pbMessage("\\wm\\w[""]<ac>Everything such as items, money, etc. will be cleared, just as if you were starting a New Game.</ac>")
+        pbMessage("\\wm\\w[""]<ac>But...</ac>")
+        pbMessage("\\wm\\w[""]<ac>You will get to carry over the Pokémon from your party and PC Storage of your current save.</ac>")
+        pbMessage("\\wm\\w[""]<ac>Those Pokémon, however, will be reset to their baby forms and will return to Level 5.</ac>")
+        pbMessage("\\wm\\w[""]<ac>But that's not all...</ac>")
+        pbMessage("\\wm\\w[""]<ac>In the new playthrough, you will have several gameplay differences.</ac>")
+        pbMessage("\\wm\\w[""]<ac>These include, but are not limited to, an increased shiny rate, higher EXP and money from each battle and more difficult Trainer and Wild Battles.</ac>")
+      end
+      ret = true if pbConfirmMessage("\\wm\\w[""]<ac>Would you like to return to Title Screen and try out this mode?</ac>")
+      10.times do
+        Graphics.update
+        pbWait(1)
+      end
+      screen.visible = false
+      pbFade(true)
+      screen.dispose
+      viewport.dispose
+      $scene = pbCallTitle if ret
+    end
   end
 
   def newGamePlusCount
@@ -668,10 +741,10 @@ class PokemonSaveScreen
     if pbConfirmMessage(_INTL("Would you like to save the game?"))
       if safeExists?(RTP.getSaveFileName("Game.rxdata"))
         if $PokemonTemp.begunNewGamePlus
-          pbMessage(_INTL("You are now about to start a New Game Plus..."))
+          pbMessage(_INTL("You are now about to start a New Game +..."))
           pbMessage(_INTL("If you save now, the older file's adventure, including items and Pokémon, will be entirely lost."))
           if !pbConfirmMessage(
-             _INTL("Would you like to save the game and start this New Game Plus?"))
+             _INTL("Would you like to save the game and start this New Game +?"))
             pbSEPlay("GUI save choice")
             @scene.pbEndScreen
             return false
@@ -727,7 +800,7 @@ Events.onWildPokemonCreate+=proc {|sender,e|
   pokemon=e[0]
   if rand(NewGamePlusData.maxIVChance) < 1
     for j in 0...6
-      pokemon.iv[i] = 31
+      pokemon.iv[j] = 31
     end
   else
     value = NewGamePlusData.pkmnIVOffset
@@ -756,7 +829,7 @@ Events.onTrainerPartyLoad+=proc {|sender,e|
       pokemon = party[i]
       if rand(NewGamePlusData.maxIVChance) < 1
         for j in 0...6
-          pokemon.iv[i] = 31
+          pokemon.iv[j] = 31
         end
       else
         value = NewGamePlusData.pkmnIVOffset

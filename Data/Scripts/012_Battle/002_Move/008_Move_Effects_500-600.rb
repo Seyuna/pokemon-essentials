@@ -29,36 +29,9 @@ end
 ################################################################################
 # Type depends on the user's type, and then explodes. ARENAY SPLICE
 ################################################################################
-class PokeBattle_Move_502 < PokeBattle_Move
-  def worksWithNoTargets?;     return true; end
-  def pbNumHits(user,targets); return 1;    end
-
+class PokeBattle_Move_502 < PokeBattle_Move_0E0
   def pbBaseType(user)
     return user.type1
-  end
-
-  def pbMoveFailed?(user,targets)
-    if !@battle.moldBreaker
-      bearer = @battle.pbCheckGlobalAbility(:DAMP)
-      if bearer!=nil
-        @battle.pbShowAbilitySplash(bearer)
-        if PokeBattle_SceneConstants::USE_ABILITY_SPLASH
-          @battle.pbDisplay(_INTL("{1} cannot use {2}!",user.pbThis,@name))
-        else
-          @battle.pbDisplay(_INTL("{1} cannot use {2} because of {3}'s {4}!",
-             user.pbThis,@name,bearer.pbThis(true),bearer.abilityName))
-        end
-        @battle.pbHideAbilitySplash(bearer)
-        return true
-      end
-    end
-    return false
-  end
-
-  def pbSelfKO(user)
-    return if user.fainted?
-    user.pbReduceHP(user.hp,false)
-    user.pbItemHPHealCheck
   end
 end
 
@@ -306,16 +279,14 @@ end
 # Prevents both the user and the target from escaping. (Jaw Lock)
 ################################################################################
 class PokeBattle_Move_513 < PokeBattle_Move
-  def pbAdditionalEffect(user,target)
+  def pbEffectAfterAllHits(user,target)
     if (target.effects[PBEffects::JawLockUser]<0 && !target.effects[PBEffects::JawLock] &&
         user.effects[PBEffects::JawLockUser]<0 && !user.effects[PBEffects::JawLock])
       target.effects[PBEffects::JawLockUser]=user.index
       user.effects[PBEffects::JawLockUser]=user.index
       target.effects[PBEffects::JawLock]=true
       user.effects[PBEffects::JawLock]=true
-      @battle.pbDisplay(_INTL("Neither Pokémon can run away!"))
-    else
-      @battle.pbDisplay(_INTL("Jaw Lock failed!"))
+      @battle.pbDisplay(_INTL("{1} locked {1} in it's jaws! Neither Pokémon can run away.",user.pbThis,target.pbThis(true)))
     end
   end
 end
@@ -572,11 +543,116 @@ end
 class PokeBattle_Move_526 < PokeBattle_Move
   def ignoresSubstitute?(user); return true; end
 
-  def pbEffectGeneral(user)
-    @battle.eachBattler do |b|
-      next if b.pbHasType?(:FAIRY)
-      next if user == b
-      b.pbLowerStatStage(PBStats::ACCURACY,1,user)
+  def pbFailsAgainstTarget?(user,target)
+    return target == user
+  end
+
+  def pbAdditionalEffect(user,target)
+    return false if target.pbHasType?(:FAIRY)
+    return false if user == target
+    return false if !target.pbCanLowerStatStage?(PBStats::ACCURACY)
+    target.pbLowerStatStage(PBStats::ACCURACY,1,user)
+  end
+end
+
+#===============================================================================
+# Blocks attack and counter's back (Azumarill's Signature Move)
+#===============================================================================
+class PokeBattle_Move_527 < PokeBattle_ProtectMove
+  def initialize(battle,move)
+    super
+    @effect = PBEffects::QuickParry
+  end
+
+  def pbProtectMessage(user)
+    @battle.pbDisplay(_INTL("{1} is anticipating an attack!",user.pbThis))
+  end
+end
+
+#===============================================================================
+# Causes the target to flinch. Fails if this isn't the user's first turn.
+# Chance to Paralyze (Manic Lunge)
+#===============================================================================
+class PokeBattle_Move_528 < PokeBattle_FlinchMove
+  def pbMoveFailed?(user,targets)
+    if user.turnCount>1 || user.lastRoundMoved>=0
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
     end
+    return false
+  end
+
+  def pbAdditionalEffect(user,target)
+    super
+    if target.pbCanInflictStatus?(PBStatuses::PARALYSIS,user,false) && rand(5) < 1
+      target.pbInflictStatus(PBStatuses::PARALYSIS,0,(_INTL("{1} was paralyzed by the blinding lunge!",target.pbThis)),user)
+    end
+  end
+end
+
+#===============================================================================
+# Raises Def and SpDef sharply but lowers speed Sharply (Frost Armor)
+#===============================================================================
+class PokeBattle_Move_52A < PokeBattle_Move
+  def pbMoveFailed?(user,targets)
+    if !user.pbCanLowerStatStage?(PBStats::DEFENSE,user,self) &&
+           !user.pbCanRaiseStatStage?(PBStats::SPDEF,user,self) &&
+           !user.pbCanRaiseStatStage?(PBStats::SPEED,user,self)
+      @battle.pbDisplay(_INTL("{1}'s stats won't go any higher!",user.phThis))
+      return true
+    end
+    return false
+  end
+
+  def pbEffectGeneral(user)
+    @battle.pbDisplay(_INTL("{1} enveloped itself in an icy armor!",user.pbThis))
+    user.pbRaiseStatStage(PBStats::DEFENSE,2,user,false)
+    user.pbRaiseStatStage(PBStats::SPDEF,2,user,false)
+    @battle.pbCommonAnimation("StatUp",user)
+    @battle.pbDisplay(_INTL("{1} Defense and Sp. Def sharply rose!",user.pbThis))
+    user.pbLowerStatStage(PBStats::SPEED,2,user)
+  end
+end
+
+#===============================================================================
+# Doesn't affect non-graounded Pokemon (Glacial Quake)
+#===============================================================================
+class PokeBattle_Move_52B < PokeBattle_Move
+  def pbFailsAgainstTarget?(user,target)
+    if target.airborne?
+      @battle.pbDisplay(_INTL("It doesn't affect {1}...",target.pbThis(true)))
+      return true
+    end
+    return false
+  end
+end
+
+#===============================================================================
+# Power is doubled if the target is frozen. Thaws the target up. (Wake-Up Slap)
+#===============================================================================
+class PokeBattle_Move_52C < PokeBattle_Move
+  def pbBaseDamage(baseDmg,user,target)
+    if target.frozen? &&
+       (target.effects[PBEffects::Substitute]==0 || ignoresSubstitute?(user))
+      baseDmg *= 2
+    end
+    return baseDmg
+  end
+
+  def pbEffectAfterAllHits(user,target)
+    return if target.fainted?
+    return if target.damageState.unaffected || target.damageState.substitute
+    return if target.status!=PBStatuses::FROZEN
+    target.pbInflictStatus(PBStatuses::NONE,0,(_INTL("The ice around {1} was shattered!",target.pbThis(true))))
+  end
+end
+
+#===============================================================================
+# Two turn attack. Attacks first turn, skips second turn (if successful).
+# Changes type based on user type
+#===============================================================================
+class PokeBattle_Move_52D < PokeBattle_Move_0C2
+  def pbBaseType(user)
+    return user.type1
   end
 end

@@ -81,6 +81,11 @@ PluginManager.register({
 })
 
 PluginManager.register({
+  :name => "Sprite Credits",
+  :credits => ["PoffinCase","Kalarie"]
+})
+
+PluginManager.register({
   :name => "Fanart Credits",
   :credits => ["HauntedArtStudio","KingdomKey","Tristantine The Great","ShadowPhil","Design3D"]
 })
