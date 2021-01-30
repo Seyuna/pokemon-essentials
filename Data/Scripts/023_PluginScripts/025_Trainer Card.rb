@@ -108,12 +108,6 @@ class PokemonTrainerCard_Scene
     @sprites["help_overlay"].setBitmap("Graphics/Pictures/Trainer Card/overlay_0")
     @sprites["help_overlay"].zoom_x=2 ; @sprites["help_overlay"].zoom_y=2
     @sprites["help_overlay"].visible = false if $Trainer.newGamePlusCount < 1
-    bmp = pbBitmap(pbPlayerSpriteFile($Trainer.trainertype))
-    x = (bmp.width-128)/2+36-4 + 120
-    y = (bmp.height-128)+80+4 + 80
-    p x
-    p y
-    @sprites["overlay"].bitmap.blt(x,y,bmp,Rect.new(0,0,bmp.width,bmp.width))
     pbDrawTrainerCardFront
     pbFadeInAndShow(@sprites) { pbUpdate }
   end
@@ -192,6 +186,10 @@ class PokemonTrainerCard_Scene
     textPositions = [
       [_INTL("Press C to flip the card."),16,64+280,0,Color.new(216,216,216),Color.new(80,80,80)]
     ]
+    bmp = pbBitmap(pbPlayerSpriteFile($Trainer.trainertype))
+    x = 350 + (($Trainer.gender==0)? 0 : -10)
+    y = 100 + (($Trainer.gender==0)? 5 : -5)
+    @sprites["overlay"].bitmap.blt(x,y,bmp,Rect.new(0,0,bmp.width,bmp.height))
     @sprites["overlay2"].z+=20
     pbDrawTextPositions(@overlay2,textPositions) if $Trainer.newGamePlusCount > 0
     flip2 if @flip==true
@@ -295,7 +293,7 @@ class PokemonTrainerCard_Scene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.trigger?(Input::C)
+      if Input.trigger?(Input::C) && $Trainer.newGamePlusCount > 0
         if @front==true
           pbDrawTrainerCardBack
           wait(3)
