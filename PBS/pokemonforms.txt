@@ -1831,7 +1831,7 @@ BattlerPlayerX = 5
 BattlerPlayerY = 34
 BattlerEnemyX = 4
 BattlerEnemyY = 39
-Evolutions = SLOWKING,Item,GALARICAWREATH,SLOWBRO,Item,GALARICACUFF
+Evolutions = SLOWBRO,Item,GALARICACUFF,SLOWKING,Item,GALARICAWREATH
 #-------------------------------
 [SLOWBRO,1]
 FormName = Galar Form
@@ -3357,6 +3357,8 @@ HiddenAbility = INFILTRATOR
 Moves = 0,MANICLUNGE,1,THUNDERFANG,1,TOXIC,1,SUPERSONIC,1,SCREECH,1,OMINOUSWIND,1,NUZZLE,1,LICK,1,MEANLOOK,15,POISONFANG,20,BITE,27,WINGATTACK,30,FLATTER,34,ZINGZAP,41,HAZE,48,JAWLOCK,55,CONFUSERAY,62,AIRSLASH,69,NIGHTSLASH,72,LEECHLIFE,80,DISCHARGE,85,BOOMBURST
 Color = Black
 Pokedex = If you stare up at the night sky and see a flash of lightning followed by maniacal laughing, it's most likely a Staconan Crobat courting a mate. Just make sure not to interfere.
+BattlerEnemyX = -7
+BattlerShadowSize = 3
 #-------------------------------
 [TOTODILE,1]
 FormName = Stacona Form
@@ -3396,22 +3398,48 @@ Pokedex = They can lay dormant for years, absorbing geothermal energy and sulfur
 [ONIX,1]
 FormName = Teldona Form
 Type1 = ICE
+BaseStats = 55,65,130,50,30,55
+Abilities = STURDY,HEATPROOF
+HiddenAbility = SHEERFORCE
+Moves = 1,WRAP,1,BIDE,1,POWDERSNOW,1,HARDEN,4,SMACKDOWN,8,ROCKPOLISH,12,BREAKINGSWIPE,16,CURSE,20,ICEFANG,24,FLASHFREEZE,28,ROCKSLIDE,32,STEALTHROCK,36,SLAM,40,HAIL,44,DRILLRUN,48,IRONTAIL,52,GLACIALQUAKE,56,DIAMONDSTORM
+Color = Blue
+Kind  = Ice Snake
 Pokedex = An icy form of Onix that hails from the Crysteel Mountains of the nearby Teldona Region. When injured, they dip their cold bodies in underground lakewater to create a new frozen shell.
 #-------------------------------
 [STEELIX,1]
 FormName = Teldona Form
 Type1 = ICE
 Type2 = GROUND
+BaseStats = 95,105,160,20,55,85
+Abilities = STURDY,HEATPROOF
+HiddenAbility = SHEERFORCE
+Moves = 0,FROSTARMOR,1,WRAP,1,BIDE,1,POWDERSNOW,1,CRUNCH,1,THUNDERFANG,1,ROCKPOLISH,1,ICEFANG,1,HARDEN,4,SMACKDOWN,8,AUTOTOMIZE,12,BREAKINGSWIPE,16,CURSE,20,IRONHEAD,24,FLASHFREEZE,28,ROCKSLIDE,32,STEALTHROCK,36,SLAM,40,HAIL,44,DRILLRUN,48,IRONTAIL,52,GLACIALQUAKE,56,DIAMONDSTORM,60,AURORAVEIL
+Color = Blue
+Kind  = Glacial Behemoth
 Pokedex = Once a Teldonan Onix matures, it developes a metallic crystalline coating. After toughening this new armor by testing itself against the hardest of crystals, it evolves into this behemoth.
 #-------------------------------
 [SHUPPET,1]
 FormName = Stacona Form
 Type1 = GHOST
 Type2 = FAIRY
+BaseStats = 50,55,35,50,75,30
+Abilities = CUTECHARM,COMPETITIVE
+HiddenAbility = MAGICBOUNCE
+Moves = 1,SWIFT,4,SING,8,NIGHTSHADE,12,DISARMINGVOICE,16,ATTRACT,20,SNARL,24,HEX,28,CURSE,32,SHADOWBALL,36,DAZZLINGGLEAM,40,FREEZINGGLARE,44,PERISHSONG,48,NASTYPLOT,54,MOONLIGHT,58,OBSESSIONDANCE
+Color = Pink
 Pokedex = It follows its trainer wherever they go, singing and humming happily. Wild Staconan Shuppet will find people to sing to, ringing their bells to impress them. When alone, they cry loudly.
+BattlerEnemyX = -1
+BattlerEnemyY = 10
 #-------------------------------
 [BANETTE,1]
 FormName = Stacona Form
 Type1 = GHOST
 Type2 = FAIRY
+BaseStats = 70,80,60,70,110,60
+Abilities = CUTECHARM,COMPETITIVE
+HiddenAbility = MAGICBOUNCE
+Moves = 0,OBSESSIONDANCE,1,SWIFT,1,SING,1,NIGHTSHADE,1,SWEETKISS,1,OBSESSIONDANCE,12,DISARMINGVOICE,16,ATTRACT,20,SNARL,24,HEX,28,CURSE,32,SHADOWBALL,38,DAZZLINGGLEAM,44,FREEZINGGLARE,50,PERISHSONG,56,NASTYPLOT,62,MOONLIGHT,68,MYSTICALFIRE
+Color = Pink
 Pokedex = Staconan Banette are some of the most happy and loving Pokémon, and you'll often see them playing with their trainers. They're happy to share the love with others as well, but if it senses hostility against its trainer, it will attack with deadly force. If they are separated from the person they care about, their cries can be heard for miles.
+BattlerEnemyX = 0
+BattlerEnemyY = 16
