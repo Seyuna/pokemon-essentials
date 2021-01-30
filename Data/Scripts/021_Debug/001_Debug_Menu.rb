@@ -514,7 +514,7 @@ def pbDebugMenuActions(cmd="",sprites=nil,viewport=nil)
     params.setRange(1, PBItems.maxValue)
     params.setInitialValue(1)
     params.setCancelValue(0)
-    item = pbMessageChooseNumber(_INTL("Choose the number of items."),params)
+    item = pbMessageChooseNumber(_INTL("Choose the item id."),params)
     if item>0
       qtyparams = ChooseNumberParams.new
       qtyparams.setRange(1,255)
