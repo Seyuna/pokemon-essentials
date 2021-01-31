@@ -135,6 +135,49 @@ end
 def pbBattleAnimationOverride(viewport,battletype=0,foe=nil)
   ##### VS. animation, by Luka S.J. #####
   ##### Tweaked by Maruno           #####
+  trainerid = (foe[0].trainertype rescue -1)
+  if trainerid >= 0
+    trainername = (foe[0].name rescue "")
+    tbargraphic = sprintf("Graphics/Transitions/vsBarSpecial%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tbargraphic = sprintf("Graphics/Transitions/vsBarSpecial%d",trainerid) if !pbResolveBitmap(tbargraphic)
+    tgraphic = sprintf("Graphics/Transitions/vsTrainerSpecial%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tgraphic = sprintf("Graphics/Transitions/vsTrainerSpecial%d",trainerid) if !pbResolveBitmap(tgraphic)
+    if pbResolveBitmap(tgraphic)
+      vsSequenceSpecial(viewport,trainername,trainerid,tbargraphic,tgraphic)
+      return true
+    end
+    tbargraphic = sprintf("Graphics/Transitions/vsBarElite%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tbargraphic = sprintf("Graphics/Transitions/vsBarElite%d",trainerid) if !pbResolveBitmap(tbargraphic)
+    tgraphic = sprintf("Graphics/Transitions/vsTrainer%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tgraphic = sprintf("Graphics/Transitions/vsTrainer%d",trainerid) if !pbResolveBitmap(tgraphic)
+    if pbResolveBitmap(tbargraphic) && pbResolveBitmap(tgraphic)
+      vsSequenceElite(viewport,trainername,trainerid,tbargraphic,tgraphic)
+      return true
+    end
+    tbargraphic = sprintf("Graphics/Transitions/vsBarNew%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tbargraphic = sprintf("Graphics/Transitions/vsBarNew%d",trainerid) if !pbResolveBitmap(tbargraphic)
+    tlogographic = sprintf("Graphics/Transitions/vsLogo%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tlogographic = sprintf("Graphics/Transitions/vsLogo%d",trainerid) if !pbResolveBitmap(tlogographic)
+    if pbResolveBitmap(tbargraphic) && pbResolveBitmap(tgraphic) && pbResolveBitmap(tlogographic)
+      vsSequenceEvil(viewport,trainername,trainerid,tbargraphic,tgraphic,tlogographic)
+      return true
+    end
+    if pbResolveBitmap(tbargraphic) && pbResolveBitmap(tgraphic)
+      vsSequenceNew(viewport,trainername,trainerid,tbargraphic,tgraphic)
+      return true
+    end
+  end
+#  if !handled && trainerid >= 0
+#    case rand(3)
+#    when 0
+#      ebTrainerAnimation1(viewport)
+#    when 1
+#      ebTrainerAnimation2(viewport)
+#    when 2
+#      ebTrainerAnimation3(viewport)
+#    end
+#    handled = true
+#  end
   if (battletype==1 || battletype==3) && foe.length==1   # Against single trainer
     trainerid = (foe[0].trainertype rescue -1)
     if trainerid>=0
