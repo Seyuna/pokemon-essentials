@@ -227,24 +227,24 @@ Land
 043 # Moncto Town
 20,8,8
 Water
-    MAGIKARP,5,20
-    MAGIKARP,5,20
-    MAGIKARP,5,20
-    WIMPOD,5,20
-    WIMPOD,5,20
+    MAGIKARP,1,7
+    MAGIKARP,1,7
+    MAGIKARP,1,7
+    WIMPOD,1,7
+    WIMPOD,1,7
 OldRod
-    MAGIKARP,5,10
-    WIMPOD,5,10
+    MAGIKARP,1,7
+    WIMPOD,1,7
 GoodRod
-    MAGIKARP,5,20
-    WIMPOD,5,20
-    WIMPOD,5,20
+    MAGIKARP,15,25
+    WIMPOD,15,25
+    WIMPOD,15,25
 SuperRod
-    MAGIKARP,5,30
-    WIMPOD,5,30
-    WIMPOD,5,30
-    WIMPOD,5,30
-    WIMPOD,5,30
+    MAGIKARP,25,35
+    WIMPOD,25,35
+    WIMPOD,25,35
+    WIMPOD,25,35
+    WIMPOD,25,35
 #-------------------------------
 044 # Route 6
 20,8,8
@@ -422,12 +422,12 @@ SuperRod
 078 # Pollen Path
 20,8,8
 Land
-    ADORABULL,1,5
-    BABEE,1,5
-    BUDEW,1,5
-    SENTRET,1,5
-    KANGA,1,5
-    RUFFLET,1,5
+    ADORABULL,2,7
+    BABEE,2,7
+    BUDEW,2,7
+    SENTRET,2,7
+    KANGA,2,7
+    RUFFLET,2,7
 #-------------------------------
 079 # Fleural Town
 20,8,8
@@ -454,12 +454,12 @@ SuperRod
 080 # Iron Pass
 20,8,8
 Land
-    WINGOT,1,5
-    ADORABULL,1,5
-	MAGNEMITE,1,5
-    BLITZLE,1,5
-    GRUBBIN,1,5
-    DRIFLOON,1,5
+    WINGOT,2,7
+    ADORABULL,2,7
+	MAGNEMITE,2,7
+    BLITZLE,2,7
+    GRUBBIN,2,7
+    DRIFLOON,2,7
 Water
     MAGIKARP,5,15
     FEEBAS,5,15
@@ -728,83 +728,83 @@ Land
 108 # Lumigen Hills
 20,8,8
 Land
-    ARON,5
-    WINGOT,5
-	KLINK,5
-    ZANGOOSE,5
-    AIPOM,5
-    ABSOL,5
+    ARON,7,13
+    WINGOT,7,13
+	KLINK,7,13
+    ZANGOOSE,7,13
+    AIPOM,7,13
+    ABSOL,7,13
 Water
-    MARILL,5
-    WINGULL,5
-    MAGIKARP,5
-    FEEBAS,5
-    BASCULIN,5
+    MARILL,7,13
+    WINGULL,7,13
+    MAGIKARP,7,13
+    FEEBAS,7,13
+    BASCULIN,7,13
 OldRod
-    MARILL,5
-    MAGIKARP,5
+    MARILL,7,13
+    MAGIKARP,7,13
 GoodRod
-    BASCULIN,5
-    MAGIKARP,5
-    FEEBAS,5
+    BASCULIN,17,23
+    MAGIKARP,17,23
+    FEEBAS,17,23
 SuperRod
-    BASCULIN,5
-    MAGIKARP,5
-    FEEBAS,5
-    FINNEON,5
-    LAPRAS,5
+    BASCULIN,37,43
+    MAGIKARP,37,43
+    FEEBAS,37,43
+    FINNEON,37,43
+    LAPRAS,37,43
 #-------------------------------
 110 # Frostbite Cavern
 20,8,8
 Cave
-    MAREEP,5
-    SNORUNT,5
-    SWINUB,5
-    SNEASEL,5
-    NUMEL,5
-    CRYOGONAL,5
+    MAREEP,20,26
+    SNORUNT,20,26
+    SWINUB,20,26
+    SNEASEL,20,26
+    NUMEL,20,26
+    CRYOGONAL,20,26
 #-------------------------------
 111 # Ferrous Cave
 20,8,8
 Cave
-    ZUBAT,5
-    RALTS,5
-    AZURILL,5
-    PARAS,5
-    ALUMIDON,5
-    LARVITAR,5
+    ZUBAT,12,16
+    RALTS,12,16
+    AZURILL,12,16
+    PARAS,12,16
+    ALUMIDON,12,16
+    LARVITAR,12,16
 #-------------------------------
 113 # Driftwood City
 20,8,8
 Water
-    SANDILE,5
-    KRABBY,5
-    WAILMER,5
-    CARVANHA,5
-    MAGIKARP,5
+    SANDILE,15,20
+    KRABBY,15,20
+    WAILMER,15,20
+    CARVANHA,15,20
+    MAGIKARP,15,20
 OldRod
-    MAGIKARP,5
-    SANDILE,5
+    MAGIKARP,15,20
+    SANDILE,15,20
 GoodRod
-    MAGIKARP,5
-    WAILMER,5
-    CARVANHA,5
+    MAGIKARP,15,20
+    WAILMER,15,20
+    CARVANHA,15,20
 SuperRod
-    MAGIKARP,5,25
-    WAILMER,5,25
-    CARVANHA,5,25
-    SANDILE,5,25
-    MAGIKARP,5,25
+    MAGIKARP,25,35
+    WAILMER,25,35
+    CARVANHA,25,35
+    SANDILE,25,35
+    MAGIKARP,25,35
 #-------------------------------
 121 # Ferrous Cave
 20,8,8
 Cave
-    ZUBAT,5
-    RALTS,5
-    AZURILL,5
-    PARAS,5
-    ALUMIDON,5
-    LARVITAR,5
+    ZUBAT,15,19
+    RALTS,15,19
+    AZURILL,15,19
+    PARAS,15,19
+    ALUMIDON,15,19
+    LARVITAR,15,19
 Water
     POLIWAG,5
     FINNEON,5
@@ -887,12 +887,12 @@ Land
 150 # Folian Grove
 20,8,8
 Land
-    SKWOVET,5
-    APPLIN,5
-    SLOWPOKE,5
-    SKIDDO,5
-    ROWLET,5
-    GROOKEY,5
+    SKWOVET,10,15
+    APPLIN,10,15
+    SLOWPOKE,10,15
+    SKIDDO,10,15
+    ROWLET,10,15
+    GROOKEY,10,15
 #-------------------------------
 151 # Haunted Hollow
 25,10,10

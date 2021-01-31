@@ -19,6 +19,7 @@ Events.onWildPokemonCreate+=proc {|sender,e|
 # and other such details.  Of course, you don't HAVE to use this code.
 # Thundaga scaling level scaling
 
+=begin
 # Ability Charm Code
 Events.onWildPokemonCreate+=proc {|sender,e|
    pokemon=e[0]
@@ -216,3 +217,4 @@ Events.onTrainerPartyLoad+=proc {|sender,e|
       end
    end
 }
+=end
