@@ -503,7 +503,7 @@ def vsSequenceSpecial(viewport,trainername,trainerid,tbargraphic,tgraphic)
     color = Color.new(color.red-avg,color.green-avg,color.blue-avg)
     bg.bitmap.fill_rect(0,0,viewport.rect.width,viewport.rect.height,color)
   end
-
+  bg.blur_sprite
   y1 = border1.y.to_f
   y2 = border2.y.to_f
   30.times do
