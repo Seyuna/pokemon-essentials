@@ -413,7 +413,7 @@ class ItemLister
         cmds.push([i,name])
       end
     end
-    cmds.sort! { |a,b| a[1]<=>b[1] }
+
     if @includeNew
       @commands.push(_INTL("[NEW ITEM]"))
       @ids.push(-1)
