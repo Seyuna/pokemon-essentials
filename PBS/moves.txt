@@ -693,7 +693,7 @@
 674,SOAK,Soak,061,0,WATER,Status,100,20,0,NearOther,0,bce,"The user shoots a torrent of water at the target and changes the target's type to Water."
 675,WATERSPORT,Water Sport,09E,0,WATER,Status,0,15,0,BothSides,0,,"The user soaks itself with water. The move weakens Fire-type moves while the user is in the battle."
 676,WITHDRAW,Withdraw,01D,0,WATER,Status,0,40,0,User,0,d,"The user withdraws its body into its hard shell, raising its Defense stat."
-#-------------------------------
+#-------------------------------SPLICE EXCLUSIVE MOVES - 1
 677,GEARRAY,Gear Ray,000,40,STEEL,Special,100,25,0,NearOther,0,bef,"The target is shot by energy produced from quickly turning gears."
 678,CELLSHOT,Cell Shot,500,35,QMARKS,Special,100,20,0,NearOther,0,befz,"The user unleashes genetic energy, changing based on the user's type."
 679,BREAKINGSWIPE,Breaking Swipe,042,60,DRAGON,Physical,100,15,100,AllNearFoes,0,abef,"The user swings its tail wildly and attacks opposing Pokémon. This also lowers their Attack."
@@ -720,7 +720,7 @@
 700,PSYCHEDELICBURST,Psyche Burst,003,60,PSYCHIC,Special,75,20,30,NearOther,0,bef,"The user unleashes a wave of mind-bending energy. This has a 30% chance to put the target to sleep."
 701,CHLORABURST,Chlora Burst,020,50,GRASS,Special,90,10,60,NearOther,0,bef,"The user releases a burst of biological energy. It has a 60% chance to also raise the user's Sp. Atk stat."
 702,MOONRAMPAGE,Moon Rampage,0D2,120,FAIRY,Special,100,10,0,RandomNearFoe,0,abef,"The user rampages and attacks for two to three turns. It then becomes confused, however."
-#---------------------------------
+#--------------------------------- GEN 8 MOVES - 1
 703,LIFEDEW,Life Dew,504,0,WATER,Status,0,10,0,UserAndAllies,0,d,"The user scatters mysterious water around and restores the HP of itself and its allies in the battle."
 704,BRANCHPOKE,Branch Poke,000,40,GRASS,Physical,100,40,0,NearOther,0,abef,"The user attacks the target by poking it with a sharply pointed branch."
 705,CLANGOROUSSOUL,Clangorous Soul,503,0,DRAGON,Status,0,5,0,User,0,dk,"The user raises all its stats by using some of its HP."
@@ -760,7 +760,7 @@
 739,JUNGLEHEALING,Jungle Healing,506,0,GRASS,Status,0,10,0,UserAndAllies,0,d,"The user becomes one with the jungle, restoring HP and healing any status conditions of itself and its ally Pokémon in battle."
 740,EERIESPELL,Eerie Spell,517,80,PSYCHIC,Special,100,10,0,NearOther,0,bef,"The user casts a horrible spell on the opponent. This removes 3 PP from their last used move."
 741,SHELLSIDEARM,Shell Side Arm,518,90,POISON,Special,100,10,100,NearOther,0,bef,"This move inflicts physical or special damage, whichever will be more effective. This may also poison the target."
-#---------------------------------
+#---------------------------------SPLICE EXCLUSIVE MOVES - 2
 742,PESTILENCE,Pestilence,521,0,POISON,Status,0,10,0,NearOther,0,,"A move that damages and poisons the user to curse the enemy."
 743,BOULDERCRUSH,Boulder Crush,509,90,ROCK,Physical,90,10,0,NearOther,0,abef,"Crushes the target with boulder-like weight. The user's Defense increases the damage of this attack."
 744,FREEZINGGLARE,Freezing Glare,00C,90,PSYCHIC,Special,100,10,10,NearOther,0,bef,"The user shoots its psychic power from its eyes to attack. This may also leave the target frozen."
@@ -782,3 +782,7 @@
 760,FLASHFREEZE,Flash Freeze,00C,0,ICE,Status,90,20,0,NearOther,-6,bce,"The user launches a quick flurry of ice and freezes the foe. Always goes last."
 761,GLACIALQUAKE,Glacial Quake,52B,110,ICE,Physical,100,10,0,AllNearOthers,0,bef,"The user strikes the ground with its Glacier-like tail, sending chilling shockwaves that damages every grounded Pokémon around it."
 762,CELLSTRUCTION,Cell-Struction,52D,150,QMARKS,Physical,90,5,0,NearOther,0,abefz,"The user charges at the target, using up all of its cellular energy in the process. The user must rest on the next turn."
+763,OBSESSIONDANCE,Obsession Dance,52E,100,FAIRY,Special,100,5,100,NearOther,0,abef,"The user shows its possessive love in the form of a deadly dance. Increased damage to infatuated targets."
+#--------------------------------- GEN 8 MOVES - 2
+764,FREEZINGGLARE,Freezing Glare,00C,90,PSYCHIC,Special,100,10,10,NearOther,0,ef,"The user shoots its psychic power from its eyes to attack. This may also leave the target frozen."
+#--------------------------------- UNIMPLEMENTED MOVES

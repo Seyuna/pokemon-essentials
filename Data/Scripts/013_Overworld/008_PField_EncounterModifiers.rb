@@ -19,8 +19,7 @@ Events.onWildPokemonCreate+=proc {|sender,e|
 # and other such details.  Of course, you don't HAVE to use this code.
 # Thundaga scaling level scaling
 
-=begin
-# Ability Charm Code
+# Hidden Ability in Wild Pokemon and Ability Charm Code
 Events.onWildPokemonCreate+=proc {|sender,e|
    pokemon=e[0]
    value = $PokemonBag.pbHasItem?(:ABILITYCHARM) ? 80 : 120
@@ -35,6 +34,7 @@ Events.onWildPokemonCreate+=proc {|sender,e|
    end
 }
 
+=begin
 Events.onWildPokemonCreate+=proc {|sender,e|
    pokemon=e[0]
    #3-15 = pollen path and iron pass

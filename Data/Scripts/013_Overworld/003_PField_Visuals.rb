@@ -135,6 +135,49 @@ end
 def pbBattleAnimationOverride(viewport,battletype=0,foe=nil)
   ##### VS. animation, by Luka S.J. #####
   ##### Tweaked by Maruno           #####
+  trainerid = (foe[0].trainertype rescue -1)
+  if trainerid >= 0
+    trainername = (foe[0].name rescue "")
+    tbargraphic = sprintf("Graphics/Transitions/vsBarSpecial%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tbargraphic = sprintf("Graphics/Transitions/vsBarSpecial%d",trainerid) if !pbResolveBitmap(tbargraphic)
+    tgraphic = sprintf("Graphics/Transitions/vsTrainerSpecial%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tgraphic = sprintf("Graphics/Transitions/vsTrainerSpecial%d",trainerid) if !pbResolveBitmap(tgraphic)
+    if pbResolveBitmap(tgraphic)
+      vsSequenceSpecial(viewport,trainername,trainerid,tbargraphic,tgraphic)
+      return true
+    end
+    tbargraphic = sprintf("Graphics/Transitions/vsBarElite%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tbargraphic = sprintf("Graphics/Transitions/vsBarElite%d",trainerid) if !pbResolveBitmap(tbargraphic)
+    tgraphic = sprintf("Graphics/Transitions/vsTrainer%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tgraphic = sprintf("Graphics/Transitions/vsTrainer%d",trainerid) if !pbResolveBitmap(tgraphic)
+    if pbResolveBitmap(tbargraphic) && pbResolveBitmap(tgraphic)
+      vsSequenceElite(viewport,trainername,trainerid,tbargraphic,tgraphic)
+      return true
+    end
+    tbargraphic = sprintf("Graphics/Transitions/vsBarNew%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tbargraphic = sprintf("Graphics/Transitions/vsBarNew%d",trainerid) if !pbResolveBitmap(tbargraphic)
+    tlogographic = sprintf("Graphics/Transitions/vsLogo%s",getConstantName(PBTrainers,trainerid)) rescue nil
+    tlogographic = sprintf("Graphics/Transitions/vsLogo%d",trainerid) if !pbResolveBitmap(tlogographic)
+    if pbResolveBitmap(tbargraphic) && pbResolveBitmap(tgraphic) && pbResolveBitmap(tlogographic)
+      vsSequenceEvil(viewport,trainername,trainerid,tbargraphic,tgraphic,tlogographic)
+      return true
+    end
+    if pbResolveBitmap(tbargraphic) && pbResolveBitmap(tgraphic)
+      vsSequenceNew(viewport,trainername,trainerid,tbargraphic,tgraphic)
+      return true
+    end
+  end
+#  if !handled && trainerid >= 0
+#    case rand(3)
+#    when 0
+#      ebTrainerAnimation1(viewport)
+#    when 1
+#      ebTrainerAnimation2(viewport)
+#    when 2
+#      ebTrainerAnimation3(viewport)
+#    end
+#    handled = true
+#  end
   if (battletype==1 || battletype==3) && foe.length==1   # Against single trainer
     trainerid = (foe[0].trainertype rescue -1)
     if trainerid>=0
@@ -315,49 +358,6 @@ def pbBattleAnimationOverride(viewport,battletype=0,foe=nil)
   return __over1__pbBattleAnimationOverride(viewport,battletype,foe)
 end
 
-
-=begin
-#===============================================================================
-# Location signpost
-#===============================================================================
-class LocationWindow
-  def initialize(name)
-    @window = Window_AdvancedTextPokemon.new(name)
-    @window.resizeToFit(name,Graphics.width)
-    @window.x        = 0
-    @window.y        = -@window.height
-    @window.viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
-    @window.viewport.z = 99999
-    @currentmap = $game_map.map_id
-    @frames = 0
-  end
-
-  def disposed?
-    @window.disposed?
-  end
-
-  def dispose
-    @window.dispose
-  end
-
-  def update
-    return if @window.disposed?
-    @window.update
-    if $game_temp.message_window_showing || @currentmap!=$game_map.map_id
-      @window.dispose
-      return
-    end
-    if @frames>80
-      @window.y -= 4
-      @window.dispose if @window.y+@window.height<0
-    else
-      @window.y += 4 if @window.y<0
-      @frames += 1
-    end
-  end
-end
-=end
-
 ################################################################################
 # Location signpost - Updated by LostSoulsDev / carmaniac & PurpleZaffre
 ################################################################################
@@ -365,7 +365,7 @@ class LocationWindow
   def initialize(name)
     @sprites = {}
     @baseColor=Color.new(255,255,255)
-    @shadowColor=Color.new(148,148,165)
+    @shadowColor=MessageConfig::LIGHTTEXTSHADOW #Color.new(148,148,165)
     #Thundaga signposts
     @sprites["Image"] = Sprite.new
     mapname = $game_map.name
@@ -400,7 +400,7 @@ class LocationWindow
     @sprites["Image"].opacity = 255
     @height = @sprites["Image"].bitmap.height
     pbSetSystemFont(@sprites["Image"].bitmap)
-    pbDrawTextPositions(@sprites["Image"].bitmap,[[name,22,@sprites["Image"].bitmap.height-44,0,@baseColor,@shadowColor]])
+    pbDrawTextPositions(@sprites["Image"].bitmap,[[name,22,@sprites["Image"].bitmap.height-44,0,@baseColor,@shadowColor,true]])
     @currentmap = $game_map.map_id
     @frames = 0
   end
