@@ -134,20 +134,22 @@ def pbPokemonFound(item,quantity = 1,message = "")
   itemname = (quantity>1) ? PBItems.getNamePlural(item) : PBItems.getName(item)
   pocket = pbGetPocket(item)
   if $PokemonBag.pbStoreItem(item,quantity)   # If item can be picked up
+    scene = $game_player.addFoundItem(item)
     meName = (pbIsKeyItem?(item)) ? "Key item get" : "Item get"
-    if isConst?(item,PBItems,:LEFTOVERS)
-      pbMessage(_INTL("\\me[{1}]#{pokename} found some \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
-    elsif pbIsMachine?(item)   # TM or HM
-      pbMessage(_INTL("\\me[{1}]#{pokename} found \\c[1]{2} {3}\\c[0]!\\wtnp[30]",meName,itemname,PBMoves.getName(pbGetMachine(item))))
-    elsif quantity>1
-      pbMessage(_INTL("\\me[{1}]#{pokename} found {2} \\c[1]{3}\\c[0]!\\wtnp[30]",meName,quantity,itemname))
-    elsif itemname.starts_with_vowel?
-      pbMessage(_INTL("\\me[{1}]#{pokename} found an \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
+    if isConst?(item, PBItems, :LEFTOVERS) || pbGetPocket(item) == 6
+      pbMessage(_INTL("\\me[{1}]#{pokename} found  some "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!\\wtnp[30]", meName, itemname))
+    elsif pbIsMachine?(item) # TM or HM
+      pbMessage(_INTL("\\me[{1}]#{pokename} found "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2} {3}!\\wtnp[30]", meName, itemname,  PBMoves.getName(pbGetMachine(item))))
+    elsif quantity > 1
+      pbMessage(_INTL("\\me[{1}]#{pokename} found {2} "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{3}!\\wtnp[30]", meName, quantity ,itemname))
+    elsif ["a", "e", "i", "o", "u"].include?(itemname[0, 1].downcase)
+      pbMessage(_INTL("\\me[{1}]#{pokename} found an "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!\\wtnp[30]", meName, itemname))
     else
-      pbMessage(_INTL("\\me[{1}]#{pokename} found a \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
+      pbMessage(_INTL("\\me[{1}]#{pokename} found a "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!\\wtnp[30]", meName, itemname))
     end
-    pbMessage(_INTL("You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",
+    pbMessage(_INTL("You put the {1} away in \\nthe <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",
        itemname,pocket,PokemonBag.pocketNames()[pocket]))
+    scene.pbEndScene
     $PokemonGlobal.followerHoldItem = false
     $PokemonGlobal.timeTaken = 0
     return true

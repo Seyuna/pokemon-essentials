@@ -240,59 +240,41 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
   next true if pkmn.status != PBStatuses::NONE
 }
 
-
-
-Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
-# Special hold item on a map which includes battle in the name
-  if $game_map.name.include?("Battle")
-    items=[:POKEBALL,:POKEBALL,:POKEBALL,:GREATBALL,:GREATBALL,:ULTRABALL] # This array can be edited and extended. Look at the one below for a guide
-    # Choose a random item from the items array, give the player 2 of the item with the message "{1} is holding a round object..."
-    next true if pbPokemonFound(rand(items.length),2,"{1} is holding a round object...")
-  end
-}
-
-
 Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
   if $PokemonGlobal.followerHoldItem
-    items=[:POTION,:SUPERPOTION,:FULLRESTORE,:REVIVE,:PPUP,
-         :PPMAX,:RARECANDY,:REPEL,:MAXREPEL,:ESCAPEROPE,
-         :HONEY,:TINYMUSHROOM,:PEARL,:NUGGET,:GREATBALL,
-         :ULTRABALL,:THUNDERSTONE,:MOONSTONE,:SUNSTONE,:DUSKSTONE,
-         :REDAPRICORN,:BLUAPRICORN,:YLWAPRICORN,:GRNAPRICORN,:PNKAPRICORN,
-         :BLKAPRICORN,:WHTAPRICORN
-    ]
-    # If no message or quantity is specified the default message is used and the quantity of item is 1
-    next true if pbPokemonFound(rand(items.length))
-  end
-}
-
-Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
-# Specific message if the Pokemon is a bug type and the map's name is route 3
-  if $game_map.name == "Route 3" && pkmn.hasType?(:BUG)
-    $scene.spriteset.addUserAnimation(Emo_sing,x,y)
-    pbWait(50)
-    messages = [
-      "{1} seems highly interested in the trees.",
-      "{1} seems to enjoy the buzzing of the bug Pokémon.",
-      "{1} is jumping around restlessly in the forest."
-    ]
-    pbMessage(_INTL(messages[rand(messages.length)],pkmn.name,$Trainer.name))
-    next true
-  end
-}
-
-# Specific message if the map name is Pokemon Lab
-Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
-  if $game_map.name == "Pokémon Lab"
-    $scene.spriteset.addUserAnimation(Emo_Normal,x,y)
-    pbWait(100)
-    messages = [
-      "{1} is touching some kind of switch.",
-      "{1} has a cord in its mouth!",
-      "{1} seems to want to touch the machinery."
-    ]
-    pbMessage(_INTL(messages[rand(messages.length)],pkmn.name,$Trainer.name))
-    next true
+    if pkmn.hapiness > 250
+      items=[:MAXPOTION,:FULLRESTORE,:BIGPEARL,:STARPIECE,:ULTRABALL,
+        :CHOICEBAND,:LIFEORB,:SACREDASH,:AGUAVBERRY,:SITRUSBERRY
+      ]
+      message = "#{pkmn.name} is eager to give you something..."
+    elsif pkmn.hapiness > 200
+      items=[:MAXPOTION,:HYPERPOTION,:NUGGET,:STARPIECE,:GREATBALL,
+        :CHOICESCARF,:AIRBALLOON,:MAXREVIVE,:LUMBERRY,:SITRUSBERRY
+      ]
+      message = "#{pkmn.name} wants to give you something..."
+    elsif pkmn.hapiness > 150
+      items=[:MOOMOOMILK,:HYPERPOTION,:NUGGET,:PEARL,:DUSKBALL,
+        :CHOICESPECS,:EVIOLITE,:REVIVE,:CUSTAPBERRY,:SITRUSBERRY
+      ]
+      message = "#{pkmn.name} is found something for you..."
+    elsif pkmn.hapiness > 100
+      items=[:SUPERPOTION,:MOOMOOMILK,:STARDUST,:PEARL,:POKEBALL,
+        :PRETTYWING,:FULLHEAL,:ESCAPEROPE,:ORANBERRY,:SITRUSBERRY
+      ]
+      message = "#{pkmn.name} is holding an item..."
+    elsif pkmn.hapiness > 50
+      items=[:POTION,:SUPERPOTION,:BIGMUSHROOM,:STARDUST,:POKETOY,
+        :PRETTYWING,:ORANBERRY,:CHESTOBERRY,:PECHABERRY,:HONEY
+      ]
+      message = "#{pkmn.name} found something..."
+    else
+      pbMessage("Oh, looks like Arenay is holding something.")
+      $scene.spriteset.addUserAnimation(12,x,y)
+      followingMoveRoute([PBMoveRoute::Wait,6,PBMoveRoute::TurnAwayFromPlayer,PBMoveRoute::Wait,6])
+      pbMessage("Arenay threw the item away!")
+      next true
+    end
+    next true if pbPokemonFound(rand(items.length),1,messsage)
   end
 }
 
@@ -334,7 +316,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
 
 # Specific message if the map name has Forest
 Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
-  if $game_map.name.include?("Forest")
+  if $game_map.name.include?("Forest") || $game_map.name.include?("Lush")
     $scene.spriteset.addUserAnimation(Emo_sing,x,y)
     pbWait(50)
     messages = [
@@ -359,7 +341,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
 
 # Specific message if the map name has Gym in it
 Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
-  if $game_map.name.include?("Gym")
+  if $game_map.name.include?("Dojo") || $game_map.name.include?("Driftwood")
     $scene.spriteset.addUserAnimation(Emo_Hate,x,y)
     pbWait(70)
     messages = [
@@ -379,9 +361,24 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
   end
 }
 
+# Specific message if the map name is Pokemon Lab
+Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
+  if $game_map.name.include?("Lab")
+    $scene.spriteset.addUserAnimation(Emo_Normal,x,y)
+    pbWait(100)
+    messages = [
+      "{1} is touching some kind of switch.",
+      "{1} has a cord in its mouth!",
+      "{1} seems to want to touch the machinery."
+    ]
+    pbMessage(_INTL(messages[rand(messages.length)],pkmn.name,$Trainer.name))
+    next true
+  end
+}
+
 # Specific message if the map name has Beach in it
 Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
-  if $game_map.name.include?("Beach")
+  if $game_map.name.include?("Beach") || $game_map.name.include?("Costa")
     $scene.spriteset.addUserAnimation(Emo_Happy,x,y)
     pbWait(70)
     messages = [
