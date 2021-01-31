@@ -1,0 +1,6 @@
+Unown OWs for puzzle:
+A door that wants you to select an item from the bag.
+The Unown OWs you have to find throughout the area.
+When you talk to an unown it goes to the door.
+When you have found all the Unown they will read out R-O-P-E.
+From that you should be able to figure out you need an escape rope to open the door
