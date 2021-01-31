@@ -212,7 +212,6 @@ def pbAddForeignPokemonBetter(pokemon,level=nil,ownerName=nil,nickname=nil,
 end
 
 def pbGenerateEgg(pokemon,text="")
-  return false if !pokemon || $Trainer.party.length>=6
   pokemon = getID(PBSpecies,pokemon)
   if pokemon.is_a?(Integer)
     pokemon = pbNewPkmn(pokemon,EGG_LEVEL)
@@ -225,7 +224,8 @@ def pbGenerateEgg(pokemon,text="")
   pokemon.obtainText = text
   pokemon.calcStats
   # Add egg to party
-  $Trainer.party[$Trainer.party.length] = pokemon
+  pbMessage("\\Me[HGSSGetKeyItem]\\PN received a Pokémon Egg!\\wtnp[40]")
+  pbStorePokemon(pokemon)
   return true
 end
 alias pbAddEgg pbGenerateEgg
