@@ -1,42 +1,42 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [000]
-TrainerBattleBGM = HGSS-118-BattleTrainer.ogg
+WildBattleBGM = HGSS-110-BattleWild.ogg
+TrainerVictoryME = HGSSBattleVictoryTrainer.ogg
+WildVictoryME = HGSSBattleVictoryWild.ogg
 PlayerC = POKEMONTRAINER_Red,trchar002,trchar002,trchar002,trchar002,trchar002,trchar002,xxx
 PlayerB = POKEMONTRAINER_Leaf,trchar001,girl_bike,girl_surf,girl_run,girl_surf,girl_fish_offset,xxx
 PlayerA = POKEMONTRAINER_Red,trchar000,boy_bike,boy_surf,boy_run,boy_surf,boy_fish_offset,xxx
-SurfBGM = HGSS-170-Surf.ogg
-WildVictoryME = HGSSBattleVictoryWild.ogg
-WildBattleBGM = HGSS-110-BattleWild.ogg
+TrainerBattleBGM = HGSS-118-BattleTrainer.ogg
 Home = 76,7,6,8
-TrainerVictoryME = HGSSBattleVictoryTrainer.ogg
 BicycleBGM = HGSS-155-Bike.ogg
+SurfBGM = HGSS-170-Surf.ogg
 #-------------------------------
 [001]
 # Intro
 #-------------------------------
 [002]
 # Lappet Town
-Outdoor = true
-MapPosition = 2,12,8
 ShowArea = true
+MapPosition = 2,12,8
+Outdoor = true
 #-------------------------------
 [003]
 # \PN's house
-BattleBack = IndoorB
 MapPosition = 0,13,12
+BattleBack = IndoorB
 HealingSpot = 2,8,8
 #-------------------------------
 [004]
 # Pokémon Lab
-MapPosition = 0,13,12
 ShowArea = false
+MapPosition = 0,13,12
 #-------------------------------
 [005]
 # Route 1
-Outdoor = true
-MapPosition = 0,13,11
 ShowArea = true
+MapPosition = 0,13,11
+Outdoor = true
 #-------------------------------
 [006]
 # Kurt's house
@@ -44,10 +44,10 @@ MapPosition = 0,13,11
 #-------------------------------
 [007]
 # Cedolan City
-MapSize = 2,11
-Outdoor = true
-MapPosition = 0,13,10
 ShowArea = true
+MapPosition = 0,13,10
+Outdoor = true
+MapSize = 2,11
 #-------------------------------
 [008]
 # Daisy's house
@@ -60,8 +60,8 @@ HealingSpot = 8,17,11
 #-------------------------------
 [010]
 # Cedolan Gym
-BattleBack = IndoorB
 MapPosition = 0,13,10
+BattleBack = IndoorB
 #-------------------------------
 [011]
 # Pokémon Institute
@@ -105,17 +105,17 @@ MapPosition = 0,13,10
 #-------------------------------
 [021]
 # Route 2
-MapSize = 1,11
-Outdoor = true
+ShowArea = true
 MapPosition = 0,14,8
 Weather = Rain,50
-ShowArea = true
+Outdoor = true
+MapSize = 1,11
 #-------------------------------
 [023]
 # Lerucean Town
-Outdoor = true
-MapPosition = 0,15,8
 ShowArea = true
+MapPosition = 0,15,8
+Outdoor = true
 #-------------------------------
 [024]
 # Lerucean Town Poké Center
@@ -136,10 +136,10 @@ MapPosition = 0,15,8
 #-------------------------------
 [028]
 # Natural Park
+ShowArea = true
+MapPosition = 0,16,8
 Outdoor = true
 BattleBack = Forest
-MapPosition = 0,16,8
-ShowArea = true
 #-------------------------------
 [029]
 # Natural Park Entrance
@@ -152,22 +152,22 @@ MapPosition = 0,16,8
 #-------------------------------
 [031]
 # Route 3
-MapSize = 2,1101
-Outdoor = true
-MapPosition = 0,14,6
 ShowArea = true
+MapPosition = 0,14,6
+Outdoor = true
+MapSize = 2,1101
 #-------------------------------
 [034]
 # Ice Cave
-BattleBack = IndoorC
 MapPosition = 0,15,6
 Bicycle = true
+BattleBack = IndoorC
 #-------------------------------
 [035]
 # Ingido Plateau
-Outdoor = true
-MapPosition = 0,13,6
 ShowArea = true
+MapPosition = 0,13,6
+Outdoor = true
 #-------------------------------
 [036]
 # Pokémon League
@@ -176,8 +176,8 @@ HealingSpot = 35,17,7
 #-------------------------------
 [037]
 # Pokémon League
-BattleBack = EliteA
 MapPosition = 0,13,6
+BattleBack = EliteA
 #-------------------------------
 [038]
 # Hall of Fame
@@ -185,52 +185,52 @@ MapPosition = 0,13,6
 #-------------------------------
 [039]
 # Route 4
-MapSize = 2,11
-Outdoor = true
-MapPosition = 0,11,6
 ShowArea = true
+MapPosition = 0,11,6
+Outdoor = true
+MapSize = 2,11
 #-------------------------------
 [040]
 # Route 4
-BicycleAlways = true
-Outdoor = true
-MapPosition = 0,11,6
 ShowArea = true
+BicycleAlways = true
+MapPosition = 0,11,6
+Outdoor = true
 #-------------------------------
 [041]
 # Route 5
-MapSize = 1,111
-BicycleAlways = true
-Outdoor = true
-MapPosition = 0,11,7
 ShowArea = true
+BicycleAlways = true
+MapPosition = 0,11,7
+Outdoor = true
+MapSize = 1,111
 #-------------------------------
 [042]
 # Maple Town Pokecenter
-Outdoor = false
-MapPosition = 2,9,11
 ShowArea = false
+MapPosition = 2,9,11
+Outdoor = false
 #-------------------------------
 [043]
 # Moncto Town
-Outdoor = true
-MapPosition = 2,14,10
-HealingSpot = 43,46,12
 ShowArea = true
+MapPosition = 2,14,10
+Outdoor = true
+HealingSpot = 43,46,12
 #-------------------------------
 [044]
 # Route 6
-MapSize = 2,11
-Outdoor = true
-MapPosition = 0,11,10
 ShowArea = true
+MapPosition = 0,11,10
+Outdoor = true
+MapSize = 2,11
 #-------------------------------
 [045]
 # Route 6
-BicycleAlways = true
-Outdoor = true
-MapPosition = 0,11,10
 ShowArea = true
+BicycleAlways = true
+MapPosition = 0,11,10
+Outdoor = true
 #-------------------------------
 [046]
 # Cycling Road gate
@@ -239,18 +239,18 @@ Bicycle = true
 #-------------------------------
 [047]
 # Route 7
-MapSize = 2,11
-Outdoor = true
-BattleBack = Mountain
+ShowArea = true
 MapPosition = 0,15,10
 Weather = Rain,0
-ShowArea = true
+Outdoor = true
+BattleBack = Mountain
+MapSize = 2,11
 #-------------------------------
 [048]
 # Cypress Lab
-Outdoor = false
-MapPosition = 2,14,10
 ShowArea = true
+MapPosition = 2,14,10
+Outdoor = false
 #-------------------------------
 [049]
 # Rock Cave
@@ -259,22 +259,22 @@ Bicycle = true
 #-------------------------------
 [050]
 # Rock Cave
-BattleBack = CaveDark
 DarkMap = true
 MapPosition = 0,16,10
 Bicycle = true
+BattleBack = CaveDark
 #-------------------------------
 [051]
 # Dungeon
-Dungeon = true
 MapPosition = 0,16,10
 Bicycle = true
+Dungeon = true
 #-------------------------------
 [052]
 # Battle Frontier
-Outdoor = true
-MapPosition = 0,17,10
 ShowArea = true
+MapPosition = 0,17,10
+Outdoor = true
 #-------------------------------
 [053]
 # Battle Frontier Poké Center
@@ -292,8 +292,8 @@ HealingSpot = 52,30,10
 #-------------------------------
 [056]
 # Battle Tower arena
-BattleBack = EliteA
 MapPosition = 0,17,10
+BattleBack = EliteA
 #-------------------------------
 [057]
 # Stadium Cup lobby
@@ -305,8 +305,8 @@ MapPosition = 0,17,10
 #-------------------------------
 [059]
 # Battle Palace arena
-BattleBack = EliteD
 MapPosition = 0,17,10
+BattleBack = EliteD
 #-------------------------------
 [060]
 # Battle Arena
@@ -314,8 +314,8 @@ MapPosition = 0,17,10
 #-------------------------------
 [061]
 # Battle Arena arena
-BattleBack = EliteB
 MapPosition = 0,17,10
+BattleBack = EliteB
 #-------------------------------
 [062]
 # Battle Factory
@@ -327,8 +327,8 @@ MapPosition = 0,17,10
 #-------------------------------
 [064]
 # Battle Factory arena
-BattleBack = EliteC
 MapPosition = 0,17,10
+BattleBack = EliteC
 #-------------------------------
 [065]
 # Battle Factory corridor
@@ -336,9 +336,9 @@ MapPosition = 0,17,10
 #-------------------------------
 [066]
 # Safari Zone
-Outdoor = true
-MapPosition = 0,12,12
 ShowArea = true
+MapPosition = 0,12,12
+Outdoor = true
 #-------------------------------
 [067]
 # Safari Zone gate
@@ -346,17 +346,17 @@ MapPosition = 0,12,12
 #-------------------------------
 [068]
 # Safari Zone
-Outdoor = true
-BattleBack = Forest
-MapPosition = 0,12,12
 ShowArea = true
 SafariMap = true
+MapPosition = 0,12,12
+Outdoor = true
+BattleBack = Forest
 #-------------------------------
 [069]
 # Route 8
-Outdoor = true
-MapPosition = 0,13,13
 ShowArea = true
+MapPosition = 0,13,13
+Outdoor = true
 DiveMap = 70
 #-------------------------------
 [070]
@@ -369,16 +369,16 @@ MapPosition = 0,13,13
 #-------------------------------
 [072]
 # Berth Island
-Outdoor = true
+ShowArea = true
 MapPosition = 0,18,17
 Weather = Storm,50
-ShowArea = true
+Outdoor = true
 #-------------------------------
 [073]
 # Faraday Island
-Outdoor = true
-MapPosition = 0,22,16
 ShowArea = true
+MapPosition = 0,22,16
+Outdoor = true
 #-------------------------------
 [074]
 # Cycling Road gate
@@ -387,484 +387,492 @@ Bicycle = true
 #-------------------------------
 [075]
 # Tiall Region
-Outdoor = true
 MapPosition = 1,13,16
+Outdoor = true
 #-------------------------------
 [076]
 # Moncto Town
-Outdoor = false
-MapPosition = 2,14,10
 ShowArea = false
+MapPosition = 2,14,10
+Outdoor = false
 #-------------------------------
 [077]
 # Costa Path
-Outdoor = true
-MapPosition = 2,16,14
 ShowArea = true
+MapPosition = 2,16,14
+Outdoor = true
 #-------------------------------
 [078]
 # Pollen Path
-Outdoor = true
-MapPosition = 2,14,8
 ShowArea = true
+MapPosition = 2,14,8
+Outdoor = true
 #-------------------------------
 [079]
 # Fleural Town
-Outdoor = true
-MapPosition = 2,14,6
-HealingSpot = 79,37,31
 ShowArea = true
+MapPosition = 2,14,6
+Outdoor = true
+HealingSpot = 79,37,31
 #-------------------------------
 [080]
 # Iron Pass
-Outdoor = true
-MapPosition = 2,14,12
 ShowArea = true
+MapPosition = 2,14,12
+Outdoor = true
 #-------------------------------
 [081]
 # Lumigen City
-Outdoor = true
-MapPosition = 2,14,14
-HealingSpot = 81,35,13
 ShowArea = true
+MapPosition = 2,14,14
+Outdoor = true
+HealingSpot = 81,35,13
 #-------------------------------
 [082]
 # Lumigen City Pokecenter
-Outdoor = false
-MapPosition = 2,14,14
 ShowArea = false
+MapPosition = 2,14,14
+Outdoor = false
 #-------------------------------
 [083]
 # Lumigen Cycles
-Outdoor = false
-MapPosition = 2,14,14
 ShowArea = false
+MapPosition = 2,14,14
+Outdoor = false
 #-------------------------------
 [084]
 # Costa Path
-Outdoor = true
-MapPosition = 2,18,12
 ShowArea = true
+MapPosition = 2,18,12
+Outdoor = true
 #-------------------------------
 [085]
 # Lumigen City
-Outdoor = false
-MapPosition = 2,14,14
 ShowArea = false
+MapPosition = 2,14,14
+Outdoor = false
 #-------------------------------
 [086]
 # Maple Trail
+ShowArea = true
+MapPosition = 2,12,10
 Outdoor = true
 BattleBack = FRLGMapleGrass
-MapPosition = 2,12,10
-ShowArea = true
 #-------------------------------
 [087]
 # Lumigen Power Plant
-Outdoor = false
-MapPosition = 2,14,14
 ShowArea = true
+MapPosition = 2,14,14
+Outdoor = false
 #-------------------------------
 [088]
 # Quantech Headquarters
-Outdoor = false
-MapPosition = 2,14,14
 ShowArea = true
+MapPosition = 2,14,14
+Outdoor = false
 #-------------------------------
 [089]
 # Magnet Cave
-Outdoor = false
-MapPosition = 2,14,13
 ShowArea = true
+MapPosition = 2,14,13
+Outdoor = false
 #-------------------------------
 [090]
 # Magnet Cave
-Outdoor = false
+ShowArea = true
 DarkMap = true
 MapPosition = 2,14,13
-ShowArea = true
+Outdoor = false
 #-------------------------------
 [091]
 # Lumigen Power Plant B1
-Outdoor = false
-MapPosition = 2,14,14
 ShowArea = true
+MapPosition = 2,14,14
+Outdoor = false
 #-------------------------------
 [092]
 # Verdant Valley
-Outdoor = true
-MapPosition = 2,14,4
 ShowArea = true
+MapPosition = 2,14,4
+Outdoor = true
 Bicycle = true
 #-------------------------------
 [093]
 # Lush Road
-Outdoor = true
-MapPosition = 2,16,6
 ShowArea = true
+MapPosition = 2,16,6
+Outdoor = true
 #-------------------------------
 [094]
 # Fleural Farm Day Care
-Outdoor = false
-MapPosition = 2,14,6
 ShowArea = false
+MapPosition = 2,14,6
+Outdoor = false
 #-------------------------------
 [095]
 # Fleural Town Pokecenter
-Outdoor = false
-MapPosition = 2,14,6
 ShowArea = false
+MapPosition = 2,14,6
+Outdoor = false
 #-------------------------------
 [096]
 # Lush Road
-Outdoor = true
-MapPosition = 2,18,8
 ShowArea = true
+MapPosition = 2,18,8
+Outdoor = true
 #-------------------------------
 [097]
 # Moncto Town Gate
-Outdoor = false
-MapPosition = 2,14,10
 ShowArea = false
+MapPosition = 2,14,10
+Outdoor = false
 #-------------------------------
 [098]
 # Plunge Pass
-Outdoor = true
-MapPosition = 2,16,10
 ShowArea = true
+MapPosition = 2,16,10
+Outdoor = true
 #-------------------------------
 [099]
 # Lappy Lake
-Outdoor = true
+ShowArea = true
 MapPosition = 2,16,11
 Weather = Rain,100
-ShowArea = true
+Outdoor = true
 #-------------------------------
 [100]
 # Dim Cave
-Outdoor = false
-MapPosition = 2,16,9
 ShowArea = true
+MapPosition = 2,16,9
+Outdoor = false
 #-------------------------------
 [101]
 # Maple Trail
+ShowArea = true
+MapPosition = 2,11,11
 Outdoor = true
 BattleBack = FRLGMapleGrass
-MapPosition = 2,11,11
-ShowArea = true
 #-------------------------------
 [102]
 # Maple Town
-Outdoor = true
-MapPosition = 2,9,11
-HealingSpot = 102,24,19
 ShowArea = true
+MapPosition = 2,9,11
+Outdoor = true
+HealingSpot = 102,24,19
 #-------------------------------
 [103]
 # Verdant Valley
-Outdoor = true
-MapPosition = 2,15,4
 ShowArea = true
+MapPosition = 2,15,4
+Outdoor = true
 #-------------------------------
 [104]
 # Maple Town
-Outdoor = false
-MapPosition = 2,9,11
 ShowArea = false
+MapPosition = 2,9,11
+Outdoor = false
 #-------------------------------
 [105]
 # Yama Pass
-Outdoor = true
-MapPosition = 2,8,11
 ShowArea = true
+MapPosition = 2,8,11
+Outdoor = true
 #-------------------------------
 [106]
 # Maple Town
-Outdoor = false
-MapPosition = 2,9,11
 ShowArea = false
+MapPosition = 2,9,11
+Outdoor = false
 #-------------------------------
 [107]
 # Stacona Woods
+ShowArea = true
+MapPosition = 2,17,4
 Outdoor = true
 BattleBack = FRLGForest
-MapPosition = 2,17,4
-ShowArea = true
 #-------------------------------
 [108]
 # Lumigen Hills
-Outdoor = true
-MapPosition = 2,12,14
 ShowArea = true
+MapPosition = 2,12,14
+Outdoor = true
 #-------------------------------
 [109]
 # Driftwood Lab
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [110]
 # Frostbite Cavern
+ShowArea = true
+MapPosition = 2,15,14
 Outdoor = false
 BattleBack = FRLGIceCave
-MapPosition = 2,15,14
-ShowArea = true
 #-------------------------------
 [111]
 # Ferrous Cave
-Outdoor = false
-MapPosition = 2,11,13
 ShowArea = true
+MapPosition = 2,11,13
+Outdoor = false
 #-------------------------------
 [112]
 # Alpha Lab
-Outdoor = false
-MapPosition = 2,17,10
 ShowArea = true
+MapPosition = 2,17,10
+Outdoor = false
 #-------------------------------
 [113]
 # Driftwood City
-Outdoor = true
-MapPosition = 2,18,10
-HealingSpot = 113,21,20
 ShowArea = true
+MapPosition = 2,18,10
+Outdoor = true
+HealingSpot = 113,21,20
 #-------------------------------
 [114]
 # Driftwood Gate A
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [115]
 # Driftwood Gate B
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [116]
 # Driftwood City Pokecenter
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [117]
 # The Biogress Foundation
-Outdoor = false
-MapPosition = 2,14,6
 ShowArea = true
+MapPosition = 2,14,6
+Outdoor = false
 #-------------------------------
 [118]
 # The Biogress Foundation
-Outdoor = false
-MapPosition = 2,14,6
 ShowArea = false
+MapPosition = 2,14,6
+Outdoor = false
 #-------------------------------
 [121]
 # Ferrous Cave
-Outdoor = false
+ShowArea = true
 DarkMap = true
 MapPosition = 2,11,13
-ShowArea = true
+Outdoor = false
 #-------------------------------
 [122]
 # Driftwood Gate C
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [123]
 # Lush Cave
-Outdoor = false
-MapPosition = 2,18,6
 ShowArea = true
+MapPosition = 2,18,6
+Outdoor = false
 #-------------------------------
 [124]
 # Zap Cave
-Outdoor = false
-MapPosition = 2,16,4
 ShowArea = true
+MapPosition = 2,16,4
+Outdoor = false
 #-------------------------------
 [125]
 # Heat Cave
-Outdoor = false
-MapPosition = 2,11,13
 ShowArea = true
+MapPosition = 2,11,13
+Outdoor = false
 #-------------------------------
 [126]
 # Driftwood Lab
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [130]
 # Mt. Maple
-Outdoor = false
-MapPosition = 2,8,10
 ShowArea = true
+MapPosition = 2,8,10
+Outdoor = false
 #-------------------------------
 [131]
 # Mt. Maple Lab
-Outdoor = false
-MapPosition = 2,8,10
 ShowArea = true
+MapPosition = 2,8,10
+Outdoor = false
 #-------------------------------
 [132]
 # Plunge Pass
-Outdoor = false
-MapPosition = 2,15,10
 ShowArea = false
+MapPosition = 2,15,10
+Outdoor = false
 #-------------------------------
 [133]
 # Dragon's Den
-Outdoor = false
+ShowArea = true
 DarkMap = true
 MapPosition = 2,15,6
-ShowArea = true
+Outdoor = false
 #-------------------------------
 [134]
 # Maple Trail
-Outdoor = false
-MapPosition = 2,10,11
 ShowArea = false
+MapPosition = 2,10,11
+Outdoor = false
 #-------------------------------
 [135]
 # Driftwood Dept. 1F
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [136]
 # Driftwood Dept. 2F
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [137]
 # Driftwood Dept. 3F
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [138]
 # Driftwood Dept. 4F
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [139]
 # Driftwood Dept. 5F
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [140]
 # Driftwood Dept. Rooftop
-Outdoor = true
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = true
 #-------------------------------
 [141]
 # Driftwood Dept. Elevator
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [142]
 # Driftwood City
-Outdoor = false
-MapPosition = 2,18,10
 ShowArea = false
+MapPosition = 2,18,10
+Outdoor = false
 #-------------------------------
 [143]
 # Beta Lab
-Outdoor = false
-MapPosition = 2,15,6
 ShowArea = true
+MapPosition = 2,15,6
+Outdoor = false
 #-------------------------------
 [144]
 # Maple Trail
-Outdoor = false
-MapPosition = 2,13,10
 ShowArea = false
+MapPosition = 2,13,10
+Outdoor = false
 #-------------------------------
 [145]
 # Delta Lab
-Outdoor = false
-MapPosition = 2,18,12
 ShowArea = true
+MapPosition = 2,18,12
+Outdoor = false
 #-------------------------------
 [146]
 # Cascade Creek
-Outdoor = true
+ShowArea = true
 MapPosition = 2,16,12
 Weather = Rain,100
-ShowArea = true
+Outdoor = true
 #-------------------------------
 [147]
 # Blighted Bog
-Outdoor = true
-BattleBack = FRLGBog
-MapPosition = 2,14,3
 ShowArea = true
+MapPosition = 2,14,3
+Outdoor = true
 Bicycle = true
+BattleBack = FRLGBog
 #-------------------------------
 [149]
 # EV Dojo
-Outdoor = false
-MapPosition = 2,16,11
 ShowArea = true
+MapPosition = 2,16,11
+Outdoor = false
 #-------------------------------
 [150]
 # Folian Grove
-Outdoor = true
-MapPosition = 2,13,8
 ShowArea = true
+MapPosition = 2,13,8
+Outdoor = true
 #-------------------------------
 [151]
 # Haunted Hollow
+ShowArea = true
+MapPosition = 2,10,12
 Outdoor = true
 BattleBack = FRLGHaunted
-MapPosition = 2,10,12
-ShowArea = true
 #-------------------------------
 [152]
 # Haunted Cavern
-Outdoor = false
-MapPosition = 2,10,12
 ShowArea = true
+MapPosition = 2,10,12
+Outdoor = false
 #-------------------------------
 [153]
 # Haunted Gate
-Outdoor = false
-MapPosition = 2,10,12
 ShowArea = false
+MapPosition = 2,10,12
+Outdoor = false
 #-------------------------------
 [154]
 # Gravekeeper's House
-Outdoor = false
 MapPosition = 2,10,12
+Outdoor = false
 #-------------------------------
 [156]
 # Blighted Bog Gate
-Outdoor = false
-MapPosition = 2,14,3
 ShowArea = false
+MapPosition = 2,14,3
+Outdoor = false
 #-------------------------------
 [157]
 # Fleural Gate
-Outdoor = false
-MapPosition = 2,14,6
 ShowArea = false
+MapPosition = 2,14,6
+Outdoor = false
 #-------------------------------
 [158]
 # Lumigen Gate
-Outdoor = false
-MapPosition = 2,14,14
 ShowArea = false
+MapPosition = 2,14,14
+Outdoor = false
 #-------------------------------
 [160]
 # Cascade Cave
+ShowArea = false
+MapPosition = 2,16,12
 Outdoor = false
 BattleBack = FRLGCave
-MapPosition = 2,16,12
+#-------------------------------
+[161]
+# Cascade Cave
 ShowArea = false
+DarkMap = true
+MapPosition = 2,16,12
+Outdoor = false
+BattleBack = FRLGCave

@@ -1,10 +1,12 @@
 # Backgrounds to show in credits. Found in Graphics/Titles/ folder
-CreditsBackgroundList = ["credits12","credits6","credits9","credits8","credits14","credits23","credits25",
-  "credits20","credits13","credits7","credits15","credits17","credits18","credits16",
-  "credits19","credits10","credits21","credits11","credits22","credits24"]
+CreditsBackgroundList = ["credits12","credits6","credits9",
+  "credits8","credits26","credits14","credits27","credits23",
+  "credits28","credits25","credits20","credits13","credits7",
+  "credits15","credits17","credits18","credits16","credits19",
+  "credits10","credits21","credits11","credits22","credits24"]
 CreditsMusic          = "Credits"
 CreditsScrollSpeed    = 2
-CreditsFrequency      = 6   # Number of seconds per credits slide
+CreditsFrequency      = 3   # Number of seconds per credits slide
 CREDITS_OUTLINE       = Color.new(0,0,128, 255)
 CREDITS_SHADOW        = Color.new(0,0,0, 100)
 CREDITS_FILL          = Color.new(255,255,255, 255)
@@ -58,8 +60,8 @@ Tristantine The Great
 Kristiano100
 
 Programming
+GolisopodUser
 Voltseon
-Golisopod User
 
 Shoutouts to the Thundaga Twitch Chat
 Aka the Thundagang
@@ -69,7 +71,6 @@ Aka the Bolt Cult
 
 A HUGE thank you to the resource creators
 of the Pokemon fangame community
-<3
 
 {INSERTS_PLUGIN_CREDITS_DO_NOT_REMOVE}
 "Pokémon Essentials" was created by:
@@ -149,14 +150,14 @@ _END_
       line = line.split("<s>")
       # LINE ADDED: If you use in your own game, you should remove this line
       pbSetSystemFont(credit_bitmap) # <--- This line was added
-      xpos = 0
-      align = 1 # Centre align
+      xpos = -30
+      align = 2 # Centre align
       linewidth = Graphics.width
       for j in 0...line.length
         if line.length>1
-          xpos = (j==0) ? 0 : 20 + Graphics.width/2
-          align = (j==0) ? 2 : 0 # Right align : left align
-          linewidth = Graphics.width/2 - 20
+          xpos = (j==0) ? -30 : -30 + Graphics.width/2
+          align = (j==0) ? 2 : 2 # Right align : left align
+          linewidth = Graphics.width/2 - 10
         end
         credit_bitmap.font.color = CREDITS_SHADOW
         credit_bitmap.draw_text(xpos,i * 32 + 8,linewidth,32,line[j],align)

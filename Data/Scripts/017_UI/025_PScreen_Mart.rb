@@ -795,7 +795,7 @@ end
 
 
 
-def pbPokemonMart(stock,speech=nil,cantsell=false)
+def pbPokemonMart(stock,speech=nil,cantsell=false,gender=0)
   for i in 0...stock.length
     stock[i] = getID(PBItems,stock[i])
     if !stock[i] || stock[i]==0 ||
@@ -811,9 +811,12 @@ def pbPokemonMart(stock,speech=nil,cantsell=false)
   commands[cmdBuy = commands.length]  = _INTL("Buy")
   commands[cmdSell = commands.length] = _INTL("Sell") if !cantsell
   commands[cmdQuit = commands.length] = _INTL("Quit")
-  cmd = pbMessage(
-     speech ? speech : _INTL("Welcome! How may I serve you?"),
-     commands,cmdQuit+1)
+  if gender==1
+    speechString = _INTL("\\rWelcome! How may I serve you?")
+  else
+    speechString = _INTL("\\bWelcome! How may I serve you?")
+  end
+  cmd = pbMessage(speech ? speech : speechString,commands,cmdQuit+1)
   loop do
     if cmdBuy>=0 && cmd==cmdBuy
       scene = PokemonMart_Scene.new
@@ -824,11 +827,20 @@ def pbPokemonMart(stock,speech=nil,cantsell=false)
       screen = PokemonMartScreen.new(scene,stock)
       screen.pbSellScreen
     else
-      pbMessage(_INTL("Please come again!"))
+      if gender==1
+        pbMessage(_INTL("\\rPlease come again!"))
+      else
+        pbMessage(_INTL("\\bPlease come again!"))
+      end
       break
     end
-    cmd = pbMessage(_INTL("Is there anything else I can help you with?"),
-       commands,cmdQuit+1)
+    if gender==1
+      cmd = pbMessage(_INTL("\\rIs there anything else I can help you with?"),
+         commands,cmdQuit+1)
+    else
+      cmd = pbMessage(_INTL("\\bIs there anything else I can help you with?"),
+         commands,cmdQuit+1)
+    end
   end
   $game_temp.clear_mart_prices
 end
