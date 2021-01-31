@@ -357,11 +357,11 @@ def pbSurf
     speciesname = (movefinder) ? movefinder.name : $Trainer.name
     pbMessage(_INTL("{1} used {2}!",speciesname,PBMoves.getName(move)))
     pbCancelVehicles
-    pbHiddenMoveAnimation(movefinder,false)
+    pbHiddenMoveAnimation(movefinder)
     surfbgm = pbGetMetadata(0,MetadataSurfBGM)
     pbCueBGM(surfbgm,0.5) if surfbgm
     pbStartSurfing
-    $PokemonTemp.dependentEvents.come_back($PokemonTemp.dependentEvents.refresh_sprite(false,true))
+    $PokemonTemp.dependentEvents.come_back(true)
     return true
   end
   return false
@@ -396,7 +396,7 @@ end
 # Update follower when any vehicle like Surf, Lava Surf etc are done
 alias follow_pbCancelVehicles pbCancelVehicles
 def pbCancelVehicles(destination=nil)
-  $PokemonTemp.dependentEvents.come_back(false) if destination.nil?
+  $PokemonTemp.dependentEvents.come_back(true) if destination.nil?
   return follow_pbCancelVehicles(destination)
 end
 

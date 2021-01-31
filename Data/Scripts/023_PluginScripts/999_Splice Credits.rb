@@ -33,7 +33,7 @@ PluginManager.register({
 })
 
 PluginManager.register({
-  :name => "VS Aninations",
+  :name => "VS Animations",
   :credits => ["Luka SJ."]
 })
 

@@ -28,7 +28,7 @@ class CapturePokemonUI
   end
 
   def update
-    if $Trainer.pokedex && !($Trainer.seen?(@pokemon.species) || $Trainer.owned?(@pokemon.species))
+    if $Trainer.pokedex && !@pokemon.egg? &&!($Trainer.seen?(@pokemon.species) || $Trainer.owned?(@pokemon.species))
       $Trainer.seen[@pokemon.species]  = true
       $Trainer.owned[@pokemon.species] = true
       pbSeenForm(@pokemon)
@@ -43,7 +43,7 @@ class CapturePokemonUI
       pbMessage(_INTL("There's no more room for Pokémon!\1"))
       return
     end
-    pbNickname(@pokemon) if !@pokemon.shadowPokemon?
+    pbNickname(@pokemon) if !@pokemon.shadowPokemon? && !@pokemon.egg?
     @pokemon.pbRecordFirstMoves
     if $Trainer.party.length == 0
       pbAddToPartySilent(@pokemon)
@@ -54,7 +54,7 @@ class CapturePokemonUI
     loop do
       Graphics.update
       pbUpdateSpriteHash(@sprites)
-      cmd = pbMessage("What would you like to do with #{@pokemon.name}?",["Keep in party","Send to storage","Check #{@pokemon.name}'s summary","Check Party Summary"]) {pbUpdateSpriteHash(@sprites)}
+      cmd = pbMessage("What would you like to do with #{@pokemon.egg? ? "the " : ""}#{@pokemon.name}?",["Keep in party","Send to storage","Check #{@pokemon.egg? ? "the " : ""}#{@pokemon.name}'s summary","Check Party Summary"]) {pbUpdateSpriteHash(@sprites)}
       case cmd
       when 0
         if $Trainer.party.length < 6
@@ -91,7 +91,7 @@ class CapturePokemonUI
             end
             pbMessage(_INTL("It was stored in box \"{1}.\"",boxname))
           end
-          pbMessage(_INTL("\\me[Pkmn get]{2} was added to {1}'s party!",$Trainer.name,@pokemon.name))
+          pbMessage(_INTL("\\me[Pkmn get]#{@pokemon.egg? ? "The " : ""}{2} was added to {1}'s party!",$Trainer.name,@pokemon.name))
         end
         break
       when 1
@@ -111,12 +111,12 @@ class CapturePokemonUI
           else
             pbMessage(_INTL("Box \"{1}\" on someone's PC was full.\1",curboxname))
           end
-          pbMessage(_INTL("{1} was transferred to box \"{2}.\"",@pokemon.name,boxname))
+          pbMessage(_INTL("#{@pokemon.egg? ? "The " : ""}{1} was transferred to box \"{2}.\"",@pokemon.name,boxname))
         else
           if creator
-            pbMessage(_INTL("{1} was transferred to {2}'s PC.\1",@pokemon.name,creator))
+            pbMessage(_INTL("#{@pokemon.egg? ? "The " : ""}{1} was transferred to {2}'s PC.\1",@pokemon.name,creator))
           else
-            pbMessage(_INTL("{1} was transferred to someone's PC.\1",@pokemon.name))
+            pbMessage(_INTL("#{@pokemon.egg? ? "The " : ""}{1} was transferred to someone's PC.\1",@pokemon.name))
           end
           pbMessage(_INTL("It was stored in box \"{1}.\"",boxname))
         end

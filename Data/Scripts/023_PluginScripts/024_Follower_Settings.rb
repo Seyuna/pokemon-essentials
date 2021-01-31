@@ -65,6 +65,10 @@ ALWAYS_ANIMATED_FOLLOWERS = [
 # refreshing it. "next true" will let it stay and "next false" will make it disappear
 #===============================================================================
 Events.FollowerRefresh += proc{|pkmn|
+  next false if $PokemonGlobal.bicycle
+}
+
+Events.FollowerRefresh += proc{|pkmn|
   if $PokemonGlobal.surfing
     next true if pkmn.hasType?(:WATER)
     next true if pkmn.hasType?(:FLYING)
