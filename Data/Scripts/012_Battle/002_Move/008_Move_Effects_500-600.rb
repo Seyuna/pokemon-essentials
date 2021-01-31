@@ -656,3 +656,16 @@ class PokeBattle_Move_52D < PokeBattle_Move_0C2
     return user.type1
   end
 end
+
+#===============================================================================
+# 1.5x damage if the target is infatuated (Obsession Dance)
+#===============================================================================
+class PokeBattle_Move_52E < PokeBattle_Move_0C2
+  def pbBaseDamage(baseDmg,user,target)
+    if target.effects[PBEffects::Attract]>=0 &&
+       (target.effects[PBEffects::Substitute]==0 || ignoresSubstitute?(user))
+      baseDmg *= 1.5
+    end
+    return baseDmg
+  end
+end

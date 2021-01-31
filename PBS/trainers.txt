@@ -119,80 +119,80 @@ Pokemon = BLASTOISE,63
 #-------------------------------
 [SPLICERIVAL,Zack]
 Pokemon = YANMITE,5
-Pokemon = EEVEE,5
+Pokemon = EEVEE,6
 #-------------------------------
 [SPLICERIVAL1,Zack,1]
 Items = SUPERPOTION,HYPERPOTION
-Pokemon = BLITZLE,35
+Pokemon = BLITZLE,26
     Form = 1
     Ball = 25
-Pokemon = MAREEP,35
+Pokemon = MAREEP,26
     Form = 1
     Ball = 25
-Pokemon = YANMA,35
+Pokemon = YANMA,26
     Form = 1
-Pokemon = ABSOL,35
+Pokemon = ABSOL,26
     Form = 1
     Ball = 25
-Pokemon = CHROMEON,36
+Pokemon = CHROMEON,28
 #-------------------------------
 [SPLICERIVAL2,Zack,2]
 Items = SUPERPOTION,HYPERPOTION
-Pokemon = LUDICOLO,35
+Pokemon = LUDICOLO,26
     Form = 1
     Ball = 24
-Pokemon = FOONGUS,35
+Pokemon = FOONGUS,26
     Form = 1
     Ball = 24
-Pokemon = YANMA,35
+Pokemon = YANMA,26
     Form = 1
-Pokemon = ABSOL,35
+Pokemon = ABSOL,26
     Form = 1
     Ball = 24
-Pokemon = AVEON,36
+Pokemon = AVEON,28
 #-------------------------------
 [CREATOR,Cameron]
-Pokemon = TYRANITAR,50
+Pokemon = TYRANITAR,30
     Form = 1
-Pokemon = BLASTOISE,50
-Pokemon = ZAPDOS,50
-Pokemon = ZEBSTRIKA,50
+Pokemon = BLASTOISE,30
+Pokemon = ZAPDOS,30
+Pokemon = ZEBSTRIKA,30
     Form = 1
-Pokemon = ELECTIVIRE,50
+Pokemon = ELECTIVIRE,30
     Form = 1
-Pokemon = GYARADOS,50
+Pokemon = GYARADOS,30
     Form = 1
 #-------------------------------
 [TRISTAN,Tristan]
-Pokemon = KLINKLANG,50
+Pokemon = KLINKLANG,30
     Name = Gearfried
     Gender = male
 	Form = 1
     Ability = 0
     Moves = DISCHARGE,FLAMETHROWER,MIRRORSHOT,SCALD
-Pokemon = CHARJABUG,50
+Pokemon = CHARJABUG,30
     Name = Choo-Choo
     Gender = male
     Ability = 0
     Moves = CRUNCH,XSCISSOR,THUNDERBOLT,BUGBITE
-Pokemon = KINGLER,50
+Pokemon = KINGLER,30
     Name = Eugene
     Gender = male
 	Form = 1
     Ability = 0
     Moves = IRONHEAD,KINGSCLAW,ICEPUNCH,SHADOWCLAW
-Pokemon = FLYGON,50
+Pokemon = FLYGON,30
     Name = Jeff
     Gender = male
 	Form = 1
     Ability = 0
     Moves = OUTRAGE,POISONJAB,XSCISSOR,EARTHQUAKE
-Pokemon = SHUCKAVERN,50
+Pokemon = SHUCKAVERN,30
     Name = Barry
     Gender = female
     Ability = 2
     Moves = STONEEDGE,ROAROFTIME,BODYPRESS,VCREATE
-Pokemon = SUNFLORA,50
+Pokemon = SUNFLORA,30
     Name = Scarecrow
     Gender = female
 	Form = 1
@@ -200,7 +200,7 @@ Pokemon = SUNFLORA,50
     Moves = PESTILENCE,DARKPULSE,GIGADRAIN,MOONBLAST
 #-------------------------------
 [VOLTSEON,Voltseon]
-Pokemon = DUNDRAKE,50
+Pokemon = DUNDRAKE,30
     Gender = male
     Moves = DRAGONRUSH,COIL,FOULPLAY,THUNDERFANG
     Ability = 0
@@ -208,7 +208,7 @@ Pokemon = DUNDRAKE,50
     IV = 31
     Happiness = 255
     Ball = 9
-Pokemon = ABSASTER,50
+Pokemon = ABSASTER,30
     Gender = male
     Moves = REST,IRONHEAD,BITE,HEADBUTT
     Ability = 0
@@ -216,7 +216,7 @@ Pokemon = ABSASTER,50
     IV = 31
     Happiness = 255
     Ball = 10
-Pokemon = ESPEON,50
+Pokemon = ESPEON,30
     Gender = female
     Moves = PSYSHOCK,DAZZLINGGLEAM,MORNINGSUN,CALMMIND
     Ability = 0
@@ -224,7 +224,7 @@ Pokemon = ESPEON,50
     IV = 31
     Happiness = 255
     Ball = 10
-Pokemon = DRIFSHIP,50
+Pokemon = DRIFSHIP,30
     Gender = female
     Moves = STOCKPILE,AIRSLASH,WILLOWISP,HEX
     Ability = 0
@@ -232,7 +232,7 @@ Pokemon = DRIFSHIP,50
     IV = 31
     Happiness = 255
     Ball = 22
-Pokemon = ZEBSTRIKA,50
+Pokemon = ZEBSTRIKA,30
     Gender = female
     Moves = FLAREBLITZ,WILDCHARGE,FACADE,PROTECT
     Ability = 1
@@ -240,7 +240,7 @@ Pokemon = ZEBSTRIKA,50
     IV = 31
     Happiness = 255
     Ball = 22
-Pokemon = POLLEKNIGHT,50
+Pokemon = POLLEKNIGHT,30
     Gender = male
     Moves = SPORE,METALCLAW,BUGBITE,WINGATTACK
     Ability = 0
@@ -250,38 +250,38 @@ Pokemon = POLLEKNIGHT,50
     Ball = 14
 #-------------------------------
 [KRISTIANO,Kristian]
-Pokemon = RAICHU,50
+Pokemon = RAICHU,30
     Form = 1
-Pokemon = REUNICLUS,50
+Pokemon = REUNICLUS,30
     Form = 1
-Pokemon = ELECTIVIRE,50
+Pokemon = ELECTIVIRE,30
     Form = 1
-Pokemon = AVEON,50
-Pokemon = CHROMEON,50
-Pokemon = TYRANITAR,50
+Pokemon = AVEON,30
+Pokemon = CHROMEON,30
+Pokemon = TYRANITAR,30
     Form = 1
 #-------------------------------
 [MODERATOR,Dedbed]
-Pokemon = ABSOL,40
-Pokemon = AGGRON,40
-Pokemon = SALAMENCE,40
+Pokemon = ABSOL,30
+Pokemon = AGGRON,30
+Pokemon = SALAMENCE,30
 #-------------------------------
 [PROFESSORC,Cypress]
 Items = FULLRESTORE
 Pokemon = DITTO,50
     Ball = 4
-Pokemon = GYARADOS,50
+Pokemon = GYARADOS,40
     Form = 1
     Ball = 4
-Pokemon = DUNDRAKE,50
+Pokemon = DUNDRAKE,40
     Ball = 4
-Pokemon = KLINKLANG,50
+Pokemon = KLINKLANG,40
     Form = 1
     Ball = 4
-Pokemon = REUNICLUS,50
+Pokemon = REUNICLUS,40
     Form = 1
     Ball = 4
-Pokemon = AMPHAROS,50
+Pokemon = AMPHAROS,40
     Form = 1
     Ball = 4
 #-------------------------------
@@ -1308,7 +1308,7 @@ Pokemon = SOLOSIS,35
     Ball = 24
 Pokemon = PINTERRA,35
     Ball = 24
-Pokemon = IVYSAUR,35
+Pokemon = FURRET,35
     Ball = 24
 #-------------------------------
 [MECHGRUNT_F,Natasha]
@@ -1317,7 +1317,7 @@ Pokemon = KLINK,25
     Ball = 25
 Pokemon = BISHARP,25
     Ball = 25
-Pokemon = CHARMELEON,25
+Pokemon = GOLBAT,25
     Ball = 25
 #-------------------------------
 [BIOGRUNT_M,Arnold]
@@ -1340,7 +1340,7 @@ Pokemon = TROPIUS,25
     Ball = 24
 Pokemon = TOXTRICITY,25
     Ball = 24
-Pokemon = SCEPTILE,25
+Pokemon = ZANGOOSE,25
     Ball = 24
 #-------------------------------
 [MECHGRUNT_M,Julian]
@@ -1349,7 +1349,7 @@ Pokemon = PROBOPASS,25
     Ball = 25
 Pokemon = SKARMORY,25
     Ball = 25
-Pokemon = BLAZIKEN,25
+Pokemon = SEVIPER,25
     Ball = 25
 #-------------------------------
 [CAMPER,Grayson]

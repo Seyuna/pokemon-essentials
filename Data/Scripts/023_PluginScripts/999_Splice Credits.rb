@@ -77,7 +77,7 @@ end
 
 PluginManager.register({
   :name => "Tileset Credits",
-  :credits => ["Zeo","Magiscarf"]
+  :credits => ["Zeo","Magiscarf","WesleyFG","Flurmimon"]
 })
 
 PluginManager.register({
