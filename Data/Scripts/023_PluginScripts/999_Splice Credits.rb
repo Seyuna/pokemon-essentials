@@ -33,6 +33,11 @@ PluginManager.register({
 })
 
 PluginManager.register({
+  :name => "VS Aninations",
+  :credits => ["Luka SJ."]
+})
+
+PluginManager.register({
   :name => "FRLG UI Sprites",
   :credits => ["Spriters Resource"]
 })

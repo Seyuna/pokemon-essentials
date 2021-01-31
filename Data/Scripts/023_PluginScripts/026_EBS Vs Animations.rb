@@ -805,13 +805,3 @@ def vsSequenceEvil(viewport,trainername,trainerid,tbargraphic,tgraphic,tlogograp
   Graphics.frame_rate = 60
   return true
 end
-
-# returns true if game is supposed to load a Sun & Moon styled VS sequence
-def checkIfSunMoonTransition(trainerid)
-  ret = false
-  for ext in ["trainer","special","elite","crazy","ultra","digital","plasma","skull"]
-    ret = true if pbResolveBitmap(sprintf("Graphics/Transitions/SunMoon/%s%03d",ext,trainerid))
-  end
-  $smAnim = ret
-  return ret
-end
