@@ -460,6 +460,8 @@ def vsSequenceSpecial(viewport,trainername,trainerid,tbargraphic,tgraphic)
   name.bitmap.font.name = "Arial"
   name.bitmap.font.size = 48
   name.visible = false
+  pbSetSystemFont(name.bitmap)
+  name.bitmap.font.size = 69
   pbDrawOutlineText(name.bitmap,64,viewport.rect.height-160,-1,-1,"#{trainername}",Color.new(255,255,255),Color.new(0,0,0),2)
   names.bitmap = name.bitmap.clone
 
@@ -503,6 +505,7 @@ def vsSequenceSpecial(viewport,trainername,trainerid,tbargraphic,tgraphic)
     bg.bitmap.fill_rect(0,0,viewport.rect.width,viewport.rect.height,color)
   end
 
+  bg.blur_sprite
   y1 = border1.y.to_f
   y2 = border2.y.to_f
   30.times do
@@ -804,14 +807,4 @@ def vsSequenceEvil(viewport,trainername,trainerid,tbargraphic,tgraphic,tlogograp
   vs.dispose
   Graphics.frame_rate = 60
   return true
-end
-
-# returns true if game is supposed to load a Sun & Moon styled VS sequence
-def checkIfSunMoonTransition(trainerid)
-  ret = false
-  for ext in ["trainer","special","elite","crazy","ultra","digital","plasma","skull"]
-    ret = true if pbResolveBitmap(sprintf("Graphics/Transitions/SunMoon/%s%03d",ext,trainerid))
-  end
-  $smAnim = ret
-  return ret
 end

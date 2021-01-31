@@ -393,31 +393,31 @@ Land
 077 # Costa Path
 20,8,8
 Land
-    LOTAD,5
-    SANDILE,5
-    KRABBY,5
-    MARILL,5
-    DEWPIDER,5
-    MAGNEMITE,5
+    LOTAD,18,23
+    SANDILE,18,23
+    KRABBY,18,23
+    MARILL,18,23
+    DEWPIDER,18,23
+    MAGNEMITE,18,23
 Water
-    SANDILE,5
-    KRABBY,5
-    WAILMER,5
-    CARVANHA,5
-    MAGIKARP,5
+    SANDILE,18,23
+    KRABBY,18,23
+    WAILMER,18,23
+    CARVANHA,18,23
+    MAGIKARP,18,23
 OldRod
-    MAGIKARP,5
-    SANDILE,5
+    MAGIKARP,18,23
+    SANDILE,18,23
 GoodRod
-    MAGIKARP,5
-    WAILMER,5
-    CARVANHA,5
+    MAGIKARP,28,33
+    WAILMER,28,33
+    CARVANHA,28,33
 SuperRod
-    MAGIKARP,5,25
-    WAILMER,5,25
-    CARVANHA,5,25
-    SANDILE,5,25
-    MAGIKARP,5,25
+    MAGIKARP,30,35
+    WAILMER,30,35
+    CARVANHA,30,35
+    SANDILE,30,35
+    MAGIKARP,30,35
 #-------------------------------
 078 # Pollen Path
 20,8,8
@@ -483,159 +483,159 @@ SuperRod
 084 # Costa Path
 20,8,8
 Land
-    LOTAD,5
-    KRABBY,5
-    SANDILE,5
-    DEWPIDER,5
-    SWABLU,5
-	SENTRET,5
+    LOTAD,19,24
+    KRABBY,19,24
+    SANDILE,19,24
+    DEWPIDER,19,24
+    SWABLU,19,24
+	SENTRET,19,24
 Water
-    SANDILE,5
-    KRABBY,5
-    WAILMER,5
-    CARVANHA,5
-    MAGIKARP,5
+    SANDILE,19,24
+    KRABBY,19,24
+    WAILMER,19,24
+    CARVANHA,19,24
+    MAGIKARP,19,24
 OldRod
-    MAGIKARP,5
-    SANDILE,5
+    MAGIKARP,19,24
+    SANDILE,19,24
 GoodRod
-    MAGIKARP,5
-    WAILMER,5
-    CARVANHA,5
+    MAGIKARP,29,34
+    WAILMER,29,34
+    CARVANHA,29,34
 SuperRod
-    MAGIKARP,5,25
-    WAILMER,5,25
-    CARVANHA,5,25
-    SANDILE,5,25
-    MAGIKARP,5,25
+    MAGIKARP,35,40
+    WAILMER,35,40
+    CARVANHA,35,40
+    SANDILE,35,40
+    MAGIKARP,35,40
 #-------------------------------
 086 # Maple Trail
 20,8,8
 Land
-    BLITZLE,5
-    HEATMOR,5
-    DURANT,5
-    HOUNDOUR,5
-    VENIPEDE,5
-    DARUMAKA,5
+    BLITZLE,22,27
+    HEATMOR,22,27
+    DURANT,22,27
+    HOUNDOUR,22,27
+    VENIPEDE,22,27
+    DARUMAKA,22,27
 Water
-    POLIWAG,5
-    MAGIKARP,5
-    FINNEON,5
-    FINNEON,5
-    FINNEON,5
+    POLIWAG,22,27
+    MAGIKARP,22,27
+    FINNEON,22,27
+    FINNEON,22,27
+    FINNEON,22,27
 OldRod
-    FINNEON,5
-    FINNEON,5
+    FINNEON,22,27
+    FINNEON,22,27
 GoodRod
-    FINNEON,5
-    FINNEON,5
-    FINNEON,5
+    FINNEON,32,37
+    FINNEON,32,37
+    FINNEON,32,37
 SuperRod
-    FINNEON,5
-    FINNEON,5
-    FINNEON,5
-    FINNEON,5
-    FINNEON,5
+    FINNEON,42,47
+    FINNEON,42,47
+    FINNEON,42,47
+    FINNEON,42,47
+    FINNEON,42,47
 #-------------------------------
 089 # Magnet Cave
 20,8,8
 Cave
-    ZUBAT,6,8
-    MAGNEMITE,5,7
-    NOSEPASS,4,8
-    ARON,5,7
-    DWEBBLE,5,7
-    NOSEPASS,5,9
+    ZUBAT,5,11
+    MAGNEMITE,5,11
+    NOSEPASS,5,11
+    ARON,5,11
+    DWEBBLE,5,11
+    NOSEPASS,5,11
 #-------------------------------
 090 # Magnet Cave
 20,8,8
 Cave
-    ZUBAT,20,28
-	NOSEPASS,20,28
-    ARON,20,28
-	NOSEPASS,24,28
-    DWEBBLE,20,28
-    MAGNETON,24,28
+    ZUBAT,25,30
+	NOSEPASS,25,30
+    ARON,25,30
+	NOSEPASS,25,30
+    DWEBBLE,25,30
+    MAGNETON,25,30
 #-------------------------------
 091 # Lumigen Power Plant B1
 20,8,8
 Cave
-    MARBOLT,5
-    MAGNEMITE,5
-    ELEKID,5
-    PICHU,5
-	GRUBBIN,5
-	PICHU,5
+    MARBOLT,10,15
+    MAGNEMITE,10,15
+    ELEKID,10,15
+    PICHU,10,15
+	GRUBBIN,10,15
+	PICHU,10,15
 #-------------------------------
 092 # Verdant Valley
 20,8,8
 Land
-    ADORABULL,5
-    KANGA,5
-    TROPPY,5
-    BUDEW,5
-    MURKROW,5
-    SENTRET,5
+    ADORABULL,5,10
+    KANGA,5,10
+    TROPPY,5,10
+    BUDEW,5,10
+    MURKROW,5,10
+    SENTRET,5,10
 #-------------------------------
 093 # Lush Road
 20,8,8
 Land
-    BABEE,5
-    PINCUSH,5
-    ADORABULL,5
-    BUDEW,5
-    SHUCKLE,5
-    TROPPY,5
+    BABEE,18,23
+    PINCUSH,18,23
+    ADORABULL,18,23
+    BUDEW,18,23
+    SHUCKLE,18,23
+    TROPPY,18,23
 Water
-    MAGIKARP,5,15
-    FEEBAS,5,15
-    FINNEON,5,15
-    GOLDEEN,5,15
-    POLIWAG,5,15
+    MAGIKARP,18,23
+    FEEBAS,18,23
+    FINNEON,18,23
+    GOLDEEN,18,23
+    POLIWAG,18,23
 OldRod
-    MAGIKARP,5,15
-    FINNEON,5,15
+    MAGIKARP,18,23
+    FINNEON,18,23
 GoodRod
-    MAGIKARP,5,15
-    GOLDEEN,5,15
-    FINNEON,5,15
+    MAGIKARP,28,33
+    GOLDEEN,28,33
+    FINNEON,28,33
 SuperRod
-    MAGIKARP,5,25
-    FINNEON,5,25
-    POLIWAG,5,25
-    GOLDEEN,5,25
-    FEEBAS,5,25
+    MAGIKARP,38,43
+    FINNEON,38,43
+    POLIWAG,38,43
+    GOLDEEN,38,43
+    FEEBAS,38,43
 #-------------------------------
 096 # Lush Road
 20,8,8
 Land
-    BABEE,5
-    PINCUSH,5
-    ADORABULL,5
-    BUDEW,5
-    DITTO,5
-    PANCHAM,5
+    BABEE,21,26
+    PINCUSH,21,26
+    ADORABULL,21,26
+    BUDEW,21,26
+    DITTO,21,26
+    PANCHAM,21,26
 #-------------------------------
 098 # Plunge Pass
 20,8,8
 Land
-    BABEE,5
-    SWABLU,5
-    BLITZLE,5
-    BUDEW,5
-	SENTRET,5
-	EEVEE,5
+    BABEE,5,10
+    SWABLU,5,10
+    BLITZLE,5,10
+    BUDEW,5,10
+	SENTRET,5,10
+	EEVEE,5,10
 #-------------------------------
 099 # Lappy Lake
 20,8,8
 Land
-    BABEE,5
-	SLOWPOKE,5
-    LOTAD,5
-    TEDDIURSA,5
-    BUIZEL,5
-    STANTLER,5
+    BABEE,7,12
+	SLOWPOKE,7,12
+    LOTAD,7,12
+    TEDDIURSA,7,12
+    BUIZEL,7,12
+    STANTLER,7,12
 Water
     LAPPY,14,18
     MAGIKARP,15,22
@@ -659,71 +659,71 @@ SuperRod
 100 # Dim Cave
 20,8,8
 Cave
-    SABLING,5
-    DUNSPARCE,5
-    AZURILL,5
-	ZUBAT,5
-    RIOLU,5
-	DUNSPARCE,5
+    SABLING,25,30
+    DUNSPARCE,25,30
+    AZURILL,25,30
+	ZUBAT,25,30
+    RIOLU,25,30
+	DUNSPARCE,25,30
 #-------------------------------
 101 # Maple Trail
 20,8,8
 Land
-    BLITZLE,5
-    HEATMOR,5
-    DURANT,5
-    HOUNDOUR,5
-    VENIPEDE,5
-    DARUMAKA,5
+    BLITZLE,25,30
+    HEATMOR,25,30
+    DURANT,25,30
+    HOUNDOUR,25,30
+    VENIPEDE,25,30
+    DARUMAKA,25,30
 #-------------------------------
 103 # Verdant Valley
 20,8,8
 Land
-    ADORABULL,5
-    PARAS,5
-    SOLOSIS,5
-    MURKROW,5
-    HERACUTE,5
-    SICKLER,5
+    ADORABULL,9,13
+    PARAS,9,13
+    SOLOSIS,9,13
+    MURKROW,9,13
+    HERACUTE,9,13
+    SICKLER,9,13
 Water
-    MAGIKARP,5
-    MAGIKARP,5
-    FINNEON,5
-    FEEBAS,5
-    FEEBAS,5
+    MAGIKARP,20,25
+    MAGIKARP,20,25
+    FINNEON,20,25
+    FEEBAS,20,25
+    FEEBAS,20,25
 OldRod
-    MAGIKARP,5
-    FINNEON,5
+    MAGIKARP,10,15
+    FINNEON,10,15
 GoodRod
-    FINNEON,5
-    FINNEON,5
-    FEEBAS,5
+    FINNEON,20,25
+    FINNEON,20,25
+    FEEBAS,20,25
 SuperRod
-    MAGIKARP,5
-    FINNEON,5
-    FINNEON,5
-    FEEBAS,5
-    FEEBAS,5
+    MAGIKARP,30,35
+    FINNEON,30,35
+    FINNEON,30,35
+    FEEBAS,30,35
+    FEEBAS,30,35
 #-------------------------------
 105 # Yama Pass
 20,8,8
 Land
-    TEDDIURSA,5
-    STANTLER,5
-    MAGBY,5
-    HOUNDOUR,5
-    MURKROW,5
-    PONYTA,5
+    TEDDIURSA,28,33
+    STANTLER,28,33
+    MAGBY,28,33
+    HOUNDOUR,28,33
+    MURKROW,28,33
+    PONYTA,28,33
 #-------------------------------
 107 # Stacona Woods
 20,8,8
 Land
-    PINCUSH,5
-    SICKLER,5
-    HERACUTE,5
-    FOONGUS,5
-    PARAS,5
-    JOLTIK,5
+    PINCUSH,13,20
+    SICKLER,13,20
+    HERACUTE,13,20
+    FOONGUS,13,20
+    PARAS,13,20
+    JOLTIK,13,20
 #-------------------------------
 108 # Lumigen Hills
 20,8,8
@@ -806,83 +806,83 @@ Cave
     ALUMIDON,15,19
     LARVITAR,15,19
 Water
-    POLIWAG,5
-    FINNEON,5
-    MAGIKARP,5
-    MAGIKARP,5
-    MAGIKARP,5
+    POLIWAG,25,30
+    FINNEON,25,30
+    MAGIKARP,25,30
+    MAGIKARP,25,30
+    MAGIKARP,25,30
 OldRod
-    POLIWAG,5
-    POLIWAG,5
+    POLIWAG,25,30
+    POLIWAG,25,30
 GoodRod
-    POLIWAG,5
-    POLIWAG,5
-    POLIWAG,5
+    POLIWAG,35,40
+    POLIWAG,35,40
+    POLIWAG,35,40
 SuperRod
-    POLIWAG,5
-    POLIWAG,5
-    POLIWAG,5
-    POLIWAG,5
-    POLIWAG,5
+    POLIWAG,40,45
+    POLIWAG,40,45
+    POLIWAG,40,45
+    POLIWAG,40,45
+    POLIWAG,40,45
 #-------------------------------
 123 # Lush Cave
 20,8,8
 Cave
-    GOLETT,5
-    SABLING,5
-    ELGYEM,5
-    GASTLY,5
-    IMPIDIMP,5
-    GIBLE,5
+    GOLETT,20,25
+    SABLING,20,25
+    ELGYEM,20,25
+    GASTLY,20,25
+    IMPIDIMP,20,25
+    GIBLE,20,25
 #-------------------------------
 133 # Dragon's Den
 20,8,8
 Cave
-    DRATINI,5
-    AXEW,5
-    GIBLE,5
-    DEINO,5
-    ALUMIDON,5
-	DUNSPARCE,5
+    DRATINI,25,30
+    AXEW,25,30
+    GIBLE,25,30
+    DEINO,25,30
+    ALUMIDON,25,30
+	DUNSPARCE,25,30
 #-------------------------------
 146 # Cascade Creek
 25,10,10
 Land
-    YANMITE,5
-    LOTAD,5
-    BABEE,5
-    DEWPIDER,5
-    SANDILE,5
-    HERACUTE,5
+    YANMITE,20,25
+    LOTAD,20,25
+    BABEE,20,25
+    DEWPIDER,20,25
+    SANDILE,20,25
+    HERACUTE,20,25
 Water
-    MAGIKARP,5
-    LAPPY,5
-    MAGIKARP,5
-    MAGIKARP,5
-    LAPPY,5
+    MAGIKARP,20,25
+    LAPPY,20,25
+    MAGIKARP,20,25
+    MAGIKARP,20,25
+    LAPPY,20,25
 OldRod
-    MAGIKARP,5
-    MAGIKARP,5
+    MAGIKARP,20,25
+    MAGIKARP,20,25
 GoodRod
-    LAPPY,5
-    LAPPY,5
-    LAPPY,5
+    LAPPY,25,30
+    LAPPY,25,30
+    LAPPY,25,30
 SuperRod
-    LAPPY,5
-    LAPPY,5
-    LAPRAS,5
-    LAPRAS,5
-    LAPRAS,5
+    LAPPY,35,40
+    LAPPY,35,40
+    LAPRAS,35,40
+    LAPRAS,35,40
+    LAPRAS,35,40
 #-------------------------------
 147 # Blighted Bog
 20,8,8
 Land
-    TRAPINCH,5
-    FOONGUS,5
-    SEVIPER,5
-    TOXEL,5
-    STUNKY,5
-    AIPOM,5
+    TRAPINCH,25,30
+    FOONGUS,25,30
+    SEVIPER,25,30
+    TOXEL,25,30
+    STUNKY,25,30
+    AIPOM,25,30
 #-------------------------------
 150 # Folian Grove
 20,8,8
@@ -907,19 +907,19 @@ Land
 152 # Haunted Cavern
 25,5,10
 Cave
-    SABLING,5
-	DRIFLOON,5
-    ZUBAT,5
-    SHUPPET,5
-    IMPIDIMP,5
-    SINISTEA,5
+    SABLING,30,35
+	DRIFLOON,30,35
+    ZUBAT,30,35
+    SHUPPET,30,35
+    IMPIDIMP,30,35
+    SINISTEA,30,35
 #-------------------------------
 161 # Cascade Cave
 25,7,10
 Cave
-    UNOWN,5
-    UNOWN,5
-    UNOWN,5
-    UNOWN,5
-    UNOWN,5
-    UNOWN,5
+    UNOWN,20,25
+    UNOWN,20,25
+    UNOWN,20,25
+    UNOWN,20,25
+    UNOWN,20,25
+    UNOWN,20,25
