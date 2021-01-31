@@ -212,7 +212,6 @@ _END_
     @sprite.dispose
     @credit_sprite.dispose
     $PokemonGlobal.creditsPlayed = true
-    $Trainer.allowNewGamePlus
   #  pbBGMPlay(previousBGM)
     return
   end
