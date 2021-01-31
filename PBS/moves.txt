@@ -707,7 +707,7 @@
 687,TERRORTREMOR,Terror Tremor,042,70,GROUND,Physical,80,15,100,AllNearFoes,0,bef,"The user rattles the earth with bone-chilling power. Lowers Attack for all enemies hit."
 688,GALEFORCE,Gale Force,01F,60,FLYING,Physical,100,20,100,NearOther,0,abef,"The user dashes forward with a burst of wind energy. This also raises the user's Speed stat."
 689,IRONFORCE,Iron Force,01D,60,STEEL,Physical,100,20,100,NearOther,0,abef,"The user dashes forward with a burst of steel energy. This also raises the user's Defense stat."
-690,INSECTLANCE,Insect Lance,01C,60,BUG,Physical,85,20,100,NearOther,0,abef,"The user furiously jabs the target with its spear. This also raises the user's Attack stat."
+690,INSECTLANCE,Insect Lance,01C,40,BUG,Physical,85,20,100,NearOther,0,abef,"The user furiously jabs the target with its spear. This also raises the user's Attack stat."
 691,WINDRUSH,Wind Rush,000,50,FLYING,Physical,100,30,0,NearOther,1,abef,"The user charges the target with a rush of wind. It is sure to strike first."
 692,RAGECLAW,Rage Claw,01C,50,DARK,Physical,100,20,50,NearOther,0,abef,"The user swipes at the target with malice. This has a 50% chance to raise the user's Attack stat."
 693,BOLTBASHES,Bolt Bashes,0C0,25,ELECTRIC,Physical,100,30,0,NearOther,0,abef,"The user repeatedly kicks the target with electric energy. Two to five hits occur in rapid succession."
