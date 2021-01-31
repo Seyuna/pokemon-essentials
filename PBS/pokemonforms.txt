@@ -1831,7 +1831,7 @@ BattlerPlayerX = 5
 BattlerPlayerY = 34
 BattlerEnemyX = 4
 BattlerEnemyY = 39
-Evolutions = SLOWKING,Item,GALARICAWREATH,SLOWBRO,Item,GALARICACUFF
+Evolutions = SLOWBRO,Item,GALARICACUFF,SLOWBRO,Item,GALARICACUFF
 #-------------------------------
 [SLOWBRO,1]
 FormName = Galar Form
@@ -3324,12 +3324,13 @@ Type2 = FLYING
 BaseStats = 40,45,30,60,30,40
 Happiness = 0
 Abilities = INTIMIDATE,GALVANIZE
-HiddenAbility = INFILTRATOR
 Moves = 1,ABSORB,1,NUZZLE,5,LICK,10,MEANLOOK,15,POISONFANG,20,BITE,25,WINGATTACK,28,FLATTER,30,ZINGZAP,35,HAZE,40,JAWLOCK,45,CONFUSERAY,50,AIRSLASH,55,NIGHTSLASH,60,LEECHLIFE
 Color = Black
 Pokedex = Preferring total darkness, Staconan Zubat communicate through controlled discharges of static built up in their fur. Scientists say that their language is far more complicated than our own.
-BattlerEnemyY = 4
-BattlerShadowSize = 3
+BattlerPlayerX = 1
+BattlerPlayerY = -3
+BattlerEnemyX = 0
+BattlerEnemyY = 5
 Evolutions = GOLBAT,Level,24
 #-------------------------------
 [GOLBAT,1]
@@ -3339,11 +3340,13 @@ Type2 = FLYING
 BaseStats = 75,90,70,100,65,55
 Happiness = 0
 Abilities = INTIMIDATE,GALVANIZE
-HiddenAbility = INFILTRATOR
 Moves = 1,SUPERSONIC,1,SCREECH,1,ABSORB,1,NUZZLE,1,LICK,1,MEANLOOK,15,POISONFANG,20,BITE,27,WINGATTACK,30,FLATTER,34,ZINGZAP,41,HAZE,48,JAWLOCK,55,CONFUSERAY,62,AIRSLASH,69,NIGHTSLASH,69,LEECHLIFE,75,BOOMBURST
 Color = Black
 Pokedex = Staconan Golbat are far more mischievious than their Kantonian counterparts, often playing pranks and scaring spelunkers for sport. Despite this, they're fairly friendly and just want to have fun.
-BattlerShadowSize = 3
+BattlerPlayerX = 5
+BattlerPlayerY = -2
+BattlerEnemyX = -3
+BattlerEnemyY = -1
 Evolutions = CROBAT,Location,151
 #-------------------------------
 [CROBAT,1]
@@ -3353,10 +3356,13 @@ Type2 = FLYING
 BaseStats = 95,100,70,140,70,50
 Happiness = 0
 Abilities = INTIMIDATE,GALVANIZE
-HiddenAbility = INFILTRATOR
 Moves = 0,MANICLUNGE,1,THUNDERFANG,1,TOXIC,1,SUPERSONIC,1,SCREECH,1,OMINOUSWIND,1,NUZZLE,1,LICK,1,MEANLOOK,15,POISONFANG,20,BITE,27,WINGATTACK,30,FLATTER,34,ZINGZAP,41,HAZE,48,JAWLOCK,55,CONFUSERAY,62,AIRSLASH,69,NIGHTSLASH,72,LEECHLIFE,80,DISCHARGE,85,BOOMBURST
 Color = Black
 Pokedex = If you stare up at the night sky and see a flash of lightning followed by maniacal laughing, it's most likely a Staconan Crobat courting a mate. Just make sure not to interfere.
+BattlerPlayerX = 2
+BattlerPlayerY = -3
+BattlerEnemyX = -4
+BattlerShadowSize = 3
 #-------------------------------
 [TOTODILE,1]
 FormName = Stacona Form

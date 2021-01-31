@@ -31,12 +31,6 @@ Land
     PIDGEY,11,14
     RATTATA,11,14
     PIDGEY,11,14
-    RATTATA,11,13
-    PIDGEY,11,13
-    RATTATA,11,13
-    PIDGEY,11,13
-    RATTATA,14
-    PIDGEY,14
 LandNight
     RATTATA,10,14
     HOOTHOOT,10,13
@@ -60,12 +54,6 @@ Land
     POOCHYENA,11,15
     POOCHYENA,11,15
     POOCHYENA,11,15
-    SHINX,10,12
-    SHINX,10,12
-    SHINX,10,11
-    SHINX,10,11
-    SHINX,10,11
-    SHINX,10,11
 Water
     MAGIKARP,7,10
     GOLDEEN,11,14
@@ -113,12 +101,6 @@ Land
     PIDGEY,12,14
     SUNKERN,12
     SUNKERN,12
-    METAPOD,10
-    KAKUNA,10
-    PIDGEY,10,14
-    PIDGEY,12,14
-    PIDGEY,10,14
-    PIDGEY,12,14
 LandMorning
     CATERPIE,10,12
     WEEDLE,10,12
@@ -168,12 +150,6 @@ Land
     NIDORANmA,12,15
     PIKACHU,14,17
     PIKACHU,14,17
-    PONYTA,13,15
-    PONYTA,13,15
-    EEVEE,15
-    EEVEE,15
-    EEVEE,15
-    EEVEE,15
 Water
     SURSKIT,13,14
     LOTAD,14
@@ -227,12 +203,6 @@ Cave
     SNEASEL,14,16
     SNORUNT,12,15
     SNORUNT,12,15
-    SNOVER,14
-    SNOVER,14
-    SMOOCHUM,11,14
-    SMOOCHUM,11,14
-    SMOOCHUM,11,14
-    SMOOCHUM,11,14
 #-------------------------------
 039 # Route 4
 20,8,8
@@ -243,12 +213,6 @@ Land
     GRIMER,13,15
     GRIMER,13,15
     GRIMER,13,15
-    GRIMER,13,15
-    GRIMER,13,15
-    MURKROW,12,14
-    MURKROW,12,14
-    MURKROW,12,14
-    MURKROW,12,14
 #-------------------------------
 041 # Route 5
 20,8,8
@@ -259,12 +223,6 @@ Land
     SPEAROW,13,16
     SPEAROW,13,16
     SPEAROW,13,16
-    SPEAROW,13,16
-    SPEAROW,13,16
-    SLUGMA,13,14
-    SLUGMA,13,14
-    SLUGMA,13,14
-    SLUGMA,13,14
 #-------------------------------
 043 # Moncto Town
 20,8,8
@@ -297,12 +255,6 @@ Land
     GRIMER,13,15
     GRIMER,13,15
     GRIMER,13,15
-    GRIMER,13,15
-    GRIMER,13,15
-    MURKROW,12,14
-    MURKROW,12,14
-    MURKROW,12,14
-    MURKROW,12,14
 #-------------------------------
 047 # Route 7
 20,8,8
@@ -313,12 +265,6 @@ Land
     BIDOOF,14,17
     BIDOOF,14,17
     BIDOOF,14,17
-    MURKROW,12,14
-    MURKROW,12,14
-    WURMPLE,9,12
-    WURMPLE,9,12
-    WURMPLE,9,12
-    WURMPLE,9,12
 RockSmash
     NOSEPASS,13,14
     NOSEPASS,13,14
@@ -335,12 +281,6 @@ Cave
     MAGNETON,14,17
     MAGNETON,14,16
     MAGNETON,14,16
-    GEODUDE,13,15
-    GEODUDE,13,15
-    MAWILE,14,16
-    MAWILE,14,16
-    MAWILE,14,16
-    MAWILE,14,16
 #-------------------------------
 050 # Rock Cave
 20,8,8
@@ -351,12 +291,6 @@ Cave
     MAGNETON,14,17
     MAGNETON,14,16
     MAGNETON,14,16
-    GEODUDE,13,15
-    GEODUDE,13,15
-    BURMY,14,16
-    BURMY,14,16
-    BURMY,14,16
-    BURMY,14,16
 #-------------------------------
 051 # Dungeon
 20,8,8
@@ -367,12 +301,6 @@ Cave
     IGGLYBUFF,1
     CHINGLING,1
     CHINGLING,1
-    RIOLU,1
-    RIOLU,1
-    TYROGUE,1
-    TYROGUE,1
-    TYROGUE,1
-    TYROGUE,1
 #-------------------------------
 066 # Safari Zone
 20,8,8
@@ -383,12 +311,6 @@ Land
     DODUO,13,15
     ABRA,12,15
     ABRA,12,15
-    TANGELA,14,16
-    TANGELA,14,16
-    HOPPIP,13,17
-    HOPPIP,13,17
-    HOPPIP,13,17
-    HOPPIP,13,17
 #-------------------------------
 068 # Safari Zone
 20,8,8
@@ -399,12 +321,6 @@ Land
     VENONAT,15,18
     AIPOM,14,17
     GIRAFARIG,16,17
-    TAUROS,15,16
-    HERACROSS,15,17
-    SCYTHER,16
-    PINSIR,16
-    KANGASKHAN,19
-    CHANSEY,17
 Water
     PSYDUCK,16,18
     MARILL,15,18
@@ -434,12 +350,6 @@ Land
     LOTAD,15,18
     DITTO,15,17
     DITTO,16,18
-    BONSLY,14,17
-    BONSLY,14,16
-    BONSLY,14,16
-    BONSLY,14,16
-    BONSLY,15,16
-    BONSLY,15
 Water
     TENTACOOL,14,19
     MANTYKE,15,16
@@ -469,22 +379,10 @@ Land
     SHELLDER,18,19
     CHINCHOU,17,21
     CHINCHOU,17,21
-    CORSOLA,17,20
-    CORSOLA,17,20
-    RELICANTH,16,19
-    RELICANTH,16,19
-    RELICANTH,16,19
-    RELICANTH,16,19
 #-------------------------------
 075 # Tiall Region
 20,8,8
 Land
-    RATTATA,11,14
-    RATTATA,11,14
-    RATTATA,11,14
-    RATTATA,11,14
-    RATTATA,11,14
-    RATTATA,11,14
     RATTATA,11,14
     RATTATA,11,14
     RATTATA,11,14
@@ -496,17 +394,11 @@ Land
 20,8,8
 Land
     LOTAD,5
-    WINGULL,5
     SANDILE,5
     KRABBY,5
     MARILL,5
-    POOCHYENA,5
     DEWPIDER,5
-    DEWPIDER,5
-    KANGA,5
     MAGNEMITE,5
-    KANGA,5
-    KROKOROK,5
 Water
     SANDILE,5
     KRABBY,5
@@ -530,18 +422,12 @@ SuperRod
 078 # Pollen Path
 20,8,8
 Land
-    ADORABULL,2,4
-    BABEE,2,4
-    BUDEW,2,4
-    KANGA,2,4
-    WOOLOO,2,4
-    SIZZLIPEDE,2,4
-    YANMA,2,4
-    VULLABY,2,4
-    RUFFLET,2,4
-    LEDYBA,5,6
-    MUNCHLAX,5,6
-    SPINDA,5,6
+    ADORABULL,1,5
+    BABEE,1,5
+    BUDEW,1,5
+    SENTRET,1,5
+    KANGA,1,5
+    RUFFLET,1,5
 #-------------------------------
 079 # Fleural Town
 20,8,8
@@ -568,18 +454,12 @@ SuperRod
 080 # Iron Pass
 20,8,8
 Land
-    WINGOT,2,4
-    GRUBBIN,2,4
-    SHINX,2,4
-    BLITZLE,2,4
-    YAMPER,2,4
-    GRUBBIN,2,4
-    YAMPER,2,4
-    MAGNEMITE,2,4
-    KLINK,2,4
-    GRUBBIN,2,4
-    DRIFLOON,2,4
-    BRONZOR,2,4
+    WINGOT,1,5
+    ADORABULL,1,5
+	MAGNEMITE,1,5
+    BLITZLE,1,5
+    GRUBBIN,1,5
+    DRIFLOON,1,5
 Water
     MAGIKARP,5,15
     FEEBAS,5,15
@@ -606,15 +486,9 @@ Land
     LOTAD,5
     KRABBY,5
     SANDILE,5
-    WINGULL,5
-    STUNFISK,5
     DEWPIDER,5
-    KRABBY,5
-    KANGA,5
-    KANGA,5
-    DRIFLOON,5
-    BUIZEL,5
-    KROKOROK,5
+    SWABLU,5
+	SENTRET,5
 Water
     SANDILE,5
     KRABBY,5
@@ -638,18 +512,12 @@ SuperRod
 086 # Maple Trail
 20,8,8
 Land
-    BIDOOF,5
     BLITZLE,5
     HEATMOR,5
     DURANT,5
-    JIGGLYPUFF,5
-    WHISMUR,5
     HOUNDOUR,5
-    RALTS,5
     VENIPEDE,5
-    SEWADDLE,5
     DARUMAKA,5
-    LARVESTA,5
 Water
     POLIWAG,5
     MAGIKARP,5
@@ -677,30 +545,18 @@ Cave
     MAGNEMITE,5,7
     NOSEPASS,4,8
     ARON,5,7
-    NOSEPASS,5,6
-    ZUBAT,5,6
-    NOSEPASS,5,7
     DWEBBLE,5,7
-    DRILBUR,5,8
     NOSEPASS,5,9
-    MAGNEMITE,5,9
-    RHYHORN,5,8
 #-------------------------------
 090 # Magnet Cave
 20,8,8
 Cave
-    NOSEPASS,20,28
-    MAGNEMITE,20,28
     ZUBAT,20,28
+	NOSEPASS,20,28
     ARON,20,28
-    NOSEPASS,20,28
-    ZUBAT,20,28
-    NOSEPASS,20,28
+	NOSEPASS,24,28
     DWEBBLE,20,28
-    DRILBUR,20,28
-    NOSEPASS,20,28
-    MAGNEMITE,20,28
-    RHYHORN,20,28
+    MAGNETON,24,28
 #-------------------------------
 091 # Lumigen Power Plant B1
 20,8,8
@@ -709,14 +565,8 @@ Cave
     MAGNEMITE,5
     ELEKID,5
     PICHU,5
-    ELECTRIKE,5
-    ELEKID,5
-    MAGNEMITE,5
-    MARBOLT,5
-    MAGNEMITE,5
-    MARBOLT,5
-    PIKACHU,5
-    MARBOLT,5
+	GRUBBIN,5
+	PICHU,5
 #-------------------------------
 092 # Verdant Valley
 20,8,8
@@ -724,31 +574,19 @@ Land
     ADORABULL,5
     KANGA,5
     TROPPY,5
-    ODDISH,5
-    CHERUBI,5
-    MAKUHITA,5
-    LEDYBA,5
-    SPINARAK,5
-    SOLOSIS,5
+    BUDEW,5
     MURKROW,5
-    WHISMUR,5
-    SOLOSIS,5
+    SENTRET,5
 #-------------------------------
 093 # Lush Road
 20,8,8
 Land
-    FOONGUS,5
     BABEE,5
-    SHINX,5
+    PINCUSH,5
     ADORABULL,5
-    TROPPY,5
-    PETILIL,5
-    WEEDLE,5
-    CATERPIE,5
-    SENTRET,5
-    TANGELA,5
+    BUDEW,5
     SHUCKLE,5
-    SNUBBULL,5
+    TROPPY,5
 Water
     MAGIKARP,5,15
     FEEBAS,5,15
@@ -772,50 +610,32 @@ SuperRod
 096 # Lush Road
 20,8,8
 Land
-    SNUBBULL,5
-    STANTLER,5
+    BABEE,5
+    PINCUSH,5
+    ADORABULL,5
+    BUDEW,5
+    DITTO,5
     PANCHAM,5
-    TAILLOW,5
-    SPINDA,5
-    DITTO,5
-    DITTO,5
-    HAPPINY,5
-    RALTS,5
-    ELECTRIKE,5
-    ELECTRIKE,5
-    TROPPY,5
 #-------------------------------
 098 # Plunge Pass
 20,8,8
 Land
-    ADORABULL,5
     BABEE,5
     SWABLU,5
     BLITZLE,5
     BUDEW,5
-    ROOKIDEE,5
-    SWABLU,5
-    ROOKIDEE,5
-    BLITZLE,5
-    BUDEW,5
-    BUDEW,5
-    BUDEW,5
+	SENTRET,5
+	EEVEE,5
 #-------------------------------
 099 # Lappy Lake
 20,8,8
 Land
-    DUCKLETT,10,15
-    PSYDUCK,10,15
-    SLOWPOKE,5
-    POLIWAG,5
-    MARILL,5
-    STANTLER,5
-    SCRAGGY,5
-    STANTLER,5
+    BABEE,5
+	SLOWPOKE,5
+    LOTAD,5
     TEDDIURSA,5
-    SCRAGGY,5
     BUIZEL,5
-    RALTS,5
+    STANTLER,5
 Water
     LAPPY,14,18
     MAGIKARP,15,22
@@ -841,45 +661,27 @@ SuperRod
 Cave
     SABLING,5
     DUNSPARCE,5
-    DRILBUR,5
-    DUNSPARCE,5
-    DUNSPARCE,5
-    ALUMIDON,5
-    DUNSPARCE,5
-    SABLING,5
-    DUNSPARCE,5
     AZURILL,5
+	ZUBAT,5
     RIOLU,5
-    RIOLU,5
+	DUNSPARCE,5
 #-------------------------------
 101 # Maple Trail
 20,8,8
 Land
-    BIDOOF,5
     BLITZLE,5
     HEATMOR,5
     DURANT,5
-    JIGGLYPUFF,5
-    WHISMUR,5
     HOUNDOUR,5
-    RALTS,5
     VENIPEDE,5
-    SEWADDLE,5
-    DARUMAKA,5
     DARUMAKA,5
 #-------------------------------
 103 # Verdant Valley
 20,8,8
 Land
     ADORABULL,5
-    ODDISH,5
-    BELLSPROUT,5
     PARAS,5
-    CHERUBI,5
-    MAKUHITA,5
     SOLOSIS,5
-    SOLOSIS,5
-    SHROOMISH,5
     MURKROW,5
     HERACUTE,5
     SICKLER,5
@@ -908,16 +710,10 @@ SuperRod
 Land
     TEDDIURSA,5
     STANTLER,5
-    DRIFLOON,5
     MAGBY,5
     HOUNDOUR,5
-    NUMEL,5
-    DRIFLOON,5
-    SPINDA,5
     MURKROW,5
     PONYTA,5
-    GIGANTLER,5
-    GIGANTLER,5
 #-------------------------------
 107 # Stacona Woods
 20,8,8
@@ -926,29 +722,17 @@ Land
     SICKLER,5
     HERACUTE,5
     FOONGUS,5
-    SHROOMISH,5
     PARAS,5
-    SEWADDLE,5
-    VENIPEDE,5
-    DWEBBLE,5
-    SPINARAK,5
     JOLTIK,5
-    SHUCKLE,5
 #-------------------------------
 108 # Lumigen Hills
 20,8,8
 Land
     ARON,5
     WINGOT,5
-    TRUBBISH,5
-    GRUBBIN,5
+	KLINK,5
     ZANGOOSE,5
-    ZANGOOSE,5
-    ZANGOOSE,5
-    BELDUM,5
-    ARON,5
-    ABSOL,5
-    BELDUM,5
+    AIPOM,5
     ABSOL,5
 Water
     MARILL,5
@@ -976,31 +760,19 @@ Cave
     MAREEP,5
     SNORUNT,5
     SWINUB,5
-    CUBCHOO,5
-    VANILLITE,5
-    MAREEP,5
-    MAREEP,5
-    SNOVER,5
-    SMOOCHUM,5
     SNEASEL,5
-    VANILLISH,5
+    NUMEL,5
     CRYOGONAL,5
 #-------------------------------
 111 # Ferrous Cave
 20,8,8
 Cave
     ZUBAT,5
+    RALTS,5
+    AZURILL,5
     PARAS,5
-    RALTS,5
-    NOSEPASS,5
-    AZURILL,5
-    DRILBUR,5
-    AZURILL,5
-    RALTS,5
-    RHYHORN,5
-    RHYHORN,5
     ALUMIDON,5
-    ALUMIDON,5
+    LARVITAR,5
 #-------------------------------
 113 # Driftwood City
 20,8,8
@@ -1030,15 +802,9 @@ Cave
     ZUBAT,5
     RALTS,5
     AZURILL,5
-    NOSEPASS,5
-    SCRAFTY,5
     PARAS,5
-    NOSEPASS,5
-    RALTS,5
-    RHYHORN,5
     ALUMIDON,5
-    ALUMIDON,5
-    ALUMIDON,5
+    LARVITAR,5
 Water
     POLIWAG,5
     FINNEON,5
@@ -1062,18 +828,12 @@ SuperRod
 123 # Lush Cave
 20,8,8
 Cave
-    SCRAFTY,5
-    NOSEPASS,5
     GOLETT,5
     SABLING,5
     ELGYEM,5
     GASTLY,5
-    MISDREAVUS,5
-    ZORUA,5
-    YAMASK,5
-    UNOWN,5
+    IMPIDIMP,5
     GIBLE,5
-    SABLEYE,5
 #-------------------------------
 133 # Dragon's Den
 20,8,8
@@ -1082,14 +842,8 @@ Cave
     AXEW,5
     GIBLE,5
     DEINO,5
-    DRATINI,5
-    AXEW,5
-    GIBLE,5
-    DURALUDON,5
-    GIBLE,5
-    AXEW,5
-    DEINO,5
-    DEINO,5
+    ALUMIDON,5
+	DUNSPARCE,5
 #-------------------------------
 146 # Cascade Creek
 25,10,10
@@ -1097,15 +851,9 @@ Land
     YANMITE,5
     LOTAD,5
     BABEE,5
-    SICKLER,5
-    YANMITE,5
     DEWPIDER,5
     SANDILE,5
-    BABEE,5
-    SICKLER,5
-    SANDILE,5
-    DEWPIDER,5
-    SANDILE,5
+    HERACUTE,5
 Water
     MAGIKARP,5
     LAPPY,5
@@ -1133,14 +881,8 @@ Land
     FOONGUS,5
     SEVIPER,5
     TOXEL,5
-    VENIPEDE,5
-    GULPIN,5
-    GRIMER,5
-    TRAPINCH,5
     STUNKY,5
-    CROAGUNK,5
-    SEVIPER,5
-    TRUBBISH,5
+    AIPOM,5
 #-------------------------------
 150 # Folian Grove
 20,8,8
@@ -1148,14 +890,8 @@ Land
     SKWOVET,5
     APPLIN,5
     SLOWPOKE,5
-    BOUNSWEET,5
-    GOSSIFLEUR,5
-    SKIDDO,5
-    APPLIN,5
-    SLOWPOKE,5
     SKIDDO,5
     ROWLET,5
-    GROOKEY,5
     GROOKEY,5
 #-------------------------------
 151 # Haunted Hollow
@@ -1164,28 +900,26 @@ Land
     SUNKERN,5
     HOPPIP,5
     SPINARAK,5
-    SUNKERN,5
-    HOPPIP,5
-    MISDREAVUS,5
+    ESPURR,5
     PUMPKABOO,5
-    IMPIDIMP,5
-    SPINARAK,5
-    GASTLY,5
-    SINISTEA,5
     SINISTEA,5
 #-------------------------------
 152 # Haunted Cavern
 25,5,10
 Cave
-    GASTLY,5
-    IMPIDIMP,5
-    SABLEYE,5
-    DUSKULL,5
+    SABLING,5
+	DRIFLOON,5
+    ZUBAT,5
     SHUPPET,5
-    SABLEYE,5
     IMPIDIMP,5
-    YAMASK,5
-    DUSKULL,5
-    SHUPPET,5
     SINISTEA,5
-    SINISTEA,5
+#-------------------------------
+161 # Cascade Cave
+25,7,10
+Cave
+    UNOWN,5
+    UNOWN,5
+    UNOWN,5
+    UNOWN,5
+    UNOWN,5
+    UNOWN,5
