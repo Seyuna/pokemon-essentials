@@ -122,7 +122,7 @@ def pbNewGamePlusGoodies
     Graphics.update
     pbWait(1)
   end
-  pbMessage("\\wm\\w[""]\\me[Egg get]<ac>You have now been returned your old Party and PC Storage from your last save</ac>")
+  pbMessage("\\wm\\w[""]\\me[Egg get]<ac>You have now been returned your old Party and PC Storage from your last save.</ac>")
   pbMessage("\\wm\\w[""]<ac>However, your #{sentName} has been sent to the Storage, to accomodate for story events.</ac>") if sentArenay
   pbMessage("\\wm\\w[""]<ac>You have also recieved a special item for starting a New Game +.</ac>")
   pbMessage("\\wm\\w[""]<ac>The Star Icon on your Trainer Card will indicate the number of New Game + playthroughs you've started.</ac>")
