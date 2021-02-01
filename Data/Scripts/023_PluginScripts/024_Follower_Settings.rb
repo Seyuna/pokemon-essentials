@@ -75,7 +75,7 @@ Events.FollowerRefresh += proc{|pkmn|
 Events.FollowerRefresh += proc{|pkmn|
   next true if pkmn.hasType?(:FLYING)
   next true if pkmn.hasAbility?(:LEVITATE)
-  next true if ALWAYS_ANIMATED_FOLLOWERS.include(pkmn.species)
+  next true if ALWAYS_ANIMATED_FOLLOWERS.include?(pkmn.species)
 }
 
 #-------------------------------------------------------------------------------

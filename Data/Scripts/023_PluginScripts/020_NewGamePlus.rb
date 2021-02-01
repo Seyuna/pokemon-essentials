@@ -513,7 +513,7 @@ class PokeBattle_Trainer
   def allowNewGamePlus
     @newGamePlus = true
     pbMessage("\\wm\\w[""]<ac>You have now unlocked the ability to play the New Game + mode.</ac>")
-    pbMessage("\\wm\\w[""]<ac>To accesss the new mode, select the \"New Game +\" option on the Load Screen.</ac>")
+    pbMessage("\\wm\\w[""]<ac>To access the new mode, select the \"New Game +\" option on the Load Screen.</ac>")
     if $Trainer.newGamePlusCount == 0 || pbConfirmMessage("\\wm\\w[""]<ac>Would you like to know what a New Game + is?</ac>")
       pbMessage("\\wm\\w[""]<ac>New Game + allows you to replay Pokémon Splice, but in a brand new way.</ac>")
       pbMessage("\\wm\\w[""]<ac>Everything such as items, money, etc. will be cleared, just as if you were starting a New Game.</ac>")
@@ -581,6 +581,13 @@ class PokeBattle_Battle
     else
       exp /= 7
     end
+    # Splice EXP Scaling
+    levelDiff = pkmn.level - level
+    if levelDiff > 4
+      divFactor = levelDiff/5
+      exp = exp/(2**divFactor)
+      exp = 2 if exp < 2
+    end
     # Foreign Pokémon gain more Exp
     isOutsider = (pkmn.trainerID!=pbPlayer.id ||
                  (pkmn.language!=0 && pkmn.language!=pbPlayer.language))
@@ -604,10 +611,14 @@ class PokeBattle_Battle
     return if expGained<=0
     # "Exp gained" message
     if showMessages
-      if isOutsider
-        pbDisplayPaused(_INTL("{1} got a boosted {2} Exp. Points!",pkmn.name,expGained))
+      if levelDiff > 4
+        pbDisplayPaused(_INTL("{1} got a reduced {2} Exp. Points!",pkmn.name,expGained))
       else
-        pbDisplayPaused(_INTL("{1} got {2} Exp. Points!",pkmn.name,expGained))
+        if isOutsider
+          pbDisplayPaused(_INTL("{1} got a boosted {2} Exp. Points!",pkmn.name,expGained))
+        else
+          pbDisplayPaused(_INTL("{1} got {2} Exp. Points!",pkmn.name,expGained))
+        end
       end
     end
     curLevel = pkmn.level
