@@ -134,20 +134,22 @@ def pbPokemonFound(item,quantity = 1,message = "")
   itemname = (quantity>1) ? PBItems.getNamePlural(item) : PBItems.getName(item)
   pocket = pbGetPocket(item)
   if $PokemonBag.pbStoreItem(item,quantity)   # If item can be picked up
+    scene = $game_player.addFoundItem(item)
     meName = (pbIsKeyItem?(item)) ? "Key item get" : "Item get"
-    if isConst?(item,PBItems,:LEFTOVERS)
-      pbMessage(_INTL("\\me[{1}]#{pokename} found some \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
-    elsif pbIsMachine?(item)   # TM or HM
-      pbMessage(_INTL("\\me[{1}]#{pokename} found \\c[1]{2} {3}\\c[0]!\\wtnp[30]",meName,itemname,PBMoves.getName(pbGetMachine(item))))
-    elsif quantity>1
-      pbMessage(_INTL("\\me[{1}]#{pokename} found {2} \\c[1]{3}\\c[0]!\\wtnp[30]",meName,quantity,itemname))
-    elsif itemname.starts_with_vowel?
-      pbMessage(_INTL("\\me[{1}]#{pokename} found an \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
+    if isConst?(item, PBItems, :LEFTOVERS) || pbGetPocket(item) == 6
+      pbMessage(_INTL("\\me[{1}]#{pokename} found  some "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!\\wtnp[30]", meName, itemname))
+    elsif pbIsMachine?(item) # TM or HM
+      pbMessage(_INTL("\\me[{1}]#{pokename} found "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2} {3}!\\wtnp[30]", meName, itemname,  PBMoves.getName(pbGetMachine(item))))
+    elsif quantity > 1
+      pbMessage(_INTL("\\me[{1}]#{pokename} found {2} "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{3}!\\wtnp[30]", meName, quantity ,itemname))
+    elsif ["a", "e", "i", "o", "u"].include?(itemname[0, 1].downcase)
+      pbMessage(_INTL("\\me[{1}]#{pokename} found an "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!\\wtnp[30]", meName, itemname))
     else
-      pbMessage(_INTL("\\me[{1}]#{pokename} found a \\c[1]{2}\\c[0]!\\wtnp[30]",meName,itemname))
+      pbMessage(_INTL("\\me[{1}]#{pokename} found a "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!\\wtnp[30]", meName, itemname))
     end
-    pbMessage(_INTL("You put the {1} away\\nin the <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",
+    pbMessage(_INTL("You put the {1} away in \\nthe <icon=bagPocket{2}>\\c[1]{3} Pocket\\c[0].",
        itemname,pocket,PokemonBag.pocketNames()[pocket]))
+    scene.pbEndScene
     $PokemonGlobal.followerHoldItem = false
     $PokemonGlobal.timeTaken = 0
     return true
@@ -348,20 +350,23 @@ alias follow_surf pbSurf
 def pbSurf
   return false if $game_player.pbFacingEvent
   return false if $game_player.pbHasDependentEvents?
-  move = getID(PBMoves,:SURF)
-  movefinder = pbCheckMove(move)
-  if !pbCheckHiddenMoveBadge(BADGE_FOR_SURF,false) || (!$DEBUG && !movefinder)
+  if $PokemonTemp.dependentEvents.refresh_sprite(false,true)
+    pkmn = $Trainer.arenayIndex(true)
+    if pkmn && pkmn.hasType?(:ROCK) || pkmn.hasType?(:GROUND) || pkmn.hasType?(:FIRE) || pkmn.hasType?(:ELECTRIC)
+      pbMessage(_INTL("\\PN can't surf with {1} in its {2} form!",pkmn.name,PBTypes.getName(pkmn.type1)))
+      return false
+    end
+  end
+  if !$PokemonBag.pbHasItem?(:SURFITEM) && !$DEBUG
     return false
   end
   if pbConfirmMessage(_INTL("The water is a deep blue...\nWould you like to surf on it?"))
-    speciesname = (movefinder) ? movefinder.name : $Trainer.name
-    pbMessage(_INTL("{1} used {2}!",speciesname,PBMoves.getName(move)))
+    pbMessage(_INTL("{1} used the {2}!", $Trainer.name, PBItems.getName(getConst(PBItems,SURF_ITEM))))
     pbCancelVehicles
-    pbHiddenMoveAnimation(movefinder)
     surfbgm = pbGetMetadata(0,MetadataSurfBGM)
     pbCueBGM(surfbgm,0.5) if surfbgm
     pbStartSurfing
-    $PokemonTemp.dependentEvents.come_back(true)
+    $PokemonTemp.dependentEvents.come_back(false)
     return true
   end
   return false
@@ -372,7 +377,8 @@ alias follow_pbEndSurf pbEndSurf
 def pbEndSurf(xOffset,yOffset)
   ret = follow_pbEndSurf(xOffset,yOffset)
   if ret
-    $PokemonGlobal.callRefresh = [true,([0,false].include?($PokemonTemp.dependentEvents.refresh_sprite(false,true)))]
+    pkmn = $Trainer.arenayIndex(true)
+    $PokemonTemp.dependentEvents.come_back(false)
   end
 end
 
@@ -396,7 +402,7 @@ end
 # Update follower when any vehicle like Surf, Lava Surf etc are done
 alias follow_pbCancelVehicles pbCancelVehicles
 def pbCancelVehicles(destination=nil)
-  $PokemonTemp.dependentEvents.come_back(true) if destination.nil?
+  $PokemonTemp.dependentEvents.come_back(false) if destination.nil?
   return follow_pbCancelVehicles(destination)
 end
 

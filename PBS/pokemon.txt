@@ -28971,7 +28971,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 25
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = KANGASKHAN,Level,20
+Evolutions = KANGASKHAN,Level,24
 #-------------------------------
 [899]
 Name = Pincush

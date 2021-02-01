@@ -47,7 +47,7 @@ class Sprite_ShadowOverworld
       eventName = event.name.downcase if event != $game_player
       remove = true if event != $game_player && eventName.include?((e.downcase))
     end
-    if nil_or_empty?(event.character_name) || event.character_name == "nil" ||
+    if nil_or_empty?(event.character_name) || event.character_name == "nil" || event.character_name == "907_10" || event.character_name == "907s_10" ||
     (PBTerrain.isGrass?(pbGetTerrainTag(event)) || PBTerrain.hasReflections?(pbGetTerrainTag(event)) ||
      PBTerrain.isSurfable?(pbGetTerrainTag(event)) || PBTerrain.isIce?(pbGetTerrainTag(event))) ||
      event.transparent || remove

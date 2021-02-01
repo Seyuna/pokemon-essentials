@@ -148,7 +148,7 @@ def pbItemBall(item, quantity = 1)
   else
     scene = false
   end
-  if isConst?(item, PBItems, :LEFTOVERS)
+  if isConst?(item, PBItems, :LEFTOVERS) || pbGetPocket(item) == 6
     pbMessage(_INTL("\\me[{1}]You found some "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!\\wtnp[30]", meName, itemname))
   elsif pbIsMachine?(item) # TM or HM
     pbMessage(_INTL("\\me[{1}]You found "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2} {3}!\\wtnp[30]", meName, itemname,  PBMoves.getName(pbGetMachine(item))))
@@ -184,7 +184,7 @@ def pbReceiveItem(item, quantity = 1)
   else
     scene = false
   end
-  if isConst?(item, PBItems, :LEFTOVERS)
+  if isConst?(item, PBItems, :LEFTOVERS) || pbGetPocket(item) == 6
     pbMessage(_INTL("\\me[{1}]You obtained some "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2}!\\wtnp[30]", meName, itemname))
   elsif pbIsMachine?(item) # TM or HM
     pbMessage(_INTL("\\me[{1}]You obtained "+ ((scene && scene.smallShow)? "\\n" : "") + "\\c[1]{2} {3}!\\wtnp[30]", meName, itemname,  PBMoves.getName(pbGetMachine(item))))
