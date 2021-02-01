@@ -69,14 +69,6 @@ Events.FollowerRefresh += proc{|pkmn|
 }
 
 Events.FollowerRefresh += proc{|pkmn|
-  if $PokemonGlobal.surfing
-    next true if pkmn.hasType?(:WATER)
-    next true if pkmn.hasType?(:FLYING)
-    next false
-  end
-}
-
-Events.FollowerRefresh += proc{|pkmn|
   if $PokemonGlobal.diving
     next true if pkmn.hasType?(:WATER)
     next false

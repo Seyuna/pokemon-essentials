@@ -350,20 +350,23 @@ alias follow_surf pbSurf
 def pbSurf
   return false if $game_player.pbFacingEvent
   return false if $game_player.pbHasDependentEvents?
-  move = getID(PBMoves,:SURF)
-  movefinder = pbCheckMove(move)
-  if !pbCheckHiddenMoveBadge(BADGE_FOR_SURF,false) || (!$DEBUG && !movefinder)
+  if $PokemonTemp.dependentEvents.refresh_sprite(false,true)
+    pkmn = $Trainer.arenayIndex(true)
+    if pkmn && pkmn.hasType?(:ROCK) || pkmn.hasType?(:GROUND) || pkmn.hasType?(:FIRE) || pkmn.hasType?(:ELECTRIC)
+      pbMessage(_INTL("\\PN can't surf with {1} in its {2} form!",pkmn.name,PBTypes.getName(pkmn.type1)))
+      return false
+    end
+  end
+  if !$PokemonBag.pbHasItem?(:SURFITEM) && !$DEBUG
     return false
   end
   if pbConfirmMessage(_INTL("The water is a deep blue...\nWould you like to surf on it?"))
-    speciesname = (movefinder) ? movefinder.name : $Trainer.name
-    pbMessage(_INTL("{1} used {2}!",speciesname,PBMoves.getName(move)))
+    pbMessage(_INTL("{1} used the {2}!", $Trainer.name, PBItems.getName(getConst(PBItems,SURF_ITEM))))
     pbCancelVehicles
-    pbHiddenMoveAnimation(movefinder)
     surfbgm = pbGetMetadata(0,MetadataSurfBGM)
     pbCueBGM(surfbgm,0.5) if surfbgm
     pbStartSurfing
-    $PokemonTemp.dependentEvents.come_back(true)
+    $PokemonTemp.dependentEvents.come_back(false)
     return true
   end
   return false
@@ -374,7 +377,8 @@ alias follow_pbEndSurf pbEndSurf
 def pbEndSurf(xOffset,yOffset)
   ret = follow_pbEndSurf(xOffset,yOffset)
   if ret
-    $PokemonGlobal.callRefresh = [true,([0,false].include?($PokemonTemp.dependentEvents.refresh_sprite(false,true)))]
+    pkmn = $Trainer.arenayIndex(true)
+    $PokemonTemp.dependentEvents.come_back(false)
   end
 end
 
@@ -398,7 +402,7 @@ end
 # Update follower when any vehicle like Surf, Lava Surf etc are done
 alias follow_pbCancelVehicles pbCancelVehicles
 def pbCancelVehicles(destination=nil)
-  $PokemonTemp.dependentEvents.come_back(true) if destination.nil?
+  $PokemonTemp.dependentEvents.come_back(false) if destination.nil?
   return follow_pbCancelVehicles(destination)
 end
 
