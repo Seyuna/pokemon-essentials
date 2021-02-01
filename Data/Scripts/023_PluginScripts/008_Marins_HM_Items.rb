@@ -112,12 +112,19 @@ if USING_SURF_ITEM
   def pbSurf
     return false if $game_player.pbFacingEvent
     return false if $game_player.pbHasDependentEvents?
+    if $PokemonTemp.dependentEvents.refresh_sprite(false,true)
+      pkmn = $Trainer.arenayIndex(true)
+      if pkmn.hasType?(:ROCK) || pkmn.hasType?(:GROUND) || pkmn.hasType?(:FIRE) || pkmn.hasType?(:ELECTRIC)
+        pbMessage(_INTL("\\PN can't surf with {1} in its {2} form!",pkmn.name,PBTypes.getName(pkmn.type1)))
+      end
+      return false
+    end
     if !$PokemonBag.pbHasItem?(:SURFITEM) && !$DEBUG
       return false
     end
-    if Kernel.pbConfirmMessage(_INTL("The water is a deep blue...\nWould you like to surf on it?"))
-      Kernel.pbMessage(_INTL("{1} used the {2}!", $Trainer.name, PBItems.getName(getConst(PBItems,SURF_ITEM))))
-      Kernel.pbCancelVehicles
+    if pbConfirmMessage(_INTL("The water is a deep blue...\nWould you like to surf on it?"))
+      pbMessage(_INTL("{1} used the {2}!", $Trainer.name, PBItems.getName(getConst(PBItems,SURF_ITEM))))
+      pbCancelVehicles
       surfbgm = pbGetMetadata(0,MetadataSurfBGM)
       pbCueBGM(surfbgm,0.5) if surfbgm
       pbStartSurfing
@@ -135,7 +142,7 @@ if USING_SURF_ITEM
   ItemHandlers::UseFromBag.add(SURF_ITEM, proc do |item|
     return false if $PokemonGlobal.surfing ||
                     pbGetMetadata($game_map.map_id,MetadataBicycleAlways) ||
-                    !PBTerrain.isSurfable?(Kernel.pbFacingTerrainTag) ||
+                    !PBTerrain.isSurfable?(pbFacingTerrainTag) ||
                     !$game_map.passable?($game_player.x,$game_player.y,$game_player.direction,$game_player)
     return 2
   end)
@@ -168,7 +175,7 @@ if USING_FLY_ITEM
   ItemHandlers::UseInField.add(FLY_ITEM, proc do |item|
     $game_temp.in_menu = false
     if !pbGetMetadata($game_map.map_id,MetadataOutdoor)
-     Kernel.pbMessage(_INTL("The Gale Flute can't be used indoors!"))
+     pbMessage(_INTL("The Gale Flute can't be used indoors!"))
      return false
     end
     if !$PokemonTemp.flydata
@@ -180,11 +187,11 @@ if USING_FLY_ITEM
       if ret
         $PokemonTemp.flydata = ret
       elsif
-        Kernel.pbMessage(_INTL("No fly location was selected!"))
+        pbMessage(_INTL("No fly location was selected!"))
         return false
       end
     end
-    Kernel.pbMessage(_INTL("{1} used the {2}!", $Trainer.name,PBItems.getName(getConst(PBItems,FLY_ITEM))))
+    pbMessage(_INTL("{1} used the {2}!", $Trainer.name,PBItems.getName(getConst(PBItems,FLY_ITEM))))
     #pbMEPlay("flute")
     #pbWait(200)
     pbSEPlay("wind1")
@@ -194,7 +201,7 @@ if USING_FLY_ITEM
        $game_temp.player_new_x         = $PokemonTemp.flydata[1]
        $game_temp.player_new_y         = $PokemonTemp.flydata[2]
        $game_temp.player_new_direction = 2
-       Kernel.pbCancelVehicles
+       pbCancelVehicles
        $PokemonTemp.flydata = nil
        $scene.transfer_player
        $game_map.autoplay
@@ -226,19 +233,19 @@ if USING_ROCK_SMASH_ITEM
       $game_player.pbFacingEvent.start
       return true
     else
-      Kernel.pbMessage(_INTL("The pickaxe cannot be used here!"))
+      pbMessage(_INTL("The pickaxe cannot be used here!"))
       return false
     end
   end)
 
   def pbRockSmash
     if !$PokemonBag.pbHasItem?(:ROCKSMASHITEM)
-      Kernel.pbMessage(_INTL("It's a rugged rock, but an item may be able to smash it."))
+      pbMessage(_INTL("It's a rugged rock, but an item may be able to smash it."))
       return false
     end
     item = PBItems.getName(getConst(PBItems,ROCK_SMASH_ITEM))
-    if Kernel.pbConfirmMessage(_INTL("This rock appears to be breakable. Would you like to use the {1}?", item))
-      Kernel.pbMessage(_INTL("{1} used the {2}!",$Trainer.name, item))
+    if pbConfirmMessage(_INTL("This rock appears to be breakable. Would you like to use the {1}?", item))
+      pbMessage(_INTL("{1} used the {2}!",$Trainer.name, item))
       return true
     end
     return false
@@ -256,23 +263,23 @@ if USING_STRENGTH_ITEM
 
   def pbStrength
     if $PokemonMap.strengthUsed
-      Kernel.pbMessage(_INTL("The Strength Gloves made it possible to move boulders around."))
+      pbMessage(_INTL("The Strength Gloves made it possible to move boulders around."))
       return false
     end
     if !$PokemonBag.pbHasItem?(:STRENGTHITEM) && !$DEBUG
-      Kernel.pbMessage(_INTL("It's a big boulder, but an item may be able to push it aside."))
+      pbMessage(_INTL("It's a big boulder, but an item may be able to push it aside."))
       return false
     end
     itemname = PBItems.getName(getConst(PBItems,STRENGTH_ITEM))
     if !$game_player.pbFacingEvent || !$game_player.pbFacingEvent.name == "Boulder"
-      Kernel.pbMessage(_INTL("The strength gloves cannot be used here!"))
+      pbMessage(_INTL("The strength gloves cannot be used here!"))
       return false
     end
-    Kernel.pbMessage(_INTL("It's a big boulder, but an item may be able to push it aside.\1"))
-    if Kernel.pbConfirmMessage(_INTL("Would you like to use the {1}?", itemname))
-      Kernel.pbMessage(_INTL("{1} used the {2}!",
+    pbMessage(_INTL("It's a big boulder, but an item may be able to push it aside.\1"))
+    if pbConfirmMessage(_INTL("Would you like to use the {1}?", itemname))
+      pbMessage(_INTL("{1} used the {2}!",
           $Trainer.name, itemname))
-      Kernel.pbMessage(_INTL("The {1} made it possible to move boulders around!",itemname))
+      pbMessage(_INTL("The {1} made it possible to move boulders around!",itemname))
       $PokemonMap.strengthUsed = true
       return true
     end
@@ -300,13 +307,13 @@ if USING_CUT_ITEM
 
   def pbCut
     if !$PokemonBag.pbHasItem?(:CUTITEM) && !$DEBUG
-      Kernel.pbMessage(_INTL("This tree looks like it can be cut down."))
+      pbMessage(_INTL("This tree looks like it can be cut down."))
       return false
     end
-    Kernel.pbMessage(_INTL("This tree looks like it can be cut down!\1"))
-    if Kernel.pbConfirmMessage(_INTL("Would you like to cut it?"))
+    pbMessage(_INTL("This tree looks like it can be cut down!\1"))
+    if pbConfirmMessage(_INTL("Would you like to cut it?"))
       itemname = PBItems.getName(getConst(PBItems,CUT_ITEM))
-      Kernel.pbMessage(_INTL("{1} used the {2}!",$Trainer.name,itemname))
+      pbMessage(_INTL("{1} used the {2}!",$Trainer.name,itemname))
       pbSmashEvent($game_player.pbFacingEvent)
       return true
     end
@@ -322,7 +329,7 @@ if USING_CUT_ITEM
 
   ItemHandlers::UseInField.add(CUT_ITEM, proc do
     if !$game_player.pbFacingEvent || !$game_player.pbFacingEvent.name == "Tree"
-      Kernel.pbMessage(_INTL("The machete cannot be used here!"))
+      pbMessage(_INTL("The machete cannot be used here!"))
       return false
     end
     $game_player.pbFacingEvent.start
@@ -340,13 +347,13 @@ if USING_FLASH_ITEM
   def pbFlash
     darkness = $PokemonTemp.darknessSprite
     if !darkness || darkness.disposed?
-      Kernel.pbMessage(_INTL("The flashlight cannot be used here!"))
+      pbMessage(_INTL("The flashlight cannot be used here!"))
       return false
     end
     if $PokemonGlobal.flashUsed
-      Kernel.pbMessage(_INTL("The flashlight is already on!"))
+      pbMessage(_INTL("The flashlight is already on!"))
     else
-      Kernel.pbMessage(_INTL("You used the flashlight!"))
+      pbMessage(_INTL("You used the flashlight!"))
     end
     $PokemonGlobal.flashUsed = true
     while darkness.radius<176
@@ -360,10 +367,10 @@ if USING_FLASH_ITEM
 
   ItemHandlers::UseFromBag.add(FLASH_ITEM, proc do
     if !pbGetMetadata($game_map.map_id,MetadataDarkMap)
-      Kernel.pbMessage(_INTL("This map is already perfectly lit!"))
+      pbMessage(_INTL("This map is already perfectly lit!"))
       return false
     elsif $PokemonGlobal.flashUsed
-       Kernel.pbMessage(_INTL("The flashlight is already on!"))
+       pbMessage(_INTL("The flashlight is already on!"))
        return false
      else
        return 2
