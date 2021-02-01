@@ -112,6 +112,7 @@ def pbNewGamePlusGoodies
     sentName = $Trainer.oldGameData[:oldParty][5].name
   end
   $PokemonBag.pbStoreItem(:BIGNUGGET,1)
+  $PokemonBag.pbStoreItem(:TOGEPIPLUSH,1)
   pbBGMFade(1.0)
   viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
   viewport.z = 99999
@@ -513,7 +514,7 @@ class PokeBattle_Trainer
   def allowNewGamePlus
     @newGamePlus = true
     pbMessage("\\wm\\w[""]<ac>You have now unlocked the ability to play the New Game + mode.</ac>")
-    pbMessage("\\wm\\w[""]<ac>To accesss the new mode, select the \"New Game +\" option on the Load Screen.</ac>")
+    pbMessage("\\wm\\w[""]<ac>To access the new mode, select the \"New Game +\" option on the Load Screen.</ac>")
     if $Trainer.newGamePlusCount == 0 || pbConfirmMessage("\\wm\\w[""]<ac>Would you like to know what a New Game + is?</ac>")
       pbMessage("\\wm\\w[""]<ac>New Game + allows you to replay Pokémon Splice, but in a brand new way.</ac>")
       pbMessage("\\wm\\w[""]<ac>Everything such as items, money, etc. will be cleared, just as if you were starting a New Game.</ac>")

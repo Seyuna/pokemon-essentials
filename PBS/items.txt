@@ -704,3 +704,4 @@
 688,ABILITYPATCH,Ability Patch,Ability Patches,2,12000,"A special patch that unlocks the Hidden Abilities of Pokémon.",1,0,0,
 689,DEPUTYBADGE,Deputy Badge,Deputy Badges,8,0,"A deputy badge, for those who have proven themselves to be courageous.",2,0,6,
 690,GALARICAWREATH,Galarica Wreath,Galarica Wreathes,1,2000,"A wreath made from woven-together Galarica Twigs. Placing it on a Galarian Slowpoke makes it very happy.",1,0,7,
+691,TOGEPIPLUSH,Togepi Plush,Togepi Plush,8,0,"A special Togepi Plush, that evokes memories of times past.",2,0,6,
