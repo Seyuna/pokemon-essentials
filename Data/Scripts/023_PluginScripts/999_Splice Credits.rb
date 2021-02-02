@@ -86,8 +86,8 @@ PluginManager.register({
 })
 
 PluginManager.register({
-  :name => "Sprite Credits",
-  :credits => ["PoffinCase","Kalarie"]
+  :name => "Overworld Sprite Credits",
+  :credits => ["PoffinCase","Kalarie","Avatar","Aveontrainer","Daman","MrDollSteak","Pokeshor","Spherical Ice","Mimi","M.vit","Delta231"]
 })
 
 PluginManager.register({

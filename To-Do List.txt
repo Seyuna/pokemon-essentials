@@ -1,12 +1,7 @@
 WIP - Fix all bugs with NG+ and test it more thoroughly
-WIP- Remove level scaling, Since we're already forcing a save data reset
+WIP- Test the new Levels more thoroughly
 WIP - Teach some of our new Pokemon the new moves
 
-Add person in house in Iron Pass
-Add Cypress Battle Intro
-Add Crobat to Fanart Credits
-Edit Brigid/Damian dialogue to acknowledge Arenay in the room
-Edit  Driftwood Lab Battle Scene to have events acknowledge and interact with (ie steal) Arenay
+Edit Driftwood Lab Battle Scene to have events acknowledge and interact with (ie steal) Arenay
 Make Credits images load automatically through script
-Give trainers some of our new pokemon forms (Seviper as the Polleknight slayer)
-Update backsprite of Staconan Zubat Line, Solosis Line, Foongus Line and Troppy Line
+Update backsprite of Staconan Zubat Line and Troppy Line
