@@ -54,7 +54,7 @@ class PokeBattle_Pokemon
   IV_STAT_LIMIT         = 31    # Max total IVs
   EV_LIMIT              = 510   # Max total EVs
   EV_STAT_LIMIT         = 252   # Max EVs that a single stat can have
-  MAX_POKEMON_NAME_SIZE = 10    # Maximum length a Pokémon's nickname can be
+  MAX_POKEMON_NAME_SIZE = 12    # Maximum length a Pokémon's nickname can be
 
   #=============================================================================
   # Ownership, obtained information
