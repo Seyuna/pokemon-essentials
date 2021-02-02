@@ -378,7 +378,7 @@ def pbEndSurf(xOffset,yOffset)
   ret = follow_pbEndSurf(xOffset,yOffset)
   if ret
     pkmn = $Trainer.arenayIndex(true)
-    $PokemonTemp.dependentEvents.come_back(false)
+    $PokemonGlobal.callRefresh = [true,false]
   end
 end
 
