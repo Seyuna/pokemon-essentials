@@ -50,26 +50,29 @@ DONE - intro for Witch Helga battle
 DONE - Remove level scaling!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Since we're already forcing a save data reset
 DONE - Also update trainer teams to use more of our new types and less non-stacona regionals
 DONE - Give trainers some of our new pokemon forms (Seviper as the Polleknight slayer)
+DONE - Add mid-battle dialogue for Zack to poison/paralyze at start
+DONE - Maybe mid-battle dialogue for Zack first fight
+DONE - Mid-battle dialogue for Brigid/Damian
+DONE -  Paralyze and Poison is not taking form into account. It paralyzes electric arenay!
+
+
 
 Cam
 Update regional dex to include new forms and subtract old unused
 Update map level areas
 Update cave maps to use Magnet Cave tiles, so they're not so dang red
 Add a ralts OW somewhere
-DONE - Add mid-battle dialogue for Zack to poison/paralyze at start
-Maybe mid-battle dialogue for Zack first fight
-Mid-battle dialogue for Brigid/Damian
-Mid-battle dialogue, make the enemy trainer appear in front
-Paralyze and Poison is not taking form into account. It paralyzes electric arenay!
 PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
 Broskiddo PR
-WIP - Make pokemon that are 10 levels higher than the enemy earn way less exp.
-TEST - Fix egg giving event to also bypass team size restriction
+DONE - Make pokemon that are 10 levels higher than the enemy earn way less exp.
+DONE - Fix egg giving event to also bypass team size restriction
 WIP - NG+, and keep testing it
 WIP - TM issues fix
-Surf slide forward glitch, when dismounting the surfboard
+WIP - TM compatability
+DONE - Surf slide forward glitch, when dismounting the surfboard
+DONE - Mid-battle dialogue, make the enemy trainer appear in front
 
 
 Onix/Steelix backsprites and icons
@@ -91,7 +94,6 @@ Some Tileset updates
 Bio and Mech forms for the Kanto Starters, sidequests for each team to get them (thats 18 new mons)
 Bio and Mech forms for alternative bio/mech mons. Ex: Mech Solosis, and Bio Klink. Form changing science quest
 More new moves, those are pretty cool. Add some weaker ones for new forms
-TM compatability
 Blighted Bog sidequest
 Talk to Admins to join the teams
 Add Pokemon leaf piles that jump out and trigger a wild battle

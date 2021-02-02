@@ -1169,12 +1169,24 @@ class PokeBattle_Scene
     end
   end
 
-  def pbHideOpponent(idxTrainer=1,filename=nil)
+  def pbShowOpponent(idxTrainer,priority=false)
     # Set up trainer appearing animation
-    disappearAnim = TrainerDisappearAnimation.new(@sprites,@viewport,idxTrainer,filename)
+    idxTrainer = 1 idxTrainer == 0
+    @sprites["trainer_#{idxTrainer}"].z = 200 if priority
+    appearAnim = TrainerAppearAnimation.new(@sprites,@viewport,idxTrainer)
+    @animations.push(appearAnim)
+    # Play the animation
+    while inPartyAnimation?; pbUpdate; end
+  end
+
+  def pbHideOpponent(idxTrainer=1)
+    # Set up trainer disappearing animation
+    idxTrainer = 1 idxTrainer == 0
+    disappearAnim = TrainerDisappearAnimation.new(@sprites,@viewport,idxTrainer)
     @animations.push(disappearAnim)
     # Play the animation
     while inPartyAnimation?; pbUpdate; end
+    @sprites["trainer_#{idxTrainer}"].z = 7 + idxTrainer
   end
 
   def disappearDatabox
@@ -1225,7 +1237,7 @@ class PokeBattle_Scene
 end
 
 class TrainerDisappearAnimation < PokeBattle_Animation
-  def initialize(sprites,viewport,idxTrainer,filename)
+  def initialize(sprites,viewport,idxTrainer)
     @idxTrainer = idxTrainer
     super(sprites,viewport)
   end

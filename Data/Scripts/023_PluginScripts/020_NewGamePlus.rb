@@ -582,6 +582,13 @@ class PokeBattle_Battle
     else
       exp /= 7
     end
+    # Splice EXP Scaling
+    levelDiff = pkmn.level - level
+    if levelDiff > 4
+      divFactor = levelDiff/5
+      exp = exp/(2**divFactor)
+      exp = 2 if exp < 2
+    end
     # Foreign Pokémon gain more Exp
     isOutsider = (pkmn.trainerID!=pbPlayer.id ||
                  (pkmn.language!=0 && pkmn.language!=pbPlayer.language))
@@ -605,10 +612,14 @@ class PokeBattle_Battle
     return if expGained<=0
     # "Exp gained" message
     if showMessages
-      if isOutsider
-        pbDisplayPaused(_INTL("{1} got a boosted {2} Exp. Points!",pkmn.name,expGained))
+      if levelDiff > 4
+        pbDisplayPaused(_INTL("{1} got a reduced {2} Exp. Points!",pkmn.name,expGained))
       else
-        pbDisplayPaused(_INTL("{1} got {2} Exp. Points!",pkmn.name,expGained))
+        if isOutsider
+          pbDisplayPaused(_INTL("{1} got a boosted {2} Exp. Points!",pkmn.name,expGained))
+        else
+          pbDisplayPaused(_INTL("{1} got {2} Exp. Points!",pkmn.name,expGained))
+        end
       end
     end
     curLevel = pkmn.level
