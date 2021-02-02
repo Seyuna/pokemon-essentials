@@ -51,28 +51,26 @@ DONE - Remove level scaling!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Si
 DONE - Also update trainer teams to use more of our new types and less non-stacona regionals
 DONE - Give trainers some of our new pokemon forms (Seviper as the Polleknight slayer)
 DONE - Add mid-battle dialogue for Zack to poison/paralyze at start
-DONE - Maybe mid-battle dialogue for Zack first fight
+DONE - Mid-battle dialogue for Zack first fight
 DONE - Mid-battle dialogue for Brigid/Damian
-DONE -  Paralyze and Poison is not taking form into account. It paralyzes electric arenay!
-
+DONE - Paralyze and Poison is not taking form into account. It paralyzes electric arenay!
+DONE - Removed map level areas
+DONE - Make pokemon that are 10 levels higher than the enemy earn way less exp.
+DONE - Fix egg giving event to also bypass team size restriction
+DONE - Surf slide forward glitch, when dismounting the surfboard
+DONE - new trainer OWs
+DONE - Update regional dex to include new forms and subtract old unused
 
 
 Cam
-Update regional dex to include new forms and subtract old unused
-Update map level areas
 Update cave maps to use Magnet Cave tiles, so they're not so dang red
-Add a ralts OW somewhere
+Audit trainer OWs to match trainertypes
 PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
-
 Broskiddo PR
-DONE - Make pokemon that are 10 levels higher than the enemy earn way less exp.
-DONE - Fix egg giving event to also bypass team size restriction
 WIP - NG+, and keep testing it
 WIP - TM issues fix
-WIP - TM compatability
-DONE - Surf slide forward glitch, when dismounting the surfboard
-DONE - Mid-battle dialogue, make the enemy trainer appear in front
+WIP - Mid-battle dialogue, make the enemy trainer appear in front
 
 
 Onix/Steelix backsprites and icons

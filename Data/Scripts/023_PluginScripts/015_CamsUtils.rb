@@ -3,7 +3,7 @@
 #=============================
 def poisonAllPokemon(event=nil)
     for pkmn in $Trainer.ablePokemonParty
-       next if pkmn.pbHasType?(:POISON)  || pkmn.pbHasType?(:STEEL) ||
+       next if pkmn.hasType?(:POISON)  || pkmn.hasType?(:STEEL) ||
           pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
           pkmn.status!=0
        pkmn.status = 2
@@ -12,7 +12,7 @@ end
 
 def paralyzeAllPokemon(event=nil)
     for pkmn in $Trainer.ablePokemonParty
-       next if pkmn.pbHasType?(:ELECTRIC) ||
+       next if pkmn.hasType?(:ELECTRIC) ||
           pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
           pkmn.status!=0
        pkmn.status = 4

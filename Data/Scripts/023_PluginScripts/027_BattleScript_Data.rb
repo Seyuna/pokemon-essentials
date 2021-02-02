@@ -397,29 +397,53 @@ module DialogueModule
 # New Splice Battle Dialogues
 #===================================================================================
     ZackPoison = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0)
+             battle.scene.pbShowOpponent(0,true)
              pbMessage("\\bCheck this out \\PN! Damian gave me a special new tool!")
              pbMessage("\\bGet poisoned!")
-             battle.battlers[0].pbInflictStatus(PBStatuses::POISON,0,"Your Pokémon were poisoned!")
+             if battle.battlers[0].pbCanInflictStatus?(PBStatuses::POISON,battle.battlers[1],false)
+                battle.battlers[0].pbInflictStatus(PBStatuses::POISON,0,"Your Pokémon were poisoned!")
+             else
+                battle.pbCommonAnimation("Poison",battle.battlers[1],battle.battlers[0])
+                pbMessage("Your party has been poisoned!")
+             end
              poisonAllPokemon(nil)
              pbMessage("\\bHaha, yes! It worked!")
              pbMessage("\\bYou'll never be able to beat me when your whole team is poisoned!")
              battle.scene.pbHideOpponent
           }
     ZackParalyze = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0)
+             battle.scene.pbShowOpponent(0,true)
              pbMessage("\\bCheck this out \\PN! Brigid gave me a special new tool!")
              pbMessage("\\bGet zapped!")
-             battle.battlers[0].pbInflictStatus(PBStatuses::PARALYSIS,0,"Your Pokémon were paralyzed!")
+             if battle.battlers[0].pbCanInflictStatus?(PBStatuses::PARALYSIS,battle.battlers[1],false)
+               battle.battlers[0].pbInflictStatus(PBStatuses::PARALYSIS,0,"Your Pokémon were paralyzed!")
+             else
+               battle.pbCommonAnimation("Paralysis",battle.battlers[1],battle.battlers[0])
+               pbMessage("Your party has been paralyzed!")
+             end
              paralyzeAllPokemon(nil)
              pbMessage("\\bHaha, yes! It worked!")
              pbMessage("\\bYou'll never be able to beat me when your whole team is paralyzed!")
              battle.scene.pbHideOpponent
           }
     ZackStart = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0)
+             battle.scene.pbShowOpponent(0,true)
              pbMessage("\\bThere's no way you can beat my Yanmite with that puny Arenay!")
              pbMessage("\\bYou're going down!")
+             battle.scene.pbHideOpponent
+          }
+    BrigidIntro = Proc.new{|battle|
+             battle.scene.pbShowOpponent(0,true)
+             pbMessage("\\rLooks like I'll have to be the one to beat you...")
+             pbMessage("\\rIt's time you learned your place!")
+             pbMessage("\\rYou cannot stop the machinations of Quantech!")
+             battle.scene.pbHideOpponent
+          }
+    DamianIntro = Proc.new{|battle|
+             battle.scene.pbShowOpponent(0,true)
+             pbMessage("\\bLooks like I'll have to be the one to beat you...")
+             pbMessage("\\bIt's time you learned your place!")
+             pbMessage("\\bYou cannot stop the grand plans of Biogress!")
              battle.scene.pbHideOpponent
           }
 

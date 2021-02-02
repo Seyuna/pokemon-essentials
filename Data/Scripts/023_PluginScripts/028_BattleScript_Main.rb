@@ -1171,7 +1171,7 @@ class PokeBattle_Scene
 
   def pbShowOpponent(idxTrainer,priority=false)
     # Set up trainer appearing animation
-    idxTrainer = 1 idxTrainer == 0
+    idxTrainer = 1 if idxTrainer == 0
     @sprites["trainer_#{idxTrainer}"].z = 200 if priority
     appearAnim = TrainerAppearAnimation.new(@sprites,@viewport,idxTrainer)
     @animations.push(appearAnim)
@@ -1181,7 +1181,7 @@ class PokeBattle_Scene
 
   def pbHideOpponent(idxTrainer=1)
     # Set up trainer disappearing animation
-    idxTrainer = 1 idxTrainer == 0
+    idxTrainer = 1 if idxTrainer == 0
     disappearAnim = TrainerDisappearAnimation.new(@sprites,@viewport,idxTrainer)
     @animations.push(disappearAnim)
     # Play the animation
