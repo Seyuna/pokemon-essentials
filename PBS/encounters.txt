@@ -488,7 +488,7 @@ Land
     SANDILE,19,24
     DEWPIDER,19,24
     SWABLU,19,24
-	SENTRET,19,24
+	FURRET,19,24
 Water
     SANDILE,19,24
     KRABBY,19,24
@@ -575,7 +575,7 @@ Land
     KANGA,5,10
     TROPPY,5,10
     BUDEW,5,10
-    MURKROW,5,10
+    ZANGOOSE,5,10
     SENTRET,5,10
 #-------------------------------
 093 # Lush Road
@@ -762,7 +762,7 @@ Cave
     SWINUB,20,26
     SNEASEL,20,26
     NUMEL,20,26
-    CRYOGONAL,20,26
+    SNEASEL,20,26
 #-------------------------------
 111 # Ferrous Cave
 20,8,8
@@ -897,12 +897,12 @@ Land
 151 # Haunted Hollow
 25,10,10
 Land
-    SUNKERN,5
-    HOPPIP,5
-    SPINARAK,5
-    ESPURR,5
-    PUMPKABOO,5
-    SINISTEA,5
+    SUNKERN,29,34
+    JUMPLUFF,29,34
+    ARIADOS,29,34
+    MEOWSTIC,29,34
+    SHUPPET,29,34
+    SINISTEA,29,34
 #-------------------------------
 152 # Haunted Cavern
 25,5,10

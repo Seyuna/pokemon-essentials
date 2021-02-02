@@ -1626,3 +1626,15 @@ MultipleForms.register(:NUMEL,{
 }
 })
 MultipleForms.copy(:NUMEL,:CAMERUPT)
+
+MultipleForms.register(:ONIX,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:ONIX,:STEELIX)

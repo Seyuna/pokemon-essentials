@@ -1,9 +1,9 @@
 # Backgrounds to show in credits. Found in Graphics/Titles/ folder
 CreditsBackgroundList = ["credits12","credits6","credits9",
   "credits8","credits26","credits14","credits27","credits23",
-  "credits28","credits25","credits20","credits13","credits7",
-  "credits15","credits17","credits18","credits16","credits19",
-  "credits10","credits21","credits11","credits22","credits24"]
+  "credits28","credits25","credits20","credits29","credits13",
+  "credits7","credits15","credits17","credits18","credits16",
+  "credits19","credits10","credits21","credits11","credits22","credits24"]
 CreditsMusic          = "Credits"
 CreditsScrollSpeed    = 2
 CreditsFrequency      = 3   # Number of seconds per credits slide

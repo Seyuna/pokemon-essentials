@@ -112,6 +112,7 @@ def pbNewGamePlusGoodies
     sentName = $Trainer.oldGameData[:oldParty][5].name
   end
   $PokemonBag.pbStoreItem(:BIGNUGGET,1)
+  $PokemonBag.pbStoreItem(:TOGEPIPLUSH,1)
   pbBGMFade(1.0)
   viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
   viewport.z = 99999
