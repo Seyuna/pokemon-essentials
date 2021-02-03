@@ -1171,11 +1171,12 @@ class PokeBattle_Scene
 
   def pbShowOpponent(idxTrainer,priority=false)
     # Set up trainer appearing animation
-    @sprites["trainer_#{idxTrainer+1}"].z = 200 if @sprites["trainer_#{idxTrainer+1}"] && priority
+    @sprites["trainer_#{idxTrainer+1}"].z = 200 if priority && @sprites["trainer_#{idxTrainer+1}"]
     appearAnim = TrainerAppearAnimation.new(@sprites,@viewport,idxTrainer)
     @animations.push(appearAnim)
     # Play the animation
     while inPartyAnimation?; pbUpdate; end
+    @sprites["trainer_#{idxTrainer+1}"].z = 7 + idxTrainer if @sprites["trainer_#{idxTrainer+1}"]
   end
 
   def pbHideOpponent(idxTrainer=1)
