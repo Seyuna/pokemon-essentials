@@ -61,31 +61,32 @@ DONE - Surf slide forward glitch, when dismounting the surfboard
 DONE - new trainer OWs
 DONE - Update regional dex to include new forms and subtract old unused
 DONE - Mid-battle dialogue, make the enemy trainer appear in front
-
+DONE - Make fat guy in Bog have purple shirt
+DONE - Mid-Battle dialogue appear behind the enemy pokemon
+DONE - Update cave maps to use Magnet Cave tiles, so they're not so dang red
+DONE - Update interior trees to use the outside trees
+DONE - Different forms for trainers on starting routes (iron Pass and Pollen Path)
+DONE - Updated Floof's moveset
+DONE - Add another mid-battle dialogue for when Zack sends out his Eevee, Chromeon, and Aeveon
+DONE - Audit all NPC sprites and trainertypes. Change some trainers to match their sprite for the variety of it though! Ex: Painter in Folian Grove
+DONE - Iron pass Onix giver NPC OW sprite update and dialogue
+DONE - Add dialogue for Arenay being stolen from the PC after blacking out, if Arenay isn't in our team
+DONE - Remove mandatory Arenay from start of Driftwood lab
+DONE - ADD GolisopodUser to the Dev Room!
 
 Cam
-Update cave maps to use Magnet Cave tiles, so they're not so dang red
-- Different forms for trainers on starting routes (iron Pass and Pollen Path)
-		Based on team strength, use form 0 or form 1. Maybe if team avg level is less than 15 use form 0, otherwise use form 1.
-		Also do this for Folian Grove and Lappy Lake trainer
-- Add another mid-battle dialogue for when Zack sends out his Eevee, Chromeon, and Aeveon
-		Alright, time to get serious! Go Eevee!
-		Alright, looks like it's time to show you the fruits of my research!
-		Go Chromeon/Aeveon!
-- Make fat guy in Bog have purple shirt
-- Audit all NPC sprites and trainertypes. Change some trainers to match their sprite for the variety of it though! Ex: Painter in Folian Grove
-- Iron pass Onix giver NPC OW sprite update and dialogue
-- ADD GolisopodUser to the Dev Room!
-- Mid-Battle dialogue for the Devs in the dev room?
+Make player always refer to Arenay by it's name
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
+
+Offstream Pog
+- Mid-Battle dialogue for the Devs in the dev room?
 Dev room redesign?????
+RENAME THE GAME RXPROJ
+
 
 Broskiddo PR
 WIP - NG+, and keep testing it
 WIP - TM issues fix
-
-
-Still need backsprites for Shuppet and Banette, then we're donezo for art I think!
 
 
 
@@ -104,6 +105,7 @@ More new moves, those are pretty cool. Add some weaker ones for new forms
 Blighted Bog sidequest
 Talk to Admins to join the teams
 Add Pokemon leaf piles that jump out and trigger a wild battle
+Add some more cool new game + events, maybe even some buildings or maps you can only access in NG+ mode Pog ($Trainer.newGamePlusCount)
 
 
 STRETCH GOALS ==================================================================

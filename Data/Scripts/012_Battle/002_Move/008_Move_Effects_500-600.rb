@@ -664,7 +664,7 @@ class PokeBattle_Move_52E < PokeBattle_Move_0C2
   def pbBaseDamage(baseDmg,user,target)
     if target.effects[PBEffects::Attract]>=0 &&
        (target.effects[PBEffects::Substitute]==0 || ignoresSubstitute?(user))
-      baseDmg *= 1.5
+      baseDmg *= 2.0
     end
     return baseDmg
   end

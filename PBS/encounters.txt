@@ -887,12 +887,12 @@ Land
 150 # Folian Grove
 20,8,8
 Land
-    SKWOVET,10,15
-    APPLIN,10,15
-    SLOWPOKE,10,15
-    SKIDDO,10,15
-    ROWLET,10,15
-    GROOKEY,10,15
+    SKWOVET,4,8
+    APPLIN,4,8
+    SLOWPOKE,4,8
+    SKIDDO,4,8
+    ROWLET,4,8
+    GROOKEY,4,8
 #-------------------------------
 151 # Haunted Hollow
 25,10,10
