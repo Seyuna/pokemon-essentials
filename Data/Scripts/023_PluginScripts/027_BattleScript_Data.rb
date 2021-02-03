@@ -398,42 +398,53 @@ module DialogueModule
 #===================================================================================
     ZackPoison = Proc.new{|battle|
              battle.scene.pbShowOpponent(0,true)
+             battle.scene.disappearDatabox
              pbMessage("\\bCheck this out \\PN! Damian gave me a special new tool!")
              pbMessage("\\bGet poisoned!")
+            battle.scene.appearDatabox
              if battle.battlers[0].pbCanInflictStatus?(PBStatuses::POISON,battle.battlers[1],false)
                 battle.battlers[0].pbInflictStatus(PBStatuses::POISON,0,"Your Pokémon were poisoned!")
              else
                 battle.pbCommonAnimation("Poison",battle.battlers[1],battle.battlers[0])
                 pbMessage("Your party has been poisoned!")
              end
+            battle.scene.disappearDatabox
              poisonAllPokemon(nil)
              pbMessage("\\bHaha, yes! It worked!")
              pbMessage("\\bYou'll never be able to beat me when your whole team is poisoned!")
              battle.scene.pbHideOpponent
+             battle.scene.appearDatabox
           }
     ZackParalyze = Proc.new{|battle|
              battle.scene.pbShowOpponent(0,true)
+             battle.scene.disappearDatabox
              pbMessage("\\bCheck this out \\PN! Brigid gave me a special new tool!")
              pbMessage("\\bGet zapped!")
+            battle.scene.appearDatabox
              if battle.battlers[0].pbCanInflictStatus?(PBStatuses::PARALYSIS,battle.battlers[1],false)
                battle.battlers[0].pbInflictStatus(PBStatuses::PARALYSIS,0,"Your Pokémon were paralyzed!")
              else
                battle.pbCommonAnimation("Paralysis",battle.battlers[1],battle.battlers[0])
                pbMessage("Your party has been paralyzed!")
              end
+             battle.scene.disappearDatabox
              paralyzeAllPokemon(nil)
              pbMessage("\\bHaha, yes! It worked!")
              pbMessage("\\bYou'll never be able to beat me when your whole team is paralyzed!")
              battle.scene.pbHideOpponent
+             battle.scene.appearDatabox
           }
     ZackStart = Proc.new{|battle|
              battle.scene.pbShowOpponent(0,false)
+             battle.scene.disappearDatabox
              pbMessage("\\bThere's no way you can beat my Yanmite with that puny #{battle.battlers[0].pokemon.speciesName}!")
              pbMessage("\\bYou're going down!")
              battle.scene.pbHideOpponent
+             battle.scene.appearDatabox
           }
     ZackEevee = Proc.new{|battle|
              battle.scene.pbShowOpponent(0,false)
+             battle.scene.disappearDatabox
              pbMessage("\\bAlright, it looks like #{battle.battlers[0].pokemon.speciesName} has some spirit after all...")
              pbMessage("\\bBut now it's time to break that spirit! Go Eevee!")
              if $Trainer.newGamePlusCount > 0
@@ -443,9 +454,11 @@ module DialogueModule
                battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1])
              end
              battle.scene.pbHideOpponent
+             battle.scene.appearDatabox
           }
     ZackLabLast = Proc.new{|battle|
              battle.scene.pbShowOpponent(0,false)
+             battle.scene.disappearDatabox
              pbMessage("\\bGahh! How are you still winning!?")
              pbMessage("\\bYour #{battle.battlers[0].pokemon.speciesName} might be pretty strong...")
              pbMessage("\\bBut I've got a secret weapon!")
@@ -457,6 +470,7 @@ module DialogueModule
              end
              battle.pbDisplay("All of #{battle.battlers[1].pokemon.speciesName}'s stats were raised!")
              battle.scene.pbHideOpponent
+             battle.scene.appearDatabox
           }
     BrigidIntro = Proc.new{|battle|
              battle.scene.pbShowOpponent(0,true)
@@ -467,10 +481,12 @@ module DialogueModule
           }
     DamianIntro = Proc.new{|battle|
              battle.scene.pbShowOpponent(0,true)
+             battle.scene.disappearDatabox
              pbMessage("\\bLooks like I'll have to be the one to beat you...")
              pbMessage("\\bIt's time you learned your place!")
              pbMessage("\\bYou cannot stop the grand plans of Biogress!")
              battle.scene.pbHideOpponent
+             battle.scene.appearDatabox
           }
 
 # DONT DELETE THIS END
