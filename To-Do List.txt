@@ -60,23 +60,32 @@ DONE - Fix egg giving event to also bypass team size restriction
 DONE - Surf slide forward glitch, when dismounting the surfboard
 DONE - new trainer OWs
 DONE - Update regional dex to include new forms and subtract old unused
+DONE - Mid-battle dialogue, make the enemy trainer appear in front
 
 
 Cam
 Update cave maps to use Magnet Cave tiles, so they're not so dang red
-Audit trainer OWs to match trainertypes
-PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
+- Different forms for trainers on starting routes (iron Pass and Pollen Path)
+		Based on team strength, use form 0 or form 1. Maybe if team avg level is less than 15 use form 0, otherwise use form 1.
+		Also do this for Folian Grove and Lappy Lake trainer
+- Add another mid-battle dialogue for when Zack sends out his Eevee, Chromeon, and Aeveon
+		Alright, time to get serious! Go Eevee!
+		Alright, looks like it's time to show you the fruits of my research!
+		Go Chromeon/Aeveon!
+- Make fat guy in Bog have purple shirt
+- Audit all NPC sprites and trainertypes. Change some trainers to match their sprite for the variety of it though! Ex: Painter in Folian Grove
+- Iron pass Onix giver NPC OW sprite update and dialogue
+- ADD GolisopodUser to the Dev Room!
+- Mid-Battle dialogue for the Devs in the dev room?
+- PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
+Dev room redesign?????
 
 Broskiddo PR
 WIP - NG+, and keep testing it
 WIP - TM issues fix
-WIP - Mid-battle dialogue, make the enemy trainer appear in front
 
 
-Onix/Steelix backsprites and icons
-Foongus needs new backsprite
-Solosis, Duosion, Reuniclus new backsprites
-Golbat backsprite is slightly running off side image, clipped on left
+Still need backsprites for Shuppet and Banette, then we're donezo for art I think!
 
 
 
