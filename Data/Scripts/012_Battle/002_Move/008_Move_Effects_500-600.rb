@@ -669,3 +669,15 @@ class PokeBattle_Move_52E < PokeBattle_Move_0C2
     return baseDmg
   end
 end
+
+#===============================================================================
+# Heals 25% HP and 1.5x damage for the next move used, if the move gets STAB.
+# (Reconfigure)
+#===============================================================================
+class PokeBattle_Move_52F < PokeBattle_Move
+  def pbEffectGeneral(user)
+    @battle.pbDisplay(_INTL("{1} reconfigured its genome!",user.pbThis))
+    user.effects[PBEffects::Reconfigure] = 2
+    @battle.pbDisplay(_INTL("{1} restored some health!",user.pbThis)) if user.pbRecoverHP((user.totalhp/4.0).round) > 0
+  end
+end

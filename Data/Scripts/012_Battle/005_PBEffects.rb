@@ -120,6 +120,7 @@ begin
     QuickParry          = 114
     JawLock             = 115
     JawLockUser         = 116
+    Reconfigure         = 117
 
     #===========================================================================
     # These effects apply to a battler position
