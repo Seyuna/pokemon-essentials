@@ -1638,3 +1638,15 @@ MultipleForms.register(:ONIX,{
 }
 })
 MultipleForms.copy(:ONIX,:STEELIX)
+
+MultipleForms.register(:SHUPPET,{
+"getFormOnCreation"=>proc{|pokemon|
+   maps=[1]
+   if $game_map && maps.include?($game_map.map_id)
+     next 0
+   else
+     next 1
+   end
+}
+})
+MultipleForms.copy(:SHUPPET,:BANETTE)

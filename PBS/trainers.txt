@@ -373,15 +373,32 @@ Pokemon = BUDEW,5
 Pokemon = BABEE,6
     Item = HONEY
 #-------------------------------
+[AROMALADY,Lily,1]
+Pokemon = ROSELIA,20
+    Form = 1
+Pokemon = POLLEKNIGHT,21
+    Item = HONEY
+#-------------------------------
 [CAMPER,Travis]
 Pokemon = ADORABULL,6
 Pokemon = DUNSPARCE,7
+    Form = 1
+#-------------------------------
+[CAMPER,Travis,1]
+Pokemon = TAUROS,21
+Pokemon = DUNSPARCE,22
     Form = 1
 #-------------------------------
 [SUPERNERD,Timothy]
 Pokemon = KLINK,5
     Form = 1
 Pokemon = KRABBY,6
+    Form = 1
+#-------------------------------
+[SUPERNERD,Timothy,1]
+Pokemon = KLINK,21
+    Form = 1
+Pokemon = KRABBY,22
     Form = 1
 #-------------------------------
 [MECHGRUNT_M,Frank]
@@ -410,12 +427,26 @@ Pokemon = AZURILL,6
 Pokemon = TYROGUE,7
     Form = 1
 #-------------------------------
+[CRUSHGIRL,Margot,1]
+Pokemon = AZUMARILL,22
+    Form = 1
+Pokemon = HITMONTOP,23
+    Form = 1
+#-------------------------------
 [SCIENTIST,Dennis]
 Pokemon = MAGNEMITE,7
     Form = 0
 Pokemon = KLINK,7
     Form = 1
 Pokemon = ELEKID,8
+    Form = 1
+#-------------------------------
+[SCIENTIST,Dennis,1]
+Pokemon = MAGNEMITE,21
+    Form = 0
+Pokemon = KLINK,22
+    Form = 1
+Pokemon = ELEKID,23
     Form = 1
 #-------------------------------
 [SUPERNERD,Nolan]
@@ -529,7 +560,7 @@ Pokemon = AZURILL,13
 Pokemon = KLINK,13
     Form = 1
 #-------------------------------
-[LASS,Cass]
+[PAINTER,Cass]
 Pokemon = ZUBAT,13
     Form = 1
 Pokemon = DUNSPARCE,14
@@ -573,6 +604,8 @@ Pokemon = BUDEW,9
 Pokemon = SWABLU,9
     Form = 1
 Pokemon = SUNKERN,10
+    Form = 1
+Pokemon = SHUPPET,11
     Form = 1
 #-------------------------------
 [PSYCHIC_M,Charlie]
@@ -747,9 +780,15 @@ Pokemon = ZUBAT,23
     Form = 1
 #-------------------------------
 [AROMALADY,Louise]
-Pokemon = BUDEW,10
+Pokemon = BUDEW,6
     Form = 1
-Pokemon = FOONGUS,11
+Pokemon = FOONGUS,7
+    Form = 1
+#-------------------------------
+[AROMALADY,Louise,1]
+Pokemon = ROSELIA,21
+    Form = 1
+Pokemon = FOONGUS,22
     Form = 1
 #-------------------------------
 [MECHGRUNT_F,Jean]
@@ -805,7 +844,7 @@ Pokemon = SANDILE,24
     Form = 1
 Pokemon = ARAQUANID,24
 #-------------------------------
-[CAMPER,Dio]
+[POKEMONRANGER_M,Dio]
 Pokemon = GIBLE,32
 Pokemon = KLANG,33
     Form = 1
@@ -827,7 +866,7 @@ Pokemon = HARIYAMA,24
 Pokemon = ELECTABUZZ,25
     Form = 1
 #-------------------------------
-[LASS,Lucy]
+[PAINTER,Lucy]
 Pokemon = WIMPOD,24
 Pokemon = FLAAFFY,25
     Form = 1
@@ -1337,17 +1376,31 @@ Pokemon = ARAQUANID,25
 Pokemon = UMBREON,25
 #-------------------------------
 [BUGCATCHER,Zach]
-Pokemon = APPLIN,9
-Pokemon = SLOWPOKE,9
+Pokemon = APPLIN,7
+Pokemon = SLOWPOKE,8
     Form = 1
-Pokemon = GROOKEY,10
+Pokemon = GROOKEY,8
 #-------------------------------
-[LASS,Debra]
-Pokemon = SKWOVET,9
+[BUGCATCHER,Zach,1]
+Pokemon = FLAPPLE,21
+Pokemon = SLOWKING,22
+    Form = 1
+Pokemon = THWACKEY,23
+#-------------------------------
+[PAINTER,Debra]
+Pokemon = SKWOVET,7
     Item = SITRUSBERRY
-Pokemon = ROWLET,10
+Pokemon = ROWLET,7
     Item = SITRUSBERRY
-Pokemon = TOXEL,10
+Pokemon = TOXEL,8
+    Item = SITRUSBERRY
+#-------------------------------
+[PAINTER,Debra,1]
+Pokemon = GREEDENT,24
+    Item = SITRUSBERRY
+Pokemon = ROWLET,21
+    Item = SITRUSBERRY
+Pokemon = TOXEL,22
     Item = SITRUSBERRY
 #-------------------------------
 [OFFICER,Jack]

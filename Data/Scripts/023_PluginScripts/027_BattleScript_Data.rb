@@ -427,9 +427,35 @@ module DialogueModule
              battle.scene.pbHideOpponent
           }
     ZackStart = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0,true)
-             pbMessage("\\bThere's no way you can beat my Yanmite with that puny Arenay!")
+             battle.scene.pbShowOpponent(0,false)
+             pbMessage("\\bThere's no way you can beat my Yanmite with that puny #{battle.battlers[0].pokemon.speciesName}!")
              pbMessage("\\bYou're going down!")
+             battle.scene.pbHideOpponent
+          }
+    ZackEevee = Proc.new{|battle|
+             battle.scene.pbShowOpponent(0,false)
+             pbMessage("\\bAlright, it looks like #{battle.battlers[0].pokemon.speciesName} has some spirit after all...")
+             pbMessage("\\bBut now it's time to break that spirit! Go Eevee!")
+             if $Trainer.newGamePlusCount > 0
+               battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1])
+               battle.battlers[1].pbRaiseStatStage(PBStats::DEFENSE,1,battle.battlers[1],false)
+             else
+               battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1])
+             end
+             battle.scene.pbHideOpponent
+          }
+    ZackLabLast = Proc.new{|battle|
+             battle.scene.pbShowOpponent(0,false)
+             pbMessage("\\bGahh! How are you still winning!?")
+             pbMessage("\\bYour #{battle.battlers[0].pokemon.speciesName} might be pretty strong...")
+             pbMessage("\\bBut I've got a secret weapon!")
+             pbMessage("\\bI've done some research of my own, and created this super strong Pokémon!")
+             pbMessage("\\bGo #{battle.battlers[1].pokemon.speciesName}, show them what you're made of!")
+             battle.pbCommonAnimation("StatUp",battle.battlers[1])
+             PBStats.eachMainBattleStat do |s|
+                battle.battlers[1].pbRaiseStatStageBasic(s,1)
+             end
+             battle.pbDisplay("All of #{battle.battlers[1].pokemon.speciesName}'s stats were raised!")
              battle.scene.pbHideOpponent
           }
     BrigidIntro = Proc.new{|battle|
