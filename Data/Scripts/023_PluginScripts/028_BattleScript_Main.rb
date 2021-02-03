@@ -1176,7 +1176,6 @@ class PokeBattle_Scene
     @animations.push(appearAnim)
     # Play the animation
     while inPartyAnimation?; pbUpdate; end
-    #@sprites["trainer_#{idxTrainer+1}"].z = 7 + idxTrainer if @sprites["trainer_#{idxTrainer+1}"]
   end
 
   def pbHideOpponent(idxTrainer=1)

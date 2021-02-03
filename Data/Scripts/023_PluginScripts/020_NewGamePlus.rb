@@ -72,7 +72,6 @@ module NewGamePlusData
     ret = 0
     # Edit the 0.1 to change multiplier
     ret += (0.1 * $Trainer.newGamePlusCount)
-    ret = ret.floor.to_i
     return ret
   end
 
@@ -508,7 +507,11 @@ class PokeBattle_Trainer
   end
 
   def newGamePlus=(value)
-    return allowNewGamePlus
+    if $DEBUG
+      @newGamePlus = value
+    else
+      return allowNewGamePlus
+    end
   end
 
   def allowNewGamePlus
