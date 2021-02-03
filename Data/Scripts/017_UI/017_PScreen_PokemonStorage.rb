@@ -1814,6 +1814,9 @@ class PokemonStorageScreen
     elsif pokemon.mail
       pbDisplay(_INTL("Please remove the mail."))
       return false
+    elsif pokemon.isSpecies?(:ARENAY)
+      pbDisplay(_INTL("You can't release Arenay! It's Professor Cypress' most prized posession!"))
+      return false
     end
     if box==-1 && pbAbleCount<=1 && pbAble?(pokemon) && !heldpoke
       pbPlayBuzzerSE
