@@ -60,6 +60,7 @@ DONE - Fix egg giving event to also bypass team size restriction
 DONE - Surf slide forward glitch, when dismounting the surfboard
 DONE - new trainer OWs
 DONE - Update regional dex to include new forms and subtract old unused
+DONE - Mid-battle dialogue, make the enemy trainer appear in front
 
 
 Cam
@@ -77,11 +78,11 @@ Update cave maps to use Magnet Cave tiles, so they're not so dang red
 - ADD GolisopodUser to the Dev Room!
 - Mid-Battle dialogue for the Devs in the dev room?
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
+Dev room redesign?????
 
 Broskiddo PR
 WIP - NG+, and keep testing it
 WIP - TM issues fix
-WIP - Mid-battle dialogue, make the enemy trainer appear in front
 
 
 Still need backsprites for Shuppet and Banette, then we're donezo for art I think!
