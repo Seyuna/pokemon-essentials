@@ -1171,22 +1171,21 @@ class PokeBattle_Scene
 
   def pbShowOpponent(idxTrainer,priority=false)
     # Set up trainer appearing animation
-    idxTrainer = 1 if idxTrainer == 0
-    @sprites["trainer_#{idxTrainer}"].z = 200 if priority
+    @sprites["trainer_#{idxTrainer+1}"].z = 200 if priority && @sprites["trainer_#{idxTrainer+1}"]
     appearAnim = TrainerAppearAnimation.new(@sprites,@viewport,idxTrainer)
     @animations.push(appearAnim)
     # Play the animation
     while inPartyAnimation?; pbUpdate; end
+    @sprites["trainer_#{idxTrainer+1}"].z = 7 + idxTrainer if @sprites["trainer_#{idxTrainer+1}"]
   end
 
   def pbHideOpponent(idxTrainer=1)
     # Set up trainer disappearing animation
-    idxTrainer = 1 if idxTrainer == 0
     disappearAnim = TrainerDisappearAnimation.new(@sprites,@viewport,idxTrainer)
     @animations.push(disappearAnim)
     # Play the animation
     while inPartyAnimation?; pbUpdate; end
-    @sprites["trainer_#{idxTrainer}"].z = 7 + idxTrainer
+    @sprites["trainer_#{idxTrainer+1}"].z = 7 + idxTrainer if @sprites["trainer_#{idxTrainer+1}"]
   end
 
   def disappearDatabox

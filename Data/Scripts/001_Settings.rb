@@ -86,7 +86,7 @@ NO_SIGNPOSTS = []
 INITIAL_MONEY        = 3000
 MAX_MONEY            = 999_999
 MAX_COINS            = 99_999
-MAX_PLAYER_NAME_SIZE = 10
+MAX_PLAYER_NAME_SIZE = 12
 
 #===============================================================================
 # * A set of arrays each containing a trainer type followed by a Global Variable

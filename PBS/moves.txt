@@ -714,6 +714,7 @@
 694,KINGSCLAW,King's Claw,01D,80,WATER,Physical,90,20,40,NearOther,0,abef,"The target is smashed by a forceful claw. It may also raise the user's Defense stat."
 695,FREEZERBURN,Freezer Burn,00A,80,ICE,Special,100,25,30,NearOther,0,bef,"The target is blasted with chilly wind. It may also leave the target with a burn."
 696,MISSILEDIVE,Missile Dive,030,80,STEEL,Physical,80,20,20,NearOther,0,abef,"The user dives at the target with the force of a missile. It has a 20% chance to sharply raise the Speed stat."
+
 697,HAYMAKER,Haymaker,0FA,100,FIGHTING,Physical,75,20,0,NearOther,0,abefj,"A reckless, full-body swinging punch that also damages the user a little."
 698,TOXICRUSH,Toxic Rush,005,60,POISON,Physical,90,20,100,NearOther,0,abef,"A stinging dive attack that always leaves the target poisoned."
 699,TIDALCHARGE,Tidal Charge,0FA,100,WATER,Physical,75,20,0,NearOther,0,abef,"A reckless, full-body dive that also damages the user a little."

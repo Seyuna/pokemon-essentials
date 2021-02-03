@@ -168,4 +168,6 @@ def pbSaveArenayToVariable(var)
       end
     end
   end
+  $PokemonBag.pbStoreItem($game_variables[var].item) if $game_variables[var].hasItem?
+  $game_variables[var].setItem(0)
 end
