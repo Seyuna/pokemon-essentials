@@ -784,7 +784,7 @@
 761,GLACIALQUAKE,Glacial Quake,52B,110,ICE,Physical,100,10,0,AllNearOthers,0,bef,"The user strikes the ground with its Glacier-like tail, sending chilling shockwaves that damages every grounded Pokémon around it."
 762,CELLSTRUCTION,Cell-Struction,52D,150,QMARKS,Physical,90,5,0,NearOther,0,abefz,"The user charges at the target, using up all of its cellular energy in the process. The user must rest on the next turn."
 763,OBSESSIONDANCE,Obsession Dance,52E,80,FAIRY,Special,100,5,100,NearOther,0,abef,"The user shows its possessive love in the form of a deadly dance. Double damage to infatuated targets."
-764,RECONFIGURE,Reconfigure,52F,0,QMARKS,Status,0,10,0,User,0,dz,"The user reconfigures its cell structure to restore some HP. The power of its next move is boosted, if the move is the same type as the user ."
+764,RECONFIGURE,Reconfigure,52F,0,QMARKS,Status,0,5,0,User,0,dz,"The user reconfigures its cell structure to restore some HP. The power of its next move is boosted, if the move is the same type as the user."
 #--------------------------------- GEN 8 MOVES - 2
 800,FREEZINGGLARE,Freezing Glare,00C,90,PSYCHIC,Special,100,10,10,NearOther,0,ef,"The user shoots its psychic power from its eyes to attack. This may also leave the target frozen."
 801,SKITTERSMACK,Skitter Smack,045,70,BUG,Physical,90,10,100,NearOther,0,abef,"The user skitters behind the target to attack. This also lowers the target's Sp. Atk stat."

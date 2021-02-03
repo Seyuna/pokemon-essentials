@@ -672,12 +672,25 @@ end
 
 #===============================================================================
 # Heals 25% HP and 1.5x damage for the next move used, if the move gets STAB.
-# (Reconfigure)
+# Can't be used in succession (Reconfigure)
 #===============================================================================
 class PokeBattle_Move_52F < PokeBattle_Move
+  def pbBaseType(user)
+    return user.type1
+  end
+
+  def pbMoveFailed?(user,targets)
+    if user.effects[PBEffects::Reconfigure] == 2
+      @battle.pbDisplay(_INTL("{1}'s cells are already in their optimal configuration!",user.pbThis))
+      user.effects[PBEffects::Reconfigure] = 0
+      return true
+    end
+    return false
+  end
+
   def pbEffectGeneral(user)
-    @battle.pbDisplay(_INTL("{1} reconfigured its genome!",user.pbThis))
+    @battle.pbDisplay(_INTL("{1} reconfigured its cellular make-up!",user.pbThis))
     user.effects[PBEffects::Reconfigure] = 2
-    @battle.pbDisplay(_INTL("{1} restored some health!",user.pbThis)) if user.pbRecoverHP((user.totalhp/4.0).round) > 0
+    @battle.pbDisplay(_INTL("{1} restored some health!",user.pbThis)) if user.pbRecoverHP((user.totalhp/3.0).round) > 0
   end
 end
