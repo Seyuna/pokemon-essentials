@@ -76,6 +76,7 @@ DONE - ADD GolisopodUser to the Dev Room!
 
 Cam
 Make player always refer to Arenay by it's name
+Stacona forms all have pokedex entries
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 Offstream Pog
