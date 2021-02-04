@@ -408,8 +408,8 @@ class FightMenuDisplay < BattleMenuBase
     @visibility["typeIcon"] = true
     # Type icon
     #thundaga move type, improved by GolisopodUser
-    mType = (pbGetMoveData(move.id,MOVE_FLAGS).include?("z"))? @battler.type1 : move.type
-    #@typeIcon.src_rect.y = move.pbCalcType(@battler)*TYPE_ICON_HEIGHT
+    #mType = (pbGetMoveData(move.id,MOVE_FLAGS).include?("z"))? @battler.type1 : move.type
+    @typeIcon.src_rect.y = move.pbCalcType(@battler)*TYPE_ICON_HEIGHT
     @typeIcon.src_rect.y = mType*TYPE_ICON_HEIGHT
     # PP text
     if move.totalpp>0

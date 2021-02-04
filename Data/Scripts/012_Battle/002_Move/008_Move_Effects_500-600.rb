@@ -672,8 +672,8 @@ class PokeBattle_Move_52E < PokeBattle_Move_0C2
 end
 
 ################################################################################
-# Type depends on the user's type. ARENAY SPLICE
-# Cell shot, DNA Ray, Cell Slam, etc
+# Type depends on the user's type. Mega Drain
+# Cell Drain
 ################################################################################
 class PokeBattle_Move_52F < PokeBattle_Move
   def healingMove?; return NEWEST_BATTLE_MECHANICS; end
