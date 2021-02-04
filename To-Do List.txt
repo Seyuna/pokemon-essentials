@@ -73,19 +73,29 @@ DONE - Iron pass Onix giver NPC OW sprite update and dialogue
 DONE - Add dialogue for Arenay being stolen from the PC after blacking out, if Arenay isn't in our team
 DONE - Remove mandatory Arenay from start of Driftwood lab
 DONE - ADD GolisopodUser to the Dev Room!
+DONE - Move tutors for the bases (Cell Drain and Reconfigure)
+DONE - removed cellulose from Team Leader win events
+DONE - Add shiny arenay portrait to lab event
+DONE - Test the set trainer order stuff for Zack lab fights
+DONE - RENAME THE GAME RXPROJ
+DONE - Update chapter display messages
+
 
 Cam
-- Make player always refer to Arenay by its name
-- Move tutors for the bases
-	- Cell Drain for Biogress
-	- Reconfigure for Quantech
+- Make player always refer to Arenay by its name?
+- Add Zubat/Golbat/Crobat OWs somewhere
 - Stacona forms all have pokedex entries
-- RENAME THE GAME RXPROJ
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
+playtest notes:
+- Fix arenay water OW sprite artifacts above
+- You scurried home after fainting text looks bad
+- Add shadows to cut trees, rock smash rocks, strength boulders
+- Arenay disappeared after loading into a save. It was in Lappy Lake we loaded in
+
+
 Broskiddo PR
-WIP? - Fix Cell drain shown type in battle
 WIP - NG+, and keep testing it
 WIP - TM issues fix
 

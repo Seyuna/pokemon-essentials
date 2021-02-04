@@ -137,7 +137,7 @@ Pokemon = SEVIPER,31
 Pokemon = ABSOL,31
     Form = 1
     Ball = 25
-Pokemon = CHROMEON,32
+Pokemon = CHROMEON,34
 #-------------------------------
 [SPLICERIVAL2,Zack,2]
 Items = SUPERPOTION,HYPERPOTION
@@ -152,7 +152,7 @@ Pokemon = ZANGOOSE,31
 Pokemon = ABSOL,31
     Form = 1
     Ball = 24
-Pokemon = AVEON,32
+Pokemon = AVEON,34
 #-------------------------------
 [CREATOR,Cameron]
 Pokemon = TYRANITAR,35
@@ -390,7 +390,7 @@ Pokemon = DUNSPARCE,22
     Form = 1
 #-------------------------------
 [SUPERNERD,Timothy]
-Pokemon = KLINK,5
+Pokemon = KLINK,6
     Form = 1
 Pokemon = KRABBY,6
     Form = 1

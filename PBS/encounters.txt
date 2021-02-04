@@ -620,22 +620,22 @@ Land
 098 # Plunge Pass
 20,8,8
 Land
-    BABEE,5,10
-    SWABLU,5,10
-    BLITZLE,5,10
-    BUDEW,5,10
-	SENTRET,5,10
+    BABEE,3,7
+    SWABLU,3,7
+    BLITZLE,3,7
+    BUDEW,3,7
+	SENTRET,4,9
 	EEVEE,5,10
 #-------------------------------
 099 # Lappy Lake
 20,8,8
 Land
-    BABEE,7,12
-	SLOWPOKE,7,12
-    LOTAD,7,12
-    TEDDIURSA,7,12
-    BUIZEL,7,12
-    STANTLER,7,12
+    BABEE,7,11
+	SLOWPOKE,7,11
+    LOTAD,7,11
+    BUDEW,7,11
+    AZURILL,7,11
+    SENTRET,7,12
 Water
     LAPPY,14,18
     MAGIKARP,15,22
@@ -828,12 +828,12 @@ SuperRod
 123 # Lush Cave
 20,8,8
 Cave
-    GOLETT,20,25
     SABLING,20,25
-    ELGYEM,20,25
-    GASTLY,20,25
-    IMPIDIMP,20,25
-    GIBLE,20,25
+    ZUBAT,20,25
+    RALTS,20,25
+    AZUMARILL,20,25
+    AIPOM,20,25
+    SHUPPET,20,25
 #-------------------------------
 133 # Dragon's Den
 20,8,8
