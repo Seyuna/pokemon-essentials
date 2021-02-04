@@ -75,20 +75,22 @@ DONE - Remove mandatory Arenay from start of Driftwood lab
 DONE - ADD GolisopodUser to the Dev Room!
 
 Cam
-Make player always refer to Arenay by its name
-DONE - Fix Cell drain shown type in battle
-Stacona forms all have pokedex entries
+- Make player always refer to Arenay by its name
+- Move tutors for the bases
+	- Cell Drain for Biogress
+	- Reconfigure for Quantech
+- Stacona forms all have pokedex entries
+- RENAME THE GAME RXPROJ
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
-
-Offstream Pog
-- Mid-Battle dialogue for the Devs in the dev room?
-Dev room redesign?????
-RENAME THE GAME RXPROJ
 
 
 Broskiddo PR
+WIP? - Fix Cell drain shown type in battle
 WIP - NG+, and keep testing it
 WIP - TM issues fix
+
+Offstream Pog
+Dev room redesign?????
 
 
 
