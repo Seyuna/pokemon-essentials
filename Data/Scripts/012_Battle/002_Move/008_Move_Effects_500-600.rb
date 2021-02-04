@@ -1,5 +1,6 @@
 ################################################################################
 # Type depends on the user's type. ARENAY SPLICE
+# Cell shot, DNA Ray, Cell Slam, etc
 ################################################################################
 class PokeBattle_Move_500 < PokeBattle_Move
   def pbBaseType(user)
@@ -692,5 +693,21 @@ class PokeBattle_Move_52F < PokeBattle_Move
     @battle.pbDisplay(_INTL("{1} reconfigured its cellular make-up!",user.pbThis))
     user.effects[PBEffects::Reconfigure] = 2
     @battle.pbDisplay(_INTL("{1} restored some health!",user.pbThis)) if user.pbRecoverHP((user.totalhp/3.0).round) > 0
+  end
+################################################################################
+# Type depends on the user's type. Mega Drain
+# Cell Drain
+################################################################################
+class PokeBattle_Move_530 < PokeBattle_Move
+  def healingMove?; return NEWEST_BATTLE_MECHANICS; end
+  
+  def pbBaseType(user)
+    return user.type1
+  end
+
+  def pbEffectAgainstTarget(user,target)
+    return if target.damageState.hpLost<=0
+    hpGain = (target.damageState.hpLost/2.0).round
+    user.pbRecoverHPFromDrain(hpGain,target)
   end
 end
