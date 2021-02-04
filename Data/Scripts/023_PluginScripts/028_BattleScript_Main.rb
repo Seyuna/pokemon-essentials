@@ -525,6 +525,23 @@ class PokeBattle_Battle
     end
   end
 
+  def pbSwitchInBetween(idxBattler,checkLaxOnly=false,canCancel=false)
+    return pbPartyScreen(idxBattler,checkLaxOnly,canCancel) if pbOwnedByPlayer?(idxBattler)
+    ret = @battleAI.pbDefaultChooseNewEnemy(idxBattler,pbParty(idxBattler))
+    if BattleScripting.hasOrderData?
+      orderArr = BattleScripting.getOrderOf(idxBattler)
+      len =  pbAbleCount(idxBattler)
+      len1 = (pbParty(idxBattler).length > 6) ? 6 : (pbParty(idxBattler).length)
+      len2 = len1 - len
+      return ret if orderArr.length == 0
+      sendoutID = orderArr[len2]
+      if pbParty(idxBattler).length > sendoutID && pbParty(idxBattler)[sendoutID].able?
+        ret = sendoutID
+      end
+    end
+    return ret
+  end
+
 # Loss and Win Dialogue
   def pbEndOfBattle
     oldDecision = @decision
@@ -933,6 +950,38 @@ class PokeBattle_Scene
   end
 end
 
+class PokeBattle_AI
+  def pbChooseBestNewEnemy(idxBattler,party,enemies)
+    return -1 if !enemies || enemies.length==0
+    best    = -1
+    bestSum = 0
+    movesData = pbLoadMovesData
+    enemies.each do |i|
+      pkmn = party[i]
+      sum  = 0
+      if BattleScripting.hasAceData?
+        aceId = BattleScripting.getAceOf(idxBattler)
+        next if aceId > -1 && i == aceId && @battle.pbAbleCount(idxBattler) != 1
+      end
+      pkmn.moves.each do |m|
+        next if m.id==0
+        moveData = movesData[m.id]
+        next if moveData[MOVE_BASE_DAMAGE]==0
+        @battle.battlers[idxBattler].eachOpposing do |b|
+          bTypes = b.pbTypes(true)
+          sum += PBTypes.getCombinedEffectiveness(moveData[MOVE_TYPE],
+             bTypes[0],bTypes[1],bTypes[2])
+        end
+      end
+      if best==-1 || sum>bestSum
+        best = i
+        bestSum = sum
+      end
+    end
+    return best
+  end
+end
+
 
 #------------------------------------------------------------------------------#
 # Main Trainer Dialogue Module
@@ -960,9 +1009,10 @@ module TrainerDialogue
   end
 
   def self.resetAll
-    $PokemonTemp.dialogueData={:DIAL=>false}
-    $PokemonTemp.dialogueDone={}
-    $PokemonTemp.dialogueInstances={}
+    $PokemonTemp.dialogueData = {:DIAL=>false}
+    $PokemonTemp.dialogueDone = {}
+    $PokemonTemp.dialogueInstances = {}
+    $PokemonTemp.orderData = {}
   end
 
   def self.hasData?
@@ -1145,6 +1195,53 @@ module BattleScripting
       value = getConst(DialogueModule,name)
       TrainerDialogue.set(param,value)
     end
+  end
+
+  def self.hasOrderData?
+    return $PokemonTemp.orderData["hasOrder"]
+  end
+
+  def self.hasAceData?
+    return $PokemonTemp.orderData["hasAce"]
+  end
+
+  def self.getAceOf(id)
+    return $PokemonTemp.orderData["ace#{id}"] if $PokemonTemp.orderData["ace#{id}"]
+    return -1
+  end
+
+  def self.getOrderOf(id)
+    return $PokemonTemp.orderData["order#{id}"] if $PokemonTemp.orderData["order#{id}"]
+    return []
+  end
+
+  def self.setTrainerOrder(*args)
+    fail = false
+    $PokemonTemp.orderData["hasOrder"] = true
+    args.each_with_index do |a,i|
+      if !a.is_a?(Array) || a.length != 6 || $PokemonTemp.orderData["ace#{2*i + 1}"]
+        fail = true
+        break
+      end
+      $PokemonTemp.orderData["order#{2*i +1}"] = a
+    end
+    $PokemonTemp.orderData["hasOrder"] = false if fail
+    p "The script did not accept the Trainer Order Data because it's invalid." if fail
+  end
+
+  def self.setTrainerAce(*args)
+    fail = false
+    $PokemonTemp.orderData["hasAce"] = true
+    args.each_with_index do |a,i|
+      if !a.is_a?(Numeric) || $PokemonTemp.orderData["order#{2*i + 1}"]
+        fail = true
+        break
+      end
+      a = a.clamp(0,6)
+      $PokemonTemp.orderData["ace#{2*i + 1}"] = a
+    end
+    $PokemonTemp.orderData["hasAce"] = false if fail
+    p "The script did not accept the Trainer Ace Data because it's invalid." if fail
   end
 end
 
@@ -1360,6 +1457,7 @@ class PokemonTemp
   attr_accessor :dialogueData
   attr_accessor :dialogueDone
   attr_accessor :dialogueInstances
+  attr_accessor :orderData
 
   def dialogueData
     @dialogueData = {:DIAL=>false} if !@dialogueData
@@ -1374,6 +1472,11 @@ class PokemonTemp
   def dialogueInstances
     @dialogueInstances = {} if !@dialogueInstances
     return @dialogueInstances
+  end
+
+  def orderData
+    @orderData = {} if !@orderData
+    return @orderData
   end
 end
 $ShiftSwitch=false
