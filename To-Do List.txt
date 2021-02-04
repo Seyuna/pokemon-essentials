@@ -76,7 +76,7 @@ DONE - ADD GolisopodUser to the Dev Room!
 
 Cam
 Make player always refer to Arenay by its name
-Fix Cell drain shown type in battle
+DONE - Fix Cell drain shown type in battle
 Stacona forms all have pokedex entries
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
