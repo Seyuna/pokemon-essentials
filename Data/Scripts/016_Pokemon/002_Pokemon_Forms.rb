@@ -403,26 +403,36 @@ MultipleForms.register(:ARCEUS,{
 
 #THUNDAGA ARENAYFORMS
 MultipleForms.register(:ARENAY,{
-"getForm"=>proc{|pokemon|
-   next 1  if isConst?(pokemon.item,PBItems,:FIRECELL)
-   next 2  if isConst?(pokemon.item,PBItems,:WATERCELL)
-   next 3  if isConst?(pokemon.item,PBItems,:GRASSCELL)
-   next 4  if isConst?(pokemon.item,PBItems,:FLYCELL)
-   next 5  if isConst?(pokemon.item,PBItems,:STEELCELL)
-   next 6  if isConst?(pokemon.item,PBItems,:ELECCELL)
-   next 7  if isConst?(pokemon.item,PBItems,:ICECELL)
-   next 8  if isConst?(pokemon.item,PBItems,:PSYCELL)
-   next 9  if isConst?(pokemon.item,PBItems,:BUGCELL)
-   next 10 if isConst?(pokemon.item,PBItems,:GROUNDCELL)
-   next 11 if isConst?(pokemon.item,PBItems,:POISONCELL)
-   next 12 if isConst?(pokemon.item,PBItems,:DRAGONCELL)
-   next 13 if isConst?(pokemon.item,PBItems,:FIGHTCELL)
-   next 14 if isConst?(pokemon.item,PBItems,:ROCKCELL)
-   next 15 if isConst?(pokemon.item,PBItems,:GHOSTCELL)
-   next 16 if isConst?(pokemon.item,PBItems,:DARKCELL)
-   next 17 if isConst?(pokemon.item,PBItems,:FAIRYCELL)
-   next 0
-}
+  "getForm"=>proc{|pokemon|
+    next 1  if isConst?(pokemon.item,PBItems,:FIRECELL)
+    next 2  if isConst?(pokemon.item,PBItems,:WATERCELL)
+    next 3  if isConst?(pokemon.item,PBItems,:GRASSCELL)
+    next 4  if isConst?(pokemon.item,PBItems,:FLYCELL)
+    next 5  if isConst?(pokemon.item,PBItems,:STEELCELL)
+    next 6  if isConst?(pokemon.item,PBItems,:ELECCELL)
+    next 7  if isConst?(pokemon.item,PBItems,:ICECELL)
+    next 8  if isConst?(pokemon.item,PBItems,:PSYCELL)
+    next 9  if isConst?(pokemon.item,PBItems,:BUGCELL)
+    next 10 if isConst?(pokemon.item,PBItems,:GROUNDCELL)
+    next 11 if isConst?(pokemon.item,PBItems,:POISONCELL)
+    next 12 if isConst?(pokemon.item,PBItems,:DRAGONCELL)
+    next 13 if isConst?(pokemon.item,PBItems,:FIGHTCELL)
+    next 14 if isConst?(pokemon.item,PBItems,:ROCKCELL)
+    next 15 if isConst?(pokemon.item,PBItems,:GHOSTCELL)
+    next 16 if isConst?(pokemon.item,PBItems,:DARKCELL)
+    next 17 if isConst?(pokemon.item,PBItems,:FAIRYCELL)
+    next 0
+  },
+  "onSetForm" => proc { |pkmn,form,oldForm|
+    pkmn.moves.each_with_index do |move,i|
+      next if !move || move.id==0
+      if pkmn.tmMoves.include?(move.id) && !pkmn.hasType?(pbGetMoveData(move.id)[MOVE_TYPE])
+        pbMessage(_INTL("{1} forgot {2}...",pkmn.name,PBMoves.getName(move.id)))
+        pkmn.pbDeleteMoveAtIndex(i)
+      end
+    end
+    pkmn.pbLearnMove(:CELLSHOT) if pkmn.numMoves==0
+  }
 })
 
 MultipleForms.copy(:ARENAY,:DRAGAIA,:PRISMATRIX)

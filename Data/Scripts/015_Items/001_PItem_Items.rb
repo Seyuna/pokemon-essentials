@@ -667,6 +667,9 @@ def pbLearnMove(pkmn,move,ignoreifknown=false,bymachine=false,&block)
   if pkmn.numMoves<4
     pkmn.pbLearnMove(move)
     pbMessage(_INTL("\\se[]{1} learned {2}!\\se[Pkmn move learnt]",pkmnname,movename),&block)
+    if bymachine && (pkmn.isSpecies?(:ARENAY) || pkmn.isSpecies?(:DRAGAIA) || pkmn.isSpecies?(:PRISMATRIX))
+      pkmn.tmMoves.push(move)
+    end
     return true
   end
   loop do
@@ -679,6 +682,9 @@ def pbLearnMove(pkmn,move,ignoreifknown=false,bymachine=false,&block)
       pkmn.moves[forgetmove] = PBMove.new(move)   # Replaces current/total PP
       if bymachine && !NEWEST_BATTLE_MECHANICS
         pkmn.moves[forgetmove].pp = [oldmovepp,pkmn.moves[forgetmove].totalpp].min
+      end
+      if bymachine && (pkmn.isSpecies?(:ARENAY) || pkmn.isSpecies?(:DRAGAIA) || pkmn.isSpecies?(:PRISMATRIX))
+        pkmn.tmMoves.push(move)
       end
       pbMessage(_INTL("1,\\wt[16] 2, and\\wt[16]...\\wt[16] ...\\wt[16] ... Ta-da!\\se[Battle ball drop]\1"),&block)
       pbMessage(_INTL("{1} forgot how to use {2}.\\nAnd...\1",pkmnname,oldmovename),&block)
