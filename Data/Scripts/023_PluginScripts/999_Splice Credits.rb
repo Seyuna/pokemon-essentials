@@ -29,7 +29,7 @@ PluginManager.register({
 
 PluginManager.register({
   :name => "Gen 8 Box Exchange",
-  :credits => ["Michael","Golisopod User"]
+  :credits => ["Michael","Golisopod User","Luka SJ"]
 })
 
 PluginManager.register({
