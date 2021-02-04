@@ -694,13 +694,15 @@ class PokeBattle_Move_52F < PokeBattle_Move
     user.effects[PBEffects::Reconfigure] = 2
     @battle.pbDisplay(_INTL("{1} restored some health!",user.pbThis)) if user.pbRecoverHP((user.totalhp/3.0).round) > 0
   end
+end
+
 ################################################################################
 # Type depends on the user's type. Mega Drain
 # Cell Drain
 ################################################################################
 class PokeBattle_Move_530 < PokeBattle_Move
   def healingMove?; return NEWEST_BATTLE_MECHANICS; end
-  
+
   def pbBaseType(user)
     return user.type1
   end
