@@ -2755,6 +2755,7 @@ Moves = 0,DRAINPUNCH,1,QUICKATTACK,1,LEER,1,THUNDERSHOCK,5,THUNDERSHOCK,8,LOWKIC
 BattlerPlayerY = -5
 BattlerEnemyX = 3
 BattlerEnemyY = 13
+
 #-------------------------------
 [TRAPINCH,1]
 FormName = Stacona Form

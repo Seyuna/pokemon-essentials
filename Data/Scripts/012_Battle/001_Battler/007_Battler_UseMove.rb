@@ -117,6 +117,7 @@ class PokeBattle_Battler
       end
     end
     @effects[PBEffects::Charge]      = 0 if @effects[PBEffects::Charge]==1
+    @effects[PBEffects::Reconfigure] = 0 if @effects[PBEffects::Reconfigure] == 1
     @effects[PBEffects::GemConsumed] = 0
     @battle.eachBattler { |b| b.pbContinualAbilityChecks }   # Trace, end primordial weathers
   end
@@ -622,6 +623,11 @@ class PokeBattle_Battler
         # Lessen damage dealt because of False Swipe/Endure/etc.
         move.pbReduceDamage(user,b)   # Stored in damageState.hpLost
       end
+    end
+    if user.effects[PBEffects::Reconfigure] == 1
+      @battle.pbDisplay(_INTL("{1}'s cellular configuration boosted {2}'s power!",user.pbThis,move.name))
+    elsif user.effects[PBEffects::Reconfigure] == 2
+      user.effects[PBEffects::Reconfigure] = 0
     end
     # Show move animation (for this hit)
     move.pbShowAnimation(move.id,user,targets,hitNum)

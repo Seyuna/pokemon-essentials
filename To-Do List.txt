@@ -120,7 +120,7 @@ MunchingOrangeFeedback
 DONE - Make it so cellulose has its own bag compartment!
 DONE - Add dialogue to mom convo based on if lost/won to Zack
 DONE - Have research assistant always give first potion, before activating zack event
-Work on regional pokedex entries
+DONE - Work on regional pokedex entries
 DONE - Add more stacona forms to Ferrous Cave
-- Zubat Dark/Flying with Galvanize for some electric shenanigans
-- Ralts Ground/Psychic
+DONE - Zubat Dark/Flying with Galvanize for some electric shenanigans
+DONE - Ralts Ground/Psychic

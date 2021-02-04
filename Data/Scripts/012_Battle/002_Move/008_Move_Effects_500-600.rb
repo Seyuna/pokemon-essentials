@@ -626,6 +626,20 @@ class PokeBattle_Move_52B < PokeBattle_Move
     end
     return false
   end
+
+  def pbMoveFailed?(user,targets)
+    failed = true
+    targets.each do |b|
+      next if b.airborne?   # Pokemon is airborne
+      failed = false
+      break
+    end
+    if failed
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
 end
 
 #===============================================================================
@@ -671,27 +685,45 @@ class PokeBattle_Move_52E < PokeBattle_Move_0C2
   end
 end
 
+#===============================================================================
+# Heals 25% HP and 1.5x damage for the next move used, if the move gets STAB.
+# Can't be used in succession (Reconfigure)
+#===============================================================================
+class PokeBattle_Move_52F < PokeBattle_Move
+  def pbBaseType(user)
+    return user.type1
+  end
+
+  def pbMoveFailed?(user,targets)
+    if user.effects[PBEffects::Reconfigure] == 2
+      @battle.pbDisplay(_INTL("{1}'s cells are already in their optimal configuration!",user.pbThis))
+      user.effects[PBEffects::Reconfigure] = 0
+      return true
+    end
+    return false
+  end
+
+  def pbEffectGeneral(user)
+    @battle.pbDisplay(_INTL("{1} reconfigured its cellular make-up!",user.pbThis))
+    user.effects[PBEffects::Reconfigure] = 2
+    @battle.pbDisplay(_INTL("{1} restored some health!",user.pbThis)) if user.pbRecoverHP((user.totalhp/3.0).round) > 0
+  end
+end
+
 ################################################################################
 # Type depends on the user's type. Mega Drain
 # Cell Drain
 ################################################################################
-class PokeBattle_Move_52F < PokeBattle_Move
+class PokeBattle_Move_530 < PokeBattle_Move
   def healingMove?; return NEWEST_BATTLE_MECHANICS; end
+
   def pbBaseType(user)
     return user.type1
   end
+
   def pbEffectAgainstTarget(user,target)
     return if target.damageState.hpLost<=0
     hpGain = (target.damageState.hpLost/2.0).round
     user.pbRecoverHPFromDrain(hpGain,target)
   end
-=begin
-This is the code to make the Move Base Power Dependent on Level
-  def pbBaseDamage(basedmg,attacker,opponent)
-    basedmg=attacker.level*2# if isConst?(attacker.species,PBSpecies,:ARENAY)
-    basedmg=90 if basedmg>90 || attacker.level>45
-#    @battle.pbDisplay(_INTL("{1}",basedmg))
-    return basedmg
-  end
-=end
 end
