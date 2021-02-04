@@ -626,6 +626,20 @@ class PokeBattle_Move_52B < PokeBattle_Move
     end
     return false
   end
+
+  def pbMoveFailed?(user,targets)
+    failed = true
+    targets.each do |b|
+      next if b.airborne?   # Pokemon is airborne
+      failed = false
+      break
+    end
+    if failed
+      @battle.pbDisplay(_INTL("But it failed!"))
+      return true
+    end
+    return false
+  end
 end
 
 #===============================================================================
