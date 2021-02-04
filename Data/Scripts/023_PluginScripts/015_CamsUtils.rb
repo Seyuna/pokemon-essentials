@@ -94,10 +94,10 @@ def pbSelectOutfit
       pbMessage(_INTL("\\se[OutfitChange]\\pg{1}",messages[rand(messages.length)]))
       $game_screen.pictures[1].erase
     else
-      pbMessage(_INTL("Already wearing this outfit!"))
+      pbMessage(_INTL("You're already wearing this outfit!"))
     end
   else
-    Kernel.pbMessage("No Outfits unlocked....")
+    Kernel.pbMessage("Hmm... looks like there aren't any other clothes in here.")
   end
 end
 
