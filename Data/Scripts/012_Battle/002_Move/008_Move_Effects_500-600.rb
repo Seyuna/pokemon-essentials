@@ -1,5 +1,6 @@
 ################################################################################
 # Type depends on the user's type. ARENAY SPLICE
+# Cell shot, DNA Ray, Cell Slam, etc
 ################################################################################
 class PokeBattle_Move_500 < PokeBattle_Move
   def pbBaseType(user)
@@ -668,4 +669,29 @@ class PokeBattle_Move_52E < PokeBattle_Move_0C2
     end
     return baseDmg
   end
+end
+
+################################################################################
+# Type depends on the user's type. ARENAY SPLICE
+# Cell shot, DNA Ray, Cell Slam, etc
+################################################################################
+class PokeBattle_Move_52F < PokeBattle_Move
+  def healingMove?; return NEWEST_BATTLE_MECHANICS; end
+  def pbBaseType(user)
+    return user.type1
+  end
+  def pbEffectAgainstTarget(user,target)
+    return if target.damageState.hpLost<=0
+    hpGain = (target.damageState.hpLost/2.0).round
+    user.pbRecoverHPFromDrain(hpGain,target)
+  end
+=begin
+This is the code to make the Move Base Power Dependent on Level
+  def pbBaseDamage(basedmg,attacker,opponent)
+    basedmg=attacker.level*2# if isConst?(attacker.species,PBSpecies,:ARENAY)
+    basedmg=90 if basedmg>90 || attacker.level>45
+#    @battle.pbDisplay(_INTL("{1}",basedmg))
+    return basedmg
+  end
+=end
 end

@@ -813,3 +813,5 @@
 788,BURNINGJEALOUSY,Burning Jealousy,18B,70,FIRE,Special,100,5,100,AllNearFoes,0,bef,"Attacks with energy from jealousy. All opposing Pokémon with stat boosts get burned."
 789,METEORBEAM,Meteor Beam,191,120,ROCK,Special,90,10,0,NearOther,0,bef,"Gathers space power and boosts its Sp. Atk stat on one turn, then attacks on the next turn."
 790,STEELROLLER,Steel Roller,195,130,STEEL,Physical,100,5,0,NearOther,0,abef,"Attacks while destroying the terrain. This move fails in the absence of a terrain."
+#--------------------------------- SPLICE EXCLUSIVE MOVES - 3
+791,CELLDRAIN,Cell Drain,0DD,40,QMARKS,Special,100,15,0,NearOther,0,befz,"A molecular draining attack, that changes to match the user's type. The user's HP is restored by half the damage dealt."

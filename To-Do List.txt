@@ -75,7 +75,8 @@ DONE - Remove mandatory Arenay from start of Driftwood lab
 DONE - ADD GolisopodUser to the Dev Room!
 
 Cam
-Make player always refer to Arenay by it's name
+Make player always refer to Arenay by its name
+Fix Cell drain shown type in battle
 Stacona forms all have pokedex entries
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
