@@ -84,8 +84,6 @@ DONE - Update chapter display messages
 Cam
 - Stacona forms all have pokedex entries
 - Mess around with Chapter Level scaling for wild pokemon in Plunge Pass, and Lappy Lake
-- Rename game to Pokemon Splice - Beta 1
-- Extra trainers in bog for you know what
 - Add super secret chairdaga fight
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
@@ -96,12 +94,10 @@ playtest notes:
 	- Only the last default control override works
 - Draw enemy name above enemy sprite in Battle intro
 - Fix some of the dark spots in the grass
-- Lush Road, warning NPC, player turns left instead of up
-- Biogress in front of HQ, set player draw opacity to 160
-- Biogress cell researcher says lab with a lowercase L
+- bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
 
 
-Make player always refer to Arenay by its name? 
+Make player always refer to Arenay by its name!
 - \v[45]
 - Mom map scene, "traveling around the region with arenay"
 - "And arenay is so cute"
