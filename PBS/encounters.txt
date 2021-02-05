@@ -427,7 +427,7 @@ Land
     BUDEW,2,7
     SENTRET,2,7
     KANGA,2,7
-    RUFFLET,2,7
+    SENTRET,2,7
 #-------------------------------
 079 # Fleural Town
 20,8,8
@@ -571,12 +571,12 @@ Cave
 092 # Verdant Valley
 20,8,8
 Land
-    ADORABULL,5,10
-    KANGA,5,10
-    TROPPY,5,10
-    BUDEW,5,10
-    ZANGOOSE,5,10
-    SENTRET,5,10
+    ADORABULL,6,11
+    KANGA,6,11
+    TROPPY,6,11
+    BUDEW,6,11
+    ZANGOOSE,6,11
+    SENTRET,6,11
 #-------------------------------
 093 # Lush Road
 20,8,8
@@ -881,18 +881,18 @@ Land
     FOONGUS,25,30
     SEVIPER,25,30
     TOXEL,25,30
-    STUNKY,25,30
+    TRAPINCH,25,30
     AIPOM,25,30
 #-------------------------------
 150 # Folian Grove
 20,8,8
 Land
-    SKWOVET,4,8
-    APPLIN,4,8
-    SLOWPOKE,4,8
-    SKIDDO,4,8
-    ROWLET,4,8
-    GROOKEY,4,8
+    SKWOVET,6,10
+    APPLIN,6,10
+    SLOWPOKE,6,10
+    SKIDDO,6,10
+    ROWLET,6,11
+    GROOKEY,6,11
 #-------------------------------
 151 # Haunted Hollow
 25,10,10

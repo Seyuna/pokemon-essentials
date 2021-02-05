@@ -231,27 +231,27 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
 
 Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
   if $PokemonGlobal.followerHoldItem
-    if pkmn.hapiness > 250
+    if pkmn.happiness > 250
       items=[:MAXPOTION,:FULLRESTORE,:BIGPEARL,:STARPIECE,:ULTRABALL,
         :CHOICEBAND,:LIFEORB,:SACREDASH,:AGUAVBERRY,:SITRUSBERRY
       ]
       message = "#{pkmn.name} is eager to give you something..."
-    elsif pkmn.hapiness > 200
+    elsif pkmn.happiness > 200
       items=[:MAXPOTION,:HYPERPOTION,:NUGGET,:STARPIECE,:GREATBALL,
         :CHOICESCARF,:AIRBALLOON,:MAXREVIVE,:LUMBERRY,:SITRUSBERRY
       ]
       message = "#{pkmn.name} wants to give you something..."
-    elsif pkmn.hapiness > 150
+    elsif pkmn.happiness > 150
       items=[:MOOMOOMILK,:HYPERPOTION,:NUGGET,:PEARL,:DUSKBALL,
         :CHOICESPECS,:EVIOLITE,:REVIVE,:CUSTAPBERRY,:SITRUSBERRY
       ]
       message = "#{pkmn.name} is found something for you..."
-    elsif pkmn.hapiness > 100
+    elsif pkmn.happiness > 100
       items=[:SUPERPOTION,:MOOMOOMILK,:STARDUST,:PEARL,:POKEBALL,
         :PRETTYWING,:FULLHEAL,:ESCAPEROPE,:ORANBERRY,:SITRUSBERRY
       ]
       message = "#{pkmn.name} is holding an item..."
-    elsif pkmn.hapiness > 50
+    elsif pkmn.happiness > 50
       items=[:POTION,:SUPERPOTION,:BIGMUSHROOM,:STARDUST,:POKETOY,
         :PRETTYWING,:ORANBERRY,:CHESTOBERRY,:PECHABERRY,:HONEY
       ]
@@ -263,7 +263,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
       pbMessage("Arenay threw the item away!")
       next true
     end
-    next true if pbPokemonFound(rand(items.length),1,messsage)
+    next true if pbPokemonFound(rand(items.length),1,message)
   end
 }
 

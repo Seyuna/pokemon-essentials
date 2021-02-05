@@ -446,7 +446,7 @@ module DialogueModule
           battle.scene.appearBar
           battle.scene.pbShowOpponent(0,false)
           pbMessage("\\bAlright, it looks like #{battle.battlers[0].pokemon.speciesName} has some spirit after all...")
-          pbMessage("\\bBut now it's time to break that spirit! Go Eevee!")
+          pbMessage("\\bBut now it's time to break that spirit!\nGo Eevee!")
           battle.scene.disappearBar
           if $Trainer.newGamePlusCount > 0
             battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1])

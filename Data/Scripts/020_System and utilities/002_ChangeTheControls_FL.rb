@@ -173,6 +173,7 @@ module Keys
       ControlConfig.new(_INTL("Right"),_INTL("Right")),
       ControlConfig.new(_INTL("Up"),_INTL("Up")),
       ControlConfig.new(_INTL("Action"),_INTL("C")),
+      ControlConfig.new(_INTL("Action"),_INTL("Enter")),
       ControlConfig.new(_INTL("Cancel"),_INTL("X")),
       ControlConfig.new(_INTL("Run/Sort"),_INTL("Z")),
       ControlConfig.new(_INTL("Scroll down"),_INTL("Page Down")),
