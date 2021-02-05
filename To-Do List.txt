@@ -83,16 +83,14 @@ DONE - Update chapter display messages
 
 Cam
 - Make player always refer to Arenay by its name?
-- Add Zubat/Golbat/Crobat OWs somewhere
 - Stacona forms all have pokedex entries
+- Rename game to Pokemon Splice - Beta 1
+- Extra trainers in bog for you know what
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
 playtest notes:
-- Fix arenay water OW sprite artifacts above
-- You scurried home after fainting text looks bad
-- Add shadows to cut trees, rock smash rocks, strength boulders
-- Arenay disappeared after loading into a save. It was in Lappy Lake we loaded in
+- You scurried home after fainting text looks bad, test my new fix
 
 
 Broskiddo PR
