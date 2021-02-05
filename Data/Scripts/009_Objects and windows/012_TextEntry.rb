@@ -1554,7 +1554,11 @@ def pbEnterPlayerName(helptext,minlength,maxlength,initialText="",nofadeout=fals
 end
 
 def pbEnterPokemonName(helptext,minlength,maxlength,initialText="",pokemon=nil,nofadeout=false)
-  return pbEnterText(helptext,minlength,maxlength,initialText,2,pokemon,nofadeout)
+  ret = pbEnterText(helptext,minlength,maxlength,initialText,2,pokemon,nofadeout)
+  if pokemon && pokemon.isSpecies?(:ARENAY)
+    $game_variables[45] = (!nil_or_empty?(ret)) ? ret : pokemon.speciesName
+  end
+  return ret
 end
 
 def pbEnterNPCName(helptext,minlength,maxlength,initialText="",id=0,nofadeout=false)
