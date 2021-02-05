@@ -1246,10 +1246,7 @@ class PokeBattle_Trainer
   def arenayIndex(pkmn=false)
     ret = -1
     @party.each_with_index do |p,i|
-      ret = i if p && p.isSpecies?(:ARENAY) #&& p.able?
-      if !$game_switches[400]
-        ret = -1 if ret >= 0 && !p.able?
-      end
+      ret = i if p && p.isSpecies?(:ARENAY) && (p.able? || $game_switches[400])
     end
     if pkmn
       return @party[ret] if ret >= 0

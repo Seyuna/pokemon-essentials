@@ -397,97 +397,100 @@ module DialogueModule
 # New Splice Battle Dialogues
 #===================================================================================
     ZackPoison = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0,true)
-             battle.scene.disappearDatabox
-             pbMessage("\\bCheck this out \\PN! Damian gave me a special new tool!")
-             pbMessage("\\bGet poisoned!")
-            battle.scene.appearDatabox
-             if battle.battlers[0].pbCanInflictStatus?(PBStatuses::POISON,battle.battlers[1],false)
-                battle.battlers[0].pbInflictStatus(PBStatuses::POISON,0,"Your Pokémon were poisoned!")
-             else
-                battle.pbCommonAnimation("Poison",battle.battlers[1],battle.battlers[0])
-                pbMessage("Your party has been poisoned!")
-             end
-            battle.scene.disappearDatabox
-             poisonAllPokemon(nil)
-             pbMessage("\\bHaha, yes! It worked!")
-             pbMessage("\\bYou'll never be able to beat me when your whole team is poisoned!")
-             battle.scene.pbHideOpponent
-             battle.scene.appearDatabox
-          }
+          battle.scene.appearBar
+          battle.scene.pbShowOpponent(0,true)
+          pbMessage("\\bCheck this out \\PN! Damian gave me a special new tool!")
+          pbMessage("\\bGet poisoned!")
+          battle.scene.disappearBar
+          if battle.battlers[0].pbCanInflictStatus?(PBStatuses::POISON,battle.battlers[1],false)
+            battle.battlers[0].pbInflictStatus(PBStatuses::POISON,0,"Your Pokémon were poisoned!")
+          else
+            battle.pbCommonAnimation("Poison",battle.battlers[1],battle.battlers[0])
+            pbMessage("Your party has been poisoned!")
+          end
+          battle.scene.appearBar
+          poisonAllPokemon(nil)
+          pbMessage("\\bHaha, yes! It worked!")
+          pbMessage("\\bYou'll never be able to beat me when your whole team is poisoned!")
+          battle.scene.pbHideOpponent
+          battle.scene.disappearBar
+        }
     ZackParalyze = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0,true)
-             battle.scene.disappearDatabox
-             pbMessage("\\bCheck this out \\PN! Brigid gave me a special new tool!")
-             pbMessage("\\bGet zapped!")
-            battle.scene.appearDatabox
-             if battle.battlers[0].pbCanInflictStatus?(PBStatuses::PARALYSIS,battle.battlers[1],false)
-               battle.battlers[0].pbInflictStatus(PBStatuses::PARALYSIS,0,"Your Pokémon were paralyzed!")
-             else
-               battle.pbCommonAnimation("Paralysis",battle.battlers[1],battle.battlers[0])
-               pbMessage("Your party has been paralyzed!")
-             end
-             battle.scene.disappearDatabox
-             paralyzeAllPokemon(nil)
-             pbMessage("\\bHaha, yes! It worked!")
-             pbMessage("\\bYou'll never be able to beat me when your whole team is paralyzed!")
-             battle.scene.pbHideOpponent
-             battle.scene.appearDatabox
-          }
+          battle.scene.appearBar
+          battle.scene.pbShowOpponent(0,true)
+          pbMessage("\\bCheck this out \\PN! Brigid gave me a special new tool!")
+          pbMessage("\\bGet zapped!")
+          battle.scene.disappearBar
+          if battle.battlers[0].pbCanInflictStatus?(PBStatuses::PARALYSIS,battle.battlers[1],false)
+            battle.battlers[0].pbInflictStatus(PBStatuses::PARALYSIS,0,"Your Pokémon were paralyzed!")
+          else
+            battle.pbCommonAnimation("Paralysis",battle.battlers[1],battle.battlers[0])
+            pbMessage("Your party has been paralyzed!")
+          end
+          battle.scene.appearBar
+          paralyzeAllPokemon(nil)
+          pbMessage("\\bHaha, yes! It worked!")
+          pbMessage("\\bYou'll never be able to beat me when your whole team is paralyzed!")
+          battle.scene.pbHideOpponent
+          battle.scene.disappearBar
+        }
     ZackStart = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0,false)
-             battle.scene.disappearDatabox
-             pbMessage("\\bThere's no way you can beat my Yanmite with that puny #{battle.battlers[0].pokemon.speciesName}!")
-             pbMessage("\\bYou're going down!")
-             battle.scene.pbHideOpponent
-             battle.scene.appearDatabox
-          }
+          battle.scene.appearBar
+          battle.scene.pbShowOpponent(0,false)
+          pbMessage("\\bThere's no way you can beat my Yanmite with that puny #{battle.battlers[0].pokemon.speciesName}!")
+          pbMessage("\\bYou're going down!")
+          battle.scene.pbHideOpponent
+          battle.scene.disappearBar
+        }
     ZackEevee = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0,false)
-             battle.scene.disappearDatabox
-             pbMessage("\\bAlright, it looks like #{battle.battlers[0].pokemon.speciesName} has some spirit after all...")
-             pbMessage("\\bBut now it's time to break that spirit! Go Eevee!")
-             if $Trainer.newGamePlusCount > 0
-               battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1])
-               battle.battlers[1].pbRaiseStatStage(PBStats::DEFENSE,1,battle.battlers[1],false)
-             else
-               battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1])
-             end
-             battle.scene.pbHideOpponent
-             battle.scene.appearDatabox
-          }
+          battle.scene.appearBar
+          battle.scene.pbShowOpponent(0,false)
+          pbMessage("\\bAlright, it looks like #{battle.battlers[0].pokemon.speciesName} has some spirit after all...")
+          pbMessage("\\bBut now it's time to break that spirit! Go Eevee!")
+          battle.scene.disappearBar
+          if $Trainer.newGamePlusCount > 0
+            battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1])
+            battle.battlers[1].pbRaiseStatStage(PBStats::DEFENSE,1,battle.battlers[1],false)
+          else
+            battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1])
+          end
+          battle.scene.pbHideOpponent
+        }
     ZackLabLast = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0,false)
-             battle.scene.disappearDatabox
-             pbMessage("\\bGahh! How are you still winning!?")
-             pbMessage("\\bYour #{battle.battlers[0].pokemon.speciesName} might be pretty strong...")
-             pbMessage("\\bBut I've got a secret weapon!")
-             pbMessage("\\bI've done some research of my own, and created this super strong Pokémon!")
-             pbMessage("\\bGo #{battle.battlers[1].pokemon.speciesName}, show them what you're made of!")
-             battle.pbCommonAnimation("StatUp",battle.battlers[1])
-             PBStats.eachMainBattleStat do |s|
-                battle.battlers[1].pbRaiseStatStageBasic(s,1)
-             end
-             battle.pbDisplay("All of #{battle.battlers[1].pokemon.speciesName}'s stats were raised!")
-             battle.scene.pbHideOpponent
-             battle.scene.appearDatabox
-          }
+          battle.scene.appearBar
+          battle.scene.pbShowOpponent(0,false)
+          pbMessage("\\bGahh! How are you still winning!?")
+          pbMessage("\\bYour #{battle.battlers[0].pokemon.speciesName} might be pretty strong...")
+          pbMessage("\\bBut I've got a secret weapon!")
+          pbMessage("\\bI've done some research of my own, and created this super strong Pokémon!")
+          pbMessage("\\bGo #{battle.battlers[1].pokemon.speciesName}, show them what you're made of!")
+          battle.scene.disappearBar
+          battle.pbCommonAnimation("StatUp",battle.battlers[1])
+          PBStats.eachMainBattleStat do |s|
+            battle.battlers[1].pbRaiseStatStageBasic(s,1)
+          end
+          battle.pbDisplay("All of #{battle.battlers[1].pokemon.speciesName}'s stats were raised!")
+          battle.scene.pbHideOpponent
+        }
     BrigidIntro = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0,true)
-             pbMessage("\\rLooks like I'll have to be the one to beat you...")
-             pbMessage("\\rIt's time you learned your place!")
-             pbMessage("\\rYou cannot stop the machinations of Quantech!")
-             battle.scene.pbHideOpponent
-          }
+          battle.scene.appearBar
+          battle.scene.pbShowOpponent(0,true)
+          pbMessage("\\rLooks like I'll have to be the one to beat you...")
+          pbMessage("\\rIt's time you learned your place!")
+          pbMessage("\\rYou cannot stop the machinations of Quantech!")
+          battle.scene.pbHideOpponent
+          battle.scene.disappearBar
+        }
     DamianIntro = Proc.new{|battle|
-             battle.scene.pbShowOpponent(0,true)
-             battle.scene.disappearDatabox
-             pbMessage("\\bLooks like I'll have to be the one to beat you...")
-             pbMessage("\\bIt's time you learned your place!")
-             pbMessage("\\bYou cannot stop the grand plans of Biogress!")
-             battle.scene.pbHideOpponent
-             battle.scene.appearDatabox
-          }
+          battle.scene.appearBar
+          battle.scene.pbShowOpponent(0,true)
+          battle.scene.disappearDatabox
+          pbMessage("\\bLooks like I'll have to be the one to beat you...")
+          pbMessage("\\bIt's time you learned your place!")
+          pbMessage("\\bYou cannot stop the grand plans of Biogress!")
+          battle.scene.pbHideOpponent
+          battle.scene.disappearBar
+        }
 
 # DONT DELETE THIS END
 end
