@@ -645,6 +645,12 @@ Pokemon = AZUMARILL,27
     Form = 1
 Pokemon = SCRAGGY,28
 #-------------------------------
+[BLACKBELT,Reese]
+Pokemon = AZUMARILL,29
+    Form = 1
+Pokemon = HITMONLEE,30
+    Form = 1
+#-------------------------------
 [PICNICKER,Tatiana]
 Pokemon = TROPIUS,28
 Pokemon = PARASECT,28
@@ -723,6 +729,14 @@ Pokemon = MILTANK,23
 Pokemon = FURRET,24
     Form = 1
 Pokemon = DITTO,25
+#-------------------------------
+[POKEMONBREEDER,Katie]
+Pokemon = FOONGUS,26
+    Form = 1
+Pokemon = TRAPINCH,27
+    Form = 1
+Pokemon = SEVIPER,27
+    Form = 1
 #-------------------------------
 [PSYCHIC_F,Felicia]
 Pokemon = KIRLIA,25

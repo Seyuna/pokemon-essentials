@@ -94,28 +94,15 @@ playtest notes:
 - You scurried home after fainting text looks bad, test my new fix
 - Esc key not working as another X or Cancel key, by default
 	- Only the last default control override works
-- Talk to guard north gate Moncto, talks about Brigid! Should be damian
-	- "Wait, or was it Damian? Eh, it's one of them."
-- Moncto typo! "Evolve in Tauros or Miltank" should be into
-- Update sprite of Adorbull trainer in Moncto to be male
-- Update Arenay shiny odds
-- Prof Elm and Professor Elm. Make them consistent in Moncto lab
-- 50% gender Arenay
-- Past and present tense conflict rival dialogue in Moncto battle
-	- "So of course I'd get frustrated!"
 - Draw enemy name above enemy sprite in Battle intro
-- Update boss in Ferrous Cave to be a Crobat
-	- Give him Manic Lunge
-	- Use the OW sprite for this event, have one jump down
-	- Make sure no other OWs in the cave are Crobats
 - Fix some of the dark spots in the grass
 - Lush Road, warning NPC, player turns left instead of up
 - Biogress in front of HQ, set player draw opacity to 160
 - Biogress cell researcher says lab with a lowercase L
-- FIX OUR BRIDGE COUNTERS
-	- Make sure they're all on impassable tiles
 
-Make player always refer to Arenay by its name?
+
+Make player always refer to Arenay by its name? 
+- \v[45]
 - Mom map scene, "traveling around the region with arenay"
 - "And arenay is so cute"
 - When talking to team leaders, use nickname "Arenay can change forms"
