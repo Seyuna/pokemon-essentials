@@ -2,7 +2,6 @@ WIP - Fix all bugs with NG+ and test it more thoroughly
 WIP - Teach some of our new Pokemon the new moves
 
 Make Credits images load automatically through script
-Update backsprite of Staconan Zubat Line, Solosis Line, Foongus Line and Troppy Line
 
 
 v0.6 Update Changelog ======================================================
@@ -79,6 +78,7 @@ DONE - Add shiny arenay portrait to lab event
 DONE - Test the set trainer order stuff for Zack lab fights
 DONE - RENAME THE GAME RXPROJ
 DONE - Update chapter display messages
+DONE - Update backsprite of Staconan Zubat Line, Solosis Line, Foongus Line and Troppy Line
 
 
 Cam
@@ -90,11 +90,10 @@ Cam
 
 playtest notes:
 - You scurried home after fainting text looks bad, test my new fix
-- Esc key not working as another X or Cancel key, by default
-	- Only the last default control override works
-- Draw enemy name above enemy sprite in Battle intro
+DONE - Esc key not working as another X or Cancel key, by default. Only the last default control override works
+DONE - Draw enemy name above enemy sprite in Battle intro
 - Fix some of the dark spots in the grass
-- bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
+DONE - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
 
 
 Make player always refer to Arenay by its name!
