@@ -82,17 +82,27 @@ DONE - Update chapter display messages
 
 
 Cam
-- Make player always refer to Arenay by its name?
-- Add Zubat/Golbat/Crobat OWs somewhere
 - Stacona forms all have pokedex entries
+- Mess around with Chapter Level scaling for wild pokemon in Plunge Pass, and Lappy Lake
+- Add super secret chairdaga fight
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
 playtest notes:
-- Fix arenay water OW sprite artifacts above
-- You scurried home after fainting text looks bad
-- Add shadows to cut trees, rock smash rocks, strength boulders
-- Arenay disappeared after loading into a save. It was in Lappy Lake we loaded in
+- You scurried home after fainting text looks bad, test my new fix
+- Esc key not working as another X or Cancel key, by default
+	- Only the last default control override works
+- Draw enemy name above enemy sprite in Battle intro
+- Fix some of the dark spots in the grass
+- bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
+
+
+Make player always refer to Arenay by its name!
+- \v[45]
+- Mom map scene, "traveling around the region with arenay"
+- "And arenay is so cute"
+- When talking to team leaders, use nickname "Arenay can change forms"
+- Also make team leader call Arenay by nickname... This Arenay...
 
 
 Broskiddo PR

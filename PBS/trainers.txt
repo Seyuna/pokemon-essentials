@@ -334,7 +334,7 @@ Pokemon = KLINKLANG,40
 Pokemon = REUNICLUS,40
     Form = 1
     Ball = 4
-Pokemon = AMPHAROS,40
+Pokemon = GARDEVOIR,40
     Form = 1
     Ball = 4
 #-------------------------------
@@ -368,9 +368,9 @@ Pokemon = ELECTIVIRE,43
     Ball = 25
 #-------------------------------
 [AROMALADY,Lily]
-Pokemon = BUDEW,5
+Pokemon = BUDEW,6
     Form = 1
-Pokemon = BABEE,6
+Pokemon = BABEE,7
     Item = HONEY
 #-------------------------------
 [AROMALADY,Lily,1]
@@ -380,8 +380,8 @@ Pokemon = POLLEKNIGHT,21
     Item = HONEY
 #-------------------------------
 [CAMPER,Travis]
-Pokemon = ADORABULL,6
-Pokemon = DUNSPARCE,7
+Pokemon = ADORABULL,8
+Pokemon = DUNSPARCE,8
     Form = 1
 #-------------------------------
 [CAMPER,Travis,1]
@@ -587,42 +587,42 @@ Pokemon = SOLOSIS,13
     Form = 1
 #-------------------------------
 [POKEMONRANGER_M,Mac]
-Pokemon = SENTRET,7
+Pokemon = SENTRET,9
     Form = 1
-Pokemon = AZURILL,7
+Pokemon = AZURILL,10
     Form = 1
-Pokemon = ADORABULL,8
+Pokemon = ADORABULL,10
 #-------------------------------
 [POKEMONRANGER_F,Deandra]
-Pokemon = YANMITE,8
-Pokemon = ZUBAT,8
+Pokemon = YANMITE,10
+Pokemon = ZUBAT,10
     Form = 1
-Pokemon = BUDEW,9
+Pokemon = BUDEW,11
     Form = 1
 #-------------------------------
 [LASS,Nikki]
-Pokemon = SWABLU,9
+Pokemon = SWABLU,10
     Form = 1
-Pokemon = SUNKERN,10
+Pokemon = SUNKERN,11
     Form = 1
 Pokemon = SHUPPET,11
     Form = 1
 #-------------------------------
 [PSYCHIC_M,Charlie]
-Pokemon = RALTS,10
+Pokemon = RALTS,12
     Form = 1
-Pokemon = SOLOSIS,10
+Pokemon = SOLOSIS,13
     Form = 1
 #-------------------------------
 [TAMER,Andy]
-Pokemon = ADORABULL,11
+Pokemon = ADORABULL,12
     Gender = male
-Pokemon = SANDILE,11
+Pokemon = SANDILE,13
     Form = 1
 #-------------------------------
 [BUGCATCHER,Bill]
-Pokemon = PINCUSH,10
-Pokemon = SICKLER,10
+Pokemon = PINCUSH,11
+Pokemon = SICKLER,11
 Pokemon = HERACUTE,11
 Pokemon = BABEE,12
     Gender = male
@@ -630,7 +630,7 @@ Pokemon = BABEE,12
 [AROMALADY,Artemis]
 Pokemon = BUDEW,12
     Form = 1
-Pokemon = PARAS,12
+Pokemon = PARAS,13
     Form = 1
 #-------------------------------
 [ENGINEER,Felix]
@@ -644,6 +644,12 @@ Pokemon = ELECTABUZZ,28
 Pokemon = AZUMARILL,27
     Form = 1
 Pokemon = SCRAGGY,28
+#-------------------------------
+[BLACKBELT,Reese]
+Pokemon = AZUMARILL,29
+    Form = 1
+Pokemon = HITMONLEE,30
+    Form = 1
 #-------------------------------
 [PICNICKER,Tatiana]
 Pokemon = TROPIUS,28
@@ -723,6 +729,14 @@ Pokemon = MILTANK,23
 Pokemon = FURRET,24
     Form = 1
 Pokemon = DITTO,25
+#-------------------------------
+[POKEMONBREEDER,Katie]
+Pokemon = FOONGUS,26
+    Form = 1
+Pokemon = TRAPINCH,27
+    Form = 1
+Pokemon = SEVIPER,27
+    Form = 1
 #-------------------------------
 [PSYCHIC_F,Felicia]
 Pokemon = KIRLIA,25
@@ -1185,28 +1199,28 @@ Pokemon = SABLEYE,31
     Ball = 24
 #-------------------------------
 [MECHGRUNT_F,Kara]
-Pokemon = PIKACHU,7
+Pokemon = PIKACHU,9
     Form = 1
     Ball = 25
-Pokemon = ELEKID,7
+Pokemon = ELEKID,9
     Form = 1
     Ball = 25
-Pokemon = WINGOT,8
+Pokemon = WINGOT,10
     Ball = 25
-Pokemon = AIPOM,8
+Pokemon = AIPOM,10
     Form = 1
     Ball = 25
 #-------------------------------
 [BIOGRUNT_F,Kara]
-Pokemon = SOLOSIS,7
+Pokemon = SOLOSIS,9
     Form = 1
     Ball = 24
-Pokemon = PARAS,7
+Pokemon = PARAS,9
     Form = 1
     Ball = 24
-Pokemon = HERACUTE,8
+Pokemon = HERACUTE,10
     Ball = 24
-Pokemon = FOONGUS,8
+Pokemon = FOONGUS,10
     Form = 1
     Ball = 24
 #-------------------------------
@@ -1376,10 +1390,10 @@ Pokemon = ARAQUANID,25
 Pokemon = UMBREON,25
 #-------------------------------
 [BUGCATCHER,Zach]
-Pokemon = APPLIN,7
+Pokemon = APPLIN,8
 Pokemon = SLOWPOKE,8
     Form = 1
-Pokemon = GROOKEY,8
+Pokemon = GROOKEY,9
 #-------------------------------
 [BUGCATCHER,Zach,1]
 Pokemon = FLAPPLE,21
@@ -1388,9 +1402,9 @@ Pokemon = SLOWKING,22
 Pokemon = THWACKEY,23
 #-------------------------------
 [PAINTER,Debra]
-Pokemon = SKWOVET,7
+Pokemon = SKWOVET,8
     Item = SITRUSBERRY
-Pokemon = ROWLET,7
+Pokemon = ROWLET,8
     Item = SITRUSBERRY
 Pokemon = TOXEL,8
     Item = SITRUSBERRY
