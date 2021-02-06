@@ -82,11 +82,13 @@ DONE - Update chapter display messages
 DONE - Mess around with Chapter Level scaling for wild pokemon in Plunge Pass, and Lappy Lake
 DONE - Update lab intro events, if the player doesnt have arenay, it doesnt make sense for leader to circle around
 DONE - Add super secret chairdaga fight
+DONE - Fix some of the dark spots in the grass
+DONE - Add some OW mons in and around the forest
 
 
 Cam
 - Stacona forms all have pokedex entries
-- Fix some of the dark spots in the grass (just do this through the tileset maybe?)
+TEST - Make player always refer to Arenay by its name!- \v[45]
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
@@ -99,12 +101,6 @@ TEST - bump up shiny icon in party screen, (y-10ish?) overlaps with status effec
 
 
 
-Make player always refer to Arenay by its name!
-- \v[45]
-- Mom map scene, "traveling around the region with arenay"
-- "And arenay is so cute"
-- When talking to team leaders, use nickname "Arenay can change forms"
-- Also make team leader call Arenay by nickname... This Arenay...
 
 
 Broskiddo PR

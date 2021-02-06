@@ -512,12 +512,12 @@ SuperRod
 086 # Maple Trail
 20,8,8
 Land
-    BLITZLE,22,27
-    HEATMOR,22,27
-    DURANT,22,27
-    HOUNDOUR,22,27
-    VENIPEDE,22,27
-    DARUMAKA,22,27
+    BLITZLE,23,28
+    HEATMOR,23,28
+    DURANT,23,28
+    SWABLU,23,28
+    FURRET,23,28
+    YANMA,23,28
 Water
     POLIWAG,22,27
     MAGIKARP,22,27
@@ -575,7 +575,7 @@ Land
     KANGA,6,11
     TROPPY,6,11
     BUDEW,6,11
-    ZANGOOSE,6,11
+    SWABLU,6,11
     SENTRET,6,11
 #-------------------------------
 093 # Lush Road
@@ -659,32 +659,32 @@ SuperRod
 100 # Dim Cave
 20,8,8
 Cave
-    SABLING,25,30
+    SABLEYE,25,30
     DUNSPARCE,25,30
-    AZURILL,25,30
-	ZUBAT,25,30
+    AZUMARILL,25,30
+	GOLBAT,25,30
     RIOLU,25,30
 	DUNSPARCE,25,30
 #-------------------------------
 101 # Maple Trail
 20,8,8
 Land
-    BLITZLE,25,30
-    HEATMOR,25,30
-    DURANT,25,30
-    HOUNDOUR,25,30
-    VENIPEDE,25,30
-    DARUMAKA,25,30
+    BLITZLE,27,32
+    HEATMOR,27,32
+    DURANT,27,32
+    SWABLU,27,32
+    FURRET,27,32
+    YANMA,27,32
 #-------------------------------
 103 # Verdant Valley
 20,8,8
 Land
-    ADORABULL,9,13
-    PARAS,9,13
-    SOLOSIS,9,13
-    MURKROW,9,13
-    HERACUTE,9,13
-    SICKLER,9,13
+    ADORABULL,10,14
+    PARAS,10,14
+    ZANGOOSE,10,14
+    SWABLU,10,14
+    HERACUTE,10,14
+    SOLOSIS,10,14
 Water
     MAGIKARP,20,25
     MAGIKARP,20,25
@@ -723,7 +723,7 @@ Land
     HERACUTE,13,20
     FOONGUS,13,20
     PARAS,13,20
-    JOLTIK,13,20
+    SWABLU,13,20
 #-------------------------------
 108 # Lumigen Hills
 20,8,8
