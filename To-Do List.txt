@@ -84,6 +84,7 @@ DONE - Update lab intro events, if the player doesnt have arenay, it doesnt make
 DONE - Add super secret chairdaga fight
 DONE - Fix some of the dark spots in the grass
 DONE - Add some OW mons in and around the forest
+DONE - Dev room redesign
 
 
 Cam
@@ -101,14 +102,10 @@ TEST - bump up shiny icon in party screen, (y-10ish?) overlaps with status effec
 
 
 
-
-
 Broskiddo PR
 WIP - NG+, and keep testing it
 WIP - TM issues fix
 
-Offstream Pog
-Dev room redesign?????
 
 
 
