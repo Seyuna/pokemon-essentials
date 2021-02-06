@@ -104,3 +104,4 @@
 101,MECHADMINF,Moderator,100,HGSS-143-BattleGymLeader.ogg,,,Male,,
 102,MECHADMINM,Moderator,100,HGSS-143-BattleGymLeader.ogg,,,Male,,
 103,BROSKIDDO,Programming God,100,HGSS-143-BattleGymLeader.ogg,,,Male,,
+104,CHAIRDAGA,Ultimate Being,100,Conquest-BattleFighting-FasterVersion,HGSS-Victory-FrontierBrain,,Male,,

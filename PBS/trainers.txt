@@ -154,6 +154,19 @@ Pokemon = ABSOL,31
     Ball = 24
 Pokemon = AVEON,34
 #-------------------------------
+[CHAIRDAGA,Chairdaga]
+Pokemon = POLLEKNIGHT,50
+Pokemon = GARDEVOIR,50
+    Form = 1
+Pokemon = ROSERADE,50
+    Form = 1
+Pokemon = HITMONTOP,50
+    Form = 1
+Pokemon = FLYGON,50
+    Form = 1
+Pokemon = ROCC,55
+    Form = 1
+#-------------------------------
 [CREATOR,Cameron]
 Pokemon = TYRANITAR,35
     Form = 1

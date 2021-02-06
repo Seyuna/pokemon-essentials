@@ -79,12 +79,13 @@ DONE - Add shiny arenay portrait to lab event
 DONE - Test the set trainer order stuff for Zack lab fights
 DONE - RENAME THE GAME RXPROJ
 DONE - Update chapter display messages
+DONE - Mess around with Chapter Level scaling for wild pokemon in Plunge Pass, and Lappy Lake
+DONE - Update lab intro events, if the player doesnt have arenay, it doesnt make sense for leader to circle around
+DONE - Add super secret chairdaga fight
 
 
 Cam
 - Stacona forms all have pokedex entries
-- Mess around with Chapter Level scaling for wild pokemon in Plunge Pass, and Lappy Lake
-- Add super secret chairdaga fight
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
