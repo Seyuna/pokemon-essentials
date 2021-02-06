@@ -89,11 +89,12 @@ Cam
 
 
 playtest notes:
-- You scurried home after fainting text looks bad, test my new fix
 DONE - Esc key not working as another X or Cancel key, by default. Only the last default control override works
 DONE - Draw enemy name above enemy sprite in Battle intro
-- Fix some of the dark spots in the grass
 DONE - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
+DONE - You scurried home after fainting text looks bad, test my new fix
+- Fix some of the dark spots in the grass
+
 
 
 Make player always refer to Arenay by its name!
