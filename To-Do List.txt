@@ -86,16 +86,17 @@ DONE - Add super secret chairdaga fight
 
 Cam
 - Stacona forms all have pokedex entries
+- Fix some of the dark spots in the grass (just do this through the tileset maybe?)
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
 playtest notes:
-- You scurried home after fainting text looks bad, test my new fix
-- Esc key not working as another X or Cancel key, by default
+TEST - You scurried home after fainting text looks bad, test my new fix
+TEST - Esc key not working as another X or Cancel key, by default
 	- Only the last default control override works
-- Draw enemy name above enemy sprite in Battle intro
-- Fix some of the dark spots in the grass
-- bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
+TEST - Draw enemy name above enemy sprite in Battle intro
+TEST - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
+
 
 
 Make player always refer to Arenay by its name!
