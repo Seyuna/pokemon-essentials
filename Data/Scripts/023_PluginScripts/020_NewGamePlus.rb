@@ -688,6 +688,7 @@ class PokeBattle_Battle
       @opponent.each_with_index do |t,i|
         tMoney += pbMaxLevelInTeam(1,i)*t.moneyEarned
       end
+      tMoney *= 1.75 #Thundaga splice native money multiplier
       tMoney *= 2 if @field.effects[PBEffects::AmuletCoin]
       tMoney *= 2 if @field.effects[PBEffects::HappyHour]
       tMoney = (tMoney * NewGamePlusData.moneyGain).floor.to_i

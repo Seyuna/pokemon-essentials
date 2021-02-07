@@ -675,7 +675,7 @@ ItemHandlers::UseOnPokemon.add(:EVRESET,proc{|item,pkmn,scene|
      pkmn.ev[4]=0
      pkmn.ev[5]=0
      scene.pbRefresh
-     scene.pbDisplay(_INTL("\\me[HGSSGetItem]{1}'s EVs were reset.",pkmn.name))
+     scene.pbDisplay(_INTL("{1}'s EVs were reset.",pkmn.name))
      pkmn.changeHappiness("vitamin")
      next true
    end

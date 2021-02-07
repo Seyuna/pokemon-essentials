@@ -491,6 +491,16 @@ module DialogueModule
           battle.scene.pbHideOpponent
           battle.scene.disappearBar
         }
+    ChairIntro = Proc.new{|battle|
+          battle.scene.appearBar
+          battle.scene.pbShowOpponent(0,true)
+          battle.scene.disappearDatabox
+          pbMessage("...")
+          pbMessage("It's just sitting there menacingly...")
+          pbMessage("You cannot begin to comprehend the power of this chair!")
+          battle.scene.pbHideOpponent
+          battle.scene.disappearBar
+        }
 
 # DONT DELETE THIS END
 end
