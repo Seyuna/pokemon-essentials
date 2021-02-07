@@ -265,7 +265,7 @@ class PokemonDataBox < SpriteWrapper
     if @battler.status>0
       s = @battler.status
       s = 6 if s==PBStatuses::POISON && @battler.statusCount>0   # Badly poisoned
-      imagePos.push(["Graphics/Pictures/Battle/icon_statuses",62,32,
+      imagePos.push(["Graphics/Pictures/Battle/icon_statuses",66,34,
          0,(s-1)*STATUS_ICON_HEIGHT,-1,STATUS_ICON_HEIGHT])
     end
     pbDrawImagePositions(self.bitmap,imagePos)
@@ -467,7 +467,7 @@ class AbilitySplashBar < SpriteWrapper
     textX = (@side==0) ? 15 : self.bitmap.width-12
     # Draw Pokémon's name
     textPos.push([_INTL("{1}'s",@battler.name),textX,3,@side==1,
-       Color.new(248,248,248),Color.new(132,132,132)])
+       Color.new(248,248,248),Color.new(123,115,131)])
     # Draw Pokémon's ability
     textPos.push([@battler.abilityName,textX,31,@side==1,
        TEXT_BASE_COLOR,TEXT_SHADOW_COLOR])

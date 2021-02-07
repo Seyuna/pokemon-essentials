@@ -324,7 +324,7 @@ class PokeBattle_Battle
         when 2
           if msgWindow
             pbMessageDisplay(msgWindow,_INTL("{1} sent out {2} and {3}!",t.fullname,
-               @battlers[sent[0]].name,@battlers[sent[1]].name)  {$PokemonTemp.smAnim[0].update}
+               @battlers[sent[0]].name,@battlers[sent[1]].name))  {$PokemonTemp.smAnim[0].update}
           else
             msg += _INTL("{1} sent out {2} and {3}!",t.fullname,
                @battlers[sent[0]].name,@battlers[sent[1]].name)

@@ -6,7 +6,7 @@ class PokeBattle_Scene
   def pbCommandMenu(idxBattler,firstAction)
     shadowTrainer = (hasConst?(PBTypes,:SHADOW) && @battle.trainerBattle?)
     cmds = [
-         _INTL("What will\n{1} do?",@battle.battlers[idxBattler].name),
+         _INTL("What will \n{1} do ?",@battle.battlers[idxBattler].name),
          _INTL("Fight"),
          _INTL("Bag"),
          _INTL("Pokémon"),
