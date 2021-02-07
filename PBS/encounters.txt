@@ -512,25 +512,25 @@ SuperRod
 086 # Maple Trail
 20,8,8
 Land
-    BLITZLE,23,28
-    HEATMOR,23,28
-    DURANT,23,28
-    SWABLU,23,28
-    FURRET,23,28
-    YANMA,23,28
+    BLITZLE,30,34
+    SWABLU,30,34
+    FURRET,30,34
+    YANMA,30,34
+	AIPOM,30,34
+    MARILL,30,34
 Water
-    POLIWAG,22,27
-    MAGIKARP,22,27
-    FINNEON,22,27
-    FINNEON,22,27
-    FINNEON,22,27
+    MAGIKARP,28,32
+    MAGIKARP,28,32
+    SANDILE,28,32
+    SANDILE,28,32
+    SANDILE,28,32
 OldRod
-    FINNEON,22,27
-    FINNEON,22,27
+    MAGIKARP,10,15
+    SANDILE,10,15
 GoodRod
-    FINNEON,32,37
-    FINNEON,32,37
-    FINNEON,32,37
+    MAGIKARP,31,34
+    SANDILE,31,34
+    MAGIKARP,31,34
 SuperRod
     FINNEON,42,47
     FINNEON,42,47
@@ -544,7 +544,7 @@ Cave
     ZUBAT,5,11
     MAGNEMITE,5,11
     NOSEPASS,5,11
-    ARON,5,11
+    ZUBAT,5,11
     DWEBBLE,5,11
     NOSEPASS,5,11
 #-------------------------------
@@ -553,7 +553,7 @@ Cave
 Cave
     ZUBAT,25,30
 	NOSEPASS,25,30
-    ARON,25,30
+    ZUBAT,25,30
 	NOSEPASS,25,30
     DWEBBLE,25,30
     MAGNETON,25,30
@@ -673,8 +673,8 @@ Land
     SWABLU,31,35
     FURRET,31,35
     YANMA,31,35
-	HEATMOR,31,35
-    DURANT,31,35
+	AIPOM,31,35
+    MARILL,31,35
 #-------------------------------
 103 # Verdant Valley
 20,8,8
@@ -708,12 +708,12 @@ SuperRod
 105 # Yama Pass
 20,8,8
 Land
-    TEDDIURSA,28,33
-    STANTLER,28,33
-    MAGBY,28,33
-    HOUNDOUR,28,33
-    MURKROW,28,33
-    PONYTA,28,33
+    BLITZLE,33,37
+    SWABLU,33,37
+    FURRET,33,37
+    YANMA,33,37
+	AIPOM,33,37
+    MARILL,33,37
 #-------------------------------
 107 # Stacona Woods
 20,8,8
@@ -897,22 +897,22 @@ Land
 151 # Haunted Hollow
 25,10,10
 Land
-    SUNKERN,29,34
-    JUMPLUFF,29,34
-    ARIADOS,29,34
-    MEOWSTIC,29,34
-    SHUPPET,29,34
-    SINISTEA,29,34
+    SUNKERN,31,35
+    HOPPIP,31,35
+    SPINARAK,31,35
+    ESPURR,31,35
+    SHUPPET,31,35
+    SINISTEA,31,35
 #-------------------------------
 152 # Haunted Cavern
 25,5,10
 Cave
-    SABLING,30,35
-	DRIFLOON,30,35
-    ZUBAT,30,35
-    SHUPPET,30,35
-    IMPIDIMP,30,35
-    SINISTEA,30,35
+    SABLING,31,36
+	DRIFLOON,31,36
+    ZUBAT,31,36
+    SHUPPET,31,36
+    IMPIDIMP,31,36
+    SINISTEA,31,36
 #-------------------------------
 161 # Cascade Cave
 25,7,10
