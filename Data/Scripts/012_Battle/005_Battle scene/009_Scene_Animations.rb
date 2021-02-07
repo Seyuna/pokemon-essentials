@@ -7,7 +7,7 @@ class PokeBattle_Scene
     introAnim = BattleIntroAnimation.new(@sprites,@viewport,@battle)
     loop do
       introAnim.update
-      pbUpdate
+      pbUpdate if !$smAnim
       break if introAnim.animDone?
     end
     introAnim.dispose
@@ -101,8 +101,8 @@ class PokeBattle_Scene
       pbRefresh
       if @battle.opposes?(b[0])
         sendOutAnim = PokeballTrainerSendOutAnimation.new(@sprites,@viewport,
-           @battle.pbGetOwnerIndexFromBattlerIndex(b[0])+1,
-           @battle.battlers[b[0]],startBattle,i)
+          @battle.pbGetOwnerIndexFromBattlerIndex(b[0])+1,
+          @battle.battlers[b[0]],startBattle,i)
       else
         if @battle.battlers[b[0]].index == 0 && @battle.battlers[b[0]].isSpecies?(:ARENAY)
           sendOutAnim = FollowerPlayerSendOutAnimation.new(@sprites,@viewport,
