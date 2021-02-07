@@ -46,9 +46,9 @@ Events.onWildPokemonCreate+=proc {|sender,e|
       #pokemon.level=newlevel
       pokemon.calcStats
       pokemon.resetMoves
-      evolvePokemonSilent(pokemon)
-      evolvePokemonSilent(pokemon)
    end
+   evolvePokemonSilent(pokemon)
+   evolvePokemonSilent(pokemon)
 }
 
 =begin

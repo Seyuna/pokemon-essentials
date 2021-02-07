@@ -38,9 +38,9 @@ Point=13,16,Here,,,,,
 [2]
 Name=
 Filename=mapRegion2.png
-Point=14,10,Moncto Town,,43,46,12,
+Point=14,10,Moncto Town,,43,46,20,
 Point=14,6,Fleural Town,,79,37,37,
-Point=14,14,Lumigen City,,81,35,13,
+Point=14,14,Lumigen City,,81,45,13,
 Point=11,13,Ferrous Cave,,,,,
 Point=15,10,Plunge Pass,,,,,
 Point=16,10,Plunge Pass,,,,,

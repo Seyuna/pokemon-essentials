@@ -355,6 +355,7 @@ class PokeBattle_Battle
       end
       tMoney *= 2 if @field.effects[PBEffects::AmuletCoin]
       tMoney *= 2 if @field.effects[PBEffects::HappyHour]
+      #tMoney *= 2 #Thundaga double money in Splice
       oldMoney = pbPlayer.money
       pbPlayer.money += tMoney
       moneyGained = pbPlayer.money-oldMoney

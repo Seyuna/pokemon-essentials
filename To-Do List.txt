@@ -85,26 +85,28 @@ DONE - Add super secret chairdaga fight
 DONE - Fix some of the dark spots in the grass
 DONE - Add some OW mons in and around the forest
 DONE - Dev room redesign
+DONE - You scurried home after fainting text looks bad, test my new fix
+DONE - INCREASE MONEY GAINS
+DONE - Make player always refer to Arenay by its name!- \v[45]
 
 
 Cam
 - Stacona forms all have pokedex entries
-TEST - Make player always refer to Arenay by its name!- \v[45]
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
 playtest notes:
-TEST - You scurried home after fainting text looks bad, test my new fix
-TEST - Esc key not working as another X or Cancel key, by default
-	- Only the last default control override works
-TEST - Draw enemy name above enemy sprite in Battle intro
-TEST - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
+INCREASE TM GAINS
 
 
 
 Broskiddo PR
 WIP - NG+, and keep testing it
-WIP - TM issues fix
+WIP - TM for all Pokemon fix
+TEST - Esc key not working as another X or Cancel key, by default
+	- Only the last default control override works
+TEST - Draw enemy name above enemy sprite in Battle intro
+TEST - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
 
 
 

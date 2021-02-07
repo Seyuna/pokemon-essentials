@@ -718,12 +718,12 @@ Land
 107 # Stacona Woods
 20,8,8
 Land
-    PINCUSH,13,20
-    SICKLER,13,20
-    HERACUTE,13,20
-    FOONGUS,13,20
-    PARAS,13,20
-    SWABLU,13,20
+    PINCUSH,14,18
+    SICKLER,14,18
+    HERACUTE,14,18
+    FOONGUS,14,18
+    PARAS,14,18
+    SWABLU,14,18
 #-------------------------------
 108 # Lumigen Hills
 20,8,8
@@ -758,21 +758,21 @@ SuperRod
 20,8,8
 Cave
     MAREEP,20,26
-    SNORUNT,20,26
-    SWINUB,20,26
-    SNEASEL,20,26
     NUMEL,20,26
-    SNEASEL,20,26
+    SWINUB,20,26
+    MAREEP,20,26
+    NUMEL,20,26
+    MAREEP,20,26
 #-------------------------------
 111 # Ferrous Cave
 25,11,11
 Cave
-    ZUBAT,12,16
-    RALTS,12,16
-    AZURILL,12,16
-    PARAS,12,16
-    ZUBAT,12,16
-    ZUBAT,12,16
+    ZUBAT,11,14
+    RALTS,11,14
+    AZURILL,11,14
+    PARAS,11,14
+    ZUBAT,11,14
+    ZUBAT,11,14
 #-------------------------------
 113 # Driftwood City
 20,8,8
@@ -799,12 +799,12 @@ SuperRod
 121 # Ferrous Cave
 20,11,11
 Cave
-    ZUBAT,15,19
-    RALTS,15,19
-    AZURILL,15,19
-    PARAS,15,19
-    ALUMIDON,15,19
-    LARVITAR,15,19
+    ZUBAT,14,17
+    RALTS,14,17
+    AZURILL,14,17
+    PARAS,14,17
+    ALUMIDON,14,17
+    LARVITAR,14,17
 Water
     POLIWAG,25,30
     FINNEON,25,30

@@ -1233,9 +1233,9 @@ class PokemonPartyScreen
           pbSwitch(oldpkmnid,pkmnid)
         end
       elsif cmdRename>=0 && command==cmdRename
-        if pkmn.isForeign?($Trainer) #checks if the pokemon isnt yours, if is that the case, shows text
-          @scene.pbDisplay(_INTL("This Pokémon isn't yours.\nIts in memory of it's Original Trainer."))
-        else
+        #if pkmn.isForeign?($Trainer) #checks if the pokemon isnt yours, if is that the case, shows text
+        #  @scene.pbDisplay(_INTL("This Pokémon isn't yours.\nIts in memory of it's Original Trainer."))
+        #else
           @scene.pbDisplay(_INTL("Choose the Nickname that you want."))
           speciesname = PBSpecies.getName(pkmn.species)
           oldname = (pkmn.name && pkmn.name!=speciesname) ? pkmn.name : ""
@@ -1248,7 +1248,7 @@ class PokemonPartyScreen
               pkmn.name = speciesname #...change its name from the species name
               pbRefreshSingle(pkmnid)
             end
-        end
+        #end
       elsif cmdMail>=0 && command==cmdMail
         command = @scene.pbShowCommands(_INTL("Do what with the mail?"),
            [_INTL("Read"),_INTL("Take"),_INTL("Cancel")])
