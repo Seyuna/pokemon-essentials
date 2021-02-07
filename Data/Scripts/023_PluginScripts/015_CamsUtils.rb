@@ -7,6 +7,7 @@ def poisonAllPokemon(event=nil)
           pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
           pkmn.status!=0
        pkmn.status = 2
+       pkmn.statusCount = 1
      end
 end
 

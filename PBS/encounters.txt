@@ -659,22 +659,22 @@ SuperRod
 100 # Dim Cave
 20,8,8
 Cave
-    SABLEYE,25,30
-    DUNSPARCE,25,30
-    AZUMARILL,25,30
-	GOLBAT,25,30
-    RIOLU,25,30
-	DUNSPARCE,25,30
+    SABLEYE,26,29
+    DUNSPARCE,26,29
+    AZUMARILL,26,29
+	GOLBAT,26,29
+    RIOLU,26,29
+	DUNSPARCE,26,29
 #-------------------------------
 101 # Maple Trail
 20,8,8
 Land
-    BLITZLE,27,32
-    HEATMOR,27,32
-    DURANT,27,32
-    SWABLU,27,32
-    FURRET,27,32
-    YANMA,27,32
+    BLITZLE,31,35
+    SWABLU,31,35
+    FURRET,31,35
+    YANMA,31,35
+	HEATMOR,31,35
+    DURANT,31,35
 #-------------------------------
 103 # Verdant Valley
 20,8,8

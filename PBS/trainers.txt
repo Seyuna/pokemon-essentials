@@ -126,10 +126,10 @@ Pokemon = EEVEE,6
 #-------------------------------
 [SPLICERIVAL1,Zack,1]
 Items = SUPERPOTION,HYPERPOTION
-Pokemon = YANMA,33
+Pokemon = YANMEGA,33
     Form = 1
     Ball = 25
-Pokemon = ZEBSTRIKA,33
+Pokemon = ZEBSTRIKA,34
     Form = 1
     Ball = 25
 Pokemon = SEVIPER,34
@@ -141,10 +141,10 @@ Pokemon = CHROMEON,35
 #-------------------------------
 [SPLICERIVAL2,Zack,2]
 Items = SUPERPOTION,HYPERPOTION
-Pokemon = YANMA,33
+Pokemon = YANMEGA,33
     Form = 1
     Ball = 24
-Pokemon = LUDICOLO,33
+Pokemon = LUDICOLO,34
     Form = 1
     Ball = 24
 Pokemon = ZANGOOSE,34
@@ -647,7 +647,7 @@ Pokemon = PARAS,13
     Form = 1
 #-------------------------------
 [ENGINEER,Felix]
-Pokemon = CORVISQUIRE,26
+Pokemon = CORVISQUIRE,27
 Pokemon = KLINK,27
     Form = 1
 Pokemon = ELECTABUZZ,28

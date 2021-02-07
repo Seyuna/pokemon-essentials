@@ -402,16 +402,18 @@ module DialogueModule
           pbMessage("\\bCheck this out \\PN! Damian gave me a special new tool!")
           pbMessage("\\bGet poisoned!")
           battle.scene.disappearBar
+          battle.pbAnimation(getID(PBMoves,:TOXIC),battle.battlers[1],battle.battlers[0])
           if battle.battlers[0].pbCanInflictStatus?(PBStatuses::POISON,battle.battlers[1],false)
-            battle.battlers[0].pbInflictStatus(PBStatuses::POISON,0,"Your Pokémon were poisoned!")
+            battle.battlers[0].pbInflictStatus(PBStatuses::POISON,1,"Your Pokémon were all badly poisoned!")
           else
-            battle.pbCommonAnimation("Poison",battle.battlers[1],battle.battlers[0])
-            pbMessage("Your party has been poisoned!")
+            #battle.pbCommonAnimation("Poison",battle.battlers[1],battle.battlers[0])
+            pbMessage("Your party has been badly poisoned!")
           end
           battle.scene.appearBar
           poisonAllPokemon(nil)
           pbMessage("\\bHaha, yes! It worked!")
-          pbMessage("\\bYou'll never be able to beat me when your whole team is poisoned!")
+          pbMessage("\\bYou'll never be able to beat me when your whole team is badly poisoned!")
+          pbMessage("\\bNow prepare to be crushed by my new Biogress team!")
           battle.scene.pbHideOpponent
           battle.scene.disappearBar
         }
@@ -421,6 +423,7 @@ module DialogueModule
           pbMessage("\\bCheck this out \\PN! Brigid gave me a special new tool!")
           pbMessage("\\bGet zapped!")
           battle.scene.disappearBar
+          battle.pbAnimation(getID(PBMoves,:SPARK),battle.battlers[1],battle.battlers[0])
           if battle.battlers[0].pbCanInflictStatus?(PBStatuses::PARALYSIS,battle.battlers[1],false)
             battle.battlers[0].pbInflictStatus(PBStatuses::PARALYSIS,0,"Your Pokémon were paralyzed!")
           else
@@ -431,13 +434,14 @@ module DialogueModule
           paralyzeAllPokemon(nil)
           pbMessage("\\bHaha, yes! It worked!")
           pbMessage("\\bYou'll never be able to beat me when your whole team is paralyzed!")
+          pbMessage("\\bNow prepare to be crushed by my new Quantech team!")
           battle.scene.pbHideOpponent
           battle.scene.disappearBar
         }
     ZackStart = Proc.new{|battle|
           battle.scene.appearBar
           battle.scene.pbShowOpponent(0,false)
-          pbMessage("\\bThere's no way you can beat my Yanmite with that puny #{battle.battlers[0].pokemon.speciesName}!")
+          pbMessage("\\bThere's no way you can beat my Yanmite with that weak little #{battle.battlers[0].pokemon.speciesName}!")
           pbMessage("\\bYou're going down!")
           battle.scene.pbHideOpponent
           battle.scene.disappearBar
@@ -451,6 +455,7 @@ module DialogueModule
           if $Trainer.newGamePlusCount > 0
             battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1])
             battle.battlers[1].pbRaiseStatStage(PBStats::DEFENSE,1,battle.battlers[1],false)
+            battle.battlers[1].pbRaiseStatStage(PBStats::SPDEF,1,battle.battlers[1],false)
           else
             battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1])
           end

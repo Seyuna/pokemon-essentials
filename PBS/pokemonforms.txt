@@ -3347,8 +3347,10 @@ Abilities = MULTISCALE,MOLDBREAKER
 HiddenAbility = ADAPTABILITY
 Moves = 0,DRAGONDANCE,1,LEECHLIFE,1,TACKLE,1,FORESIGHT,1,TWINEEDLE,6,TWISTER,11,DRAGONDANCE,14,DUALCHOP,17,DETECT,22,FELLSTINGER,27,SILVERWIND,30,DRAGONTAIL,33,WINGATTACK,38,HYPNOSIS,43,ANCIENTPOWER,46,NASTYPLOT,49,DRAGONHAMMER,54,DRAGONPULSE,57,BUGBUZZ
 Pokedex = By showing off all of its colors it attracts other Staconan Yanma. The more colors it has the more likely it is to get a mate.
-BattlerPlayerX = 0
-BattlerEnemyY = -2
+BattlerPlayerX = -1
+BattlerPlayerY = -2
+BattlerEnemyX = 2
+BattlerEnemyY = 2
 #-------------------------------
 [YANMEGA,1]
 FormName = Stacona Form
@@ -3360,6 +3362,7 @@ HiddenAbility = ADAPTABILITY
 Moves = 0,OUTRAGE,1,LEECHLIFE,1,NIGHTSLASH,1,BUGBITE,1,TACKLE,1,FORESIGHT,1,TWISTER,1,DRAGONDANCE,1,TWINEEDLE,6,TWISTER,11,DRAGONDANCE,14,DUALCHOP,17,DETECT,22,FELLSTINGER,27,SILVERWIND,30,DRAGONTAIL,35,ANCIENTPOWER,41,HYPNOSIS,46,WINGATTACK,50,NASTYPLOT,54,DRAGONHAMMER,58,DRAGONPULSE,61,BUGBUZZ
 Pokedex = It has been said that Staconan Yanma and Yanmega came to be when a Staconan Togetic blessed a Johtonian Yanma with its rainbows.
 BattlerPlayerX = 0
+BattlerPlayerY = -3
 BattlerEnemyY = -2
 #-------------------------------
 [ZUBAT,1]
