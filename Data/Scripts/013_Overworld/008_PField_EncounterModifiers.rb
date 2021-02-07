@@ -34,6 +34,23 @@ Events.onWildPokemonCreate+=proc {|sender,e|
    end
 }
 
+Events.onWildPokemonCreate+=proc {|sender,e|
+   pokemon=e[0]
+   #19-24 = plunge pass, lappy lake,
+   ch2sector=[98,99]
+
+   # Chapter 2 Plunge Pass level increases
+   if $game_map.map_id!=0 && $game_variables[35]>=2 && ch2sector.include?($game_map.map_id)
+      MINLEVEL=19
+      pokemon.level=(MINLEVEL + rand(5))
+      #pokemon.level=newlevel
+      pokemon.calcStats
+      pokemon.resetMoves
+   end
+   evolvePokemonSilent(pokemon)
+   evolvePokemonSilent(pokemon)
+}
+
 =begin
 Events.onWildPokemonCreate+=proc {|sender,e|
    pokemon=e[0]
