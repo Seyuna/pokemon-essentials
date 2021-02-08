@@ -1548,7 +1548,7 @@ Pokemon = ZANGOOSE,22
 Pokemon = SANDILE,23
 	Form = 1
 #-------------------------------
-[BEAUTY,Vivian]
+[COOLTRAINER_F,Vivian]
 Pokemon = AIPOM,22
     Form = 1
 Pokemon = AZUMARILL,23
