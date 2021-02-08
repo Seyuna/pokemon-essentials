@@ -2738,7 +2738,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = -2
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = MAGNEZONE,Location,49,MAGNEZONE,Location,50,MAGNEZONE,Location,51,MAGNEZONE,Location,90
+Evolutions = MAGNEZONE,Location,49,MAGNEZONE,Location,50,MAGNEZONE,Location,51,MAGNEZONE,Location,90,MAGNEZONE,Item,MECHSTONE
 #-------------------------------
 [83]
 Name = Farfetch'd
@@ -4240,7 +4240,7 @@ BattlerEnemyX = -3
 BattlerEnemyY = 12
 BattlerShadowX = 0
 BattlerShadowSize = 3
-Evolutions = PINTERRA,Level,40
+Evolutions = PINTERRA,Item,BIOSTONE
 #-------------------------------
 [128]
 Name = Tauros
@@ -7132,7 +7132,7 @@ BattlerEnemyX = -2
 BattlerEnemyY = 11
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions = HERAPLEX,Level,40
+Evolutions = HERAPLEX,Item,BIOSTONE
 #-------------------------------
 [215]
 Name = Sneasel
@@ -7568,7 +7568,7 @@ BattlerEnemyX = 0
 BattlerEnemyY = 10
 BattlerShadowX = 0
 BattlerShadowSize = 3
-Evolutions = SKARTILLERY,Level,40
+Evolutions = SKARTILLERY,Item,MECHSTONE
 #-------------------------------
 [228]
 Name = Houndour

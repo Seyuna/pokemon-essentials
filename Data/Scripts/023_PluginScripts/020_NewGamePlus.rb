@@ -602,7 +602,8 @@ class PokeBattle_Battle
         exp = (exp*1.5).floor
       end
     end
-    exp = (exp * NewGamePlusData.expGain).floor
+    #Thundaga globally reducing EXP gains to 90%
+    exp = ((exp * 0.9) * NewGamePlusData.expGain).floor
     # Modify Exp gain based on pkmn's held item
     i = BattleHandlers.triggerExpGainModifierItem(pkmn.item,pkmn,exp)
     if i<0

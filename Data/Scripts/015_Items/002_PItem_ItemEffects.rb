@@ -1188,7 +1188,15 @@ ItemHandlers::UseOnPokemon.add(:ABILITYPATCH,proc { |item,pkmn,scene|
   next false
 })
 
-ItemHandlers::UseFromBag.add(:VIAL,proc{|item|
+# Voltseon
+# Vial item
+# At pokecenter put: $game_variables[50] = 3
+# At pokecenter put: $PokemonBag.pbChangeItem(:EMPTYVIAL,:VIAL)
+ItemHandlers::UseInField.add(:VIAL,proc{|item|
+   if $game_variables[52] == 0 #Thundaga, making it so the vial can always be used initially.
+     $game_variables[50] = 1
+     $game_variables[50] = 1
+   end
    case $game_variables[50]
    when 0
      pbMessage(_INTL("You do not have any charges left..."))
@@ -1214,8 +1222,11 @@ ItemHandlers::UseFromBag.add(:VIAL,proc{|item|
    next 1
 })
 
-
-ItemHandlers::UseInField.add(:VIAL,proc{|item|
+ItemHandlers::UseFromBag.add(:VIAL,proc{|item|
+   if $game_variables[52] == 0 #Thundaga, making it so the vial can always be used initially.
+     $game_variables[50] = 1
+     $game_variables[50] = 1
+   end
    case $game_variables[50]
    when 0
      pbMessage(_INTL("You do not have any charges left..."))

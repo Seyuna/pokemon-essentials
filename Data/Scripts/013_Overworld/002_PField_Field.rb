@@ -1087,12 +1087,13 @@ def pbPoisonBog(event=nil)
           pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
           pkmn.status!=0
        pkmn.status = 2
+       pkmn.statusCount = 2
        poisoned=true
        #pkmn.statusCount = 1 # Remove this if you don't want toxic poison
      end
      if poisoned
        $scene.spriteset.addUserAnimation(14,event.x,event.y-1,true,1)
-       pbMessage(_INTL("All of your Pokémon became poisoned!"))
+       pbMessage(_INTL("All of your Pokémon became badly poisoned!"))
      end
   end
 end
@@ -1121,6 +1122,7 @@ def poisonAllPokemon(event=nil)
           pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
           pkmn.status!=0
        pkmn.status = 2
+       pkmn.statusCount = 2
      end
 end
 
