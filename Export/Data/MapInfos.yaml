@@ -1,0 +1,1145 @@
+---
+root:
+  18: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Cedolan Dept. 5F
+    expanded: false
+    order: 111
+    scroll_y: 272
+    parent_id: 14
+  55: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Tower
+    expanded: false
+    order: 143
+    scroll_y: 240
+    parent_id: 52
+  92: !ruby/object:RPG::MapInfo
+    scroll_x: 852
+    name: Verdant Valley
+    expanded: true
+    order: 78
+    scroll_y: 507
+    parent_id: 33
+  129: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Dim Cave
+    expanded: true
+    order: 56
+    scroll_y: 1341
+    parent_id: 100
+  37: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: !binary |-
+      UG9rw6ltb24gTGVhZ3Vl
+    expanded: false
+    order: 127
+    scroll_y: 240
+    parent_id: 35
+  74: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Cycling Road gate
+    expanded: false
+    order: 135
+    scroll_y: 240
+    parent_id: 44
+  111: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Ferrous Cave
+    expanded: true
+    order: 90
+    scroll_y: 1372
+    parent_id: 108
+  148: !ruby/object:RPG::MapInfo
+    scroll_x: 899
+    name: Driftwood Apartments
+    expanded: false
+    order: 77
+    scroll_y: 557
+    parent_id: 113
+  56: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Tower arena
+    expanded: false
+    order: 144
+    scroll_y: 240
+    parent_id: 55
+  93: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Lush Road
+    expanded: true
+    order: 84
+    scroll_y: 1141
+    parent_id: 33
+  130: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Mt. Maple
+    expanded: true
+    order: 37
+    scroll_y: 692
+    parent_id: 105
+  19: !ruby/object:RPG::MapInfo
+    scroll_x: 512
+    name: Cedolan Dept. Rooftop
+    expanded: false
+    order: 112
+    scroll_y: 320
+    parent_id: 14
+  75: !ruby/object:RPG::MapInfo
+    scroll_x: 512
+    name: Tiall Region
+    expanded: false
+    order: 162
+    scroll_y: 384
+    parent_id: 162
+  112: !ruby/object:RPG::MapInfo
+    scroll_x: 400
+    name: Alpha Lab
+    expanded: false
+    order: 58
+    scroll_y: 320
+    parent_id: 98
+  149: !ruby/object:RPG::MapInfo
+    scroll_x: 480
+    name: EV Dojo
+    expanded: false
+    order: 51
+    scroll_y: 400
+    parent_id: 99
+  1: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Intro
+    expanded: false
+    order: 1
+    scroll_y: 240
+    parent_id: 0
+  38: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Hall of Fame
+    expanded: false
+    order: 128
+    scroll_y: 240
+    parent_id: 35
+  94: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Fleural Farm Day Care
+    expanded: false
+    order: 28
+    scroll_y: 240
+    parent_id: 79
+  131: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Mt. Maple Lab
+    expanded: false
+    order: 38
+    scroll_y: 467
+    parent_id: 130
+  20: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Cedolan Dept. Elevator
+    expanded: false
+    order: 113
+    scroll_y: 240
+    parent_id: 14
+  57: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Stadium Cup lobby
+    expanded: false
+    order: 145
+    scroll_y: 240
+    parent_id: 55
+  113: !ruby/object:RPG::MapInfo
+    scroll_x: 1057
+    name: Driftwood City
+    expanded: true
+    order: 60
+    scroll_y: 459
+    parent_id: 33
+  150: !ruby/object:RPG::MapInfo
+    scroll_x: 1110
+    name: Folian Grove
+    expanded: false
+    order: 10
+    scroll_y: 519
+    parent_id: 78
+  2: !ruby/object:RPG::MapInfo
+    scroll_x: 512
+    name: Lappet Town
+    expanded: true
+    order: 95
+    scroll_y: 336
+    parent_id: 162
+  39: !ruby/object:RPG::MapInfo
+    scroll_x: 704
+    name: Route 4
+    expanded: false
+    order: 129
+    scroll_y: 368
+    parent_id: 162
+  76: !ruby/object:RPG::MapInfo
+    scroll_x: 1750
+    name: Moncto Town
+    expanded: false
+    order: 6
+    scroll_y: 459
+    parent_id: 43
+  132: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Plunge Pass
+    expanded: false
+    order: 59
+    scroll_y: 240
+    parent_id: 98
+  21: !ruby/object:RPG::MapInfo
+    scroll_x: 624
+    name: Route 2
+    expanded: false
+    order: 114
+    scroll_y: 527
+    parent_id: 162
+  58: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Palace
+    expanded: false
+    order: 146
+    scroll_y: 240
+    parent_id: 52
+  95: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Fleural Town Pokecenter
+    expanded: false
+    order: 29
+    scroll_y: 240
+    parent_id: 79
+  151: !ruby/object:RPG::MapInfo
+    scroll_x: 1174
+    name: Haunted Hollow
+    expanded: true
+    order: 44
+    scroll_y: 678
+    parent_id: 101
+  3: !ruby/object:RPG::MapInfo
+    scroll_x: 496
+    name: "\\PN's house"
+    expanded: false
+    order: 96
+    scroll_y: 240
+    parent_id: 2
+  40: !ruby/object:RPG::MapInfo
+    scroll_x: 528
+    name: Route 4
+    expanded: false
+    order: 130
+    scroll_y: 336
+    parent_id: 39
+  77: !ruby/object:RPG::MapInfo
+    scroll_x: 1238
+    name: Costa Path
+    expanded: true
+    order: 23
+    scroll_y: 459
+    parent_id: 33
+  114: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Driftwood Gate A
+    expanded: false
+    order: 61
+    scroll_y: 240
+    parent_id: 113
+  22: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: test
+    expanded: true
+    order: 2
+    scroll_y: 240
+    parent_id: 0
+  59: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Palace arena
+    expanded: false
+    order: 147
+    scroll_y: 240
+    parent_id: 58
+  96: !ruby/object:RPG::MapInfo
+    scroll_x: 2198
+    name: Lush Road
+    expanded: false
+    order: 85
+    scroll_y: 459
+    parent_id: 93
+  133: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Dragon's Den
+    expanded: false
+    order: 87
+    scroll_y: 906
+    parent_id: 93
+  4: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: !binary |-
+      UG9rw6ltb24gTGFi
+    expanded: false
+    order: 98
+    scroll_y: 240
+    parent_id: 2
+  41: !ruby/object:RPG::MapInfo
+    scroll_x: 576
+    name: Route 5
+    expanded: false
+    order: 132
+    scroll_y: 3947
+    parent_id: 162
+  78: !ruby/object:RPG::MapInfo
+    scroll_x: 704
+    name: Pollen Path
+    expanded: true
+    order: 9
+    scroll_y: 987
+    parent_id: 33
+  115: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Driftwood Gate B
+    expanded: false
+    order: 62
+    scroll_y: 240
+    parent_id: 113
+  152: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Haunted Cavern
+    expanded: false
+    order: 45
+    scroll_y: 1417
+    parent_id: 151
+  23: !ruby/object:RPG::MapInfo
+    scroll_x: 656
+    name: Lerucean Town
+    expanded: false
+    order: 115
+    scroll_y: 467
+    parent_id: 162
+  60: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Arena
+    expanded: false
+    order: 148
+    scroll_y: 240
+    parent_id: 52
+  97: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Moncto Town Gate
+    expanded: false
+    order: 8
+    scroll_y: 467
+    parent_id: 43
+  134: !ruby/object:RPG::MapInfo
+    scroll_x: 416
+    name: Maple Trail
+    expanded: false
+    order: 43
+    scroll_y: 240
+    parent_id: 101
+  5: !ruby/object:RPG::MapInfo
+    scroll_x: 576
+    name: Route 1
+    expanded: false
+    order: 99
+    scroll_y: 384
+    parent_id: 162
+  42: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Maple Town Pokecenter
+    expanded: false
+    order: 35
+    scroll_y: 240
+    parent_id: 102
+  79: !ruby/object:RPG::MapInfo
+    scroll_x: 1202
+    name: Fleural Town
+    expanded: true
+    order: 27
+    scroll_y: 1004
+    parent_id: 33
+  116: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Driftwood City Pokecenter
+    expanded: false
+    order: 64
+    scroll_y: 240
+    parent_id: 113
+  153: !ruby/object:RPG::MapInfo
+    scroll_x: 480
+    name: Haunted Gate
+    expanded: false
+    order: 46
+    scroll_y: 240
+    parent_id: 151
+  24: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: !binary |-
+      TGVydWNlYW4gVG93biBQb2vDqSBDZW50ZXI=
+    expanded: false
+    order: 116
+    scroll_y: 240
+    parent_id: 23
+  61: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Arena arena
+    expanded: false
+    order: 149
+    scroll_y: 240
+    parent_id: 60
+  98: !ruby/object:RPG::MapInfo
+    scroll_x: 1686
+    name: Plunge Pass
+    expanded: true
+    order: 49
+    scroll_y: 629
+    parent_id: 33
+  135: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Driftwood Dept. 1F
+    expanded: true
+    order: 69
+    scroll_y: 272
+    parent_id: 113
+  6: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Kurt's house
+    expanded: false
+    order: 100
+    scroll_y: 240
+    parent_id: 5
+  43: !ruby/object:RPG::MapInfo
+    scroll_x: 1222
+    name: Moncto Town
+    expanded: true
+    order: 5
+    scroll_y: 733
+    parent_id: 33
+  80: !ruby/object:RPG::MapInfo
+    scroll_x: 1051
+    name: Iron Pass
+    expanded: true
+    order: 11
+    scroll_y: 1283
+    parent_id: 33
+  117: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: The Biogress Foundation
+    expanded: true
+    order: 30
+    scroll_y: 467
+    parent_id: 79
+  154: !ruby/object:RPG::MapInfo
+    scroll_x: 480
+    name: Gravekeeper's House
+    expanded: false
+    order: 47
+    scroll_y: 320
+    parent_id: 151
+  25: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Lerucean Town Mart
+    expanded: false
+    order: 117
+    scroll_y: 240
+    parent_id: 23
+  62: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Factory
+    expanded: false
+    order: 150
+    scroll_y: 240
+    parent_id: 52
+  99: !ruby/object:RPG::MapInfo
+    scroll_x: 1103
+    name: Lappy Lake
+    expanded: true
+    order: 50
+    scroll_y: 459
+    parent_id: 98
+  136: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Driftwood Dept. 2F
+    expanded: false
+    order: 70
+    scroll_y: 272
+    parent_id: 135
+  7: !ruby/object:RPG::MapInfo
+    scroll_x: 921
+    name: Cedolan City
+    expanded: false
+    order: 101
+    scroll_y: 607
+    parent_id: 162
+  44: !ruby/object:RPG::MapInfo
+    scroll_x: 720
+    name: Route 6
+    expanded: false
+    order: 133
+    scroll_y: 515
+    parent_id: 162
+  81: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Lumigen City
+    expanded: true
+    order: 15
+    scroll_y: 459
+    parent_id: 33
+  118: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: The Biogress Foundation
+    expanded: false
+    order: 31
+    scroll_y: 467
+    parent_id: 117
+  155: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Dim Cave
+    expanded: false
+    order: 57
+    scroll_y: 1516
+    parent_id: 129
+  26: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: !binary |-
+      UG9rw6ltb24gRmFuIENsdWI=
+    expanded: false
+    order: 118
+    scroll_y: 240
+    parent_id: 23
+  63: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Factory intro corridor
+    expanded: false
+    order: 151
+    scroll_y: 240
+    parent_id: 62
+  100: !ruby/object:RPG::MapInfo
+    scroll_x: 480
+    name: Dim Cave
+    expanded: true
+    order: 55
+    scroll_y: 492
+    parent_id: 98
+  137: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Driftwood Dept. 3F
+    expanded: false
+    order: 71
+    scroll_y: 272
+    parent_id: 135
+  8: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Daisy's house
+    expanded: false
+    order: 97
+    scroll_y: 240
+    parent_id: 2
+  45: !ruby/object:RPG::MapInfo
+    scroll_x: 624
+    name: Route 6
+    expanded: false
+    order: 134
+    scroll_y: 384
+    parent_id: 44
+  82: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Lumigen City Pokecenter
+    expanded: false
+    order: 16
+    scroll_y: 240
+    parent_id: 81
+  119: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Fleural Town
+    expanded: false
+    order: 32
+    scroll_y: 459
+    parent_id: 79
+  156: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Blighted Bog Gate
+    expanded: false
+    order: 83
+    scroll_y: 240
+    parent_id: 147
+  27: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: !binary |-
+      UG9rw6ltb24gRGF5IENhcmU=
+    expanded: false
+    order: 119
+    scroll_y: 240
+    parent_id: 23
+  64: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Factory arena
+    expanded: false
+    order: 152
+    scroll_y: 240
+    parent_id: 62
+  101: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Maple Trail
+    expanded: true
+    order: 42
+    scroll_y: 1114
+    parent_id: 86
+  138: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Driftwood Dept. 4F
+    expanded: false
+    order: 72
+    scroll_y: 272
+    parent_id: 135
+  46: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Cycling Road gate
+    expanded: false
+    order: 131
+    scroll_y: 240
+    parent_id: 39
+  83: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Lumigen Cycles
+    expanded: false
+    order: 17
+    scroll_y: 240
+    parent_id: 81
+  120: !ruby/object:RPG::MapInfo
+    scroll_x: 843
+    name: Lumigen Offices
+    expanded: false
+    order: 22
+    scroll_y: 1091
+    parent_id: 81
+  157: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Fleural Gate
+    expanded: false
+    order: 33
+    scroll_y: 240
+    parent_id: 79
+  9: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: !binary |-
+      Q2Vkb2xhbiBDaXR5IFBva8OpIENlbnRlcg==
+    expanded: false
+    order: 102
+    scroll_y: 240
+    parent_id: 7
+  65: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Factory corridor
+    expanded: false
+    order: 153
+    scroll_y: 240
+    parent_id: 62
+  102: !ruby/object:RPG::MapInfo
+    scroll_x: 480
+    name: Maple Town
+    expanded: true
+    order: 34
+    scroll_y: 684
+    parent_id: 33
+  139: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Driftwood Dept. 5F
+    expanded: false
+    order: 73
+    scroll_y: 272
+    parent_id: 135
+  28: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Natural Park
+    expanded: false
+    order: 120
+    scroll_y: 841
+    parent_id: 162
+  84: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Costa Path
+    expanded: true
+    order: 24
+    scroll_y: 644
+    parent_id: 77
+  121: !ruby/object:RPG::MapInfo
+    scroll_x: 1069
+    name: Ferrous Cave
+    expanded: true
+    order: 91
+    scroll_y: 1126
+    parent_id: 111
+  158: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Lumigen Gate
+    expanded: false
+    order: 93
+    scroll_y: 467
+    parent_id: 108
+  10: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Cedolan Gym
+    expanded: false
+    order: 103
+    scroll_y: 272
+    parent_id: 7
+  47: !ruby/object:RPG::MapInfo
+    scroll_x: 1430
+    name: Route 7
+    expanded: true
+    order: 136
+    scroll_y: 459
+    parent_id: 162
+  103: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Verdant Valley
+    expanded: true
+    order: 79
+    scroll_y: 758
+    parent_id: 92
+  140: !ruby/object:RPG::MapInfo
+    scroll_x: 512
+    name: Driftwood Dept. Rooftop
+    expanded: false
+    order: 74
+    scroll_y: 320
+    parent_id: 135
+  29: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Natural Park Entrance
+    expanded: false
+    order: 121
+    scroll_y: 240
+    parent_id: 28
+  66: !ruby/object:RPG::MapInfo
+    scroll_x: 352
+    name: Safari Zone
+    expanded: false
+    order: 154
+    scroll_y: 336
+    parent_id: 162
+  122: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Driftwood Gate C
+    expanded: false
+    order: 63
+    scroll_y: 240
+    parent_id: 113
+  159: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Iron Pass
+    expanded: false
+    order: 14
+    scroll_y: 240
+    parent_id: 80
+  11: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: !binary |-
+      UG9rw6ltb24gSW5zdGl0dXRl
+    expanded: false
+    order: 104
+    scroll_y: 240
+    parent_id: 7
+  48: !ruby/object:RPG::MapInfo
+    scroll_x: 480
+    name: Cypress Lab
+    expanded: false
+    order: 7
+    scroll_y: 320
+    parent_id: 43
+  85: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Lumigen City
+    expanded: false
+    order: 21
+    scroll_y: 513
+    parent_id: 81
+  141: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Driftwood Dept. Elevator
+    expanded: false
+    order: 75
+    scroll_y: 240
+    parent_id: 135
+  30: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Natural Park Pavillion
+    expanded: false
+    order: 122
+    scroll_y: 240
+    parent_id: 28
+  67: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Safari Zone gate
+    expanded: false
+    order: 155
+    scroll_y: 240
+    parent_id: 66
+  104: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Maple Town
+    expanded: false
+    order: 39
+    scroll_y: 240
+    parent_id: 102
+  86: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Maple Trail
+    expanded: true
+    order: 41
+    scroll_y: 675
+    parent_id: 102
+  49: !ruby/object:RPG::MapInfo
+    scroll_x: 544
+    name: Rock Cave
+    expanded: true
+    order: 137
+    scroll_y: 464
+    parent_id: 47
+  160: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Cascade Cave
+    expanded: true
+    order: 53
+    scroll_y: 467
+    parent_id: 146
+  12: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Cedolan City Condo
+    expanded: false
+    order: 105
+    scroll_y: 240
+    parent_id: 7
+  123: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Lush Cave
+    expanded: false
+    order: 86
+    scroll_y: 687
+    parent_id: 93
+  142: !ruby/object:RPG::MapInfo
+    scroll_x: 871
+    name: Driftwood City
+    expanded: false
+    order: 76
+    scroll_y: 320
+    parent_id: 113
+  31: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Route 3
+    expanded: false
+    order: 123
+    scroll_y: 459
+    parent_id: 162
+  68: !ruby/object:RPG::MapInfo
+    scroll_x: 816
+    name: Safari Zone
+    expanded: false
+    order: 156
+    scroll_y: 628
+    parent_id: 66
+  105: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Yama Pass
+    expanded: true
+    order: 36
+    scroll_y: 812
+    parent_id: 102
+  87: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Lumigen Power Plant
+    expanded: true
+    order: 18
+    scroll_y: 684
+    parent_id: 81
+  50: !ruby/object:RPG::MapInfo
+    scroll_x: 480
+    name: Rock Cave
+    expanded: false
+    order: 138
+    scroll_y: 416
+    parent_id: 49
+  13: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Game Corner
+    expanded: false
+    order: 106
+    scroll_y: 467
+    parent_id: 7
+  124: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Zap Cave
+    expanded: false
+    order: 80
+    scroll_y: 639
+    parent_id: 103
+  161: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Cascade Cave
+    expanded: false
+    order: 54
+    scroll_y: 467
+    parent_id: 160
+  106: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Maple Town
+    expanded: false
+    order: 40
+    scroll_y: 492
+    parent_id: 102
+  69: !ruby/object:RPG::MapInfo
+    scroll_x: 736
+    name: Route 8
+    expanded: false
+    order: 157
+    scroll_y: 468
+    parent_id: 162
+  32: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: BRB
+    expanded: false
+    order: 3
+    scroll_y: 240
+    parent_id: 22
+  143: !ruby/object:RPG::MapInfo
+    scroll_x: 480
+    name: Beta Lab
+    expanded: false
+    order: 88
+    scroll_y: 320
+    parent_id: 93
+  162: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Default Maps
+    expanded: false
+    order: 94
+    scroll_y: 240
+    parent_id: 0
+  125: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Heat Cave
+    expanded: false
+    order: 92
+    scroll_y: 639
+    parent_id: 121
+  88: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Quantech Co. HQ
+    expanded: false
+    order: 20
+    scroll_y: 965
+    parent_id: 87
+  51: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Dungeon
+    expanded: false
+    order: 139
+    scroll_y: 459
+    parent_id: 49
+  14: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Cedolan Dept. 1F
+    expanded: false
+    order: 107
+    scroll_y: 272
+    parent_id: 7
+  144: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Maple Trail
+    expanded: false
+    order: 48
+    scroll_y: 240
+    parent_id: 86
+  107: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Stacona Woods
+    expanded: false
+    order: 81
+    scroll_y: 643
+    parent_id: 92
+  70: !ruby/object:RPG::MapInfo
+    scroll_x: 736
+    name: Underwater
+    expanded: false
+    order: 158
+    scroll_y: 652
+    parent_id: 69
+  33: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Pokemon Splice
+    expanded: true
+    order: 4
+    scroll_y: 240
+    parent_id: 0
+  126: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Driftwood Lab
+    expanded: true
+    order: 65
+    scroll_y: 527
+    parent_id: 113
+  89: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Magnet Cave
+    expanded: true
+    order: 12
+    scroll_y: 480
+    parent_id: 80
+  52: !ruby/object:RPG::MapInfo
+    scroll_x: 704
+    name: Battle Frontier
+    expanded: false
+    order: 140
+    scroll_y: 504
+    parent_id: 162
+  15: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Cedolan Dept. 2F
+    expanded: false
+    order: 108
+    scroll_y: 272
+    parent_id: 14
+  145: !ruby/object:RPG::MapInfo
+    scroll_x: 400
+    name: Delta Lab
+    expanded: false
+    order: 25
+    scroll_y: 320
+    parent_id: 84
+  108: !ruby/object:RPG::MapInfo
+    scroll_x: 1744
+    name: Lumigen Hills
+    expanded: true
+    order: 89
+    scroll_y: 1272
+    parent_id: 33
+  34: !ruby/object:RPG::MapInfo
+    scroll_x: 672
+    name: Ice Cave
+    expanded: false
+    order: 124
+    scroll_y: 844
+    parent_id: 31
+  71: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Harbour
+    expanded: false
+    order: 159
+    scroll_y: 240
+    parent_id: 69
+  90: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Magnet Cave
+    expanded: false
+    order: 13
+    scroll_y: 467
+    parent_id: 89
+  53: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: !binary |-
+      QmF0dGxlIEZyb250aWVyIFBva8OpIENlbnRlcg==
+    expanded: false
+    order: 141
+    scroll_y: 240
+    parent_id: 52
+  16: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Cedolan Dept. 3F
+    expanded: false
+    order: 109
+    scroll_y: 272
+    parent_id: 14
+  127: !ruby/object:RPG::MapInfo
+    scroll_x: 809
+    name: Driftwood Lab
+    expanded: true
+    order: 66
+    scroll_y: 702
+    parent_id: 126
+  35: !ruby/object:RPG::MapInfo
+    scroll_x: 560
+    name: Ingido Plateau
+    expanded: false
+    order: 125
+    scroll_y: 513
+    parent_id: 162
+  72: !ruby/object:RPG::MapInfo
+    scroll_x: 464
+    name: Berth Island
+    expanded: false
+    order: 160
+    scroll_y: 468
+    parent_id: 162
+  109: !ruby/object:RPG::MapInfo
+    scroll_x: 1290
+    name: Driftwood Lab
+    expanded: false
+    order: 67
+    scroll_y: 1481
+    parent_id: 127
+  146: !ruby/object:RPG::MapInfo
+    scroll_x: 982
+    name: Cascade Creek
+    expanded: true
+    order: 52
+    scroll_y: 1269
+    parent_id: 99
+  128: !ruby/object:RPG::MapInfo
+    scroll_x: 640
+    name: Driftwood Game Corner
+    expanded: false
+    order: 68
+    scroll_y: 467
+    parent_id: 113
+  91: !ruby/object:RPG::MapInfo
+    scroll_x: 1342
+    name: Lumigen Power Plant B1
+    expanded: false
+    order: 19
+    scroll_y: 656
+    parent_id: 87
+  17: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Cedolan Dept. 4F
+    expanded: false
+    order: 110
+    scroll_y: 272
+    parent_id: 14
+  54: !ruby/object:RPG::MapInfo
+    scroll_x: 320
+    name: Battle Frontier Mart
+    expanded: false
+    order: 142
+    scroll_y: 240
+    parent_id: 52
+  110: !ruby/object:RPG::MapInfo
+    scroll_x: 800
+    name: Frostbite Cavern
+    expanded: false
+    order: 26
+    scroll_y: 1000
+    parent_id: 77
+  73: !ruby/object:RPG::MapInfo
+    scroll_x: 464
+    name: Faraday Island
+    expanded: false
+    order: 161
+    scroll_y: 468
+    parent_id: 162
+  36: !ruby/object:RPG::MapInfo
+    scroll_x: 400
+    name: !binary |-
+      UG9rw6ltb24gTGVhZ3Vl
+    expanded: false
+    order: 126
+    scroll_y: 304
+    parent_id: 35
+  147: !ruby/object:RPG::MapInfo
+    scroll_x: 768
+    name: Blighted Bog
+    expanded: true
+    order: 82
+    scroll_y: 1766
+    parent_id: 92
