@@ -22,12 +22,99 @@ class CapturePokemonUI
     return ret
   end
 
+  def pbCommonAnimationShiny
+    Graphics.frame_rate = 40
+    poke = @sprites["pkmn"]
+    fp = {}
+    k = -1
+    factor = (poke.zoom_x) * 2
+    for i in 0...16
+      cx, cy = 256,(256 - 80)
+      fp["#{i}"] = Sprite.new(poke.viewport)
+      str = "Graphics/Animations/ebShiny1"
+      str = "Graphics/Animations/ebShiny2" if i >= 8
+      fp["#{i}"].bitmap = pbBitmap(str)
+      fp["#{i}"].ox = fp["#{i}"].bitmap.width/2
+      fp["#{i}"].oy = fp["#{i}"].bitmap.height/2
+      fp["#{i}"].x = cx
+      fp["#{i}"].y = cy
+      fp["#{i}"].zoom_x = factor
+      fp["#{i}"].zoom_y = factor
+      fp["#{i}"].opacity = 0
+    end
+    for j in 0...8
+      fp["s#{j}"] = Sprite.new(poke.viewport)
+      fp["s#{j}"].bitmap = pbBitmap("Graphics/Animations/ebShiny3")
+      fp["s#{j}"].ox = fp["s#{j}"].bitmap.width/2
+      fp["s#{j}"].oy = fp["s#{j}"].bitmap.height/2
+      fp["s#{j}"].opacity = 0
+      z = [1,0.75,1.25,0.5][rand(4)]*factor
+      fp["s#{j}"].zoom_x = z
+      fp["s#{j}"].zoom_y = z
+      cx, cy = 256,(256 - 80)
+      fp["s#{j}"].x = cx - 32*factor + rand(64)*factor
+      fp["s#{j}"].y = cy - 32*factor + rand(64)*factor
+      fp["s#{j}"].opacity = 0
+    end
+    pbSEPlay("shiny")
+    for i in 0...48
+      k *= -1 if i%24==0
+      cx, cy = 256,(256 - 80)
+      for j in 0...16
+        next if (j >= 8 && i < 16)
+        a = (j < 8 ? -30 : -15) + 45*(j%8) + i*2
+        r = poke.bitmap.width*factor/2.5
+        x = cx + r*Math.cos(a*(Math::PI/180))
+        y = cy - r*Math.sin(a*(Math::PI/180))
+        x = (x - fp["#{j}"].x)*0.1
+        y = (y - fp["#{j}"].y)*0.1
+        fp["#{j}"].x += x
+        fp["#{j}"].y += y
+        fp["#{j}"].angle += 8
+        if j < 8
+          fp["#{j}"].opacity += 51 if i < 16
+          if i >= 16
+            fp["#{j}"].opacity -= 16
+            fp["#{j}"].zoom_x -= 0.04*factor
+            fp["#{j}"].zoom_y -= 0.04*factor
+          end
+        else
+          fp["#{j}"].opacity += 51 if i < 32
+          if i >= 32
+            fp["#{j}"].opacity -= 16
+            fp["#{j}"].zoom_x -= 0.02*factor
+            fp["#{j}"].zoom_y -= 0.02*factor
+          end
+        end
+      end
+      poke.tone.red += 3.2*k/2
+      poke.tone.green += 3.2*k/2
+      poke.tone.blue += 3.2*k/2
+      Graphics.update
+    end
+    pbSEPlay("eb_shine1",80)
+    for i in 0...16
+      for j in 0...8
+        next if j>i
+        fp["s#{j}"].opacity += 51
+        fp["s#{j}"].zoom_x -= fp["s#{j}"].zoom_x*0.25 if fp["s#{j}"].opacity >= 255
+        fp["s#{j}"].zoom_y -= fp["s#{j}"].zoom_y*0.25 if fp["s#{j}"].opacity >= 255
+      end
+      Graphics.update
+    end
+    pbDisposeSpriteHash(fp)
+    Graphics.frame_rate = 60
+  end
+
   def dispose
     pbFadeOutAndHide(@sprites)
     pbDisposeSpriteHash(@sprites)
   end
 
   def update
+    if @pokemon.able? && @pokemon.shiny?
+      pbCommonAnimationShiny
+    end
     if $Trainer.pokedex && !@pokemon.egg? &&!($Trainer.seen?(@pokemon.species) || $Trainer.owned?(@pokemon.species))
       $Trainer.seen[@pokemon.species]  = true
       $Trainer.owned[@pokemon.species] = true
@@ -46,6 +133,16 @@ class CapturePokemonUI
     pbNickname(@pokemon) if !@pokemon.shadowPokemon? && !@pokemon.egg?
     @pokemon.pbRecordFirstMoves
     if $Trainer.party.length == 0
+      pbAddToPartySilent(@pokemon)
+      pbMessage(_INTL("{2} was added to {1}'s party!",$Trainer.name,@pokemon.name))
+      return
+    end
+    if @pokemon.isSpecies?(:ARENAY) && $game_variables[35] < 1
+      if $Trainer.party.length == 6
+        poke = $Trainer.party[5]
+        $PokemonStorage.pbStoreCaught(poke)
+        pbMessage("#{poke.name} was moved to the PC.")
+      end
       pbAddToPartySilent(@pokemon)
       pbMessage(_INTL("{2} was added to {1}'s party!",$Trainer.name,@pokemon.name))
       return

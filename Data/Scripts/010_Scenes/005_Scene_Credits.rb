@@ -68,6 +68,14 @@ Aka the Thundagang
 Aka the Camfam
 Aka the Bolt Cult
 
+Additional Amazing Art
+HauntedArtStudio
+P-Plum
+ShadowPhil
+Design3D
+
+Pokemon Splice Wiki
+ENLS
 
 A HUGE thank you to the resource creators
 of the Pokemon fangame community

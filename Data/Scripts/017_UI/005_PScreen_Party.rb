@@ -378,7 +378,7 @@ class PokemonPartyPanel < SpriteWrapper
           status = 5 if @pokemon.hp<=0
           if status>=0
             statusrect = Rect.new(0,16*status,44,16)
-            @overlaysprite.bitmap.blt(78,68,@statuses.bitmap,statusrect)
+            @overlaysprite.bitmap.blt(94,68,@statuses.bitmap,statusrect)
           end
         end
         # Draw gender symbol
@@ -390,7 +390,7 @@ class PokemonPartyPanel < SpriteWrapper
         # Draw shiny icon
         if @pokemon.shiny?
           pbDrawImagePositions(@overlaysprite.bitmap,[[
-             "Graphics/Pictures/shiny",80,48,0,0,18,18]])
+             "Graphics/Pictures/shiny",70,66,0,0,18,18]])
         end
       end
       pbDrawTextPositions(@overlaysprite.bitmap,textpos)
@@ -1233,9 +1233,9 @@ class PokemonPartyScreen
           pbSwitch(oldpkmnid,pkmnid)
         end
       elsif cmdRename>=0 && command==cmdRename
-        if pkmn.isForeign?($Trainer) #checks if the pokemon isnt yours, if is that the case, shows text
-          @scene.pbDisplay(_INTL("This Pokémon isn't yours.\nIts in memory of it's Original Trainer."))
-        else
+        #if pkmn.isForeign?($Trainer) #checks if the pokemon isnt yours, if is that the case, shows text
+        #  @scene.pbDisplay(_INTL("This Pokémon isn't yours.\nIts in memory of it's Original Trainer."))
+        #else
           @scene.pbDisplay(_INTL("Choose the Nickname that you want."))
           speciesname = PBSpecies.getName(pkmn.species)
           oldname = (pkmn.name && pkmn.name!=speciesname) ? pkmn.name : ""
@@ -1248,7 +1248,7 @@ class PokemonPartyScreen
               pkmn.name = speciesname #...change its name from the species name
               pbRefreshSingle(pkmnid)
             end
-        end
+        #end
       elsif cmdMail>=0 && command==cmdMail
         command = @scene.pbShowCommands(_INTL("Do what with the mail?"),
            [_INTL("Read"),_INTL("Take"),_INTL("Cancel")])

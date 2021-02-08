@@ -1,7 +1,7 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [CAMPER,Liam]
-Pokemon = FURRET,23
+Pokemon = FURRET,22
     Form = 1
 Pokemon = TOXEL,23
     Item = ORANBERRY
@@ -126,76 +126,89 @@ Pokemon = EEVEE,6
 #-------------------------------
 [SPLICERIVAL1,Zack,1]
 Items = SUPERPOTION,HYPERPOTION
-Pokemon = ZEBSTRIKA,30
+Pokemon = YANMEGA,33
     Form = 1
     Ball = 25
-Pokemon = SEVIPER,31
+Pokemon = ZEBSTRIKA,34
     Form = 1
     Ball = 25
-Pokemon = YANMA,31
+Pokemon = SEVIPER,34
     Form = 1
-Pokemon = ABSOL,31
+Pokemon = ABSOL,34
     Form = 1
     Ball = 25
-Pokemon = CHROMEON,32
+Pokemon = CHROMEON,35
 #-------------------------------
 [SPLICERIVAL2,Zack,2]
 Items = SUPERPOTION,HYPERPOTION
-Pokemon = LUDICOLO,30
+Pokemon = YANMEGA,33
     Form = 1
     Ball = 24
-Pokemon = ZANGOOSE,31
+Pokemon = LUDICOLO,34
     Form = 1
     Ball = 24
-Pokemon = YANMA,31
+Pokemon = ZANGOOSE,34
     Form = 1
-Pokemon = ABSOL,31
+Pokemon = ABSOL,34
     Form = 1
     Ball = 24
-Pokemon = AVEON,32
+Pokemon = AVEON,35
+#-------------------------------
+[CHAIRDAGA,Chairdaga]
+Pokemon = POLLEKNIGHT,50
+Pokemon = GARDEVOIR,50
+    Form = 1
+Pokemon = ROSERADE,50
+    Form = 1
+Pokemon = HITMONTOP,50
+    Form = 1
+Pokemon = FLYGON,50
+    Form = 1
+Pokemon = ROCC,55
+    Form = 1
 #-------------------------------
 [CREATOR,Cameron]
-Pokemon = TYRANITAR,35
+Pokemon = TYRANITAR,40
     Form = 1
-Pokemon = BLASTOISE,35
-Pokemon = ZAPDOS,35
-Pokemon = ZEBSTRIKA,35
+Pokemon = BLASTOISE,40
+Pokemon = ZAPDOS,40
+Pokemon = ZEBSTRIKA,40
     Form = 1
-Pokemon = ELECTIVIRE,35
+Pokemon = ELECTIVIRE,40
     Form = 1
-Pokemon = GYARADOS,35
+Pokemon = GYARADOS,40
     Form = 1
 #-------------------------------
 [TRISTAN,Tristan]
-Pokemon = KLINKLANG,35
+Pokemon = KLINKLANG,40
     Name = Gearfried
     Gender = male
 	Form = 1
     Ability = 0
     Moves = DISCHARGE,FLAMETHROWER,MIRRORSHOT,SCALD
-Pokemon = CHARJABUG,35
+Pokemon = CHARJABUG,40
     Name = Choo-Choo
     Gender = male
     Ability = 0
     Moves = CRUNCH,XSCISSOR,THUNDERBOLT,BUGBITE
-Pokemon = KINGLER,35
+Pokemon = KINGLER,40
     Name = Eugene
     Gender = male
 	Form = 1
     Ability = 0
     Moves = IRONHEAD,KINGSCLAW,ICEPUNCH,SHADOWCLAW
-Pokemon = FLYGON,35
+Pokemon = FLYGON,40
     Name = Jeff
     Gender = male
 	Form = 1
     Ability = 0
     Moves = OUTRAGE,POISONJAB,XSCISSOR,EARTHQUAKE
-Pokemon = SHUCKAVERN,35
+Pokemon = SHUCKAVERN,40
     Name = Barry
     Gender = female
     Ability = 2
     Moves = STONEEDGE,ROAROFTIME,BODYPRESS,VCREATE
-Pokemon = SUNFLORA,35
+Pokemon = SUNFLORA,40
     Name = Scarecrow
     Gender = female
 	Form = 1
@@ -203,7 +216,7 @@ Pokemon = SUNFLORA,35
     Moves = PESTILENCE,DARKPULSE,GIGADRAIN,MOONBLAST
 #-------------------------------
 [VOLTSEON,Voltseon]
-Pokemon = DUNDRAKE,35
+Pokemon = DUNDRAKE,40
     Gender = male
     Moves = DRAGONRUSH,COIL,FOULPLAY,THUNDERFANG
     Ability = 0
@@ -211,7 +224,7 @@ Pokemon = DUNDRAKE,35
     IV = 31
     Happiness = 255
     Ball = 9
-Pokemon = ABSASTER,35
+Pokemon = ABSASTER,40
     Gender = male
     Moves = REST,IRONHEAD,BITE,HEADBUTT
     Ability = 0
@@ -219,7 +232,7 @@ Pokemon = ABSASTER,35
     IV = 31
     Happiness = 255
     Ball = 10
-Pokemon = ESPEON,35
+Pokemon = ESPEON,40
     Gender = female
     Moves = PSYSHOCK,DAZZLINGGLEAM,MORNINGSUN,CALMMIND
     Ability = 0
@@ -227,7 +240,7 @@ Pokemon = ESPEON,35
     IV = 31
     Happiness = 255
     Ball = 10
-Pokemon = DRIFSHIP,35
+Pokemon = DRIFSHIP,40
     Gender = female
     Moves = STOCKPILE,AIRSLASH,WILLOWISP,HEX
     Ability = 0
@@ -235,7 +248,7 @@ Pokemon = DRIFSHIP,35
     IV = 31
     Happiness = 255
     Ball = 22
-Pokemon = ZEBSTRIKA,35
+Pokemon = ZEBSTRIKA,40
     Gender = female
     Moves = FLAREBLITZ,WILDCHARGE,FACADE,PROTECT
     Ability = 1
@@ -243,7 +256,7 @@ Pokemon = ZEBSTRIKA,35
     IV = 31
     Happiness = 255
     Ball = 22
-Pokemon = POLLEKNIGHT,35
+Pokemon = POLLEKNIGHT,40
     Gender = male
     Moves = SPORE,METALCLAW,BUGBITE,WINGATTACK
     Ability = 0
@@ -252,86 +265,153 @@ Pokemon = POLLEKNIGHT,35
     Happiness = 255
     Ball = 14
 #-------------------------------
+[BROSKIDDO,Broskiddo]
+Pokemon = GARCHOMP,40
+    Moves = STEALTHROCK,OUTRAGE,FLAMETHROWER,EARTHQUAKE
+    Ability = 2
+    Item = FOCUSSASH
+    Nature = NAIVE
+    IV = 31
+    EV = 0,252,0,252,4,0
+    Ball = 4
+Pokemon = POLTEAGEIST,40
+    Moves = SHELLSMASH,STOREDPOWER,SHADOWBALL,GIGADRAIN
+    Ability = 0
+    Item = CHESTOBERRY
+    Nature = MODEST
+    IV = 31
+    EV = 0,0,0,252,252,4
+    Ball = 24
+Pokemon = TOGEKISS,40
+    Form = 1
+    Moves = RAINDANCE,THUNDER,HURRICANE,EXTREMESPEED
+    Item = LEFTOVERS
+    Nature = HASTY
+    IV = 31
+    EV = 84,0,86,0,252,86
+    Ball = 22
+Pokemon = KOMALA,40
+    Moves = SLEEPTALK,LASTRESORT,,
+    Item = CHOICEBAND
+    Nature = ADAMANT
+    IV = 31
+    EV = 252,252,0,0,4,0
+    Ball = 19
+Pokemon = STEELIX,40
+    Form = 1
+    Moves = GLACIALQUAKE,FROSTARMOR,FLASHFREEZE,ROCKSLIDE
+    Ability = 2
+    Item = ICICLEPLATE
+    Nature = CAREFUL
+    IV = 31
+    EV = 252,252,0,0,4,0
+    Ball = 6
+Pokemon = GOLISOPOD,40
+    Shiny = yes
+    Moves = FIRSTIMPRESSION,LIQUIDATION,AQUAJET,LEECHLIFE
+    Item = INSECTPLATE
+    Nature = ADAMANT
+    IV = 31
+    EV = 168,252,0,88,0,0
+    Ball = 5
+#-------------------------------
 [KRISTIANO,Kristian]
-Pokemon = RAICHU,35
+Pokemon = RAICHU,40
     Form = 1
-Pokemon = REUNICLUS,35
+Pokemon = REUNICLUS,40
     Form = 1
-Pokemon = ELECTIVIRE,35
+Pokemon = ELECTIVIRE,40
     Form = 1
-Pokemon = AVEON,35
-Pokemon = CHROMEON,35
-Pokemon = TYRANITAR,35
+Pokemon = AVEON,40
+Pokemon = CHROMEON,40
+Pokemon = TYRANITAR,40
     Form = 1
 #-------------------------------
 [MODERATOR,Dedbed]
-Pokemon = ABSOL,35
-Pokemon = AGGRON,35
-Pokemon = SALAMENCE,35
+Pokemon = ABSOL,40
+Pokemon = AGGRON,40
+Pokemon = SALAMENCE,40
 #-------------------------------
 [PROFESSORC,Cypress]
 Items = FULLRESTORE
-Pokemon = DITTO,40
+Pokemon = DITTO,50
     Ball = 4
-Pokemon = GYARADOS,40
+Pokemon = GYARADOS,50
     Form = 1
     Ball = 4
-Pokemon = DUNDRAKE,40
+Pokemon = DUNDRAKE,50
     Ball = 4
-Pokemon = KLINKLANG,40
+Pokemon = KLINKLANG,50
     Form = 1
     Ball = 4
-Pokemon = REUNICLUS,40
+Pokemon = REUNICLUS,50
     Form = 1
     Ball = 4
-Pokemon = AMPHAROS,40
+Pokemon = GARDEVOIR,50
     Form = 1
     Ball = 4
 #-------------------------------
 [BIOLEADER,Damian]
-Pokemon = SABSIDIAN,40
+Pokemon = SABSIDIAN,48
     Ball = 24
-Pokemon = REUNICLUS,40
+Pokemon = REUNICLUS,49
     Form = 1
     Ball = 24
-Pokemon = SANDILE,41
+Pokemon = SANDILE,50
     Form = 1
     Ball = 24
-Pokemon = HERAPLEX,42
+Pokemon = HERAPLEX,50
     Ball = 24
-Pokemon = LUDICOLO,43
+Pokemon = LUDICOLO,51
     Form = 1
     Ball = 24
 #-------------------------------
 [MECHLEADER,Brigid]
-Pokemon = SKARTILLERY,40
+Pokemon = SKARTILLERY,48
     Ball = 25
-Pokemon = DRIFSHIP,40
+Pokemon = DRIFSHIP,49
     Ball = 25
-Pokemon = KLINKLANG,41
+Pokemon = KLINKLANG,50
     Form = 1
     Ball = 25
-Pokemon = METAGROSS,42
+Pokemon = METAGROSS,50
     Ball = 25
-Pokemon = ELECTIVIRE,43
+Pokemon = ELECTIVIRE,51
     Form = 1
     Ball = 25
 #-------------------------------
 [AROMALADY,Lily]
-Pokemon = BUDEW,5
+Pokemon = BUDEW,6
     Form = 1
-Pokemon = BABEE,6
+Pokemon = BABEE,7
+    Item = HONEY
+#-------------------------------
+[AROMALADY,Lily,1]
+Pokemon = ROSELIA,20
+    Form = 1
+Pokemon = POLLEKNIGHT,21
     Item = HONEY
 #-------------------------------
 [CAMPER,Travis]
-Pokemon = ADORABULL,6
-Pokemon = DUNSPARCE,7
+Pokemon = ADORABULL,8
+Pokemon = DUNSPARCE,8
+    Form = 1
+#-------------------------------
+[CAMPER,Travis,1]
+Pokemon = TAUROS,21
+Pokemon = DUNSPARCE,22
     Form = 1
 #-------------------------------
 [SUPERNERD,Timothy]
-Pokemon = KLINK,5
+Pokemon = KLINK,6
     Form = 1
 Pokemon = KRABBY,6
+    Form = 1
+#-------------------------------
+[SUPERNERD,Timothy,1]
+Pokemon = KLINK,21
+    Form = 1
+Pokemon = KRABBY,22
     Form = 1
 #-------------------------------
 [MECHGRUNT_M,Frank]
@@ -355,9 +435,15 @@ Pokemon = SOLOSIS,5
     Ball = 24
 #-------------------------------
 [CRUSHGIRL,Margot]
-Pokemon = AZURILL,6
+Pokemon = AZURILL,7
     Form = 1
 Pokemon = TYROGUE,7
+    Form = 1
+#-------------------------------
+[CRUSHGIRL,Margot,1]
+Pokemon = AZUMARILL,22
+    Form = 1
+Pokemon = HITMONTOP,23
     Form = 1
 #-------------------------------
 [SCIENTIST,Dennis]
@@ -366,6 +452,14 @@ Pokemon = MAGNEMITE,7
 Pokemon = KLINK,7
     Form = 1
 Pokemon = ELEKID,8
+    Form = 1
+#-------------------------------
+[SCIENTIST,Dennis,1]
+Pokemon = MAGNEMITE,21
+    Form = 0
+Pokemon = KLINK,22
+    Form = 1
+Pokemon = ELEKID,23
     Form = 1
 #-------------------------------
 [SUPERNERD,Nolan]
@@ -407,6 +501,14 @@ Pokemon = SWABLU,9
     Form = 1
 Pokemon = WINGOT,10
     Form = 0
+#-------------------------------
+[COOLTRAINER_F,Alyssa]
+Pokemon = RALTS,8
+    Form = 1
+Pokemon = ZANGOOSE,9
+    Form = 1
+Pokemon = SEVIPER,9
+    Form = 1
 #-------------------------------
 [ROCKER,Smith]
 Pokemon = ALUMIDON,10
@@ -459,87 +561,90 @@ Pokemon = SCIZOR,34
     Ball = 24
 #-------------------------------
 [SAILOR,Sam]
-Pokemon = MAGIKARP,14
+Pokemon = MAGIKARP,15
     Form = 1
-Pokemon = KRABBY,14
+Pokemon = KRABBY,15
     Form = 1
-Pokemon = SANDILE,15
+Pokemon = SANDILE,16
     Form = 1
 #-------------------------------
 [COOLTRAINER_F,Theresa]
-Pokemon = RALTS,15
+Pokemon = RALTS,17
     Form = 1
-Pokemon = YANMITE,16
+Pokemon = YANMITE,18
 #-------------------------------
 [HIKER,Ethan]
-Pokemon = NOSEPASS,12
+Pokemon = NOSEPASS,14
     Form = 1
-Pokemon = AZURILL,13
+Pokemon = AZURILL,14
     Form = 1
-Pokemon = KLINK,13
+Pokemon = KLINK,14
     Form = 1
 #-------------------------------
-[LASS,Cass]
-Pokemon = ZUBAT,13
+[PAINTER,Cass]
+Pokemon = ZUBAT,14
     Form = 1
-Pokemon = DUNSPARCE,14
+Pokemon = DUNSPARCE,15
     Form = 1
 #-------------------------------
 [RUINMANIAC,Jerald]
-Pokemon = RALTS,11
+Pokemon = RALTS,13
     Form = 1
-Pokemon = ADORABULL,11
-Pokemon = ZUBAT,12
+Pokemon = LEDYBA,13
+    Form = 1
+Pokemon = ZUBAT,14
     Form = 1
 #-------------------------------
 [PSYCHIC_F,Patricia]
-Pokemon = ESPURR,12
+Pokemon = ESPURR,14
     Form = 1
-Pokemon = ESPEON,13
+Pokemon = ESPEON,15
 #-------------------------------
 [SCIENTIST,Roger]
-Pokemon = PIKACHU,12
+Pokemon = PIKACHU,13
     Form = 1
-Pokemon = KLINK,13
+Pokemon = KLINK,14
+    Form = 1
+Pokemon = SOLOSIS,14
+    Form = 1
+#-------------------------------
+[POKEMONRANGER_M,Mac]
+Pokemon = SENTRET,9
+    Form = 1
+Pokemon = AZURILL,10
+    Form = 1
+Pokemon = ADORABULL,10
+#-------------------------------
+[POKEMONRANGER_F,Deandra]
+Pokemon = YANMITE,10
+Pokemon = ZUBAT,10
+    Form = 1
+Pokemon = BUDEW,11
+    Form = 1
+#-------------------------------
+[LASS,Nikki]
+Pokemon = SWABLU,10
+    Form = 1
+Pokemon = SUNKERN,11
+    Form = 1
+Pokemon = SHUPPET,11
+    Form = 1
+#-------------------------------
+[PSYCHIC_M,Charlie]
+Pokemon = RALTS,12
     Form = 1
 Pokemon = SOLOSIS,13
     Form = 1
 #-------------------------------
-[POKEMONRANGER_M,Mac]
-Pokemon = SENTRET,7
-    Form = 1
-Pokemon = AZURILL,7
-    Form = 1
-Pokemon = ADORABULL,8
-#-------------------------------
-[POKEMONRANGER_F,Deandra]
-Pokemon = YANMITE,8
-Pokemon = ZUBAT,8
-    Form = 1
-Pokemon = BUDEW,9
-    Form = 1
-#-------------------------------
-[LASS,Nikki]
-Pokemon = SWABLU,9
-    Form = 1
-Pokemon = SUNKERN,10
-    Form = 1
-#-------------------------------
-[PSYCHIC_M,Charlie]
-Pokemon = RALTS,10
-    Form = 1
-Pokemon = SOLOSIS,10
-    Form = 1
-#-------------------------------
 [TAMER,Andy]
-Pokemon = ADORABULL,11
+Pokemon = ADORABULL,12
     Gender = male
-Pokemon = SANDILE,11
+Pokemon = SANDILE,13
     Form = 1
 #-------------------------------
 [BUGCATCHER,Bill]
-Pokemon = PINCUSH,10
-Pokemon = SICKLER,10
+Pokemon = PINCUSH,11
+Pokemon = SICKLER,11
 Pokemon = HERACUTE,11
 Pokemon = BABEE,12
     Gender = male
@@ -547,11 +652,11 @@ Pokemon = BABEE,12
 [AROMALADY,Artemis]
 Pokemon = BUDEW,12
     Form = 1
-Pokemon = PARAS,12
+Pokemon = PARAS,13
     Form = 1
 #-------------------------------
 [ENGINEER,Felix]
-Pokemon = CORVISQUIRE,26
+Pokemon = CORVISQUIRE,27
 Pokemon = KLINK,27
     Form = 1
 Pokemon = ELECTABUZZ,28
@@ -560,7 +665,14 @@ Pokemon = ELECTABUZZ,28
 [BLACKBELT,Jackson]
 Pokemon = AZUMARILL,27
     Form = 1
-Pokemon = SCRAGGY,28
+Pokemon = LEDIAN,28
+    Form = 1
+#-------------------------------
+[BLACKBELT,Reese]
+Pokemon = AZUMARILL,29
+    Form = 1
+Pokemon = HITMONLEE,30
+    Form = 1
 #-------------------------------
 [PICNICKER,Tatiana]
 Pokemon = TROPIUS,28
@@ -641,6 +753,14 @@ Pokemon = FURRET,24
     Form = 1
 Pokemon = DITTO,25
 #-------------------------------
+[POKEMONBREEDER,Katie]
+Pokemon = FOONGUS,26
+    Form = 1
+Pokemon = TRAPINCH,27
+    Form = 1
+Pokemon = SEVIPER,27
+    Form = 1
+#-------------------------------
 [PSYCHIC_F,Felicia]
 Pokemon = KIRLIA,25
     Form = 1
@@ -649,23 +769,23 @@ Pokemon = SOLOSIS,26
 Pokemon = ESPEON,26
 #-------------------------------
 [LASS,Josie]
-Pokemon = MAREEP,21
+Pokemon = MAREEP,22
     Form = 1
 Pokemon = SNEASEL,22
-Pokemon = NUMEL,22
+Pokemon = NUMEL,23
     Form = 1
 #-------------------------------
 [TUBER_M,Jimmy]
-Pokemon = SANDILE,21
+Pokemon = SANDILE,20
     Form = 1
-Pokemon = KRABBY,21
+Pokemon = KRABBY,20
     Form = 1
 #-------------------------------
 [TUBER_F,Allie]
-Pokemon = MAGIKARP,19
+Pokemon = MAGIKARP,20
     Form = 1
-Pokemon = CARVANHA,20
-Pokemon = KRABBY,20
+Pokemon = CARVANHA,21
+Pokemon = KRABBY,21
     Form = 1
 #-------------------------------
 [SWIMMER_M,Larry]
@@ -675,21 +795,21 @@ Pokemon = SANDILE,21
     Form = 1
 #-------------------------------
 [SWIMMER_F,Carmen]
-Pokemon = KRABBY,22
+Pokemon = KRABBY,21
     Form = 1
-Pokemon = DEWPIDER,22
-Pokemon = WAILMER,23
+Pokemon = DEWPIDER,21
+Pokemon = WAILMER,22
 #-------------------------------
 [TUBER_M,Steven]
-Pokemon = KRABBY,23
+Pokemon = KRABBY,22
     Form = 1
-Pokemon = LOTAD,23
+Pokemon = LOTAD,22
     Form = 1
-Pokemon = SANDILE,24
+Pokemon = SANDILE,23
     Form = 1
 #-------------------------------
 [HIKER,Frederick]
-Pokemon = RALTS,23
+Pokemon = RALTS,22
     Form = 1
 Pokemon = TRAPINCH,23
     Form = 1
@@ -697,54 +817,60 @@ Pokemon = ZUBAT,23
     Form = 1
 #-------------------------------
 [AROMALADY,Louise]
-Pokemon = BUDEW,10
+Pokemon = BUDEW,6
     Form = 1
-Pokemon = FOONGUS,11
+Pokemon = FOONGUS,7
+    Form = 1
+#-------------------------------
+[AROMALADY,Louise,1]
+Pokemon = ROSELIA,21
+    Form = 1
+Pokemon = FOONGUS,22
     Form = 1
 #-------------------------------
 [MECHGRUNT_F,Jean]
-Pokemon = BLITZLE,26
+Pokemon = BLITZLE,28
     Form = 1
     Ball = 25
-Pokemon = FLAAFFY,26
+Pokemon = FLAAFFY,28
     Form = 1
     Ball = 25
-Pokemon = KLINK,27
+Pokemon = KLINK,28
     Form = 1
     Ball = 25
 #-------------------------------
 [BIOGRUNT_F,Jean]
-Pokemon = LOMBRE,26
+Pokemon = LOMBRE,28
     Form = 1
     Ball = 24
-Pokemon = DUOSION,26
+Pokemon = DUOSION,28
     Form = 1
     Ball = 24
-Pokemon = SCYTHER,27
+Pokemon = SCYTHER,28
     Ball = 24
 #-------------------------------
 [BIOGRUNT_M,Oscar]
-Pokemon = PINTERRA,26
+Pokemon = PINTERRA,28
     Ball = 24
-Pokemon = SWABLU,27
+Pokemon = SWABLU,29
     Form = 1
     Ball = 24
-Pokemon = SCIZOR,27
+Pokemon = SCIZOR,29
     Ball = 24
 #-------------------------------
 [MECHGRUNT_M,Oscar]
-Pokemon = MAGNEZONE,26
+Pokemon = MAGNEZONE,28
     Form = 1
     Ball = 25
-Pokemon = PROBOPASS,27
+Pokemon = PROBOPASS,29
     Form = 1
     Ball = 25
-Pokemon = ELECTABUZZ,27
+Pokemon = ELECTABUZZ,29
     Form = 1
     Ball = 25
 #-------------------------------
 [PSYCHIC_M,Ben]
-Pokemon = KIRLIA,25
+Pokemon = KIRLIA,26
     Form = 1
 Pokemon = SOLOSIS,26
     Form = 1
@@ -755,80 +881,83 @@ Pokemon = SANDILE,24
     Form = 1
 Pokemon = ARAQUANID,24
 #-------------------------------
-[CAMPER,Dio]
-Pokemon = GIBLE,32
-Pokemon = KLANG,33
+[POKEMONRANGER_M,Dio]
+Pokemon = GIBLE,33
+Pokemon = KLANG,34
     Form = 1
-Pokemon = KRABBY,34
+Pokemon = KRABBY,35
     Form = 1
 Pokemon = LUDICOLO,35
     Form = 1
 #-------------------------------
 [PSYCHIC_F,Miri]
-Pokemon = SLOWBRO,25
+Pokemon = SLOWBRO,26
     Form = 1
-Pokemon = KIRLIA,25
+Pokemon = KIRLIA,27
     Form = 1
 #-------------------------------
 [CRUSHGIRL,Lex]
-Pokemon = AZUMARILL,24
+Pokemon = AZUMARILL,23
     Form = 1
 Pokemon = HARIYAMA,24
 Pokemon = ELECTABUZZ,25
     Form = 1
 #-------------------------------
-[LASS,Lucy]
+[PAINTER,Lucy]
 Pokemon = WIMPOD,24
-Pokemon = FLAAFFY,25
+Pokemon = FLAAFFY,24
     Form = 1
-Pokemon = FURRET,26
+Pokemon = FURRET,25
     Form = 1
 #-------------------------------
 [COOLTRAINER_M,Ian]
-Pokemon = AIPOM,28
+Pokemon = AIPOM,34
     Form = 1
-Pokemon = BLITZLE,28
+Pokemon = BLITZLE,35
     Form = 1
-Pokemon = MAREEP,28
+Pokemon = MAREEP,35
     Form = 1
 #-------------------------------
 [GAMBLER,Amine]
-Pokemon = ESPEON,27
-Pokemon = JUMPLUFF,27
+Pokemon = ESPEON,34
+Pokemon = JUMPLUFF,34
     Form = 1
-Pokemon = HERACROSS,28
+Pokemon = HERACROSS,35
 #-------------------------------
 [COOLTRAINER_M,Gray]
-Pokemon = TRUBBISH,25
-Pokemon = BAGON,25
+Pokemon = AIPOM,25
+    Form = 1
+Pokemon = YANMA,25
+    Form = 1
 Pokemon = SABLEYE,25
 #-------------------------------
 [YOUNGSTER,Calvin]
-Pokemon = SUNKERN,28
-Pokemon = ABSOL,29
+Pokemon = SUNKERN,32
+    Form = 1
+Pokemon = ABSOL,33
     Form = 1
 #-------------------------------
 [BIKER,Tony]
-Pokemon = DARMANITAN,29
-Pokemon = KROKOROK,29
+Pokemon = DARMANITAN,33
+Pokemon = KROKOROK,34
     Form = 1
-Pokemon = SKARMORY,30
+Pokemon = SKARMORY,35
 #-------------------------------
 [AROMALADY,Phi]
-Pokemon = ROSERADE,31
+Pokemon = ROSERADE,32
     Form = 1
-Pokemon = BRELOOM,30
-Pokemon = SUNFLORA,32
+Pokemon = BRELOOM,33
+Pokemon = SUNFLORA,34
     Form = 1
 #-------------------------------
 [AROMALADY,Clara]
-Pokemon = LILLIGANT,35
+Pokemon = LILLIGANT,34
 Pokemon = LEAFEON,35
 #-------------------------------
 [BEAUTY,Cassandra]
-Pokemon = FURRET,30
+Pokemon = FURRET,33
     Form = 1
-Pokemon = FLAAFFY,30
+Pokemon = FLAAFFY,34
     Form = 1
 #-------------------------------
 [COOLTRAINER_M,Frankly]
@@ -838,17 +967,17 @@ Pokemon = SLOWKING,36
     Moves = EERIESPELL
 #-------------------------------
 [GAMBLER,Benjamin]
-Pokemon = ZEBSTRIKA,35
+Pokemon = ZEBSTRIKA,37
     Form = 1
-Pokemon = POLLEKNIGHT,35
-Pokemon = KROKOROK,35
+Pokemon = POLLEKNIGHT,37
+Pokemon = KROKOROK,38
     Form = 1
 #-------------------------------
 [AROMALADY,Alycia]
-Pokemon = LEAFEON,35
-Pokemon = ROSELIA,35
+Pokemon = LEAFEON,36
+Pokemon = ROSELIA,37
     Form = 1
-Pokemon = JUMPLUFF,35
+Pokemon = JUMPLUFF,38
     Form = 1
 #-------------------------------
 [GENTLEMAN,Matt]
@@ -858,53 +987,48 @@ Pokemon = AXEW,35
 Pokemon = DEINO,35
 #-------------------------------
 [MECHGRUNT_F,Lynn]
-Pokemon = FLAAFFY,27
+Pokemon = FLAAFFY,29
     Form = 1
     Ball = 25
-Pokemon = SEVIPER,27
+Pokemon = SEVIPER,29
     Ball = 25
-Pokemon = KLINK,28
-    Form = 1
-    Ball = 25
-Pokemon = NOSEPASS,28
+Pokemon = NOSEPASS,30
     Form = 1
     Ball = 25
 #-------------------------------
 [BIOGRUNT_F,Lynn]
-Pokemon = PARASECT,27
+Pokemon = PARASECT,29
     Ball = 24
-Pokemon = SEVIPER,27
+Pokemon = SEVIPER,29
     Form = 1
     Ball = 24
-Pokemon = HERACROSS,28
+Pokemon = HERACROSS,30
     Form = 1
-    Ball = 24
-Pokemon = PINSIR,28
     Ball = 24
 #-------------------------------
 [GENTLEMAN,Chance]
-Pokemon = CHANSEY,29
-Pokemon = CHANSEY,30
-Pokemon = BLISSEY,31
+Pokemon = CHANSEY,33
+Pokemon = CHANSEY,34
+Pokemon = BLISSEY,35
 #-------------------------------
 [BIOGRUNT_F,Meredith]
-Pokemon = DUOSION,26
+Pokemon = DUOSION,29
     Form = 1
     Ball = 24
-Pokemon = ZANGOOSE,26
+Pokemon = ZANGOOSE,29
     Form = 1
     Ball = 24
-Pokemon = SCIZOR,27
+Pokemon = SCIZOR,30
     Ball = 24
 #-------------------------------
 [MECHGRUNT_F,Meredith]
-Pokemon = KLANG,26
+Pokemon = KLANG,29
     Form = 1
     Ball = 25
-Pokemon = AIPOM,26
+Pokemon = AIPOM,29
     Form = 1
     Ball = 25
-Pokemon = RAICHU,27
+Pokemon = RAICHU,30
     Form = 1
     Ball = 25
 #-------------------------------
@@ -915,10 +1039,10 @@ Pokemon = PIKACHU,26
 Pokemon = KLINK,25
     Form = 1
     Ball = 25
-Pokemon = MAREEP,26
+Pokemon = MAREEP,27
     Form = 1
     Ball = 25
-Pokemon = SKARMORY,26
+Pokemon = SKARMORY,27
     Form = 1
     Ball = 25
 #-------------------------------
@@ -926,11 +1050,11 @@ Pokemon = SKARMORY,26
 Pokemon = PARASECT,26
     Form = 1
     Ball = 24
-Pokemon = PINSIR,25
+Pokemon = PINSIR,26
     Ball = 24
-Pokemon = SABLEYE,26
+Pokemon = SABLEYE,27
     Ball = 24
-Pokemon = GIGANTLER,26
+Pokemon = GIGANTLER,27
     Ball = 24
 #-------------------------------
 [MECHGRUNT_F,Kiana]
@@ -978,19 +1102,19 @@ Pokemon = SEVIPER,25
     Ball = 24
 #-------------------------------
 [BIOGRUNT_F,Irene]
-Pokemon = FOONGUS,24
+Pokemon = FOONGUS,25
     Form = 1
     Ball = 24
-Pokemon = HERACROSS,25
+Pokemon = HERACROSS,26
     Ball = 24
 Pokemon = TROPIUS,26
     Ball = 24
 #-------------------------------
 [MECHGRUNT_M,Johnny]
-Pokemon = KLINK,24
+Pokemon = KLINK,25
     Form = 1
     Ball = 25
-Pokemon = SEVIPER,25
+Pokemon = SEVIPER,26
     Form = 1
     Ball = 25
 Pokemon = MAGNETON,26
@@ -1045,15 +1169,15 @@ Pokemon = NOSEPASS,31
     Ball = 25
 #-------------------------------
 [MECHGRUNT_M,Harry]
-Pokemon = KLINK,25
+Pokemon = KLINK,30
     Form = 1
     Ball = 25
-Pokemon = ARON,25
+Pokemon = ARON,30
     Ball = 25
-Pokemon = RAICHU,25
+Pokemon = RAICHU,30
     Form = 1
     Ball = 25
-Pokemon = SKARMORY,25
+Pokemon = SKARMORY,30
     Ball = 25
 #-------------------------------
 [MECHGRUNT_F,Cameron]
@@ -1096,28 +1220,28 @@ Pokemon = SABLEYE,31
     Ball = 24
 #-------------------------------
 [MECHGRUNT_F,Kara]
-Pokemon = PIKACHU,7
+Pokemon = PIKACHU,9
     Form = 1
     Ball = 25
-Pokemon = ELEKID,7
+Pokemon = ELEKID,9
     Form = 1
     Ball = 25
-Pokemon = WINGOT,8
+Pokemon = WINGOT,10
     Ball = 25
-Pokemon = AIPOM,8
+Pokemon = AIPOM,10
     Form = 1
     Ball = 25
 #-------------------------------
 [BIOGRUNT_F,Kara]
-Pokemon = SOLOSIS,7
+Pokemon = SOLOSIS,9
     Form = 1
     Ball = 24
-Pokemon = PARAS,7
+Pokemon = PARAS,9
     Form = 1
     Ball = 24
-Pokemon = HERACUTE,8
+Pokemon = HERACUTE,10
     Ball = 24
-Pokemon = FOONGUS,8
+Pokemon = FOONGUS,10
     Form = 1
     Ball = 24
 #-------------------------------
@@ -1287,17 +1411,31 @@ Pokemon = ARAQUANID,25
 Pokemon = UMBREON,25
 #-------------------------------
 [BUGCATCHER,Zach]
-Pokemon = APPLIN,9
-Pokemon = SLOWPOKE,9
+Pokemon = APPLIN,8
+Pokemon = SLOWPOKE,8
     Form = 1
-Pokemon = GROOKEY,10
+Pokemon = GROOKEY,9
 #-------------------------------
-[LASS,Debra]
-Pokemon = SKWOVET,9
+[BUGCATCHER,Zach,1]
+Pokemon = FLAPPLE,21
+Pokemon = SLOWKING,22
+    Form = 1
+Pokemon = THWACKEY,23
+#-------------------------------
+[PAINTER,Debra]
+Pokemon = SKWOVET,8
     Item = SITRUSBERRY
-Pokemon = ROWLET,10
+Pokemon = ROWLET,8
     Item = SITRUSBERRY
-Pokemon = TOXEL,10
+Pokemon = TOXEL,8
+    Item = SITRUSBERRY
+#-------------------------------
+[PAINTER,Debra,1]
+Pokemon = GREEDENT,24
+    Item = SITRUSBERRY
+Pokemon = ROWLET,21
+    Item = SITRUSBERRY
+Pokemon = TOXEL,22
     Item = SITRUSBERRY
 #-------------------------------
 [OFFICER,Jack]
@@ -1309,33 +1447,34 @@ Pokemon = ELECTIVIRE,34
     Form = 1
 #-------------------------------
 [OFFICER,Jack,1]
-Pokemon = ARCANINE,34
-Pokemon = BRAVIARY,34
-Pokemon = TOXTRICITY,35
-Pokemon = ELECTIVIRE,35
+Pokemon = ARCANINE,36
+Pokemon = BRAVIARY,37
+Pokemon = TOXTRICITY,38
+Pokemon = ELECTIVIRE,38
     Form = 1
 #-------------------------------
 [WITCH,Helga]
-Pokemon = SUNFLORA,35
+Pokemon = SUNFLORA,41
     Form = 1
     Shiny = yes
     Moves = PESTILENCE,GIGADRAIN,SNARL
     Ability = 2
     Item = SITRUSBERRY
     IV = 20
-Pokemon = JUMPLUFF,35
+Pokemon = JUMPLUFF,42
     Form = 1
-Pokemon = SLOWKING,36
+Pokemon = SLOWKING,42
     Form = 1
 	Moves = EERIESPELL,CURSE,SLUDGEWAVE
-Pokemon = MISMAGIUS,37
+Pokemon = MEOWSTIC,43
+    Form = 1
 #-------------------------------
 [GRAVEDIGGER,Colin]
-Pokemon = ARIADOS,32
+Pokemon = ARIADOS,34
     Form = 1
-Pokemon = SUNKERN,33
+Pokemon = SUNKERN,35
     Form = 1
-Pokemon = SKIPLOOM,33
+Pokemon = SKIPLOOM,35
     Form = 1
 #-------------------------------
 [GRAVEDIGGER,Graham]
@@ -1344,36 +1483,36 @@ Pokemon = MAROWAK,34
 Pokemon = POLTEAGEIST,35
 #-------------------------------
 [GRAVEDIGGER,Victor]
-Pokemon = SHUPPET,33
+Pokemon = SHUPPET,34
     Form = 1
-Pokemon = ARIADOS,34
+Pokemon = ARIADOS,35
     Form = 1
-Pokemon = SABSIDIAN,35
+Pokemon = SABSIDIAN,36
 #-------------------------------
 [BIOGRUNT_F,Natasha]
-Pokemon = DUOSION,28
+Pokemon = DUOSION,29
     Form = 1
     Ball = 24
-Pokemon = PINTERRA,28
+Pokemon = PINTERRA,30
     Ball = 24
-Pokemon = FURRET,29
+Pokemon = FURRET,30
     Ball = 24
 #-------------------------------
 [MECHGRUNT_F,Natasha]
-Pokemon = KLINK,28
+Pokemon = KLINK,29
     Form = 1
     Ball = 25
-Pokemon = RAICHU,28
+Pokemon = RAICHU,30
     Form = 1
     Ball = 25
-Pokemon = GOLBAT,29
+Pokemon = GOLBAT,30
     Form = 1
     Ball = 25
 #-------------------------------
 [BIOGRUNT_M,Arnold]
-Pokemon = SCIZOR,29
+Pokemon = SCIZOR,30
     Ball = 24
-Pokemon = DUOSION,29
+Pokemon = DUOSION,31
     Form = 1
     Ball = 24
 #-------------------------------
@@ -1381,32 +1520,32 @@ Pokemon = DUOSION,29
 Pokemon = AMPHAROS,30
     Form = 1
     Ball = 25
-Pokemon = ELECTABUZZ,29
+Pokemon = ELECTABUZZ,31
     Form = 1
     Ball = 25
 #-------------------------------
 [BIOGRUNT_M,Julian]
-Pokemon = TROPIUS,28
+Pokemon = TROPIUS,30
     Ball = 24
 Pokemon = TOXTRICITY,30
     Ball = 24
-Pokemon = ZANGOOSE,29
+Pokemon = ZANGOOSE,31
     Form = 1
     Ball = 24
 #-------------------------------
 [MECHGRUNT_M,Julian]
-Pokemon = PROBOPASS,28
+Pokemon = PROBOPASS,30
 	Form = 1
     Ball = 25
 Pokemon = VIKAVOLT,30
     Ball = 25
-Pokemon = SEVIPER,29
+Pokemon = SEVIPER,31
     Ball = 25
 #-------------------------------
 [CAMPER,Grayson]
-Pokemon = ZANGOOSE,21
+Pokemon = ZANGOOSE,22
 	Form = 1
-Pokemon = SANDILE,22
+Pokemon = SANDILE,23
 	Form = 1
 #-------------------------------
 [BEAUTY,Vivian]

@@ -378,7 +378,7 @@ def pbEndSurf(xOffset,yOffset)
   ret = follow_pbEndSurf(xOffset,yOffset)
   if ret
     pkmn = $Trainer.arenayIndex(true)
-    $PokemonTemp.dependentEvents.come_back(false)
+    $PokemonGlobal.callRefresh = [true,false]
   end
 end
 
@@ -609,9 +609,9 @@ def pbStartOver(gameover=false)
   pbHealAll
   if $PokemonGlobal.pokecenterMapId && $PokemonGlobal.pokecenterMapId>=0
     if gameover
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]After the unfortunate defeat, you scurry back to a Pokémon Center."))
+      pbMessage(_INTL("\\w[""]\\wm\\l[3]After the unfortunate defeat, you scurry back to a Pokémon Center."))
     else
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]You scurry back to a Pokémon Center, protecting your exhausted Pokémon from any further harm..."))
+      pbMessage(_INTL("\\w[""]\\wm\\l[3]You scurry back to a Pokémon Center, protecting your exhausted Pokémon from any further harm..."))
     end
     pbCancelVehicles
     pbRemoveDependenciesExceptFollower
@@ -632,9 +632,9 @@ def pbStartOver(gameover=false)
       return
     end
     if gameover
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]After the unfortunate defeat, you scurry back home."))
+      pbMessage(_INTL("\\w[""]\\wm\\l[3]After the unfortunate defeat, you scurry back home."))
     else
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]You scurry back home, protecting your exhausted Pokémon from any further harm..."))
+      pbMessage(_INTL("\\w[""]\\wm\\l[3]You scurry back home, protecting your exhausted Pokémon from any further harm..."))
     end
     if homedata
       pbCancelVehicles
@@ -1246,10 +1246,7 @@ class PokeBattle_Trainer
   def arenayIndex(pkmn=false)
     ret = -1
     @party.each_with_index do |p,i|
-      ret = i if p && p.isSpecies?(:ARENAY) #&& p.able?
-      if !$game_switches[400]
-        ret = -1 if ret >= 0 && !p.able?
-      end
+      ret = i if p && p.isSpecies?(:ARENAY) && (p.able? || $game_switches[400])
     end
     if pkmn
       return @party[ret] if ret >= 0

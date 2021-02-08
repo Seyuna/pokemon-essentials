@@ -280,7 +280,7 @@ class PokeBattle_Battler
     @effects[PBEffects::WeightChange]        = 0
     @effects[PBEffects::Yawn]                = 0
     @effects[PBEffects::QuickParry]          = false
-
+    @effects[PBEffects::Reconfigure]         = 0
   end
 
   #=============================================================================

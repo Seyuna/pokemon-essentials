@@ -427,7 +427,7 @@ Land
     BUDEW,2,7
     SENTRET,2,7
     KANGA,2,7
-    RUFFLET,2,7
+    SENTRET,2,7
 #-------------------------------
 079 # Fleural Town
 20,8,8
@@ -456,7 +456,7 @@ SuperRod
 Land
     WINGOT,2,7
     ADORABULL,2,7
-	MAGNEMITE,2,7
+    MAGNEMITE,2,7
     BLITZLE,2,7
     GRUBBIN,2,7
     DRIFLOON,2,7
@@ -488,7 +488,7 @@ Land
     SANDILE,19,24
     DEWPIDER,19,24
     SWABLU,19,24
-	FURRET,19,24
+    FURRET,19,24
 Water
     SANDILE,19,24
     KRABBY,19,24
@@ -512,25 +512,25 @@ SuperRod
 086 # Maple Trail
 20,8,8
 Land
-    BLITZLE,22,27
-    HEATMOR,22,27
-    DURANT,22,27
-    HOUNDOUR,22,27
-    VENIPEDE,22,27
-    DARUMAKA,22,27
+    BLITZLE,30,34
+    SWABLU,30,34
+    FURRET,30,34
+    YANMA,30,34
+    AIPOM,30,34
+    MARILL,30,34
 Water
-    POLIWAG,22,27
-    MAGIKARP,22,27
-    FINNEON,22,27
-    FINNEON,22,27
-    FINNEON,22,27
+    MAGIKARP,28,32
+    MAGIKARP,28,32
+    SANDILE,28,32
+    SANDILE,28,32
+    SANDILE,28,32
 OldRod
-    FINNEON,22,27
-    FINNEON,22,27
+    MAGIKARP,10,15
+    SANDILE,10,15
 GoodRod
-    FINNEON,32,37
-    FINNEON,32,37
-    FINNEON,32,37
+    MAGIKARP,31,34
+    SANDILE,31,34
+    MAGIKARP,31,34
 SuperRod
     FINNEON,42,47
     FINNEON,42,47
@@ -544,7 +544,7 @@ Cave
     ZUBAT,5,11
     MAGNEMITE,5,11
     NOSEPASS,5,11
-    ARON,5,11
+    ZUBAT,5,11
     DWEBBLE,5,11
     NOSEPASS,5,11
 #-------------------------------
@@ -552,9 +552,9 @@ Cave
 20,8,8
 Cave
     ZUBAT,25,30
-	NOSEPASS,25,30
-    ARON,25,30
-	NOSEPASS,25,30
+    NOSEPASS,25,30
+    ZUBAT,25,30
+    NOSEPASS,25,30
     DWEBBLE,25,30
     MAGNETON,25,30
 #-------------------------------
@@ -565,18 +565,18 @@ Cave
     MAGNEMITE,10,15
     ELEKID,10,15
     PICHU,10,15
-	GRUBBIN,10,15
-	PICHU,10,15
+    GRUBBIN,10,15
+    PICHU,10,15
 #-------------------------------
 092 # Verdant Valley
 20,8,8
 Land
-    ADORABULL,5,10
-    KANGA,5,10
-    TROPPY,5,10
-    BUDEW,5,10
-    ZANGOOSE,5,10
-    SENTRET,5,10
+    ADORABULL,6,11
+    KANGA,6,11
+    TROPPY,6,11
+    BUDEW,6,11
+    SWABLU,6,11
+    SENTRET,6,11
 #-------------------------------
 093 # Lush Road
 20,8,8
@@ -620,22 +620,28 @@ Land
 098 # Plunge Pass
 20,8,8
 Land
-    BABEE,5,10
-    SWABLU,5,10
-    BLITZLE,5,10
-    BUDEW,5,10
-	SENTRET,5,10
-	EEVEE,5,10
+    BABEE,3,7
+    SWABLU,3,7
+    BLITZLE,3,7
+    BUDEW,3,7
+    SENTRET,3,7
+    EEVEE,4,8
+RockSmash
+    LEDYBA,20,25
+    LEDYBA,20,25
+    LEDYBA,20,25
+    LEDYBA,20,25
+    LEDYBA,20,25
 #-------------------------------
 099 # Lappy Lake
 20,8,8
 Land
-    BABEE,7,12
-	SLOWPOKE,7,12
-    LOTAD,7,12
-    TEDDIURSA,7,12
-    BUIZEL,7,12
-    STANTLER,7,12
+    BABEE,7,11
+    SLOWPOKE,7,11
+    LOTAD,7,11
+    BUDEW,7,11
+    AZURILL,7,11
+    SENTRET,7,12
 Water
     LAPPY,14,18
     MAGIKARP,15,22
@@ -659,32 +665,32 @@ SuperRod
 100 # Dim Cave
 20,8,8
 Cave
-    SABLING,25,30
-    DUNSPARCE,25,30
-    AZURILL,25,30
-	ZUBAT,25,30
-    RIOLU,25,30
-	DUNSPARCE,25,30
+    SABLEYE,26,29
+    DUNSPARCE,26,29
+    AZUMARILL,26,29
+    GOLBAT,26,29
+    RIOLU,26,29
+    DUNSPARCE,26,29
 #-------------------------------
 101 # Maple Trail
 20,8,8
 Land
-    BLITZLE,25,30
-    HEATMOR,25,30
-    DURANT,25,30
-    HOUNDOUR,25,30
-    VENIPEDE,25,30
-    DARUMAKA,25,30
+    BLITZLE,31,35
+    SWABLU,31,35
+    FURRET,31,35
+    YANMA,31,35
+    AIPOM,31,35
+    MARILL,31,35
 #-------------------------------
 103 # Verdant Valley
 20,8,8
 Land
-    ADORABULL,9,13
-    PARAS,9,13
-    SOLOSIS,9,13
-    MURKROW,9,13
-    HERACUTE,9,13
-    SICKLER,9,13
+    ADORABULL,10,14
+    PARAS,10,14
+    ZANGOOSE,10,14
+    SWABLU,10,14
+    HERACUTE,10,14
+    SOLOSIS,10,14
 Water
     MAGIKARP,20,25
     MAGIKARP,20,25
@@ -708,29 +714,29 @@ SuperRod
 105 # Yama Pass
 20,8,8
 Land
-    TEDDIURSA,28,33
-    STANTLER,28,33
-    MAGBY,28,33
-    HOUNDOUR,28,33
-    MURKROW,28,33
-    PONYTA,28,33
+    BLITZLE,33,37
+    SWABLU,33,37
+    FURRET,33,37
+    YANMA,33,37
+    AIPOM,33,37
+    MARILL,33,37
 #-------------------------------
 107 # Stacona Woods
 20,8,8
 Land
-    PINCUSH,13,20
-    SICKLER,13,20
-    HERACUTE,13,20
-    FOONGUS,13,20
-    PARAS,13,20
-    JOLTIK,13,20
+    PINCUSH,14,18
+    SICKLER,14,18
+    HERACUTE,14,18
+    FOONGUS,14,18
+    PARAS,14,18
+    SWABLU,14,18
 #-------------------------------
 108 # Lumigen Hills
 20,8,8
 Land
     ARON,7,13
     WINGOT,7,13
-	KLINK,7,13
+    KLINK,7,13
     ZANGOOSE,7,13
     AIPOM,7,13
     ABSOL,7,13
@@ -758,21 +764,27 @@ SuperRod
 20,8,8
 Cave
     MAREEP,20,26
-    SNORUNT,20,26
-    SWINUB,20,26
-    SNEASEL,20,26
     NUMEL,20,26
-    SNEASEL,20,26
+    SWINUB,20,26
+    MAREEP,20,26
+    NUMEL,20,26
+    MAREEP,20,26
 #-------------------------------
 111 # Ferrous Cave
-20,8,8
+25,11,11
 Cave
-    ZUBAT,12,16
-    RALTS,12,16
-    AZURILL,12,16
-    PARAS,12,16
-    ALUMIDON,12,16
-    LARVITAR,12,16
+    ZUBAT,11,14
+    RALTS,11,14
+    AZURILL,11,14
+    PARAS,11,14
+    ZUBAT,11,14
+    ZUBAT,11,14
+RockSmash
+    LEDYBA,11,14
+    LEDYBA,11,14
+    LEDYBA,11,14
+    LEDYBA,11,14
+    LEDYBA,11,14
 #-------------------------------
 113 # Driftwood City
 20,8,8
@@ -797,14 +809,14 @@ SuperRod
     MAGIKARP,25,35
 #-------------------------------
 121 # Ferrous Cave
-20,8,8
+20,11,11
 Cave
-    ZUBAT,15,19
-    RALTS,15,19
-    AZURILL,15,19
-    PARAS,15,19
-    ALUMIDON,15,19
-    LARVITAR,15,19
+    ZUBAT,14,17
+    RALTS,14,17
+    AZURILL,14,17
+    PARAS,14,17
+    ALUMIDON,14,17
+    LARVITAR,14,17
 Water
     POLIWAG,25,30
     FINNEON,25,30
@@ -824,16 +836,22 @@ SuperRod
     POLIWAG,40,45
     POLIWAG,40,45
     POLIWAG,40,45
+RockSmash
+    LEDYBA,14,17
+    LEDYBA,14,17
+    LEDYBA,14,17
+    LEDYBA,14,17
+    LEDYBA,14,17
 #-------------------------------
 123 # Lush Cave
 20,8,8
 Cave
-    GOLETT,20,25
     SABLING,20,25
-    ELGYEM,20,25
-    GASTLY,20,25
-    IMPIDIMP,20,25
-    GIBLE,20,25
+    ZUBAT,20,25
+    RALTS,20,25
+    AZUMARILL,20,25
+    AIPOM,20,25
+    SHUPPET,20,25
 #-------------------------------
 133 # Dragon's Den
 20,8,8
@@ -843,7 +861,7 @@ Cave
     GIBLE,25,30
     DEINO,25,30
     ALUMIDON,25,30
-	DUNSPARCE,25,30
+    DUNSPARCE,25,30
 #-------------------------------
 146 # Cascade Creek
 25,10,10
@@ -881,38 +899,38 @@ Land
     FOONGUS,25,30
     SEVIPER,25,30
     TOXEL,25,30
-    STUNKY,25,30
+    TRAPINCH,25,30
     AIPOM,25,30
 #-------------------------------
 150 # Folian Grove
 20,8,8
 Land
-    SKWOVET,10,15
-    APPLIN,10,15
-    SLOWPOKE,10,15
-    SKIDDO,10,15
-    ROWLET,10,15
-    GROOKEY,10,15
+    SKWOVET,6,10
+    APPLIN,6,10
+    SLOWPOKE,6,10
+    SKIDDO,6,10
+    ROWLET,6,11
+    GROOKEY,6,11
 #-------------------------------
 151 # Haunted Hollow
 25,10,10
 Land
-    SUNKERN,29,34
-    JUMPLUFF,29,34
-    ARIADOS,29,34
-    MEOWSTIC,29,34
-    SHUPPET,29,34
-    SINISTEA,29,34
+    SUNKERN,31,35
+    HOPPIP,31,35
+    SPINARAK,31,35
+    ESPURR,31,35
+    SHUPPET,31,35
+    SINISTEA,31,35
 #-------------------------------
 152 # Haunted Cavern
 25,5,10
 Cave
-    SABLING,30,35
-	DRIFLOON,30,35
-    ZUBAT,30,35
-    SHUPPET,30,35
-    IMPIDIMP,30,35
-    SINISTEA,30,35
+    SABLING,31,36
+    DRIFLOON,31,36
+    ZUBAT,31,36
+    SHUPPET,31,36
+    IMPIDIMP,31,36
+    SINISTEA,31,36
 #-------------------------------
 161 # Cascade Cave
 25,7,10

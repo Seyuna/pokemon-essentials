@@ -231,17 +231,6 @@ def vsSequenceElite(viewport,trainername,trainerid,tbargraphic,tgraphic)
   effect1.y = viewport.rect.height/2
   effect1.visible = false
 
-  names = Sprite.new(viewport)
-  names.bitmap = Bitmap.new(viewport.rect.width,viewport.rect.height)
-  names.z = 999
-  pbSetSystemFont(names.bitmap)
-  txt = [
-    [trainername,viewport.rect.width*0.25,viewport.rect.height*0.25+32,2,Color.new(255,255,255),Color.new(32,32,32)],
-    [$Trainer.name,viewport.rect.width*0.75,viewport.rect.height*0.75+32,2,Color.new(255,255,255),Color.new(32,32,32)]
-  ]
-  pbDrawTextPositions(names.bitmap,txt)
-  names.visible = false
-
   bmp = pbBitmap("Graphics/Transitions/vsLight3")
 
   bar1 = Sprite.new(viewport)
@@ -341,6 +330,17 @@ def vsSequenceElite(viewport,trainername,trainerid,tbargraphic,tgraphic)
   vs.zoom_x = 4
   vs.zoom_y = 4
   vs.z = 999
+
+  names = Sprite.new(viewport)
+  names.bitmap = Bitmap.new(viewport.rect.width,viewport.rect.height)
+  names.z = 99999
+  pbSetSystemFont(names.bitmap)
+  txt = [
+    [trainername,viewport.rect.width*0.25,viewport.rect.height*0.25+32,2,Color.new(255,255,255),Color.new(32,32,32)],
+    [$Trainer.name,viewport.rect.width*0.75,viewport.rect.height*0.75+32,2,Color.new(255,255,255),Color.new(32,32,32)]
+  ]
+  pbDrawTextPositions(names.bitmap,txt)
+  names.visible = false
 
   max = 224
   k = false
@@ -462,14 +462,15 @@ def vsSequenceSpecial(viewport,trainername,trainerid,tbargraphic,tgraphic)
   name.visible = false
   pbSetSystemFont(name.bitmap)
   name.bitmap.font.size = 69
-  pbDrawOutlineText(name.bitmap,64,viewport.rect.height-160,-1,-1,"#{trainername}",Color.new(255,255,255),Color.new(0,0,0),2)
+  name.z = 100
+  pbDrawOutlineText(name.bitmap,32,viewport.rect.height-160,-1,-1,"#{trainername}",Color.new(255,255,255),Color.new(0,0,0),2)
   names.bitmap = name.bitmap.clone
 
   border1 = Sprite.new(viewport)
   border1.bitmap = pbBitmap("Graphics/Transitions/vsBorder")
   border1.zoom_x = 1.2
   border1.y = -border1.bitmap.height
-  border1.z = 99
+  border1.z = 97
 
   border2 = Sprite.new(viewport)
   border2.bitmap = pbBitmap("Graphics/Transitions/vsBorder")
@@ -477,13 +478,13 @@ def vsSequenceSpecial(viewport,trainername,trainerid,tbargraphic,tgraphic)
   border2.x = viewport.rect.width
   border2.angle = 180
   border2.y = viewport.rect.height+border2.bitmap.height
-  border2.z = 99
+  border2.z = 97
 
   trainer = Sprite.new(viewport)
   trainer.bitmap = pbBitmap(tgraphic)
   trainer.x = 0
   trainer.ox = trainer.bitmap.width
-  trainer.z = 100
+  trainer.z = 99
   trainer.color = Color.new(0,0,0,255)
 
   shadow = Sprite.new(viewport)
@@ -567,6 +568,7 @@ def vsSequenceSpecial(viewport,trainername,trainerid,tbargraphic,tgraphic)
   end
   30.times do
     trainer.x += ((viewport.rect.width*2)-trainer.x)*0.2
+    name.opacity -= 84
     shadow.x = trainer.x + 22
     y1 += ((0)-y1)*0.2
     border1.y = y1

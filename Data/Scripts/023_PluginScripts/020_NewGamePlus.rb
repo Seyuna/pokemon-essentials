@@ -72,7 +72,6 @@ module NewGamePlusData
     ret = 0
     # Edit the 0.1 to change multiplier
     ret += (0.1 * $Trainer.newGamePlusCount)
-    ret = ret.floor.to_i
     return ret
   end
 
@@ -508,7 +507,11 @@ class PokeBattle_Trainer
   end
 
   def newGamePlus=(value)
-    return allowNewGamePlus
+    if $DEBUG
+      @newGamePlus = value
+    else
+      return allowNewGamePlus
+    end
   end
 
   def allowNewGamePlus
@@ -582,6 +585,13 @@ class PokeBattle_Battle
     else
       exp /= 7
     end
+    # Splice EXP Scaling
+    levelDiff = pkmn.level - level
+    if levelDiff > 4
+      divFactor = levelDiff/5
+      exp = exp/(2**divFactor)
+      exp = 2 if exp < 2
+    end
     # Foreign Pokémon gain more Exp
     isOutsider = (pkmn.trainerID!=pbPlayer.id ||
                  (pkmn.language!=0 && pkmn.language!=pbPlayer.language))
@@ -592,7 +602,8 @@ class PokeBattle_Battle
         exp = (exp*1.5).floor
       end
     end
-    exp = (exp * NewGamePlusData.expGain).floor
+    #Thundaga globally reducing EXP gains to 90%
+    exp = ((exp * 0.9) * NewGamePlusData.expGain).floor
     # Modify Exp gain based on pkmn's held item
     i = BattleHandlers.triggerExpGainModifierItem(pkmn.item,pkmn,exp)
     if i<0
@@ -605,10 +616,14 @@ class PokeBattle_Battle
     return if expGained<=0
     # "Exp gained" message
     if showMessages
-      if isOutsider
-        pbDisplayPaused(_INTL("{1} got a boosted {2} Exp. Points!",pkmn.name,expGained))
+      if levelDiff > 4
+        pbDisplayPaused(_INTL("{1} got a reduced {2} Exp. Points!",pkmn.name,expGained))
       else
-        pbDisplayPaused(_INTL("{1} got {2} Exp. Points!",pkmn.name,expGained))
+        if isOutsider
+          pbDisplayPaused(_INTL("{1} got a boosted {2} Exp. Points!",pkmn.name,expGained))
+        else
+          pbDisplayPaused(_INTL("{1} got {2} Exp. Points!",pkmn.name,expGained))
+        end
       end
     end
     curLevel = pkmn.level
@@ -674,6 +689,7 @@ class PokeBattle_Battle
       @opponent.each_with_index do |t,i|
         tMoney += pbMaxLevelInTeam(1,i)*t.moneyEarned
       end
+      tMoney *= 1.75 #Thundaga splice native money multiplier
       tMoney *= 2 if @field.effects[PBEffects::AmuletCoin]
       tMoney *= 2 if @field.effects[PBEffects::HappyHour]
       tMoney = (tMoney * NewGamePlusData.moneyGain).floor.to_i

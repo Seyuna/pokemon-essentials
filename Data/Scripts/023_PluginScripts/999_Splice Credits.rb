@@ -29,7 +29,7 @@ PluginManager.register({
 
 PluginManager.register({
   :name => "Gen 8 Box Exchange",
-  :credits => ["Michael","Golisopod User"]
+  :credits => ["Michael","Golisopod User","Luka SJ"]
 })
 
 PluginManager.register({
@@ -86,8 +86,8 @@ PluginManager.register({
 })
 
 PluginManager.register({
-  :name => "Sprite Credits",
-  :credits => ["PoffinCase","Kalarie"]
+  :name => "Overworld Sprite Credits",
+  :credits => ["PoffinCase","Kalarie","Avatar","Aveontrainer","Daman","MrDollSteak","Pokeshor","Spherical Ice","Mimi","M.vit","Delta231"]
 })
 
 PluginManager.register({

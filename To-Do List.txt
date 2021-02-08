@@ -1,12 +1,144 @@
 WIP - Fix all bugs with NG+ and test it more thoroughly
-WIP- Remove level scaling, Since we're already forcing a save data reset
 WIP - Teach some of our new Pokemon the new moves
 
-Add person in house in Iron Pass
-Add Cypress Battle Intro
-Add Crobat to Fanart Credits
-Edit Brigid/Damian dialogue to acknowledge Arenay in the room
-Edit  Driftwood Lab Battle Scene to have events acknowledge and interact with (ie steal) Arenay
 Make Credits images load automatically through script
-Give trainers some of our new pokemon forms (Seviper as the Polleknight slayer)
-Update backsprite of Staconan Zubat Line, Solosis Line, Foongus Line and Troppy Line
+
+
+v0.6 Update Changelog ======================================================
+DONE - Reduce lag by reducing event count and changing connections to gates
+DONE - Add team NPCs that give a pokemon to the player
+DONE - Revert back to pixel portraits for now
+DONE - Make a new method for showing flipped player portraits
+DONE - Improve performance in Haunted Hollow
+DONE - Add more to Driftwood Lab (another layer)
+DONE - Dojo Bros sidequest in a new route to the south of Lappy Lake (Cascade Creek)
+DONE - Some Tileset updates
+DONE - Set up map transfer arrows with less event usage
+DONE - Redo dojo interior so it's more sand/dirt with punching bags.
+DONE - Add wild encounters to Cascade Creek
+DONE - Add our new forms to some of the maps/routes
+DONE - Update intro events to use the renamed Arenay sprites
+DONE - Change the Lappy Lake egg to have a cool form Pokemon
+DONE - Make debug function to just give me 1 of each cellulose
+DONE - In lab event, mention that genetic research has caused Pokemon to have various new Staconan forms. Blame Damian and Brigid
+DONE - Follower Arenay and forms
+DONE - Add and test the Galarica Wreath and the Cuff
+DONE - add more trainers to cascade creek
+DONE - Adjust all new form battler heights
+DONE - Make some events talk to Arenay now, or reference it. Mom
+DONE - Get Mom's furret after Arenay is stolen. Remove the pokemon given by team leaders
+DONE - Fix furret give map cutscene
+DONE - Reduce variety of wild pokemon on each route, so there are just 4 or 5 or 6
+DONE - Fix all events where pokemon are given to use new method. Also remove team size restriction
+DONE - Add red/yellow trees to maple to mix it up
+DONE - Test the new moves
+DONE - Teach some of our new Pokemon the new moves
+DONE - Warning of higher level pokemon dudes
+DONE - Team logo battle intros for Quantech and Biogress
+DONE - Add Brigid and Damian intros
+DONE - Add Zack intros for all forms
+DONE - I'd like an updated Polleknight backsprite, taller with his lance visible
+DONE - Add a Cypress battle intro
+DONE - Added Sierra, Sasha, and Blue battle intros
+DONE - Add person in house in Iron Pass, Teldoran Onix???
+DONE - Added more OW mons to Fleural and Lumigen
+DONE - Added Adorabull lore guy with fun little storyline in Moncto
+DONE - Region map in the player's room
+DONE - Brigid/Damian dialogue to acknowledge Arenay in the room
+DONE - intro for Witch Helga battle
+DONE - Remove level scaling!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Since we're already forcing a save data reset
+DONE - Also update trainer teams to use more of our new types and less non-stacona regionals
+DONE - Give trainers some of our new pokemon forms (Seviper as the Polleknight slayer)
+DONE - Add mid-battle dialogue for Zack to poison/paralyze at start
+DONE - Mid-battle dialogue for Zack first fight
+DONE - Mid-battle dialogue for Brigid/Damian
+DONE - Paralyze and Poison is not taking form into account. It paralyzes electric arenay!
+DONE - Removed map level areas
+DONE - Make pokemon that are 10 levels higher than the enemy earn way less exp.
+DONE - Fix egg giving event to also bypass team size restriction
+DONE - Surf slide forward glitch, when dismounting the surfboard
+DONE - new trainer OWs
+DONE - Update regional dex to include new forms and subtract old unused
+DONE - Mid-battle dialogue, make the enemy trainer appear in front
+DONE - Make fat guy in Bog have purple shirt
+DONE - Mid-Battle dialogue appear behind the enemy pokemon
+DONE - Update cave maps to use Magnet Cave tiles, so they're not so dang red
+DONE - Update interior trees to use the outside trees
+DONE - Different forms for trainers on starting routes (iron Pass and Pollen Path)
+DONE - Updated Floof's moveset
+DONE - Add another mid-battle dialogue for when Zack sends out his Eevee, Chromeon, and Aeveon
+DONE - Audit all NPC sprites and trainertypes. Change some trainers to match their sprite for the variety of it though! Ex: Painter in Folian Grove
+DONE - Iron pass Onix giver NPC OW sprite update and dialogue
+DONE - Add dialogue for Arenay being stolen from the PC after blacking out, if Arenay isn't in our team
+DONE - Remove mandatory Arenay from start of Driftwood lab
+DONE - ADD GolisopodUser to the Dev Room!
+DONE - Move tutors for the bases (Cell Drain and Reconfigure)
+DONE - removed cellulose from Team Leader win events
+DONE - Add shiny arenay portrait to lab event
+DONE - Test the set trainer order stuff for Zack lab fights
+DONE - RENAME THE GAME RXPROJ
+DONE - Update chapter display messages
+DONE - Mess around with Chapter Level scaling for wild pokemon in Plunge Pass, and Lappy Lake
+DONE - Update lab intro events, if the player doesnt have arenay, it doesnt make sense for leader to circle around
+DONE - Add super secret chairdaga fight
+DONE - Fix some of the dark spots in the grass
+DONE - Add some OW mons in and around the forest
+DONE - Dev room redesign
+DONE - You scurried home after fainting text looks bad, test my new fix
+DONE - INCREASE MONEY GAINS
+DONE - Make player always refer to Arenay by its name!- \v[45]
+DONE - INCREASE TM GAINS a little at the start
+DONE - Draw enemy name above enemy sprite in Battle intro
+DONE - Esc key not working as another X or Cancel key, by default
+DONE - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
+DONE - Test NG+ Arenay form stuff
+
+
+Cam
+- Stacona forms all have pokedex entries
+- add in new Chair sprite
+- PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
+
+
+playtest notes:
+play biogress route
+
+
+
+Broskiddo PR
+WIP - NG+, and keep testing it
+WIP - TM for all Pokemon fix
+
+
+
+
+0.7 Updates ==================================================================
+Chapter 3 (Mt Maple)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Arenay Mode
+New trainer types
+QUEST LOG
+Also, more cute event stuff with Arenay coming out of the Poke Ball
+Add another Zack event somewhere before driftwood
+Dim Cave
+Some Tileset updates
+Bio and Mech forms for the Kanto Starters, sidequests for each team to get them (thats 18 new mons)
+Bio and Mech forms for alternative bio/mech mons. Ex: Mech Solosis, and Bio Klink. Form changing science quest
+More new moves, those are pretty cool. Add some weaker ones for new forms
+Blighted Bog sidequest
+Talk to Admins to join the teams
+Add Pokemon leaf piles that jump out and trigger a wild battle
+Add some more cool new game + events, maybe even some buildings or maps you can only access in NG+ mode Pog ($Trainer.newGamePlusCount)
+
+
+STRETCH GOALS ==================================================================
+Sidequests with Admins
+
+
+MunchingOrangeFeedback
+DONE - Make it so cellulose has its own bag compartment!
+DONE - Add dialogue to mom convo based on if lost/won to Zack
+DONE - Have research assistant always give first potion, before activating zack event
+DONE - Work on regional pokedex entries
+DONE - Add more stacona forms to Ferrous Cave
+DONE - Zubat Dark/Flying with Galvanize for some electric shenanigans
+DONE - Ralts Ground/Psychic

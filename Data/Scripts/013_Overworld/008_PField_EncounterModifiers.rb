@@ -34,6 +34,38 @@ Events.onWildPokemonCreate+=proc {|sender,e|
    end
 }
 
+Events.onWildPokemonCreate+=proc {|sender,e|
+   pokemon=e[0]
+   #19-24 = plunge pass, lappy lake,
+   ch2sector=[98,99]
+
+   # Chapter 2 Plunge Pass level increases
+   if $game_map.map_id!=0 && $game_variables[35]>=2 && ch2sector.include?($game_map.map_id)
+      MINLEVEL=19
+      pokemon.level=(MINLEVEL + rand(5))
+      #pokemon.level=newlevel
+      pokemon.calcStats
+      pokemon.resetMoves
+   end
+   evolvePokemonSilent(pokemon)
+   evolvePokemonSilent(pokemon)
+}
+
+# Make enemy trainer pokemon evolve automatically if their level is high enough
+Events.onTrainerPartyLoad+=proc {|sender,e|
+   if e[0] # Trainer data should exist to be loaded, but may not exist somehow
+     trainer=e[0][0] # A PokeBattle_Trainer object of the loaded trainer
+     items=e[0][1]   # An array of the trainer's items they can use
+     party=e[0][2]   # An array of the trainer's Pokémon
+     for i in 0...party.length
+       party[i].calcStats
+       party[i].resetMoves
+       evolvePokemonSilent(party[i])
+       evolvePokemonSilent(party[i])
+     end
+   end
+}
+
 =begin
 Events.onWildPokemonCreate+=proc {|sender,e|
    pokemon=e[0]
@@ -116,6 +148,9 @@ Events.onWildPokemonCreate+=proc {|sender,e|
      evolvePokemonSilent(pokemon)
    end
 }
+
+
+
 
 
 # This is the basis of a trainer modifier.  It works both for trainers loaded

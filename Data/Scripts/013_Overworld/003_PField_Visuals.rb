@@ -137,6 +137,12 @@ def pbBattleAnimationOverride(viewport,battletype=0,foe=nil)
   ##### Tweaked by Maruno           #####
   trainerid = (foe[0].trainertype rescue -1)
   if trainerid >= 0
+    if checkIfSunMoonTransition(trainerid)
+      $PokemonTemp.smAnim[1] = Viewport.new(0,0,Graphics.width,Graphics.height)
+      $PokemonTemp.smAnim[1].z = 100000
+      $PokemonTemp.smAnim[0] = SunMoonBattleTransitions.new($PokemonTemp.smAnim[1],$PokemonTemp.smAnim[1],nil,trainerid)
+      return true
+    end
     trainername = (foe[0].name rescue "")
     tbargraphic = sprintf("Graphics/Transitions/vsBarSpecial%s",getConstantName(PBTrainers,trainerid)) rescue nil
     tbargraphic = sprintf("Graphics/Transitions/vsBarSpecial%d",trainerid) if !pbResolveBitmap(tbargraphic)
@@ -167,17 +173,6 @@ def pbBattleAnimationOverride(viewport,battletype=0,foe=nil)
       return true
     end
   end
-#  if !handled && trainerid >= 0
-#    case rand(3)
-#    when 0
-#      ebTrainerAnimation1(viewport)
-#    when 1
-#      ebTrainerAnimation2(viewport)
-#    when 2
-#      ebTrainerAnimation3(viewport)
-#    end
-#    handled = true
-#  end
   if (battletype==1 || battletype==3) && foe.length==1   # Against single trainer
     trainerid = (foe[0].trainertype rescue -1)
     if trainerid>=0
@@ -710,9 +705,9 @@ def pbStartOver(gameover=false)
   pbHealAll
   if $PokemonGlobal.pokecenterMapId && $PokemonGlobal.pokecenterMapId>=0
     if gameover
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]After the unfortunate defeat, you scurry back to a Pokémon Center."))
+      pbMessage(_INTL("\\w[]\\wm\\l[3]After the unfortunate defeat, you scurry back to a Pokémon Center."))
     else
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]You scurry back to a Pokémon Center, protecting your exhausted Pokémon from any further harm..."))
+      pbMessage(_INTL("\\w[]\\wm\\l[3]You scurry back to a Pokémon Center, protecting your exhausted Pokémon from any further harm..."))
     end
     pbCancelVehicles
     pbRemoveDependencies
@@ -733,9 +728,9 @@ def pbStartOver(gameover=false)
       return
     end
     if gameover
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]After the unfortunate defeat, you scurry back home."))
+      pbMessage(_INTL("\\w[]\\wm\\l[3]After the unfortunate defeat, you scurry back home."))
     else
-      pbMessage(_INTL("\\w[]\\wm\\c[8]\\l[3]You scurry back home, protecting your exhausted Pokémon from any further harm..."))
+      pbMessage(_INTL("\\w[]\\wm\\l[3]You scurry back home, protecting your exhausted Pokémon from any further harm..."))
     end
     if homedata
       pbCancelVehicles
