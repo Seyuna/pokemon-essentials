@@ -1,6 +1,8 @@
 # Audio folders
 Audio/
 
+Data/*.rxdata
+
 # Files in the main project folder
 Game.ini
 Game.rxproj
