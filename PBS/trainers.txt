@@ -465,7 +465,7 @@ Pokemon = ELEKID,23
 [SUPERNERD,Nolan]
 Pokemon = DUNSPARCE,15
     Form = 1
-Pokemon = MAGNEMITE,15
+Pokemon = MAGNEMITE,16
     Form = 0
 #-------------------------------
 [BUGCATCHER,Al]
@@ -477,13 +477,13 @@ Pokemon = SICKLER,13
     Form = 0
 #-------------------------------
 [PICNICKER,Abigail]
-Pokemon = ADORABULL,13
+Pokemon = ADORABULL,14
     Form = 0
-Pokemon = PARAS,14
+Pokemon = PARAS,15
     Form = 1
 #-------------------------------
 [AROMALADY,Elizabeth]
-Pokemon = TROPPY,14
+Pokemon = TROPPY,15
     Form = 0
 Pokemon = ROSELIA,15
     Form = 1

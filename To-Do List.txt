@@ -96,17 +96,16 @@ DONE - Test NG+ Arenay form stuff
 
 Cam
 - Stacona forms all have pokedex entries
+- Stacona pokemon have new "Entry types" such as "The Little Bee Pokemon' etc
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
-
 
 playtest notes:
 play biogress route
 
-
 Broskiddo PR
-WIP - NG+, and keep testing it
+TEST - NG+, and keep testing it
 WIP - TM for all Pokemon fix
-
+WIP - Better Boss Battles (Ferrous/Woods)
 
 
 
