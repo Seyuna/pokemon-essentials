@@ -1,7 +1,9 @@
 # Audio folders
 Audio/
 
-Data/*.rxdata
+Data/Map*.rxdata
+
+.idea/
 
 # Files in the main project folder
 Game.ini
