@@ -595,12 +595,12 @@ Cave
 092 # Verdant Valley
 20,8,8
 Land
-    ADORABULL,6,11
-    KANGA,6,11
-    TROPPY,6,11
-    BUDEW,6,11
-    SWABLU,6,11
-    SENTRET,6,11
+    ADORABULL,5,9
+    KANGA,5,9
+    TROPPY,5,9
+    BUDEW,5,9
+    SWABLU,5,9
+    SENTRET,5,9
 RockSmash
     LEDYBA,19,23
     LEDYBA,19,23
@@ -721,12 +721,12 @@ Land
 103 # Verdant Valley
 20,8,8
 Land
-    ADORABULL,10,14
-    PARAS,10,14
-    ZANGOOSE,10,14
-    SWABLU,10,14
-    HERACUTE,10,14
-    SOLOSIS,10,14
+    ADORABULL,9,13
+    PARAS,9,13
+    ZANGOOSE,9,13
+    SWABLU,9,13
+    HERACUTE,9,13
+    SOLOSIS,9,13
 Water
     MAGIKARP,20,25
     MAGIKARP,20,25
