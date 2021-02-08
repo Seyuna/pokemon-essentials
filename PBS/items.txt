@@ -263,7 +263,7 @@
 260,GENIUSWING,Genius Wing,Genius Wings,2,3000,"An item for use on a Pokémon. It slightly increases the base Sp. Atk stat of a single Pokémon.",1,0,0,
 261,CLEVERWING,Clever Wing,Clever Wings,2,3000,"An item for use on a Pokémon. It slightly increases the base Sp. Def stat of a single Pokémon.",1,0,0,
 262,SWIFTWING,Swift Wing,Swift Wings,2,3000,"An item for use on a Pokémon. It slightly increases the base Speed stat of a single Pokémon.",1,0,0,
-263,RARECANDY,Rare Candy,Rare Candies,2,4800,"A candy that is packed with energy. It raises the level of a single Pokémon by one.",1,0,0,
+263,RARECANDY,Rare Candy,Rare Candies,2,10000,"A candy that is packed with energy. It raises the level of a single Pokémon by one.",1,0,0,
 #-------------------------------
 264,MASTERBALL,Master Ball,Master Balls,3,0,"The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.",0,4,4,
 265,ULTRABALL,Ultra Ball,Ultra Balls,3,1200,"An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball.",0,4,4,
@@ -538,7 +538,7 @@
 528,CUTITEM,Machete,Machetes,8,0,"A sharp bladed tool used for cutting down small trees.",2,0,6,
 529,FLYITEM,Gale Flute,Gale Flutes,8,0,"Plays a mystical tune that whisks you away.",2,0,6,
 530,STRENGTHITEM,Strength Glove,Strength Gloves,8,0,"Special gloves that imbue the user with the strength to move boulders.",2,0,6,
-531,SUPERRARECANDY,Super Rare Candy,Super Rare Candies,2,20000,"A candy that is overloaded with energy. It raises the level of a single Pokémon by 5.",1,0,0,
+531,SUPERRARECANDY,Super Rare Candy,Super Rare Candies,2,45000,"A candy that is overloaded with energy. It raises the level of a single Pokémon by 5.",1,0,0,
 532,BIOSTONE,Biogress Stone,Biogress Stones,1,2000,"A peculiar stone that makes certain species of biological Pokémon evolve.",1,0,7,
 533,MECHSTONE,Quantech Stone,Quantech Stones,1,2000,"A peculiar stone that makes certain species of mechanical Pokémon evolve.",1,0,7,
 534,BIOBALL,Biogress Ball,Biogress Balls,3,500,"A special Poké Ball that works especially well on Water, Bug, Grass, Flying, and Psychic types.",0,4,4,
