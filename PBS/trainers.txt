@@ -590,7 +590,8 @@ Pokemon = DUNSPARCE,15
 [RUINMANIAC,Jerald]
 Pokemon = RALTS,13
     Form = 1
-Pokemon = ADORABULL,13
+Pokemon = LEDYBA,13
+    Form = 1
 Pokemon = ZUBAT,14
     Form = 1
 #-------------------------------
@@ -664,7 +665,8 @@ Pokemon = ELECTABUZZ,28
 [BLACKBELT,Jackson]
 Pokemon = AZUMARILL,27
     Form = 1
-Pokemon = SCRAGGY,28
+Pokemon = LEDIAN,28
+    Form = 1
 #-------------------------------
 [BLACKBELT,Reese]
 Pokemon = AZUMARILL,29
