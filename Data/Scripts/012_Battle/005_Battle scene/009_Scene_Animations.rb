@@ -419,13 +419,33 @@ class PokeBattle_Scene
       # Actual animation not found, get the default animation for the move's type
       moveData = pbGetMoveData(moveID)
       moveType = moveData[MOVE_TYPE]
+      moveDmg  = moveData[MOVE_BASE_DAMAGE]
       moveKind = moveData[MOVE_CATEGORY]
-      moveKind += 3 if PBTargets.multipleTargets?(moveData[MOVE_TARGET]) ||
-                       PBTargets.targetsFoeSide?(moveData[MOVE_TARGET])
-      moveKind += 3 if moveKind==2 && moveData[MOVE_TARGET]!=PBTargets::User &&
-                       moveData[MOVE_TARGET]!=PBTargets::UserSide
+      moveTarg = moveData[MOVE_TARGET]
+      moveKind += 3 if PBTargets.multipleTargets?(moveTarg) ||
+                       PBTargets.targetsFoeSide?(moveTarg)
+      moveKind += 3 if moveKind==2 && moveTarg != PBTargets::User &&
+                       moveTarg != PBTargets::UserSide
       # [one target physical, one target special, user status,
       #  multiple targets physical, multiple targets special, non-user status]
+=begin
+      moveKind = moveData[MOVE_CATEGORY] * 2
+      if moveData[MOVE_CATEGORY] == 2
+        moveKind += 6 if moveTarg != PBTargets::User && moveTarg != PBTargets::UserSide
+        moveKind += 1 if moveTarg == PBTargets::UserSide || !PBTargets.targetsFoeSide?(moveTarg)
+      else
+        moveKind += 6 if PBTargets.multipleTargets?(moveTarg) || PBTargets.targetsFoeSide?(moveTarg)
+        moveKind += 1 if moveDmg > 90
+      end
+      [
+        one target physical low dmg, one target physical high dmg ,
+        one target special low dmg, one target special high damage,
+        user status, user side status,
+        multiple targets physical low dmg, multiple targets physical high dmg,
+        multiple targets special low dmg, multiple targets special high dmg,
+        non-user status, non-user status
+      ]
+=end
       typeDefaultAnim = {
          :NORMAL   => [:TACKLE,:SONICBOOM,:DEFENSECURL,:EXPLOSION,:SWIFT,:TAILWHIP],
          :FIGHTING => [:MACHPUNCH,:AURASPHERE,:DETECT,nil,nil,nil],
@@ -512,8 +532,14 @@ class PokeBattle_Scene
     # Remember the original positions of Pokémon sprites
     oldUserX = (userSprite) ? userSprite.x : 0
     oldUserY = (userSprite) ? userSprite.y : 0
+    oldUserColor = (userSprite) ? userSprite.color.clone : Color.new(0,0,0,0)
+    oldUserTone  = (userSprite) ? userSprite.tone.clone  : Tone.new(0,0,0,0)
+    oldUserOpacity = (userSprite) ? userSprite.opacity : 255
     oldTargetX = (targetSprite) ? targetSprite.x : oldUserX
     oldTargetY = (targetSprite) ? targetSprite.y : oldUserY
+    oldTargetColor = (targetSprite) ? targetSprite.color.clone : Color.new(0,0,0,0)
+    oldTargetTone  = (targetSprite) ? targetSprite.tone.clone  : Tone.new(0,0,0,0)
+    oldTargetOpacity = (targetSprite) ? targetSprite.opacity : 255
     # Create the animation player
     animPlayer = PBAnimationPlayerX.new(animation,user,target,self,oppMove)
     # Apply a transformation to the animation based on where the user and target
@@ -542,11 +568,17 @@ class PokeBattle_Scene
       userSprite.x = oldUserX
       userSprite.y = oldUserY
       userSprite.pbSetOrigin
+      userSprite.color = oldTargetColor
+      userSprite.tone  = oldUserTone
+      userSprite.opacity = oldUserOpacity
     end
     if targetSprite
       targetSprite.x = oldTargetX
       targetSprite.y = oldTargetY
       targetSprite.pbSetOrigin
+      targetSprite.color = oldTargetColor
+      targetSprite.tone  = oldTargetTone
+      targetSprite.opacity = oldTargetOpacity
     end
   end
 end
