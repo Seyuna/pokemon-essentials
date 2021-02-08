@@ -646,6 +646,7 @@ Pokemon = SANDILE,14
 Pokemon = PINCUSH,12
 Pokemon = SICKLER,12
 Pokemon = HERACUTE,13
+Pokemon = LEDYBA,13
 Pokemon = BABEE,14
     Gender = male
 #-------------------------------
