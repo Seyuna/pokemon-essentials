@@ -25,16 +25,16 @@ Max IV Wild Pokemon Chance +20%
 
 module NewGamePlusData
   def self.expGain
-    return 1 if !$Trainer
-    ret = 1
+    return 0.9 if !$Trainer
+    ret = 0.9
     # Edit the 0.25 to change multiplier
     ret += (0.25 * $Trainer.newGamePlusCount)
     return ret
   end
 
   def self.moneyGain
-    return 1 if !$Trainer
-    ret = 1
+    return 1.75 if !$Trainer
+    ret = 1.75
     # Edit the 0.5 to change multiplier
     ret += (0.5 * $Trainer.newGamePlusCount)
     return ret
@@ -603,7 +603,7 @@ class PokeBattle_Battle
       end
     end
     #Thundaga globally reducing EXP gains to 90%
-    exp = ((exp * 0.9) * NewGamePlusData.expGain).floor
+    exp = (exp * NewGamePlusData.expGain).floor
     # Modify Exp gain based on pkmn's held item
     i = BattleHandlers.triggerExpGainModifierItem(pkmn.item,pkmn,exp)
     if i<0
@@ -689,7 +689,6 @@ class PokeBattle_Battle
       @opponent.each_with_index do |t,i|
         tMoney += pbMaxLevelInTeam(1,i)*t.moneyEarned
       end
-      tMoney *= 1.75 #Thundaga splice native money multiplier
       tMoney *= 2 if @field.effects[PBEffects::AmuletCoin]
       tMoney *= 2 if @field.effects[PBEffects::HappyHour]
       tMoney = (tMoney * NewGamePlusData.moneyGain).floor.to_i
