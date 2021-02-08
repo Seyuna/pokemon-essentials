@@ -402,13 +402,24 @@ module DialogueModule
           pbMessage("\\bCheck this out \\PN! Damian gave me a special new tool!")
           pbMessage("\\bGet poisoned!")
           battle.scene.disappearBar
-          battle.pbAnimation(getID(PBMoves,:TOXIC),battle.battlers[1],battle.battlers[0])
+          viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
+          viewport.z = 999999
+          viewport.color = Color.new(255,-255,255,0)
+          pbSEPlay("eb_poison1")
+          (Graphics.frame_rate/3).times do
+            viewport.color.alpha += 255/(Graphics.frame_rate/3)
+            Graphics.update
+          end
+          (Graphics.frame_rate/3).times do
+            viewport.color.alpha -= 255/(Graphics.frame_rate/3)
+            Graphics.update
+          end
           if battle.battlers[0].pbCanInflictStatus?(PBStatuses::POISON,battle.battlers[1],false)
             battle.battlers[0].pbInflictStatus(PBStatuses::POISON,1,"Your Pokémon were all badly poisoned!")
           else
-            #battle.pbCommonAnimation("Poison",battle.battlers[1],battle.battlers[0])
             pbMessage("Your party has been badly poisoned!")
           end
+          viewport.dispose
           battle.scene.appearBar
           poisonAllPokemon(nil)
           pbMessage("\\bHaha, yes! It worked!")
@@ -423,13 +434,25 @@ module DialogueModule
           pbMessage("\\bCheck this out \\PN! Brigid gave me a special new tool!")
           pbMessage("\\bGet zapped!")
           battle.scene.disappearBar
-          battle.pbAnimation(getID(PBMoves,:SPARK),battle.battlers[1],battle.battlers[0])
+          viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
+          viewport.z = 999999
+          viewport.color = Color.new(255,255,-255,0)
+          pbSEPlay("eb_electric1")
+          (Graphics.frame_rate/3).times do
+            viewport.color.alpha += 255/(Graphics.frame_rate/3)
+            Graphics.update
+          end
+          (Graphics.frame_rate/3).times do
+            viewport.color.alpha -= 255/(Graphics.frame_rate/3)
+            Graphics.update
+          end
           if battle.battlers[0].pbCanInflictStatus?(PBStatuses::PARALYSIS,battle.battlers[1],false)
             battle.battlers[0].pbInflictStatus(PBStatuses::PARALYSIS,0,"Your Pokémon were paralyzed!")
           else
             battle.pbCommonAnimation("Paralysis",battle.battlers[1],battle.battlers[0])
             pbMessage("Your party has been paralyzed!")
           end
+          viewport.dispose
           battle.scene.appearBar
           paralyzeAllPokemon(nil)
           pbMessage("\\bHaha, yes! It worked!")
@@ -489,7 +512,6 @@ module DialogueModule
     DamianIntro = Proc.new{|battle|
           battle.scene.appearBar
           battle.scene.pbShowOpponent(0,true)
-          battle.scene.disappearDatabox
           pbMessage("\\bLooks like I'll have to be the one to beat you...")
           pbMessage("\\bIt's time you learned your place!")
           pbMessage("\\bYou cannot stop the grand plans of Biogress!")
@@ -499,7 +521,6 @@ module DialogueModule
     ChairIntro = Proc.new{|battle|
           battle.scene.appearBar
           battle.scene.pbShowOpponent(0,true)
-          battle.scene.disappearDatabox
           pbMessage("...")
           pbMessage("It's just sitting there menacingly...")
           pbMessage("You cannot begin to comprehend the power of this chair!")

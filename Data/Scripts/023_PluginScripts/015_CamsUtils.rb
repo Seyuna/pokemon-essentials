@@ -109,8 +109,6 @@ def pbFade(reverse=false)
   return if !$game_player || !$scene.is_a?(Scene_Map)
   viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
   viewport.z = 99999
-  viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
-  viewport.z = 99999
   viewport.color = Color.new(0,0,0,reverse ? 255 : 0)
   15.times do
     viewport.color.alpha += 17*(reverse ? -1 : 1)

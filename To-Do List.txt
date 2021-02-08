@@ -2,7 +2,6 @@ WIP - Fix all bugs with NG+ and test it more thoroughly
 WIP - Teach some of our new Pokemon the new moves
 
 Make Credits images load automatically through script
-Update backsprite of Staconan Zubat Line, Solosis Line, Foongus Line and Troppy Line
 
 
 v0.6 Update Changelog ======================================================
@@ -103,10 +102,10 @@ INCREASE TM GAINS
 Broskiddo PR
 WIP - NG+, and keep testing it
 WIP - TM for all Pokemon fix
-TEST - Esc key not working as another X or Cancel key, by default
+DONE - Esc key not working as another X or Cancel key, by default
 	- Only the last default control override works
-TEST - Draw enemy name above enemy sprite in Battle intro
-TEST - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
+DONE - Draw enemy name above enemy sprite in Battle intro
+DONE - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
 
 
 

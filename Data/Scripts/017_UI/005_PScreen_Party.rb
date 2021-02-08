@@ -378,7 +378,7 @@ class PokemonPartyPanel < SpriteWrapper
           status = 5 if @pokemon.hp<=0
           if status>=0
             statusrect = Rect.new(0,16*status,44,16)
-            @overlaysprite.bitmap.blt(78,68,@statuses.bitmap,statusrect)
+            @overlaysprite.bitmap.blt(94,68,@statuses.bitmap,statusrect)
           end
         end
         # Draw gender symbol
@@ -390,7 +390,7 @@ class PokemonPartyPanel < SpriteWrapper
         # Draw shiny icon
         if @pokemon.shiny?
           pbDrawImagePositions(@overlaysprite.bitmap,[[
-             "Graphics/Pictures/shiny",78,66,0,0,18,18]])
+             "Graphics/Pictures/shiny",70,66,0,0,18,18]])
         end
       end
       pbDrawTextPositions(@overlaysprite.bitmap,textpos)

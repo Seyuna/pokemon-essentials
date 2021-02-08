@@ -209,21 +209,55 @@ class PokeBattle_Battle
         # Edited
         case TrainerDialogue.eval("battleStart")
         when -1
-          pbDisplayPaused(_INTL("You are challenged by {1}!",@opponent[0].fullname))
+          if $smAnim
+            msgWindow = pbCreateMessageWindow
+           msgWindow.z = 100000
+            hideAnim = TrainerDisappearAnimation.new(@scene.sprites,@scene.viewport,1)
+            pbMessageDisplay(msgWindow,_INTL("You are challenged by {1}!",@opponent[0].fullname))  {$PokemonTemp.smAnim[0].update; hideAnim.update}
+            hideAnim.dispose
+          else
+            pbDisplayPaused(_INTL("You are challenged by {1}!",@opponent[0].fullname))
+          end
         when 0
           battleStart= TrainerDialogue.get("battleStart")
-          pbDisplayPaused(_INTL(battleStart,@opponent[0].fullname))
+          if $smAnim
+            msgWindow = pbCreateMessageWindow
+            msgWindow.z = 100000
+            hideAnim = TrainerDisappearAnimation.new(@scene.sprites,@scene.viewport,1)
+            pbMessageDisplay(msgWindow,_INTL(battleStart,@opponent[0].fullname))  {$PokemonTemp.smAnim[0].update; hideAnim.update}
+            hideAnim.dispose
+          else
+            pbDisplayPaused(_INTL(battleStart,@opponent[0].fullname))
+          end
         when 1
           battleStart= TrainerDialogue.get("battleStart")
           pbBGMPlay(battleStart["bgm"])
-          pbDisplayPaused(_INTL(battleStart["text"],@opponent[0].fullname))
+          if $smAnim
+            msgWindow = pbCreateMessageWindow
+            msgWindow.z = 100000
+            hideAnim = TrainerDisappearAnimation.new(@scene.sprites,@scene.viewport,1)
+            pbMessageDisplay(msgWindow,_INTL(battleStart["text"],@opponent[0].fullname))  {$PokemonTemp.smAnim[0].update; hideAnim.update}
+            hideAnim.dispose
+          else
+            pbDisplayPaused(_INTL(battleStart["text"],@opponent[0].fullname))
+          end
         when 2
           battleStart= TrainerDialogue.get("battleStart")
           battleStart.call(self)
         when 3
           battleStart= TrainerDialogue.get("battleStart")
-          for i in 0...battleStart.length
-            pbDisplayPaused(_INTL(battleStart[i],@opponent[0].fullname))
+          if $smAnim
+            msgWindow = pbCreateMessageWindow
+            msgWindow.z = 100000
+            hideAnim = TrainerDisappearAnimation.new(@scene.sprites,@scene.viewport,1)
+            for i in 0...battleStart.length
+              pbMessageDisplay(msgWindow,_INTL(battleStart[i],@opponent[0].fullname))  {$PokemonTemp.smAnim[0].update; hideAnim.update}
+            end
+            hideAnim.dispose
+          else
+            for i in 0...battleStart.length
+              pbDisplayPaused(_INTL(battleStart[i],@opponent[0].fullname))
+            end
           end
         end
       when 2
@@ -282,13 +316,27 @@ class PokeBattle_Battle
         sent = sendOuts[side][i]
         case sent.length
         when 1
-          msg += _INTL("{1} sent out {2}!",t.fullname,@battlers[sent[0]].name)
+          if msgWindow
+            pbMessageDisplay(msgWindow,_INTL("{1} sent out {2}!",t.fullname,@battlers[sent[0]].name))  {$PokemonTemp.smAnim[0].update}
+          else
+            msg += _INTL("{1} sent out {2}!",t.fullname,@battlers[sent[0]].name)
+          end
         when 2
-          msg += _INTL("{1} sent out {2} and {3}!",t.fullname,
-             @battlers[sent[0]].name,@battlers[sent[1]].name)
+          if msgWindow
+            pbMessageDisplay(msgWindow,_INTL("{1} sent out {2} and {3}!",t.fullname,
+               @battlers[sent[0]].name,@battlers[sent[1]].name))  {$PokemonTemp.smAnim[0].update}
+          else
+            msg += _INTL("{1} sent out {2} and {3}!",t.fullname,
+               @battlers[sent[0]].name,@battlers[sent[1]].name)
+          end
         when 3
-          msg += _INTL("{1} sent out {2}, {3} and {4}!",t.fullname,
-             @battlers[sent[0]].name,@battlers[sent[1]].name,@battlers[sent[2]].name)
+          if msgWindow
+            pbMessageDisplay(msgWindow,_INTL("{1} sent out {2}, {3} and {4}!",t.fullname,
+               @battlers[sent[0]].name,@battlers[sent[1]].name,@battlers[sent[2]].name))  {$PokemonTemp.smAnim[0].update}
+          else
+            msg += _INTL("{1} sent out {2}, {3} and {4}!",t.fullname,
+               @battlers[sent[0]].name,@battlers[sent[1]].name,@battlers[sent[2]].name)
+          end
         end
         toSendOut.concat(sent)
       end
@@ -306,6 +354,15 @@ class PokeBattle_Battle
              @battlers[sent[1]].name,@battlers[sent[2]].name)
         end
         toSendOut.concat(sent)
+      end
+      if side == 1 && $smAnim
+        pbDisposeMessageWindow(msgWindow)
+        $PokemonTemp.smAnim[0].finish
+        pbFadeOutIn(99999){
+          $PokemonTemp.smAnim[1].dispose
+          $smAnim = false
+          $PokemonTemp.smAnim = []
+        }
       end
       pbDisplayBrief(msg) if msg.length>0
       # The actual sending out of Pokémon
