@@ -528,7 +528,7 @@ Land
     SWABLU,30,34
     FURRET,30,34
     YANMA,30,34
-    AIPOM,30,34
+    DURANT,30,34
     MARILL,30,34
 Water
     MAGIKARP,28,32
@@ -715,7 +715,7 @@ Land
     SWABLU,31,35
     FURRET,31,35
     YANMA,31,35
-    AIPOM,31,35
+    DURANT,31,35
     MARILL,31,35
 #-------------------------------
 103 # Verdant Valley

@@ -3535,3 +3535,16 @@ BattlerPlayerY = -3
 BattlerEnemyX = -2
 BattlerEnemyY = 7
 BattlerShadowSize = 2
+#-------------------------------
+[DURANT,1]
+FormName = Stacona Form
+Type1 = GROUND
+Type2 = GRASS
+BaseStats = 60,110,110,110,50,48
+Abilities = OVERGROW,HUSTLE
+Moves = 1,VICEGRIP,1,SANDATTACK,1,VINEWHIP,6,FURYCUTTER,11,BITE,16,AGILITY,21,MAGNITUDE,26,BUGBITE,31,CRUNCH,36,LEAFBLADE,41,DIG,46,ENTRAINMENT,51,XSCISSOR,56,HARDEN,61,GUILLOTINE,66,EARTHQUAKE
+Color = Brown
+Pokedex = Durant blend into nearby trees to avoid predators. When spotted, they shake the earth to confuse all those around them.
+BattlerPlayerY = -5
+BattlerEnemyX = 0
+BattlerEnemyY = 36

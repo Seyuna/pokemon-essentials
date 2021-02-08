@@ -542,7 +542,7 @@ Pokemon = ELECTABUZZ,34
     Ball = 25
 #-------------------------------
 [BIOGRUNT_M,Alex]
-Pokemon = PARASECT,31
+Pokemon = DURANT,31
     Form = 1
     Ball = 24
 Pokemon = PINSIR,31
@@ -682,7 +682,7 @@ Pokemon = PARASECT,28
 Pokemon = GIGANTLER,29
 #-------------------------------
 [JUGGLER,Harold]
-Pokemon = RALTS,18
+Pokemon = DURANT,18
     Form = 1
 Pokemon = KANGA,18
 Pokemon = AIPOM,19
@@ -908,7 +908,7 @@ Pokemon = ELECTABUZZ,25
 Pokemon = WIMPOD,24
 Pokemon = FLAAFFY,24
     Form = 1
-Pokemon = FURRET,25
+Pokemon = DURANT,25
     Form = 1
 #-------------------------------
 [COOLTRAINER_M,Ian]
@@ -1093,7 +1093,7 @@ Pokemon = FOONGUS,26
 [BIOGRUNT_M,Trevor]
 Pokemon = PINSIR,26
     Ball = 24
-Pokemon = FOONGUS,25
+Pokemon = DURANT,25
     Form = 1
     Ball = 24
 Pokemon = PARASECT,25
