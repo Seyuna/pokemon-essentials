@@ -527,6 +527,33 @@ module DialogueModule
           battle.scene.pbHideOpponent
           battle.scene.disappearBar
         }
+    CrobatIntro =  Proc.new{|battle|
+          battle.scene.appearBar
+      pbMessage("Whoa! #{battle.battlers[1].pbThis} created a small flurry of rocks with its wings!")
+		  pbMessage("#{battle.battlers[1].pbThis} sent rocks flying towards you!")
+		  battle.scene.disappearBar
+		  battle.pbAnimation(getID(PBMoves,:STEALTHROCK),battle.battlers[1],battle.battlers[0])
+      battle.pbDisplay(_INTL("Pointed stones float around {1}'s feet",battle.battlers[0].pbThis(true)))
+		  battle.scene.appearBar
+		  pbPlayCrySpecies(:CROBAT)
+      battle.battlers[0].pbOpposingSide.effects[PBEffects::StealthRock] = true
+          pbMessage("\\w[shout]Cro! Craw! Cro!")
+          pbMessage("#{battle.battlers[1].pbThis} laughs maniacally!")
+          battle.scene.disappearBar
+        }
+	CrobatHalfHP = Proc.new{|battle|
+          battle.scene.appearBar
+		  pbMessage("#{battle.battlers[1].pbThis} is enraged!")
+		  pbPlayCrySpecies(:CROBAT)
+		  pbMessage("\\w[shout]Croobaaaa!!")
+          pbMessage("It let out a screeching cry!")
+		  battle.scene.disappearBar
+		  battle.pbCommonAnimation("StatUp",battle.battlers[1])
+      TrainerDialogue.setDone("lowHP") if battle.battlers[1].hp > (battle.battlers[1].totalhp*0.25)
+		  battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1],false)
+		  battle.battlers[1].pbRaiseStatStage(PBStats::SPATK,1,battle.battlers[1],false)
+		  battle.battlers[1].pbRaiseStatStage(PBStats::SPEED,2,battle.battlers[1],false)
+        }
 
 # DONT DELETE THIS END
 end

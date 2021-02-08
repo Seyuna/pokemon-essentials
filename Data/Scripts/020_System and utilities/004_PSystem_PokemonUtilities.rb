@@ -107,7 +107,7 @@ end
 # Giving Pokémon/eggs to the player (can only add to party)
 #===============================================================================
 def pbAddToParty(pokemon,level=nil,seeform=true)
-  return false if !pokemon || $Trainer.party.length>=6
+  return false if !pokemon
   pokemon = getID(PBSpecies,pokemon)
   if pokemon.is_a?(Integer) && level.is_a?(Integer)
     pokemon = pbNewPkmn(pokemon,level)
