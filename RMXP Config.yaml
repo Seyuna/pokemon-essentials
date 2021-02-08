@@ -30,7 +30,7 @@ scripts_dir:  Export/Scripts
 # exporter script.  Note that the script exporter doesn't look at this array,
 # since it always exports the Scripts.rxdata file.  Add entries to this array
 # if you do not wish to version certain .rxdata files.
-data_ignore_list: 	["Actors","Animations","Armors","Classes","CommonEvents","Constants","Enemies","Items","Scripts.rxdata"]
+data_ignore_list: 	["Actors.rxdata","Animations.rxdata","Armors.rxdata","Classes.rxdata","CommonEvents.rxdata","Constants.rxdata","Enemies.rxdata","Items.rxdata","PkmnAnimations.rxdata","Scripts.rxdata","Skills.rxdata","States.rxdata","System.rxdata","Tilesets backup.rxdata","Tilesets.rxdata","TilesetsTemp.rxdata","Troops.rxdata","Weapons.rxdata"]
 
 # This parameter determines whether the import/export scripts print verbose 
 # information such as each filename as it is imported or exported and timing 
