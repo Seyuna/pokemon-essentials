@@ -4,6 +4,8 @@ Audio/
 Data/Map*.rxdata
 Data/*.dat
 
+Export/Scripts/
+
 .idea/
 
 # Files in the main project folder
