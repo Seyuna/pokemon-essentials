@@ -2,6 +2,7 @@
 Audio/
 
 Data/Map*.rxdata
+Data/*.dat
 
 .idea/
 
