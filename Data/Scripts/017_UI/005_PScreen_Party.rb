@@ -359,7 +359,9 @@ class PokemonPartyPanel < SpriteWrapper
       if !@pokemon.egg?
         if !@text || @text.length==0
           # Draw HP numbers
-          textpos.push([sprintf("% 3d /% 3d",@pokemon.hp,@pokemon.totalhp),224,61,1,basecolor,shadowcolor])
+          pbSetSmallFont(@overlaysprite.bitmap)
+          pbDrawTextPositions(@overlaysprite.bitmap,[[sprintf("% 3d /% 3d",@pokemon.hp,@pokemon.totalhp),224,61,1,basecolor,shadowcolor]])
+          pbSetSystemFont(@overlaysprite.bitmap)
           # Draw HP bar
           if @pokemon.hp>0
             w = @pokemon.hp*96*1.0/@pokemon.totalhp
@@ -378,7 +380,7 @@ class PokemonPartyPanel < SpriteWrapper
           status = 5 if @pokemon.hp<=0
           if status>=0
             statusrect = Rect.new(0,16*status,44,16)
-            @overlaysprite.bitmap.blt(94,68,@statuses.bitmap,statusrect)
+            @overlaysprite.bitmap.blt(95,68,@statuses.bitmap,statusrect)
           end
         end
         # Draw gender symbol
@@ -390,17 +392,17 @@ class PokemonPartyPanel < SpriteWrapper
         # Draw shiny icon
         if @pokemon.shiny?
           pbDrawImagePositions(@overlaysprite.bitmap,[[
-             "Graphics/Pictures/shiny",70,66,0,0,18,18]])
+             "Graphics/Pictures/shiny",75,66,0,0,18,18]])
         end
       end
       pbDrawTextPositions(@overlaysprite.bitmap,textpos)
       # Draw level text
       if !@pokemon.egg?
         pbDrawImagePositions(@overlaysprite.bitmap,[[
-           "Graphics/Pictures/Party/overlay_lv",20,70,0,0,22,14]])
+           "Graphics/Pictures/Party/overlay_lv",15,70,0,0,22,14]])
         pbSetSmallFont(@overlaysprite.bitmap)
         pbDrawTextPositions(@overlaysprite.bitmap,[
-           [@pokemon.level.to_s,45,63,0,basecolor,shadowcolor]
+           [@pokemon.level.to_s,40,63,0,basecolor,shadowcolor]
         ])
       end
       # Draw annotation text

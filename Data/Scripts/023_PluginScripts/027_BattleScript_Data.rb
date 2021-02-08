@@ -529,30 +529,67 @@ module DialogueModule
         }
     CrobatIntro =  Proc.new{|battle|
           battle.scene.appearBar
-      pbMessage("Whoa! #{battle.battlers[1].pbThis} created a small flurry of rocks with its wings!")
-		  pbMessage("#{battle.battlers[1].pbThis} sent rocks flying towards you!")
-		  battle.scene.disappearBar
-		  battle.pbAnimation(getID(PBMoves,:STEALTHROCK),battle.battlers[1],battle.battlers[0])
-      battle.pbDisplay(_INTL("Pointed stones float around {1}'s feet",battle.battlers[0].pbThis(true)))
-		  battle.scene.appearBar
-		  pbPlayCrySpecies(:CROBAT)
-      battle.battlers[0].pbOpposingSide.effects[PBEffects::StealthRock] = true
+          battle.pbCommonAnimation("CrobatRock",battle.battlers[1])
+          pbMessage("Whoa! #{battle.battlers[1].pbThis} created a small flurry of rocks with its wings!")
+          pbMessage("#{battle.battlers[1].pbThis} sent rocks flying towards you!")
+          battle.scene.disappearBar
+          battle.pbAnimation(getID(PBMoves,:STEALTHROCK),battle.battlers[1],battle.battlers[0])
+          battle.pbDisplay(_INTL("Pointed stones float around {1}'s feet!",battle.battlers[0].pbThis(true)))
+          battle.scene.appearBar
+          pbPlayCrySpecies(:CROBAT)
+          battle.battlers[1].pbOpposingSide.effects[PBEffects::StealthRock] = true
           pbMessage("\\w[shout]Cro! Craw! Cro!")
           pbMessage("#{battle.battlers[1].pbThis} laughs maniacally!")
           battle.scene.disappearBar
         }
 	CrobatHalfHP = Proc.new{|battle|
           battle.scene.appearBar
-		  pbMessage("#{battle.battlers[1].pbThis} is enraged!")
-		  pbPlayCrySpecies(:CROBAT)
-		  pbMessage("\\w[shout]Croobaaaa!!")
+          pbMessage("#{battle.battlers[1].pbThis} is enraged!")
+  #        pbMessage("\\w[shout]Croobaaaa!!")
+          battle.pbCommonAnimation("BattleCry",battle.battlers[1])
           pbMessage("It let out a screeching cry!")
-		  battle.scene.disappearBar
-		  battle.pbCommonAnimation("StatUp",battle.battlers[1])
-      TrainerDialogue.setDone("lowHP") if battle.battlers[1].hp > (battle.battlers[1].totalhp*0.25)
-		  battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1],false)
-		  battle.battlers[1].pbRaiseStatStage(PBStats::SPATK,1,battle.battlers[1],false)
-		  battle.battlers[1].pbRaiseStatStage(PBStats::SPEED,2,battle.battlers[1],false)
+          battle.scene.disappearBar
+          battle.pbCommonAnimation("StatUp",battle.battlers[1])
+          TrainerDialogue.setDone("lowHPOpp")
+          battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,1,battle.battlers[1],false)
+          battle.battlers[1].pbRaiseStatStage(PBStats::SPATK,1,battle.battlers[1],false)
+          battle.battlers[1].pbRaiseStatStage(PBStats::SPEED,2,battle.battlers[1],false)
+        }
+  HeraTerraIntro =  Proc.new{|battle|
+          battle.scene.appearBar
+          battle.pbCommonAnimation("JumpStomp",battle.battlers[1])
+          pbMessage("Whoa! #{battle.battlers[1].pbThis} is stomping around angrily!")
+          pbMessage("#{battle.battlers[1].pbThis} hurled spikes at you!")
+          battle.scene.disappearBar
+          battle.pbAnimation(getID(PBMoves,:SPIKES),battle.battlers[1],battle.battlers[0])
+          battle.pbDisplay(_INTL("Spikes were scattered all around {1}'s feet!",battle.battlers[0].pbThis(true)))
+          battle.scene.appearBar
+          pbPlayCry(battle.battlers[1].pokemon)
+          battle.battlers[1].pbOpposingSide.effects[PBEffects::Spikes] = 3
+          if battle.battlers[1].isSpecies?(:PINTERRA)
+            pbMessage("\\w[shout]Terraraaa!!")
+          else
+            pbMessage("\\w[shout]Heraraaa!!")
+          end
+          pbMessage("#{battle.battlers[1].pbThis} growls ferociously!")
+          battle.scene.disappearBar
+        }
+  HeraTerraHalfHP = Proc.new{|battle|
+          battle.scene.appearBar
+          pbMessage("#{battle.battlers[1].pbThis} is enraged!")
+          battle.pbCommonAnimation("BattleCry",battle.battlers[1])
+    #      if battle.battlers[1].isSpecies?(:PINTERRA)
+    #        pbMessage("\\w[shout]Traaa!!")
+    #      else
+    #        pbMessage("\\w[shout]Hraaa!!")
+    #      end
+          pbMessage("It's loud roar echos through the forest!")
+          battle.scene.disappearBar
+          battle.pbCommonAnimation("StatUp",battle.battlers[1])
+          TrainerDialogue.setDone("lowHPOpp")
+          battle.battlers[1].pbRaiseStatStage(PBStats::ATTACK,2,battle.battlers[1],false)
+          battle.battlers[1].pbRaiseStatStage(PBStats::DEFENSE,1,battle.battlers[1],false)
+          battle.battlers[1].pbRaiseStatStage(PBStats::SPDEF,2,battle.battlers[1],false)
         }
 
 # DONT DELETE THIS END
