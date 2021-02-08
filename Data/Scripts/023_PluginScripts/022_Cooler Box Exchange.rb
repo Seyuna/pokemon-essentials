@@ -137,6 +137,16 @@ class CapturePokemonUI
       pbMessage(_INTL("{2} was added to {1}'s party!",$Trainer.name,@pokemon.name))
       return
     end
+    if @pokemon.isSpecies?(:ARENAY) && $game_variables[35] < 1
+      if $Trainer.party.length == 6
+        poke = $Trainer.party[5]
+        $PokemonStorage.pbStoreCaught(poke)
+        pbMessage("#{poke.name} was moved to the PC.")
+      end
+      pbAddToPartySilent(@pokemon)
+      pbMessage(_INTL("{2} was added to {1}'s party!",$Trainer.name,@pokemon.name))
+      return
+    end
     cmd = -1
     loop do
       Graphics.update

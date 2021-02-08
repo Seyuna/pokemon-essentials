@@ -87,25 +87,27 @@ DONE - Dev room redesign
 DONE - You scurried home after fainting text looks bad, test my new fix
 DONE - INCREASE MONEY GAINS
 DONE - Make player always refer to Arenay by its name!- \v[45]
+DONE - INCREASE TM GAINS a little at the start
+DONE - Draw enemy name above enemy sprite in Battle intro
+DONE - Esc key not working as another X or Cancel key, by default
+DONE - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
+DONE - Test NG+ Arenay form stuff
 
 
 Cam
 - Stacona forms all have pokedex entries
+- add in new Chair sprite
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
 playtest notes:
-INCREASE TM GAINS
+play biogress route
 
 
 
 Broskiddo PR
 WIP - NG+, and keep testing it
 WIP - TM for all Pokemon fix
-DONE - Esc key not working as another X or Cancel key, by default
-	- Only the last default control override works
-DONE - Draw enemy name above enemy sprite in Battle intro
-DONE - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
 
 
 
