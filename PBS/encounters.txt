@@ -418,6 +418,12 @@ SuperRod
     CARVANHA,30,35
     SANDILE,30,35
     MAGIKARP,30,35
+RockSmash
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
 #-------------------------------
 078 # Pollen Path
 20,8,8
@@ -428,6 +434,12 @@ Land
     SENTRET,2,7
     KANGA,2,7
     SENTRET,2,7
+RockSmash
+    LEDYBA,20,25
+    LEDYBA,20,25
+    LEDYBA,20,25
+    LEDYBA,20,25
+    LEDYBA,20,25
 #-------------------------------
 079 # Fleural Town
 20,8,8
@@ -547,6 +559,12 @@ Cave
     ZUBAT,5,11
     DWEBBLE,5,11
     NOSEPASS,5,11
+RockSmash
+    LEDYBA,12,17
+    LEDYBA,12,17
+    LEDYBA,12,17
+    LEDYBA,12,17
+    LEDYBA,12,17
 #-------------------------------
 090 # Magnet Cave
 20,8,8
@@ -557,6 +575,12 @@ Cave
     NOSEPASS,25,30
     DWEBBLE,25,30
     MAGNETON,25,30
+RockSmash
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
 #-------------------------------
 091 # Lumigen Power Plant B1
 20,8,8
@@ -577,6 +601,12 @@ Land
     BUDEW,6,11
     SWABLU,6,11
     SENTRET,6,11
+RockSmash
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
 #-------------------------------
 093 # Lush Road
 20,8,8
@@ -616,6 +646,12 @@ Land
     BUDEW,21,26
     DITTO,21,26
     PANCHAM,21,26
+RockSmash
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
 #-------------------------------
 098 # Plunge Pass
 20,8,8
@@ -759,6 +795,12 @@ SuperRod
     FEEBAS,37,43
     FINNEON,37,43
     LAPRAS,37,43
+RockSmash
+    LEDYBA,12,16
+    LEDYBA,12,16
+    LEDYBA,12,16
+    LEDYBA,12,16
+    LEDYBA,12,16
 #-------------------------------
 110 # Frostbite Cavern
 20,8,8
@@ -901,6 +943,12 @@ Land
     TOXEL,25,30
     TRAPINCH,25,30
     AIPOM,25,30
+RockSmash
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
 #-------------------------------
 150 # Folian Grove
 20,8,8
@@ -941,3 +989,9 @@ Cave
     UNOWN,20,25
     UNOWN,20,25
     UNOWN,20,25
+RockSmash
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23

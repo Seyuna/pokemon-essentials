@@ -96,13 +96,11 @@ DONE - Test NG+ Arenay form stuff
 
 Cam
 - Stacona forms all have pokedex entries
-- add in new Chair sprite
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
 playtest notes:
 play biogress route
-
 
 
 Broskiddo PR
