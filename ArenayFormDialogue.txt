@@ -1,0 +1,35 @@
+Arenay form dialogue
+0 Arenay
+1 Arenay is shooting small puffs of smoke into the air, trying to make various shapes.
+2 
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+
+
+Friendship dialogue
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13

@@ -94,21 +94,23 @@ DONE - bump up shiny icon in party screen, (y-10ish?) overlaps with status effec
 DONE - Test NG+ Arenay form stuff
 DONE - NG+ didnt reset player outfit to zero
 DONE - NG+ didnt increase level by 1
+DONE - test new bosses
+DONE - fix issue with Arenay not appearing in the lab initially
+DONE - test NG+ incrementing
+DONE - test the NG+ trainer card fix 
+DONE - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 
 
 Cam
-- Stacona forms all have pokedex entries
-- PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
+- Pokedex entries
+- Friendship notes (13)
+- Arenay notes (18, per form)
 
-playtest notes:
-play biogress route
-test bosses
-test NG+ incrementing
 
 Broskiddo PR
 TEST - NG+, and keep testing it
-TEST - Better Boss Battles (Ferrous/Woods)
-WIP - TM for all Pokemon fix
+TEST - Saving unlocked outfits when doing an NG+ playthrough
+WIP - TM for all Pokemon fix, ledyba and stuff included
 
 
 
