@@ -142,7 +142,7 @@ def pbItemBall(item, quantity = 1)
   return false if !item || item<=0 || quantity<1
   itemname = (quantity>1) ? PBItems.getNamePlural(item) : PBItems.getName(item)
   pocket = pbGetPocket(item)
-  meName = $PokemonBag.pbCanStore?(item,quantity) ? ((pbIsKeyItem?(item)) ? "" : "Item get") : ""
+  meName = $PokemonBag.pbCanStore?(item,quantity) ? ((pbIsKeyItem?(item)) ? "HGSSGetKeyItem" : "HGSSGetItem") : ""
   if $PokemonBag.pbCanStore?(item,quantity)
     scene = $game_player.addFoundItem(item)
   else
@@ -178,7 +178,7 @@ def pbReceiveItem(item, quantity = 1)
   return false if !item || item<=0 || quantity<1
   itemname = (quantity>1) ? PBItems.getNamePlural(item) : PBItems.getName(item)
   pocket = pbGetPocket(item)
-  meName = $PokemonBag.pbCanStore?(item,quantity) ? ((pbIsKeyItem?(item)) ? "Key item get" : "Item get") : ""
+  meName = $PokemonBag.pbCanStore?(item,quantity) ? ((pbIsKeyItem?(item)) ? "HGSSGetKeyItem" : "HGSSGetItem") : ""
   if $PokemonBag.pbCanStore?(item,quantity)
     scene = $game_player.addFoundItem(item)
   else

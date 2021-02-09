@@ -1549,7 +1549,7 @@ Pokemon = ZANGOOSE,23
 Pokemon = LEDIAN,24
 	Form = 1
 #-------------------------------
-[BEAUTY,Vivian]
+[COOLTRAINER_F,Vivian]
 Pokemon = AIPOM,22
     Form = 1
 Pokemon = AZUMARILL,23
