@@ -465,7 +465,7 @@ Pokemon = ELEKID,23
 [SUPERNERD,Nolan]
 Pokemon = DUNSPARCE,15
     Form = 1
-Pokemon = MAGNEMITE,15
+Pokemon = MAGNEMITE,16
     Form = 0
 #-------------------------------
 [BUGCATCHER,Al]
@@ -477,13 +477,13 @@ Pokemon = SICKLER,13
     Form = 0
 #-------------------------------
 [PICNICKER,Abigail]
-Pokemon = ADORABULL,13
+Pokemon = ADORABULL,14
     Form = 0
-Pokemon = PARAS,14
+Pokemon = PARAS,15
     Form = 1
 #-------------------------------
 [AROMALADY,Elizabeth]
-Pokemon = TROPPY,14
+Pokemon = TROPPY,15
     Form = 0
 Pokemon = ROSELIA,15
     Form = 1
@@ -542,7 +542,7 @@ Pokemon = ELECTABUZZ,34
     Ball = 25
 #-------------------------------
 [BIOGRUNT_M,Alex]
-Pokemon = PARASECT,31
+Pokemon = DURANT,31
     Form = 1
     Ball = 24
 Pokemon = PINSIR,31
@@ -569,9 +569,9 @@ Pokemon = SANDILE,16
     Form = 1
 #-------------------------------
 [COOLTRAINER_F,Theresa]
-Pokemon = RALTS,17
+Pokemon = RALTS,16
     Form = 1
-Pokemon = YANMITE,18
+Pokemon = YANMITE,17
 #-------------------------------
 [HIKER,Ethan]
 Pokemon = NOSEPASS,14
@@ -605,54 +605,55 @@ Pokemon = PIKACHU,13
     Form = 1
 Pokemon = KLINK,14
     Form = 1
-Pokemon = SOLOSIS,14
+Pokemon = MAGNEMITE,14
     Form = 1
 #-------------------------------
 [POKEMONRANGER_M,Mac]
-Pokemon = SENTRET,9
+Pokemon = SENTRET,10
     Form = 1
-Pokemon = AZURILL,10
+Pokemon = AZURILL,11
     Form = 1
-Pokemon = ADORABULL,10
+Pokemon = ADORABULL,11
 #-------------------------------
 [POKEMONRANGER_F,Deandra]
-Pokemon = YANMITE,10
-Pokemon = ZUBAT,10
+Pokemon = YANMITE,11
+Pokemon = ZUBAT,12
     Form = 1
-Pokemon = BUDEW,11
+Pokemon = BUDEW,12
     Form = 1
 #-------------------------------
 [LASS,Nikki]
-Pokemon = SWABLU,10
+Pokemon = SWABLU,12
     Form = 1
-Pokemon = SUNKERN,11
+Pokemon = SUNKERN,12
     Form = 1
-Pokemon = SHUPPET,11
+Pokemon = SHUPPET,13
     Form = 1
 #-------------------------------
 [PSYCHIC_M,Charlie]
-Pokemon = RALTS,12
+Pokemon = RALTS,13
     Form = 1
 Pokemon = SOLOSIS,13
     Form = 1
 #-------------------------------
 [TAMER,Andy]
-Pokemon = ADORABULL,12
+Pokemon = ADORABULL,14
     Gender = male
-Pokemon = SANDILE,13
+Pokemon = SANDILE,14
     Form = 1
 #-------------------------------
 [BUGCATCHER,Bill]
-Pokemon = PINCUSH,11
-Pokemon = SICKLER,11
-Pokemon = HERACUTE,11
-Pokemon = BABEE,12
+Pokemon = PINCUSH,12
+Pokemon = SICKLER,12
+Pokemon = HERACUTE,13
+Pokemon = LEDYBA,13
+Pokemon = BABEE,14
     Gender = male
 #-------------------------------
 [AROMALADY,Artemis]
-Pokemon = BUDEW,12
+Pokemon = BUDEW,13
     Form = 1
-Pokemon = PARAS,13
+Pokemon = PARAS,14
     Form = 1
 #-------------------------------
 [ENGINEER,Felix]
@@ -681,42 +682,42 @@ Pokemon = PARASECT,28
 Pokemon = GIGANTLER,29
 #-------------------------------
 [JUGGLER,Harold]
-Pokemon = RALTS,18
+Pokemon = DURANT,20
     Form = 1
-Pokemon = KANGA,18
-Pokemon = AIPOM,19
+Pokemon = KANGA,21
+Pokemon = AIPOM,21
     Form = 1
 #-------------------------------
 [CRUSHGIRL,Beth]
-Pokemon = MARILL,17
-Pokemon = HITMONCHAN,19
+Pokemon = MARILL,22
+Pokemon = HITMONCHAN,23
 #-------------------------------
 [COOLTRAINER_M,Arnold]
-Pokemon = DUNSPARCE,19
+Pokemon = DUNSPARCE,20
     Form = 1
-Pokemon = MAREEP,20
+Pokemon = MAREEP,21
     Form = 1
-Pokemon = FURRET,20
+Pokemon = FURRET,22
     Form = 1
 #-------------------------------
 [COOLTRAINER_F,Lisa]
-Pokemon = ESPURR,22
+Pokemon = ESPURR,23
     Form = 1
-Pokemon = LARVITAR,23
+Pokemon = LARVITAR,24
 #-------------------------------
 [GENTLEMAN,Edward]
 Pokemon = KANGA,22
-Pokemon = RALTS,22
+Pokemon = RALTS,23
     Form = 1
-Pokemon = TRAPINCH,23
+Pokemon = TRAPINCH,24
     Form = 1
 #-------------------------------
 [BEAUTY,Barbara]
-Pokemon = SWABLU,23
+Pokemon = SWABLU,24
     Form = 1
-Pokemon = FLAAFFY,23
+Pokemon = FLAAFFY,25
     Form = 1
-Pokemon = DUNSPARCE,24
+Pokemon = DUNSPARCE,25
     Form = 1
 #-------------------------------
 [YOUNGSTER,Joey]
@@ -728,17 +729,17 @@ Pokemon = ELEKID,23
     Form = 1
 #-------------------------------
 [POKEMONRANGER_F,Tara]
-Pokemon = TAUROS,22
-Pokemon = ROSELIA,23
+Pokemon = TAUROS,24
+Pokemon = ROSELIA,25
     Form = 1
 Pokemon = SWABLU,25
     Form = 1
 #-------------------------------
 [CAMPER,Rick]
-Pokemon = MILTANK,24
-Pokemon = TANGELA,24
+Pokemon = MILTANK,25
+Pokemon = DURANT,25
     Form = 1
-Pokemon = VULLABY,25
+Pokemon = LEDIAN,26
     Form = 1
 #-------------------------------
 [BIRDKEEPER,Shawn]
@@ -748,10 +749,10 @@ Pokemon = GOLBAT,26
     Form = 1
 #-------------------------------
 [POKEMONBREEDER,Ellie]
-Pokemon = MILTANK,23
-Pokemon = FURRET,24
+Pokemon = MILTANK,25
+Pokemon = FURRET,25
     Form = 1
-Pokemon = DITTO,25
+Pokemon = DITTO,26
 #-------------------------------
 [POKEMONBREEDER,Katie]
 Pokemon = FOONGUS,26
@@ -907,7 +908,7 @@ Pokemon = ELECTABUZZ,25
 Pokemon = WIMPOD,24
 Pokemon = FLAAFFY,24
     Form = 1
-Pokemon = FURRET,25
+Pokemon = DURANT,25
     Form = 1
 #-------------------------------
 [COOLTRAINER_M,Ian]
@@ -1092,7 +1093,7 @@ Pokemon = FOONGUS,26
 [BIOGRUNT_M,Trevor]
 Pokemon = PINSIR,26
     Ball = 24
-Pokemon = FOONGUS,25
+Pokemon = DURANT,25
     Form = 1
     Ball = 24
 Pokemon = PARASECT,25
@@ -1223,12 +1224,12 @@ Pokemon = SABLEYE,31
 Pokemon = PIKACHU,9
     Form = 1
     Ball = 25
-Pokemon = ELEKID,9
+Pokemon = ELEKID,10
     Form = 1
     Ball = 25
-Pokemon = WINGOT,10
+Pokemon = WINGOT,11
     Ball = 25
-Pokemon = AIPOM,10
+Pokemon = AIPOM,11
     Form = 1
     Ball = 25
 #-------------------------------
@@ -1236,12 +1237,12 @@ Pokemon = AIPOM,10
 Pokemon = SOLOSIS,9
     Form = 1
     Ball = 24
-Pokemon = PARAS,9
+Pokemon = PARAS,10
     Form = 1
     Ball = 24
-Pokemon = HERACUTE,10
+Pokemon = HERACUTE,11
     Ball = 24
-Pokemon = FOONGUS,10
+Pokemon = FOONGUS,11
     Form = 1
     Ball = 24
 #-------------------------------
@@ -1543,9 +1544,9 @@ Pokemon = SEVIPER,31
     Ball = 25
 #-------------------------------
 [CAMPER,Grayson]
-Pokemon = ZANGOOSE,22
+Pokemon = ZANGOOSE,23
 	Form = 1
-Pokemon = SANDILE,23
+Pokemon = LEDIAN,24
 	Form = 1
 #-------------------------------
 [COOLTRAINER_F,Vivian]
@@ -1566,3 +1567,19 @@ Pokemon = CROBAT,36
 Pokemon = VESPIQUEN,22
 Pokemon = YANMA,23
 Pokemon = PINSIR,24
+#-------------------------------
+[MECHGRUNT_M,Thomas]
+Pokemon = KLINK,17
+    Form = 1
+    Ball = 25
+Pokemon = SEVIPER,18
+    Form = 1
+    Ball = 25
+#-------------------------------
+[BIOGRUNT_M,Thomas]
+Pokemon = SOLOSIS,17
+    Form = 1
+    Ball = 24
+Pokemon = DURANT,18
+    Form = 1
+    Ball = 24

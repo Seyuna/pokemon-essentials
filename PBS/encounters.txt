@@ -418,6 +418,12 @@ SuperRod
     CARVANHA,30,35
     SANDILE,30,35
     MAGIKARP,30,35
+RockSmash
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
 #-------------------------------
 078 # Pollen Path
 20,8,8
@@ -428,6 +434,12 @@ Land
     SENTRET,2,7
     KANGA,2,7
     SENTRET,2,7
+RockSmash
+    LEDYBA,20,25
+    LEDYBA,20,25
+    LEDYBA,20,25
+    LEDYBA,20,25
+    LEDYBA,20,25
 #-------------------------------
 079 # Fleural Town
 20,8,8
@@ -516,7 +528,7 @@ Land
     SWABLU,30,34
     FURRET,30,34
     YANMA,30,34
-    AIPOM,30,34
+    DURANT,30,34
     MARILL,30,34
 Water
     MAGIKARP,28,32
@@ -547,6 +559,12 @@ Cave
     ZUBAT,5,11
     DWEBBLE,5,11
     NOSEPASS,5,11
+RockSmash
+    LEDYBA,12,17
+    LEDYBA,12,17
+    LEDYBA,12,17
+    LEDYBA,12,17
+    LEDYBA,12,17
 #-------------------------------
 090 # Magnet Cave
 20,8,8
@@ -557,6 +575,12 @@ Cave
     NOSEPASS,25,30
     DWEBBLE,25,30
     MAGNETON,25,30
+RockSmash
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
 #-------------------------------
 091 # Lumigen Power Plant B1
 20,8,8
@@ -571,51 +595,63 @@ Cave
 092 # Verdant Valley
 20,8,8
 Land
-    ADORABULL,6,11
-    KANGA,6,11
-    TROPPY,6,11
-    BUDEW,6,11
-    SWABLU,6,11
-    SENTRET,6,11
+    ADORABULL,5,9
+    KANGA,5,9
+    TROPPY,5,9
+    BUDEW,5,9
+    SWABLU,5,9
+    SENTRET,5,9
+RockSmash
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
 #-------------------------------
 093 # Lush Road
 20,8,8
 Land
-    BABEE,18,23
-    PINCUSH,18,23
-    ADORABULL,18,23
-    BUDEW,18,23
-    SHUCKLE,18,23
-    TROPPY,18,23
+    BABEE,17,21
+    PINCUSH,17,21
+    ADORABULL,17,21
+    BUDEW,17,21
+    SHUCKLE,17,21
+    TROPPY,17,21
 Water
-    MAGIKARP,18,23
-    FEEBAS,18,23
-    FINNEON,18,23
-    GOLDEEN,18,23
-    POLIWAG,18,23
+    MAGIKARP,17,21
+    MAGIKARP,17,21
+    MAGIKARP,17,21
+    MAGIKARP,17,21
+    FEEBAS,17,21
 OldRod
     MAGIKARP,18,23
-    FINNEON,18,23
+    FEEBAS,18,23
 GoodRod
     MAGIKARP,28,33
-    GOLDEEN,28,33
-    FINNEON,28,33
+    MAGIKARP,28,33
+    FEEBAS,28,33
 SuperRod
     MAGIKARP,38,43
-    FINNEON,38,43
-    POLIWAG,38,43
-    GOLDEEN,38,43
+    MAGIKARP,38,43
+    MAGIKARP,38,43
+    FEEBAS,38,43
     FEEBAS,38,43
 #-------------------------------
 096 # Lush Road
 20,8,8
 Land
-    BABEE,21,26
-    PINCUSH,21,26
-    ADORABULL,21,26
-    BUDEW,21,26
-    DITTO,21,26
-    PANCHAM,21,26
+    BABEE,20,24
+    PINCUSH,20,24
+    ADORABULL,20,24
+    BUDEW,20,24
+    DITTO,20,24
+    PANCHAM,20,24
+RockSmash
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
 #-------------------------------
 098 # Plunge Pass
 20,8,8
@@ -679,18 +715,18 @@ Land
     SWABLU,31,35
     FURRET,31,35
     YANMA,31,35
-    AIPOM,31,35
+    DURANT,31,35
     MARILL,31,35
 #-------------------------------
 103 # Verdant Valley
 20,8,8
 Land
-    ADORABULL,10,14
-    PARAS,10,14
-    ZANGOOSE,10,14
-    SWABLU,10,14
-    HERACUTE,10,14
-    SOLOSIS,10,14
+    ADORABULL,9,13
+    PARAS,9,13
+    ZANGOOSE,9,13
+    SWABLU,9,13
+    HERACUTE,9,13
+    SOLOSIS,9,13
 Water
     MAGIKARP,20,25
     MAGIKARP,20,25
@@ -724,12 +760,12 @@ Land
 107 # Stacona Woods
 20,8,8
 Land
-    PINCUSH,14,18
-    SICKLER,14,18
-    HERACUTE,14,18
-    FOONGUS,14,18
-    PARAS,14,18
-    SWABLU,14,18
+    PINCUSH,12,16
+    SICKLER,12,16
+    HERACUTE,12,16
+    FOONGUS,12,16
+    PARAS,12,16
+    SWABLU,12,16
 #-------------------------------
 108 # Lumigen Hills
 20,8,8
@@ -759,6 +795,12 @@ SuperRod
     FEEBAS,37,43
     FINNEON,37,43
     LAPRAS,37,43
+RockSmash
+    LEDYBA,12,16
+    LEDYBA,12,16
+    LEDYBA,12,16
+    LEDYBA,12,16
+    LEDYBA,12,16
 #-------------------------------
 110 # Frostbite Cavern
 20,8,8
@@ -901,6 +943,12 @@ Land
     TOXEL,25,30
     TRAPINCH,25,30
     AIPOM,25,30
+RockSmash
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
+    LEDYBA,25,30
 #-------------------------------
 150 # Folian Grove
 20,8,8
@@ -941,3 +989,9 @@ Cave
     UNOWN,20,25
     UNOWN,20,25
     UNOWN,20,25
+RockSmash
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23
+    LEDYBA,19,23

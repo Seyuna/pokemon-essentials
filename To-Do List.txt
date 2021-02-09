@@ -92,22 +92,22 @@ DONE - Draw enemy name above enemy sprite in Battle intro
 DONE - Esc key not working as another X or Cancel key, by default
 DONE - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
 DONE - Test NG+ Arenay form stuff
+DONE - NG+ didnt reset player outfit to zero
+DONE - NG+ didnt increase level by 1
 
 
 Cam
 - Stacona forms all have pokedex entries
-- add in new Chair sprite
 - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
-
 
 playtest notes:
 play biogress route
 
 
-
 Broskiddo PR
-WIP - NG+, and keep testing it
+TEST - NG+, and keep testing it
 WIP - TM for all Pokemon fix
+WIP - Better Boss Battles (Ferrous/Woods)
 
 
 
