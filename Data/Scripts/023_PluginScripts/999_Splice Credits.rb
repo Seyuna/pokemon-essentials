@@ -89,8 +89,3 @@ PluginManager.register({
   :name => "Overworld Sprite Credits",
   :credits => ["PoffinCase","Kalarie","Avatar","Aveontrainer","Daman","MrDollSteak","Pokeshor","Spherical Ice","Mimi","M.vit","Delta231"]
 })
-
-PluginManager.register({
-  :name => "Fanart Credits",
-  :credits => ["HauntedArtStudio","KingdomKey","Tristantine The Great","ShadowPhil","Design3D"]
-})
