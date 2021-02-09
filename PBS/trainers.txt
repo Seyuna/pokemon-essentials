@@ -682,42 +682,42 @@ Pokemon = PARASECT,28
 Pokemon = GIGANTLER,29
 #-------------------------------
 [JUGGLER,Harold]
-Pokemon = DURANT,18
+Pokemon = DURANT,20
     Form = 1
-Pokemon = KANGA,18
-Pokemon = AIPOM,19
+Pokemon = KANGA,21
+Pokemon = AIPOM,21
     Form = 1
 #-------------------------------
 [CRUSHGIRL,Beth]
-Pokemon = MARILL,17
-Pokemon = HITMONCHAN,19
+Pokemon = MARILL,22
+Pokemon = HITMONCHAN,23
 #-------------------------------
 [COOLTRAINER_M,Arnold]
-Pokemon = DUNSPARCE,19
+Pokemon = DUNSPARCE,20
     Form = 1
-Pokemon = MAREEP,20
+Pokemon = MAREEP,21
     Form = 1
-Pokemon = FURRET,20
+Pokemon = FURRET,22
     Form = 1
 #-------------------------------
 [COOLTRAINER_F,Lisa]
-Pokemon = ESPURR,22
+Pokemon = ESPURR,23
     Form = 1
-Pokemon = LARVITAR,23
+Pokemon = LARVITAR,24
 #-------------------------------
 [GENTLEMAN,Edward]
 Pokemon = KANGA,22
-Pokemon = RALTS,22
+Pokemon = RALTS,23
     Form = 1
-Pokemon = TRAPINCH,23
+Pokemon = TRAPINCH,24
     Form = 1
 #-------------------------------
 [BEAUTY,Barbara]
-Pokemon = SWABLU,23
+Pokemon = SWABLU,24
     Form = 1
-Pokemon = FLAAFFY,23
+Pokemon = FLAAFFY,25
     Form = 1
-Pokemon = DUNSPARCE,24
+Pokemon = DUNSPARCE,25
     Form = 1
 #-------------------------------
 [YOUNGSTER,Joey]
@@ -729,17 +729,17 @@ Pokemon = ELEKID,23
     Form = 1
 #-------------------------------
 [POKEMONRANGER_F,Tara]
-Pokemon = TAUROS,22
-Pokemon = ROSELIA,23
+Pokemon = TAUROS,24
+Pokemon = ROSELIA,25
     Form = 1
 Pokemon = SWABLU,25
     Form = 1
 #-------------------------------
 [CAMPER,Rick]
-Pokemon = MILTANK,24
-Pokemon = TANGELA,24
+Pokemon = MILTANK,25
+Pokemon = DURANT,25
     Form = 1
-Pokemon = VULLABY,25
+Pokemon = LEDIAN,26
     Form = 1
 #-------------------------------
 [BIRDKEEPER,Shawn]
@@ -749,10 +749,10 @@ Pokemon = GOLBAT,26
     Form = 1
 #-------------------------------
 [POKEMONBREEDER,Ellie]
-Pokemon = MILTANK,23
-Pokemon = FURRET,24
+Pokemon = MILTANK,25
+Pokemon = FURRET,25
     Form = 1
-Pokemon = DITTO,25
+Pokemon = DITTO,26
 #-------------------------------
 [POKEMONBREEDER,Katie]
 Pokemon = FOONGUS,26

@@ -93,6 +93,7 @@ DONE - Esc key not working as another X or Cancel key, by default
 DONE - bump up shiny icon in party screen, (y-10ish?) overlaps with status effects
 DONE - Test NG+ Arenay form stuff
 DONE - NG+ didnt reset player outfit to zero
+DONE - NG+ didnt increase level by 1
 
 
 Cam
@@ -101,38 +102,13 @@ Cam
 
 playtest notes:
 play biogress route
-- NG+ didnt increase level by 1
+
 
 Broskiddo PR
 TEST - NG+, and keep testing it
 WIP - TM for all Pokemon fix
 WIP - Better Boss Battles (Ferrous/Woods)
 
-
-Update video script ==================================================================================
-A huge update for Pokemon Splice is available to download now! The link is in the description!
-The Pokemon Splice Beta update features the following changes:
-- There are over 50 new Stacona Pokemon to find and catch!
-- Arenay now follows the player around, and will change forms!
-- The game has now been ported to MKXP, which massively increases the performance and framerate!
-- Level scaling has been removed, and the entire game has been rebalanced!
-- New Game + mode has been added! After beating the story, you can start the adventure over, carrying over Pokemon and adding modifiers to your playthroughs!
-	- Try to reach New Game+ level 5 by beating the game 5 times!
-- Revised maps and some new areas!
-- New sidequests
-- Mid battle dialogue for important battles
-- Updated battle intros
-- Money and XP rewards in battle have been tweaked
-- New trainer overworld sprites
-- And many, many bugfixes!
-
-I hope you enjoy the update! The next major update for Pokemon Splice will be for Chapter 3, when the player finally saves Arenay!
-In the meantime, I'll be working on my Winter Jam 2 project with LuxDiablo, TristantineTheGreat, and HauntedArtStudio!
-
-As a final note, thank you so much to everybody for playing Pokemon Splice! Everybody's support and kindness were a huge reason
-I was able to find the motivation to continue working on Splice! You guys are the best! Also shoutout to the thundagang, syt!
-
-Have a good one! Seeya!
 
 
 
