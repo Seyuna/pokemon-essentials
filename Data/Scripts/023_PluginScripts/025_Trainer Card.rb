@@ -255,28 +255,6 @@ class PokemonTrainerCard_Scene
     ]
     @sprites["overlay2"].z+=20
     pbDrawTextPositions(@overlay2,textPositions) if @ngPlusVal > 0
-=begin
-    # Draw Badges on overlay (doesn't support animations, might support .gif)
-    imagepos=[]
-    # Draw Region 0 badges
-    x = 64-28
-    for i in 0...8
-      if $Trainer.badges[i+0*8]
-        imagepos.push(["Graphics/Pictures/Trainer Card/badges0",x,104*2,i*48,0*48,48,48])
-      end
-      x += 48+8
-    end
-    # Draw Region 1 badges
-    x = 64-28
-    for i in 0...8
-      if $Trainer.badges[i+1*8]
-        imagepos.push(["Graphics/Pictures/Trainer Card/badges1",x,104*2+52,i*48,0*48,48,48])
-      end
-      x += 48+8
-    end
-    #print(@sprites["overlay"].ox,@sprites["overlay"].oy,x)
-    pbDrawImagePositions(@overlay,imagepos)
-=end
     flip2
   end
 
