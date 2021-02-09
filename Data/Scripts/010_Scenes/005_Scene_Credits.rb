@@ -68,11 +68,16 @@ Aka the Thundagang
 Aka the Camfam
 Aka the Bolt Cult
 
+
 Additional Amazing Art
 HauntedArtStudio
 P-Plum
 ShadowPhil
 Design3D
+ShashuGreninja
+TabletPillowLamp
+Dedbed
+Carlin
 
 Pokemon Splice Wiki
 ENLS
