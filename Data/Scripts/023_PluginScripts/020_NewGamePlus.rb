@@ -341,6 +341,7 @@ class PokemonLoadScreen
           pbPlayBuzzerSE
           next
         end
+        gvars = []
         pbPlayDecisionSE
         @scene.pbEndScene
         metadata = nil
@@ -351,7 +352,7 @@ class PokemonLoadScreen
           Marshal.load(f)   # PokemonSystem already loaded
           Marshal.load(f)   # Current map id no longer needed
           Marshal.load(f)
-          Marshal.load(f)
+          gvars = Marshal.load(f)
           Marshal.load(f)
           Marshal.load(f)
           Marshal.load(f)
@@ -405,6 +406,7 @@ class PokemonLoadScreen
         $PokemonStorage      = PokemonStorage.new
         $PokemonTemp.begunNewGame = true
         $PokemonTemp.begunNewGamePlus = true
+        $game_variables[56] = gvars[56]
         pbRefreshResizeFactor if !mkxp?  # To fix Game_Screen pictures
         $data_system         = pbLoadRxData("Data/System")
         $MapFactory          = PokemonMapFactory.new($data_system.start_map_id)   # calls setMapChanged
