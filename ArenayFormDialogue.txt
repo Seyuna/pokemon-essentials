@@ -1,26 +1,29 @@
+----------------------------------------------------------------------------------------------------------------
 Arenay form dialogue
-0 Arenay
-1 Arenay is shooting small puffs of smoke into the air, trying to make various shapes.
-2 
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
+----------------------------------------------------------------------------------------------------------------
+0 normal = Arenay
+1 fire = Arenay is shooting small puffs of smoke into the air, trying to make various shapes.
+2 water =
+3 grass =
+4 flying = 
+5 steel = 
+6 electric = 
+7 ice = 
+8 psychic = 
+9 bug = 
+10 ground = 
+11 poison = 
+12 dragon = 
+13 fighting = 
+14 rock = 
+15 ghost = 
+16 dark = 
+17 fairy = 
 
-
+----------------------------------------------------------------------------------------------------------------
 Friendship dialogue
-1
+----------------------------------------------------------------------------------------------------------------
+1 lowest =
 2
 3
 4
@@ -32,4 +35,78 @@ Friendship dialogue
 10
 11
 12
-13
+13 highest = 
+
+----------------------------------------------------------------------------------------------------------------
+Dex entries to add
+----------------------------------------------------------------------------------------------------------------
+klink:
+klang:
+klinklang: 
+solosis
+duosion
+reuniclus
+lotad
+lombre:
+ludicolo: water brawler, waits under water and punches Krookodiles
+foonguss: Psychadelic effects
+amoonguss: Can instill visions when locking eyes with other pokemon
+nosepass: magnetic and floats
+probopass: can discharge and zap the ground with tendrils
+pichu: baby robot
+pikachu: developed by Quantech
+raichu: advanced mechanical technology
+dunsparce: cant see, and senses nearby enemies by feeling ground tremors
+mareep: help people refrigerate
+flaaffy: slide around on ice and have fun
+ampharos: 
+magikarp: common fish, electrify fishers with a little jolt
+gyarados: a fishermans nightmare, call down thunder along riversides
+sandile:
+krokorok: 
+krookodile:
+krabby: mistaken for small anchors
+kingler: walk along the floor of the sea looking for treasure
+swablu: Pleasant cloud wings, comfort young children with hugs
+altaria: float around in the wind, drifting from town to town
+absol:
+blitzle:
+zebstrika:
+elekid: train in the basements of power plants, punching circuit boxes
+electabuzz:
+electivire:
+trapinch:
+vibrava:
+flygon:
+hoppip:
+skiploom:
+jumpluff:
+sunkern:
+sunflora: scarecrow
+spinarak:
+ariados:
+numel:
+camerupt:
+espurr:
+meowstic:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
