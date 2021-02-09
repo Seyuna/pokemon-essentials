@@ -102,12 +102,13 @@ Cam
 
 playtest notes:
 play biogress route
-
+test bosses
+test NG+ incrementing
 
 Broskiddo PR
 TEST - NG+, and keep testing it
+TEST - Better Boss Battles (Ferrous/Woods)
 WIP - TM for all Pokemon fix
-WIP - Better Boss Battles (Ferrous/Woods)
 
 
 

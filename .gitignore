@@ -1,5 +1,7 @@
 # Audio folders
-Audio/
+Audio/BGM
+Audio/BGS
+Audio/ME
 
 # Files in the main project folder
 Game.ini
