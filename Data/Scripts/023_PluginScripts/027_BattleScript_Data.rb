@@ -531,7 +531,7 @@ module DialogueModule
           battle.scene.appearBar
           battle.pbCommonAnimation("CrobatRock",battle.battlers[1])
           pbMessage("Whoa! #{battle.battlers[1].pbThis} created a small flurry of rocks with its wings!")
-          pbMessage("#{battle.battlers[1].pbThis} sent rocks flying towards you!")
+          pbMessage("#{battle.battlers[1].pbThis} launched the rocks towards you!")
           battle.scene.disappearBar
           battle.pbAnimation(getID(PBMoves,:STEALTHROCK),battle.battlers[1],battle.battlers[0])
           battle.pbDisplay(_INTL("Pointed stones float around {1}'s feet!",battle.battlers[0].pbThis(true)))
@@ -559,7 +559,7 @@ module DialogueModule
           battle.scene.appearBar
           battle.pbCommonAnimation("JumpStomp",battle.battlers[1])
           pbMessage("Whoa! #{battle.battlers[1].pbThis} is stomping around angrily!")
-          pbMessage("#{battle.battlers[1].pbThis} hurled spikes at you!")
+          pbMessage("#{battle.battlers[1].pbThis} hurled some spikes at you!")
           battle.scene.disappearBar
           battle.pbAnimation(getID(PBMoves,:SPIKES),battle.battlers[1],battle.battlers[0])
           battle.pbDisplay(_INTL("Spikes were scattered all around {1}'s feet!",battle.battlers[0].pbThis(true)))
