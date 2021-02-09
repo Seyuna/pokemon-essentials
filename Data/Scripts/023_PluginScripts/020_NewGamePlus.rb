@@ -305,11 +305,6 @@ class PokemonLoadScreen
         $game_map.update
         $PokemonMap.updateMap
         $scene = Scene_Map.new
-        # Force Unlock Outfit if needed
-        if !$game_variables[56].is_a?(Array)
-          pbUnlockOutfit(1,"Quantech Uniform")  if $game_switches[62]
-          pbUnlockOutfit(2,"Biogress Uniform")  if $game_switches[61]
-        end
         return
       elsif cmdNewGame>=0 && command==cmdNewGame
         pbPlayDecisionSE
