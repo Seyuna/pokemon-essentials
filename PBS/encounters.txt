@@ -760,12 +760,12 @@ Land
 107 # Stacona Woods
 20,8,8
 Land
-    PINCUSH,14,18
-    SICKLER,14,18
-    HERACUTE,14,18
-    FOONGUS,14,18
-    PARAS,14,18
-    SWABLU,14,18
+    PINCUSH,12,16
+    SICKLER,12,16
+    HERACUTE,12,16
+    FOONGUS,12,16
+    PARAS,12,16
+    SWABLU,12,16
 #-------------------------------
 108 # Lumigen Hills
 20,8,8

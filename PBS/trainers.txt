@@ -569,9 +569,9 @@ Pokemon = SANDILE,16
     Form = 1
 #-------------------------------
 [COOLTRAINER_F,Theresa]
-Pokemon = RALTS,17
+Pokemon = RALTS,16
     Form = 1
-Pokemon = YANMITE,18
+Pokemon = YANMITE,17
 #-------------------------------
 [HIKER,Ethan]
 Pokemon = NOSEPASS,14
@@ -605,7 +605,7 @@ Pokemon = PIKACHU,13
     Form = 1
 Pokemon = KLINK,14
     Form = 1
-Pokemon = SOLOSIS,14
+Pokemon = MAGNEMITE,14
     Form = 1
 #-------------------------------
 [POKEMONRANGER_M,Mac]
@@ -1567,3 +1567,19 @@ Pokemon = CROBAT,36
 Pokemon = VESPIQUEN,22
 Pokemon = YANMA,23
 Pokemon = PINSIR,24
+#-------------------------------
+[MECHGRUNT_M,Thomas]
+Pokemon = KLINK,17
+    Form = 1
+    Ball = 25
+Pokemon = SEVIPER,18
+    Form = 1
+    Ball = 25
+#-------------------------------
+[BIOGRUNT_M,Thomas]
+Pokemon = SOLOSIS,17
+    Form = 1
+    Ball = 24
+Pokemon = DURANT,18
+    Form = 1
+    Ball = 24
