@@ -873,6 +873,30 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
 # All dialogues with no animation
 Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
   if randomVal == 5
+    if rand(5)<1
+      messages = [
+        "{1} Normal Dialogue",
+        "{1} Fire Dialogue",
+        "{1} Water Dialogue",
+        "{1} Grass Dialogue",
+        "{1} Flying Dialogue",
+        "{1} Steel Dialogue",
+        "{1} Electric Dialogue!",
+        "{1} Ice Dialogue",
+        "{1} Psychic Dialogue",
+        "{1} Bug Dialogue",
+        "{1} Ground Dialogue",
+        "{1} Poison Dialogue",
+        "{1} Dragon Dialogue",
+        "{1} Fighting Dialogue",
+        "{1} Rock Dialogue",
+        "{1} Ghost Dialogue",
+        "{1} Dark Dialogue",
+        "{1} Fairy Dialogue"
+      ]
+      pbMessage(_INTL(messages[pkmn.form],pkmn.name,$Trainer.name))
+      next true
+    end
     messages = [
       "{1} spun around in a circle!",
       "{1} let out a battle cry.",
