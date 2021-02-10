@@ -395,7 +395,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
       $scene.spriteset.addUserAnimation(Emo_Hate,x,y)
       pbWait(70)
       messages = [
-        "{1} seems very upset the weather.",
+        "{1} seems very upset at the weather.",
         "{1} is shivering...",
         "{1} doesn't seem to like being all wet...",
         "{1} keeps trying to shake itself dry...",

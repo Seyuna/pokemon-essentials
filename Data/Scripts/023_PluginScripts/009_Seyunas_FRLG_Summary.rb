@@ -366,8 +366,8 @@ class PokemonSummary_Scene
         "It likes it when you pet it.",
         "It is becoming quite friendly!",
         "It looks up to you!",
-        "It loves spending time with you",
-        "It cuddles with you at every opportunity",
+        "It loves spending time with you!",
+        "It cuddles with you at every opportunity!",
         "It is one of your best friends!",
         "It loves you with all its heart!",
       ]
