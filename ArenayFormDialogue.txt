@@ -14,7 +14,7 @@ Arenay form dialogue
 10 ground = Arenay is burrowing under the ground, kicking up small pebbles as it moves.
 11 poison = Arenay slides away as you try to pet it... It doesn't want to poison you!
 12 dragon = Arenay has a confident look on its face, almost like it wants to test its strength!
-13 fighting = Arenay is meditating... it looks like it's trying to chakras!
+13 fighting = Arenay is meditating... it looks like it's trying to focus its chakras!
 14 rock = Arenay is staying motionless. It looks like it wants to blend in to the environment!
 15 ghost = Arenay is fading in and out of our living realm... that's pretty spooky!
 16 dark = Arenay is shimmering with a dark aura... It's hard not to stare!

@@ -665,6 +665,7 @@ EggMoves = FOCUSPUNCH,HAMMERARM,TAKEDOWN,FLAMEWHEEL,YAWN,FREEZEDRY,INCINERATE,PO
 Height = 0.7
 Weight = 40.0
 Color = White
+BattlerPlayerY = 27
 #-------------------------------
 [DARMANITAN,1]
 FormName = Zen Mode
