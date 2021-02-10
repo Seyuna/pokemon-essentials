@@ -23,19 +23,19 @@ Arenay form dialogue
 ----------------------------------------------------------------------------------------------------------------
 Friendship dialogue
 ----------------------------------------------------------------------------------------------------------------
-1 lowest =
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13 highest = 
+1 = It looks like this Pokémon hates you...
+2 = It barely listens to your orders.
+3 = It reluctantly follows you.
+4 = It is warming up to your presence
+5 = It respects you as its trainer
+6 = It looks forward to battling with you
+7 = It lets you pet it
+8 = It is becoming quite friendly!
+9 = It looks up to you!
+10 = It loves spending time with you
+11 = It cuddles with you at every opportunity
+12 = It is one of your best friends!
+13 = It loves you with all its heart! (Max Friendship)
 
 ----------------------------------------------------------------------------------------------------------------
 Dex entries to add
