@@ -87,7 +87,7 @@
 84,SASHA,Rival,100,BW-RivalBattle.ogg,,,Female,,
 85,SIERRA,Professor,100,HGSS-143-BattleGymLeader.ogg,,,Male,,
 86,PARADOX,Paradox,100,HGSS-278-BattleChampion.ogg,,,Male,,
-87,KRISTIANO,Artist,100,HGSS-278-BattleChampion.ogg,,,Male,,
+87,KRISTIANO,Artist,100,ORAS-MaxieBattle.ogg,,,Male,,
 88,BLACKBELT_HP,EV Trainer,100,SwSh-MustardBattle.ogg,,,Male,,
 89,BLACKBELT_ATK,EV Trainer,100,SwSh-MustardBattle.ogg,,,Male,,
 90,BLACKBELT_DEF,EV Trainer,100,SwSh-MustardBattle.ogg,,,Male,,
