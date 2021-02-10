@@ -351,15 +351,30 @@ class PokemonSummary_Scene
       drawShadowInformationText(overlay)
     else
       # Write nature
-      textpos.push([sprintf("%s nature.", PBNatures.getName(@pokemon.nature)),20,298,0,@basecolor,@shadowcolor])
+      characteristic = getPokemonCharacteristic
+      textpos.push([sprintf("%s nature.        %s", PBNatures.getName(@pokemon.nature),characteristic),20,298,0,@basecolor,@shadowcolor])
 
       # Write characteristicc
-      characteristic = getPokemonCharacteristic
-      textpos.push([sprintf("%s", characteristic),250,298,0,@basecolor,@shadowcolor])
-
+  #    textpos.push([sprintf("%s", ),500,298,1,@basecolor,@shadowcolor])
+      friendshipText = [
+        "It looks like this Pokémon hates you...",
+        "It barely listens to your orders...",
+        "It reluctantly follows you...",
+        "It is warming up to your presence...",
+        "It respects you as its trainer.",
+        "It looks forward to battling alongside you.",
+        "It likes it when you pet it.",
+        "It is becoming quite friendly!",
+        "It looks up to you!",
+        "It loves spending time with you",
+        "It cuddles with you at every opportunity",
+        "It is one of your best friends!",
+        "It loves you with all its heart!",
+      ]
+      val = (@pokemon.happiness/20).floor
+      textpos.push([friendshipText[val], 20, 326, 0, @basecolor, @shadowcolor])
       # Met text
-      textpos.push([getMetText, 20, 326, 0, @basecolor, @shadowcolor])
-      textpos.push([getMetDate, 20, 355, 0, @basecolor, @shadowcolor])
+      textpos.push([getMetText + "," + getMetDate, 20, 355, 0, @basecolor, @shadowcolor])
     end
 
     pbDrawTextPositions(overlay, textpos)

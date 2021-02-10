@@ -305,11 +305,6 @@ class PokemonLoadScreen
         $game_map.update
         $PokemonMap.updateMap
         $scene = Scene_Map.new
-        # Force Unlock Outfit if needed
-        if !$game_variables[56].is_a?(Array)
-          pbUnlockOutfit(1,"Quantech Uniform")  if $game_switches[62]
-          pbUnlockOutfit(2,"Biogress Uniform")  if $game_switches[61]
-        end
         return
       elsif cmdNewGame>=0 && command==cmdNewGame
         pbPlayDecisionSE
@@ -346,6 +341,7 @@ class PokemonLoadScreen
           pbPlayBuzzerSE
           next
         end
+        gvars = []
         pbPlayDecisionSE
         @scene.pbEndScene
         metadata = nil
@@ -356,7 +352,7 @@ class PokemonLoadScreen
           Marshal.load(f)   # PokemonSystem already loaded
           Marshal.load(f)   # Current map id no longer needed
           Marshal.load(f)
-          Marshal.load(f)
+          gvars = Marshal.load(f)
           Marshal.load(f)
           Marshal.load(f)
           Marshal.load(f)
@@ -410,6 +406,7 @@ class PokemonLoadScreen
         $PokemonStorage      = PokemonStorage.new
         $PokemonTemp.begunNewGame = true
         $PokemonTemp.begunNewGamePlus = true
+        $game_variables[56] = gvars[56]
         pbRefreshResizeFactor if !mkxp?  # To fix Game_Screen pictures
         $data_system         = pbLoadRxData("Data/System")
         $MapFactory          = PokemonMapFactory.new($data_system.start_map_id)   # calls setMapChanged

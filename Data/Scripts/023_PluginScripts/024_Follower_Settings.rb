@@ -873,6 +873,30 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
 # All dialogues with no animation
 Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
   if randomVal == 5
+    if rand(5)<1
+      messages = [
+        "{1} looks like its itching to hold onto some of the cellulose in {2}'s bag!",
+        "{1} is shooting small puffs of smoke into the air, trying to make various shapes.",
+        "{1} is splashing around, making little puddles in the ground!",
+        "{1} is shaking loose leaves out of the top of it's bushy growth.",
+        "{1} is slowly flapping its wings and trying to stay in the same place.",
+        "{1} curls up, in a defensive pose! It looks ready to take on anything!",
+        "{1} releases a small jolt of electricty, gently tickling {2}'s' fingers!",
+        "{1} is freezing the ground underneath it, allowing it to slide around a little! Looks fun!",
+        "{1} is sending psychic waves in your direction, in attempt to persuade you to feed it more berries.",
+        "{1} has spiderwebs stuck on its tentacles... they seem hard to remove!",
+        "{1} is burrowing under the ground, kicking up small pebbles as it moves.",
+        "{1} slides away as you try to pet it... It doesn't want to poison {2}!",
+        "{1} has a confident look on its face, almost like it wants to test its strength!",
+        "{1} is meditating... it looks like it's trying to focus its chakras!",
+        "{1} is staying motionless. It looks like it wants to blend in to the environment!",
+        "{1} is fading in and out of our living realm... that's pretty spooky!",
+        "{1} is shimmering with a dark aura... It's hard not to stare!",
+        "{1} is radiating optimistic energy! It looks so cute, you can't resist hugging it!"
+      ]
+      pbMessage(_INTL(messages[pkmn.form],pkmn.name,$Trainer.name))
+      next true
+    end
     messages = [
       "{1} spun around in a circle!",
       "{1} let out a battle cry.",
