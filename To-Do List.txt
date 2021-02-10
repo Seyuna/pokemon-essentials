@@ -99,12 +99,13 @@ DONE - fix issue with Arenay not appearing in the lab initially
 DONE - test NG+ incrementing
 DONE - test the NG+ trainer card fix 
 DONE - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
-
+DONE - Check NG+ outfits unlocked
+DONE - Fix typos from the ENLS doc
+DONEISH - Check arenay form dialogue
 
 Cam
 - Pokedex entries
-- Friendship notes (13)
-- Arenay notes (18, per form)
+- Get PR for TMs
 
 
 Broskiddo PR
