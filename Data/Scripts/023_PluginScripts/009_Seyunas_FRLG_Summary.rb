@@ -357,19 +357,19 @@ class PokemonSummary_Scene
       # Write characteristicc
   #    textpos.push([sprintf("%s", ),500,298,1,@basecolor,@shadowcolor])
       friendshipText = [
-        "You suck",
-        "You are bad",
-        "You are pathetic",
-        "You are the worst",
-        "You are bad",
-        "You are fine",
-        "You are OK",
-        "You are decent",
-        "You are good",
-        "You are great",
-        "Your are amazing",
-        "You are incredible",
-        "You're the best",
+        "It looks like this Pokémon hates you...",
+        "It barely listens to your orders...",
+        "It reluctantly follows you...",
+        "It is warming up to your presence...",
+        "It respects you as its trainer.",
+        "It looks forward to battling alongside you.",
+        "It likes it when you pet it.",
+        "It is becoming quite friendly!",
+        "It looks up to you!",
+        "It loves spending time with you",
+        "It cuddles with you at every opportunity",
+        "It is one of your best friends!",
+        "It loves you with all its heart!",
       ]
       val = (@pokemon.happiness/20).floor
       textpos.push([friendshipText[val], 20, 326, 0, @basecolor, @shadowcolor])
