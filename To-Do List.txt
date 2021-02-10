@@ -105,6 +105,7 @@ DONEISH - Check arenay form dialogue
 
 Cam
 - Pokedex entries
+- Fix haunted hollow walk into witch
 - Get PR for TMs
 
 
