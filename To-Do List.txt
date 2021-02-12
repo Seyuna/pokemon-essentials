@@ -1,5 +1,5 @@
-WIP - Fix all bugs with NG+ and test it more thoroughly
-WIP - Teach some of our new Pokemon the new moves
+DONE - Fix all bugs with NG+ and test it more thoroughly
+DONE- Teach some of our new Pokemon the new moves
 
 Make Credits images load automatically through script
 
@@ -46,7 +46,7 @@ DONE - Added Adorabull lore guy with fun little storyline in Moncto
 DONE - Region map in the player's room
 DONE - Brigid/Damian dialogue to acknowledge Arenay in the room
 DONE - intro for Witch Helga battle
-DONE - Remove level scaling!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Since we're already forcing a save data reset
+DONE - Remove level scaling!
 DONE - Also update trainer teams to use more of our new types and less non-stacona regionals
 DONE - Give trainers some of our new pokemon forms (Seviper as the Polleknight slayer)
 DONE - Add mid-battle dialogue for Zack to poison/paralyze at start
@@ -101,18 +101,13 @@ DONE - test the NG+ trainer card fix
 DONE - PLAYTEST THE LEVEL CHANGES TO SEE IF IT FEELS NATURAL!
 DONE - Check NG+ outfits unlocked
 DONE - Fix typos from the ENLS doc
-DONEISH - Check arenay form dialogue
-
-Cam
-- Pokedex entries
-- Fix haunted hollow walk into witch
-- Get PR for TMs
-
-
-Broskiddo PR
-TEST - NG+, and keep testing it
-TEST - Saving unlocked outfits when doing an NG+ playthrough
-WIP - TM for all Pokemon fix, ledyba and stuff included
+DONE - Check arenay form dialogue
+DONE - Pokedex entries
+DONE -  Fix haunted hollow walk into witch
+DONE - Get PR for TMs
+DONE - NG+, and keep testing it
+DONE - Saving unlocked outfits when doing an NG+ playthrough
+DONE - TM for all Pokemon fix, ledyba and stuff included
 
 
 

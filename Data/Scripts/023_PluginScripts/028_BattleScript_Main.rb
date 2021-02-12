@@ -539,7 +539,8 @@ class PokeBattle_Battle
             idxPartyForName = idxPartyNew
             enemyParty = pbParty(idxBattler)
             if isConst?(enemyParty[idxPartyNew].ability,PBAbilities,:ILLUSION)
-              idxPartyForName = pbLastInTeam(idxBattler)
+              new_index = pbLastInTeam(idxBattler)
+              idxPartyForName = new_index if new_index >= 0
             end
             if pbDisplayConfirm(_INTL("{1} is about to send in {2}. Will you switch your Pokémon?",
                opponent.fullname,enemyParty[idxPartyForName].name))

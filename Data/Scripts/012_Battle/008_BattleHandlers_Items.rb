@@ -467,7 +467,7 @@ BattleHandlers::DamageCalcUserItem.add(:BLACKBELT,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:BLACKBELT,:FISTPLATE,:FIGHTCELL)
+BattleHandlers::DamageCalcUserItem.copy(:BLACKBELT,:FISTPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:BLACKGLASSES,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -475,7 +475,7 @@ BattleHandlers::DamageCalcUserItem.add(:BLACKGLASSES,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:BLACKGLASSES,:DREADPLATE,:DARKCELL)
+BattleHandlers::DamageCalcUserItem.copy(:BLACKGLASSES,:DREADPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:BUGGEM,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -489,7 +489,7 @@ BattleHandlers::DamageCalcUserItem.add(:CHARCOAL,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:CHARCOAL,:FLAMEPLATE,:FIRECELL)
+BattleHandlers::DamageCalcUserItem.copy(:CHARCOAL,:FLAMEPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:CHOICEBAND,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -523,7 +523,7 @@ BattleHandlers::DamageCalcUserItem.add(:DRAGONFANG,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:DRAGONFANG,:DRACOPLATE,:DRAGONCELL)
+BattleHandlers::DamageCalcUserItem.copy(:DRAGONFANG,:DRACOPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:DRAGONGEM,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -602,7 +602,7 @@ BattleHandlers::DamageCalcUserItem.add(:HARDSTONE,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:HARDSTONE,:STONEPLATE,:ROCKINCENSE,:ROCKCELL)
+BattleHandlers::DamageCalcUserItem.copy(:HARDSTONE,:STONEPLATE,:ROCKINCENSE)
 
 BattleHandlers::DamageCalcUserItem.add(:ICEGEM,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -641,7 +641,7 @@ BattleHandlers::DamageCalcUserItem.add(:MAGNET,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:MAGNET,:ZAPPLATE,:ELECCELL)
+BattleHandlers::DamageCalcUserItem.copy(:MAGNET,:ZAPPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:METALCOAT,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -649,7 +649,7 @@ BattleHandlers::DamageCalcUserItem.add(:METALCOAT,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:METALCOAT,:IRONPLATE,:STEELCELL)
+BattleHandlers::DamageCalcUserItem.copy(:METALCOAT,:IRONPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:METRONOME,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -664,7 +664,7 @@ BattleHandlers::DamageCalcUserItem.add(:MIRACLESEED,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:MIRACLESEED,:MEADOWPLATE,:ROSEINCENSE,:GRASSCELL)
+BattleHandlers::DamageCalcUserItem.copy(:MIRACLESEED,:MEADOWPLATE,:ROSEINCENSE)
 
 BattleHandlers::DamageCalcUserItem.add(:MUSCLEBAND,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -678,7 +678,7 @@ BattleHandlers::DamageCalcUserItem.add(:MYSTICWATER,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:MYSTICWATER,:SPLASHPLATE,:SEAINCENSE,:WAVEINCENSE,:WATERCELL)
+BattleHandlers::DamageCalcUserItem.copy(:MYSTICWATER,:SPLASHPLATE,:SEAINCENSE,:WAVEINCENSE)
 
 BattleHandlers::DamageCalcUserItem.add(:NEVERMELTICE,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -686,7 +686,7 @@ BattleHandlers::DamageCalcUserItem.add(:NEVERMELTICE,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:NEVERMELTICE,:ICICLEPLATE,:ICECELL)
+BattleHandlers::DamageCalcUserItem.copy(:NEVERMELTICE,:ICICLEPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:NORMALGEM,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -700,7 +700,7 @@ BattleHandlers::DamageCalcUserItem.add(:PIXIEPLATE,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:PIXIEPLATE,:FAIRYCELL)
+BattleHandlers::DamageCalcUserItem.copy(:PIXIEPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:POISONBARB,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -708,7 +708,7 @@ BattleHandlers::DamageCalcUserItem.add(:POISONBARB,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:POISONBARB,:TOXICPLATE,:POISONCELL)
+BattleHandlers::DamageCalcUserItem.copy(:POISONBARB,:TOXICPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:POISONGEM,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -734,7 +734,7 @@ BattleHandlers::DamageCalcUserItem.add(:SHARPBEAK,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:SHARPBEAK,:SKYPLATE,:FLYCELL)
+BattleHandlers::DamageCalcUserItem.copy(:SHARPBEAK,:SKYPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:SILKSCARF,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -748,7 +748,7 @@ BattleHandlers::DamageCalcUserItem.add(:SILVERPOWDER,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:SILVERPOWDER,:INSECTPLATE,:BUGCELL)
+BattleHandlers::DamageCalcUserItem.copy(:SILVERPOWDER,:INSECTPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:SOFTSAND,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -756,7 +756,7 @@ BattleHandlers::DamageCalcUserItem.add(:SOFTSAND,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:SOFTSAND,:EARTHPLATE,:GROUNDCELL)
+BattleHandlers::DamageCalcUserItem.copy(:SOFTSAND,:EARTHPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:SOULDEW,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -779,7 +779,7 @@ BattleHandlers::DamageCalcUserItem.add(:SPELLTAG,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:SPELLTAG,:SPOOKYPLATE,:GHOSTCELL)
+BattleHandlers::DamageCalcUserItem.copy(:SPELLTAG,:SPOOKYPLATE)
 
 BattleHandlers::DamageCalcUserItem.add(:STEELGEM,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -801,7 +801,7 @@ BattleHandlers::DamageCalcUserItem.add(:TWISTEDSPOON,
   }
 )
 
-BattleHandlers::DamageCalcUserItem.copy(:TWISTEDSPOON,:MINDPLATE,:ODDINCENSE,:PSYCELL)
+BattleHandlers::DamageCalcUserItem.copy(:TWISTEDSPOON,:MINDPLATE,:ODDINCENSE)
 
 BattleHandlers::DamageCalcUserItem.add(:WATERGEM,
   proc { |item,user,target,move,mults,baseDmg,type|
@@ -814,6 +814,21 @@ BattleHandlers::DamageCalcUserItem.add(:WISEGLASSES,
     mults[BASE_DMG_MULT] *= 1.1 if move.specialMove?
   }
 )
+
+# ARENAY CELLULOSE ITEMS
+BattleHandlers::DamageCalcUserItem.add(:FIRECELL,
+  proc { |item,user,target,move,mults,baseDmg,type|
+    multValue = 1.2
+    multValue += (0.1 * $game_variables[35]) if user.isSpecies?(:ARENAY)
+    mults[BASE_DMG_MULT] *= multValue if user.pbHasType?(type)
+  }
+)
+
+BattleHandlers::DamageCalcUserItem.copy(:FIRECELL,:WATERCELL,:GRASSCELL,:ELECCELL,
+                                        :FLYCELL,:DARKCELL,:PSYCELL,:GHOSTCELL,
+                                        :FAIRYCELL,:DRAGONCELL,:ROCKCELL,:GROUNDCELL,
+                                        :STEELCELL,:ICECELL,:FIGHTCELL,:BUGCELL,
+                                        :POISONCELL)
 
 #===============================================================================
 # DamageCalcTargetItem handlers

@@ -520,6 +520,7 @@ class PokeBattle_Pokemon
   end
 
   def compatibleWithMove?(move)
+    return true if isSpecies?(:ROCC)
     return pbSpeciesCompatible?(self.fSpecies,move)
   end
 

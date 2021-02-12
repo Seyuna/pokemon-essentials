@@ -431,6 +431,7 @@ MultipleForms.register(:ARENAY,{
         pkmn.pbDeleteMoveAtIndex(i)
       end
     end
+    pkmn.tmMoves = []
     pkmn.pbLearnMove(:CELLSHOT) if pkmn.numMoves==0
   }
 })
