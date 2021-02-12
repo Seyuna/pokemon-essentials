@@ -818,7 +818,7 @@ BattleHandlers::DamageCalcUserItem.add(:WISEGLASSES,
 # ARENAY CELLULOSE ITEMS
 BattleHandlers::DamageCalcUserItem.add(:FIRECELL,
   proc { |item,user,target,move,mults,baseDmg,type|
-    multValue = 1.2
+    multValue = 1.1
     multValue += (0.1 * $game_variables[35]) if user.isSpecies?(:ARENAY)
     mults[BASE_DMG_MULT] *= multValue if user.pbHasType?(type)
   }
