@@ -85,7 +85,7 @@ class PokemonSummary_Scene
     @sprites["pokeicon"] = PokemonIconSprite.new(@pokemon,@viewport)
     @sprites["pokeicon"].setOffset(PictureOrigin::Center)
     @sprites["pokeicon"].x       = 42
-    @sprites["pokeicon"].y       = 65
+    @sprites["pokeicon"].y       = 68
     @sprites["pokeicon"].visible = false
     @sprites["overlay"] = BitmapSprite.new(Graphics.width,Graphics.height,@viewport)
     pbSetSmallFont(@sprites["overlay"].bitmap)
@@ -144,7 +144,7 @@ class PokemonSummary_Scene
     @sprites["pokeicon"] = PokemonIconSprite.new(@pokemon,@viewport)
     @sprites["pokeicon"].setOffset(PictureOrigin::Center)
     @sprites["pokeicon"].x       = 42
-    @sprites["pokeicon"].y       = 65
+    @sprites["pokeicon"].y       = 68
     @sprites["movesel"] = MoveSelectionSprite.new(@viewport,moveToLearn>0)
     @sprites["movesel"].visible = false
     @sprites["movesel"].visible = true
@@ -346,26 +346,40 @@ class PokemonSummary_Scene
       ]
       pbDrawImagePositions(overlay,imagepos)
     end
-
+    friendshipText = [
+      "It looks like this Pokémon hates you.",
+      "It barely listens to your orders.",
+      "It reluctantly follows you.",
+      "It is warming up to your presence.",
+      "It respects you as its trainer.",
+      "It looks forward to battling alongside you.",
+      "It likes it when you pet it.",
+      "It is becoming quite friendly!",
+      "It looks up to you!",
+      "It loves spending time with you!",
+      "It cuddles with you at every opportunity!",
+      "It is one of your best friends!",
+      "It loves you with all its heart!",
+    ]
+    val = (@pokemon.happiness/20).floor
     if @pokemon.shadowPokemon?
       drawShadowInformationText(overlay)
     else
       # Write nature
-      textpos.push([sprintf("%s nature.", PBNatures.getName(@pokemon.nature)),20,298,0,@basecolor,@shadowcolor])
+      characteristic = getPokemonCharacteristic
+      textpos.push([sprintf("%s nature.        %s", PBNatures.getName(@pokemon.nature),characteristic),20,298,0,@basecolor,@shadowcolor])
 
       # Write characteristicc
-      characteristic = getPokemonCharacteristic
-      textpos.push([sprintf("%s", characteristic),250,298,0,@basecolor,@shadowcolor])
-
-      # Met text
-      textpos.push([getMetText, 20, 326, 0, @basecolor, @shadowcolor])
-      textpos.push([getMetDate, 20, 355, 0, @basecolor, @shadowcolor])
+  #    textpos.push([sprintf("%s", ),500,298,1,@basecolor,@shadowcolor])
+      if @pokemon.obtainMode != 1
+        textpos.push([friendshipText[val], 20, 326, 0, @basecolor, @shadowcolor])
+        textpos.push([getMetText + ", " + getMetDate, 20, 355, 0, @basecolor, @shadowcolor])
+      end
     end
-
     pbDrawTextPositions(overlay, textpos)
-
-
-
+    if @pokemon.obtainMode == 1
+      drawFormattedTextEx(overlay,20,326,488,friendshipText[val] + " " + getMetText + ", " + getMetDate,@basecolor,@shadowcolor,30)
+    end
   end
 
   def drawPageOneEgg
@@ -378,7 +392,7 @@ class PokemonSummary_Scene
     # Write various bits of text
     textpos = [
         [_INTL("POKéMON INFO"),10,3,0,base,shadow],
-        [@pokemon.name,332,68,0,@basecolor,@shadowcolor]
+        [@pokemon.name,336,70,0,@basecolor,@shadowcolor]
     ]
 
     # Draw all text
@@ -472,7 +486,7 @@ class PokemonSummary_Scene
     ];
 
     # Get Gender Information
-    genderInfo = getGenderInformation(217,39)
+    genderInfo = getGenderInformation(217,37)
     if genderInfo
       textPos.push(genderInfo)
     end
@@ -996,7 +1010,7 @@ class PokemonSummary_Scene
   end
 
   def getEggMetText
-    text = "An odd POKèMON EGG received "
+    text = "An odd POKèMON EGG received"
 
     mapname = pbGetMapNameFromId(@pokemon.obtainMap)
     if (@pokemon.obtainText rescue false) && @pokemon.obtainText!=""

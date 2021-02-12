@@ -173,7 +173,9 @@ module Keys
       ControlConfig.new(_INTL("Right"),_INTL("Right")),
       ControlConfig.new(_INTL("Up"),_INTL("Up")),
       ControlConfig.new(_INTL("Action"),_INTL("C")),
+      ControlConfig.new(_INTL("Action"),_INTL("Enter")),
       ControlConfig.new(_INTL("Cancel"),_INTL("X")),
+      ControlConfig.new(_INTL("Cancel"),_INTL("Esc")),
       ControlConfig.new(_INTL("Run/Sort"),_INTL("Z")),
       ControlConfig.new(_INTL("Scroll down"),_INTL("Page Down")),
       ControlConfig.new(_INTL("Scroll up"),_INTL("Page Up")),
@@ -294,12 +296,12 @@ class Window_PokemonControls < Window_DrawableCommand
       optionname = @controls[index].controlAction
     end
     optionwidth=(rect.width*9/20)
-    pbDrawShadowText(self.contents,rect.x,rect.y,optionwidth,rect.height,
+    pbDrawShadowText(self.contents,rect.x,rect.y+6,optionwidth,rect.height,
       optionname,@nameBaseColor,@nameShadowColor)
     return if index>=@controls.length
     value=@controls[index].keyName
     xpos=optionwidth+rect.x
-    pbDrawShadowText(self.contents,xpos,rect.y,optionwidth,rect.height,value,
+    pbDrawShadowText(self.contents,xpos,rect.y+6,optionwidth,rect.height,value,
       @selBaseColor,@selShadowColor)
   end
 

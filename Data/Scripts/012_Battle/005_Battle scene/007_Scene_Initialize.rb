@@ -19,6 +19,10 @@ class PokeBattle_Scene
     @lastCmd  = Array.new(@battle.battlers.length,0)
     @lastMove = Array.new(@battle.battlers.length,0)
     pbInitSprites
+    if $smAnim
+      $PokemonTemp.smAnim[0].scene = self
+      $PokemonTemp.smAnim[0].start
+    end
     pbBattleIntroAnimation
   end
 

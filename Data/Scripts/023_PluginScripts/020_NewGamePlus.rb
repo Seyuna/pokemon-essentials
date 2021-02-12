@@ -25,16 +25,16 @@ Max IV Wild Pokemon Chance +20%
 
 module NewGamePlusData
   def self.expGain
-    return 1 if !$Trainer
-    ret = 1
+    return 0.9 if !$Trainer
+    ret = 0.9
     # Edit the 0.25 to change multiplier
     ret += (0.25 * $Trainer.newGamePlusCount)
     return ret
   end
 
   def self.moneyGain
-    return 1 if !$Trainer
-    ret = 1
+    return 1.75 if !$Trainer
+    ret = 1.75
     # Edit the 0.5 to change multiplier
     ret += (0.5 * $Trainer.newGamePlusCount)
     return ret
@@ -72,7 +72,6 @@ module NewGamePlusData
     ret = 0
     # Edit the 0.1 to change multiplier
     ret += (0.1 * $Trainer.newGamePlusCount)
-    ret = ret.floor.to_i
     return ret
   end
 
@@ -306,11 +305,6 @@ class PokemonLoadScreen
         $game_map.update
         $PokemonMap.updateMap
         $scene = Scene_Map.new
-        # Force Unlock Outfit if needed
-        if !$game_variables[56].is_a?(Array)
-          pbUnlockOutfit(1,"Quantech Uniform")  if $game_switches[62]
-          pbUnlockOutfit(2,"Biogress Uniform")  if $game_switches[61]
-        end
         return
       elsif cmdNewGame>=0 && command==cmdNewGame
         pbPlayDecisionSE
@@ -347,6 +341,7 @@ class PokemonLoadScreen
           pbPlayBuzzerSE
           next
         end
+        gvars = []
         pbPlayDecisionSE
         @scene.pbEndScene
         metadata = nil
@@ -357,7 +352,7 @@ class PokemonLoadScreen
           Marshal.load(f)   # PokemonSystem already loaded
           Marshal.load(f)   # Current map id no longer needed
           Marshal.load(f)
-          Marshal.load(f)
+          gvars = Marshal.load(f)
           Marshal.load(f)
           Marshal.load(f)
           Marshal.load(f)
@@ -411,6 +406,7 @@ class PokemonLoadScreen
         $PokemonStorage      = PokemonStorage.new
         $PokemonTemp.begunNewGame = true
         $PokemonTemp.begunNewGamePlus = true
+        $game_variables[56] = gvars[56]
         pbRefreshResizeFactor if !mkxp?  # To fix Game_Screen pictures
         $data_system         = pbLoadRxData("Data/System")
         $MapFactory          = PokemonMapFactory.new($data_system.start_map_id)   # calls setMapChanged
@@ -508,7 +504,11 @@ class PokeBattle_Trainer
   end
 
   def newGamePlus=(value)
-    return allowNewGamePlus
+    if $DEBUG
+      @newGamePlus = value
+    else
+      return allowNewGamePlus
+    end
   end
 
   def allowNewGamePlus
@@ -582,6 +582,13 @@ class PokeBattle_Battle
     else
       exp /= 7
     end
+    # Splice EXP Scaling
+    levelDiff = pkmn.level - level
+    if levelDiff > 4
+      divFactor = levelDiff/5
+      exp = exp/(2**divFactor)
+      exp = 2 if exp < 2
+    end
     # Foreign Pokémon gain more Exp
     isOutsider = (pkmn.trainerID!=pbPlayer.id ||
                  (pkmn.language!=0 && pkmn.language!=pbPlayer.language))
@@ -592,6 +599,7 @@ class PokeBattle_Battle
         exp = (exp*1.5).floor
       end
     end
+    #Thundaga globally reducing EXP gains to 90%
     exp = (exp * NewGamePlusData.expGain).floor
     # Modify Exp gain based on pkmn's held item
     i = BattleHandlers.triggerExpGainModifierItem(pkmn.item,pkmn,exp)
@@ -605,10 +613,14 @@ class PokeBattle_Battle
     return if expGained<=0
     # "Exp gained" message
     if showMessages
-      if isOutsider
-        pbDisplayPaused(_INTL("{1} got a boosted {2} Exp. Points!",pkmn.name,expGained))
+      if levelDiff > 4
+        pbDisplayPaused(_INTL("{1} got a reduced {2} Exp. Points!",pkmn.name,expGained))
       else
-        pbDisplayPaused(_INTL("{1} got {2} Exp. Points!",pkmn.name,expGained))
+        if isOutsider
+          pbDisplayPaused(_INTL("{1} got a boosted {2} Exp. Points!",pkmn.name,expGained))
+        else
+          pbDisplayPaused(_INTL("{1} got {2} Exp. Points!",pkmn.name,expGained))
+        end
       end
     end
     curLevel = pkmn.level

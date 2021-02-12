@@ -1106,7 +1106,7 @@ class Window_DrawableCommand < SpriteWindow_SelectableEx
 
   def drawCursor(index,rect)
     if self.index==index
-      pbCopyBitmap(self.contents,@selarrow.bitmap,rect.x,rect.y)
+      pbCopyBitmap(self.contents,@selarrow.bitmap,rect.x,rect.y + ((mkxp? && $PokemonSystem.font == 0) ? -3 : 0))
     end
     return Rect.new(rect.x+16,rect.y,rect.width-16,rect.height)
   end

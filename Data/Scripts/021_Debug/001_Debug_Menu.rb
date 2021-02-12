@@ -155,6 +155,10 @@ def pbDebugMenuCommands(showall=true)
        _INTL("Toggle possession of running shoes."))
     commands.add("playermenu","togglepokegear",_INTL("Toggle Pokégear"),
        _INTL("Toggle possession of the Pokégear."))
+    commands.add("playermenu","togglenewgameplus",_INTL("Toggle New Game +"),
+       _INTL("Allow selection of New Game + in the load screen. (Save after toggling this)"))
+    commands.add("playermenu","setnewgamelevel",_INTL("Set New Game + Level"),
+       _INTL("Set New Game + Level."))
     commands.add("playermenu","dexlists",_INTL("Toggle Pokédex and Dexes"),
        _INTL("Toggle possession of the Pokédex, and edit Regional Dex accessibility."))
     commands.add("playermenu","setplayer",_INTL("Set Player Character"),
@@ -684,6 +688,16 @@ def pbDebugMenuActions(cmd="",sprites=nil,viewport=nil)
     $Trainer.pokegear = !$Trainer.pokegear
     pbMessage(_INTL("Gave Pokégear.")) if $Trainer.pokegear
     pbMessage(_INTL("Lost Pokégear.")) if !$Trainer.pokegear
+  when "togglenewgameplus"
+    $Trainer.newGamePlus = !$Trainer.newGamePlus
+    pbMessage(_INTL("Allowed New Game +.")) if $Trainer.newGamePlus
+    pbMessage(_INTL("Disllowed New Game +.")) if !$Trainer.newGamePlus
+  when "setnewgamelevel"
+    params = ChooseNumberParams.new
+    params.setRange(0,5)
+    params.setDefaultValue($Trainer.newGamePlusCount)
+    $Trainer.newGamePlusCount = pbMessageChooseNumber(_INTL("Set the player's New Game + level. (Max. 5)"),params)
+    pbMessage(_INTL("The level has been set to {1}.",$Trainer.newGamePlusCount))
   when "dexlists"
     dexescmd = 0
     loop do

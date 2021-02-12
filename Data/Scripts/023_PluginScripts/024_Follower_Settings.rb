@@ -65,10 +65,6 @@ ALWAYS_ANIMATED_FOLLOWERS = [
 # refreshing it. "next true" will let it stay and "next false" will make it disappear
 #===============================================================================
 Events.FollowerRefresh += proc{|pkmn|
-  next false if $PokemonGlobal.bicycle
-}
-
-Events.FollowerRefresh += proc{|pkmn|
   if $PokemonGlobal.diving
     next true if pkmn.hasType?(:WATER)
     next false
@@ -79,6 +75,7 @@ Events.FollowerRefresh += proc{|pkmn|
 Events.FollowerRefresh += proc{|pkmn|
   next true if pkmn.hasType?(:FLYING)
   next true if pkmn.hasAbility?(:LEVITATE)
+  next true if ALWAYS_ANIMATED_FOLLOWERS.include?(pkmn.species)
 }
 
 #-------------------------------------------------------------------------------
@@ -234,27 +231,27 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
 
 Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
   if $PokemonGlobal.followerHoldItem
-    if pkmn.hapiness > 250
+    if pkmn.happiness > 250
       items=[:MAXPOTION,:FULLRESTORE,:BIGPEARL,:STARPIECE,:ULTRABALL,
         :CHOICEBAND,:LIFEORB,:SACREDASH,:AGUAVBERRY,:SITRUSBERRY
       ]
       message = "#{pkmn.name} is eager to give you something..."
-    elsif pkmn.hapiness > 200
+    elsif pkmn.happiness > 200
       items=[:MAXPOTION,:HYPERPOTION,:NUGGET,:STARPIECE,:GREATBALL,
         :CHOICESCARF,:AIRBALLOON,:MAXREVIVE,:LUMBERRY,:SITRUSBERRY
       ]
       message = "#{pkmn.name} wants to give you something..."
-    elsif pkmn.hapiness > 150
+    elsif pkmn.happiness > 150
       items=[:MOOMOOMILK,:HYPERPOTION,:NUGGET,:PEARL,:DUSKBALL,
         :CHOICESPECS,:EVIOLITE,:REVIVE,:CUSTAPBERRY,:SITRUSBERRY
       ]
       message = "#{pkmn.name} is found something for you..."
-    elsif pkmn.hapiness > 100
+    elsif pkmn.happiness > 100
       items=[:SUPERPOTION,:MOOMOOMILK,:STARDUST,:PEARL,:POKEBALL,
         :PRETTYWING,:FULLHEAL,:ESCAPEROPE,:ORANBERRY,:SITRUSBERRY
       ]
       message = "#{pkmn.name} is holding an item..."
-    elsif pkmn.hapiness > 50
+    elsif pkmn.happiness > 50
       items=[:POTION,:SUPERPOTION,:BIGMUSHROOM,:STARDUST,:POKETOY,
         :PRETTYWING,:ORANBERRY,:CHESTOBERRY,:PECHABERRY,:HONEY
       ]
@@ -266,7 +263,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
       pbMessage("Arenay threw the item away!")
       next true
     end
-    next true if pbPokemonFound(rand(items.length),1,messsage)
+    next true if pbPokemonFound(rand(items.length),1,message)
   end
 }
 
@@ -398,7 +395,7 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
       $scene.spriteset.addUserAnimation(Emo_Hate,x,y)
       pbWait(70)
       messages = [
-        "{1} seems very upset the weather.",
+        "{1} seems very upset at the weather.",
         "{1} is shivering...",
         "{1} doesn't seem to like being all wet...",
         "{1} keeps trying to shake itself dry...",
@@ -876,6 +873,30 @@ Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
 # All dialogues with no animation
 Events.OnTalkToFollower += proc {|pkmn,x,y,randomVal|
   if randomVal == 5
+    if rand(5)<1
+      messages = [
+        "{1} looks like its itching to hold onto some of the cellulose in {2}'s bag!",
+        "{1} is shooting small puffs of smoke into the air, trying to make various shapes.",
+        "{1} is splashing around, making little puddles in the ground!",
+        "{1} is shaking loose leaves out of the top of it's bushy growth.",
+        "{1} is slowly flapping its wings and trying to stay in the same place.",
+        "{1} curls up, in a defensive pose! It looks ready to take on anything!",
+        "{1} releases a small jolt of electricty, gently tickling {2}'s' fingers!",
+        "{1} is freezing the ground underneath it, allowing it to slide around a little! Looks fun!",
+        "{1} is sending psychic waves in your direction, in attempt to persuade you to feed it more berries.",
+        "{1} has spiderwebs stuck on its tentacles... they seem hard to remove!",
+        "{1} is burrowing under the ground, kicking up small pebbles as it moves.",
+        "{1} slides away as you try to pet it... It doesn't want to poison {2}!",
+        "{1} has a confident look on its face, almost like it wants to test its strength!",
+        "{1} is meditating... it looks like it's trying to focus its chakras!",
+        "{1} is staying motionless. It looks like it wants to blend in to the environment!",
+        "{1} is fading in and out of our living realm... that's pretty spooky!",
+        "{1} is shimmering with a dark aura... It's hard not to stare!",
+        "{1} is radiating optimistic energy! It looks so cute, you can't resist hugging it!"
+      ]
+      pbMessage(_INTL(messages[pkmn.form],pkmn.name,$Trainer.name))
+      next true
+    end
     messages = [
       "{1} spun around in a circle!",
       "{1} let out a battle cry.",

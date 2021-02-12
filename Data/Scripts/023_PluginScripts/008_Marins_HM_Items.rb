@@ -112,14 +112,14 @@ if USING_SURF_ITEM
   def pbSurf
     return false if $game_player.pbFacingEvent
     return false if $game_player.pbHasDependentEvents?
+    if !$PokemonBag.pbHasItem?(:SURFITEM) && !$DEBUG
+      return false
+    end
     if $PokemonTemp.dependentEvents.refresh_sprite(false,true)
       pkmn = $Trainer.arenayIndex(true)
       if pkmn.hasType?(:ROCK) || pkmn.hasType?(:GROUND) || pkmn.hasType?(:FIRE) || pkmn.hasType?(:ELECTRIC)
         pbMessage(_INTL("\\PN can't surf with {1} in its {2} form!",pkmn.name,PBTypes.getName(pkmn.type1)))
       end
-      return false
-    end
-    if !$PokemonBag.pbHasItem?(:SURFITEM) && !$DEBUG
       return false
     end
     if pbConfirmMessage(_INTL("The water is a deep blue...\nWould you like to surf on it?"))

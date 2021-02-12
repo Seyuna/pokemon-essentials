@@ -1,0 +1,112 @@
+----------------------------------------------------------------------------------------------------------------
+Arenay form dialogue
+----------------------------------------------------------------------------------------------------------------
+0 normal = Arenay looks like its itching to hold onto some of the cellulose in my bag!
+1 fire = Arenay is shooting small puffs of smoke into the air, trying to make various shapes.
+2 water = Arenay is splashing around, making little puddles in the ground!
+3 grass = Arenay is shaking loose leaves out of the top of it's bushy growth.
+4 flying = Arenay is slowly flapping its wings and trying to stay in the same place.
+5 steel = Arenay curls up, in a defensive pose! It looks ready to take on anything!
+6 electric = Arenay releases a small jolt of electricty, gently tickling your fingers!
+7 ice = Arenay is freezing the ground underneath it, allowing it to slide around a little! Looks fun!
+8 psychic = Arenay is sending psychic waves in your direction, in attempt to persuade you to feed it more berries.
+9 bug = Arenay has spiderwebs stuck on its tentacles... they seem hard to remove!
+10 ground = Arenay is burrowing under the ground, kicking up small pebbles as it moves.
+11 poison = Arenay slides away as you try to pet it... It doesn't want to poison you!
+12 dragon = Arenay has a confident look on its face, almost like it wants to test its strength!
+13 fighting = Arenay is meditating... it looks like it's trying to focus its chakras!
+14 rock = Arenay is staying motionless. It looks like it wants to blend in to the environment!
+15 ghost = Arenay is fading in and out of our living realm... that's pretty spooky!
+16 dark = Arenay is shimmering with a dark aura... It's hard not to stare!
+17 fairy = Arenay is radiating optimistic energy! It looks so cute, you can't resist hugging it!
+
+----------------------------------------------------------------------------------------------------------------
+Friendship dialogue
+----------------------------------------------------------------------------------------------------------------
+1 = It looks like this Pokémon hates you...
+2 = It barely listens to your orders.
+3 = It reluctantly follows you.
+4 = It is warming up to your presence
+5 = It respects you as its trainer
+6 = It looks forward to battling with you
+7 = It lets you pet it
+8 = It is becoming quite friendly!
+9 = It looks up to you!
+10 = It loves spending time with you
+11 = It cuddles with you at every opportunity
+12 = It is one of your best friends!
+13 = It loves you with all its heart! (Max Friendship)
+
+----------------------------------------------------------------------------------------------------------------
+Dex entries to add
+----------------------------------------------------------------------------------------------------------------
+klink:
+klang:
+klinklang: 
+solosis
+duosion
+reuniclus
+lotad
+lombre:
+ludicolo: water brawler, waits under water and punches Krookodiles
+foonguss: Psychadelic effects
+amoonguss: Can instill visions when locking eyes with other pokemon
+nosepass: magnetic and floats
+probopass: can discharge and zap the ground with tendrils
+pichu: baby robot
+pikachu: developed by Quantech
+raichu: advanced mechanical technology
+dunsparce: cant see, and senses nearby enemies by feeling ground tremors
+mareep: help people refrigerate
+flaaffy: slide around on ice and have fun
+ampharos: 
+magikarp: common fish, electrify fishers with a little jolt
+gyarados: a fishermans nightmare, call down thunder along riversides
+sandile:
+krokorok: 
+krookodile:
+krabby: mistaken for small anchors
+kingler: walk along the floor of the sea looking for treasure
+swablu: Pleasant cloud wings, comfort young children with hugs
+altaria: float around in the wind, drifting from town to town
+absol:
+blitzle:
+zebstrika:
+elekid: train in the basements of power plants, punching circuit boxes
+electabuzz:
+electivire:
+trapinch:
+vibrava:
+flygon:
+hoppip:
+skiploom:
+jumpluff:
+sunkern:
+sunflora: scarecrow
+spinarak:
+ariados:
+numel:
+camerupt:
+espurr:
+meowstic:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,177 @@
+[CENTER]
+A game by Thundaga (Cameron R)
+
+[B][U]Artists:[/U][/B]
+Voltseon
+Tristantine The Great
+Kristiano100
+TabletPillowLamp
+P-Plum
+
+[B][U]Programmers:[/U][/B]
+Golisopod User
+Seyuna
+Voltseon
+
+[B][U]Additional Amazing Art:[/U][/B]
+P-Plum
+ShadowPhil
+Design3D
+ShashuGreninja
+Dedbed
+Carlin
+
+[B][U]Pokemon Splice Wiki:[/U][/B]
+ENLS
+
+Shoutouts to the Thundaga Twitch Chat
+Aka the Thundagang
+Aka the Camfam
+Aka the Bolt Cult
+
+A HUGE thank you to the resource creators
+of the Pokemon fangame community:
+
+[B][U]MKXP Port:[/U][/B]
+Roza            Ancurio
+Andracass        Aeodyn
+Marin            Maruno
+Savordez        Zoro
+Golisopod User
+
+[B][U]Better Fast-forward Mode:[/U][/B]
+Marin
+
+[B][U]Voltseon's Handy Tools:[/U][/B]
+Voltseon
+
+[B][U]Marin's Scripting Utilities:[/U][/B]
+Marin
+
+[B][U]FRLG Summary and Party Screen[/U][/B]
+Seyuna            Golisopod User
+KleinStudio
+
+[B][U]Luka's Scripting Utilities:[/U][/B]
+Luka S.J.
+
+[B][U]Modular Title Screen:[/U][/B]
+Luka S.J.
+
+[B][U]Item Find:[/U][/B]
+Boonzeet        Golisopod User
+
+[B][U]HGSS Location Signposts:[/U][/B]
+carmaniac        PurpleZaffre
+LostSoulsDev    boonzeet
+
+[B][U]HM Items:[/U][/B]
+Marin
+
+[B][U]Following Pokemon EX:[/U][/B]
+Golisopod User    Help-14
+zingzags        Rayd12smitty
+Venom12            mej71
+PurpleZaffre    Akizakura16
+
+[B][U]Trainer Card:[/U][/B]
+Mr. Gela
+
+[B][U]Mid Battle Dialogue/ Scripted Battles:[/U][/B]
+Golisopod User    Luka SJ
+
+[B][U]Set the Controls Screen:[/U][/B]
+FL
+
+[B][U]Essentials Text Skip:[/U][/B]
+Amethyst        Kurotsune
+
+[B][U]Gen 8 Box Exchange:[/U][/B]
+Michael            Golisopod User
+Luka SJ            The Reborn Team
+
+[B][U]EBS VS Animations:[/U][/B]
+Luka SJ
+
+[B][U]FRLG UI Sprites:[/U][/B]
+Spriters Resource
+
+[B][U]Overworld Shadows:[/U][/B]
+Marin            WolfPP
+Golisopod User
+
+[B][U]Gen 8 Mechanics Scripts:[/U][/B]
+Vendily            TheToxic
+HM100            Golisopod User
+Aioross            WolfPP
+MFilice            lolface
+KyureJL            DarrylBD99
+Turn20Negate    TheKandinavian
+ErwanBeurier
+
+[B][U]Gen 8 PBS:[/U][/B]
+Zerokid            TheToxic
+Golisopod User    HM100
+KyureJL            ErwanBeurier
+
+[B][U]Always on Bush:[/U][/B]
+KleinStudio        derFischae
+
+[B][U]Simple Exit Arrows:[/U][/B]
+Tunstin2121
+
+[B][U]Gen 6,7 and 8 Sprites:[/U][/B]
+Contributors to the Gen 6 Sprite Project
+Contributors to the Gen 7 Sprite Project
+Contributors to the Gen 8 Sprite Project
+
+[B][U]RGSS FModEx:[/U][/B]
+Nuri Yuri
+
+[B][U]Tileset Credits[/U][/B]
+Zeo                Magiscarf
+WesleyFG        Flurmimon
+
+[B][U]Overworld Sprite Credits:[/U][/B]
+PoffinCase        Kalarie
+Avatar            Aveontrainer
+Daman            MrDollSteak
+Pokeshor        Spherical Ice
+Mimi            M.vit
+Delta231
+
+[B][U]"Pokémon Essentials" was created by:[/U][/B]
+Flameguru
+Poccil (Peter O.)
+Maruno
+
+[B][U]With contributions from:[/U][/B]
+AvatarMonkeyKirby    Marin
+Boushy                MiDas Mike
+Brother1440            Near Fantastica
+FL                    PinkMan
+Genzai Kawakami        Popper
+help-14                Rataime
+IceGod64            SoundSpawn
+Jacob O. Wobbrock    the__end
+KitsuneKouta        Venom12
+Lisa Anthony        Wachunga
+Luka S.J
+and everyone else who helped out
+
+[B][U]"mkxp-z" by:[/U][/B]
+Roza
+Based on MKXP by Ancurio et al.
+
+[B][U]"RPG Maker XP" by:[/U][/B]
+Enterbrain
+
+[B][U]Pokémon is owned by:[/U][/B]
+The Pokémon Company
+Nintendo
+Affiliated with Game Freak
+
+This is a non-profit fan-made game.
+No copyright infringements intended.
+Please support the official games!
+[/CENTER]

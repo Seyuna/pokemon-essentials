@@ -7,6 +7,7 @@ def poisonAllPokemon(event=nil)
           pkmn.hasAbility?(:COMATOSE)  || pkmn.hasAbility?(:SHIELDSDOWN) ||
           pkmn.status!=0
        pkmn.status = 2
+       pkmn.statusCount = 1
      end
 end
 
@@ -94,10 +95,10 @@ def pbSelectOutfit
       pbMessage(_INTL("\\se[OutfitChange]\\pg{1}",messages[rand(messages.length)]))
       $game_screen.pictures[1].erase
     else
-      pbMessage(_INTL("Already wearing this outfit!"))
+      pbMessage(_INTL("You're already wearing this outfit!"))
     end
   else
-    Kernel.pbMessage("No Outfits unlocked....")
+    Kernel.pbMessage("Hmm... looks like there aren't any other clothes in here.")
   end
 end
 
@@ -106,8 +107,6 @@ end
 #===============================================================================
 def pbFade(reverse=false)
   return if !$game_player || !$scene.is_a?(Scene_Map)
-  viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
-  viewport.z = 99999
   viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
   viewport.z = 99999
   viewport.color = Color.new(0,0,0,reverse ? 255 : 0)
@@ -168,4 +167,6 @@ def pbSaveArenayToVariable(var)
       end
     end
   end
+  $PokemonBag.pbStoreItem($game_variables[var].item) if $game_variables[var].hasItem?
+  $game_variables[var].setItem(0)
 end

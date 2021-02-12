@@ -52,15 +52,18 @@ class Scene_Credits
 # This next piece of code is the credits.
 #Start Editing
 CREDIT=<<_END_
-A game by Thundaga
+A game by Thundaga (Cameron R)
 
-Art by
+Artists
 Voltseon
 Tristantine The Great
 Kristiano100
+TabletPillowLamp
+P-Plum
 
-Programming
+Programmers
 GolisopodUser
+Seyuna
 Voltseon
 
 Shoutouts to the Thundaga Twitch Chat
@@ -68,6 +71,17 @@ Aka the Thundagang
 Aka the Camfam
 Aka the Bolt Cult
 
+
+Additional Amazing Art
+P-Plum
+ShadowPhil
+Design3D
+ShashuGreninja
+Dedbed
+Carlin
+
+Pokemon Splice Wiki
+ENLS
 
 A HUGE thank you to the resource creators
 of the Pokemon fangame community

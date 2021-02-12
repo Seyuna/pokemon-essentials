@@ -80,12 +80,13 @@ class PokemonTrainerCard_Scene
   def pbStartScene
     @front=true
     @flip=false
+    @ngPlusVal = $PokemonTemp.begunNewGamePlus ? ($PokemonTemp.oldNewGamePlusCount + 1) : $Trainer.newGamePlusCount
     @viewport = Viewport.new(0,0,Graphics.width,Graphics.height)
     @viewport.z = 99999
     @sprites = {}
     addBackgroundPlane(@sprites,"bg","Trainer Card/bg",@viewport)
     @sprites["card"] = IconSprite.new(128*2,96*2,@viewport)
-    @sprites["card"].setBitmap("Graphics/Pictures/Trainer Card/card_#{$Trainer.newGamePlusCount}")
+    @sprites["card"].setBitmap("Graphics/Pictures/Trainer Card/card_#{@ngPlusVal}")
 
     @sprites["card"].ox=@sprites["card"].bitmap.width/2
     @sprites["card"].oy=@sprites["card"].bitmap.height/2
@@ -107,7 +108,7 @@ class PokemonTrainerCard_Scene
     @sprites["help_overlay"] = IconSprite.new(0,Graphics.height-48,@viewport)
     @sprites["help_overlay"].setBitmap("Graphics/Pictures/Trainer Card/overlay_0")
     @sprites["help_overlay"].zoom_x=2 ; @sprites["help_overlay"].zoom_y=2
-    @sprites["help_overlay"].visible = false if $Trainer.newGamePlusCount < 1
+    @sprites["help_overlay"].visible = false if @ngPlusVal < 1
     pbDrawTrainerCardFront
     pbFadeInAndShow(@sprites) { pbUpdate }
   end
@@ -138,7 +139,7 @@ class PokemonTrainerCard_Scene
   def pbDrawTrainerCardFront
     flip1 if @flip==true
     @front=true
-    @sprites["card"].setBitmap("Graphics/Pictures/Trainer Card/card_#{$Trainer.newGamePlusCount}")
+    @sprites["card"].setBitmap("Graphics/Pictures/Trainer Card/card_#{@ngPlusVal}")
     @overlay  = @sprites["overlay"].bitmap
     @overlay2 = @sprites["overlay2"].bitmap
     @overlay.clear
@@ -147,7 +148,7 @@ class PokemonTrainerCard_Scene
     shadowColor = Color.new(160,160,160)
     baseGold = Color.new(255,198,74)
     shadowGold = Color.new(123,107,74)
-    if $Trainer.newGamePlusCount==5
+    if @ngPlusVal==5
       baseColor   = baseGold
       shadowColor = shadowGold
     end
@@ -191,7 +192,7 @@ class PokemonTrainerCard_Scene
     y = 100 + (($Trainer.gender==0)? 5 : -5)
     @sprites["overlay"].bitmap.blt(x,y,bmp,Rect.new(0,0,bmp.width,bmp.height))
     @sprites["overlay2"].z+=20
-    pbDrawTextPositions(@overlay2,textPositions) if $Trainer.newGamePlusCount > 0
+    pbDrawTextPositions(@overlay2,textPositions) if @ngPlusVal > 0
     flip2 if @flip==true
   end
 
@@ -200,7 +201,7 @@ class PokemonTrainerCard_Scene
     @flip=true
     flip1
     @front=false
-    @sprites["card"].setBitmap("Graphics/Pictures/Trainer Card/card_#{$Trainer.newGamePlusCount}b")
+    @sprites["card"].setBitmap("Graphics/Pictures/Trainer Card/card_#{@ngPlusVal}b")
     @overlay  = @sprites["overlay"].bitmap
     @overlay2 = @sprites["overlay2"].bitmap
     @overlay.clear
@@ -209,7 +210,7 @@ class PokemonTrainerCard_Scene
     shadowColor = Color.new(160,160,160)
     baseGold = Color.new(255,198,74)
     shadowGold = Color.new(123,107,74)
-    if $Trainer.newGamePlusCount==5
+    if @ngPlusVal==5
       baseColor   = baseGold
       shadowColor = shadowGold
     end
@@ -231,17 +232,8 @@ class PokemonTrainerCard_Scene
     value = (value * (1 - NewGamePlusData.hiddenAbilChance)).floor
     textPositions = [
       [_INTL($Trainer.fullname2),32,64-48,0,baseColor,shadowColor],
-  #    [hof[0],302+89*2,64-48,1,baseColor,shadowColor],
-  #    [hof[1],302+89*2,64-16,1,baseColor,shadowColor],
-      # These are meant to be Link Battle modes, use as you wish, see below
-      [_INTL(" "),32+111*2,112-16,0,baseColor,shadowColor],
-      [_INTL(" "),32+176*2,112-16,0,baseColor,shadowColor],
-
-  #    [,32,112-16,0,baseColor,shadowColor],
-      #[_INTL(" ",$game_variables[100]),302+2+50-2,112-16,1,baseColor,shadowColor],
-      #[_INTL(" ",$game_variables[100]),302+2+50+63*2,112-16,1,baseColor,shadowColor],
       [_INTL("Shiny Chance:"),32,112-16,0,baseColor,shadowColor],
-      [_INTL("{1}x",(1 + (0.05 * $Trainer.newGamePlusCount))),302+2+50-2,112-16,1,baseColor,shadowColor],
+      [_INTL("{1}x",(1 + (0.05 * @ngPlusVal))),302+2+50-2,112-16,1,baseColor,shadowColor],
       [_INTL("1/{1}",NewGamePlusData.shinyChance),302+2+50+63*2,112-16,1,baseColor,shadowColor],
 
       [_INTL("Hidden Abil. Chance:"),32,112+32-16,0,baseColor,shadowColor],
@@ -262,29 +254,7 @@ class PokemonTrainerCard_Scene
       [_INTL("Press C to flip the card."),16,64+280,0,Color.new(216,216,216),Color.new(80,80,80)]
     ]
     @sprites["overlay2"].z+=20
-    pbDrawTextPositions(@overlay2,textPositions) if $Trainer.newGamePlusCount > 0
-=begin
-    # Draw Badges on overlay (doesn't support animations, might support .gif)
-    imagepos=[]
-    # Draw Region 0 badges
-    x = 64-28
-    for i in 0...8
-      if $Trainer.badges[i+0*8]
-        imagepos.push(["Graphics/Pictures/Trainer Card/badges0",x,104*2,i*48,0*48,48,48])
-      end
-      x += 48+8
-    end
-    # Draw Region 1 badges
-    x = 64-28
-    for i in 0...8
-      if $Trainer.badges[i+1*8]
-        imagepos.push(["Graphics/Pictures/Trainer Card/badges1",x,104*2+52,i*48,0*48,48,48])
-      end
-      x += 48+8
-    end
-    #print(@sprites["overlay"].ox,@sprites["overlay"].oy,x)
-    pbDrawImagePositions(@overlay,imagepos)
-=end
+    pbDrawTextPositions(@overlay2,textPositions) if @ngPlusVal > 0
     flip2
   end
 
@@ -293,7 +263,7 @@ class PokemonTrainerCard_Scene
       Graphics.update
       Input.update
       pbUpdate
-      if Input.trigger?(Input::C) && $Trainer.newGamePlusCount > 0
+      if Input.trigger?(Input::C) && @ngPlusVal > 0
         if @front==true
           pbDrawTrainerCardBack
           wait(3)
