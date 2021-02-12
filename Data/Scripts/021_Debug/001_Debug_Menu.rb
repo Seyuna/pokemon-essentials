@@ -171,6 +171,9 @@ def pbDebugMenuCommands(showall=true)
        _INTL("Generate a random new ID for the player."))
   end
 
+  commands.add("main", "questmenu", _INTL("Quest editors..."),
+     _INTL("Quests"))
+
   commands.add("main","editorsmenu",_INTL("Information editors..."),
      _INTL("Edit information in the PBS files, terrain tags, battle animations, etc."))
   commands.add("editorsmenu","setmetadata",_INTL("Edit Metadata"),
@@ -770,6 +773,12 @@ def pbDebugMenuActions(cmd="",sprites=nil,viewport=nil)
     $Trainer.id |= rand(256)<<16
     $Trainer.id |= rand(256)<<24
     pbMessage(_INTL("The player's ID was changed to {1} (full ID: {2}).",$Trainer.publicID,$Trainer.id))
+
+
+  #=============================================================================
+  # Quest editors
+  #=============================================================================
+
   #=============================================================================
   # Information editors
   #=============================================================================

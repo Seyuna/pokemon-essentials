@@ -1120,6 +1120,8 @@ def pbCompileAllData(mustCompile)
     if (!$INEDITOR || LANGUAGES.length<2) && pbRgssExists?("Data/messages.dat")
       MessageTypes.loadMessageFile("Data/messages.dat")
     end
+    yield(_INTL("Compiling quest data"))
+    pbCompileQuestData
     # No dependencies
     yield(_INTL("Compiling type data"))
     pbCompileTypes

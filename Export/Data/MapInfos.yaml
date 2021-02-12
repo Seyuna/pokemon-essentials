@@ -17,7 +17,7 @@ root:
   92: !ruby/object:RPG::MapInfo
     scroll_x: 918
     name: Verdant Valley
-    expanded: true
+    expanded: false
     order: 78
     scroll_y: 1397
     parent_id: 33
@@ -151,7 +151,7 @@ root:
   113: !ruby/object:RPG::MapInfo
     scroll_x: 1057
     name: Driftwood City
-    expanded: true
+    expanded: false
     order: 60
     scroll_y: 459
     parent_id: 33
@@ -249,7 +249,7 @@ root:
   22: !ruby/object:RPG::MapInfo
     scroll_x: 320
     name: test
-    expanded: false
+    expanded: true
     order: 2
     scroll_y: 240
     parent_id: 0
@@ -410,11 +410,11 @@ root:
     scroll_y: 240
     parent_id: 5
   43: !ruby/object:RPG::MapInfo
-    scroll_x: 1222
+    scroll_x: 1302
     name: Moncto Town
     expanded: false
     order: 5
-    scroll_y: 733
+    scroll_y: 1026
     parent_id: 33
   80: !ruby/object:RPG::MapInfo
     scroll_x: 1051
@@ -482,7 +482,7 @@ root:
   81: !ruby/object:RPG::MapInfo
     scroll_x: 809
     name: Lumigen City
-    expanded: true
+    expanded: false
     order: 15
     scroll_y: 459
     parent_id: 33
@@ -948,7 +948,7 @@ root:
   33: !ruby/object:RPG::MapInfo
     scroll_x: 320
     name: Pokemon Splice
-    expanded: false
+    expanded: true
     order: 4
     scroll_y: 240
     parent_id: 0
@@ -973,6 +973,13 @@ root:
     order: 48
     scroll_y: 240
     parent_id: 86
+  163: !ruby/object:RPG::MapInfo
+    scroll_x: 0
+    name: MAP163
+    expanded: false
+    order: 163
+    scroll_y: 0
+    parent_id: 0
   15: !ruby/object:RPG::MapInfo
     scroll_x: 320
     name: Cedolan Dept. 2F

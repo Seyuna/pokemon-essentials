@@ -111,6 +111,7 @@ class PokemonPauseMenu
     cmdDebug    = -1
     cmdQuit     = -1
     cmdEndGame  = -1
+    cmdQuests   = -1
     commands[cmdPokedex = commands.length]  = _INTL("Pokédex") if $Trainer.pokedex && $PokemonGlobal.pokedexViable.length>0
     commands[cmdPokemon = commands.length]  = _INTL("Pokémon") if $Trainer.party.length>0
     commands[cmdBag = commands.length]      = _INTL("Bag") if !pbInBugContest?
@@ -137,6 +138,7 @@ class PokemonPauseMenu
     else
       commands[cmdSave = commands.length]   = _INTL("Save") if $game_system && !$game_system.save_disabled
     end
+    commands[cmdQuests = commands.length]   = _INTL("Quests")
     commands[cmdOption = commands.length]   = _INTL("Options")
     commands[cmdDebug = commands.length]    = _INTL("Debug") if $DEBUG
     commands[cmdEndGame = commands.length]  = _INTL("Quit Game")
@@ -235,6 +237,11 @@ class PokemonPauseMenu
             pbShowMenu
           end
         end
+      elsif cmdQuests>=0 && command==cmdQuests
+        pbPlayDecisionSE
+        @scene.pbHideMenu
+        pbViewQuests
+
       elsif cmdSave>=0 && command==cmdSave
         @scene.pbHideMenu
         scene = PokemonSave_Scene.new

@@ -215,3 +215,21 @@ module PokemonSpeciesData
     return ret
   end
 end
+
+#===============================================================================
+# Quest data
+#===============================================================================
+
+QuestName = 0
+QuestDescription = 1
+
+module QuestData
+  def self.requiredValues
+    ret = {
+      "Name" => [QuestName, "s"],
+      "Description" => [QuestDescription, "q"],
+    }
+
+    return ret
+  end
+end
